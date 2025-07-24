@@ -25,7 +25,11 @@ const BuildInventory = () => {
               <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed">
                 Give your clients the wow factor with professional‑grade marquee letters, numbers and symbols. Whether you're just getting started or expanding an existing rental business, we've got you covered.
               </p>
-              <Button size="lg" className="text-lg px-8 py-6">
+              <Button 
+                size="lg" 
+                className="text-lg px-8 py-6"
+                onClick={() => window.open('https://vintagemarqueelights.com/pages/custom-sign-request-form', '_blank')}
+              >
                 Get Your Custom Quote
               </Button>
             </div>
@@ -246,13 +250,14 @@ const BuildInventory = () => {
             Ready to start with a few letters or jump into a larger package? Let us know which package interests you or share a custom list of letters and numbers you need. We'll prepare a detailed quote and timeline ASAP.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button variant="secondary" size="lg" className="text-lg px-8 py-4">
-              <Mail className="w-5 h-5 mr-2" />
-              hello@vintagemarqueelights.com
-            </Button>
-            <Button variant="outline" size="lg" className="text-lg px-8 py-4 bg-primary-foreground/10 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/20">
-              Contact Form
+          <div className="flex justify-center">
+            <Button 
+              variant="outline" 
+              size="lg" 
+              className="text-lg px-8 py-4 bg-primary-foreground/10 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/20"
+              onClick={() => window.open('https://vintagemarqueelights.com/pages/custom-sign-request-form', '_blank')}
+            >
+              Get Started - Request Your Quote
             </Button>
           </div>
           
