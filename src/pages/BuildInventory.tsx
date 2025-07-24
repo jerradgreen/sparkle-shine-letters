@@ -1,23 +1,42 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Lightbulb, Star, Package, Clock, Mail } from "lucide-react";
+import drewiaHillImage from "@/assets/drewia-hill.jpeg";
+import elev8Image from "@/assets/elev8.jpeg";
+import year1969Image from "@/assets/1969.jpeg";
+import marryMeImage from "@/assets/marry-me.jpg";
+import setup1Image from "@/assets/setup-1.jpeg";
+import setup2Image from "@/assets/setup-2.jpg";
+import marqueeDetailImage from "@/assets/marquee-detail.jpg";
 
 const BuildInventory = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
       <section className="relative py-20 px-4 text-center bg-gradient-to-br from-primary/10 to-accent/10">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
-            Build Your Own Marquee Letter Rental Inventory
-          </h1>
-          <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed">
-            Give your clients the wow factor with professional‑grade marquee letters, numbers and symbols. Whether you're just getting started or expanding an existing rental business, we've got you covered.
-          </p>
-          <Button size="lg" className="text-lg px-8 py-6">
-            Get Your Custom Quote
-          </Button>
+        <div className="max-w-6xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="text-left">
+              <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
+                Build Your Own Marquee Letter Rental Inventory
+              </h1>
+              <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed">
+                Give your clients the wow factor with professional‑grade marquee letters, numbers and symbols. Whether you're just getting started or expanding an existing rental business, we've got you covered.
+              </p>
+              <Button size="lg" className="text-lg px-8 py-6">
+                Get Your Custom Quote
+              </Button>
+            </div>
+            <div className="relative">
+              <img 
+                src={drewiaHillImage} 
+                alt="Drewia Hill marquee letters event setup" 
+                className="rounded-lg shadow-2xl w-full h-auto object-cover"
+              />
+            </div>
+          </div>
         </div>
       </section>
 
@@ -87,8 +106,75 @@ const BuildInventory = () => {
         </div>
       </section>
 
-      {/* Customization Options */}
+      {/* Photo Gallery */}
       <section className="py-16 px-4">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl font-bold text-center mb-12 text-foreground">See Our Letters in Action</h2>
+          <Carousel className="w-full">
+            <CarouselContent>
+              <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                <div className="relative overflow-hidden rounded-lg">
+                  <img 
+                    src={elev8Image} 
+                    alt="ELEV8 marquee letters setup" 
+                    className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+              </CarouselItem>
+              <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                <div className="relative overflow-hidden rounded-lg">
+                  <img 
+                    src={year1969Image} 
+                    alt="1969 marquee numbers display" 
+                    className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+              </CarouselItem>
+              <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                <div className="relative overflow-hidden rounded-lg">
+                  <img 
+                    src={marryMeImage} 
+                    alt="Marry Me marquee letters wedding setup" 
+                    className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+              </CarouselItem>
+              <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                <div className="relative overflow-hidden rounded-lg">
+                  <img 
+                    src={setup1Image} 
+                    alt="Marquee letters event setup" 
+                    className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+              </CarouselItem>
+              <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                <div className="relative overflow-hidden rounded-lg">
+                  <img 
+                    src={setup2Image} 
+                    alt="Professional marquee letter display" 
+                    className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+              </CarouselItem>
+              <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                <div className="relative overflow-hidden rounded-lg">
+                  <img 
+                    src={marqueeDetailImage} 
+                    alt="Close-up of marquee letter construction and quality" 
+                    className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+              </CarouselItem>
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
+        </div>
+      </section>
+
+      {/* Customization Options */}
+      <section className="py-16 px-4 bg-muted/30">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold mb-8 text-foreground">Customization Options</h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
