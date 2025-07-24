@@ -9,6 +9,7 @@ import year1969Image from "@/assets/1969.jpeg";
 import marryMeImage from "@/assets/marry-me.jpg";
 import setup1Image from "@/assets/setup-1.jpeg";
 import setup2Image from "@/assets/setup-2.jpg";
+import flyer1Image from "@/assets/flyer-1.jpg";
 import marqueeDetailImage from "@/assets/marquee-detail.jpg";
 
 const BuildInventory = () => {
@@ -135,6 +136,15 @@ const BuildInventory = () => {
                   <img 
                     src={marryMeImage} 
                     alt="Marry Me marquee letters wedding setup" 
+                    className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+              </CarouselItem>
+              <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                <div className="relative overflow-hidden rounded-lg">
+                  <img 
+                    src={flyer1Image} 
+                    alt="Promotional flyer showing marquee letter options" 
                     className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
                   />
                 </div>
