@@ -111,75 +111,57 @@ const BuildInventory = () => {
       <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl font-bold text-center mb-12 text-foreground">See Our Letters in Action</h2>
-          <Carousel className="w-full">
-            <CarouselContent>
-              <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-                <div className="relative overflow-hidden rounded-lg">
-                  <img 
-                    src={elev8Image} 
-                    alt="ELEV8 marquee letters setup" 
-                    className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-              </CarouselItem>
-              <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-                <div className="relative overflow-hidden rounded-lg">
-                  <img 
-                    src={year1969Image} 
-                    alt="1969 marquee numbers display" 
-                    className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-              </CarouselItem>
-              <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-                <div className="relative overflow-hidden rounded-lg">
-                  <img 
-                    src={marryMeImage} 
-                    alt="Marry Me marquee letters wedding setup" 
-                    className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-              </CarouselItem>
-              <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-                <div className="relative overflow-hidden rounded-lg">
-                  <img 
-                    src={flyer1Image} 
-                    alt="Promotional flyer showing marquee letter options" 
-                    className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-              </CarouselItem>
-              <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-                <div className="relative overflow-hidden rounded-lg">
-                  <img 
-                    src={setup1Image} 
-                    alt="Marquee letters event setup" 
-                    className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-              </CarouselItem>
-              <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-                <div className="relative overflow-hidden rounded-lg">
-                  <img 
-                    src={setup2Image} 
-                    alt="Professional marquee letter display" 
-                    className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-              </CarouselItem>
-              <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-                <div className="relative overflow-hidden rounded-lg">
-                  <img 
-                    src={marqueeDetailImage} 
-                    alt="Close-up of marquee letter construction and quality" 
-                    className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-              </CarouselItem>
-            </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext />
-          </Carousel>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="relative overflow-hidden rounded-lg">
+              <img 
+                src={elev8Image} 
+                alt="ELEV8 marquee letters setup" 
+                className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div className="relative overflow-hidden rounded-lg">
+              <img 
+                src={year1969Image} 
+                alt="1969 marquee numbers display" 
+                className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div className="relative overflow-hidden rounded-lg">
+              <img 
+                src={marryMeImage} 
+                alt="Marry Me marquee letters wedding setup" 
+                className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div className="relative overflow-hidden rounded-lg">
+              <img 
+                src={setup1Image} 
+                alt="Marquee letters event setup" 
+                className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div className="relative overflow-hidden rounded-lg">
+              <img 
+                src={setup2Image} 
+                alt="Professional marquee letter display" 
+                className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div className="relative overflow-hidden rounded-lg">
+              <img 
+                src={marqueeDetailImage} 
+                alt="Close-up of marquee letter construction and quality" 
+                className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div className="relative overflow-hidden rounded-lg">
+              <img 
+                src={flyer1Image} 
+                alt="Promotional flyer showing marquee letter options" 
+                className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+          </div>
         </div>
       </section>
 
