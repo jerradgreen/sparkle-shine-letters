@@ -298,7 +298,7 @@ Keep responses helpful, friendly, and focused on helping rental businesses build
         className={cn(
           "fixed bottom-6 right-6 z-50 rounded-full w-16 h-16 shadow-2xl",
           "bg-primary hover:bg-primary/90 text-primary-foreground",
-          "animate-pulse hover:animate-none transition-all duration-300",
+          "transition-all duration-300",
           "hover:scale-110 hover:shadow-[0_0_20px_rgba(var(--primary),0.5)]",
           "ring-4 ring-primary/20 hover:ring-primary/40",
           isOpen && "hidden"
