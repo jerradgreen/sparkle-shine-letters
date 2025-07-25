@@ -4,6 +4,7 @@ import { Input } from '@/components/ui/input';
 import { Card } from '@/components/ui/card';
 import { MessageCircle, X, Send, Bot, User } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { supabase } from '@/integrations/supabase/client';
 
 interface Message {
   id: string;
@@ -17,8 +18,6 @@ const Chatbot = () => {
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
-  const [apiKey, setApiKey] = useState('');
-  const [showApiKeyInput, setShowApiKeyInput] = useState(false);
   const [userEmail, setUserEmail] = useState('');
   const [showEmailInput, setShowEmailInput] = useState(false);
   const [webhookUrl, setWebhookUrl] = useState('');
@@ -26,43 +25,20 @@ const Chatbot = () => {
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const savedApiKey = localStorage.getItem('openai-api-key');
     const savedWebhookUrl = localStorage.getItem('zapier-webhook-url');
-    
-    if (savedApiKey) {
-      setApiKey(savedApiKey);
-    } else {
-      setShowApiKeyInput(true);
-      return;
-    }
     
     if (savedWebhookUrl) {
       setWebhookUrl(savedWebhookUrl);
+      setShowEmailInput(true);
     } else {
       setShowWebhookInput(true);
-      return;
     }
-    
-    // Only show email input if both API key and webhook are set
-    setShowEmailInput(true);
   }, []);
 
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages]);
 
-  const saveApiKey = () => {
-    localStorage.setItem('openai-api-key', apiKey);
-    setShowApiKeyInput(false);
-    
-    const savedWebhookUrl = localStorage.getItem('zapier-webhook-url');
-    if (!savedWebhookUrl) {
-      setShowWebhookInput(true);
-    } else {
-      setWebhookUrl(savedWebhookUrl);
-      setShowEmailInput(true);
-    }
-  };
 
   const saveWebhookUrl = () => {
     localStorage.setItem('zapier-webhook-url', webhookUrl);
@@ -113,7 +89,7 @@ const Chatbot = () => {
   };
 
   const sendMessage = async () => {
-    if (!input.trim() || !apiKey) return;
+    if (!input.trim()) return;
 
     const userMessage: Message = {
       id: Date.now().toString(),
@@ -127,120 +103,9 @@ const Chatbot = () => {
     setIsLoading(true);
 
     try {
-      const response = await fetch('https://api.openai.com/v1/chat/completions', {
-        method: 'POST',
-        headers: {
-          'Authorization': `Bearer ${apiKey}`,
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          model: 'gpt-4o-mini',
+      const { data, error } = await supabase.functions.invoke('chat-with-ai', {
+        body: {
           messages: [
-            {
-              role: 'system',
-              content: `You are a helpful assistant for Vintage Marquee Lights, a company that specializes in building marquee letter rental inventories for event rental businesses.
-
-## BUSINESS OVERVIEW
-We help rental businesses build their own marquee letter inventory with professional-grade letters, numbers and symbols. Our clients keep 100% of their rental revenue with:
-• No franchise fees
-• No commissions 
-• No licensing restrictions
-
-## PRODUCT FEATURES
-• **Durable & Long-Lasting**: Powder-coated steel construction built to withstand years of events
-• **Top-Tier Craftsmanship**: Extra-deep, self-standing design with high-gloss finish and closed backs to hide wiring
-• **Plug-and-Play LED Bulbs**: Energy-efficient LEDs provide warm, even lighting
-• **Reusable Foam-Lined Boxes**: Every order ships in protective boxes for safe transport and storage
-• **36" self-standing marquee letters** made of powder-coated steel
-
-## EXPERIENCE & MANUFACTURING
-• Over 15 years of experience creating marquee letters and custom signs
-• Rental letters manufactured overseas by long-term partner for consistent quality and competitive pricing
-• Custom signs hand-built in the United States
-• Perfect balance between quality and value
-
----
-
-## PRICING STRUCTURE
-
-### INDIVIDUAL PRICING (Less than 25 pieces - ESTIMATES ONLY)
-**IMPORTANT**: These are estimates - final pricing may vary based on shipping method and delivery requirements.
-
-**Standard Warm White LED Bulbs:**
-• 36" letters: $800 per piece (estimate)
-• 48" letters: $900 per piece (estimate)
-
-**LED Neon or LED Color-Changing Bulbs:**
-• 36" letters: $900 per piece (estimate)
-• 48" letters: $1000 per piece (estimate)
-
-**Shipping Considerations for Small Orders:**
-• Less than 15 pieces: Can be air freighted for faster delivery
-• 10-25 pieces: Ocean freight may be more cost-effective but takes longer
-• Final pricing depends on shipping speed and delivery date requirements
-• Custom quotes recommended for orders under 25 pieces
-
----
-
-### PACKAGE PRICING (25+ pieces - Much Better Value!)
-
-**Standard Warm White LED Bulbs:**
-• **25-Piece Starter Package**: $12,600 delivered (~$504 per piece)
-• **35-Piece Package**: $15,960 delivered (~$456 per piece)
-• **50-Piece Package**: $21,000 delivered (~$420 per piece)
-• **66-Piece Package**: $25,200 delivered (~$382 per piece) - Predetermined set
-• **112-Piece Package**: $34,800 delivered (~$311 per piece) – **BEST VALUE!** Predetermined set, plus 15" toppers
-
-**LED Neon or LED Color-Changing Bulbs:**
-• **25-Piece Starter Package**: $15,100 delivered (~$604 per piece)
-• **35-Piece Package**: $18,500 delivered (~$529 per piece)
-• **50-Piece Package**: $24,500 delivered (~$490 per piece)
-• **66-Piece Package**: $29,160 delivered (~$442 per piece) - Predetermined set
-• **112-Piece Package**: $39,950 delivered (~$357 per piece) – **BEST VALUE!** Predetermined set, plus 15" toppers
-
-**Package Details:**
-• Full Pay Discount: Save an extra 3% if you pay in full
-• For smaller packages (25, 35, 50-piece), you can choose your own letters/numbers/symbols or let us pick for you
-• Larger packages (66 & 112-piece) are predetermined sets based on rental business needs
-• **IMPORTANT**: 25 pieces is the minimum for package pricing - anything less uses individual pricing which is much more expensive
-
----
-
-## DELIVERY & TIMELINE
-• Package orders require 3-4 months for delivery
-• Order early to ensure availability for your events
-• Manufacturing overseas with ocean freight shipping to keep pricing low
-• Planning ahead ensures best value without rush fees
-
-## CUSTOMIZATION OPTIONS
-• Start small with few letters/numbers or larger packages
-• Custom word/phrase orders available
-• Team can curate versatile mix based on most-used letters and symbols
-• Color-changing bulbs and LED neon options available
-
-## CONTACT & NEXT STEPS
-• Email: hello@vintagemarqueelights.com
-• Custom quote process available
-• Can provide detailed quotes and timelines quickly
-
-Keep responses helpful, friendly, and focused on helping rental businesses build successful marquee letter inventories. Encourage custom quotes for exact pricing and emphasize the no-franchise-fee advantage.
-
-**CRITICAL INTERACTION INSTRUCTIONS:**
-- When someone asks about pricing or "how much", ask clarifying questions about their specific needs
-- For 1-22 pieces: Provide individual pricing ONLY - DO NOT mention packages, bulk pricing, larger orders, or any upselling whatsoever
-- For 23-24 pieces: Provide individual pricing AND mention they could save money by ordering 25 pieces for package pricing
-- For 25+ pieces: Focus on package pricing options
-- Be smart about their context - if someone specifies a word/phrase, count the letters and respond accordingly
-- ABSOLUTELY NO upselling or package mentions for orders under 23 pieces
-- Focus ONLY on answering their actual need with no suggestions for larger orders
-
-**FORMATTING INSTRUCTIONS:**
-- Do NOT use markdown formatting in responses
-- Use plain text with clear line breaks and spacing
-- Separate sections with blank lines
-- Use CAPITALS for emphasis when needed
-- Make responses easy to read in a plain text chat interface`
-            },
             ...messages.map(msg => ({
               role: msg.role,
               content: msg.content
@@ -249,20 +114,17 @@ Keep responses helpful, friendly, and focused on helping rental businesses build
               role: 'user',
               content: input
             }
-          ],
-          max_tokens: 500,
-          temperature: 0.7,
-        }),
+          ]
+        }
       });
 
-      if (!response.ok) {
-        throw new Error('Failed to get response from ChatGPT');
+      if (error) {
+        throw new Error(error.message || 'Failed to get response');
       }
 
-      const data = await response.json();
       const assistantMessage: Message = {
         id: (Date.now() + 1).toString(),
-        content: data.choices[0].message.content,
+        content: data.content,
         role: 'assistant',
         timestamp: new Date(),
       };
@@ -332,26 +194,6 @@ Keep responses helpful, friendly, and focused on helping rental businesses build
             </Button>
           </div>
 
-          {/* API Key Input */}
-          {showApiKeyInput && (
-            <div className="p-4 border-b bg-muted/50">
-              <p className="text-sm text-muted-foreground mb-2">
-                Enter your OpenAI API key to start chatting:
-              </p>
-              <div className="flex gap-2">
-                <Input
-                  type="password"
-                  placeholder="sk-..."
-                  value={apiKey}
-                  onChange={(e) => setApiKey(e.target.value)}
-                  className="text-sm"
-                />
-                <Button onClick={saveApiKey} size="sm">
-                  Save
-                </Button>
-              </div>
-            </div>
-          )}
 
           {/* Webhook URL Input */}
           {showWebhookInput && (
@@ -450,7 +292,7 @@ Keep responses helpful, friendly, and focused on helping rental businesses build
           </div>
 
           {/* Input */}
-          {!showApiKeyInput && !showWebhookInput && !showEmailInput && (
+          {!showWebhookInput && !showEmailInput && (
             <div className="p-4 border-t">
               <form autoComplete="off" onSubmit={(e) => { e.preventDefault(); sendMessage(); }}>
                 <div className="flex gap-2">
