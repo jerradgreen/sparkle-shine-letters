@@ -225,13 +225,13 @@ We help rental businesses build their own marquee letter inventory with professi
 
 Keep responses helpful, friendly, and focused on helping rental businesses build successful marquee letter inventories. Encourage custom quotes for exact pricing and emphasize the no-franchise-fee advantage.
 
-**IMPORTANT FORMATTING INSTRUCTIONS:**
-- Always format responses with clear spacing between sections
-- Use headers (##) to separate different topics
-- Use bullet points (•) for lists
-- Add blank lines between different packages or sections
-- When discussing pricing, clearly separate individual pricing from package pricing
-- Make responses easy to scan and read`
+**CRITICAL FORMATTING INSTRUCTIONS:**
+- Do NOT use markdown formatting (##, **, -, etc.) in your responses
+- Use plain text with clear line breaks and spacing
+- Separate different sections with blank lines
+- Use simple text formatting like CAPITALS for emphasis
+- Structure responses with clear paragraph breaks
+- Make responses easy to read in a plain text chat interface`
             },
             ...messages.map(msg => ({
               role: msg.role,
