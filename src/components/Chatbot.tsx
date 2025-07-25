@@ -197,8 +197,8 @@ LED NEON OR LED COLOR-CHANGING BULBS:
 - IMPORTANT: 25 pieces is the minimum for package pricing - anything less uses individual pricing which is much more expensive
 
 DELIVERY & TIMELINE:
-- Current delivery date: OCTOBER delivery 
-- Order now to be ready for winter events
+- Package orders require 3-4 months for delivery
+- Order early to ensure availability for your events
 - Manufacturing overseas with ocean freight shipping to keep pricing low
 - Planning ahead ensures best value without rush fees
 
