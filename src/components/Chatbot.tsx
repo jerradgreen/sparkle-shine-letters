@@ -223,7 +223,15 @@ We help rental businesses build their own marquee letter inventory with professi
 • Custom quote process available
 • Can provide detailed quotes and timelines quickly
 
-Keep responses helpful, friendly, and focused on helping rental businesses build successful marquee letter inventories. Encourage custom quotes for exact pricing and emphasize the no-franchise-fee advantage.`
+Keep responses helpful, friendly, and focused on helping rental businesses build successful marquee letter inventories. Encourage custom quotes for exact pricing and emphasize the no-franchise-fee advantage.
+
+**IMPORTANT FORMATTING INSTRUCTIONS:**
+- Always format responses with clear spacing between sections
+- Use headers (##) to separate different topics
+- Use bullet points (•) for lists
+- Add blank lines between different packages or sections
+- When discussing pricing, clearly separate individual pricing from package pricing
+- Make responses easy to scan and read`
             },
             ...messages.map(msg => ({
               role: msg.role,
