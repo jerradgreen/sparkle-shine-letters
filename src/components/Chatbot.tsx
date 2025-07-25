@@ -19,15 +19,32 @@ const Chatbot = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [apiKey, setApiKey] = useState('');
   const [showApiKeyInput, setShowApiKeyInput] = useState(false);
+  const [userEmail, setUserEmail] = useState('');
+  const [showEmailInput, setShowEmailInput] = useState(false);
+  const [webhookUrl, setWebhookUrl] = useState('');
+  const [showWebhookInput, setShowWebhookInput] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const savedApiKey = localStorage.getItem('openai-api-key');
+    const savedWebhookUrl = localStorage.getItem('zapier-webhook-url');
+    
     if (savedApiKey) {
       setApiKey(savedApiKey);
     } else {
       setShowApiKeyInput(true);
+      return;
     }
+    
+    if (savedWebhookUrl) {
+      setWebhookUrl(savedWebhookUrl);
+    } else {
+      setShowWebhookInput(true);
+      return;
+    }
+    
+    // Only show email input if both API key and webhook are set
+    setShowEmailInput(true);
   }, []);
 
   useEffect(() => {
@@ -37,7 +54,52 @@ const Chatbot = () => {
   const saveApiKey = () => {
     localStorage.setItem('openai-api-key', apiKey);
     setShowApiKeyInput(false);
+    
+    const savedWebhookUrl = localStorage.getItem('zapier-webhook-url');
+    if (!savedWebhookUrl) {
+      setShowWebhookInput(true);
+    } else {
+      setWebhookUrl(savedWebhookUrl);
+      setShowEmailInput(true);
+    }
+  };
+
+  const saveWebhookUrl = () => {
+    localStorage.setItem('zapier-webhook-url', webhookUrl);
+    setShowWebhookInput(false);
+    setShowEmailInput(true);
+  };
+
+  const saveEmailAndStart = () => {
+    if (!userEmail.trim()) return;
+    setShowEmailInput(false);
     addWelcomeMessage();
+  };
+
+  const sendChatTranscript = async () => {
+    if (!webhookUrl || !userEmail || messages.length === 0) return;
+
+    try {
+      const chatTranscript = messages.map(msg => 
+        `${msg.role.toUpperCase()}: ${msg.content}`
+      ).join('\n\n');
+
+      await fetch(webhookUrl, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        mode: "no-cors",
+        body: JSON.stringify({
+          userEmail,
+          chatTranscript,
+          timestamp: new Date().toISOString(),
+          totalMessages: messages.length,
+        }),
+      });
+    } catch (error) {
+      console.error('Error sending chat transcript:', error);
+    }
   };
 
   const addWelcomeMessage = () => {
@@ -220,7 +282,10 @@ Keep responses helpful, friendly, and focused on helping rental businesses build
             <Button
               variant="ghost"
               size="sm"
-              onClick={() => setIsOpen(false)}
+              onClick={() => {
+                sendChatTranscript();
+                setIsOpen(false);
+              }}
             >
               <X className="w-4 h-4" />
             </Button>
@@ -242,6 +307,53 @@ Keep responses helpful, friendly, and focused on helping rental businesses build
                 />
                 <Button onClick={saveApiKey} size="sm">
                   Save
+                </Button>
+              </div>
+            </div>
+          )}
+
+          {/* Webhook URL Input */}
+          {showWebhookInput && (
+            <div className="p-4 border-b bg-muted/50">
+              <p className="text-sm text-muted-foreground mb-2">
+                Enter your Zapier webhook URL to receive chat transcripts:
+              </p>
+              <div className="flex gap-2">
+                <Input
+                  type="url"
+                  placeholder="https://hooks.zapier.com/hooks/catch/..."
+                  value={webhookUrl}
+                  onChange={(e) => setWebhookUrl(e.target.value)}
+                  className="text-sm"
+                />
+                <Button onClick={saveWebhookUrl} size="sm">
+                  Save
+                </Button>
+              </div>
+            </div>
+          )}
+
+          {/* Email Input */}
+          {showEmailInput && (
+            <div className="p-4 border-b bg-muted/50">
+              <p className="text-sm text-muted-foreground mb-2">
+                Please enter your email to start the conversation:
+              </p>
+              <div className="flex gap-2">
+                <Input
+                  type="email"
+                  placeholder="your@email.com"
+                  value={userEmail}
+                  onChange={(e) => setUserEmail(e.target.value)}
+                  className="text-sm"
+                  onKeyPress={(e) => {
+                    if (e.key === 'Enter') {
+                      saveEmailAndStart();
+                    }
+                  }}
+                />
+                <Button onClick={saveEmailAndStart} size="sm">
+                  Start Chat
                 </Button>
               </div>
             </div>
@@ -297,7 +409,7 @@ Keep responses helpful, friendly, and focused on helping rental businesses build
           </div>
 
           {/* Input */}
-          {!showApiKeyInput && (
+          {!showApiKeyInput && !showWebhookInput && !showEmailInput && (
             <div className="p-4 border-t">
               <div className="flex gap-2">
                 <Input
