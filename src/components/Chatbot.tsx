@@ -19,32 +19,17 @@ const Chatbot = () => {
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [userEmail, setUserEmail] = useState('');
-  const [showEmailInput, setShowEmailInput] = useState(false);
-  const [webhookUrl, setWebhookUrl] = useState('');
-  const [showWebhookInput, setShowWebhookInput] = useState(false);
+  const [showEmailInput, setShowEmailInput] = useState(true);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const savedWebhookUrl = localStorage.getItem('zapier-webhook-url');
-    
-    if (savedWebhookUrl) {
-      setWebhookUrl(savedWebhookUrl);
-      setShowEmailInput(true);
-    } else {
-      setShowWebhookInput(true);
-    }
+    // No need to check for webhook URL since it's now securely stored in Supabase
   }, []);
 
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages]);
 
-
-  const saveWebhookUrl = () => {
-    localStorage.setItem('zapier-webhook-url', webhookUrl);
-    setShowWebhookInput(false);
-    setShowEmailInput(true);
-  };
 
   const saveEmailAndStart = () => {
     if (!userEmail.trim()) return;
@@ -53,26 +38,24 @@ const Chatbot = () => {
   };
 
   const sendChatTranscript = async () => {
-    if (!webhookUrl || !userEmail || messages.length === 0) return;
+    if (!userEmail || messages.length === 0) return;
 
     try {
       const chatTranscript = messages.map(msg => 
         `${msg.role.toUpperCase()}: ${msg.content}`
       ).join('\n\n');
 
-      await fetch(webhookUrl, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        mode: "no-cors",
-        body: JSON.stringify({
+      const { error } = await supabase.functions.invoke('send-chat-transcript', {
+        body: {
           userEmail,
           chatTranscript,
-          timestamp: new Date().toISOString(),
           totalMessages: messages.length,
-        }),
+        }
       });
+
+      if (error) {
+        console.error('Error sending chat transcript:', error);
+      }
     } catch (error) {
       console.error('Error sending chat transcript:', error);
     }
@@ -195,26 +178,6 @@ const Chatbot = () => {
           </div>
 
 
-          {/* Webhook URL Input */}
-          {showWebhookInput && (
-            <div className="p-4 border-b bg-muted/50">
-              <p className="text-sm text-muted-foreground mb-2">
-                Enter your Zapier webhook URL to receive chat transcripts:
-              </p>
-              <div className="flex gap-2">
-                <Input
-                  type="url"
-                  placeholder="https://hooks.zapier.com/hooks/catch/..."
-                  value={webhookUrl}
-                  onChange={(e) => setWebhookUrl(e.target.value)}
-                  className="text-sm"
-                />
-                <Button onClick={saveWebhookUrl} size="sm">
-                  Save
-                </Button>
-              </div>
-            </div>
-          )}
 
           {/* Email Input */}
           {showEmailInput && (
@@ -292,7 +255,7 @@ const Chatbot = () => {
           </div>
 
           {/* Input */}
-          {!showWebhookInput && !showEmailInput && (
+          {!showEmailInput && (
             <div className="p-4 border-t">
               <form autoComplete="off" onSubmit={(e) => { e.preventDefault(); sendMessage(); }}>
                 <div className="flex gap-2">
