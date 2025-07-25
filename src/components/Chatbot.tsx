@@ -95,20 +95,22 @@ EXPERIENCE & MANUFACTURING:
 - Perfect balance between quality and value
 
 PACKAGES & PRICING:
-- Most clients invest between $12,000–$35,000 for a complete rental inventory
-- Packages start around $300 per letter (Elite Package)
-- Final pricing depends on exact mix and style of letters, including upgrades like color-changing bulbs or LED neon options
-- Pricing also varies by timeline and shipping destination
-- Flexible packages designed to grow with rental business
-- Can start small with a few letters or go big with pre-mixed packages
-- Custom orders available for specific words/phrases or curated versatile mixes
+Each package includes 36" letters, numbers, and symbols. The 112-piece package also comes with 15" toppers like THE, MR&MRS, CLASS OF, and BABY.
+
+- 25-Piece Starter Package: $12,600 delivered (~$504 per piece)
+- 35-Piece Package: $15,960 delivered (~$456 per piece)  
+- 50-Piece Package: $21,000 delivered (~$420 per piece)
+- 66-Piece Package: $25,200 delivered (~$382 per piece) - Predetermined set based on what you'll need
+- 112-Piece Package: $34,800 delivered (~$311 per piece) – BEST VALUE! Predetermined set, plus 15" toppers
+- Full Pay Discount: Save an extra 3% if you pay in full
+- For smaller packages, you can choose your own letters/numbers/symbols or let us pick for you
+- Larger packages (66 & 112-piece) are predetermined sets based on rental business needs
 
 DELIVERY & TIMELINE:
-- Estimated turnaround: 3-4 months from order finalization
+- Current delivery date: OCTOBER delivery 
+- Order now to be ready for winter events
 - Manufacturing overseas with ocean freight shipping to keep pricing low
-- Air freight available for small number of letters at additional cost (allows early start while main order ships)
 - Planning ahead ensures best value without rush fees
-- Reserve early to stay ahead of peak event seasons
 
 CUSTOMIZATION OPTIONS:
 - Start small with few letters/numbers or larger packages
