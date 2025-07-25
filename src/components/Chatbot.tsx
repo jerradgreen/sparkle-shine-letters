@@ -60,14 +60,47 @@ const Chatbot = () => {
   }, [messages]);
 
 
-  const saveEmailAndStart = () => {
+  const saveEmailAndStart = async () => {
     const trimmedEmail = userEmail.trim();
     if (!trimmedEmail || !isValidEmail(trimmedEmail)) {
       alert('Please enter a valid email address');
       return;
     }
-    setShowEmailInput(false);
-    addWelcomeMessage();
+
+    // Show loading state
+    setIsLoading(true);
+
+    try {
+      // Verify email with Abstract API
+      const { data, error } = await supabase.functions.invoke('verify-email', {
+        body: { email: trimmedEmail }
+      });
+
+      if (error) {
+        console.error('Email verification error:', error);
+        // Proceed anyway if verification service fails
+        setShowEmailInput(false);
+        addWelcomeMessage();
+        return;
+      }
+
+      if (!data.valid) {
+        alert(data.reason || 'Please enter a valid email address');
+        return;
+      }
+
+      // Email is valid, proceed with chat
+      setShowEmailInput(false);
+      addWelcomeMessage();
+
+    } catch (error) {
+      console.error('Email verification failed:', error);
+      // Fallback: proceed anyway if verification completely fails
+      setShowEmailInput(false);
+      addWelcomeMessage();
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const sendChatTranscript = async () => {
