@@ -4,6 +4,11 @@ import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
   'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
+  'X-Content-Type-Options': 'nosniff',
+  'X-Frame-Options': 'DENY',
+  'X-XSS-Protection': '1; mode=block',
+  'Referrer-Policy': 'strict-origin-when-cross-origin',
+  'Content-Security-Policy': "default-src 'none'; script-src 'none'; object-src 'none';"
 };
 
 serve(async (req) => {
@@ -14,6 +19,21 @@ serve(async (req) => {
 
   try {
     const { messages } = await req.json();
+    
+    // Security: Input validation
+    if (!Array.isArray(messages) || messages.length === 0 || messages.length > 50) {
+      throw new Error('Invalid messages format');
+    }
+    
+    // Security: Validate each message
+    for (const message of messages) {
+      if (!message.role || !message.content || 
+          typeof message.content !== 'string' || 
+          message.content.length > 2000 ||
+          !['user', 'assistant'].includes(message.role)) {
+        throw new Error('Invalid message format');
+      }
+    }
     
     const openAIApiKey = Deno.env.get('OPENAI_API_KEY');
     if (!openAIApiKey) {
@@ -175,7 +195,8 @@ When someone asks about pricing for rental marquee letters, respond with a frien
     });
   } catch (error) {
     console.error('Error in chat-with-ai function:', error);
-    return new Response(JSON.stringify({ error: error.message }), {
+    // Security: Generic error message to avoid information disclosure
+    return new Response(JSON.stringify({ error: 'Service temporarily unavailable. Please try again.' }), {
       status: 500,
       headers: { ...corsHeaders, 'Content-Type': 'application/json' },
     });

@@ -4,6 +4,11 @@ import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
   'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
+  'X-Content-Type-Options': 'nosniff',
+  'X-Frame-Options': 'DENY',
+  'X-XSS-Protection': '1; mode=block',
+  'Referrer-Policy': 'strict-origin-when-cross-origin',
+  'Content-Security-Policy': "default-src 'none'; script-src 'none'; object-src 'none';"
 };
 
 serve(async (req) => {
@@ -14,6 +19,19 @@ serve(async (req) => {
 
   try {
     const { userEmail, chatTranscript, totalMessages } = await req.json();
+    
+    // Security: Input validation
+    if (!userEmail || typeof userEmail !== 'string' || userEmail.length > 254 ||
+        !chatTranscript || typeof chatTranscript !== 'string' || chatTranscript.length > 50000 ||
+        !totalMessages || typeof totalMessages !== 'number' || totalMessages > 100) {
+      throw new Error('Invalid input parameters');
+    }
+    
+    // Security: Email validation
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    if (!emailRegex.test(userEmail)) {
+      throw new Error('Invalid email format');
+    }
     
     const webhookUrl = Deno.env.get('ZAPIER_WEBHOOK_URL');
     if (!webhookUrl) {
@@ -48,7 +66,8 @@ serve(async (req) => {
     });
   } catch (error) {
     console.error('Error in send-chat-transcript function:', error);
-    return new Response(JSON.stringify({ error: error.message }), {
+    // Security: Generic error message to avoid information disclosure
+    return new Response(JSON.stringify({ error: 'Failed to process request. Please try again.' }), {
       status: 500,
       headers: { ...corsHeaders, 'Content-Type': 'application/json' },
     });

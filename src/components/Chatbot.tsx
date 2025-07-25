@@ -20,7 +20,36 @@ const Chatbot = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [userEmail, setUserEmail] = useState('');
   const [showEmailInput, setShowEmailInput] = useState(true);
+  const [messageCount, setMessageCount] = useState(0);
+  const [lastMessageTime, setLastMessageTime] = useState(0);
   const messagesEndRef = useRef<HTMLDivElement>(null);
+
+  // Security: Email validation
+  const isValidEmail = (email: string): boolean => {
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    return emailRegex.test(email) && email.length <= 254;
+  };
+
+  // Security: Input sanitization
+  const sanitizeInput = (input: string): string => {
+    return input
+      .replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '')
+      .replace(/<[^>]+>/g, '')
+      .trim()
+      .slice(0, 1000); // Limit message length
+  };
+
+  // Security: Rate limiting
+  const isRateLimited = (): boolean => {
+    const now = Date.now();
+    if (now - lastMessageTime < 2000) { // 2 second minimum between messages
+      return true;
+    }
+    if (messageCount >= 20) { // Max 20 messages per session
+      return true;
+    }
+    return false;
+  };
 
   useEffect(() => {
     // No need to check for webhook URL since it's now securely stored in Supabase
@@ -32,7 +61,11 @@ const Chatbot = () => {
 
 
   const saveEmailAndStart = () => {
-    if (!userEmail.trim()) return;
+    const trimmedEmail = userEmail.trim();
+    if (!trimmedEmail || !isValidEmail(trimmedEmail)) {
+      alert('Please enter a valid email address');
+      return;
+    }
     setShowEmailInput(false);
     addWelcomeMessage();
   };
@@ -72,11 +105,25 @@ const Chatbot = () => {
   };
 
   const sendMessage = async () => {
-    if (!input.trim()) return;
+    const trimmedInput = input.trim();
+    if (!trimmedInput) return;
+
+    // Security: Rate limiting check
+    if (isRateLimited()) {
+      alert('Please wait a moment before sending another message.');
+      return;
+    }
+
+    // Security: Input sanitization
+    const sanitizedInput = sanitizeInput(trimmedInput);
+    if (!sanitizedInput) {
+      alert('Invalid message content.');
+      return;
+    }
 
     const userMessage: Message = {
       id: Date.now().toString(),
-      content: input,
+      content: sanitizedInput,
       role: 'user',
       timestamp: new Date(),
     };
@@ -84,6 +131,8 @@ const Chatbot = () => {
     setMessages(prev => [...prev, userMessage]);
     setInput('');
     setIsLoading(true);
+    setMessageCount(prev => prev + 1);
+    setLastMessageTime(Date.now());
 
     try {
       const { data, error } = await supabase.functions.invoke('chat-with-ai', {
@@ -95,7 +144,7 @@ const Chatbot = () => {
             })),
             {
               role: 'user',
-              content: input
+              content: sanitizedInput
             }
           ]
         }
