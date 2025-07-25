@@ -1,3 +1,5 @@
+import Chatbot from '@/components/Chatbot';
+
 // Update this page (the content is just a fallback if you fail to update the page)
 
 const Index = () => {
@@ -13,6 +15,7 @@ const Index = () => {
           Build Your Rental Inventory
         </a>
       </div>
+      <Chatbot />
     </div>
   );
 };
