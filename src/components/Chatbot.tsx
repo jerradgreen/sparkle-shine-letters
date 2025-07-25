@@ -296,15 +296,19 @@ Keep responses helpful, friendly, and focused on helping rental businesses build
         onClick={() => setIsOpen(true)}
         size="lg"
         className={cn(
-          "fixed bottom-6 right-6 z-50 rounded-full w-16 h-16 shadow-2xl",
+          "fixed bottom-6 right-6 z-50 rounded-full shadow-2xl",
           "bg-primary hover:bg-primary/90 text-primary-foreground",
           "transition-all duration-300",
           "hover:scale-110 hover:shadow-[0_0_20px_rgba(var(--primary),0.5)]",
           "ring-4 ring-primary/20 hover:ring-primary/40",
+          "px-6 py-4 h-auto min-w-[120px]",
           isOpen && "hidden"
         )}
       >
-        <MessageCircle className="w-7 h-7" />
+        <div className="flex items-center gap-2">
+          <MessageCircle className="w-6 h-6" />
+          <span className="text-sm font-medium">Questions?</span>
+        </div>
       </Button>
 
       {/* Chat Window */}
