@@ -453,6 +453,11 @@ Keep responses helpful, friendly, and focused on helping rental businesses build
                   onKeyPress={handleKeyPress}
                   disabled={isLoading}
                   autoComplete="off"
+                  autoCapitalize="off"
+                  autoCorrect="off"
+                  spellCheck="false"
+                  name="chat-message"
+                  type="text"
                 />
                 <Button
                   onClick={sendMessage}
