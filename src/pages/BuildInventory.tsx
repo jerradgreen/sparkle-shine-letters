@@ -198,7 +198,7 @@ const BuildInventory = () => {
                   <Package className="w-8 h-8 text-secondary mr-3" />
                   <h3 className="text-2xl font-bold text-card-foreground">Starting Price</h3>
                 </div>
-                <p className="text-3xl font-bold text-secondary mb-4">~$300 per letter</p>
+                <p className="text-3xl font-bold text-secondary mb-4">approx $300 per letter</p>
                 <p className="text-muted-foreground">Elite Package includes 36″ self-standing marquee letters made of powder-coated steel, with LED bulbs and reusable foam-lined transport boxes.</p>
               </CardContent>
             </Card>
