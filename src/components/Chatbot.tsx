@@ -105,7 +105,7 @@ const Chatbot = () => {
   const addWelcomeMessage = () => {
     const welcomeMessage: Message = {
       id: Date.now().toString(),
-      content: "Hi! I'm here to help you with questions about our marquee letter packages and pricing. What would you like to know?",
+      content: "Hi! I'm here to help you with questions about our marquee letter packages and pricing. What would you like to know?\n\nNote: At the end of our chat, you'll receive a transcript via email. You can reply to that email with any additional questions and I'll get back to you!",
       role: 'assistant',
       timestamp: new Date(),
     };
