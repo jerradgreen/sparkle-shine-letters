@@ -59,15 +59,15 @@ We help rental businesses build their own marquee letter inventory with professi
 ## PRICING STRUCTURE
 
 ### INDIVIDUAL PRICING (Less than 25 pieces - ESTIMATES ONLY)
-**IMPORTANT**: These are estimates - final pricing may vary based on shipping method and delivery requirements.
+**IMPORTANT**: These are estimates that include freight - final pricing may vary based on shipping method and delivery requirements.
 
 **Standard Warm White LED Bulbs:**
-• 36" letters: $800 per piece (estimate)
-• 48" letters: $900 per piece (estimate)
+• 36" letters: $800 per piece (estimate includes freight)
+• 48" letters: $900 per piece (estimate includes freight)
 
 **LED Neon or LED Color-Changing Bulbs:**
-• 36" letters: $900 per piece (estimate)
-• 48" letters: $1000 per piece (estimate)
+• 36" letters: $900 per piece (estimate includes freight)
+• 48" letters: $1000 per piece (estimate includes freight)
 
 **Shipping Considerations for Small Orders:**
 • Less than 15 pieces: Can be air freighted for faster delivery
