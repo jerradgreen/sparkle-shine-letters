@@ -452,6 +452,7 @@ Keep responses helpful, friendly, and focused on helping rental businesses build
                   onChange={(e) => setInput(e.target.value)}
                   onKeyPress={handleKeyPress}
                   disabled={isLoading}
+                  autoComplete="off"
                 />
                 <Button
                   onClick={sendMessage}
