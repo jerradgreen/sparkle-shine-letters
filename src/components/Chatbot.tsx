@@ -445,28 +445,34 @@ Keep responses helpful, friendly, and focused on helping rental businesses build
           {/* Input */}
           {!showApiKeyInput && !showWebhookInput && !showEmailInput && (
             <div className="p-4 border-t">
-              <div className="flex gap-2">
-                <Input
-                  placeholder="Ask about packages, pricing, or features..."
-                  value={input}
-                  onChange={(e) => setInput(e.target.value)}
-                  onKeyPress={handleKeyPress}
-                  disabled={isLoading}
-                  autoComplete="off"
-                  autoCapitalize="off"
-                  autoCorrect="off"
-                  spellCheck="false"
-                  name="chat-message"
-                  type="text"
-                />
-                <Button
-                  onClick={sendMessage}
-                  disabled={!input.trim() || isLoading}
-                  size="sm"
-                >
-                  <Send className="w-4 h-4" />
-                </Button>
-              </div>
+              <form autoComplete="off" onSubmit={(e) => { e.preventDefault(); sendMessage(); }}>
+                <div className="flex gap-2">
+                  <Input
+                    placeholder="Ask about packages, pricing, or features..."
+                    value={input}
+                    onChange={(e) => setInput(e.target.value)}
+                    onKeyPress={handleKeyPress}
+                    disabled={isLoading}
+                    autoComplete="new-password"
+                    autoCapitalize="off"
+                    autoCorrect="off"
+                    spellCheck="false"
+                    name="chat-message-input"
+                    id="chat-message-input"
+                    type="text"
+                    role="textbox"
+                    data-form-type="other"
+                  />
+                  <Button
+                    type="button"
+                    onClick={sendMessage}
+                    disabled={!input.trim() || isLoading}
+                    size="sm"
+                  >
+                    <Send className="w-4 h-4" />
+                  </Button>
+                </div>
+              </form>
             </div>
           )}
         </Card>
