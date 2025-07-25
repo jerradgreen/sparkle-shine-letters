@@ -268,8 +268,7 @@ const BuildInventory = () => {
         </div>
       </section>
 
-      {/* Chatbot - Temporarily disabled */}
-      {/* <Chatbot /> */}
+      <Chatbot />
     </div>
   );
 };
