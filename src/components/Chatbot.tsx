@@ -95,8 +95,18 @@ EXPERIENCE & MANUFACTURING:
 - Perfect balance between quality and value
 
 PACKAGES & PRICING:
-Each package includes 36" letters, numbers, and symbols. The 112-piece package also comes with 15" toppers like THE, MR&MRS, CLASS OF, and BABY.
+Each package includes 36" letters, numbers, and symbols. The 112-piece package also comes with 15" toppers like THE, MR&MRS, CLASS OF, BABY.
 
+INDIVIDUAL PRICING (Less than 25 pieces):
+STANDARD WARM WHITE LED BULBS:
+- 36" letters: $800 per piece
+- 48" letters: $900 per piece
+
+LED NEON OR LED COLOR-CHANGING BULBS:
+- 36" letters: $900 per piece  
+- 48" letters: $1000 per piece
+
+PACKAGE PRICING (25+ pieces - Much Better Value!):
 STANDARD WARM WHITE LED BULBS:
 - 25-Piece Starter Package: $12,600 delivered (~$504 per piece)
 - 35-Piece Package: $15,960 delivered (~$456 per piece)  
@@ -114,6 +124,7 @@ LED NEON OR LED COLOR-CHANGING BULBS:
 - Full Pay Discount: Save an extra 3% if you pay in full
 - For smaller packages (25, 35, 50-piece), you can choose your own letters/numbers/symbols or let us pick for you
 - Larger packages (66 & 112-piece) are predetermined sets based on rental business needs
+- IMPORTANT: 25 pieces is the minimum for package pricing - anything less uses individual pricing which is much more expensive
 
 DELIVERY & TIMELINE:
 - Current delivery date: OCTOBER delivery 
