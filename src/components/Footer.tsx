@@ -40,22 +40,34 @@ const Footer = () => {
           <Link to="/about" className="text-foreground hover:text-primary font-medium">
             About
           </Link>
-          <Link to="/contact" className="text-foreground hover:text-primary font-medium">
+          <button
+            onClick={() => {
+              const contactSection = document.querySelector('.text-center.py-12.px-6.bg-muted\\/20');
+              if (contactSection) {
+                contactSection.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}
+            className="text-foreground hover:text-primary font-medium text-left"
+          >
             Contact
-          </Link>
+          </button>
+          <a href="https://vintagemarqueelights.com/pages/custom-sign-request-form" className="text-foreground hover:text-primary font-medium">
+            Custom Request Form
+          </a>
         </div>
 
         {/* Contact Info */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
           <div>
-            <h4 className="font-semibold text-foreground mb-2">Contact</h4>
+            <h4 className="font-semibold text-foreground mb-2">Locations</h4>
             <p className="text-muted-foreground">
-              Email: hello@vintagemarqueelights.com
+              Myrtle Beach, SC<br />
+              Boise, ID<br />
+              Chicago, IL<br />
+              Marietta, GA<br />
+              Winston-Salem, NC<br />
+              and beyond!
             </p>
-          </div>
-          <div>
-            <h4 className="font-semibold text-foreground mb-2">Location</h4>
-            <p className="text-muted-foreground">Myrtle Beach, SC</p>
           </div>
           <div>
             <h4 className="font-semibold text-foreground mb-2">Follow Us</h4>

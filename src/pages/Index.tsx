@@ -119,24 +119,20 @@ const Index = () => {
 
       {/* Hero Carousel */}
       <div className="relative w-full overflow-hidden">
-        <div className="relative w-full" style={{ height: 'auto', minHeight: '50vh' }}>
+        <div className="relative w-full">
           {shuffledImages.map((item, index) => (
             <div
               key={index}
-              className={`absolute inset-0 transition-opacity duration-500 flex items-center justify-center ${
-                index === currentSlide ? 'opacity-100' : 'opacity-0'
-              }`}
+              className={`${
+                index === currentSlide ? 'block' : 'hidden'
+              } w-full flex justify-center`}
             >
               <img
                 src={item.image}
                 alt={item.title}
-                className="max-w-full max-h-[60vh] md:max-h-[70vh] object-contain"
+                className="w-full h-auto object-contain"
+                style={{ maxHeight: '80vh' }}
               />
-              <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
-                <h2 className="text-white text-3xl md:text-5xl font-bold text-center px-4">
-                  {item.title}
-                </h2>
-              </div>
             </div>
           ))}
         </div>
@@ -174,7 +170,7 @@ const Index = () => {
       <div className="text-center py-8 px-6">
         <p className="text-lg md:text-xl font-semibold text-foreground max-w-4xl mx-auto">
           Trusted by thousands of businesses, bars, and event pros since 2008.<br />
-          Proudly family-owned and the original marquee sign brand.
+          Proudly family-owned and the ORIGINAL Vintage Marquee Lights brand.
         </p>
       </div>
 
@@ -183,7 +179,7 @@ const Index = () => {
         {/* What Style Section */}
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-8">
-            Choose what style of sign are you wanting to create?
+            Choose what style of sign you are wanting to create
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -244,17 +240,40 @@ const Index = () => {
           </button>
         </div>
 
+        {/* Contact Form Section */}
+        <div className="text-center py-12 px-6 bg-muted/20 rounded-lg mb-12">
+          <p className="text-lg md:text-xl text-foreground mb-6">
+            Got a quick question or just starting to explore?<br />
+            We're happy to help — send us a message below.
+          </p>
+          
+          <div className="max-w-2xl mx-auto mb-6">
+            <script src="https://www.cognitoforms.com/f/seamless.js" data-key="dufgHGZ4sU6F2rV69vJTrA" data-form="5"></script>
+          </div>
+          
+          <p className="text-muted-foreground">
+            Need a full quote or want to design your sign now?<br />
+            Use our full request form → <a href="https://vintagemarqueelights.com/pages/custom-sign-request-form" className="text-primary hover:underline">https://vintagemarqueelights.com/pages/custom-sign-request-form</a>
+          </p>
+        </div>
+
         {/* Instagram Gallery Section */}
         <div id="gallery" className="text-center">
           <h3 className="text-2xl font-bold mb-6">Our Recent Work</h3>
           <p className="text-muted-foreground mb-4">
             Follow us on Instagram to see our latest creations and projects
           </p>
-          {/* Placeholder for Instagram embed - you can replace this with your actual Instagram embed code */}
-          <div className="bg-muted/20 rounded-lg p-8 min-h-[400px] flex items-center justify-center">
-            <p className="text-muted-foreground">
-              Instagram feed will be embedded here
-            </p>
+          
+          <div className="flex justify-center">
+            <iframe 
+              src="https://snapwidget.com/embed/1103824" 
+              className="snapwidget-widget max-w-full" 
+              allowTransparency={true} 
+              frameBorder="0" 
+              scrolling="no" 
+              style={{ border: 'none', overflow: 'hidden', width: '100%', maxWidth: '1275px', height: 'auto', aspectRatio: '1/1' }} 
+              title="Posts from Instagram"
+            />
           </div>
         </div>
       </div>

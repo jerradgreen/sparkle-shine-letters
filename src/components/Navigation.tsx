@@ -69,9 +69,9 @@ const Navigation = () => {
               About
             </Link>
             
-            <Link to="/contact" className="text-foreground hover:text-primary font-medium">
-              Contact
-            </Link>
+            <a href="https://vintagemarqueelights.com/pages/custom-sign-request-form" className="text-foreground hover:text-primary font-medium">
+              Custom Request Form
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -137,13 +137,13 @@ const Navigation = () => {
                 About
               </Link>
               
-              <Link
-                to="/contact"
+              <a
+                href="https://vintagemarqueelights.com/pages/custom-sign-request-form"
                 className="text-foreground hover:text-primary font-medium py-2"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Contact
-              </Link>
+                Custom Request Form
+              </a>
             </div>
           </div>
         )}
