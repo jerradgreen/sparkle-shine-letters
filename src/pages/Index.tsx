@@ -22,7 +22,7 @@ import carousel11 from "@/assets/carousel-11.jpg";
 import wallHanging from "@/assets/wall-hanging.jpg";
 import eventStandup from "@/assets/event-standup.jpg";
 import layeredSigns from "@/assets/layered-signs.jpg";
-import notSure from "@/assets/not-sure.jpg";
+
 
 const carouselData = [
   { image: carousel1, title: "Separate Marquee Letters" },
@@ -56,7 +56,7 @@ const signStyles = [
   },
   {
     title: "Not Sure Yet",
-    image: notSure,
+    image: "https://www.dropbox.com/scl/fi/zow5dope9wbfhay9lfcmq/custom-collage3.jpg?rlkey=btz40y0zyzbeb7h7y9kuajvbj&dl=1",
     link: "/contact",
   },
 ];
