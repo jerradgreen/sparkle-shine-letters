@@ -56,7 +56,7 @@ const signStyles = [
   },
   {
     title: "Not Sure Yet",
-    image: "https://www.dropbox.com/scl/fi/zow5dope9wbfhay9lfcmq/custom-collage3.jpg?rlkey=btz40y0zyzbeb7h7y9kuajvbj&dl=1",
+    image: "https://dl.dropboxusercontent.com/scl/fi/zow5dope9wbfhay9lfcmq/custom-collage3.jpg?rlkey=btz40y0zyzbeb7h7y9kuajvbj",
     link: "/contact",
   },
 ];
@@ -230,14 +230,24 @@ const Index = () => {
           </div>
         </div>
 
-        {/* Navigation Menu */}
-        <div className="text-center mb-8">
-          <button
-            onClick={scrollToGallery}
-            className="text-primary hover:text-primary/80 font-medium text-lg underline"
-          >
-            Gallery
-          </button>
+        {/* Instagram Gallery Section */}
+        <div id="gallery" className="text-center mb-12">
+          <h3 className="text-2xl font-bold mb-6">Our Recent Work</h3>
+          <p className="text-muted-foreground mb-4">
+            Follow us on Instagram to see our latest creations and projects
+          </p>
+          
+          <div className="flex justify-center">
+            <iframe 
+              src="https://snapwidget.com/embed/1103824" 
+              className="snapwidget-widget max-w-full" 
+              allowTransparency={true} 
+              frameBorder="0" 
+              scrolling="no" 
+              style={{ border: 'none', overflow: 'hidden', width: '100%', maxWidth: '1275px', height: 'auto', aspectRatio: '1/1' }} 
+              title="Posts from Instagram"
+            />
+          </div>
         </div>
 
         {/* Contact Form Section */}
@@ -261,26 +271,6 @@ const Index = () => {
             Need a full quote or want to design your sign now?<br />
             👉 <a href="https://vintagemarqueelights.com/pages/custom-sign-request-form" className="text-primary hover:underline font-medium">Click here to use our full request form</a>
           </p>
-        </div>
-
-        {/* Instagram Gallery Section */}
-        <div id="gallery" className="text-center">
-          <h3 className="text-2xl font-bold mb-6">Our Recent Work</h3>
-          <p className="text-muted-foreground mb-4">
-            Follow us on Instagram to see our latest creations and projects
-          </p>
-          
-          <div className="flex justify-center">
-            <iframe 
-              src="https://snapwidget.com/embed/1103824" 
-              className="snapwidget-widget max-w-full" 
-              allowTransparency={true} 
-              frameBorder="0" 
-              scrolling="no" 
-              style={{ border: 'none', overflow: 'hidden', width: '100%', maxWidth: '1275px', height: 'auto', aspectRatio: '1/1' }} 
-              title="Posts from Instagram"
-            />
-          </div>
         </div>
       </div>
       
