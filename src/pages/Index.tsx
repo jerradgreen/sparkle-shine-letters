@@ -248,7 +248,13 @@ const Index = () => {
           </p>
           
           <div className="max-w-2xl mx-auto mb-6">
-            <script src="https://www.cognitoforms.com/f/seamless.js" data-key="dufgHGZ4sU6F2rV69vJTrA" data-form="5"></script>
+            <iframe 
+              src="https://www.cognitoforms.com/f/dufgHGZ4sU6F2rV69vJTrA/5" 
+              allow="payment" 
+              style={{border: 0, width: '100%'}} 
+              height="492"
+              title="Contact Form"
+            />
           </div>
           
           <p className="text-muted-foreground">
