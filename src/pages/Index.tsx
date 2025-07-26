@@ -131,7 +131,7 @@ const Index = () => {
                 src={item.image}
                 alt={item.title}
                 className="w-full h-auto object-contain"
-                style={{ maxHeight: '80vh' }}
+                style={{ maxHeight: '48vh' }}
               />
             </div>
           ))}
@@ -253,7 +253,7 @@ const Index = () => {
           
           <p className="text-muted-foreground">
             Need a full quote or want to design your sign now?<br />
-            Use our full request form → <a href="https://vintagemarqueelights.com/pages/custom-sign-request-form" className="text-primary hover:underline">https://vintagemarqueelights.com/pages/custom-sign-request-form</a>
+            👉 <a href="https://vintagemarqueelights.com/pages/custom-sign-request-form" className="text-primary hover:underline font-medium">Click here to use our full request form</a>
           </p>
         </div>
 
