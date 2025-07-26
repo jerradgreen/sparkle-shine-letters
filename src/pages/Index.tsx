@@ -1,12 +1,13 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
 
 // Import all assets
-import logo from "@/assets/logo.jpg";
+import logo from "@/assets/logo.png";
 import carousel1 from "@/assets/carousel-1.jpg";
 import carousel2 from "@/assets/carousel-2.jpg";
 import carousel3 from "@/assets/carousel-3.jpg";
@@ -105,6 +106,8 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Navigation />
+      
       {/* Header with Logo */}
       <header className="p-6 text-center">
         <img 
@@ -115,19 +118,19 @@ const Index = () => {
       </header>
 
       {/* Hero Carousel */}
-      <div className="relative w-full h-[50vh] md:h-[60vh] overflow-hidden">
-        <div className="relative w-full h-full">
+      <div className="relative w-full overflow-hidden">
+        <div className="relative w-full" style={{ height: 'auto', minHeight: '50vh' }}>
           {shuffledImages.map((item, index) => (
             <div
               key={index}
-              className={`absolute inset-0 transition-opacity duration-500 ${
+              className={`absolute inset-0 transition-opacity duration-500 flex items-center justify-center ${
                 index === currentSlide ? 'opacity-100' : 'opacity-0'
               }`}
             >
               <img
                 src={item.image}
                 alt={item.title}
-                className="w-full h-full object-cover"
+                className="max-w-full max-h-[60vh] md:max-h-[70vh] object-contain"
               />
               <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
                 <h2 className="text-white text-3xl md:text-5xl font-bold text-center px-4">
@@ -167,12 +170,20 @@ const Index = () => {
         </div>
       </div>
 
+      {/* Credibility Blurb */}
+      <div className="text-center py-8 px-6">
+        <p className="text-lg md:text-xl font-semibold text-foreground max-w-4xl mx-auto">
+          Trusted by thousands of businesses, bars, and event pros since 2008.<br />
+          Proudly family-owned and the original marquee sign brand.
+        </p>
+      </div>
+
       {/* Main Content */}
       <div className="container mx-auto px-6 py-12">
         {/* What Style Section */}
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-8">
-            What style of sign are you wanting to create?
+            Choose what style of sign are you wanting to create?
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -204,17 +215,20 @@ const Index = () => {
         {/* Additional Options */}
         <div className="text-center space-y-6 mb-12">
           <div>
-            <Link to="/in-stock">
-              <Button size="lg" className="text-lg px-8 py-3">
-                ✨ Check and see what we have in stock
+            <Link to="/rental-inventory">
+              <Button 
+                size="lg" 
+                className="text-xl px-12 py-4 bg-orange-600 hover:bg-orange-700 text-white font-bold"
+              >
+                Build a Rental Inventory
               </Button>
             </Link>
           </div>
           
           <div>
-            <Link to="/rental-inventory">
+            <Link to="/in-stock">
               <Button variant="outline" size="lg" className="text-lg px-8 py-3">
-                Build a Rental Inventory
+                ✨ Check and see what we have in stock
               </Button>
             </Link>
           </div>
@@ -244,6 +258,8 @@ const Index = () => {
           </div>
         </div>
       </div>
+      
+      <Footer />
     </div>
   );
 };
