@@ -3,7 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Lightbulb, Star, Package, Clock, Mail } from "lucide-react";
-import Chatbot from "@/components/Chatbot";
+
 import drewiaHillImage from "@/assets/drewia-hill.jpeg";
 import elev8Image from "@/assets/elev8.jpeg";
 import year1969Image from "@/assets/1969.jpeg";
@@ -268,7 +268,7 @@ const RentalInventory = () => {
         </div>
       </section>
 
-      <Chatbot />
+      
     </div>
   );
 };
