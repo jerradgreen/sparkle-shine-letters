@@ -100,7 +100,7 @@ const ShopifyFooter = () => {
                   className="flex-1"
                 />
                 <Button 
-                  className="bg-orange-600 hover:bg-orange-700 text-white px-6"
+                  className="bg-primary hover:bg-primary/90 text-primary-foreground px-6"
                 >
                   SIGN UP
                 </Button>
