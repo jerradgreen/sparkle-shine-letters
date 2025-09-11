@@ -3,6 +3,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Lightbulb, Star, Package, Clock, Mail } from "lucide-react";
+import ShopifyHeader from "@/components/ShopifyHeader";
+import ShopifyFooter from "@/components/ShopifyFooter";
 
 import drewiaHillImage from "@/assets/drewia-hill.jpeg";
 import elev8Image from "@/assets/elev8.jpeg";
@@ -15,6 +17,7 @@ import marqueeDetailImage from "@/assets/marquee-detail.jpg";
 const RentalInventory = () => {
   return (
     <div className="min-h-screen bg-background">
+      <ShopifyHeader />
       {/* Hero Section */}
       <section className="relative py-20 px-4 text-center bg-gradient-to-br from-primary/10 to-accent/10">
         <div className="max-w-6xl mx-auto">
@@ -268,7 +271,7 @@ const RentalInventory = () => {
         </div>
       </section>
 
-      
+      <ShopifyFooter />
     </div>
   );
 };
