@@ -39,33 +39,17 @@ const ShopifyHeader = () => {
                 >
                   Home
                 </a>
-                <div className="relative group">
-                  <button className="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium flex items-center">
-                    Custom Signs
-                    <svg className="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                    </svg>
-                  </button>
-                  <div className="absolute left-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                    <div className="py-1">
-                      <a href="https://vintagemarqueelights.com/collections/wall-hanging-letters" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Wall-Hanging Letters</a>
-                      <a href="https://vintagemarqueelights.com/collections/event-stand-up-letters" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Event / Stand-Up Letters</a>
-                      <a href="https://vintagemarqueelights.com/collections/layered-signs" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">3D Layered Signs</a>
-                      <a href="/rental-inventory" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Build a Rental Inventory</a>
-                    </div>
-                  </div>
-                </div>
                 <a 
-                  href="https://vintagemarqueelights.com/pages/gallery" 
+                  href="https://vintagemarqueelights.com/pages/custom-sign-request-form" 
                   className="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium"
                 >
-                  Gallery
+                  Custom Request Form
                 </a>
                 <a 
-                  href="https://vintagemarqueelights.com/pages/about" 
+                  href="/rental-inventory" 
                   className="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium"
                 >
-                  About
+                  Build a Rental Inventory
                 </a>
               </div>
             </div>
@@ -102,23 +86,11 @@ const ShopifyHeader = () => {
               <a href="https://vintagemarqueelights.com" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">
                 Home
               </a>
-              <a href="https://vintagemarqueelights.com/collections/wall-hanging-letters" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">
-                Wall-Hanging Letters
-              </a>
-              <a href="https://vintagemarqueelights.com/collections/event-stand-up-letters" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">
-                Event / Stand-Up Letters
-              </a>
-              <a href="https://vintagemarqueelights.com/collections/layered-signs" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">
-                3D Layered Signs
+              <a href="https://vintagemarqueelights.com/pages/custom-sign-request-form" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">
+                Custom Request Form
               </a>
               <a href="/rental-inventory" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">
                 Build a Rental Inventory
-              </a>
-              <a href="https://vintagemarqueelights.com/pages/gallery" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">
-                Gallery
-              </a>
-              <a href="https://vintagemarqueelights.com/pages/about" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">
-                About
               </a>
               <div className="flex items-center space-x-4 px-3 py-2">
                 <a href="https://vintagemarqueelights.com/cart" className="text-gray-700 hover:text-gray-900">
