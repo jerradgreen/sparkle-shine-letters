@@ -75,11 +75,6 @@ const ShopifyFooter = () => {
                 </a>
               </div>
               
-              <div className="space-y-3">
-                <a href="https://vintagemarqueelights.com/pages/contact" className="block text-gray-600 hover:text-gray-900 transition-colors">
-                  CONTACT US
-                </a>
-              </div>
               
               <div className="space-y-3">
                 <a href="https://vintagemarqueelights.com/pages/reviews" className="block text-gray-600 hover:text-gray-900 transition-colors">
