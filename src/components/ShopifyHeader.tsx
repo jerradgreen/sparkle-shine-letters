@@ -51,6 +51,12 @@ const ShopifyHeader = () => {
                 >
                   Build a Rental Inventory
                 </a>
+                <a 
+                  href="https://vintagemarqueelights.com/pages/event-marquee-letter-lights-builder-visualizer" 
+                  className="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium"
+                >
+                  Event Marquee Visualizer-TRY IT
+                </a>
               </div>
             </div>
 
@@ -91,6 +97,9 @@ const ShopifyHeader = () => {
               </a>
               <a href="/rental-inventory" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">
                 Build a Rental Inventory
+              </a>
+              <a href="https://vintagemarqueelights.com/pages/event-marquee-letter-lights-builder-visualizer" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">
+                Event Marquee Visualizer-TRY IT
               </a>
               <div className="flex items-center space-x-4 px-3 py-2">
                 <a href="https://vintagemarqueelights.com/cart" className="text-gray-700 hover:text-gray-900">
