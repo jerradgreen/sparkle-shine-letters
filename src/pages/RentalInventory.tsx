@@ -175,21 +175,15 @@ const RentalInventory = () => {
             </Card>
           </div>
 
-          <div className="text-center">
-            <Badge variant="secondary" className="text-lg px-6 py-2 mb-8">
-              No Franchise Fees: Keep 100% of your rental revenue
-            </Badge>
-            
-            {/* Mobile-only CTA button */}
-            <div className="lg:hidden">
-              <Button 
-                size="lg" 
-                className="text-lg px-8 py-6 w-full"
-                onClick={() => setOpen(true)}
-              >
-                Get Package Pricing Now
-              </Button>
-            </div>
+          {/* Mobile-only CTA button */}
+          <div className="lg:hidden text-center">
+            <Button 
+              size="lg" 
+              className="text-lg px-8 py-6 w-full"
+              onClick={() => setOpen(true)}
+            >
+              Get Package Pricing Now
+            </Button>
           </div>
         </div>
       </section>
@@ -203,8 +197,8 @@ const RentalInventory = () => {
             <div className="flex items-start space-x-4">
               <div className="w-2 h-2 bg-primary rounded-full mt-3 flex-shrink-0"></div>
               <div>
-                <h3 className="text-xl font-semibold mb-2 text-foreground">You're outsourcing marquee letters and losing money on every event.</h3>
-                <p className="text-lg text-muted-foreground">You're booking the client… but someone else is collecting the real profit. Why not keep it all?</p>
+                <h3 className="text-xl font-semibold mb-2 text-foreground">You are outsourcing marquee letters and losing money on every event.</h3>
+                <p className="text-lg text-muted-foreground">You are booking the client… but someone else is collecting a portion of the profit. Why not keep it all?</p>
               </div>
             </div>
             
@@ -223,6 +217,12 @@ const RentalInventory = () => {
                 <p className="text-lg text-muted-foreground">You need products that make more with less effort. Our letters are eye-catching, low-maintenance, and book themselves.</p>
               </div>
             </div>
+          </div>
+          
+          <div className="text-center mt-8">
+            <Badge variant="secondary" className="text-lg px-6 py-2">
+              No Franchise Fees: Keep 100% of your rental revenue
+            </Badge>
           </div>
         </div>
       </section>
