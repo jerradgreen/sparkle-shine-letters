@@ -153,7 +153,7 @@ const RentalInventory = () => {
             <Card className="border-primary/20 hover:border-primary/40 transition-colors">
               <CardContent className="p-4 flex items-center space-x-3">
                 <div className="w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center flex-shrink-0">
-                  <Package className="w-6 h-6 text-secondary" />
+                  <Lightbulb className="w-6 h-6 text-secondary" />
                 </div>
                 <div>
                   <h3 className="text-base font-semibold mb-1 text-card-foreground">Top‑Tier Craftsmanship</h3>
