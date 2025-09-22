@@ -272,15 +272,6 @@ const RentalInventory = () => {
         </div>
       </section>
 
-      {/* Why Choose Us */}
-      <section className="py-16 px-4 bg-muted/30">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-8 text-foreground">Why Choose Us?</h2>
-          <p className="text-lg text-muted-foreground leading-relaxed">
-            With over 15 years of experience creating marquee letters and custom signs, we've perfected the balance between quality and value. Our rental letters are manufactured overseas by a long‑term partner, ensuring consistent quality and better pricing than most U.S. suppliers. Meanwhile, our custom signs are hand‑built in the United States. That combination lets us offer durable products at competitive rates.
-          </p>
-        </div>
-      </section>
 
       {/* Photo Gallery */}
       <section className="py-8 px-4">
