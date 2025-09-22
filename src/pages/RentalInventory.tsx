@@ -320,7 +320,6 @@ const RentalInventory = () => {
             </div>
           </div>
           <DialogFooter>
-            <Button variant="secondary" onClick={() => setOpen(false)}>Cancel</Button>
             <Button onClick={() => { const url = buildUrl(); window.open(url, "_blank"); setOpen(false); }}>Open Form</Button>
           </DialogFooter>
         </DialogContent>
