@@ -39,10 +39,10 @@ const RentalInventory = () => {
     <div className="min-h-screen bg-background">
       <ShopifyHeader />
       {/* Hero Section */}
-      <section className="relative py-1 px-4 text-center bg-gradient-to-br from-primary/10 to-accent/10">
-        <div className="max-w-6xl mx-auto">
+      <section className="relative py-2 px-4 text-center bg-gradient-to-br from-primary/10 to-accent/10">
+          <div className="max-w-6xl mx-auto">
           {/* Mobile Layout */}
-          <div className="lg:hidden">
+          <div className="lg:hidden -mt-2">
             {/* Mobile subtitle first */}
             <p className="text-lg font-semibold text-accent mb-2 text-center">
               Entrepreneurs and Business Owners
