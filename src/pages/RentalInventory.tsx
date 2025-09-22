@@ -197,7 +197,7 @@ const RentalInventory = () => {
             <div className="flex items-start space-x-4">
               <div className="w-2 h-2 bg-primary rounded-full mt-3 flex-shrink-0"></div>
               <div>
-                <h3 className="text-xl font-semibold mb-2 text-foreground">You are outsourcing marquee letters and losing money on every event.</h3>
+                <h3 className="text-xl font-semibold mb-2 text-foreground">You're outsourcing marquee letters and losing money on every event.</h3>
                 <p className="text-lg text-muted-foreground">YOU are booking the client… but someone else is collecting a portion of the profit. Why not keep it all?</p>
               </div>
             </div>
