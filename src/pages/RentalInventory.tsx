@@ -145,7 +145,7 @@ const RentalInventory = () => {
                 </div>
                 <div>
                   <h3 className="text-base font-semibold mb-1 text-card-foreground">Durable & Long‑Lasting</h3>
-                  <p className="text-xs text-muted-foreground">Commercial grade, powder‑coated steel construction built to withstand years of events.</p>
+                  <p className="text-xs text-muted-foreground">Commercial grade, powder‑coated steel built to withstand years of events.</p>
                 </div>
               </CardContent>
             </Card>
