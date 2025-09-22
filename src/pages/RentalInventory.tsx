@@ -222,7 +222,7 @@ const RentalInventory = () => {
                   <Lightbulb className="w-8 h-8 text-primary mr-3" />
                   <h3 className="text-2xl font-bold text-card-foreground">Investment Range</h3>
                 </div>
-                <p className="text-3xl font-bold text-primary mb-4">$12,000–$35,000</p>
+                <p className="text-3xl font-bold text-primary mb-4">$12,500–$40,000</p>
                 <p className="text-muted-foreground">Most clients invest in this range for a complete rental inventory, depending on package size and delivery location.</p>
               </CardContent>
             </Card>
