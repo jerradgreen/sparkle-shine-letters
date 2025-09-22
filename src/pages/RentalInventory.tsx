@@ -227,6 +227,49 @@ const RentalInventory = () => {
         </div>
       </section>
 
+      {/* You Don't Need a Franchise Section */}
+      <section className="py-16 px-4">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold mb-6 text-foreground">You Don't Need a Franchise. You Just Need the Right Inventory.</h2>
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              Imagine having your own collection of professional-grade marquee letters — built to last, ready to rent, and designed to pay for themselves fast. Our rental packages give you everything you need to launch or grow your business with confidence. No royalty fees. No chasing suppliers. Just premium product and full control.
+            </p>
+          </div>
+
+          <div className="flex justify-center mb-12">
+            <div className="w-24 h-px bg-muted-foreground/30"></div>
+          </div>
+
+          <div className="mb-12">
+            <h3 className="text-2xl font-bold mb-4 text-foreground">I've Seen the Struggle. That's Why I Built This.</h3>
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              Over the past 10+ years, I've worked with event pros, rental companies, and new business owners who were constantly outsourcing marquee letters — watching someone else make the real money. I knew there had to be a better way. So I spent the last decade working with my overseas partner to develop the highest quality marquee letters on the market — durable, self-standing, beautifully powder-coated, and designed specifically for the rental industry.
+            </p>
+            <p className="text-lg text-muted-foreground leading-relaxed mt-4">
+              Whether you're just getting started or looking to expand, I've built this system for people like you.
+            </p>
+          </div>
+
+          <div className="flex justify-center mb-12">
+            <div className="w-24 h-px bg-muted-foreground/30"></div>
+          </div>
+
+          <div>
+            <h3 className="text-2xl font-bold mb-4 text-foreground">You're not just buying letters — you're tapping into a proven system</h3>
+            <p className="text-lg text-muted-foreground leading-relaxed mb-4">
+              I'm Jerrad Green, founder of Vintage Marquee Lights. I've helped business owners and entrepreneurs across the country — whether it's for their restaurant, real estate office, corporate boardroom, home, business, or event company — create show-stopping displays that actually get eyeballs and help bring in money.
+            </p>
+            <p className="text-lg text-muted-foreground leading-relaxed mb-4">
+              These aren't off-the-shelf letters from a random supplier. I spent the last decade working directly with my overseas partner to develop the most durable, rental-ready marquee letters on the market. Every detail — from the depth of the steel to the powder-coated finish to the way they stand — was built from real-world experience in the rental industry.
+            </p>
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              When you order from us, you're not just getting letters. You're getting a shortcut to high-impact results — without the trial and error.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Why Choose Us */}
       <section className="py-16 px-4 bg-muted/30">
         <div className="max-w-4xl mx-auto text-center">
