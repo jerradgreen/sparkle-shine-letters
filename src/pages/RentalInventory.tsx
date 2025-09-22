@@ -71,9 +71,51 @@ const RentalInventory = () => {
         </div>
       </section>
 
-      {/* Testimonial Section */}
-      <section className="py-12 px-4">
-        <div className="max-w-4xl mx-auto">
+      {/* Feature Cards */}
+      <section className="py-16 px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+            <Card className="border-primary/20 hover:border-primary/40 transition-colors">
+              <CardContent className="p-6 text-center">
+                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Star className="w-8 h-8 text-primary" />
+                </div>
+                <h3 className="text-xl font-semibold mb-3 text-card-foreground">Durable & Long‑Lasting</h3>
+                <p className="text-muted-foreground">Powder‑coated steel construction built to withstand years of events.</p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-primary/20 hover:border-primary/40 transition-colors">
+              <CardContent className="p-6 text-center">
+                <div className="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Package className="w-8 h-8 text-secondary" />
+                </div>
+                <h3 className="text-xl font-semibold mb-3 text-card-foreground">Top‑Tier Craftsmanship</h3>
+                <p className="text-muted-foreground">Extra‑deep, self‑standing design with a high‑gloss finish and closed backs to hide wiring.</p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-primary/20 hover:border-primary/40 transition-colors">
+              <CardContent className="p-6 text-center">
+                <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Lightbulb className="w-8 h-8 text-accent" />
+                </div>
+                <h3 className="text-xl font-semibold mb-3 text-card-foreground">Plug‑and‑Play LED Bulbs</h3>
+                <p className="text-muted-foreground">Energy‑efficient LEDs provide warm, even lighting.</p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-primary/20 hover:border-primary/40 transition-colors">
+              <CardContent className="p-6 text-center">
+                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Package className="w-8 h-8 text-primary" />
+                </div>
+                <h3 className="text-xl font-semibold mb-3 text-card-foreground">Reusable Foam‑Lined Boxes</h3>
+                <p className="text-muted-foreground">Every order ships in protective boxes you can use again and again for safe transport.</p>
+              </CardContent>
+            </Card>
+          </div>
+
           <div className="text-center">
             <Badge variant="secondary" className="text-lg px-6 py-2 mb-8">
               No Franchise Fees: Keep 100% of your rental revenue
