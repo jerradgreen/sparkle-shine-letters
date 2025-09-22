@@ -71,58 +71,25 @@ const RentalInventory = () => {
         </div>
       </section>
 
-      {/* About Our Marquee Letters */}
-      <section className="py-16 px-4">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-12 text-foreground">
-            About Our Marquee Letters
-          </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <Card className="border-primary/20 hover:border-primary/40 transition-colors">
-              <CardContent className="p-6 text-center">
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Star className="w-8 h-8 text-primary" />
-                </div>
-                <h3 className="text-xl font-semibold mb-3 text-card-foreground">Durable & Long‑Lasting</h3>
-                <p className="text-muted-foreground">Powder‑coated steel construction built to withstand years of events.</p>
-              </CardContent>
-            </Card>
-
-            <Card className="border-primary/20 hover:border-primary/40 transition-colors">
-              <CardContent className="p-6 text-center">
-                <div className="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Package className="w-8 h-8 text-secondary" />
-                </div>
-                <h3 className="text-xl font-semibold mb-3 text-card-foreground">Top‑Tier Craftsmanship</h3>
-                <p className="text-muted-foreground">Extra‑deep, self‑standing design with a high‑gloss finish and closed backs to hide wiring.</p>
-              </CardContent>
-            </Card>
-
-            <Card className="border-primary/20 hover:border-primary/40 transition-colors">
-              <CardContent className="p-6 text-center">
-                <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Lightbulb className="w-8 h-8 text-accent" />
-                </div>
-                <h3 className="text-xl font-semibold mb-3 text-card-foreground">Plug‑and‑Play LED Bulbs</h3>
-                <p className="text-muted-foreground">Energy‑efficient LEDs provide warm, even lighting.</p>
-              </CardContent>
-            </Card>
-
-            <Card className="border-primary/20 hover:border-primary/40 transition-colors">
-              <CardContent className="p-6 text-center">
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Package className="w-8 h-8 text-primary" />
-                </div>
-                <h3 className="text-xl font-semibold mb-3 text-card-foreground">Reusable Foam‑Lined Boxes</h3>
-                <p className="text-muted-foreground">Every order ships in protective boxes you can use again and again for safe transport.</p>
-              </CardContent>
-            </Card>
-          </div>
-
-          <div className="mt-12 text-center">
-            <Badge variant="secondary" className="text-lg px-6 py-2">
+      {/* Testimonial Section */}
+      <section className="py-12 px-4">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center">
+            <Badge variant="secondary" className="text-lg px-6 py-2 mb-8">
               No Franchise Fees: Keep 100% of your rental revenue
             </Badge>
+          </div>
+          
+          <div className="bg-muted/30 rounded-lg p-8 text-center">
+            <div className="flex justify-center mb-4">
+              {[...Array(5)].map((_, i) => (
+                <Star key={i} className="w-6 h-6 text-yellow-500 fill-yellow-500" />
+              ))}
+            </div>
+            <blockquote className="text-lg text-muted-foreground italic mb-4 leading-relaxed">
+              "We started with just a few letters and now have a full inventory that stays booked most weekends. The quality is exactly what we needed for our rental business. Best investment we've made for expanding our event services."
+            </blockquote>
+            <cite className="text-foreground font-semibold">— Faith W., Tennessee</cite>
           </div>
         </div>
       </section>
