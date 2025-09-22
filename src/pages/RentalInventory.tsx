@@ -46,8 +46,8 @@ const RentalInventory = () => {
               <p className="text-2xl md:text-3xl font-semibold text-accent mb-4">
                 Entrepreneurs and Business Owners:
               </p>
-              <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6 leading-tight">
-                Build your business. Boost your profits. Our marquee letter packages are designed to help you do both — fast.
+              <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-6 leading-tight">
+                Build your business. boost your profits. Marquee letter packages designed to help you do both - fast.
               </h1>
               <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed">
                 Whether you're starting fresh or scaling up, our marquee letter packages let you tap into one of the most profitable segments in the event rental industry — with no franchise fees and no middlemen.
