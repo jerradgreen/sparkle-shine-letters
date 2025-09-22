@@ -189,7 +189,7 @@ const RentalInventory = () => {
       </section>
 
       {/* Why Most Event Businesses Leave Money on the Table */}
-      <section className="py-8 px-4">
+      <section className="py-2 px-4">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl font-bold text-center mb-12 text-foreground">Why Most Event Businesses Leave Money on the Table</h2>
           
