@@ -44,7 +44,7 @@ const RentalInventory = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="text-left">
               <p className="text-xl md:text-2xl font-semibold text-accent mb-4">
-                Entrepreneurs and Business Owners:
+                Entrepreneurs and Business Owners
               </p>
               <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-6 leading-tight">
                 Build Your Business. Boost Your Profits. Marquee Light Packages Designed to Help You Do Both - FAST.
