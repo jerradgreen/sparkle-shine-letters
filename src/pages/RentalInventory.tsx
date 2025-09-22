@@ -179,6 +179,17 @@ const RentalInventory = () => {
             <Badge variant="secondary" className="text-lg px-6 py-2 mb-8">
               No Franchise Fees: Keep 100% of your rental revenue
             </Badge>
+            
+            {/* Mobile-only CTA button */}
+            <div className="lg:hidden">
+              <Button 
+                size="lg" 
+                className="text-lg px-8 py-6 w-full"
+                onClick={() => setOpen(true)}
+              >
+                Get Package Pricing Now
+              </Button>
+            </div>
           </div>
         </div>
       </section>
