@@ -30,7 +30,7 @@ const RentalInventory = () => {
       Name: { First: firstName, Last: lastName },
       Phone: phone,
       EmailpleaseCheckSpellingBeforeSubmitting: email,
-      WhatStyleOfSignAreYouWantingUsToMake: "Rental Inventory",
+      WhatStyleOfSignAreYouWantingUsToMake: "Rental Inventory Package Info",
     };
     return "https://vintagemarqueelights.com/pages/custom-sign-request-form?entry=" + encodeURIComponent(JSON.stringify(payload));
   };
