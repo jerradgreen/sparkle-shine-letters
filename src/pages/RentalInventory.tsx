@@ -54,7 +54,7 @@ const RentalInventory = () => {
               </p>
               <Button 
                 size="lg" 
-                className="text-lg px-8 py-6"
+                className="text-lg px-8 py-6 w-full"
                 onClick={() => setOpen(true)}
               >
                 Get Package Pricing Now
