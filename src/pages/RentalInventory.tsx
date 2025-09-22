@@ -35,7 +35,7 @@ const RentalInventory = () => {
               <Button 
                 size="lg" 
                 className="text-lg px-8 py-6"
-                onClick={() => window.open('https://vintagemarqueelights.com/pages/custom-sign-request-form?entry=%7B%22Field19%22%3A%22Rental%20Inventory%20Package%20Info%22%7D', '_blank')}
+                onClick={() => window.open('https://vintagemarqueelights.com/pages/custom-sign-request-form?contact[body]=Rental%20Inventory%20Package%20Info', '_blank')}
               >
                 Get Package Pricing Now
               </Button>
@@ -262,7 +262,7 @@ const RentalInventory = () => {
               variant="outline" 
               size="lg" 
               className="text-lg px-8 py-4 bg-primary-foreground/10 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/20"
-              onClick={() => window.open('https://vintagemarqueelights.com/pages/custom-sign-request-form?entry=%7B%22Field19%22%3A%22Rental%20Inventory%20Package%20Info%22%7D', '_blank')}
+              onClick={() => window.open('https://vintagemarqueelights.com/pages/custom-sign-request-form?contact[body]=Rental%20Inventory%20Package%20Info', '_blank')}
             >
               Get Package Pricing Now
             </Button>
