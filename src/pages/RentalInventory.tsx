@@ -43,30 +43,19 @@ const RentalInventory = () => {
           <div className="max-w-6xl mx-auto">
           {/* Mobile Layout */}
           <div className="lg:hidden -mt-2">
-            {/* Mobile subtitle first */}
-            <p className="text-lg font-semibold text-accent mb-2 text-center">
-              Entrepreneurs and Business Owners
-            </p>
-            
-            {/* Mobile CTA button */}
-            <div className="mb-2">
-              <Button 
-                size="lg" 
-                className="text-lg px-8 py-6 w-full"
-                onClick={() => setOpen(true)}
-              >
-                Get Package Pricing Now
-              </Button>
-            </div>
-            
-            {/* Mobile image - more cropped */}
-            <div className="mb-4">
+            {/* Mobile image first */}
+            <div className="mb-3">
               <img 
                 src={drewiaHillImage} 
                 alt="Drewia Hill marquee letters event setup" 
                 className="rounded-lg shadow-2xl w-full h-32 object-cover"
               />
             </div>
+            
+            {/* Mobile subtitle after image */}
+            <p className="text-lg font-semibold text-accent mb-1 text-center">
+              Entrepreneurs and Business Owners
+            </p>
             
             {/* Mobile content */}
             <div className="text-left">
@@ -87,6 +76,17 @@ const RentalInventory = () => {
                   "The quality is exactly what we needed for our rental business. Best investment we've made for expanding our event services."
                 </blockquote>
                 <cite className="text-sm text-foreground font-semibold">— Faith W., Tennessee</cite>
+              </div>
+              
+              {/* Mobile CTA button after review */}
+              <div className="mt-3">
+                <Button 
+                  size="lg" 
+                  className="text-lg px-8 py-6 w-full"
+                  onClick={() => setOpen(true)}
+                >
+                  Get Package Pricing Now
+                </Button>
               </div>
             </div>
           </div>
