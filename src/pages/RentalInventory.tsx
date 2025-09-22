@@ -50,7 +50,7 @@ const RentalInventory = () => {
                 Build Your Business. Boost Your Profits. Marquee Light Packages Designed to Help You Do Both - FAST.
               </h1>
               <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed">
-                Tap into the event rental industry's most profitable segment — no franchise fees, no middlemen.
+                Tap into the event rental industry's most profitable segment, marquee lights — no franchise fees, no middlemen.
               </p>
               <Button 
                 size="lg" 
