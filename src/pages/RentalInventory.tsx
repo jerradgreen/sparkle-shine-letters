@@ -26,7 +26,7 @@ const RentalInventory = () => {
               <p className="text-2xl md:text-3xl font-semibold text-accent mb-4">
                 Entrepreneurs and Business Owners:
               </p>
-              <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
+              <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6 leading-tight">
                 Build your business. Boost your profits. Our marquee letter packages are designed to help you do both — fast.
               </h1>
               <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed">
