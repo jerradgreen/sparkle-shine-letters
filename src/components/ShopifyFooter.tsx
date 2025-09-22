@@ -117,37 +117,6 @@ const ShopifyFooter = () => {
                 </p>
               </div>
             </div>
-            
-            {/* Payment Methods */}
-            <div className="flex flex-wrap gap-2">
-              <div className="bg-white border border-gray-300 rounded px-2 py-1">
-                <span className="text-xs font-medium text-blue-600">American Express</span>
-              </div>
-              <div className="bg-white border border-gray-300 rounded px-2 py-1">
-                <span className="text-xs font-medium text-gray-700">Apple Pay</span>
-              </div>
-              <div className="bg-white border border-gray-300 rounded px-2 py-1">
-                <span className="text-xs font-medium text-blue-500">Diners Club</span>
-              </div>
-              <div className="bg-white border border-gray-300 rounded px-2 py-1">
-                <span className="text-xs font-medium text-orange-600">Discover</span>
-              </div>
-              <div className="bg-white border border-gray-300 rounded px-2 py-1">
-                <span className="text-xs font-medium text-gray-700">Google Pay</span>
-              </div>
-              <div className="bg-white border border-gray-300 rounded px-2 py-1">
-                <span className="text-xs font-medium text-red-600">Mastercard</span>
-              </div>
-              <div className="bg-white border border-gray-300 rounded px-2 py-1">
-                <span className="text-xs font-medium text-blue-600">PayPal</span>
-              </div>
-              <div className="bg-white border border-gray-300 rounded px-2 py-1">
-                <span className="text-xs font-medium text-purple-600">Shop Pay</span>
-              </div>
-              <div className="bg-white border border-gray-300 rounded px-2 py-1">
-                <span className="text-xs font-medium text-blue-600">Visa</span>
-              </div>
-            </div>
           </div>
         </div>
       </div>
