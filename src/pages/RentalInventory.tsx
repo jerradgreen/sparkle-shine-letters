@@ -39,17 +39,17 @@ const RentalInventory = () => {
     <div className="min-h-screen bg-background">
       <ShopifyHeader />
       {/* Hero Section */}
-      <section className="relative py-4 px-4 text-center bg-gradient-to-br from-primary/10 to-accent/10">
+      <section className="relative py-2 px-4 text-center bg-gradient-to-br from-primary/10 to-accent/10">
         <div className="max-w-6xl mx-auto">
           {/* Mobile Layout */}
           <div className="lg:hidden">
             {/* Mobile subtitle first */}
-            <p className="text-lg font-semibold text-accent mb-4 text-center">
+            <p className="text-lg font-semibold text-accent mb-2 text-center">
               Entrepreneurs and Business Owners
             </p>
             
             {/* Mobile CTA button */}
-            <div className="mb-4">
+            <div className="mb-2">
               <Button 
                 size="lg" 
                 className="text-lg px-8 py-6 w-full"
@@ -60,7 +60,7 @@ const RentalInventory = () => {
             </div>
             
             {/* Mobile image - more cropped */}
-            <div className="mb-6">
+            <div className="mb-4">
               <img 
                 src={drewiaHillImage} 
                 alt="Drewia Hill marquee letters event setup" 
@@ -73,7 +73,7 @@ const RentalInventory = () => {
               <h1 className="text-xl font-bold text-foreground mb-4 leading-tight">
                 Build Your Business. Boost Your Profits. Marquee Light Packages Designed to Help You Do Both - FAST.
               </h1>
-              <p className="text-lg text-muted-foreground mb-4 leading-relaxed">
+              <p className="text-lg text-muted-foreground mb-2 leading-relaxed">
                 Tap into the event rental industry's HOTTEST segment, marquee lights — no franchise fees, no middleman.
               </p>
               
