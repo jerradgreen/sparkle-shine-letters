@@ -59,6 +59,18 @@ const RentalInventory = () => {
               >
                 Get Package Pricing Now
               </Button>
+              
+              <div className="bg-muted/30 rounded-lg p-6 text-center mt-8">
+                <div className="flex justify-center mb-3">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 text-yellow-500 fill-yellow-500" />
+                  ))}
+                </div>
+                <blockquote className="text-base text-muted-foreground italic mb-3 leading-relaxed">
+                  "We started with just a few letters and now have a full inventory that stays booked most weekends. The quality is exactly what we needed for our rental business. Best investment we've made for expanding our event services."
+                </blockquote>
+                <cite className="text-foreground font-semibold">— Faith W., Tennessee</cite>
+              </div>
             </div>
             <div className="relative">
               <img 
@@ -120,18 +132,6 @@ const RentalInventory = () => {
             <Badge variant="secondary" className="text-lg px-6 py-2 mb-8">
               No Franchise Fees: Keep 100% of your rental revenue
             </Badge>
-          </div>
-          
-          <div className="bg-muted/30 rounded-lg p-8 text-center">
-            <div className="flex justify-center mb-4">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} className="w-6 h-6 text-yellow-500 fill-yellow-500" />
-              ))}
-            </div>
-            <blockquote className="text-lg text-muted-foreground italic mb-4 leading-relaxed">
-              "We started with just a few letters and now have a full inventory that stays booked most weekends. The quality is exactly what we needed for our rental business. Best investment we've made for expanding our event services."
-            </blockquote>
-            <cite className="text-foreground font-semibold">— Faith W., Tennessee</cite>
           </div>
         </div>
       </section>
