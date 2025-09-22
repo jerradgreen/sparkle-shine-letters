@@ -93,8 +93,8 @@ const RentalInventory = () => {
                   <Star className="w-6 h-6 text-primary" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold mb-2 text-card-foreground">Durable & Long‑Lasting</h3>
-                  <p className="text-sm text-muted-foreground">Powder‑coated steel construction built to withstand years of events.</p>
+                  <h3 className="text-base font-semibold mb-1 text-card-foreground">Durable & Long‑Lasting</h3>
+                  <p className="text-xs text-muted-foreground">Powder‑coated steel construction built to withstand years of events.</p>
                 </div>
               </CardContent>
             </Card>
@@ -105,8 +105,8 @@ const RentalInventory = () => {
                   <Package className="w-6 h-6 text-secondary" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold mb-2 text-card-foreground">Top‑Tier Craftsmanship</h3>
-                  <p className="text-sm text-muted-foreground">Extra‑deep, self‑standing design with a high‑gloss finish and closed backs to hide wiring.</p>
+                  <h3 className="text-base font-semibold mb-1 text-card-foreground">Top‑Tier Craftsmanship</h3>
+                  <p className="text-xs text-muted-foreground">Extra‑deep, self‑standing design with a high‑gloss finish and closed backs to hide wiring.</p>
                 </div>
               </CardContent>
             </Card>
@@ -117,8 +117,8 @@ const RentalInventory = () => {
                   <Package className="w-6 h-6 text-primary" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold mb-2 text-card-foreground">Reusable Foam‑Lined Boxes</h3>
-                  <p className="text-sm text-muted-foreground">Every order ships in protective boxes you can use again and again for safe transport.</p>
+                  <h3 className="text-base font-semibold mb-1 text-card-foreground">Reusable Foam‑Lined Boxes</h3>
+                  <p className="text-xs text-muted-foreground">Every order ships in protective boxes you can use again and again for safe transport.</p>
                 </div>
               </CardContent>
             </Card>
