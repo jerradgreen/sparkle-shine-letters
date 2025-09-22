@@ -139,7 +139,7 @@ const RentalInventory = () => {
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-12">
             <Card className="border-primary/20 hover:border-primary/40 transition-colors">
-              <CardContent className="p-4 flex items-center space-x-3">
+              <CardContent className="p-4 flex flex-col items-center text-center space-y-3">
                 <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
                   <Star className="w-6 h-6 text-primary" />
                 </div>
