@@ -206,7 +206,7 @@ const RentalInventory = () => {
               <div className="w-2 h-2 bg-primary rounded-full mt-3 flex-shrink-0"></div>
               <div>
                 <h3 className="text-xl font-semibold mb-2 text-foreground">You're working hard, but not building YOUR business.</h3>
-                <p className="text-lg text-muted-foreground">Whether you're working for someone else or renting cheap inventory, you're building their brand — not YOURS.</p>
+                <p className="text-lg text-muted-foreground">Whether you're working for someone else or renting cheap inventory, you're building THEIR brand — not YOURS.</p>
               </div>
             </div>
             
