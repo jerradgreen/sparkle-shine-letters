@@ -50,7 +50,7 @@ const RentalInventory = () => {
                 Build Your Business. Boost Your Profits. Marquee Light Packages Designed to Help You Do Both - FAST.
               </h1>
               <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed">
-                Whether you're starting fresh or scaling up, our marquee letter packages let you tap into one of the most profitable segments in the event rental industry — with no franchise fees and no middlemen.
+                Tap into the event rental industry's most profitable segment — no franchise fees, no middlemen.
               </p>
               <Button 
                 size="lg" 
