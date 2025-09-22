@@ -230,6 +230,7 @@ const RentalInventory = () => {
       {/* You Don't Need a Franchise Section */}
       <section className="py-16 px-4">
         <div className="max-w-4xl mx-auto">
+          <div className="bg-card border border-border rounded-lg p-8 shadow-sm">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-6 text-foreground">You Don't Need a Franchise. You Just Need the Right Inventory.</h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
@@ -266,6 +267,7 @@ const RentalInventory = () => {
             <p className="text-lg text-muted-foreground leading-relaxed">
               When you order from us, you're not just getting letters. You're getting a shortcut to high-impact results — without the trial and error.
             </p>
+          </div>
           </div>
         </div>
       </section>
