@@ -43,44 +43,8 @@ const RentalInventory = () => {
         <div className="max-w-6xl mx-auto">
           {/* Mobile Layout */}
           <div className="lg:hidden">
-            {/* Mobile header with logo and CTA */}
-            <div className="flex justify-between items-center mb-6">
-              <div className="text-left">
-                <img 
-                  src="/logo.png" 
-                  alt="Logo" 
-                  className="h-8 w-auto"
-                />
-              </div>
-              <Button 
-                size="sm" 
-                className="text-sm px-4 py-2"
-                onClick={() => setOpen(true)}
-              >
-                Get Package Pricing Now
-              </Button>
-            </div>
-            
-            {/* Mobile image */}
-            <div className="mb-6">
-              <img 
-                src={drewiaHillImage} 
-                alt="Drewia Hill marquee letters event setup" 
-                className="rounded-lg shadow-2xl w-full h-auto object-cover"
-              />
-            </div>
-            
-            {/* Mobile content */}
-            <div className="text-left">
-              <p className="text-lg md:text-xl font-semibold text-accent mb-3">
-                Entrepreneurs and Business Owners
-              </p>
-              <h1 className="text-2xl md:text-3xl font-bold text-foreground mb-4 leading-tight">
-                Build Your Business. Boost Your Profits. Marquee Light Packages Designed to Help You Do Both - FAST.
-              </h1>
-              <p className="text-lg md:text-xl text-muted-foreground mb-6 leading-relaxed">
-                Tap into the event rental industry's HOTTEST segment, marquee lights — no franchise fees, no middleman.
-              </p>
+            {/* Mobile CTA button */}
+            <div className="mb-4">
               <Button 
                 size="lg" 
                 className="text-lg px-8 py-6 w-full"
@@ -88,8 +52,32 @@ const RentalInventory = () => {
               >
                 Get Package Pricing Now
               </Button>
+            </div>
+            
+            {/* Mobile subtitle above image */}
+            <p className="text-lg font-semibold text-accent mb-4 text-center">
+              Entrepreneurs and Business Owners
+            </p>
+            
+            {/* Mobile image - cropped height */}
+            <div className="mb-6">
+              <img 
+                src={drewiaHillImage} 
+                alt="Drewia Hill marquee letters event setup" 
+                className="rounded-lg shadow-2xl w-full h-48 object-cover"
+              />
+            </div>
+            
+            {/* Mobile content */}
+            <div className="text-left">
+              <h1 className="text-2xl font-bold text-foreground mb-4 leading-tight">
+                Build Your Business. Boost Your Profits. Marquee Light Packages Designed to Help You Do Both - FAST.
+              </h1>
+              <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
+                Tap into the event rental industry's HOTTEST segment, marquee lights — no franchise fees, no middleman.
+              </p>
               
-              <div className="bg-muted/30 rounded-lg p-6 text-center mt-8">
+              <div className="bg-muted/30 rounded-lg p-6 text-center">
                 <div className="flex justify-center mb-3">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className="w-5 h-5 text-yellow-500 fill-yellow-500" />
