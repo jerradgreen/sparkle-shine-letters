@@ -70,20 +70,20 @@ const RentalInventory = () => {
             
             {/* Mobile content */}
             <div className="text-left">
-              <h1 className="text-xl font-bold text-foreground mb-4 leading-tight">
+              <h1 className="text-xl font-bold text-foreground mb-2 leading-tight">
                 Build Your Business. Boost Your Profits. Marquee Light Packages Designed to Help You Do Both - FAST.
               </h1>
-              <p className="text-lg text-muted-foreground mb-1 leading-relaxed">
+              <p className="text-lg text-muted-foreground mb-0 leading-relaxed">
                 Tap into the event rental industry's HOTTEST segment, marquee lights — no franchise fees, no middleman.
               </p>
               
-              <div className="bg-muted/30 rounded-lg p-6 text-center">
-                <div className="flex justify-center mb-3">
+              <div className="bg-muted/30 rounded-lg p-4 text-center">
+                <div className="flex justify-center mb-1">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className="w-5 h-5 text-yellow-500 fill-yellow-500" />
                   ))}
                 </div>
-                <blockquote className="text-base text-muted-foreground italic mb-3 leading-relaxed">
+                <blockquote className="text-base text-muted-foreground italic mb-1 leading-relaxed">
                   "The quality is exactly what we needed for our rental business. Best investment we've made for expanding our event services."
                 </blockquote>
                 <cite className="text-foreground font-semibold">— Faith W., Tennessee</cite>
