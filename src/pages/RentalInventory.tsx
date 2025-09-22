@@ -104,26 +104,26 @@ const RentalInventory = () => {
           </div>
 
           {/* Desktop Layout */}
-          <div className="hidden lg:grid lg:grid-cols-2 gap-12 items-center">
-            <div className="text-left">
-              <p className="text-lg md:text-xl font-semibold text-accent mb-3">
+          <div className="hidden lg:grid lg:grid-cols-2 gap-16 items-center min-h-[600px]">
+            <div className="text-left flex flex-col justify-center">
+              <p className="text-xl font-semibold text-accent mb-4">
                 Entrepreneurs and Business Owners
               </p>
-              <h1 className="text-2xl md:text-3xl font-bold text-foreground mb-4 leading-tight">
+              <h1 className="text-3xl xl:text-4xl font-bold text-foreground mb-6 leading-tight">
                 Build Your Business. Boost Your Profits. Marquee Light Packages Designed to Help You Do Both - FAST.
               </h1>
-              <p className="text-lg md:text-xl text-muted-foreground mb-6 leading-relaxed">
+              <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
                 Tap into the event rental industry's HOTTEST segment, marquee lights — no franchise fees, no middleman.
               </p>
               <Button 
                 size="lg" 
-                className="text-lg px-8 py-6 w-full"
+                className="text-lg px-8 py-6 w-full mb-8"
                 onClick={() => setOpen(true)}
               >
                 Get Package Pricing Now
               </Button>
               
-              <div className="bg-muted/30 rounded-lg p-6 text-center mt-8">
+              <div className="bg-muted/30 rounded-lg p-6 text-center">
                 <div className="flex justify-center mb-3">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className="w-5 h-5 text-yellow-500 fill-yellow-500" />
