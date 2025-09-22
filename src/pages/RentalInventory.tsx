@@ -43,13 +43,13 @@ const RentalInventory = () => {
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="text-left">
-              <p className="text-xl md:text-2xl font-semibold text-accent mb-4">
+              <p className="text-lg md:text-xl font-semibold text-accent mb-3">
                 Entrepreneurs and Business Owners
               </p>
-              <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-6 leading-tight">
+              <h1 className="text-2xl md:text-3xl font-bold text-foreground mb-4 leading-tight">
                 Build Your Business. Boost Your Profits. Marquee Light Packages Designed to Help You Do Both - FAST.
               </h1>
-              <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed">
+              <p className="text-lg md:text-xl text-muted-foreground mb-6 leading-relaxed">
                 Tap into the event rental industry's HOTTEST segment, marquee lights — no franchise fees, no middleman.
               </p>
               <Button 
