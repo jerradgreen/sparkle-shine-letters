@@ -23,18 +23,21 @@ const RentalInventory = () => {
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="text-left">
+              <p className="text-2xl md:text-3xl font-semibold text-accent mb-4">
+                Entrepreneurs and Business Owners:
+              </p>
               <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
-                Build Your Own Marquee Letter Rental Inventory
+                Build your business. Boost your profits. Our marquee letter packages are designed to help you do both — fast.
               </h1>
               <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed">
-                Give your clients the wow factor with professional‑grade marquee letters, numbers and symbols. Whether you're just getting started or expanding an existing rental business, we've got you covered.
+                Whether you're starting fresh or scaling up, our marquee letter packages let you tap into one of the most profitable segments in the event rental industry — with no franchise fees and no middlemen.
               </p>
               <Button 
                 size="lg" 
                 className="text-lg px-8 py-6"
-                onClick={() => window.open('https://vintagemarqueelights.com/pages/custom-sign-request-form', '_blank')}
+                onClick={() => window.open('https://vintagemarqueelights.com/pages/custom-sign-request-form?entry.1234=Rental%20Inventory%20Package%20Info', '_blank')}
               >
-                Get Your Custom Quote
+                Get Package Pricing Now
               </Button>
             </div>
             <div className="relative">
@@ -259,9 +262,9 @@ const RentalInventory = () => {
               variant="outline" 
               size="lg" 
               className="text-lg px-8 py-4 bg-primary-foreground/10 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/20"
-              onClick={() => window.open('https://vintagemarqueelights.com/pages/custom-sign-request-form', '_blank')}
+              onClick={() => window.open('https://vintagemarqueelights.com/pages/custom-sign-request-form?entry.1234=Rental%20Inventory%20Package%20Info', '_blank')}
             >
-              Get Started - Request Your Quote
+              Get Package Pricing Now
             </Button>
           </div>
           
