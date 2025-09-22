@@ -361,55 +361,6 @@ const RentalInventory = () => {
         </div>
       </section>
 
-      {/* Interactive Visualizer Section */}
-      <section className="py-16 px-4 bg-muted/20">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-8">
-            <h2 className="text-4xl font-bold mb-4 text-foreground">Try Our Interactive Visualizer</h2>
-            <p className="text-xl text-muted-foreground">
-              See how your words and phrases will look with our marquee letters before making your rental investment.
-            </p>
-          </div>
-          
-          <div className="relative w-full bg-muted/10 rounded-lg overflow-hidden" style={{ height: "800px" }}>
-            <iframe
-              src="https://vintagemarqueelights.com/pages/event-marquee-letter-lights-builder-visualizer"
-              className="w-full h-full border-0"
-              title="Marquee Letter Visualizer"
-              loading="lazy"
-              allow="fullscreen"
-              sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-popups-to-escape-sandbox"
-              onError={() => console.log('Iframe failed to load')}
-            />
-            {/* Fallback if iframe doesn't load */}
-            <div className="absolute inset-0 flex items-center justify-center bg-muted/20 backdrop-blur-sm opacity-0 hover:opacity-100 transition-opacity">
-              <div className="text-center p-8">
-                <p className="text-lg font-semibold mb-4">Having trouble viewing the visualizer?</p>
-                <Button 
-                  variant="outline" 
-                  size="lg"
-                  onClick={() => window.open('https://vintagemarqueelights.com/pages/event-marquee-letter-lights-builder-visualizer', '_blank')}
-                >
-                  Open Visualizer in New Tab
-                </Button>
-              </div>
-            </div>
-          </div>
-          
-          <div className="text-center mt-6">
-            <p className="text-lg text-muted-foreground mb-4">
-              Like what you see? Get pricing for your own rental inventory package.
-            </p>
-            <Button 
-              size="lg" 
-              className="text-lg px-8 py-4"
-              onClick={() => setOpen(true)}
-            >
-              Get Rental Package Pricing
-            </Button>
-          </div>
-        </div>
-      </section>
 
       <Dialog open={open} onOpenChange={setOpen}>
         <DialogContent aria-describedby={undefined}>
