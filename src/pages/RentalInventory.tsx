@@ -39,7 +39,7 @@ const RentalInventory = () => {
     <div className="min-h-screen bg-background">
       <ShopifyHeader />
       {/* Hero Section */}
-      <section className="relative py-20 px-4 text-center bg-gradient-to-br from-primary/10 to-accent/10">
+      <section className="relative py-8 px-4 text-center bg-gradient-to-br from-primary/10 to-accent/10">
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="text-left">
