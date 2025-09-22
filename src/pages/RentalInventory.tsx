@@ -189,7 +189,7 @@ const RentalInventory = () => {
       </section>
 
       {/* Why Most Event Businesses Leave Money on the Table */}
-      <section className="py-16 px-4">
+      <section className="py-8 px-4">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl font-bold text-center mb-12 text-foreground">Why Most Event Businesses Leave Money on the Table</h2>
           
@@ -198,7 +198,7 @@ const RentalInventory = () => {
               <div className="w-2 h-2 bg-primary rounded-full mt-3 flex-shrink-0"></div>
               <div>
                 <h3 className="text-xl font-semibold mb-2 text-foreground">You are outsourcing marquee letters and losing money on every event.</h3>
-                <p className="text-lg text-muted-foreground">You are booking the client… but someone else is collecting a portion of the profit. Why not keep it all?</p>
+                <p className="text-lg text-muted-foreground">YOU are booking the client… but someone else is collecting a portion of the profit. Why not keep it all?</p>
               </div>
             </div>
             
@@ -238,7 +238,7 @@ const RentalInventory = () => {
       </section>
 
       {/* Photo Gallery */}
-      <section className="py-16 px-4">
+      <section className="py-8 px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl font-bold text-center mb-12 text-foreground">See Our Letters in Action</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
