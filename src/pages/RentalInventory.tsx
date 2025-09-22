@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -5,6 +6,9 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 import { Lightbulb, Star, Package, Clock, Mail } from "lucide-react";
 import ShopifyHeader from "@/components/ShopifyHeader";
 import ShopifyFooter from "@/components/ShopifyFooter";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 
 import drewiaHillImage from "@/assets/drewia-hill.jpeg";
 import elev8Image from "@/assets/elev8.jpeg";
@@ -15,6 +19,22 @@ import setup2Image from "@/assets/setup-2.jpg";
 import marqueeDetailImage from "@/assets/marquee-detail.jpg";
 
 const RentalInventory = () => {
+  const [open, setOpen] = useState(false);
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+
+  const buildUrl = () => {
+    const payload = {
+      Name: { First: firstName, Last: lastName },
+      Phone: phone,
+      EmailpleaseCheckSpellingBeforeSubmitting: email,
+      WhatStyleOfSignAreYouWantingUsToMake: "Rental Inventory",
+    };
+    return "https://vintagemarqueelights.com/pages/custom-sign-request-form?entry=" + encodeURIComponent(JSON.stringify(payload));
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <ShopifyHeader />
@@ -35,7 +55,7 @@ const RentalInventory = () => {
               <Button 
                 size="lg" 
                 className="text-lg px-8 py-6"
-                onClick={() => window.open('https://vintagemarqueelights.com/pages/custom-sign-request-form?entry=%7B%22Name%22%3A%7B%22First%22%3A%22%22%2C%22Last%22%3A%22%22%7D%2C%22Phone%22%3A%22%22%2C%22EmailpleaseCheckSpellingBeforeSubmitting%22%3A%22%22%2C%22WhatStyleOfSignAreYouWantingUsToMake%22%3A%22Rental%20Inventory%22%7D', '_blank')}
+                onClick={() => setOpen(true)}
               >
                 Get Package Pricing Now
               </Button>
@@ -262,7 +282,7 @@ const RentalInventory = () => {
               variant="outline" 
               size="lg" 
               className="text-lg px-8 py-4 bg-primary-foreground/10 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/20"
-              onClick={() => window.open('https://vintagemarqueelights.com/pages/custom-sign-request-form?entry=%7B%22Name%22%3A%7B%22First%22%3A%22%22%2C%22Last%22%3A%22%22%7D%2C%22Phone%22%3A%22%22%2C%22EmailpleaseCheckSpellingBeforeSubmitting%22%3A%22%22%2C%22WhatStyleOfSignAreYouWantingUsToMake%22%3A%22Rental%20Inventory%22%7D', '_blank')}
+              onClick={() => setOpen(true)}
             >
               Get Package Pricing Now
             </Button>
@@ -273,6 +293,38 @@ const RentalInventory = () => {
           </p>
         </div>
       </section>
+
+      <Dialog open={open} onOpenChange={setOpen}>
+        <DialogContent aria-describedby={undefined}>
+          <DialogHeader>
+            <DialogTitle>Prefill your info</DialogTitle>
+          </DialogHeader>
+          <div className="grid gap-4">
+            <div className="grid grid-cols-2 gap-3">
+              <div className="grid gap-2">
+                <Label htmlFor="first">First name</Label>
+                <Input id="first" value={firstName} onChange={(e) => setFirstName(e.target.value)} />
+              </div>
+              <div className="grid gap-2">
+                <Label htmlFor="last">Last name</Label>
+                <Input id="last" value={lastName} onChange={(e) => setLastName(e.target.value)} />
+              </div>
+            </div>
+            <div className="grid gap-2">
+              <Label htmlFor="email">Email</Label>
+              <Input id="email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+            </div>
+            <div className="grid gap-2">
+              <Label htmlFor="phone">Phone</Label>
+              <Input id="phone" type="tel" value={phone} onChange={(e) => setPhone(e.target.value)} />
+            </div>
+          </div>
+          <DialogFooter>
+            <Button variant="secondary" onClick={() => setOpen(false)}>Cancel</Button>
+            <Button onClick={() => { const url = buildUrl(); window.open(url, "_blank"); setOpen(false); }}>Open Form</Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
 
       <ShopifyFooter />
     </div>
