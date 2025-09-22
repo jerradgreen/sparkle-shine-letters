@@ -191,30 +191,30 @@ const RentalInventory = () => {
       {/* Why Most Event Businesses Leave Money on the Table */}
       <section className="py-2 px-4">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-12 text-foreground">Why Most Event Businesses Leave Money on the Table</h2>
+          <h2 className="text-3xl font-bold text-center mb-12 text-foreground">Why Most Event Businesses Leave Money on the Table</h2>
           
           <div className="space-y-8">
             <div className="flex items-start space-x-4">
               <div className="w-2 h-2 bg-primary rounded-full mt-3 flex-shrink-0"></div>
               <div>
-                <h3 className="text-xl font-semibold mb-2 text-foreground">You're outsourcing marquee letters and losing money on every event.</h3>
-                <p className="text-lg text-muted-foreground">YOU are booking the client… but someone else is collecting a portion of the profit. Why not keep it all?</p>
+                <h3 className="text-lg font-semibold mb-2 text-foreground">You're outsourcing marquee letters and losing money on every event.</h3>
+                <p className="text-base text-muted-foreground">YOU are booking the client… but someone else is collecting a portion of the profit. Why not keep it all?</p>
               </div>
             </div>
             
             <div className="flex items-start space-x-4">
               <div className="w-2 h-2 bg-primary rounded-full mt-3 flex-shrink-0"></div>
               <div>
-                <h3 className="text-xl font-semibold mb-2 text-foreground">You're working hard, but not building YOUR business.</h3>
-                <p className="text-lg text-muted-foreground">Whether you're working for someone else or renting cheap inventory, you're building THEIR brand — not YOURS.</p>
+                <h3 className="text-lg font-semibold mb-2 text-foreground">You're working hard, but not building YOUR business.</h3>
+                <p className="text-base text-muted-foreground">Whether you're working for someone else or renting cheap inventory, you're building THEIR brand — not YOURS.</p>
               </div>
             </div>
             
             <div className="flex items-start space-x-4">
               <div className="w-2 h-2 bg-primary rounded-full mt-3 flex-shrink-0"></div>
               <div>
-                <h3 className="text-xl font-semibold mb-2 text-foreground">Your profit per event is capped, no matter how busy you are.</h3>
-                <p className="text-lg text-muted-foreground">You need products that make more with less effort. Our letters are eye-catching, low-maintenance, and book themselves.</p>
+                <h3 className="text-lg font-semibold mb-2 text-foreground">Your profit per event is capped, no matter how busy you are.</h3>
+                <p className="text-base text-muted-foreground">You need products that make more with less effort. Our letters are eye-catching, low-maintenance, and book themselves.</p>
               </div>
             </div>
           </div>
