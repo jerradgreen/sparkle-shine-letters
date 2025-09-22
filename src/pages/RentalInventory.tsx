@@ -361,6 +361,40 @@ const RentalInventory = () => {
         </div>
       </section>
 
+      {/* Interactive Visualizer Section */}
+      <section className="py-16 px-4 bg-muted/20">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-8">
+            <h2 className="text-4xl font-bold mb-4 text-foreground">Try Our Interactive Visualizer</h2>
+            <p className="text-xl text-muted-foreground">
+              See how your words and phrases will look with our marquee letters before making your rental investment.
+            </p>
+          </div>
+          
+          <div className="relative w-full" style={{ height: "800px" }}>
+            <iframe
+              src="https://vintagemarqueelights.com/pages/event-marquee-letter-lights-builder-visualizer"
+              className="w-full h-full border-0 rounded-lg shadow-lg"
+              title="Marquee Letter Visualizer"
+              loading="lazy"
+            />
+          </div>
+          
+          <div className="text-center mt-6">
+            <p className="text-lg text-muted-foreground mb-4">
+              Like what you see? Get pricing for your own rental inventory package.
+            </p>
+            <Button 
+              size="lg" 
+              className="text-lg px-8 py-4"
+              onClick={() => setOpen(true)}
+            >
+              Get Rental Package Pricing
+            </Button>
+          </div>
+        </div>
+      </section>
+
       <Dialog open={open} onOpenChange={setOpen}>
         <DialogContent aria-describedby={undefined}>
           <DialogHeader>
