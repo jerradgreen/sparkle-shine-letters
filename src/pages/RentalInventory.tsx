@@ -67,7 +67,7 @@ const RentalInventory = () => {
                   ))}
                 </div>
                 <blockquote className="text-base text-muted-foreground italic mb-3 leading-relaxed">
-                  "We started with just a few letters and now have a full inventory that stays booked most weekends. The quality is exactly what we needed for our rental business. Best investment we've made for expanding our event services."
+                  "The quality is exactly what we needed for our rental business. Best investment we've made for expanding our event services."
                 </blockquote>
                 <cite className="text-foreground font-semibold">— Faith W., Tennessee</cite>
               </div>
