@@ -86,7 +86,7 @@ const RentalInventory = () => {
       {/* Feature Cards */}
       <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-12">
             <Card className="border-primary/20 hover:border-primary/40 transition-colors">
               <CardContent className="p-6 flex items-center space-x-4">
                 <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
@@ -107,18 +107,6 @@ const RentalInventory = () => {
                 <div>
                   <h3 className="text-lg font-semibold mb-2 text-card-foreground">Top‑Tier Craftsmanship</h3>
                   <p className="text-sm text-muted-foreground">Extra‑deep, self‑standing design with a high‑gloss finish and closed backs to hide wiring.</p>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="border-primary/20 hover:border-primary/40 transition-colors">
-              <CardContent className="p-6 flex items-center space-x-4">
-                <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center flex-shrink-0">
-                  <Lightbulb className="w-6 h-6 text-accent" />
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold mb-2 text-card-foreground">Plug‑and‑Play LED Bulbs</h3>
-                  <p className="text-sm text-muted-foreground">Energy‑efficient LEDs provide warm, even lighting.</p>
                 </div>
               </CardContent>
             </Card>
