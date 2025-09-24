@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import { Lightbulb, Star, Package, Clock, Mail, Zap, DollarSign, Percent, Check } from "lucide-react";
+import { Lightbulb, Star, Package, Clock, Mail, Zap, DollarSign, Percent, Check, Type, FileText, Hash, Circle, Square, Triangle } from "lucide-react";
 import ShopifyHeader from "@/components/ShopifyHeader";
 import ShopifyFooter from "@/components/ShopifyFooter";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog";
@@ -560,7 +560,7 @@ const RentalInventory = () => {
             <Card className="border-primary/20 hover:border-primary/40 transition-colors group">
               <CardContent className="p-6 text-center">
                 <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
-                  <div className="text-2xl font-bold text-primary transform rotate-12 hover:rotate-0 transition-transform duration-300" style={{textShadow: '2px 2px 4px rgba(0,0,0,0.3)'}}>A</div>
+                  <Type className="w-8 h-8 text-primary" />
                 </div>
                 <h3 className="text-lg font-bold mb-3 text-foreground">Extra-Deep, Self-Standing Construction</h3>
                 <div className="w-12 h-px bg-border mx-auto mb-3"></div>
@@ -572,7 +572,7 @@ const RentalInventory = () => {
             <Card className="border-primary/20 hover:border-primary/40 transition-colors group">
               <CardContent className="p-6 text-center">
                 <div className="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-secondary/20 transition-colors">
-                  <div className="text-2xl font-bold text-secondary transform -rotate-12 hover:rotate-0 transition-transform duration-300" style={{textShadow: '2px 2px 4px rgba(0,0,0,0.3)'}}>B</div>
+                  <Square className="w-8 h-8 text-secondary" />
                 </div>
                 <h3 className="text-lg font-bold mb-3 text-foreground">Fully Enclosed Backs</h3>
                 <div className="w-12 h-px bg-border mx-auto mb-3"></div>
@@ -584,7 +584,7 @@ const RentalInventory = () => {
             <Card className="border-primary/20 hover:border-primary/40 transition-colors group">
               <CardContent className="p-6 text-center">
                 <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
-                  <div className="text-2xl font-bold text-primary transform rotate-6 hover:rotate-0 transition-transform duration-300" style={{textShadow: '2px 2px 4px rgba(0,0,0,0.3)'}}>C</div>
+                  <Circle className="w-8 h-8 text-primary" />
                 </div>
                 <h3 className="text-lg font-bold mb-3 text-foreground">Powder-Coated Steel Finish</h3>
                 <div className="w-12 h-px bg-border mx-auto mb-3"></div>
@@ -596,7 +596,7 @@ const RentalInventory = () => {
             <Card className="border-primary/20 hover:border-primary/40 transition-colors group">
               <CardContent className="p-6 text-center">
                 <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-accent/20 transition-colors">
-                  <div className="text-2xl font-bold text-accent transform -rotate-6 hover:rotate-0 transition-transform duration-300" style={{textShadow: '2px 2px 4px rgba(0,0,0,0.3)'}}>D</div>
+                  <Triangle className="w-8 h-8 text-accent" />
                 </div>
                 <h3 className="text-lg font-bold mb-3 text-foreground">LED Bulbs (Warm or Color-Changing)</h3>
                 <div className="w-12 h-px bg-border mx-auto mb-3"></div>
@@ -608,7 +608,7 @@ const RentalInventory = () => {
             <Card className="border-primary/20 hover:border-primary/40 transition-colors group">
               <CardContent className="p-6 text-center">
                 <div className="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-secondary/20 transition-colors">
-                  <div className="text-2xl font-bold text-secondary transform rotate-12 hover:rotate-0 transition-transform duration-300" style={{textShadow: '2px 2px 4px rgba(0,0,0,0.3)'}}>E</div>
+                  <FileText className="w-8 h-8 text-secondary" />
                 </div>
                 <h3 className="text-lg font-bold mb-3 text-foreground">Reusable Foam-Lined Shipping Boxes</h3>
                 <div className="w-12 h-px bg-border mx-auto mb-3"></div>
@@ -620,7 +620,7 @@ const RentalInventory = () => {
             <Card className="border-primary/20 hover:border-primary/40 transition-colors group">
               <CardContent className="p-6 text-center">
                 <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
-                  <div className="text-2xl font-bold text-primary transform -rotate-12 hover:rotate-0 transition-transform duration-300" style={{textShadow: '2px 2px 4px rgba(0,0,0,0.3)'}}>F</div>
+                  <Hash className="w-8 h-8 text-primary" />
                 </div>
                 <h3 className="text-lg font-bold mb-3 text-foreground">Optional Display Stands for Multi-Row Setups</h3>
                 <div className="w-12 h-px bg-border mx-auto mb-3"></div>
