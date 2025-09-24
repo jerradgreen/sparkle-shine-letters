@@ -727,6 +727,12 @@ const RentalInventory = () => {
               <p className="text-sm text-muted-foreground mt-1">It's a long timeline, but it's what makes it possible to get a premium product at this price point. You'll get updates along the way, and the final carrier will call you to coordinate delivery.</p>
             </div>
 
+            {/* FAQ Item - What if I need something sooner */}
+            <div className="border-b border-border pb-4">
+              <h3 className="text-base font-bold mb-2 text-foreground">Q: What if I need something sooner?</h3>
+              <p className="text-sm text-muted-foreground">It's possible to air freight a small number of letters for an additional cost. That way, you can start showing off your new inventory, build marketing buzz, and begin drumming up business while the rest of your order is still en route.</p>
+            </div>
+
             {/* FAQ Item 11 */}
             <div className="border-b border-border pb-4">
               <h3 className="text-base font-bold mb-2 text-foreground">Q: Are the foam-lined boxes going to last?</h3>
@@ -824,16 +830,6 @@ const RentalInventory = () => {
               />
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Customization Options */}
-      <section className="py-16 px-4 bg-muted/30">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-8 text-foreground">Customization Options</h2>
-          <p className="text-lg text-muted-foreground leading-relaxed">
-            Start small with a few letters or numbers, or go big with one of our pre‑mixed packages. If you have a specific word or phrase in mind, we can tailor your order accordingly. Otherwise, let our team curate a versatile mix based on the letters and symbols most rental companies use.
-          </p>
         </div>
       </section>
 
