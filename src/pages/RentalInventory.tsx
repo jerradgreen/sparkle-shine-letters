@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import { Lightbulb, Star, Package, Clock, Mail, Zap, DollarSign, Percent } from "lucide-react";
+import { Lightbulb, Star, Package, Clock, Mail, Zap, DollarSign, Percent, Check } from "lucide-react";
 import ShopifyHeader from "@/components/ShopifyHeader";
 import ShopifyFooter from "@/components/ShopifyFooter";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog";
@@ -435,6 +435,118 @@ const RentalInventory = () => {
           >
             Get Package Pricing Now
           </Button>
+        </div>
+      </section>
+
+      {/* 10 Reasons Section */}
+      <section className="py-16 px-4 bg-muted/40">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-4xl font-bold text-center mb-12 text-foreground">10 Reasons Clients Choose Vintage Marquee Lights</h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="space-y-6">
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center mt-1">
+                  <Check className="w-4 h-4 text-primary" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-lg mb-2 text-foreground">Unmatched Durability</h3>
+                  <p className="text-muted-foreground">These aren't flimsy wooden frames. Our steel letters are powder-coated, self-standing, and built to survive years of rentals and transport.</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center mt-1">
+                  <Check className="w-4 h-4 text-primary" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-lg mb-2 text-foreground">Zero Franchise or Royalty Fees</h3>
+                  <p className="text-muted-foreground">You keep 100% of what you earn. No licensing. No middleman. No surprise costs.</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center mt-1">
+                  <Check className="w-4 h-4 text-primary" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-lg mb-2 text-foreground">Complete, Ready‑to‑Rent Packages</h3>
+                  <p className="text-muted-foreground">You don't have to guess what letters you need — we deliver full sets of high-demand characters so you start renting right away.</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center mt-1">
+                  <Check className="w-4 h-4 text-primary" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-lg mb-2 text-foreground">End-to-End Logistics Handled</h3>
+                  <p className="text-muted-foreground">From production to freight, packaging to delivery — we manage it all so you don't have to chase supply chains.</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center mt-1">
+                  <Check className="w-4 h-4 text-primary" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-lg mb-2 text-foreground">Premium Visual Impact</h3>
+                  <p className="text-muted-foreground">These aren't mere signs — they command attention in photos, events, and social media. You look premium; your clients notice.</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="space-y-6">
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center mt-1">
+                  <Check className="w-4 h-4 text-primary" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-lg mb-2 text-foreground">Scalable & Expandable Inventory</h3>
+                  <p className="text-muted-foreground">Your setup today can grow — you can add modules, symbols, or backup letters without redoing your system.</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center mt-1">
+                  <Check className="w-4 h-4 text-primary" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-lg mb-2 text-foreground">Nationwide Reach / Delivery Capability</h3>
+                  <p className="text-muted-foreground">No matter where your business is, you can order and get consistent service — not just local limitations.</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center mt-1">
+                  <Check className="w-4 h-4 text-primary" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-lg mb-2 text-foreground">Tested & Proven in the Field</h3>
+                  <p className="text-muted-foreground">These letters aren't just manufactured — they were developed through real-world use over a decade in the rental space.</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center mt-1">
+                  <Check className="w-4 h-4 text-primary" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-lg mb-2 text-foreground">Dynamic Lighting Options</h3>
+                  <p className="text-muted-foreground">Upgrade to color-changing bulbs or a full LED neon-style look for clients who want something bold and modern.</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center mt-1">
+                  <Check className="w-4 h-4 text-primary" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-lg mb-2 text-foreground">Custom Shapes Available</h3>
+                  <p className="text-muted-foreground">Need a heart, a hashtag, or something totally unique? We can design and produce custom shapes to make your rentals stand out even more.</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
