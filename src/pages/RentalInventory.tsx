@@ -556,11 +556,11 @@ const RentalInventory = () => {
           <h2 className="text-3xl font-bold text-center mb-12 text-foreground">Product Features That Set Us Apart</h2>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Feature A */}
+            {/* Feature A - Blue */}
             <Card className="border-primary/20 hover:border-primary/40 transition-colors group">
               <CardContent className="p-6 text-center">
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
-                  <Type className="w-8 h-8 text-primary" />
+                <div className="w-16 h-16 bg-blue-500/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-500/20 transition-colors">
+                  <Star className="w-8 h-8 text-blue-500" />
                 </div>
                 <h3 className="text-lg font-bold mb-3 text-foreground">Extra-Deep, Self-Standing Construction</h3>
                 <div className="w-12 h-px bg-border mx-auto mb-3"></div>
@@ -568,11 +568,11 @@ const RentalInventory = () => {
               </CardContent>
             </Card>
 
-            {/* Feature B */}
+            {/* Feature B - Orange */}
             <Card className="border-primary/20 hover:border-primary/40 transition-colors group">
               <CardContent className="p-6 text-center">
-                <div className="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-secondary/20 transition-colors">
-                  <Square className="w-8 h-8 text-secondary" />
+                <div className="w-16 h-16 bg-orange-500/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-orange-500/20 transition-colors">
+                  <Star className="w-8 h-8 text-orange-500" />
                 </div>
                 <h3 className="text-lg font-bold mb-3 text-foreground">Fully Enclosed Backs</h3>
                 <div className="w-12 h-px bg-border mx-auto mb-3"></div>
@@ -580,11 +580,11 @@ const RentalInventory = () => {
               </CardContent>
             </Card>
 
-            {/* Feature C */}
+            {/* Feature C - Blue */}
             <Card className="border-primary/20 hover:border-primary/40 transition-colors group">
               <CardContent className="p-6 text-center">
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
-                  <Circle className="w-8 h-8 text-primary" />
+                <div className="w-16 h-16 bg-blue-500/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-500/20 transition-colors">
+                  <Star className="w-8 h-8 text-blue-500" />
                 </div>
                 <h3 className="text-lg font-bold mb-3 text-foreground">Powder-Coated Steel Finish</h3>
                 <div className="w-12 h-px bg-border mx-auto mb-3"></div>
@@ -592,11 +592,11 @@ const RentalInventory = () => {
               </CardContent>
             </Card>
 
-            {/* Feature D */}
+            {/* Feature D - Orange */}
             <Card className="border-primary/20 hover:border-primary/40 transition-colors group">
               <CardContent className="p-6 text-center">
-                <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-accent/20 transition-colors">
-                  <Triangle className="w-8 h-8 text-accent" />
+                <div className="w-16 h-16 bg-orange-500/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-orange-500/20 transition-colors">
+                  <Star className="w-8 h-8 text-orange-500" />
                 </div>
                 <h3 className="text-lg font-bold mb-3 text-foreground">LED Bulbs (Warm or Color-Changing)</h3>
                 <div className="w-12 h-px bg-border mx-auto mb-3"></div>
@@ -604,11 +604,11 @@ const RentalInventory = () => {
               </CardContent>
             </Card>
 
-            {/* Feature E */}
+            {/* Feature E - Blue */}
             <Card className="border-primary/20 hover:border-primary/40 transition-colors group">
               <CardContent className="p-6 text-center">
-                <div className="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-secondary/20 transition-colors">
-                  <FileText className="w-8 h-8 text-secondary" />
+                <div className="w-16 h-16 bg-blue-500/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-500/20 transition-colors">
+                  <Star className="w-8 h-8 text-blue-500" />
                 </div>
                 <h3 className="text-lg font-bold mb-3 text-foreground">Reusable Foam-Lined Shipping Boxes</h3>
                 <div className="w-12 h-px bg-border mx-auto mb-3"></div>
@@ -616,11 +616,11 @@ const RentalInventory = () => {
               </CardContent>
             </Card>
 
-            {/* Feature F */}
+            {/* Feature F - Orange */}
             <Card className="border-primary/20 hover:border-primary/40 transition-colors group">
               <CardContent className="p-6 text-center">
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
-                  <Hash className="w-8 h-8 text-primary" />
+                <div className="w-16 h-16 bg-orange-500/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-orange-500/20 transition-colors">
+                  <Star className="w-8 h-8 text-orange-500" />
                 </div>
                 <h3 className="text-lg font-bold mb-3 text-foreground">Optional Display Stands for Multi-Row Setups</h3>
                 <div className="w-12 h-px bg-border mx-auto mb-3"></div>
