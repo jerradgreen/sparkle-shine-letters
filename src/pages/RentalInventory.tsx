@@ -395,7 +395,7 @@ const RentalInventory = () => {
                   className="w-full h-full object-contain"
                 />
               </div>
-              <h3 className="text-2xl font-bold mb-4 text-foreground">Step 2: We Handle the Rest</h3>
+              <h3 className="text-2xl font-bold mb-4 text-foreground">Step 2: We Handle Everything</h3>
               <p className="text-muted-foreground leading-relaxed">
                 From production to freight, we coordinate every detail — your inventory arrives ready to rent, with nothing left to figure out.
               </p>
