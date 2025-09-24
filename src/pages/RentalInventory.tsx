@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import { Lightbulb, Star, Package, Clock, Mail } from "lucide-react";
+import { Lightbulb, Star, Package, Clock, Mail, CircleSlash, DollarSign, Percent } from "lucide-react";
 import ShopifyHeader from "@/components/ShopifyHeader";
 import ShopifyFooter from "@/components/ShopifyFooter";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog";
@@ -274,35 +274,35 @@ const RentalInventory = () => {
 
       {/* What You Get Section */}
       <section className="py-16 px-4 bg-muted/30">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-12 text-foreground">What You Get When You Own This Inventory</h2>
           
-          <div className="space-y-8">
+          <div className="grid md:grid-cols-3 gap-6">
             {/* Benefit 1 */}
-            <div className="flex items-start space-x-4 p-6 bg-card border border-border rounded-lg shadow-sm">
-              <div className="text-2xl text-primary mt-1">✅</div>
-              <div className="flex-1">
-                <h3 className="text-xl font-bold mb-3 text-foreground">Start Earning Fast — No Guesswork</h3>
-                <p className="text-base text-muted-foreground">Pre-packed with the most requested letters and symbols</p>
+            <div className="text-center p-6 bg-card border border-border rounded-lg shadow-sm">
+              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <CircleSlash className="w-8 h-8 text-primary" />
               </div>
+              <h3 className="text-lg font-bold mb-3 text-foreground">Start Earning Fast — No Guesswork</h3>
+              <p className="text-sm text-muted-foreground">Pre-packed with the most requested letters and symbols</p>
             </div>
 
             {/* Benefit 2 */}
-            <div className="flex items-start space-x-4 p-6 bg-card border border-border rounded-lg shadow-sm">
-              <div className="text-2xl text-primary mt-1">✅</div>
-              <div className="flex-1">
-                <h3 className="text-xl font-bold mb-3 text-foreground">Make More Per Event — With Less Effort</h3>
-                <p className="text-base text-muted-foreground">Premium, self-standing steel letters with a high-end finish</p>
+            <div className="text-center p-6 bg-card border border-border rounded-lg shadow-sm">
+              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <DollarSign className="w-8 h-8 text-primary" />
               </div>
+              <h3 className="text-lg font-bold mb-3 text-foreground">Make More Per Event — With Less Effort</h3>
+              <p className="text-sm text-muted-foreground">Premium, self-standing steel letters with a high-end finish</p>
             </div>
 
             {/* Benefit 3 */}
-            <div className="flex items-start space-x-4 p-6 bg-card border border-border rounded-lg shadow-sm">
-              <div className="text-2xl text-primary mt-1">✅</div>
-              <div className="flex-1">
-                <h3 className="text-xl font-bold mb-3 text-foreground">Keep Every Dollar — No Strings Attached</h3>
-                <p className="text-base text-muted-foreground">100% yours to own — no franchise, no royalty fees, no limits</p>
+            <div className="text-center p-6 bg-card border border-border rounded-lg shadow-sm">
+              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Percent className="w-8 h-8 text-primary" />
               </div>
+              <h3 className="text-lg font-bold mb-3 text-foreground">Keep Every Dollar — No Strings Attached</h3>
+              <p className="text-sm text-muted-foreground">100% yours to own — no franchise, no royalty fees, no limits</p>
             </div>
           </div>
         </div>
