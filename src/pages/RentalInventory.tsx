@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import { Lightbulb, Star, Package, Clock, Mail, CircleSlash, DollarSign, Percent } from "lucide-react";
+import { Lightbulb, Star, Package, Clock, Mail, Zap, DollarSign, Percent } from "lucide-react";
 import ShopifyHeader from "@/components/ShopifyHeader";
 import ShopifyFooter from "@/components/ShopifyFooter";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog";
@@ -281,7 +281,7 @@ const RentalInventory = () => {
             {/* Benefit 1 */}
             <div className="text-center p-6 bg-card border border-border rounded-lg shadow-sm">
               <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <CircleSlash className="w-8 h-8 text-primary" />
+                <Zap className="w-8 h-8 text-primary" />
               </div>
               <h3 className="text-lg font-bold mb-3 text-foreground">Start Earning Fast — No Guesswork</h3>
               <p className="text-sm text-muted-foreground">Pre-packed with the most requested letters and symbols</p>
