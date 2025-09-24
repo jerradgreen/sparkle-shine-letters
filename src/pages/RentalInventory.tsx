@@ -550,6 +550,87 @@ const RentalInventory = () => {
         </div>
       </section>
 
+      {/* Product Features Section */}
+      <section className="py-16 px-4 bg-muted/20">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-12 text-foreground">Product Features That Set Us Apart</h2>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Feature 1 */}
+            <Card className="border-primary/20 hover:border-primary/40 transition-colors group">
+              <CardContent className="p-6 text-center">
+                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
+                  <Package className="w-8 h-8 text-primary" />
+                </div>
+                <h3 className="text-lg font-bold mb-3 text-foreground">Extra-Deep, Self-Standing Construction</h3>
+                <div className="w-12 h-px bg-border mx-auto mb-3"></div>
+                <p className="text-sm text-muted-foreground">Built with depth and balance for maximum stability — no wobbling or extra supports needed.</p>
+              </CardContent>
+            </Card>
+
+            {/* Feature 2 */}
+            <Card className="border-primary/20 hover:border-primary/40 transition-colors group">
+              <CardContent className="p-6 text-center">
+                <div className="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-secondary/20 transition-colors">
+                  <Zap className="w-8 h-8 text-secondary" />
+                </div>
+                <h3 className="text-lg font-bold mb-3 text-foreground">Fully Enclosed Backs</h3>
+                <div className="w-12 h-px bg-border mx-auto mb-3"></div>
+                <p className="text-sm text-muted-foreground">All wiring and sockets are hidden inside closed backs for a clean, professional appearance and safer transport.</p>
+              </CardContent>
+            </Card>
+
+            {/* Feature 3 */}
+            <Card className="border-primary/20 hover:border-primary/40 transition-colors group">
+              <CardContent className="p-6 text-center">
+                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
+                  <Star className="w-8 h-8 text-primary" />
+                </div>
+                <h3 className="text-lg font-bold mb-3 text-foreground">Powder-Coated Steel Finish</h3>
+                <div className="w-12 h-px bg-border mx-auto mb-3"></div>
+                <p className="text-sm text-muted-foreground">Tough, sleek, and weather-resistant — your letters hold up to repeated rentals without chipping or fading.</p>
+              </CardContent>
+            </Card>
+
+            {/* Feature 4 */}
+            <Card className="border-primary/20 hover:border-primary/40 transition-colors group">
+              <CardContent className="p-6 text-center">
+                <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-accent/20 transition-colors">
+                  <Lightbulb className="w-8 h-8 text-accent" />
+                </div>
+                <h3 className="text-lg font-bold mb-3 text-foreground">LED Bulbs (Warm or Color-Changing)</h3>
+                <div className="w-12 h-px bg-border mx-auto mb-3"></div>
+                <p className="text-sm text-muted-foreground">Every unit includes long-lasting LED bulbs — with optional RGB color-changing or neon-style upgrades available.</p>
+              </CardContent>
+            </Card>
+
+            {/* Feature 5 */}
+            <Card className="border-primary/20 hover:border-primary/40 transition-colors group">
+              <CardContent className="p-6 text-center">
+                <div className="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-secondary/20 transition-colors">
+                  <Package className="w-8 h-8 text-secondary" />
+                </div>
+                <h3 className="text-lg font-bold mb-3 text-foreground">Reusable Foam-Lined Shipping Boxes</h3>
+                <div className="w-12 h-px bg-border mx-auto mb-3"></div>
+                <p className="text-sm text-muted-foreground">Every package is shipped in durable foam-lined boxes you can reuse for safe storage, transport, and organization.</p>
+              </CardContent>
+            </Card>
+
+            {/* Feature 6 */}
+            <Card className="border-primary/20 hover:border-primary/40 transition-colors group">
+              <CardContent className="p-6 text-center">
+                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
+                  <Clock className="w-8 h-8 text-primary" />
+                </div>
+                <h3 className="text-lg font-bold mb-3 text-foreground">Optional Display Stands for Multi-Row Setups</h3>
+                <div className="w-12 h-px bg-border mx-auto mb-3"></div>
+                <p className="text-sm text-muted-foreground">Add-on base stands make it easy to stack letters in multiple rows for layered phrases or stage-height signage.</p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* Photo Gallery */}
       <section className="py-8 px-4">
         <div className="max-w-6xl mx-auto">
