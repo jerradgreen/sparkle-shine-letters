@@ -374,7 +374,7 @@ const RentalInventory = () => {
                 <img 
                   src="/lovable-uploads/d86c2d98-97ca-4233-a7b6-6fea60a0dc18.png" 
                   alt="Step 1" 
-                  className="w-full h-full object-contain"
+                  className="w-full h-full object-contain rounded-lg"
                 />
               </div>
               <h3 className="text-2xl font-bold mb-4 text-foreground">Step 1: Get a Quote in Around 5 Minutes</h3>
@@ -392,7 +392,7 @@ const RentalInventory = () => {
                 <img 
                   src="/lovable-uploads/3a1aa8ae-0d8f-463a-9102-dd8aef074419.png" 
                   alt="Step 2" 
-                  className="w-full h-full object-contain"
+                  className="w-full h-full object-contain rounded-lg"
                 />
               </div>
               <h3 className="text-2xl font-bold mb-4 text-foreground">Step 2: We Handle Everything</h3>
@@ -410,7 +410,7 @@ const RentalInventory = () => {
                 <img 
                   src="/lovable-uploads/969e0a29-c68d-4a84-b260-590b946f35dd.png" 
                   alt="Step 3" 
-                  className="w-full h-full object-contain"
+                  className="w-full h-full object-contain rounded-lg"
                 />
               </div>
               <h3 className="text-2xl font-bold mb-4 text-foreground">Step 3: Launch, Rent, and Grow</h3>
