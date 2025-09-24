@@ -962,6 +962,9 @@ const RentalInventory = () => {
               <Input id="phone" type="tel" value={phone} onChange={(e) => setPhone(e.target.value)} />
             </div>
           </div>
+          <p className="text-xs text-muted-foreground mt-4 text-center">
+            If you don't see the information in your inbox in 5-10 minutes, please check your junk/spam folder.
+          </p>
           <DialogFooter>
             <Button onClick={() => { const url = buildUrl(); window.open(url, "_blank"); setOpen(false); }}>Open Form</Button>
           </DialogFooter>
