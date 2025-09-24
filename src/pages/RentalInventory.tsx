@@ -556,23 +556,23 @@ const RentalInventory = () => {
           <h2 className="text-3xl font-bold text-center mb-12 text-foreground">Product Features That Set Us Apart</h2>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Feature 1 */}
+            {/* Feature A */}
             <Card className="border-primary/20 hover:border-primary/40 transition-colors group">
               <CardContent className="p-6 text-center">
                 <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
-                  <Package className="w-8 h-8 text-primary" />
+                  <div className="text-2xl font-bold text-primary transform rotate-12 hover:rotate-0 transition-transform duration-300" style={{textShadow: '2px 2px 4px rgba(0,0,0,0.3)'}}>A</div>
                 </div>
                 <h3 className="text-lg font-bold mb-3 text-foreground">Extra-Deep, Self-Standing Construction</h3>
                 <div className="w-12 h-px bg-border mx-auto mb-3"></div>
-                <p className="text-sm text-muted-foreground">Built with depth and balance for maximum stability — no wobbling or extra supports needed.</p>
+                <p className="text-sm text-muted-foreground">Built with depth and balance for maximum stability.</p>
               </CardContent>
             </Card>
 
-            {/* Feature 2 */}
+            {/* Feature B */}
             <Card className="border-primary/20 hover:border-primary/40 transition-colors group">
               <CardContent className="p-6 text-center">
                 <div className="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-secondary/20 transition-colors">
-                  <Zap className="w-8 h-8 text-secondary" />
+                  <div className="text-2xl font-bold text-secondary transform -rotate-12 hover:rotate-0 transition-transform duration-300" style={{textShadow: '2px 2px 4px rgba(0,0,0,0.3)'}}>B</div>
                 </div>
                 <h3 className="text-lg font-bold mb-3 text-foreground">Fully Enclosed Backs</h3>
                 <div className="w-12 h-px bg-border mx-auto mb-3"></div>
@@ -580,23 +580,23 @@ const RentalInventory = () => {
               </CardContent>
             </Card>
 
-            {/* Feature 3 */}
+            {/* Feature C */}
             <Card className="border-primary/20 hover:border-primary/40 transition-colors group">
               <CardContent className="p-6 text-center">
                 <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
-                  <Star className="w-8 h-8 text-primary" />
+                  <div className="text-2xl font-bold text-primary transform rotate-6 hover:rotate-0 transition-transform duration-300" style={{textShadow: '2px 2px 4px rgba(0,0,0,0.3)'}}>C</div>
                 </div>
                 <h3 className="text-lg font-bold mb-3 text-foreground">Powder-Coated Steel Finish</h3>
                 <div className="w-12 h-px bg-border mx-auto mb-3"></div>
-                <p className="text-sm text-muted-foreground">Tough, sleek, and weather-resistant — your letters hold up to repeated rentals without chipping or fading.</p>
+                <p className="text-sm text-muted-foreground">Tough, sleek, and weather-resistant — your letters hold up to repeated rentals.</p>
               </CardContent>
             </Card>
 
-            {/* Feature 4 */}
+            {/* Feature D */}
             <Card className="border-primary/20 hover:border-primary/40 transition-colors group">
               <CardContent className="p-6 text-center">
                 <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-accent/20 transition-colors">
-                  <Lightbulb className="w-8 h-8 text-accent" />
+                  <div className="text-2xl font-bold text-accent transform -rotate-6 hover:rotate-0 transition-transform duration-300" style={{textShadow: '2px 2px 4px rgba(0,0,0,0.3)'}}>D</div>
                 </div>
                 <h3 className="text-lg font-bold mb-3 text-foreground">LED Bulbs (Warm or Color-Changing)</h3>
                 <div className="w-12 h-px bg-border mx-auto mb-3"></div>
@@ -604,11 +604,11 @@ const RentalInventory = () => {
               </CardContent>
             </Card>
 
-            {/* Feature 5 */}
+            {/* Feature E */}
             <Card className="border-primary/20 hover:border-primary/40 transition-colors group">
               <CardContent className="p-6 text-center">
                 <div className="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-secondary/20 transition-colors">
-                  <Package className="w-8 h-8 text-secondary" />
+                  <div className="text-2xl font-bold text-secondary transform rotate-12 hover:rotate-0 transition-transform duration-300" style={{textShadow: '2px 2px 4px rgba(0,0,0,0.3)'}}>E</div>
                 </div>
                 <h3 className="text-lg font-bold mb-3 text-foreground">Reusable Foam-Lined Shipping Boxes</h3>
                 <div className="w-12 h-px bg-border mx-auto mb-3"></div>
@@ -616,11 +616,11 @@ const RentalInventory = () => {
               </CardContent>
             </Card>
 
-            {/* Feature 6 */}
+            {/* Feature F */}
             <Card className="border-primary/20 hover:border-primary/40 transition-colors group">
               <CardContent className="p-6 text-center">
                 <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
-                  <Clock className="w-8 h-8 text-primary" />
+                  <div className="text-2xl font-bold text-primary transform -rotate-12 hover:rotate-0 transition-transform duration-300" style={{textShadow: '2px 2px 4px rgba(0,0,0,0.3)'}}>F</div>
                 </div>
                 <h3 className="text-lg font-bold mb-3 text-foreground">Optional Display Stands for Multi-Row Setups</h3>
                 <div className="w-12 h-px bg-border mx-auto mb-3"></div>
