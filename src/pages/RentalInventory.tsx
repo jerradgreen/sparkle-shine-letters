@@ -377,7 +377,7 @@ const RentalInventory = () => {
                   className="w-full h-full object-contain"
                 />
               </div>
-              <h3 className="text-2xl font-bold mb-4 text-foreground">Step 1: Get a Quote in Under 5 Minutes</h3>
+              <h3 className="text-2xl font-bold mb-4 text-foreground">Step 1: Get a Quote in Around 5 Minutes</h3>
               <p className="text-muted-foreground leading-relaxed">
                 Fill out a quick form and we'll send you pricing, package options, and everything you need to make the right move.
               </p>
@@ -433,7 +433,7 @@ const RentalInventory = () => {
             size="lg" 
             className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 text-xl font-semibold rounded-lg transition-all duration-300 hover:scale-105"
           >
-            Get My Package Quote
+            Get Package Pricing Now
           </Button>
         </div>
       </section>
