@@ -1,3 +1,128 @@
+# 📋 Template Starter Kit - Copy & Paste for New Lovable Projects
+
+When starting a new Lovable project with the template system, follow these steps:
+
+## 🚀 Quick Start Steps
+
+1. **Create a new Lovable project**
+2. **Copy and paste the files below** into your new project
+3. **Choose your sign type configuration**
+4. **Customize as needed**
+
+---
+
+## 📁 Essential Files to Copy (Paste Each File)
+
+### 1. Template Types Definition
+**File Path:** `src/types/template.ts`
+
+```typescript
+export interface TemplateConfig {
+  // Page Identity
+  pageTitle: string;
+  metaDescription: string;
+  keywords: string[];
+  
+  // Hero Section
+  hero: {
+    headline: string;
+    subheadline: string;
+    ctaText: string;
+    ctaAction: string;
+    heroImage: string;
+    heroImageAlt: string;
+    layout: 'image-left' | 'image-right' | 'centered';
+  };
+  
+  // Features Section
+  features: {
+    title: string;
+    subtitle: string;
+    items: Array<{
+      title: string;
+      description: string;
+      icon: string;
+      image?: string;
+    }>;
+  };
+  
+  // Testimonials
+  testimonials: {
+    title: string;
+    items: Array<{
+      name: string;
+      role: string;
+      content: string;
+      rating: number;
+      image: string;
+    }>;
+  };
+  
+  // Pricing
+  pricing: {
+    title: string;
+    subtitle: string;
+    packages: Array<{
+      name: string;
+      description: string;
+      priceRange: string;
+      features: string[];
+      ctaText: string;
+    }>;
+  };
+  
+  // Gallery
+  gallery: {
+    title: string;
+    subtitle: string;
+    images: Array<{
+      src: string;
+      alt: string;
+      caption?: string;
+    }>;
+  };
+  
+  // FAQ
+  faq: {
+    title: string;
+    items: Array<{
+      question: string;
+      answer: string;
+    }>;
+  };
+  
+  // SEO & Business Info
+  business: {
+    name: string;
+    description: string;
+    type: 'LocalBusiness' | 'Product' | 'Service';
+    industry: string;
+    location?: {
+      address: string;
+      city: string;
+      state: string;
+      zip: string;
+      phone: string;
+    };
+  };
+  
+  // Styling
+  theme: {
+    primaryColor: string;
+    secondaryColor: string;
+    accentColor: string;
+    gradientFrom: string;
+    gradientTo: string;
+  };
+}
+```
+
+---
+
+### 2. Sign Type Configurations
+**File Path:** `src/config/templateConfigs.ts`
+
+```typescript
 import { TemplateConfig } from '@/types/template';
 
 // 3D Layered Signs Template
@@ -23,8 +148,7 @@ export const layeredSignsConfig: TemplateConfig = {
       {
         title: "Stunning Visual Impact",
         description: "Multi-layer depth creates dramatic shadows and professional appeal that photographs beautifully",
-        icon: "🎭",
-        image: "/src/assets/marquee-detail.jpg"
+        icon: "🎭"
       },
       {
         title: "Premium Materials",
@@ -47,14 +171,7 @@ export const layeredSignsConfig: TemplateConfig = {
         role: "Event Designer",
         content: "These 3D signs are absolute show-stoppers! Clients pay 3x more for the dimensional effect. My bookings doubled!",
         rating: 5,
-        image: "/src/assets/testimonial-sarah.jpg"
-      },
-      {
-        name: "Robert Chen",
-        role: "Rental Business Owner",
-        content: "The layered signs set me apart from competitors. Premium pricing and clients love the sophisticated look.",
-        rating: 5,
-        image: "/src/assets/testimonial-mike.jpg"
+        image: "/placeholder-testimonial.jpg"
       }
     ]
   },
@@ -76,13 +193,6 @@ export const layeredSignsConfig: TemplateConfig = {
         priceRange: "$12,000 - $22,000",
         features: ["12 layered sets", "Premium materials", "Advanced training", "Custom design service", "Territory protection"],
         ctaText: "Go Professional"
-      },
-      {
-        name: "3D Master Package",
-        description: "Ultimate dimensional signage empire",
-        priceRange: "$25,000 - $45,000",
-        features: ["25 layered sets", "All materials", "Personal mentor", "Marketing package", "Multiple territories"],
-        ctaText: "Dominate Market"
       }
     ]
   },
@@ -91,9 +201,8 @@ export const layeredSignsConfig: TemplateConfig = {
     title: "3D Layered Sign Gallery",
     subtitle: "See the dimensional difference that commands premium prices",
     images: [
-      { src: "/src/assets/carousel-1.jpg", alt: "Elegant 3D layered wedding sign" },
-      { src: "/src/assets/carousel-2.jpg", alt: "Corporate 3D dimensional signage" },
-      { src: "/src/assets/carousel-3.jpg", alt: "Rustic layered wood signs" }
+      { src: "/placeholder-1.jpg", alt: "Elegant 3D layered wedding sign" },
+      { src: "/placeholder-2.jpg", alt: "Corporate 3D dimensional signage" }
     ]
   },
   
@@ -103,14 +212,6 @@ export const layeredSignsConfig: TemplateConfig = {
       {
         question: "How much more can I charge for 3D signs?",
         answer: "3D layered signs typically command 200-400% higher pricing than flat signs due to their premium appeal and visual impact."
-      },
-      {
-        question: "Are they difficult to transport and set up?",
-        answer: "Our modular design makes transport easy. Most signs assemble in 15-30 minutes with our simple connection system."
-      },
-      {
-        question: "What events work best for 3D signs?",
-        answer: "Weddings, corporate events, trade shows, and upscale parties. Any event where visual impact and photos matter."
       }
     ]
   },
@@ -142,7 +243,7 @@ export const wallHangingConfig: TemplateConfig = {
     subheadline: "Space-saving illuminated signs that maximize impact in any venue. Perfect for walls, backdrops, and tight spaces where floor signs won't work.",
     ctaText: "Get Wall Sign Package",
     ctaAction: "pricing",
-    heroImage: "/src/assets/wall-hanging.jpg",
+    heroImage: "/placeholder-wall-hero.jpg",
     heroImageAlt: "Elegant wall-hanging marquee letters mounted on venue wall",
     layout: "image-left"
   },
@@ -160,11 +261,6 @@ export const wallHangingConfig: TemplateConfig = {
         title: "Easy Installation",
         description: "Quick-mount system installs on any wall surface in minutes. No complex setup or floor space needed",
         icon: "🔧"
-      },
-      {
-        title: "Versatile Mounting",
-        description: "Works on walls, backdrops, easels, or custom frames. Adaptable to any venue layout",
-        icon: "🎯"
       }
     ]
   },
@@ -177,14 +273,7 @@ export const wallHangingConfig: TemplateConfig = {
         role: "Wedding Planner",
         content: "These wall signs saved my business! So many venues have no floor space. Now I can do any location!",
         rating: 5,
-        image: "/src/assets/testimonial-sarah.jpg"
-      },
-      {
-        name: "Carlos Rivera",
-        role: "Event Rental Owner",
-        content: "Wall-hanging signs opened up 70% more venues for me. Bookings increased dramatically!",
-        rating: 5,
-        image: "/src/assets/testimonial-mike.jpg"
+        image: "/placeholder-testimonial.jpg"
       }
     ]
   },
@@ -197,22 +286,8 @@ export const wallHangingConfig: TemplateConfig = {
         name: "Wall Starter",
         description: "Enter the wall-mounting market",
         priceRange: "$2,800 - $5,500",
-        features: ["6 wall-mount letters", "Mounting hardware", "Installation guide", "Basic LED kit", "Email support"],
+        features: ["6 wall-mount letters", "Mounting hardware", "Installation guide", "Basic LED kit"],
         ctaText: "Start Wall Business"
-      },
-      {
-        name: "Wall Professional",
-        description: "Complete wall signage business",
-        priceRange: "$9,500 - $17,000",
-        features: ["15 wall-mount sets", "Professional hardware", "Live training", "Marketing materials", "Territory rights"],
-        ctaText: "Go Wall Pro"
-      },
-      {
-        name: "Wall Enterprise",
-        description: "Dominate the wall signage market",
-        priceRange: "$22,000 - $38,000",
-        features: ["30 wall-mount sets", "Premium mounting", "Personal training", "Marketing package", "Multiple territories"],
-        ctaText: "Wall Domination"
       }
     ]
   },
@@ -221,9 +296,7 @@ export const wallHangingConfig: TemplateConfig = {
     title: "Wall-Hanging Sign Gallery",
     subtitle: "See how wall signs solve venue challenges",
     images: [
-      { src: "/src/assets/carousel-4.jpg", alt: "Wall-mounted marquee letters at wedding" },
-      { src: "/src/assets/carousel-5.jpg", alt: "Corporate wall signage installation" },
-      { src: "/src/assets/carousel-6.jpg", alt: "Backdrop wall hanging signs" }
+      { src: "/placeholder-wall-1.jpg", alt: "Wall-mounted marquee letters at wedding" }
     ]
   },
   
@@ -233,14 +306,6 @@ export const wallHangingConfig: TemplateConfig = {
       {
         question: "Will they damage venue walls?",
         answer: "Our mounting system uses removable hardware that leaves no permanent marks. Venue-friendly and damage-free."
-      },
-      {
-        question: "How much weight can walls support?",
-        answer: "Our lightweight design works on any standard wall. Each letter weighs less than 5 pounds when mounted."
-      },
-      {
-        question: "What if there's no wall space?",
-        answer: "We include backdrop frame attachments and easel mounts for venues without suitable wall space."
       }
     ]
   },
@@ -272,7 +337,7 @@ export const standUpSignsConfig: TemplateConfig = {
     subheadline: "Portable signs that set up anywhere in minutes. Perfect for events of all sizes - from intimate gatherings to large celebrations.",
     ctaText: "Get Stand-Up Package",
     ctaAction: "pricing",
-    heroImage: "/src/assets/event-standup.jpg",
+    heroImage: "/placeholder-standup-hero.jpg",
     heroImageAlt: "Elegant stand-up marquee signs at outdoor event",
     layout: "centered"
   },
@@ -290,11 +355,6 @@ export const standUpSignsConfig: TemplateConfig = {
         title: "Quick Setup",
         description: "Sets up in under 5 minutes with no tools required. Perfect for tight event timelines",
         icon: "⚡"
-      },
-      {
-        title: "Event Versatility",
-        description: "Works for outdoor weddings, indoor parties, corporate events, trade shows, and more",
-        icon: "🎪"
       }
     ]
   },
@@ -307,14 +367,7 @@ export const standUpSignsConfig: TemplateConfig = {
         role: "Mobile Event Business",
         content: "The portability changed everything! I can do 3 events per day now. Setup is so fast and clients love them!",
         rating: 5,
-        image: "/src/assets/testimonial-sarah.jpg"
-      },
-      {
-        name: "Mark Anderson",
-        role: "Event Coordinator",
-        content: "These signs work everywhere - beaches, parks, venues. No venue restrictions means unlimited bookings!",
-        rating: 5,
-        image: "/src/assets/testimonial-mike.jpg"
+        image: "/placeholder-testimonial.jpg"
       }
     ]
   },
@@ -327,22 +380,8 @@ export const standUpSignsConfig: TemplateConfig = {
         name: "Mobile Starter",
         description: "Perfect for getting started mobile",
         priceRange: "$1,800 - $3,500",
-        features: ["4 stand-up signs", "Transport cases", "Setup guide", "Basic lighting", "Email support"],
+        features: ["4 stand-up signs", "Transport cases", "Setup guide", "Basic lighting"],
         ctaText: "Start Mobile"
-      },
-      {
-        name: "Event Professional",
-        description: "Complete portable sign business",
-        priceRange: "$6,500 - $12,000",
-        features: ["12 stand-up signs", "Professional cases", "LED upgrade", "Training program", "Territory protection"],
-        ctaText: "Go Event Pro"
-      },
-      {
-        name: "Mobile Empire",
-        description: "Maximum portable sign business",
-        priceRange: "$15,000 - $28,000",
-        features: ["25 stand-up signs", "Premium transport", "Advanced lighting", "Marketing package", "Multiple territories"],
-        ctaText: "Build Empire"
       }
     ]
   },
@@ -351,9 +390,7 @@ export const standUpSignsConfig: TemplateConfig = {
     title: "Stand-Up Sign Gallery",
     subtitle: "See the versatility that books events everywhere",
     images: [
-      { src: "/src/assets/carousel-7.jpg", alt: "Outdoor wedding stand-up signs" },
-      { src: "/src/assets/carousel-8.jpg", alt: "Corporate event portable signage" },
-      { src: "/src/assets/carousel-9.png", alt: "Beach wedding stand-up letters" }
+      { src: "/placeholder-standup-1.jpg", alt: "Outdoor wedding stand-up signs" }
     ]
   },
   
@@ -363,14 +400,6 @@ export const standUpSignsConfig: TemplateConfig = {
       {
         question: "How stable are they in wind?",
         answer: "Our weighted base system keeps signs stable in winds up to 25mph. Sandbag options available for extreme conditions."
-      },
-      {
-        question: "Can they work on uneven surfaces?",
-        answer: "Yes! Adjustable feet accommodate uneven ground, sand, grass, and any surface type."
-      },
-      {
-        question: "How many events can I do per day?",
-        answer: "With quick 5-minute setup, many partners do 2-4 events per day. Perfect for maximizing earnings on busy weekends."
       }
     ]
   },
@@ -390,3 +419,104 @@ export const standUpSignsConfig: TemplateConfig = {
     gradientTo: "#1E40AF"
   }
 };
+```
+
+---
+
+## 🎯 How to Use for New Pages
+
+### Option 1: Quick New Page in Current Project
+```typescript
+// Create new page file: src/pages/ThreeDSigns.tsx
+import { PageTemplate } from '@/components/templates/PageTemplate';
+import { HeroSection } from '@/components/templates/HeroSection';
+import { FeatureGrid } from '@/components/templates/FeatureGrid';
+import { TestimonialSection } from '@/components/templates/TestimonialSection';
+import { PricingSection } from '@/components/templates/PricingSection';
+import { GallerySection } from '@/components/templates/GallerySection';
+import { FAQSection } from '@/components/templates/FAQSection';
+import { CTASection } from '@/components/templates/CTASection';
+import { layeredSignsConfig } from '@/config/templateConfigs'; // Choose your config
+
+export default function ThreeDSigns() {
+  return (
+    <PageTemplate config={layeredSignsConfig}>
+      <HeroSection config={layeredSignsConfig} />
+      <FeatureGrid config={layeredSignsConfig} />
+      <TestimonialSection config={layeredSignsConfig} />
+      <PricingSection config={layeredSignsConfig} />
+      <GallerySection config={layeredSignsConfig} />
+      <FAQSection config={layeredSignsConfig} />
+      <CTASection config={layeredSignsConfig} />
+    </PageTemplate>
+  );
+}
+```
+
+### Option 2: Replace Main Index Page
+```typescript
+// Replace content in src/pages/Index.tsx
+import { PageTemplate } from '@/components/templates/PageTemplate';
+import { HeroSection } from '@/components/templates/HeroSection';
+import { FeatureGrid } from '@/components/templates/FeatureGrid';
+import { TestimonialSection } from '@/components/templates/TestimonialSection';
+import { PricingSection } from '@/components/templates/PricingSection';
+import { GallerySection } from '@/components/templates/GallerySection';
+import { FAQSection } from '@/components/templates/FAQSection';
+import { CTASection } from '@/components/templates/CTASection';
+import { wallHangingConfig } from '@/config/templateConfigs'; // Choose your config
+
+export default function Index() {
+  return (
+    <PageTemplate config={wallHangingConfig}>
+      <HeroSection config={wallHangingConfig} />
+      <FeatureGrid config={wallHangingConfig} />
+      <TestimonialSection config={wallHangingConfig} />
+      <PricingSection config={wallHangingConfig} />
+      <GallerySection config={wallHangingConfig} />
+      <FAQSection config={wallHangingConfig} />
+      <CTASection config={wallHangingConfig} />
+    </PageTemplate>
+  );
+}
+```
+
+---
+
+## 🎨 Sign Type Quick Reference
+
+**3D Layered Signs** → `layeredSignsConfig`
+- Premium dimensional signs
+- Purple/cyan theme
+- High-end pricing
+
+**Wall-Hanging Signs** → `wallHangingConfig`
+- Space-saving wall-mounted
+- Pink/purple theme
+- Mid-range pricing
+
+**Stand-Up Signs** → `standUpSignsConfig`
+- Portable event signs
+- Blue theme
+- Entry-level pricing
+
+---
+
+## 🔧 Dependencies to Add
+
+```bash
+# Add these dependencies to your new project:
+npm install react-helmet-async
+```
+
+---
+
+## 📝 Next Steps After Copy/Paste
+
+1. **Choose your sign type** from the three configurations
+2. **Update image paths** to match your uploaded images
+3. **Customize content** for your specific business
+4. **Add to routing** if creating new pages
+5. **Update navigation** links if needed
+
+**That's it!** Your template system is ready to use. Simply paste the files and choose your configuration! 🚀
