@@ -370,7 +370,7 @@ const RentalInventory = () => {
           <div className="grid md:grid-cols-3 gap-12">
             {/* Step 1 */}
             <div className="text-center">
-              <div className="w-32 h-32 mx-auto mb-6 flex items-center justify-center">
+              <div className="w-32 h-32 mx-auto mb-6 flex items-center justify-center rounded-3xl overflow-hidden bg-muted/40 ring-1 ring-border/40">
                 <img 
                   src="/lovable-uploads/d86c2d98-97ca-4233-a7b6-6fea60a0dc18.png" 
                   alt="Step 1" 
@@ -388,7 +388,7 @@ const RentalInventory = () => {
 
             {/* Step 2 */}
             <div className="text-center">
-              <div className="w-32 h-32 mx-auto mb-6 flex items-center justify-center">
+              <div className="w-32 h-32 mx-auto mb-6 flex items-center justify-center rounded-3xl overflow-hidden bg-muted/40 ring-1 ring-border/40">
                 <img 
                   src="/lovable-uploads/3a1aa8ae-0d8f-463a-9102-dd8aef074419.png" 
                   alt="Step 2" 
@@ -406,7 +406,7 @@ const RentalInventory = () => {
 
             {/* Step 3 */}
             <div className="text-center">
-              <div className="w-32 h-32 mx-auto mb-6 flex items-center justify-center">
+              <div className="w-32 h-32 mx-auto mb-6 flex items-center justify-center rounded-3xl overflow-hidden bg-muted/40 ring-1 ring-border/40">
                 <img 
                   src="/lovable-uploads/969e0a29-c68d-4a84-b260-590b946f35dd.png" 
                   alt="Step 3" 
