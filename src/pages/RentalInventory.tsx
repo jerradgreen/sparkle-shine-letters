@@ -631,6 +631,19 @@ const RentalInventory = () => {
         </div>
       </section>
 
+      {/* CTA Button Section */}
+      <section className="py-12 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <Button 
+            size="lg" 
+            className="text-lg px-8 py-6"
+            onClick={() => setOpen(true)}
+          >
+            Get Package Pricing Now
+          </Button>
+        </div>
+      </section>
+
       {/* FAQ Section */}
       <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto">
