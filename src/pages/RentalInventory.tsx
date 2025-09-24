@@ -331,7 +331,7 @@ const RentalInventory = () => {
                 ))}
               </div>
               <blockquote className="text-base text-muted-foreground italic mb-4 leading-relaxed">
-                "These letters transformed our event business overnight. Clients are booking us specifically for the marquee letters now. The quality is absolutely stunning and they're so easy to transport."
+                "I run a balloon arch and decor company, and adding these marquee letters was a game changer. Now I can offer complete event packages and my profit per event has doubled."
               </blockquote>
               <cite className="text-sm text-foreground font-semibold">— Sarah M., California</cite>
             </div>
@@ -351,7 +351,7 @@ const RentalInventory = () => {
                 ))}
               </div>
               <blockquote className="text-base text-muted-foreground italic mb-4 leading-relaxed">
-                "Best investment I've made for my rental company. The profit margins are incredible and customers love them. Already paid for themselves in just three events."
+                "These letters transformed our event business overnight. Clients are booking us specifically for the marquee letters now. The quality is absolutely stunning and they're so easy to transport."
               </blockquote>
               <cite className="text-sm text-foreground font-semibold">— Mike R., Texas</cite>
             </div>
