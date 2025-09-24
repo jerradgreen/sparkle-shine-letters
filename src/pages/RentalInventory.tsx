@@ -425,6 +425,19 @@ const RentalInventory = () => {
         </div>
       </section>
 
+      {/* CTA Button */}
+      <section className="py-12 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <Button 
+            onClick={() => setOpen(true)}
+            size="lg" 
+            className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 text-xl font-semibold rounded-lg transition-all duration-300 hover:scale-105"
+          >
+            Get My Package Quote
+          </Button>
+        </div>
+      </section>
+
       {/* Photo Gallery */}
       <section className="py-8 px-4">
         <div className="max-w-6xl mx-auto">
