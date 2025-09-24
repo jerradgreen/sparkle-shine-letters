@@ -940,7 +940,7 @@ const RentalInventory = () => {
       <Dialog open={open} onOpenChange={setOpen}>
         <DialogContent aria-describedby={undefined}>
           <DialogHeader>
-            <DialogTitle>Prefill your info</DialogTitle>
+            <DialogTitle>Prefill your info - click submit on next page</DialogTitle>
           </DialogHeader>
           <div className="grid gap-4">
             <div className="grid grid-cols-2 gap-3">
