@@ -196,7 +196,7 @@ const RentalInventory = () => {
       </section>
 
       {/* Why Most Event Businesses Leave Money on the Table */}
-      <section className="py-16 px-4 bg-muted/20 border-t border-border/40">
+      <section className="py-2 px-4">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-12 text-foreground">Why Most Event Businesses Leave Money on the Table</h2>
           
@@ -317,7 +317,7 @@ const RentalInventory = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-16 px-4 bg-accent/5 border-t border-accent/20">
+      <section className="py-16 px-4">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-12 text-foreground">What Our Customers Say</h2>
           
@@ -367,7 +367,7 @@ const RentalInventory = () => {
       </section>
 
       {/* How to Get Started */}
-      <section className="py-16 px-4 border-t border-border/40">
+      <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl font-bold text-center mb-16 text-foreground">How to Get Started</h2>
           
@@ -430,7 +430,7 @@ const RentalInventory = () => {
       </section>
 
       {/* CTA Button */}
-      <section className="py-12 px-4 bg-accent/10 border-t border-accent/20">
+      <section className="py-12 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <Button 
             onClick={() => setOpen(true)}
@@ -555,7 +555,7 @@ const RentalInventory = () => {
       </section>
 
       {/* Product Features Section */}
-      <section className="py-16 px-4 bg-primary/5 border-t border-primary/20">
+      <section className="py-16 px-4 bg-muted/20">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-12 text-foreground">Product Features That Set Us Apart</h2>
           
@@ -649,7 +649,7 @@ const RentalInventory = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-16 px-4 bg-secondary/5 border-t border-secondary/20">
+      <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-12 text-foreground">Frequently Asked Questions (and How We've Got You Covered)</h2>
           
@@ -851,7 +851,7 @@ const RentalInventory = () => {
       </section>
 
       {/* Packages & Pricing */}
-      <section className="py-16 px-4 bg-muted/20 border-t border-muted/40">
+      <section className="py-16 px-4 bg-gradient-to-r from-primary/5 to-accent/5">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl font-bold text-center mb-12 text-foreground">Packages & Pricing</h2>
           <p className="text-xl text-center text-muted-foreground mb-12">
@@ -892,7 +892,7 @@ const RentalInventory = () => {
 
 
       {/* Timeline */}
-      <section className="py-16 px-4 border-t border-border/40">
+      <section className="py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold mb-8 text-foreground">When Can You Get Them?</h2>
           <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
