@@ -633,22 +633,22 @@ const RentalInventory = () => {
 
       {/* FAQ Section */}
       <section className="py-16 px-4">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-12 text-foreground">Frequently Asked Questions (and How We've Got You Covered)</h2>
           
-          <div className="space-y-8">
+          <div className="grid md:grid-cols-2 gap-6">
             {/* FAQ Item 1 */}
-            <div className="border-b border-border pb-6">
-              <h3 className="text-lg font-bold mb-3 text-foreground">Q: Can I powder-coat the letters in a custom color?</h3>
-              <p className="text-base text-muted-foreground">Yes — we can powder coat in just about any color. That said, white is by far the most versatile for weddings, corporate events, proms, and everything in between.</p>
+            <div className="border-b border-border pb-4">
+              <h3 className="text-base font-bold mb-2 text-foreground">Q: Can I powder-coat the letters in a custom color?</h3>
+              <p className="text-sm text-muted-foreground">Yes — we can powder coat in just about any color. That said, white is by far the most versatile for weddings, corporate events, proms, and everything in between.</p>
             </div>
 
             {/* FAQ Item 2 */}
-            <div className="border-b border-border pb-6">
-              <h3 className="text-lg font-bold mb-3 text-foreground">Q: What are the payment terms?</h3>
-              <div className="text-base text-muted-foreground">
+            <div className="border-b border-border pb-4">
+              <h3 className="text-base font-bold mb-2 text-foreground">Q: What are the payment terms?</h3>
+              <div className="text-sm text-muted-foreground">
                 <p className="mb-2">We try to make it easy on you.</p>
-                <ul className="list-disc list-inside space-y-1 ml-4">
+                <ul className="list-disc list-inside space-y-1 ml-3 text-xs">
                   <li>Wire transfer gets you a 3% discount and keeps production moving at top speed.</li>
                   <li>Credit cards are accepted but include a 3% fee to offset high transaction costs.</li>
                   <li>Checks are accepted but can take up to 10 days to clear — production won't start until they do.</li>
@@ -658,25 +658,25 @@ const RentalInventory = () => {
             </div>
 
             {/* FAQ Item 3 */}
-            <div className="border-b border-border pb-6">
-              <h3 className="text-lg font-bold mb-3 text-foreground">Q: How long does it take from payment to delivery?</h3>
-              <p className="text-base text-muted-foreground">Once payment is received, delivery takes approximately 3–4 months. That includes production time, international freight, final delivery scheduling, and custom packing.</p>
-              <p className="text-base text-muted-foreground mt-2">It's a long timeline, but it's what makes it possible to get a premium product at this price point. You'll get updates along the way, and the final carrier will call you to coordinate delivery.</p>
+            <div className="border-b border-border pb-4">
+              <h3 className="text-base font-bold mb-2 text-foreground">Q: How long does it take from payment to delivery?</h3>
+              <p className="text-sm text-muted-foreground">Once payment is received, delivery takes approximately 3–4 months. That includes production time, international freight, final delivery scheduling, and custom packing.</p>
+              <p className="text-sm text-muted-foreground mt-1">It's a long timeline, but it's what makes it possible to get a premium product at this price point. You'll get updates along the way, and the final carrier will call you to coordinate delivery.</p>
             </div>
 
             {/* FAQ Item 4 */}
-            <div className="border-b border-border pb-6">
-              <h3 className="text-lg font-bold mb-3 text-foreground">Q: Where are these made?</h3>
-              <p className="text-base text-muted-foreground">We manufacture our letters overseas through a trusted production partner I've worked with for over 10 years.</p>
-              <p className="text-base text-muted-foreground mt-2">That relationship is what allows us to offer this level of quality, powder coating, precision packing, and attention to detail — all at a price that simply wouldn't be possible if made locally.</p>
+            <div className="border-b border-border pb-4">
+              <h3 className="text-base font-bold mb-2 text-foreground">Q: Where are these made?</h3>
+              <p className="text-sm text-muted-foreground">We manufacture our letters overseas through a trusted production partner I've worked with for over 10 years.</p>
+              <p className="text-sm text-muted-foreground mt-1">That relationship is what allows us to offer this level of quality, powder coating, precision packing, and attention to detail — all at a price that simply wouldn't be possible if made locally.</p>
             </div>
 
             {/* FAQ Item 5 */}
-            <div className="border-b border-border pb-6">
-              <h3 className="text-lg font-bold mb-3 text-foreground">Q: Is there a warranty?</h3>
-              <div className="text-base text-muted-foreground">
+            <div className="border-b border-border pb-4">
+              <h3 className="text-base font-bold mb-2 text-foreground">Q: Is there a warranty?</h3>
+              <div className="text-sm text-muted-foreground">
                 <p className="mb-2">Yes.</p>
-                <ul className="list-disc list-inside space-y-1 ml-4">
+                <ul className="list-disc list-inside space-y-1 ml-3 text-xs">
                   <li>We replace any items damaged beyond simple repair during shipping or due to a manufacturing issue.</li>
                   <li>We do not replace items damaged from dropping, tipping, or event misuse.</li>
                   <li>That said, the product is built strong and packed well — breakage is rare, and we'll always take care of you if it's something on our end.</li>
@@ -685,87 +685,87 @@ const RentalInventory = () => {
             </div>
 
             {/* FAQ Item 6 */}
-            <div className="border-b border-border pb-6">
-              <h3 className="text-lg font-bold mb-3 text-foreground">Q: What kind of bulbs do you use?</h3>
-              <p className="text-base text-muted-foreground">We use LED bulbs with E12 (candelabra) bases — long-lasting, energy efficient, and easy to replace.</p>
-              <p className="text-base text-muted-foreground mt-2">You'll receive spare bulbs with your order, and if you ever need more, we can ship replacements. You can also find fun or creative options on Amazon that fit the same base.</p>
+            <div className="border-b border-border pb-4">
+              <h3 className="text-base font-bold mb-2 text-foreground">Q: What kind of bulbs do you use?</h3>
+              <p className="text-sm text-muted-foreground">We use LED bulbs with E12 (candelabra) bases — long-lasting, energy efficient, and easy to replace.</p>
+              <p className="text-sm text-muted-foreground mt-1">You'll receive spare bulbs with your order, and if you ever need more, we can ship replacements. You can also find fun or creative options on Amazon that fit the same base.</p>
             </div>
 
             {/* FAQ Item 7 */}
-            <div className="border-b border-border pb-6">
-              <h3 className="text-lg font-bold mb-3 text-foreground">Q: Can I customize or change a package to fit my needs?</h3>
-              <p className="text-base text-muted-foreground">Absolutely. Our standard packages are based on years of rental data, but you can select the exact mix of letters, numbers, symbols, toppers, or lighting options that match your niche or market.</p>
+            <div className="border-b border-border pb-4">
+              <h3 className="text-base font-bold mb-2 text-foreground">Q: Can I customize or change a package to fit my needs?</h3>
+              <p className="text-sm text-muted-foreground">Absolutely. Our standard packages are based on years of rental data, but you can select the exact mix of letters, numbers, symbols, toppers, or lighting options that match your niche or market.</p>
             </div>
 
             {/* FAQ Item 8 */}
-            <div className="border-b border-border pb-6">
-              <h3 className="text-lg font-bold mb-3 text-foreground">Q: Which package is the most popular?</h3>
-              <p className="text-base text-muted-foreground">The 112-piece Elite Package is by far the most popular. It has the best cost-per-letter and gives you enough inventory to handle multiple events per weekend — which means higher returns and better flexibility.</p>
+            <div className="border-b border-border pb-4">
+              <h3 className="text-base font-bold mb-2 text-foreground">Q: Which package is the most popular?</h3>
+              <p className="text-sm text-muted-foreground">The 112-piece Elite Package is by far the most popular. It has the best cost-per-letter and gives you enough inventory to handle multiple events per weekend — which means higher returns and better flexibility.</p>
             </div>
 
             {/* FAQ Item 9 */}
-            <div className="border-b border-border pb-6">
-              <h3 className="text-lg font-bold mb-3 text-foreground">Q: What size are the letters? And do you offer larger ones?</h3>
-              <p className="text-base text-muted-foreground">All of our rental packages include 36" tall letters, which are the perfect mix of visibility and practicality.</p>
-              <p className="text-base text-muted-foreground mt-2">We do offer 48" letters as well — they look amazing but require more space, effort, and cost to handle.</p>
+            <div className="border-b border-border pb-4">
+              <h3 className="text-base font-bold mb-2 text-foreground">Q: What size are the letters? And do you offer larger ones?</h3>
+              <p className="text-sm text-muted-foreground">All of our rental packages include 36" tall letters, which are the perfect mix of visibility and practicality.</p>
+              <p className="text-sm text-muted-foreground mt-1">We do offer 48" letters as well — they look amazing but require more space, effort, and cost to handle.</p>
             </div>
 
             {/* FAQ Item 10 */}
-            <div className="border-b border-border pb-6">
-              <h3 className="text-lg font-bold mb-3 text-foreground">Q: What are toppers?</h3>
-              <p className="text-base text-muted-foreground">Toppers are smaller word signs like THE, MR&MRS, CLASS OF, and BABY. Each phrase is pre-mounted on a shared base so you can easily set them on top of your 36" letters for layered displays — and extra rental income.</p>
+            <div className="border-b border-border pb-4">
+              <h3 className="text-base font-bold mb-2 text-foreground">Q: What are toppers?</h3>
+              <p className="text-sm text-muted-foreground">Toppers are smaller word signs like THE, MR&MRS, CLASS OF, and BABY. Each phrase is pre-mounted on a shared base so you can easily set them on top of your 36" letters for layered displays — and extra rental income.</p>
             </div>
 
             {/* FAQ Item 11 */}
-            <div className="border-b border-border pb-6">
-              <h3 className="text-lg font-bold mb-3 text-foreground">Q: Are the foam-lined boxes going to last?</h3>
-              <p className="text-base text-muted-foreground">Yes. They're custom-designed for durability and protection. For best results, tape the corners when you receive them — it strengthens the boxes for years of loading and unloading. Many clients use them as long-term storage and transport systems.</p>
+            <div className="border-b border-border pb-4">
+              <h3 className="text-base font-bold mb-2 text-foreground">Q: Are the foam-lined boxes going to last?</h3>
+              <p className="text-sm text-muted-foreground">Yes. They're custom-designed for durability and protection. For best results, tape the corners when you receive them — it strengthens the boxes for years of loading and unloading. Many clients use them as long-term storage and transport systems.</p>
             </div>
 
             {/* FAQ Item 12 */}
-            <div className="border-b border-border pb-6">
-              <h3 className="text-lg font-bold mb-3 text-foreground">Q: How much can I rent the letters for?</h3>
-              <p className="text-base text-muted-foreground">Typical rates range from $75–$150 per letter, depending on your market.</p>
-              <p className="text-base text-muted-foreground mt-2">You can also offer bundles, delivery/setup add-ons, or even client pickup (with proper documentation and damage policies). You're in control of the pricing — it's your business.</p>
+            <div className="border-b border-border pb-4">
+              <h3 className="text-base font-bold mb-2 text-foreground">Q: How much can I rent the letters for?</h3>
+              <p className="text-sm text-muted-foreground">Typical rates range from $75–$150 per letter, depending on your market.</p>
+              <p className="text-sm text-muted-foreground mt-1">You can also offer bundles, delivery/setup add-ons, or even client pickup (with proper documentation and damage policies). You're in control of the pricing — it's your business.</p>
             </div>
 
             {/* FAQ Item 13 */}
-            <div className="border-b border-border pb-6">
-              <h3 className="text-lg font-bold mb-3 text-foreground">Q: How much storage space will I need?</h3>
-              <p className="text-base text-muted-foreground">Keeping everything in boxes? Plan for 300–400 sq ft and solid shelving.</p>
-              <p className="text-base text-muted-foreground mt-2">One client removed the boxes and fit an entire 112-piece package into a 10×20 unit using Uline shelves. Either way, efficient organization will make a huge difference.</p>
+            <div className="border-b border-border pb-4">
+              <h3 className="text-base font-bold mb-2 text-foreground">Q: How much storage space will I need?</h3>
+              <p className="text-sm text-muted-foreground">Keeping everything in boxes? Plan for 300–400 sq ft and solid shelving.</p>
+              <p className="text-sm text-muted-foreground mt-1">One client removed the boxes and fit an entire 112-piece package into a 10×20 unit using Uline shelves. Either way, efficient organization will make a huge difference.</p>
             </div>
           </div>
 
           {/* Objection Busters Section */}
-          <div className="mt-16">
-            <h3 className="text-2xl font-bold text-center mb-8 text-foreground">Objection Busters</h3>
+          <div className="mt-12">
+            <h3 className="text-2xl font-bold text-center mb-6 text-foreground">Objection Busters</h3>
             
-            <div className="space-y-8">
+            <div className="grid md:grid-cols-2 gap-6">
               {/* Objection 1 */}
-              <div className="border-b border-border pb-6">
-                <h4 className="text-lg font-bold mb-3 text-foreground">"Will this really make me money?"</h4>
-                <p className="text-base text-muted-foreground mb-2">That depends on your hustle and motivation. The opportunity is here — marquee letters are in demand — but like any business, success is earned.</p>
-                <p className="text-base text-muted-foreground mb-2">Post on social media, connect with local vendors, offer setups for styled shoots or charity events, and get visible in your community.</p>
-                <p className="text-base text-muted-foreground">This model rewards effort — the more you put in, the faster you grow. You're not buying a passive product; you're building a business that's fully yours.</p>
+              <div className="border-b border-border pb-4">
+                <h4 className="text-base font-bold mb-2 text-foreground">"Will this really make me money?"</h4>
+                <p className="text-sm text-muted-foreground mb-1">That depends on your hustle and motivation. The opportunity is here — marquee letters are in demand — but like any business, success is earned.</p>
+                <p className="text-sm text-muted-foreground mb-1">Post on social media, connect with local vendors, offer setups for styled shoots or charity events, and get visible in your community.</p>
+                <p className="text-sm text-muted-foreground">This model rewards effort — the more you put in, the faster you grow. You're not buying a passive product; you're building a business that's fully yours.</p>
               </div>
 
               {/* Objection 2 */}
-              <div className="border-b border-border pb-6">
-                <h4 className="text-lg font-bold mb-3 text-foreground">"What if I don't rent anything right away?"</h4>
-                <p className="text-base text-muted-foreground">You're not paying any ongoing fees. You own the inventory and can build your rental business at your own pace — while keeping 100% of the profits.</p>
+              <div className="border-b border-border pb-4">
+                <h4 className="text-base font-bold mb-2 text-foreground">"What if I don't rent anything right away?"</h4>
+                <p className="text-sm text-muted-foreground">You're not paying any ongoing fees. You own the inventory and can build your rental business at your own pace — while keeping 100% of the profits.</p>
               </div>
 
               {/* Objection 3 */}
-              <div className="border-b border-border pb-6">
-                <h4 className="text-lg font-bold mb-3 text-foreground">"Will I be stuck replacing bulbs all the time?"</h4>
-                <p className="text-base text-muted-foreground">Nope. These LED bulbs last a long time. You'll get extras in the box, and we can ship you more any time.</p>
+              <div className="border-b border-border pb-4">
+                <h4 className="text-base font-bold mb-2 text-foreground">"Will I be stuck replacing bulbs all the time?"</h4>
+                <p className="text-sm text-muted-foreground">Nope. These LED bulbs last a long time. You'll get extras in the box, and we can ship you more any time.</p>
               </div>
 
               {/* Objection 4 */}
-              <div className="pb-6">
-                <h4 className="text-lg font-bold mb-3 text-foreground">"Isn't overseas shipping risky or complicated?"</h4>
-                <p className="text-base text-muted-foreground">We handle all logistics and shipping. The price we quote already includes freight and delivery, and we manage every step until the inventory is in your hands.</p>
+              <div className="pb-4">
+                <h4 className="text-base font-bold mb-2 text-foreground">"Isn't overseas shipping risky or complicated?"</h4>
+                <p className="text-sm text-muted-foreground">We handle all logistics and shipping. The price we quote already includes freight and delivery, and we manage every step until the inventory is in your hands.</p>
               </div>
             </div>
           </div>
