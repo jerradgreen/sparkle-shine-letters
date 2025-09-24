@@ -9,6 +9,7 @@ import ShopifyFooter from "@/components/ShopifyFooter";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import OptimizedImage from "@/components/OptimizedImage";
 
 import drewiaHillImage from "@/assets/drewia-hill.jpeg";
 import elev8Image from "@/assets/elev8.jpeg";
@@ -52,8 +53,9 @@ const RentalInventory = () => {
             <div className="mb-3">
               <img 
                 src={drewiaHillImage} 
-                alt="Drewia Hill marquee letters event setup" 
+                alt="Professional marquee letter rental setup at Drewia Hill event showcasing profitable event rental business opportunity" 
                 className="rounded-lg shadow-2xl w-full h-32 object-cover"
+                loading="eager"
               />
             </div>
             
@@ -65,7 +67,7 @@ const RentalInventory = () => {
             {/* Mobile content */}
             <div className="text-left">
               <h1 className="text-xl font-bold text-foreground mb-2 leading-tight">
-                Build Your Business. Boost Your Profits. Marquee Light Packages Designed to Help You Do Both - FAST.
+                Start Profitable Marquee Letter Rental Business - Fast
               </h1>
               <p className="text-lg text-muted-foreground leading-relaxed">
                 Tap into the event rental industry's HOTTEST segment, marquee lights — no franchise fees, no middleman.
@@ -103,7 +105,7 @@ const RentalInventory = () => {
                 Entrepreneurs and Business Owners
               </p>
               <h1 className="text-2xl xl:text-3xl font-bold text-foreground mb-4 leading-tight">
-                Build Your Business. Boost Your Profits. Marquee Light Packages Designed to Help You Do Both - FAST.
+                Start Profitable Marquee Letter Rental Business - Fast
               </h1>
               <p className="text-lg text-muted-foreground mb-4 leading-relaxed">
                 Tap into the event rental industry's HOTTEST segment, marquee lights — no franchise fees, no middleman.
@@ -266,11 +268,12 @@ const RentalInventory = () => {
 
               {/* Image - takes 1 column */}
               <div className="lg:col-span-1">
-                <img 
-                  src="/lovable-uploads/605ef708-58df-4fec-9e34-3f7232153fd9.png" 
-                  alt="The Green family - founders of Vintage Marquee Lights" 
-                  className="rounded-lg shadow-lg w-full h-auto object-cover"
-                />
+              <OptimizedImage 
+                src="/lovable-uploads/605ef708-58df-4fec-9e34-3f7232153fd9.png" 
+                alt="Jerrad Green and family, founders of Vintage Marquee Lights rental business" 
+                className="rounded-lg shadow-lg w-full h-auto object-cover"
+                loading="lazy"
+              />
               </div>
             </div>
           </div>
@@ -322,10 +325,11 @@ const RentalInventory = () => {
             {/* Testimonial 1 */}
             <div className="text-center p-6 bg-card border border-border rounded-lg shadow-sm">
               <div className="mb-4">
-                <img 
+                <OptimizedImage 
                   src={testimonialSarahImage} 
-                  alt="Sarah M. testimonial photo" 
+                  alt="Sarah M. satisfied marquee letter rental business customer testimonial" 
                   className="w-16 h-16 rounded-full mx-auto object-cover"
+                  loading="lazy"
                 />
               </div>
               <div className="flex justify-center mb-4">
