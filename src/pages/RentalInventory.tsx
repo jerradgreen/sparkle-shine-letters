@@ -362,6 +362,69 @@ const RentalInventory = () => {
         </div>
       </section>
 
+      {/* How to Get Started */}
+      <section className="py-16 px-4">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl font-bold text-center mb-16 text-foreground">How to Get Started</h2>
+          
+          <div className="grid md:grid-cols-3 gap-12">
+            {/* Step 1 */}
+            <div className="text-center">
+              <div className="w-32 h-32 mx-auto mb-6 flex items-center justify-center">
+                <img 
+                  src="/lovable-uploads/d86c2d98-97ca-4233-a7b6-6fea60a0dc18.png" 
+                  alt="Step 1" 
+                  className="w-full h-full object-contain"
+                />
+              </div>
+              <h3 className="text-2xl font-bold mb-4 text-foreground">Step 1: Get a Quote in Under 5 Minutes</h3>
+              <p className="text-muted-foreground leading-relaxed">
+                Fill out a quick form and we'll send you pricing, package options, and everything you need to make the right move.
+              </p>
+              <div className="mt-6 flex justify-center">
+                <div className="w-16 h-0.5 bg-primary"></div>
+              </div>
+            </div>
+
+            {/* Step 2 */}
+            <div className="text-center">
+              <div className="w-32 h-32 mx-auto mb-6 flex items-center justify-center">
+                <img 
+                  src="/lovable-uploads/3a1aa8ae-0d8f-463a-9102-dd8aef074419.png" 
+                  alt="Step 2" 
+                  className="w-full h-full object-contain"
+                />
+              </div>
+              <h3 className="text-2xl font-bold mb-4 text-foreground">Step 2: We Handle the Rest</h3>
+              <p className="text-muted-foreground leading-relaxed">
+                From production to freight, we coordinate every detail — your inventory arrives ready to rent, with nothing left to figure out.
+              </p>
+              <div className="mt-6 flex justify-center">
+                <div className="w-16 h-0.5 bg-primary"></div>
+              </div>
+            </div>
+
+            {/* Step 3 */}
+            <div className="text-center">
+              <div className="w-32 h-32 mx-auto mb-6 flex items-center justify-center">
+                <img 
+                  src="/lovable-uploads/969e0a29-c68d-4a84-b260-590b946f35dd.png" 
+                  alt="Step 3" 
+                  className="w-full h-full object-contain"
+                />
+              </div>
+              <h3 className="text-2xl font-bold mb-4 text-foreground">Step 3: Launch, Rent, and Grow</h3>
+              <p className="text-muted-foreground leading-relaxed">
+                Start booking rentals, keep every dollar, and grow a business that's fully yours — with products that pay for themselves again and again.
+              </p>
+              <div className="mt-6 flex justify-center">
+                <div className="w-16 h-0.5 bg-primary"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Photo Gallery */}
       <section className="py-8 px-4">
         <div className="max-w-6xl mx-auto">
