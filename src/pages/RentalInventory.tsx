@@ -272,6 +272,41 @@ const RentalInventory = () => {
         </div>
       </section>
 
+      {/* What You Get Section */}
+      <section className="py-16 px-4 bg-muted/30">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-12 text-foreground">What You Get When You Own This Inventory</h2>
+          
+          <div className="space-y-8">
+            {/* Benefit 1 */}
+            <div className="flex items-start space-x-4 p-6 bg-card border border-border rounded-lg shadow-sm">
+              <div className="text-2xl text-primary mt-1">✅</div>
+              <div className="flex-1">
+                <h3 className="text-xl font-bold mb-3 text-foreground">Start Earning Fast — No Guesswork</h3>
+                <p className="text-base text-muted-foreground">Pre-packed with the most requested letters and symbols</p>
+              </div>
+            </div>
+
+            {/* Benefit 2 */}
+            <div className="flex items-start space-x-4 p-6 bg-card border border-border rounded-lg shadow-sm">
+              <div className="text-2xl text-primary mt-1">✅</div>
+              <div className="flex-1">
+                <h3 className="text-xl font-bold mb-3 text-foreground">Make More Per Event — With Less Effort</h3>
+                <p className="text-base text-muted-foreground">Premium, self-standing steel letters with a high-end finish</p>
+              </div>
+            </div>
+
+            {/* Benefit 3 */}
+            <div className="flex items-start space-x-4 p-6 bg-card border border-border rounded-lg shadow-sm">
+              <div className="text-2xl text-primary mt-1">✅</div>
+              <div className="flex-1">
+                <h3 className="text-xl font-bold mb-3 text-foreground">Keep Every Dollar — No Strings Attached</h3>
+                <p className="text-base text-muted-foreground">100% yours to own — no franchise, no royalty fees, no limits</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Photo Gallery */}
       <section className="py-8 px-4">
