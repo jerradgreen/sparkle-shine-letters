@@ -637,12 +637,33 @@ const RentalInventory = () => {
           <h2 className="text-3xl font-bold text-center mb-12 text-foreground">Frequently Asked Questions (and How We've Got You Covered)</h2>
           
           <div className="grid md:grid-cols-2 gap-6">
+            {/* Product & Customization Group */}
             {/* FAQ Item 1 */}
             <div className="border-b border-border pb-4">
               <h3 className="text-base font-bold mb-2 text-foreground">Q: Can I powder-coat the letters in a custom color?</h3>
               <p className="text-sm text-muted-foreground">Yes — we can powder coat in just about any color. That said, white is by far the most versatile for weddings, corporate events, proms, and everything in between.</p>
             </div>
 
+            {/* FAQ Item 7 */}
+            <div className="border-b border-border pb-4">
+              <h3 className="text-base font-bold mb-2 text-foreground">Q: Can I customize or change a package to fit my needs?</h3>
+              <p className="text-sm text-muted-foreground">Absolutely. Our standard packages are based on years of rental data, but you can select the exact mix of letters, numbers, symbols, toppers, or lighting options that match your niche or market.</p>
+            </div>
+
+            {/* FAQ Item 9 */}
+            <div className="border-b border-border pb-4">
+              <h3 className="text-base font-bold mb-2 text-foreground">Q: What size are the letters? And do you offer larger ones?</h3>
+              <p className="text-sm text-muted-foreground">All of our rental packages include 36" tall letters, which are the perfect mix of visibility and practicality.</p>
+              <p className="text-sm text-muted-foreground mt-1">We do offer 48" letters as well — they look amazing but require more space, effort, and cost to handle.</p>
+            </div>
+
+            {/* FAQ Item 10 */}
+            <div className="border-b border-border pb-4">
+              <h3 className="text-base font-bold mb-2 text-foreground">Q: What are toppers?</h3>
+              <p className="text-sm text-muted-foreground">Toppers are smaller word signs like THE, MR&MRS, CLASS OF, and BABY. Each phrase is pre-mounted on a shared base so you can easily set them on top of your 36" letters for layered displays — and extra rental income.</p>
+            </div>
+
+            {/* Business & Pricing Group */}
             {/* FAQ Item 2 */}
             <div className="border-b border-border pb-4">
               <h3 className="text-base font-bold mb-2 text-foreground">Q: What are the payment terms?</h3>
@@ -657,13 +678,20 @@ const RentalInventory = () => {
               </div>
             </div>
 
-            {/* FAQ Item 3 */}
+            {/* FAQ Item 8 */}
             <div className="border-b border-border pb-4">
-              <h3 className="text-base font-bold mb-2 text-foreground">Q: How long does it take from payment to delivery?</h3>
-              <p className="text-sm text-muted-foreground">Once payment is received, delivery takes approximately 3–4 months. That includes production time, international freight, final delivery scheduling, and custom packing.</p>
-              <p className="text-sm text-muted-foreground mt-1">It's a long timeline, but it's what makes it possible to get a premium product at this price point. You'll get updates along the way, and the final carrier will call you to coordinate delivery.</p>
+              <h3 className="text-base font-bold mb-2 text-foreground">Q: Which package is the most popular?</h3>
+              <p className="text-sm text-muted-foreground">The 112-piece Elite Package is by far the most popular. It has the best cost-per-letter and gives you enough inventory to handle multiple events per weekend — which means higher returns and better flexibility.</p>
             </div>
 
+            {/* FAQ Item 12 */}
+            <div className="border-b border-border pb-4">
+              <h3 className="text-base font-bold mb-2 text-foreground">Q: How much can I rent the letters for?</h3>
+              <p className="text-sm text-muted-foreground">Typical rates range from $75–$150 per letter, depending on your market.</p>
+              <p className="text-sm text-muted-foreground mt-1">You can also offer bundles, delivery/setup add-ons, or even client pickup (with proper documentation and damage policies). You're in control of the pricing — it's your business.</p>
+            </div>
+
+            {/* Manufacturing & Quality Group */}
             {/* FAQ Item 4 */}
             <div className="border-b border-border pb-4">
               <h3 className="text-base font-bold mb-2 text-foreground">Q: Where are these made?</h3>
@@ -691,42 +719,18 @@ const RentalInventory = () => {
               <p className="text-sm text-muted-foreground mt-1">You'll receive spare bulbs with your order, and if you ever need more, we can ship replacements. You can also find fun or creative options on Amazon that fit the same base.</p>
             </div>
 
-            {/* FAQ Item 7 */}
+            {/* Logistics & Storage Group */}
+            {/* FAQ Item 3 */}
             <div className="border-b border-border pb-4">
-              <h3 className="text-base font-bold mb-2 text-foreground">Q: Can I customize or change a package to fit my needs?</h3>
-              <p className="text-sm text-muted-foreground">Absolutely. Our standard packages are based on years of rental data, but you can select the exact mix of letters, numbers, symbols, toppers, or lighting options that match your niche or market.</p>
-            </div>
-
-            {/* FAQ Item 8 */}
-            <div className="border-b border-border pb-4">
-              <h3 className="text-base font-bold mb-2 text-foreground">Q: Which package is the most popular?</h3>
-              <p className="text-sm text-muted-foreground">The 112-piece Elite Package is by far the most popular. It has the best cost-per-letter and gives you enough inventory to handle multiple events per weekend — which means higher returns and better flexibility.</p>
-            </div>
-
-            {/* FAQ Item 9 */}
-            <div className="border-b border-border pb-4">
-              <h3 className="text-base font-bold mb-2 text-foreground">Q: What size are the letters? And do you offer larger ones?</h3>
-              <p className="text-sm text-muted-foreground">All of our rental packages include 36" tall letters, which are the perfect mix of visibility and practicality.</p>
-              <p className="text-sm text-muted-foreground mt-1">We do offer 48" letters as well — they look amazing but require more space, effort, and cost to handle.</p>
-            </div>
-
-            {/* FAQ Item 10 */}
-            <div className="border-b border-border pb-4">
-              <h3 className="text-base font-bold mb-2 text-foreground">Q: What are toppers?</h3>
-              <p className="text-sm text-muted-foreground">Toppers are smaller word signs like THE, MR&MRS, CLASS OF, and BABY. Each phrase is pre-mounted on a shared base so you can easily set them on top of your 36" letters for layered displays — and extra rental income.</p>
+              <h3 className="text-base font-bold mb-2 text-foreground">Q: How long does it take from payment to delivery?</h3>
+              <p className="text-sm text-muted-foreground">Once payment is received, delivery takes approximately 3–4 months. That includes production time, international freight, final delivery scheduling, and custom packing.</p>
+              <p className="text-sm text-muted-foreground mt-1">It's a long timeline, but it's what makes it possible to get a premium product at this price point. You'll get updates along the way, and the final carrier will call you to coordinate delivery.</p>
             </div>
 
             {/* FAQ Item 11 */}
             <div className="border-b border-border pb-4">
               <h3 className="text-base font-bold mb-2 text-foreground">Q: Are the foam-lined boxes going to last?</h3>
               <p className="text-sm text-muted-foreground">Yes. They're custom-designed for durability and protection. For best results, tape the corners when you receive them — it strengthens the boxes for years of loading and unloading. Many clients use them as long-term storage and transport systems.</p>
-            </div>
-
-            {/* FAQ Item 12 */}
-            <div className="border-b border-border pb-4">
-              <h3 className="text-base font-bold mb-2 text-foreground">Q: How much can I rent the letters for?</h3>
-              <p className="text-sm text-muted-foreground">Typical rates range from $75–$150 per letter, depending on your market.</p>
-              <p className="text-sm text-muted-foreground mt-1">You can also offer bundles, delivery/setup add-ons, or even client pickup (with proper documentation and damage policies). You're in control of the pricing — it's your business.</p>
             </div>
 
             {/* FAQ Item 13 */}
