@@ -354,7 +354,7 @@ const RentalInventory = () => {
                 ))}
               </div>
               <blockquote className="text-base text-muted-foreground italic mb-4 leading-relaxed">
-                "These letters transformed our event business overnight. Clients are booking us specifically for the marquee letters now. The quality is absolutely stunning and they're so easy to transport."
+                "The quality is unmatched and the profit margins are incredible. These letters pay for themselves faster than anything else in my rental inventory."
               </blockquote>
               <cite className="text-sm text-foreground font-semibold">— Mike R., Texas</cite>
             </div>
@@ -362,71 +362,8 @@ const RentalInventory = () => {
         </div>
       </section>
 
-      {/* How to Get Started */}
-      <section className="py-16 px-4">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-16 text-foreground">How to Get Started</h2>
-          
-          <div className="grid md:grid-cols-3 gap-12">
-            {/* Step 1 */}
-            <div className="text-center">
-              <div className="w-32 h-32 mx-auto mb-6 flex items-center justify-center rounded-lg overflow-hidden bg-muted/40 ring-1 ring-border/40">
-                <img 
-                  src="/lovable-uploads/d86c2d98-97ca-4233-a7b6-6fea60a0dc18.png" 
-                  alt="Step 1" 
-                  className="w-full h-full object-cover rounded-lg"
-                />
-              </div>
-              <h3 className="text-2xl font-bold mb-4 text-foreground">Step 1: Get a Quote in Around 5 Minutes</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Fill out a quick form and we'll send you pricing, package options, and everything you need to make the right move.
-              </p>
-              <div className="mt-6 flex justify-center">
-                <div className="w-16 h-0.5 bg-primary"></div>
-              </div>
-            </div>
-
-            {/* Step 2 */}
-            <div className="text-center">
-              <div className="w-32 h-32 mx-auto mb-6 flex items-center justify-center rounded-lg overflow-hidden bg-muted/40 ring-1 ring-border/40">
-                <img 
-                  src="/lovable-uploads/3a1aa8ae-0d8f-463a-9102-dd8aef074419.png" 
-                  alt="Step 2" 
-                  className="w-full h-full object-cover rounded-lg"
-                />
-              </div>
-              <h3 className="text-2xl font-bold mb-4 text-foreground">Step 2: We Handle Everything</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                From production to freight, we coordinate every detail — your inventory arrives ready to rent, with nothing left to figure out.
-              </p>
-              <div className="mt-6 flex justify-center">
-                <div className="w-16 h-0.5 bg-primary"></div>
-              </div>
-            </div>
-
-            {/* Step 3 */}
-            <div className="text-center">
-              <div className="w-32 h-32 mx-auto mb-6 flex items-center justify-center rounded-lg overflow-hidden bg-muted/40 ring-1 ring-border/40">
-                <img 
-                  src="/lovable-uploads/969e0a29-c68d-4a84-b260-590b946f35dd.png" 
-                  alt="Step 3" 
-                  className="w-full h-full object-cover rounded-lg"
-                />
-              </div>
-              <h3 className="text-2xl font-bold mb-4 text-foreground">Step 3: Launch, Rent, and Grow</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Start booking rentals, keep every dollar, and grow a business that's fully yours — with products that pay for themselves again and again.
-              </p>
-              <div className="mt-6 flex justify-center">
-                <div className="w-16 h-0.5 bg-primary"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Button */}
-      <section className="py-12 px-4">
+      {/* CTA Section Before Image Gallery */}
+      <section className="py-2 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <Button 
             onClick={() => setOpen(true)}
@@ -501,8 +438,8 @@ const RentalInventory = () => {
                   <Check className="w-4 h-4 text-primary" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-lg mb-2 text-foreground">Scalable & Expandable Inventory</h3>
-                  <p className="text-muted-foreground">Your setup today can grow — you can add modules, symbols, or backup letters without redoing your system.</p>
+                  <h3 className="font-semibold text-lg mb-2 text-foreground">No Territory Restrictions</h3>
+                  <p className="text-muted-foreground">Work wherever you want, at whatever volume works for you. No geographic limitations or competition control.</p>
                 </div>
               </div>
               
@@ -511,8 +448,8 @@ const RentalInventory = () => {
                   <Check className="w-4 h-4 text-primary" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-lg mb-2 text-foreground">Nationwide Reach / Delivery Capability</h3>
-                  <p className="text-muted-foreground">No matter where your business is, you can order and get consistent service — not just local limitations.</p>
+                  <h3 className="font-semibold text-lg mb-2 text-foreground">Proven Market Demand</h3>
+                  <p className="text-muted-foreground">Every wedding, graduation, and corporate event wants them. You're investing in inventory that's always in demand.</p>
                 </div>
               </div>
               
@@ -521,8 +458,8 @@ const RentalInventory = () => {
                   <Check className="w-4 h-4 text-primary" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-lg mb-2 text-foreground">Tested & Proven in the Field</h3>
-                  <p className="text-muted-foreground">These letters aren't just manufactured — they were developed through real-world use over a decade in the rental space.</p>
+                  <h3 className="font-semibold text-lg mb-2 text-foreground">High Profit Margins</h3>
+                  <p className="text-muted-foreground">Letters rent for $75-$150 each. A single event can return 20-40% of your investment.</p>
                 </div>
               </div>
               
@@ -531,8 +468,8 @@ const RentalInventory = () => {
                   <Check className="w-4 h-4 text-primary" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-lg mb-2 text-foreground">Dynamic Lighting Options</h3>
-                  <p className="text-muted-foreground">Upgrade to color-changing bulbs or a full LED neon-style look for clients who want something bold and modern.</p>
+                  <h3 className="font-semibold text-lg mb-2 text-foreground">Custom Powder Coating Options</h3>
+                  <p className="text-muted-foreground">White is most popular, but we can powder coat in any color to match your brand or special requests.</p>
                 </div>
               </div>
               
@@ -541,8 +478,8 @@ const RentalInventory = () => {
                   <Check className="w-4 h-4 text-primary" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-lg mb-2 text-foreground">Custom Shapes Available</h3>
-                  <p className="text-muted-foreground">Need a heart, a hashtag, or something totally unique? We can design and produce custom shapes to make your rentals stand out even more.</p>
+                  <h3 className="font-semibold text-lg mb-2 text-foreground">Lifetime Support</h3>
+                  <p className="text-muted-foreground">We're here for replacement parts, business advice, and technical questions — not just until your order ships.</p>
                 </div>
               </div>
             </div>
@@ -551,20 +488,20 @@ const RentalInventory = () => {
       </section>
 
       {/* Product Features Section */}
-      <section className="py-16 px-4 bg-muted/20">
+      <section className="py-16 px-4 bg-muted/30">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12 text-foreground">Product Features That Set Us Apart</h2>
+          <h2 className="text-4xl font-bold text-center mb-12 text-foreground">Product Features That Set Us Apart</h2>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {/* Feature A - Blue */}
             <Card className="border-primary/20 hover:border-primary/40 transition-colors group">
               <CardContent className="p-6 text-center">
                 <div className="w-16 h-16 bg-blue-500/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-500/20 transition-colors">
                   <Star className="w-8 h-8 text-blue-500" />
                 </div>
-                <h3 className="text-lg font-bold mb-3 text-foreground">Extra-Deep, Self-Standing Construction</h3>
+                <h3 className="text-lg font-bold mb-3 text-foreground">Heavy-Duty Steel Construction</h3>
                 <div className="w-12 h-px bg-border mx-auto mb-3"></div>
-                <p className="text-sm text-muted-foreground">Built with depth and balance for maximum stability.</p>
+                <p className="text-sm text-muted-foreground">Commercial-grade steel with powder-coated finish for rust resistance and long-lasting beauty.</p>
               </CardContent>
             </Card>
 
@@ -574,9 +511,9 @@ const RentalInventory = () => {
                 <div className="w-16 h-16 bg-orange-500/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-orange-500/20 transition-colors">
                   <Star className="w-8 h-8 text-orange-500" />
                 </div>
-                <h3 className="text-lg font-bold mb-3 text-foreground">Fully Enclosed Backs</h3>
+                <h3 className="text-lg font-bold mb-3 text-foreground">Self-Standing Design</h3>
                 <div className="w-12 h-px bg-border mx-auto mb-3"></div>
-                <p className="text-sm text-muted-foreground">All wiring and sockets are hidden inside closed backs for a clean, professional appearance and safer transport.</p>
+                <p className="text-sm text-muted-foreground">Extra-deep bases ensure stability during events — quick setup, secure positioning, professional appearance.</p>
               </CardContent>
             </Card>
 
@@ -586,9 +523,9 @@ const RentalInventory = () => {
                 <div className="w-16 h-16 bg-blue-500/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-500/20 transition-colors">
                   <Star className="w-8 h-8 text-blue-500" />
                 </div>
-                <h3 className="text-lg font-bold mb-3 text-foreground">Powder-Coated Steel Finish</h3>
+                <h3 className="text-lg font-bold mb-3 text-foreground">Hidden Wiring System</h3>
                 <div className="w-12 h-px bg-border mx-auto mb-3"></div>
-                <p className="text-sm text-muted-foreground">Tough, sleek, and weather-resistant — your letters hold up to repeated rentals.</p>
+                <p className="text-sm text-muted-foreground">Clean, professional look with all electrical components concealed behind closed metal backs.</p>
               </CardContent>
             </Card>
 
@@ -641,6 +578,57 @@ const RentalInventory = () => {
           >
             Get Package Pricing Now
           </Button>
+        </div>
+      </section>
+
+      {/* Photo Gallery */}
+      <section className="py-8 px-4">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl font-bold text-center mb-12 text-foreground">See Our Letters in Action</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="relative overflow-hidden rounded-lg">
+              <img 
+                src={elev8Image} 
+                alt="ELEV8 marquee letters setup" 
+                className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div className="relative overflow-hidden rounded-lg">
+              <img 
+                src={year1969Image} 
+                alt="1969 marquee numbers display" 
+                className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div className="relative overflow-hidden rounded-lg">
+              <img 
+                src={marryMeImage} 
+                alt="Marry Me marquee letters wedding setup" 
+                className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div className="relative overflow-hidden rounded-lg">
+              <img 
+                src={setup1Image} 
+                alt="Marquee letters event setup" 
+                className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div className="relative overflow-hidden rounded-lg">
+              <img 
+                src={setup2Image} 
+                alt="Professional marquee letter display" 
+                className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div className="relative overflow-hidden rounded-lg">
+              <img 
+                src={marqueeDetailImage} 
+                alt="Close-up of marquee letter construction and quality" 
+                className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+          </div>
         </div>
       </section>
 
@@ -795,57 +783,6 @@ const RentalInventory = () => {
         </div>
       </section>
 
-      {/* Photo Gallery */}
-      <section className="py-8 px-4">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-12 text-foreground">See Our Letters in Action</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="relative overflow-hidden rounded-lg">
-              <img 
-                src={elev8Image} 
-                alt="ELEV8 marquee letters setup" 
-                className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
-              />
-            </div>
-            <div className="relative overflow-hidden rounded-lg">
-              <img 
-                src={year1969Image} 
-                alt="1969 marquee numbers display" 
-                className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
-              />
-            </div>
-            <div className="relative overflow-hidden rounded-lg">
-              <img 
-                src={marryMeImage} 
-                alt="Marry Me marquee letters wedding setup" 
-                className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
-              />
-            </div>
-            <div className="relative overflow-hidden rounded-lg">
-              <img 
-                src={setup1Image} 
-                alt="Marquee letters event setup" 
-                className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
-              />
-            </div>
-            <div className="relative overflow-hidden rounded-lg">
-              <img 
-                src={setup2Image} 
-                alt="Professional marquee letter display" 
-                className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
-              />
-            </div>
-            <div className="relative overflow-hidden rounded-lg">
-              <img 
-                src={marqueeDetailImage} 
-                alt="Close-up of marquee letter construction and quality" 
-                className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Packages & Pricing */}
       <section className="py-16 px-4 bg-gradient-to-r from-primary/5 to-accent/5">
         <div className="max-w-6xl mx-auto">
@@ -869,47 +806,16 @@ const RentalInventory = () => {
             <Card className="border-secondary border-2">
               <CardContent className="p-8">
                 <div className="flex items-center mb-4">
-                  <Package className="w-8 h-8 text-secondary mr-3" />
-                  <h3 className="text-2xl font-bold text-card-foreground">Best Price</h3>
+                  <DollarSign className="w-8 h-8 text-secondary mr-3" />
+                  <h3 className="text-2xl font-bold text-card-foreground">Return Timeline</h3>
                 </div>
-                <p className="text-3xl font-bold text-secondary mb-4">~$300 per letter (Elite Pack)</p>
-                <p className="text-muted-foreground">Includes 36″ self-standing marquee letters made of powder-coated steel, with LED bulbs and reusable foam-lined transport boxes and more!</p>
+                <p className="text-3xl font-bold text-secondary mb-4">6–18 months</p>
+                <p className="text-muted-foreground">Typical payback period based on market rates of $75-$150 per letter and steady rental activity.</p>
               </CardContent>
             </Card>
           </div>
 
-          <div className="text-center">
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              Final pricing depends on the exact mix and style of letters—including any upgrades like color-changing bulbs or LED neon options—as well as your preferred timeline and shipping destination. Reach out for a custom quote and we'll help build the perfect inventory for your business.
-            </p>
-          </div>
-        </div>
-      </section>
-
-
-      {/* Timeline */}
-      <section className="py-16 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-8 text-foreground">When Can You Get Them?</h2>
-          <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-            Because we manufacture overseas and ship by ocean freight to keep pricing low, delivery takes time—but it's worth the wait.
-          </p>
-          
-          <Card className="border-accent border-2 mb-8">
-            <CardContent className="p-8">
-              <div className="flex items-center justify-center mb-4">
-                <Clock className="w-12 h-12 text-accent mr-4" />
-                <h3 className="text-3xl font-bold text-card-foreground">3–4 Months</h3>
-              </div>
-              <p className="text-xl text-muted-foreground">Estimated turnaround from order finalization</p>
-            </CardContent>
-          </Card>
-
-          <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-            Planning ahead ensures you get the best value without rush fees. Reserve your set early to stay ahead of peak event seasons.
-          </p>
-
-          <div className="bg-accent/10 p-6 rounded-lg">
+          <div className="bg-card rounded-lg p-8 border border-border shadow-sm mb-8">
             <h4 className="text-xl font-semibold mb-3 text-foreground">Need something sooner?</h4>
             <p className="text-muted-foreground">
               It's possible to air freight a small number of letters for an additional cost. That way, you can start showing off your new inventory, build marketing buzz, and begin drumming up business while the rest of your order is still en route.
@@ -917,8 +823,6 @@ const RentalInventory = () => {
           </div>
         </div>
       </section>
-
-      {/* CTA Section */}
 
       {/* CTA Section */}
       <section className="py-20 px-4 bg-gradient-to-r from-primary to-primary/80 text-primary-foreground">
@@ -944,7 +848,6 @@ const RentalInventory = () => {
           </p>
         </div>
       </section>
-
 
       <Dialog open={open} onOpenChange={setOpen}>
         <DialogContent aria-describedby={undefined}>
