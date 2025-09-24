@@ -18,6 +18,9 @@ import setup1Image from "@/assets/setup-1.jpeg";
 import setup2Image from "@/assets/setup-2.jpg";
 import marqueeDetailImage from "@/assets/marquee-detail.jpg";
 import testimonialSarahImage from "@/assets/testimonial-sarah.jpg";
+import marquee1Image from "@/assets/marquee-1.png";
+import marquee2Image from "@/assets/marquee-2.png";
+import marquee3Image from "@/assets/marquee-3.png";
 import testimonialMikeImage from "@/assets/testimonial-mike.jpg";
 
 const RentalInventory = () => {
@@ -456,6 +459,69 @@ const RentalInventory = () => {
             <p className="text-lg text-muted-foreground leading-relaxed">
               Final pricing depends on the exact mix and style of letters—including any upgrades like color-changing bulbs or LED neon options—as well as your preferred timeline and shipping destination. Reach out for a custom quote and we'll help build the perfect inventory for your business.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* How to Get Started */}
+      <section className="py-16 px-4">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl font-bold text-center mb-16 text-foreground">How to Get Started</h2>
+          
+          <div className="grid md:grid-cols-3 gap-12">
+            {/* Step 1 */}
+            <div className="text-center">
+              <div className="w-32 h-32 mx-auto mb-6 flex items-center justify-center">
+                <img 
+                  src={marquee1Image} 
+                  alt="Step 1" 
+                  className="w-full h-full object-contain"
+                />
+              </div>
+              <h3 className="text-2xl font-bold mb-4 text-foreground">Step 1: Get a Quote in Under 5 Minutes</h3>
+              <p className="text-muted-foreground leading-relaxed">
+                Fill out a quick form and we'll send you pricing, package options, and everything you need to make the right move.
+              </p>
+              <div className="mt-6 flex justify-center">
+                <div className="w-16 h-0.5 bg-primary"></div>
+              </div>
+            </div>
+
+            {/* Step 2 */}
+            <div className="text-center">
+              <div className="w-32 h-32 mx-auto mb-6 flex items-center justify-center">
+                <img 
+                  src={marquee2Image} 
+                  alt="Step 2" 
+                  className="w-full h-full object-contain"
+                />
+              </div>
+              <h3 className="text-2xl font-bold mb-4 text-foreground">Step 2: We Handle the Rest</h3>
+              <p className="text-muted-foreground leading-relaxed">
+                From production to freight, we coordinate every detail — your inventory arrives ready to rent, with nothing left to figure out.
+              </p>
+              <div className="mt-6 flex justify-center">
+                <div className="w-16 h-0.5 bg-primary"></div>
+              </div>
+            </div>
+
+            {/* Step 3 */}
+            <div className="text-center">
+              <div className="w-32 h-32 mx-auto mb-6 flex items-center justify-center">
+                <img 
+                  src={marquee3Image} 
+                  alt="Step 3" 
+                  className="w-full h-full object-contain"
+                />
+              </div>
+              <h3 className="text-2xl font-bold mb-4 text-foreground">Step 3: Launch, Rent, and Grow</h3>
+              <p className="text-muted-foreground leading-relaxed">
+                Start booking rentals, keep every dollar, and grow a business that's fully yours — with products that pay for themselves again and again.
+              </p>
+              <div className="mt-6 flex justify-center">
+                <div className="w-16 h-0.5 bg-primary"></div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
