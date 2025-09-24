@@ -17,6 +17,8 @@ import marryMeImage from "@/assets/marry-me.jpg";
 import setup1Image from "@/assets/setup-1.jpeg";
 import setup2Image from "@/assets/setup-2.jpg";
 import marqueeDetailImage from "@/assets/marquee-detail.jpg";
+import testimonialSarahImage from "@/assets/testimonial-sarah.jpg";
+import testimonialMikeImage from "@/assets/testimonial-mike.jpg";
 
 const RentalInventory = () => {
   const [open, setOpen] = useState(false);
@@ -303,6 +305,55 @@ const RentalInventory = () => {
               </div>
               <h3 className="text-lg font-bold mb-3 text-foreground">Keep Every Dollar — No Strings Attached</h3>
               <p className="text-sm text-muted-foreground">100% yours to own — no franchise, no royalty fees, no limits</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="py-16 px-4">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-12 text-foreground">What Our Customers Say</h2>
+          
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Testimonial 1 */}
+            <div className="text-center p-6 bg-card border border-border rounded-lg shadow-sm">
+              <div className="mb-4">
+                <img 
+                  src={testimonialSarahImage} 
+                  alt="Sarah M. testimonial photo" 
+                  className="w-16 h-16 rounded-full mx-auto object-cover"
+                />
+              </div>
+              <div className="flex justify-center mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-5 h-5 text-yellow-500 fill-yellow-500" />
+                ))}
+              </div>
+              <blockquote className="text-base text-muted-foreground italic mb-4 leading-relaxed">
+                "These letters transformed our event business overnight. Clients are booking us specifically for the marquee letters now. The quality is absolutely stunning and they're so easy to transport."
+              </blockquote>
+              <cite className="text-sm text-foreground font-semibold">— Sarah M., California</cite>
+            </div>
+
+            {/* Testimonial 2 */}
+            <div className="text-center p-6 bg-card border border-border rounded-lg shadow-sm">
+              <div className="mb-4">
+                <img 
+                  src={testimonialMikeImage} 
+                  alt="Mike R. testimonial photo" 
+                  className="w-16 h-16 rounded-full mx-auto object-cover"
+                />
+              </div>
+              <div className="flex justify-center mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-5 h-5 text-yellow-500 fill-yellow-500" />
+                ))}
+              </div>
+              <blockquote className="text-base text-muted-foreground italic mb-4 leading-relaxed">
+                "Best investment I've made for my rental company. The profit margins are incredible and customers love them. Already paid for themselves in just three events."
+              </blockquote>
+              <cite className="text-sm text-foreground font-semibold">— Mike R., Texas</cite>
             </div>
           </div>
         </div>
