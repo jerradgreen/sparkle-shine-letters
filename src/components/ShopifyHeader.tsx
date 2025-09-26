@@ -18,7 +18,7 @@ const ShopifyHeader = () => {
               <img 
                 src={logoImage} 
                 alt="Vintage Marquee Lights" 
-                className="h-12 w-auto"
+                className="h-16 w-auto"
               />
             </a>
           </div>
