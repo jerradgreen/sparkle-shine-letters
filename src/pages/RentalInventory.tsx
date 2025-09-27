@@ -11,7 +11,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import OptimizedImage from "@/components/OptimizedImage";
 
-import drewiaHillImage from "@/assets/drewia-hill.jpeg";
+import heroImage from "@/assets/hero-image.jpg";
 import elev8Image from "@/assets/elev8.jpeg";
 import year1969Image from "@/assets/1969.jpeg";
 import marryMeImage from "@/assets/marry-me.jpg";
@@ -52,7 +52,7 @@ const RentalInventory = () => {
             {/* Mobile image first */}
             <div className="mb-3">
               <img 
-                src={drewiaHillImage} 
+                src={heroImage} 
                 alt="Professional marquee letter rental setup at Drewia Hill event showcasing profitable event rental business opportunity" 
                 className="rounded-lg shadow-2xl w-full h-32 object-cover"
                 loading="eager"
@@ -132,7 +132,7 @@ const RentalInventory = () => {
             </div>
             <div className="relative">
               <img 
-                src={drewiaHillImage} 
+                src={heroImage} 
                 alt="Drewia Hill marquee letters event setup" 
                 className="rounded-lg shadow-2xl w-full h-auto object-cover"
               />
