@@ -6,6 +6,7 @@ import { PricingSection } from '@/components/templates/PricingSection';
 import { GallerySection } from '@/components/templates/GallerySection';
 import { FAQSection } from '@/components/templates/FAQSection';
 import { CTASection } from '@/components/templates/CTASection';
+import { MarqueeVisualizer } from '@/components/MarqueeVisualizer';
 import { standUpSignsConfig } from '@/config/templateConfigs';
 
 const EventStandUpSigns = () => {
@@ -15,6 +16,7 @@ const EventStandUpSigns = () => {
       canonicalUrl="https://yoursite.com/event-standup-signs"
     >
       <HeroSection config={standUpSignsConfig.hero} />
+      <MarqueeVisualizer />
       <FeatureGrid config={standUpSignsConfig.features} />
       <TestimonialSection config={standUpSignsConfig.testimonials} />
       <PricingSection config={standUpSignsConfig.pricing} />

@@ -37,6 +37,11 @@ All colors MUST be HSL.
     --ring: 222.2 84% 4.9%;
 
     --radius: 0.5rem;
+    
+    /* Marquee Visualizer Colors */
+    --marquee-glow: 45 100% 51%;
+    --marquee-wood: 30 25% 8%;
+    --marquee-concrete: 220 13% 18%;
 
     --sidebar-background: 0 0% 98%;
 
