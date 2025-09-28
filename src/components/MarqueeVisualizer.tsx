@@ -144,7 +144,7 @@ const getScale = (isTopper: boolean, letterCount: number, letterSize: string, cu
     // Make toppers much smaller - about 40% of main text size
     const sizeRatio = 15 / parseInt(letterSize); // 15/36 = 0.417, 15/48 = 0.3125
     let baseTopperScale = isMobile ? baseScalesMobile[letterSize as keyof typeof baseScalesMobile] : baseScales[letterSize as keyof typeof baseScales];
-    let topperScale = baseTopperScale * sizeRatio * 0.6; // Make even smaller
+    let topperScale = baseTopperScale * sizeRatio * 0.75; // Make slightly larger
     return Math.max(topperScale, isMobile ? 0.08 : 0.12);
   }
 };
