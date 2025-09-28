@@ -1,5 +1,5 @@
 import { PageTemplate } from '@/components/templates/PageTemplate';
-import { HeroSection } from '@/components/templates/HeroSection';
+import { MarqueeHeroSection } from '@/components/MarqueeHeroSection';
 import { FeatureGrid } from '@/components/templates/FeatureGrid';
 import { TestimonialSection } from '@/components/templates/TestimonialSection';
 import { PricingSection } from '@/components/templates/PricingSection';
@@ -15,7 +15,7 @@ const EventStandUpSigns = () => {
       config={standUpSignsConfig}
       canonicalUrl="https://yoursite.com/event-standup-signs"
     >
-      <HeroSection config={standUpSignsConfig.hero} />
+      <MarqueeHeroSection />
       <MarqueeVisualizer />
       <FeatureGrid config={standUpSignsConfig.features} />
       <TestimonialSection config={standUpSignsConfig.testimonials} />

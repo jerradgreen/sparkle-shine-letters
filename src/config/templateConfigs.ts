@@ -268,12 +268,12 @@ export const standUpSignsConfig: TemplateConfig = {
   keywords: ["stand up signs", "portable signs", "event signage", "quick setup signs", "mobile signage"],
   
   hero: {
-    headline: "Event Stand-Up Sign Rental Business",
-    subheadline: "Portable signs that set up anywhere in minutes. Perfect for events of all sizes - from intimate gatherings to large celebrations.",
-    ctaText: "Get Stand-Up Package",
+    headline: "MARQUEE LETTER RENTALS",
+    subheadline: "Commercial-quality stand-up marquee letters that make every event unforgettable",
+    ctaText: "Get Your Quote",
     ctaAction: "pricing",
-    heroImage: "/src/assets/event-standup.jpg",
-    heroImageAlt: "Elegant stand-up marquee signs at outdoor event",
+    heroImage: "/src/assets/hero-lockwoods.jpg",
+    heroImageAlt: "THE LOCKWOODS marquee letters with couple dancing at elegant event",
     layout: "centered"
   },
   
