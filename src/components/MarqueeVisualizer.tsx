@@ -126,6 +126,7 @@ const LetterElement = ({ character, isTopper, letterCount, index, letterSize, cu
 
 const getScale = (isTopper: boolean, letterCount: number, letterSize: string, currentScale: number) => {
   const isMobile = window.innerWidth <= 767;
+  const isLandscape = window.innerWidth > window.innerHeight;
   // Use the same scale for both 36" and 48" to keep it simple
   const baseScales = { '15': 0.45, '36': 0.9, '48': 0.9 };
   const baseScalesMobile = { '15': 0.22, '36': 0.38, '48': 0.38 };
@@ -141,10 +142,31 @@ const getScale = (isTopper: boolean, letterCount: number, letterSize: string, cu
     const floor = isMobile ? 0.32 : 0.5;
     return Math.max(mainScale, floor);
   } else {
-    // Topper scaling - fixed size relative to main text
+    // Topper scaling - scales with main text letter count and is device-specific
     let baseTopperScale = isMobile ? baseScalesMobile['36'] : baseScales['36'];
-    let topperScale = baseTopperScale * 0.4; // Fixed ratio to main text
-    return Math.max(topperScale, isMobile ? 0.12 : 0.18);
+    
+    // Scale topper based on main text character count (same scaling as main text)
+    const threshold = 10;
+    if (letterCount > threshold) {
+      const ratio = threshold / letterCount;
+      baseTopperScale *= Math.pow(ratio, 0.4);
+    }
+    
+    // Different topper ratios for different devices
+    let topperRatio;
+    if (isMobile && !isLandscape) {
+      // Portrait mobile - smaller topper
+      topperRatio = 0.25;
+    } else if (isMobile && isLandscape) {
+      // Landscape mobile - medium topper
+      topperRatio = 0.35;
+    } else {
+      // Desktop - larger topper
+      topperRatio = 0.4;
+    }
+    
+    let topperScale = baseTopperScale * topperRatio;
+    return Math.max(topperScale, isMobile ? 0.08 : 0.15);
   }
 };
 
@@ -328,8 +350,8 @@ export const MarqueeVisualizer = () => {
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`}
         style={{
-          height: '30vh',
-          maxHeight: '320px',
+          height: window.innerWidth >= 768 ? '35vh' : '30vh',
+          maxHeight: window.innerWidth >= 768 ? '380px' : '320px',
           minHeight: '200px',
           overflow: 'hidden'
         }}
@@ -341,18 +363,18 @@ export const MarqueeVisualizer = () => {
         ref={letterDisplayRef}
         className="letter-positioning absolute left-1/2 transform -translate-x-1/2 z-[9999] flex flex-col items-center justify-end pointer-events-none min-w-full overflow-visible"
         style={{
-          top: window.innerWidth >= 768 ? '360px' : window.innerWidth > window.innerHeight ? '320px' : '720px'
+          top: window.innerWidth >= 768 ? '360px' : window.innerWidth > window.innerHeight ? '280px' : '620px'
         }}
       >
         {/* Topper Line */}
         {topperLetters.length > 0 && (
-          <div className="topper-line letter-line flex justify-center flex-nowrap items-end overflow-visible px-8 mb-2">
+          <div className="topper-line letter-line flex justify-center flex-nowrap items-end overflow-visible px-8 -mb-1">
             {topperLetters.map((char, index) => (
               <LetterElement
                 key={`topper-${index}`}
                 character={char}
                 isTopper={true}
-                letterCount={topperLetters.length}
+                letterCount={mainLetters.length}
                 index={index}
                 letterSize="36"
                 currentScale={currentScale}
