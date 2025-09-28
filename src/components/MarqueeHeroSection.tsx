@@ -22,7 +22,7 @@ export const MarqueeHeroSection = () => {
         <OptimizedImage
           src={heroLockwoods}
           alt="THE LOCKWOODS marquee letters with couple dancing at elegant event"
-          className="w-full h-full object-cover object-[center_80%]"
+          className="w-full h-full object-cover object-[center_60%]"
           priority
         />
         <div className="absolute inset-0 bg-black/40" />
@@ -44,7 +44,7 @@ export const MarqueeHeroSection = () => {
       </div>
         
       {/* Buttons - side by side on mobile */}
-      <div className="relative z-10 flex flex-row gap-3 md:gap-6 justify-center items-center max-w-4xl mx-auto mt-8">
+      <div className="relative z-10 flex flex-row gap-3 md:gap-6 justify-center items-center max-w-4xl mx-auto mt-12 md:mt-16">
         <Button 
           size="lg" 
           className="text-xs md:text-lg px-4 md:px-10 py-3 md:py-6 bg-orange-500 hover:bg-orange-600 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
@@ -65,7 +65,7 @@ export const MarqueeHeroSection = () => {
       </div>
 
       {/* 5 Star Review from Ashley L. */}
-      <div className="relative z-10 bg-white/10 backdrop-blur-sm rounded-lg p-4 mx-4 md:mx-auto max-w-md">
+      <div className="relative z-10 bg-white/10 backdrop-blur-sm rounded-lg p-4 mx-4 md:mx-auto max-w-md mt-8 md:mt-12">
         <div className="flex justify-center mb-2">
           {[...Array(5)].map((_, i) => (
             <span key={i} className="text-yellow-400 text-lg">★</span>

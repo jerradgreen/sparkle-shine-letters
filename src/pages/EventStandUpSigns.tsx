@@ -17,8 +17,8 @@ const EventStandUpSigns = () => {
     >
       <MarqueeHeroSection />
       <FeatureGrid config={standUpSignsConfig.features} />
-      <MarqueeVisualizer />
       <TestimonialSection config={standUpSignsConfig.testimonials} />
+      <MarqueeVisualizer />
       
       {/* Get Quote Section replacing pricing packages */}
       <section className="py-16 bg-gray-50">

@@ -74,12 +74,6 @@ export const TestimonialSection = ({ config }: TestimonialSectionProps) => {
           ))}
         </div>
         
-        {/* Trust Indicators */}
-        <div className="mt-16 text-center space-y-4">
-          <p className="text-muted-foreground">
-            Based on {config.items.length}+ verified customer reviews
-          </p>
-        </div>
       </div>
     </section>
   );
