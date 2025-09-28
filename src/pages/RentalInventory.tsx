@@ -6,6 +6,7 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 import { Lightbulb, Star, Package, Clock, Mail, Zap, DollarSign, Percent, Check, Type, FileText, Hash, Circle, Square, Triangle } from "lucide-react";
 import ShopifyHeader from "@/components/ShopifyHeader";
 import ShopifyFooter from "@/components/ShopifyFooter";
+import Navigation from "@/components/Navigation";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -43,6 +44,7 @@ const RentalInventory = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Navigation />
       <ShopifyHeader />
       {/* Hero Section */}
       <section className="relative py-2 px-4 text-center bg-gradient-to-br from-primary/10 to-accent/10">

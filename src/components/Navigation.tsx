@@ -22,7 +22,7 @@ const Navigation = () => {
 
   const customSignsLinks = [
     { title: "Wall-Hanging Letters", href: "/wall-hanging" },
-    { title: "Event / Stand-Up Letters", href: "/event-standup" },
+    { title: "Event / Stand-Up Letters", href: "/event-standup-signs" },
     { title: "3D Layered Signs", href: "/layered-signs" },
     { title: "Rental Inventory", href: "/rental-inventory" },
     { title: "Not Sure Yet", href: "/contact" },
