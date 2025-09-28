@@ -232,12 +232,13 @@ const computedMainScale = getScale(false, mainLetters.length, letterSize, curren
 const isMobile = window.innerWidth <= 767;
 const isLandscape = window.innerWidth > window.innerHeight;
 // Keep topper a fixed proportion of main height regardless of text length
-const TOPPER_RATIO = 0.35; // tuned to match reference visuals
+const TOPPER_RATIO = 0.33; // fixed ~33% of main height
 const computedTopperScale = Math.max(
   computedMainScale * TOPPER_RATIO,
   isMobile ? 0.10 : 0.12
 );
-const overlapFactor = isMobile ? 0.28 : 0.32;
+// Minimal overlap so the topper visually "touches" the main line, not sink into it
+const overlapFactor = isMobile ? 0.07 : 0.085;
 const topperOverlapPx = Math.round(240 * computedMainScale * overlapFactor);
 
   return (
