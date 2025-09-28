@@ -230,16 +230,14 @@ const mainLetters = filterValidText(mainText);
 const topperLetters = getTopperText();
 const computedMainScale = getScale(false, mainLetters.length, letterSize, currentScale);
 const isMobile = window.innerWidth <= 767;
-const isLandscape = window.innerWidth > window.innerHeight;
-// Keep topper a fixed proportion of main height regardless of text length
-const TOPPER_RATIO = 0.33; // fixed ~33% of main height
-const computedTopperScale = Math.max(
-  computedMainScale * TOPPER_RATIO,
-  isMobile ? 0.10 : 0.12
-);
-// Minimal overlap so the topper visually "touches" the main line, not sink into it
-const overlapFactor = isMobile ? 0.07 : 0.085;
-const topperOverlapPx = Math.round(240 * computedMainScale * overlapFactor);
+// Keep topper a strict proportion of main height - NO FLOORS
+const TOPPER_RATIO = 0.33;
+const computedTopperScale = computedMainScale * TOPPER_RATIO;
+
+// Calculate overlap based on topper's height, not main line height
+const topperHeightPx = 240 * computedTopperScale;
+const TOPPER_BOTTOM_PADDING_RATIO = 0.215; // tuned for visual "touching"
+const topperOverlapPx = Math.round(topperHeightPx * TOPPER_BOTTOM_PADDING_RATIO);
 
   return (
     <div className="marquee-visualizer relative overflow-visible bg-background text-foreground">

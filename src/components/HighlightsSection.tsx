@@ -4,24 +4,27 @@ export const HighlightsSection = () => {
   const highlights = [
     {
       icon: CheckCircle,
-      title: "Unmatched Durability",
-      description: "Commercial-grade construction built to withstand any event"
+      title: "Durable & Self-Standing",
+      description: "Made from powder-coated steel with extra-deep sides, these letters are built to last and stand on their own."
     },
     {
       icon: Sparkles,
-      title: "Premium Visual Impact", 
-      description: "Professional lighting that creates stunning focal points"
+      title: "Bold & Bright", 
+      description: "At 36\" to 48\" tall with LED bulbs and a sleek finish, they make a big impact at weddings, proms, and parties."
     },
     {
       icon: Zap,
-      title: "Dynamic Lighting Options",
-      description: "Customizable illumination to match any event theme"
+      title: "Easy to Use & Transport",
+      description: "Arrive pre-lit and ready to go, with optional reusable foam-lined boxes for simple storage and travel."
     }
   ];
 
   return (
     <section className="py-6 md:py-4 bg-slate-50/80 border-y border-slate-200/50">
       <div className="container mx-auto px-4">
+        <h2 className="text-xl md:text-2xl font-bold text-center text-gray-900 mb-6">
+          Why marquee letters and signs win every event
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-2 max-w-6xl mx-auto">
           {highlights.map((highlight, index) => {
             const IconComponent = highlight.icon;

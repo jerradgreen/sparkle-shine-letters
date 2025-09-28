@@ -300,77 +300,84 @@ export const standUpSignsConfig: TemplateConfig = {
   },
   
   testimonials: {
-    title: "Stand-Up Sign Success Stories",
+    title: "Event Success Stories",
     items: [
       {
-        name: "Lisa Thompson",
-        role: "Mobile Event Business",
-        content: "The portability changed everything! I can do 3 events per day now. Setup is so fast and clients love them!",
+        name: "Sarah M.",
+        role: "Wedding Planner",
+        content: "Letters arrived safe and were amazing quality. The color-changing bulbs were a huge hit at the reception!",
         rating: 5,
         image: "/src/assets/testimonial-sarah.jpg"
       },
       {
-        name: "Mark Anderson",
-        role: "Event Coordinator",
-        content: "These signs work everywhere - beaches, parks, venues. No venue restrictions means unlimited bookings!",
+        name: "David K.",
+        role: "Corporate Event Manager", 
+        content: "Perfect for our stage setup - everyone could see them and took pictures. The neon style was modern and professional.",
         rating: 5,
         image: "/src/assets/testimonial-mike.jpg"
+      },
+      {
+        name: "Jennifer L.",
+        role: "Event Coordinator",
+        content: "Ready to set up right out of the foam-lined boxes. Great quality and exactly what we needed for our venue.",
+        rating: 5,
+        image: "/src/assets/testimonial-sarah.jpg"
       }
     ]
   },
   
   pricing: {
-    title: "Stand-Up Sign Packages",
-    subtitle: "Portable event signage business opportunity",
-    packages: [
-      {
-        name: "Mobile Starter",
-        description: "Perfect for getting started mobile",
-        priceRange: "$1,800 - $3,500",
-        features: ["4 stand-up signs", "Transport cases", "Setup guide", "Basic lighting", "Email support"],
-        ctaText: "Start Mobile"
-      },
-      {
-        name: "Event Professional",
-        description: "Complete portable sign business",
-        priceRange: "$6,500 - $12,000",
-        features: ["12 stand-up signs", "Professional cases", "LED upgrade", "Training program", "Territory protection"],
-        ctaText: "Go Event Pro"
-      },
-      {
-        name: "Mobile Empire",
-        description: "Maximum portable sign business",
-        priceRange: "$15,000 - $28,000",
-        features: ["25 stand-up signs", "Premium transport", "Advanced lighting", "Marketing package", "Multiple territories"],
-        ctaText: "Build Empire"
-      }
-    ]
+    title: "Get Your Custom Quote",
+    subtitle: "Every event is unique - let us create the perfect package for you",
+    packages: []
   },
   
   gallery: {
-    title: "Stand-Up Sign Gallery",
-    subtitle: "See the versatility that books events everywhere",
+    title: "Event Gallery",
+    subtitle: "See our marquee letters in action at real events",
     images: [
-      { src: "/src/assets/carousel-7.jpg", alt: "Outdoor wedding stand-up signs" },
-      { src: "/src/assets/carousel-8.jpg", alt: "Corporate event portable signage" },
-      { src: "/src/assets/carousel-9.png", alt: "Beach wedding stand-up letters" }
+      { src: "/src/assets/1969.jpeg", alt: "1969 marquee letters at elegant event" },
+      { src: "/src/assets/DSCF1221_copy.jpg", alt: "Event setup with illuminated marquee signage" },
+      { src: "/src/assets/elev8.jpeg", alt: "ELEV8 marquee letters corporate event" },
+      { src: "/src/assets/marry_me.JPG", alt: "MARRY ME marquee proposal setup" },
+      { src: "/src/assets/maria.jpg", alt: "MARIA marquee letters wedding celebration" }
     ]
   },
   
   faq: {
-    title: "Stand-Up Signs FAQ",
+    title: "Frequently Asked Questions",
     items: [
       {
-        question: "How stable are they in wind?",
-        answer: "Our weighted base system keeps signs stable in winds up to 25mph. Sandbag options available for extreme conditions."
+        question: "Can I powder-coat the letters in a custom color?",
+        answer: "Yes — we can powder coat in just about any color. That said, white is by far the most versatile for weddings, corporate events, proms, and everything in between."
       },
       {
-        question: "Can they work on uneven surfaces?",
-        answer: "Yes! Adjustable feet accommodate uneven ground, sand, grass, and any surface type."
+        question: "Can I customize or change a package to fit my needs?",
+        answer: "Absolutely. Our standard packages are based on years of rental data, but you can select the exact mix of letters, numbers, symbols, toppers, or lighting options that match your niche or market."
       },
       {
-        question: "How many events can I do per day?",
-        answer: "With quick 5-minute setup, many partners do 2-4 events per day. Perfect for maximizing earnings on busy weekends."
+        question: "What size are the letters? And do you offer larger ones?",
+        answer: "All of our rental packages include 36\" tall letters, which are the perfect mix of visibility and practicality. We do offer 48\" letters as well — they look amazing but require more space, effort, and cost to handle."
+      },
+      {
+        question: "What are toppers?",
+        answer: "Toppers are smaller word signs like THE, MR&MRS, CLASS OF, and BABY. Each phrase is pre-mounted on a shared base so you can easily set them on top of your 36\" letters for layered displays — and extra rental income."
+      },
+      {
+        question: "How much can I rent the letters for?",
+        answer: "Typical rates range from $75–$150 per letter, depending on your market. You can also offer bundles, delivery/setup add-ons, or even client pickup (with proper documentation and damage policies). You're in control of the pricing — it's your business."
+      },
+      {
+        question: "Where are these made?",
+        answer: "We manufacture our letters overseas through a trusted production partner I've worked with for over 10 years. That relationship is what allows us to offer this level of quality, powder coating, precision packing, and attention to detail — all at a price that simply wouldn't be possible if made locally."
+      },
+      {
+        question: "Is there a warranty?",
+        answer: "Yes. We replace any items damaged beyond simple repair during shipping or due to a manufacturing issue. We do not replace items damaged from dropping, tipping, or event misuse. That said, the product is built strong and packed well — breakage is rare, and we'll always take care of you if it's something on our end."
+      },
+      {
+        question: "What kind of bulbs do you use?",
+        answer: "We use LED bulbs with E12 (candelabra) bases — long-lasting, energy efficient, and easy to replace. You'll receive spare bulbs with your order, and if you ever need more, we can ship replacements. You can also find fun or creative options on Amazon that fit the same base."
       }
     ]
   },
