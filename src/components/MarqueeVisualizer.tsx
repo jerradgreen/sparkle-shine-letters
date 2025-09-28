@@ -66,13 +66,14 @@ interface LetterElementProps {
   index: number;
   letterSize: string;
   currentScale: number;
+  scaleOverride?: number;
 }
 
-const LetterElement = ({ character, isTopper, letterCount, index, letterSize, currentScale }: LetterElementProps) => {
+const LetterElement = ({ character, isTopper, letterCount, index, letterSize, currentScale, scaleOverride }: LetterElementProps) => {
   const [loaded, setLoaded] = useState(false);
   
   if (character === ' ') {
-    const scale = getScale(isTopper, letterCount, letterSize, currentScale);
+    const scale = scaleOverride ?? getScale(isTopper, letterCount, letterSize, currentScale);
     return (
       <div 
         className="letter-space inline-block"
@@ -93,7 +94,7 @@ const LetterElement = ({ character, isTopper, letterCount, index, letterSize, cu
     );
   }
 
-  const scale = getScale(isTopper, letterCount, letterSize, currentScale);
+  const scale = scaleOverride ?? getScale(isTopper, letterCount, letterSize, currentScale);
   const height = 240 * scale;
   const kerning = getKerning(isTopper, letterCount);
 
@@ -155,8 +156,8 @@ const getScale = (isTopper: boolean, letterCount: number, letterSize: string, cu
     const mainFloor = isMobile ? 0.32 : 0.5;
     const finalMainScale = Math.max(mainScale, mainFloor);
     
-    // Topper is smaller than main text - 15":36" ratio but adjusted for better visual balance
-    const topperRatio = isMobile ? (15/36) : (12/36); // Smaller on desktop
+    // Topper maintains exact 15":36" ratio with main text
+    const topperRatio = 15/36;
     const topperScale = finalMainScale * topperRatio;
     
     return Math.max(topperScale, isMobile ? 0.08 : 0.10);
@@ -211,19 +212,38 @@ export const MarqueeVisualizer = () => {
 
   const openQuoteForm = () => {
     const base = 'https://www.cognitoforms.com/VintageMarqueeLights/EventStyleLettersQuoteForm';
+
+    const noMainTextEntered = mainText.trim().toUpperCase() === 'ENTER TEXT';
+    const noTopperEntered = topperOption === 'NONE' || (topperOption === 'CUSTOM' && customTopper.trim() === '');
+
+    // If nothing meaningful was entered, open the blank form (no prefill)
+    if (noMainTextEntered && noTopperEntered) {
+      window.open(base, '_blank');
+      return;
+    }
+
+    // Otherwise, prefill what's available
     const entry: Record<string, string> = {};
-    
-    if (topperOption !== 'NONE') {
+    if (!noTopperEntered && topperOption !== 'NONE') {
       entry.Topper = topperOption === 'CUSTOM' ? customTopper : topperOption;
     }
-    entry.MainTextSize = letterSize === '48' ? '48"' : '36"';
-    entry.MainTextLettersNumbersSymbols = mainText.toUpperCase();
-    
-    window.open(`${base}?entry=${encodeURIComponent(JSON.stringify(entry))}`, '_blank');
+    if (!noMainTextEntered) {
+      entry.MainTextLettersNumbersSymbols = mainText.toUpperCase();
+      entry.MainTextSize = letterSize === '48' ? '48"' : '36"';
+    }
+
+    const url = Object.keys(entry).length
+      ? `${base}?entry=${encodeURIComponent(JSON.stringify(entry))}`
+      : base;
+
+    window.open(url, '_blank');
   };
 
-  const mainLetters = filterValidText(mainText);
-  const topperLetters = getTopperText();
+const mainLetters = filterValidText(mainText);
+const topperLetters = getTopperText();
+const computedMainScale = getScale(false, mainLetters.length, letterSize, currentScale);
+const computedTopperScale = computedMainScale * (15/36);
+const topperOverlapPx = Math.round(240 * computedMainScale * 0.08);
 
   return (
     <div className="marquee-visualizer relative overflow-visible bg-background text-foreground">
@@ -356,12 +376,12 @@ export const MarqueeVisualizer = () => {
         ref={letterDisplayRef}
         className="letter-positioning absolute left-1/2 transform -translate-x-1/2 z-[9999] flex flex-col items-center justify-end pointer-events-none min-w-full overflow-visible"
         style={{
-          top: window.innerWidth >= 768 ? '360px' : window.innerWidth > window.innerHeight ? '280px' : '780px'
+          top: window.innerWidth >= 768 ? '360px' : window.innerWidth > window.innerHeight ? '340px' : '860px'
         }}
       >
         {/* Topper Line */}
         {topperLetters.length > 0 && (
-          <div className="topper-line letter-line flex justify-center flex-nowrap items-end overflow-visible px-8" style={{ marginBottom: '-2px' }}>
+          <div className="topper-line letter-line flex justify-center flex-nowrap items-end overflow-visible px-8" style={{ marginBottom: `-${topperOverlapPx}px` }}>
             {topperLetters.map((char, index) => (
               <LetterElement
                 key={`topper-${index}`}
@@ -371,6 +391,7 @@ export const MarqueeVisualizer = () => {
                 index={index}
                 letterSize="36"
                 currentScale={currentScale}
+                scaleOverride={computedTopperScale}
               />
             ))}
           </div>
@@ -388,6 +409,7 @@ export const MarqueeVisualizer = () => {
                 index={index}
                 letterSize="36"
                 currentScale={currentScale}
+                scaleOverride={computedMainScale}
               />
             ))
           ) : (
