@@ -16,20 +16,20 @@ export const MarqueeHeroSection = () => {
   };
 
   return (
-    <section className="relative h-screen flex items-start justify-center px-4 pt-20 overflow-hidden">
+    <section className="relative h-[70vh] flex items-center justify-center px-4 pt-16 overflow-hidden">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
         <OptimizedImage
           src={heroLockwoods}
           alt="THE LOCKWOODS marquee letters with couple dancing at elegant event"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover object-center"
           priority
         />
         <div className="absolute inset-0 bg-black/40" />
       </div>
       
       {/* Content */}
-      <div className="relative z-10 text-center text-white max-w-4xl mx-auto space-y-72 md:space-y-96">
+      <div className="relative z-10 text-center text-white max-w-4xl mx-auto space-y-8 md:space-y-12">
         <div className="space-y-4">
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
             <span className="bg-gradient-to-r from-white to-white/90 bg-clip-text text-transparent">
@@ -42,7 +42,7 @@ export const MarqueeHeroSection = () => {
           </p>
         </div>
         
-        <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mt-32 md:mt-40">
+        <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
           <Button 
             size="lg" 
             className="text-lg px-10 py-6 bg-orange-500 hover:bg-orange-600 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
