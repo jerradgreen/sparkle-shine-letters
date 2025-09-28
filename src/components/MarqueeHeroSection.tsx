@@ -16,7 +16,7 @@ export const MarqueeHeroSection = () => {
   };
 
   return (
-    <section className="relative h-[70vh] flex flex-col justify-between px-4 pt-16 pb-8 overflow-hidden">
+    <section className="relative h-[50vh] md:h-[70vh] flex flex-col justify-between px-4 pt-8 md:pt-16 pb-6 md:pb-8 overflow-hidden">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
         <OptimizedImage
@@ -29,25 +29,25 @@ export const MarqueeHeroSection = () => {
       </div>
       
       {/* Content - Text at top */}
-      <div className="relative z-10 text-center text-white max-w-4xl mx-auto -mt-4">
-        <div className="space-y-3">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
+      <div className="relative z-10 text-center text-white max-w-4xl mx-auto md:-mt-8">
+        <div className="space-y-2 md:space-y-3">
+          <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold leading-tight">
             <span className="bg-gradient-to-r from-white to-white/90 bg-clip-text text-transparent">
               Stand-up, Commercial Grade Marquee Lights
             </span>
           </h1>
           
-          <p className="text-lg md:text-xl lg:text-2xl leading-relaxed opacity-95 max-w-3xl mx-auto">
+          <p className="text-base md:text-xl lg:text-2xl leading-relaxed opacity-95 max-w-3xl mx-auto">
             Marquee Lights That Make Every Event Unforgettable
           </p>
         </div>
       </div>
         
       {/* Buttons at bottom */}
-      <div className="relative z-10 flex flex-col sm:flex-row gap-6 justify-center items-center max-w-4xl mx-auto">
+      <div className="relative z-10 flex flex-col sm:flex-row gap-4 md:gap-6 justify-center items-center max-w-4xl mx-auto">
         <Button 
           size="lg" 
-          className="text-lg px-10 py-6 bg-orange-500 hover:bg-orange-600 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+          className="text-sm md:text-lg px-6 md:px-10 py-4 md:py-6 bg-orange-500 hover:bg-orange-600 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
           onClick={openQuoteForm}
         >
           Get Your Quote in Under 5 min
@@ -55,7 +55,7 @@ export const MarqueeHeroSection = () => {
         
         <Button 
           size="lg" 
-          className="text-lg px-8 py-6 bg-blue-600 hover:bg-blue-700 text-white"
+          className="text-sm md:text-lg px-5 md:px-8 py-4 md:py-6 bg-blue-600 hover:bg-blue-700 text-white"
           onClick={scrollToVisualizer}
         >
           Try the Visualizer
