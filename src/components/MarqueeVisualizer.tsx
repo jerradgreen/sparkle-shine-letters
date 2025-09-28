@@ -231,9 +231,9 @@ const topperLetters = getTopperText();
 const computedMainScale = getScale(false, mainLetters.length, letterSize, currentScale);
 const isMobile = window.innerWidth <= 767;
 const isLandscape = window.innerWidth > window.innerHeight;
-const topperAdjust = isMobile ? (isLandscape ? 0.86 : 0.84) : 0.82;
+const topperAdjust = isMobile ? (isLandscape ? 0.86 : 0.84) : 0.72;
 const computedTopperScale = computedMainScale * (15/36) * topperAdjust;
-const overlapFactor = isMobile ? (isLandscape ? 0.16 : 0.18) : 0.22;
+const overlapFactor = isMobile ? (isLandscape ? 0.16 : 0.18) : 0.38;
 const topperOverlapPx = Math.round(240 * computedMainScale * overlapFactor);
 
   return (
@@ -372,7 +372,7 @@ style={{
       >
         {/* Topper Line */}
         {topperLetters.length > 0 && (
-          <div className="topper-line letter-line relative z-20 flex justify-center flex-nowrap items-end overflow-visible px-8" style={{ marginBottom: `-${topperOverlapPx}px` }}>
+          <div className="topper-line letter-line relative z-30 flex justify-center flex-nowrap items-end overflow-visible px-8" style={{ marginBottom: `-${topperOverlapPx}px` }}>
             {topperLetters.map((char, index) => (
               <LetterElement
                 key={`topper-${index}`}
@@ -389,7 +389,7 @@ style={{
         )}
 
         {/* Main Line */}
-        <div className="main-line letter-line relative z-10 flex justify-center flex-nowrap items-end overflow-visible px-8">
+        <div className="main-line letter-line relative z-20 flex justify-center flex-nowrap items-end overflow-visible px-8">
           {mainLetters.length > 0 ? (
             mainLetters.map((char, index) => (
               <LetterElement
