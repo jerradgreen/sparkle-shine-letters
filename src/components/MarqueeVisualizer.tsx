@@ -231,8 +231,10 @@ const topperLetters = getTopperText();
 const computedMainScale = getScale(false, mainLetters.length, letterSize, currentScale);
 const isMobile = window.innerWidth <= 767;
 const isLandscape = window.innerWidth > window.innerHeight;
-const topperAdjust = isMobile ? (isLandscape ? 0.86 : 0.84) : 0.75;
-const computedTopperScale = getScale(true, topperLetters.length, letterSize, currentScale);
+const computedTopperScale = Math.max(
+  computedMainScale * (isMobile ? 0.85 : 0.75),
+  isMobile ? 0.08 : 0.10
+);
 const overlapFactor = isMobile ? (isLandscape ? 0.16 : 0.18) : 0.25;
 const topperOverlapPx = Math.round(240 * computedMainScale * overlapFactor);
 
