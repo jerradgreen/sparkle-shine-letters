@@ -42,7 +42,7 @@ export const MarqueeHeroSection = () => {
           </p>
         </div>
         
-        <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mt-24">
+        <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mt-32 md:mt-40">
           <Button 
             size="lg" 
             className="text-lg px-10 py-6 bg-orange-500 hover:bg-orange-600 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
