@@ -267,10 +267,10 @@ export const MarqueeVisualizer = () => {
                 <div className="space-y-2">
                   <Label htmlFor="topperOption">Select A Topper (if needed)</Label>
                   <Select value={topperOption} onValueChange={setTopperOption}>
-                    <SelectTrigger>
+                    <SelectTrigger className="z-[10000]">
                       <SelectValue />
                     </SelectTrigger>
-                    <SelectContent>
+                    <SelectContent className="z-[10000]">
                       <SelectItem value="NONE">No Topper</SelectItem>
                       <SelectItem value="THE">THE</SelectItem>
                       <SelectItem value="CLASS OF">CLASS OF</SelectItem>
@@ -349,7 +349,7 @@ export const MarqueeVisualizer = () => {
       {/* Letter Display */}
       <div 
         ref={letterDisplayRef}
-        className="letter-positioning absolute top-[350px] left-1/2 transform -translate-x-1/2 z-[9999] flex flex-col items-center justify-end pointer-events-none min-w-full overflow-visible"
+        className="letter-positioning absolute top-[380px] left-1/2 transform -translate-x-1/2 z-[9999] flex flex-col items-center justify-end pointer-events-none min-w-full overflow-visible"
       >
         {/* Topper Line */}
         {topperLetters.length > 0 && (
