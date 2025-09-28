@@ -129,9 +129,9 @@ const getScale = (isTopper: boolean, letterCount: number, letterSize: string, cu
   const baseScales = { '15': 0.45, '36': 0.9, '48': 0.9 };
   const baseScalesMobile = { '15': 0.22, '36': 0.38, '48': 0.38 };
 
-  let mainScale = isMobile ? baseScalesMobile[letterSize as keyof typeof baseScalesMobile] : baseScales[letterSize as keyof typeof baseScales];
-
   if (!isTopper) {
+    // Main text scaling
+    let mainScale = isMobile ? baseScalesMobile[letterSize as keyof typeof baseScalesMobile] : baseScales[letterSize as keyof typeof baseScales];
     const threshold = 10;
     if (letterCount > threshold) {
       const ratio = threshold / letterCount;
@@ -140,8 +140,12 @@ const getScale = (isTopper: boolean, letterCount: number, letterSize: string, cu
     const floor = isMobile ? 0.32 : 0.5;
     return Math.max(mainScale, floor);
   } else {
-    let topperScale = currentScale * (letterSize === '48' ? 0.35 : 0.43);
-    return Math.max(topperScale, isMobile ? 0.18 : 0.2);
+    // Topper scaling - toppers are always 15" regardless of main size (36" or 48")
+    // Calculate topper scale as a ratio of 15" to the selected main size
+    const sizeRatio = 15 / parseInt(letterSize); // 15/36 = 0.417, 15/48 = 0.3125
+    let baseTopperScale = isMobile ? baseScalesMobile[letterSize as keyof typeof baseScalesMobile] : baseScales[letterSize as keyof typeof baseScales];
+    let topperScale = baseTopperScale * sizeRatio;
+    return Math.max(topperScale, isMobile ? 0.15 : 0.2);
   }
 };
 
