@@ -29,7 +29,7 @@ export const MarqueeHeroSection = () => {
       </div>
       
       {/* Content */}
-      <div className="relative z-10 text-center text-white max-w-4xl mx-auto space-y-8">
+      <div className="relative z-10 text-center text-white max-w-4xl mx-auto space-y-24 md:space-y-32">
         <div className="space-y-4">
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
             <span className="bg-gradient-to-r from-white to-white/90 bg-clip-text text-transparent">
