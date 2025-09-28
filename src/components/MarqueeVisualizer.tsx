@@ -5,10 +5,18 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { Label } from '@/components/ui/label';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 
-// Letter images map - using placeholder for now, you can replace with actual letter images
+// Letter images imports
+import ACutout from '@/assets/A_cutout.png';
+import BCutout from '@/assets/B_cutout.png';
+import CCutout from '@/assets/C_cutout.png';
+import DCutout from '@/assets/D_cutout.png';
+import ECutout from '@/assets/E_cutout.png';
+import FCutout from '@/assets/F_cutout.png';
+
+// Letter images map
 const letterImages: Record<string, string> = {
-  'A': '/api/placeholder/240/240', 'B': '/api/placeholder/240/240', 'C': '/api/placeholder/240/240', 'D': '/api/placeholder/240/240',
-  'E': '/api/placeholder/240/240', 'F': '/api/placeholder/240/240', 'G': '/api/placeholder/240/240', 'H': '/api/placeholder/240/240',
+  'A': ACutout, 'B': BCutout, 'C': CCutout, 'D': DCutout,
+  'E': ECutout, 'F': FCutout, 'G': '/api/placeholder/240/240', 'H': '/api/placeholder/240/240',
   'I': '/api/placeholder/240/240', 'J': '/api/placeholder/240/240', 'K': '/api/placeholder/240/240', 'L': '/api/placeholder/240/240',
   'M': '/api/placeholder/240/240', 'N': '/api/placeholder/240/240', 'O': '/api/placeholder/240/240', 'P': '/api/placeholder/240/240',
   'Q': '/api/placeholder/240/240', 'R': '/api/placeholder/240/240', 'S': '/api/placeholder/240/240', 'T': '/api/placeholder/240/240',
