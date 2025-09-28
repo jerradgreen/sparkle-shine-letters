@@ -12,12 +12,18 @@ import CCutout from '@/assets/C_cutout.png';
 import DCutout from '@/assets/D_cutout.png';
 import ECutout from '@/assets/E_cutout.png';
 import FCutout from '@/assets/F_cutout.png';
+import GCutout from '@/assets/G_cutout.png';
+import HCutout from '@/assets/H_cutout.png';
+import ICutout from '@/assets/I_cutout.png';
+import JCutout from '@/assets/J_cutout.png';
+import KCutout from '@/assets/K_cutout.png';
+import LCutout from '@/assets/L_cutout.png';
 
 // Letter images map
 const letterImages: Record<string, string> = {
   'A': ACutout, 'B': BCutout, 'C': CCutout, 'D': DCutout,
-  'E': ECutout, 'F': FCutout, 'G': '/api/placeholder/240/240', 'H': '/api/placeholder/240/240',
-  'I': '/api/placeholder/240/240', 'J': '/api/placeholder/240/240', 'K': '/api/placeholder/240/240', 'L': '/api/placeholder/240/240',
+  'E': ECutout, 'F': FCutout, 'G': GCutout, 'H': HCutout,
+  'I': ICutout, 'J': JCutout, 'K': KCutout, 'L': LCutout,
   'M': '/api/placeholder/240/240', 'N': '/api/placeholder/240/240', 'O': '/api/placeholder/240/240', 'P': '/api/placeholder/240/240',
   'Q': '/api/placeholder/240/240', 'R': '/api/placeholder/240/240', 'S': '/api/placeholder/240/240', 'T': '/api/placeholder/240/240',
   'U': '/api/placeholder/240/240', 'V': '/api/placeholder/240/240', 'W': '/api/placeholder/240/240', 'X': '/api/placeholder/240/240',
