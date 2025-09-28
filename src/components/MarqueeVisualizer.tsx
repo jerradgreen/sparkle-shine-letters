@@ -4,8 +4,6 @@ import { Input } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Label } from '@/components/ui/label';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { AdvancedMarqueeControls } from '@/components/AdvancedMarqueeControls';
-import { MarqueeSettings, DEFAULT_MARQUEE_SETTINGS } from '@/types/marquee';
 
 // Letter images imports
 import ACutout from '@/assets/A_cutout.png';
@@ -69,14 +67,13 @@ interface LetterElementProps {
   letterSize: string;
   currentScale: number;
   scaleOverride?: number;
-  settings: MarqueeSettings;
 }
 
-const LetterElement = ({ character, isTopper, letterCount, index, letterSize, currentScale, scaleOverride, settings }: LetterElementProps) => {
+const LetterElement = ({ character, isTopper, letterCount, index, letterSize, currentScale, scaleOverride }: LetterElementProps) => {
   const [loaded, setLoaded] = useState(false);
   
   if (character === ' ') {
-    const scale = scaleOverride ?? getScale(isTopper, letterCount, letterSize, currentScale, settings);
+    const scale = scaleOverride ?? getScale(isTopper, letterCount, letterSize, currentScale);
     return (
       <div 
         className="letter-space inline-block"
@@ -97,9 +94,9 @@ const LetterElement = ({ character, isTopper, letterCount, index, letterSize, cu
     );
   }
 
-  const scale = scaleOverride ?? getScale(isTopper, letterCount, letterSize, currentScale, settings);
+  const scale = scaleOverride ?? getScale(isTopper, letterCount, letterSize, currentScale);
   const height = 240 * scale;
-  const kerning = getKerning(isTopper, letterCount, settings);
+  const kerning = getKerning(isTopper, letterCount);
 
   return (
     <div 
@@ -128,7 +125,7 @@ const LetterElement = ({ character, isTopper, letterCount, index, letterSize, cu
   );
 };
 
-const getScale = (isTopper: boolean, letterCount: number, letterSize: string, currentScale: number, settings: MarqueeSettings) => {
+const getScale = (isTopper: boolean, letterCount: number, letterSize: string, currentScale: number) => {
   const isMobile = window.innerWidth <= 767;
   // Use the same scale for both 36" and 48" to keep it simple
   const baseScales = { '15': 0.45, '36': 0.9, '48': 0.9 };
@@ -136,29 +133,27 @@ const getScale = (isTopper: boolean, letterCount: number, letterSize: string, cu
 
   // Continuous scaling that reacts on every character (1 -> 20+)
   const mainBase = isMobile ? baseScalesMobile['36'] : baseScales['36'];
-  const k = settings.perCharacterShrink; // per-character reduction
+  const k = isMobile ? 0.018 : 0.02; // per-character reduction
   const dynamicFactor = Math.max(1 - k * Math.max(letterCount - 1, 0), 0.6);
 
   if (!isTopper) {
-    const floor = settings.minMainScale;
+    const floor = isMobile ? 0.32 : 0.5;
     return Math.max(mainBase * dynamicFactor, floor);
   } else {
-    const mainFloor = settings.minMainScale;
+    const mainFloor = isMobile ? 0.32 : 0.5;
     const finalMainScale = Math.max(mainBase * dynamicFactor, mainFloor);
 
     // Topper follows main text exactly, with slight visual reduction
-    const topperScale = finalMainScale * (15/36) * settings.topperSizeRatio;
+    const topperAdjust = isMobile ? 0.9 : 0.92; // smaller on both, a bit more on desktop
+    const topperScale = finalMainScale * (15/36) * topperAdjust;
 
-    return Math.max(topperScale, settings.minTopperScale);
+    return Math.max(topperScale, isMobile ? 0.08 : 0.10);
   }
 };
 
-const getKerning = (isTopper: boolean, letterCount: number, settings: MarqueeSettings) => {
+const getKerning = (isTopper: boolean, letterCount: number) => {
   const isMobile = window.innerWidth <= 767;
-  let kerning = isTopper ? 
-    (isMobile ? settings.topperKerning * 0.375 : settings.topperKerning) : 
-    (isMobile ? settings.mainKerning * 0.5 : settings.mainKerning);
-  
+  let kerning = isTopper ? (isMobile ? 3 : 8) : (isMobile ? 4 : 12);
   if (!isTopper && letterCount > 6) {
     kerning *= 6 / letterCount;
   }
@@ -172,11 +167,6 @@ export const MarqueeVisualizer = () => {
   const [mainText, setMainText] = useState('ENTER TEXT');
   const [currentScale, setCurrentScale] = useState(1);
   const [isVisible, setIsVisible] = useState(false);
-  const [advancedControlsOpen, setAdvancedControlsOpen] = useState(false);
-  const [settings, setSettings] = useState<MarqueeSettings>(() => {
-    const saved = localStorage.getItem('marqueeSettings');
-    return saved ? JSON.parse(saved) : DEFAULT_MARQUEE_SETTINGS;
-  });
   
   const previewRef = useRef<HTMLDivElement>(null);
   const letterDisplayRef = useRef<HTMLDivElement>(null);
@@ -199,18 +189,13 @@ export const MarqueeVisualizer = () => {
 
   const updateCurrentScale = useCallback(() => {
     const mainLetters = filterValidText(mainText);
-    const scale = getScale(false, mainLetters.length, letterSize, currentScale, settings);
+    const scale = getScale(false, mainLetters.length, letterSize, currentScale);
     setCurrentScale(scale);
-  }, [mainText, letterSize, currentScale, settings]);
+  }, [mainText, letterSize, currentScale]);
 
   useEffect(() => {
     updateCurrentScale();
   }, [mainText, letterSize, updateCurrentScale]);
-
-  const handleSettingsChange = (newSettings: MarqueeSettings) => {
-    setSettings(newSettings);
-    localStorage.setItem('marqueeSettings', JSON.stringify(newSettings));
-  };
 
   const openQuoteForm = () => {
     const base = 'https://www.cognitoforms.com/VintageMarqueeLights/EventStyleLettersQuoteForm';
@@ -241,20 +226,15 @@ export const MarqueeVisualizer = () => {
     window.open(url, '_blank');
   };
 
-  const mainLetters = filterValidText(mainText);
-  const topperLetters = getTopperText();
-  const computedMainScale = getScale(false, mainLetters.length, letterSize, currentScale, settings);
-  const isMobile = window.innerWidth <= 767;
-  const isLandscape = window.innerWidth > window.innerHeight;
-  const computedTopperScale = computedMainScale * (15/36) * settings.topperSizeRatio;
-  const topperOverlapPx = Math.round(240 * computedMainScale * settings.overlapFactor);
-
-  const getVerticalOffset = () => {
-    if (isMobile) {
-      return isLandscape ? settings.verticalOffset.mobileLandscape : settings.verticalOffset.mobilePortrait;
-    }
-    return settings.verticalOffset.desktop;
-  };
+const mainLetters = filterValidText(mainText);
+const topperLetters = getTopperText();
+const computedMainScale = getScale(false, mainLetters.length, letterSize, currentScale);
+const isMobile = window.innerWidth <= 767;
+const isLandscape = window.innerWidth > window.innerHeight;
+const topperAdjust = isMobile ? (isLandscape ? 0.86 : 0.84) : 0.82;
+const computedTopperScale = computedMainScale * (15/36) * topperAdjust;
+const overlapFactor = isMobile ? (isLandscape ? 0.16 : 0.18) : 0.22;
+const topperOverlapPx = Math.round(240 * computedMainScale * overlapFactor);
 
   return (
     <div className="marquee-visualizer relative overflow-visible bg-background text-foreground">
@@ -365,16 +345,6 @@ export const MarqueeVisualizer = () => {
             </CardContent>
           </Card>
         </div>
-
-        {/* Advanced Controls */}
-        <div className="w-full max-w-4xl mx-auto mt-8">
-          <AdvancedMarqueeControls
-            settings={settings}
-            onSettingsChange={handleSettingsChange}
-            isOpen={advancedControlsOpen}
-            onToggle={() => setAdvancedControlsOpen(!advancedControlsOpen)}
-          />
-        </div>
       </div>
 
       {/* Preview Container */}
@@ -396,8 +366,8 @@ export const MarqueeVisualizer = () => {
       <div 
         ref={letterDisplayRef}
         className="letter-positioning absolute left-1/2 transform -translate-x-1/2 z-0 flex flex-col items-center justify-end pointer-events-none min-w-full overflow-visible"
-        style={{
-          top: `${getVerticalOffset()}px`
+style={{
+          top: window.innerWidth >= 768 ? '360px' : window.innerWidth > window.innerHeight ? '300px' : '620px'
         }}
       >
         {/* Topper Line */}
@@ -413,7 +383,6 @@ export const MarqueeVisualizer = () => {
                 letterSize="36"
                 currentScale={currentScale}
                 scaleOverride={computedTopperScale}
-                settings={settings}
               />
             ))}
           </div>
@@ -432,7 +401,6 @@ export const MarqueeVisualizer = () => {
                 letterSize="36"
                 currentScale={currentScale}
                 scaleOverride={computedMainScale}
-                settings={settings}
               />
             ))
           ) : (
