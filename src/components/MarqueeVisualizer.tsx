@@ -215,10 +215,11 @@ export const MarqueeVisualizer = () => {
     <div className="marquee-visualizer relative overflow-visible bg-background text-foreground">
       {/* Background */}
       <div 
-        className="marquee-background absolute inset-0 bg-cover bg-no-repeat bg-center"
+        className="marquee-background absolute inset-0 bg-cover bg-no-repeat"
         style={{ 
           backgroundImage: `url(${BackgroundImage})`,
-          backgroundPosition: 'center 50%'
+          backgroundPosition: 'center 30%',
+          backgroundPositionY: 'clamp(-200px, -10vh, -50px)'
         }}
       >
         <div 
@@ -329,27 +330,18 @@ export const MarqueeVisualizer = () => {
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`}
         style={{
-          height: '45vh',
-          maxHeight: '480px',
-          minHeight: '300px',
-          overflow: 'visible'
+          height: '35vh',
+          maxHeight: '400px',
+          minHeight: '250px',
+          overflow: 'hidden'
         }}
       >
-        {/* Mobile quote button */}
-        <div className="mobile-quote-wrapper hidden max-md:block absolute bottom-48 left-0 right-0 text-center z-40">
-          <Button 
-            onClick={openQuoteForm}
-            className="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-8"
-          >
-            Get Quote in Under 5 min
-          </Button>
-        </div>
       </div>
 
       {/* Letter Display */}
       <div 
         ref={letterDisplayRef}
-        className="letter-positioning absolute top-[720px] landscape:top-[520px] md:top-[380px] left-1/2 transform -translate-x-1/2 z-[9999] flex flex-col items-center justify-end pointer-events-none min-w-full overflow-visible"
+        className="letter-positioning absolute top-[720px] landscape:top-[520px] md:top-[320px] left-1/2 transform -translate-x-1/2 z-[9999] flex flex-col items-center justify-end pointer-events-none min-w-full overflow-visible"
       >
         {/* Topper Line */}
         {topperLetters.length > 0 && (
