@@ -133,30 +133,33 @@ const getScale = (isTopper: boolean, letterCount: number, letterSize: string, cu
   if (!isTopper) {
     // Main text scaling - same for both 36" and 48"
     let mainScale = isMobile ? baseScalesMobile['36'] : baseScales['36'];
-    const threshold = 10;
-    if (letterCount > threshold) {
-      const ratio = threshold / letterCount;
+    
+    // Apply scaling for any character count
+    if (letterCount > 1) {
+      const threshold = 10;
+      const ratio = Math.min(threshold / letterCount, 1);
       mainScale *= Math.pow(ratio, 0.4);
     }
     const floor = isMobile ? 0.32 : 0.5;
     return Math.max(mainScale, floor);
   } else {
-    // Topper scaling - always maintains 15":36" ratio (0.417) with main text
+    // Topper scaling - always maintains exact ratio with main text
     let mainScale = isMobile ? baseScalesMobile['36'] : baseScales['36'];
     
-    // Apply same scaling as main text based on character count
-    const threshold = 10;
-    if (letterCount > threshold) {
-      const ratio = threshold / letterCount;
+    // Apply exact same scaling as main text
+    if (letterCount > 1) {
+      const threshold = 10;
+      const ratio = Math.min(threshold / letterCount, 1);
       mainScale *= Math.pow(ratio, 0.4);
     }
     const mainFloor = isMobile ? 0.32 : 0.5;
     const finalMainScale = Math.max(mainScale, mainFloor);
     
-    // Topper is exactly 15/36 = 0.417 the size of main text
-    const topperScale = finalMainScale * (15/36);
+    // Topper is smaller than main text - 15":36" ratio but adjusted for better visual balance
+    const topperRatio = isMobile ? (15/36) : (12/36); // Smaller on desktop
+    const topperScale = finalMainScale * topperRatio;
     
-    return Math.max(topperScale, isMobile ? 0.08 : 0.12);
+    return Math.max(topperScale, isMobile ? 0.08 : 0.10);
   }
 };
 
