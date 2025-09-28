@@ -218,8 +218,7 @@ export const MarqueeVisualizer = () => {
         className="marquee-background absolute inset-0 bg-cover bg-no-repeat"
         style={{ 
           backgroundImage: `url(${BackgroundImage})`,
-          backgroundPosition: 'center 80%',
-          backgroundPositionY: 'clamp(200px, 20vh, 400px)'
+          backgroundPosition: 'center 60%'
         }}
       >
         <div 
@@ -341,7 +340,10 @@ export const MarqueeVisualizer = () => {
       {/* Letter Display */}
       <div 
         ref={letterDisplayRef}
-        className="letter-positioning absolute top-[720px] landscape:top-[520px] md:top-[260px] left-1/2 transform -translate-x-1/2 z-[9999] flex flex-col items-center justify-end pointer-events-none min-w-full overflow-visible"
+        className="letter-positioning absolute left-1/2 transform -translate-x-1/2 z-[9999] flex flex-col items-center justify-end pointer-events-none min-w-full overflow-visible"
+        style={{
+          top: window.innerWidth >= 768 ? '200px' : window.innerWidth > window.innerHeight ? '520px' : '720px'
+        }}
       >
         {/* Topper Line */}
         {topperLetters.length > 0 && (
