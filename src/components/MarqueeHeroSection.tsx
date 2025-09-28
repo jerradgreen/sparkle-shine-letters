@@ -43,26 +43,6 @@ export const MarqueeHeroSection = () => {
         </div>
       </div>
         
-      {/* Buttons - side by side on mobile */}
-      <div className="relative z-10 flex flex-row gap-3 md:gap-6 justify-center items-center max-w-4xl mx-auto mt-12 md:mt-16">
-        <Button 
-          size="lg" 
-          className="text-xs md:text-lg px-4 md:px-10 py-3 md:py-6 bg-orange-500 hover:bg-orange-600 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
-          onClick={openQuoteForm}
-        >
-          <span className="hidden md:inline">Get a Quote</span>
-          <span className="md:hidden">Get Quote</span>
-        </Button>
-        
-        <Button 
-          size="lg" 
-          className="text-xs md:text-lg px-3 md:px-8 py-3 md:py-6 bg-blue-600 hover:bg-blue-700 text-white"
-          onClick={scrollToVisualizer}
-        >
-          <span className="hidden md:inline">Try the Visualizer</span>
-          <span className="md:hidden">Try Visualizer</span>
-        </Button>
-      </div>
 
       {/* 5 Star Review from Ashley L. */}
       <div className="relative z-10 bg-white/10 backdrop-blur-sm rounded-lg p-4 mx-4 md:mx-auto max-w-md mt-8 md:mt-12">
