@@ -16,9 +16,8 @@ const EventStandUpSigns = () => {
       canonicalUrl="https://yoursite.com/event-standup-signs"
     >
       <MarqueeHeroSection />
-      <HighlightsSection />
-      <MarqueeVisualizer />
       <FeatureGrid config={standUpSignsConfig.features} />
+      <MarqueeVisualizer />
       <TestimonialSection config={standUpSignsConfig.testimonials} />
       
       {/* Get Quote Section replacing pricing packages */}

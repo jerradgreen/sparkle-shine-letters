@@ -22,7 +22,7 @@ export const MarqueeHeroSection = () => {
         <OptimizedImage
           src={heroLockwoods}
           alt="THE LOCKWOODS marquee letters with couple dancing at elegant event"
-          className="w-full h-full object-cover object-top md:object-[center_20%]"
+          className="w-full h-full object-cover object-[center_80%]"
           priority
         />
         <div className="absolute inset-0 bg-black/40" />
@@ -44,13 +44,13 @@ export const MarqueeHeroSection = () => {
       </div>
         
       {/* Buttons - side by side on mobile */}
-      <div className="relative z-10 flex flex-row gap-3 md:gap-6 justify-center items-center max-w-4xl mx-auto">
+      <div className="relative z-10 flex flex-row gap-3 md:gap-6 justify-center items-center max-w-4xl mx-auto mt-8">
         <Button 
           size="lg" 
           className="text-xs md:text-lg px-4 md:px-10 py-3 md:py-6 bg-orange-500 hover:bg-orange-600 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
           onClick={openQuoteForm}
         >
-          <span className="hidden md:inline">Get Your Quote in Under 5 min</span>
+          <span className="hidden md:inline">Get a Quote</span>
           <span className="md:hidden">Get Quote</span>
         </Button>
         

@@ -230,14 +230,14 @@ const mainLetters = filterValidText(mainText);
 const topperLetters = getTopperText();
 const computedMainScale = getScale(false, mainLetters.length, letterSize, currentScale);
 const isMobile = window.innerWidth <= 767;
-// Keep topper a strict proportion of main height - NO FLOORS
-const TOPPER_RATIO = 0.33;
+// Keep topper proportional to 15"/36" ratio - approximately 0.42
+const TOPPER_RATIO = 0.42;
 const computedTopperScale = computedMainScale * TOPPER_RATIO;
 
-// Calculate overlap based on topper's height, not main line height
+// Calculate overlap - topper should sit ON TOP of main letters, not overlap
 const topperHeightPx = 240 * computedTopperScale;
-const TOPPER_BOTTOM_PADDING_RATIO = 0.215; // tuned for visual "touching"
-const topperOverlapPx = Math.round(topperHeightPx * TOPPER_BOTTOM_PADDING_RATIO);
+const TOPPER_MARGIN_RATIO = 0.1; // small gap between topper and main letters
+const topperMarginPx = Math.round(topperHeightPx * TOPPER_MARGIN_RATIO);
 
   return (
     <div className="marquee-visualizer relative overflow-visible bg-background text-foreground">
@@ -370,12 +370,12 @@ const topperOverlapPx = Math.round(topperHeightPx * TOPPER_BOTTOM_PADDING_RATIO)
         ref={letterDisplayRef}
         className="letter-positioning absolute left-1/2 transform -translate-x-1/2 z-0 flex flex-col items-center justify-end pointer-events-none min-w-full overflow-visible"
 style={{
-          top: window.innerWidth >= 768 ? '360px' : window.innerWidth > window.innerHeight ? '300px' : '620px'
+          top: window.innerWidth >= 768 ? '360px' : window.innerWidth > window.innerHeight ? '300px' : '740px'
         }}
       >
         {/* Topper Line */}
         {topperLetters.length > 0 && (
-          <div className="topper-line letter-line relative z-30 flex justify-center flex-nowrap items-end overflow-visible px-8" style={{ marginBottom: `-${topperOverlapPx}px` }}>
+          <div className="topper-line letter-line relative z-30 flex justify-center flex-nowrap items-end overflow-visible px-8" style={{ marginBottom: `${topperMarginPx}px` }}>
             {topperLetters.map((char, index) => (
               <LetterElement
                 key={`topper-${index}`}

@@ -278,23 +278,23 @@ export const standUpSignsConfig: TemplateConfig = {
   },
   
   features: {
-    title: "Why Stand-Up Signs Win Every Event",
-    subtitle: "Portable, versatile, and perfect for any venue or occasion",
+    title: "Why marquee letters and signs win every event",
+    subtitle: "Durable, bold, and easy - the perfect combination for any event",
     items: [
       {
-        title: "Ultra Portable",
-        description: "Lightweight design packs flat for easy transport. One person can carry multiple signs effortlessly",
-        icon: "🚚"
+        title: "Durable & Self-Standing",
+        description: "Made from powder-coated steel with extra-deep sides, these letters are built to last and stand on their own.",
+        icon: "✓"
       },
       {
-        title: "Quick Setup",
-        description: "Sets up in under 5 minutes with no tools required. Perfect for tight event timelines",
+        title: "Bold & Bright",
+        description: "At 36\" to 48\" tall with LED bulbs and a sleek finish, they make a big impact at weddings, proms, and parties.",
+        icon: "✨"
+      },
+      {
+        title: "Easy to Use & Transport",
+        description: "Arrive pre-lit and ready to go, with optional reusable foam-lined boxes for simple storage and travel.",
         icon: "⚡"
-      },
-      {
-        title: "Event Versatility",
-        description: "Works for outdoor weddings, indoor parties, corporate events, trade shows, and more",
-        icon: "🎪"
       }
     ]
   },
@@ -307,21 +307,21 @@ export const standUpSignsConfig: TemplateConfig = {
         role: "Wedding Planner",
         content: "Letters arrived safe and were amazing quality. The color-changing bulbs were a huge hit at the reception!",
         rating: 5,
-        image: "/src/assets/testimonial-sarah.jpg"
+        image: "/src/assets/testimonial-white-female.jpg"
       },
       {
         name: "David K.",
         role: "Corporate Event Manager", 
         content: "Perfect for our stage setup - everyone could see them and took pictures. The neon style was modern and professional.",
         rating: 5,
-        image: "/src/assets/testimonial-mike.jpg"
+        image: "/src/assets/testimonial-white-male.jpg"
       },
       {
         name: "Jennifer L.",
         role: "Event Coordinator",
         content: "Ready to set up right out of the foam-lined boxes. Great quality and exactly what we needed for our venue.",
         rating: 5,
-        image: "/src/assets/testimonial-sarah.jpg"
+        image: "/src/assets/testimonial-black-woman.jpg"
       }
     ]
   },
