@@ -131,35 +131,22 @@ const getScale = (isTopper: boolean, letterCount: number, letterSize: string, cu
   const baseScales = { '15': 0.45, '36': 0.9, '48': 0.9 };
   const baseScalesMobile = { '15': 0.22, '36': 0.38, '48': 0.38 };
 
+  // Continuous scaling that reacts on every character (1 -> 20+)
+  const mainBase = isMobile ? baseScalesMobile['36'] : baseScales['36'];
+  const k = isMobile ? 0.018 : 0.02; // per-character reduction
+  const dynamicFactor = Math.max(1 - k * Math.max(letterCount - 1, 0), 0.6);
+
   if (!isTopper) {
-    // Main text scaling - same for both 36" and 48"
-    let mainScale = isMobile ? baseScalesMobile['36'] : baseScales['36'];
-    
-    // Apply scaling for any character count
-    if (letterCount > 1) {
-      const threshold = 10;
-      const ratio = Math.min(threshold / letterCount, 1);
-      mainScale *= Math.pow(ratio, 0.4);
-    }
     const floor = isMobile ? 0.32 : 0.5;
-    return Math.max(mainScale, floor);
+    return Math.max(mainBase * dynamicFactor, floor);
   } else {
-    // Topper scaling - always maintains exact ratio with main text
-    let mainScale = isMobile ? baseScalesMobile['36'] : baseScales['36'];
-    
-    // Apply exact same scaling as main text
-    if (letterCount > 1) {
-      const threshold = 10;
-      const ratio = Math.min(threshold / letterCount, 1);
-      mainScale *= Math.pow(ratio, 0.4);
-    }
     const mainFloor = isMobile ? 0.32 : 0.5;
-    const finalMainScale = Math.max(mainScale, mainFloor);
-    
-    // Topper maintains exact 15":36" ratio with main text
-    const topperRatio = 15/36;
-    const topperScale = finalMainScale * topperRatio;
-    
+    const finalMainScale = Math.max(mainBase * dynamicFactor, mainFloor);
+
+    // Topper follows main text exactly, with slight visual reduction
+    const topperAdjust = isMobile ? 0.9 : 0.92; // smaller on both, a bit more on desktop
+    const topperScale = finalMainScale * (15/36) * topperAdjust;
+
     return Math.max(topperScale, isMobile ? 0.08 : 0.10);
   }
 };
@@ -242,8 +229,10 @@ export const MarqueeVisualizer = () => {
 const mainLetters = filterValidText(mainText);
 const topperLetters = getTopperText();
 const computedMainScale = getScale(false, mainLetters.length, letterSize, currentScale);
-const computedTopperScale = computedMainScale * (15/36);
-const topperOverlapPx = Math.round(240 * computedMainScale * 0.08);
+const isMobile = window.innerWidth <= 767;
+const topperAdjust = isMobile ? 0.9 : 0.92;
+const computedTopperScale = computedMainScale * (15/36) * topperAdjust;
+const topperOverlapPx = Math.round(240 * computedMainScale * (isMobile ? 0.12 : 0.14));
 
   return (
     <div className="marquee-visualizer relative overflow-visible bg-background text-foreground">
@@ -375,8 +364,8 @@ const topperOverlapPx = Math.round(240 * computedMainScale * 0.08);
       <div 
         ref={letterDisplayRef}
         className="letter-positioning absolute left-1/2 transform -translate-x-1/2 z-[9999] flex flex-col items-center justify-end pointer-events-none min-w-full overflow-visible"
-        style={{
-          top: window.innerWidth >= 768 ? '360px' : window.innerWidth > window.innerHeight ? '340px' : '860px'
+style={{
+          top: window.innerWidth >= 768 ? '360px' : window.innerWidth > window.innerHeight ? '300px' : '620px'
         }}
       >
         {/* Topper Line */}
