@@ -144,8 +144,8 @@ const getScale = (isTopper: boolean, letterCount: number, letterSize: string, cu
     const finalMainScale = Math.max(mainBase * dynamicFactor, mainFloor);
 
     // Topper follows main text exactly, with slight visual reduction
-    const topperAdjust = isMobile ? 0.9 : 0.92; // smaller on both, a bit more on desktop
-    const topperScale = finalMainScale * (15/36) * topperAdjust;
+    const topperAdjust = isMobile ? 0.85 : 0.75;
+    const topperScale = finalMainScale * topperAdjust;
 
     return Math.max(topperScale, isMobile ? 0.08 : 0.10);
   }
@@ -231,9 +231,9 @@ const topperLetters = getTopperText();
 const computedMainScale = getScale(false, mainLetters.length, letterSize, currentScale);
 const isMobile = window.innerWidth <= 767;
 const isLandscape = window.innerWidth > window.innerHeight;
-const topperAdjust = isMobile ? (isLandscape ? 0.86 : 0.84) : 0.72;
-const computedTopperScale = computedMainScale * (15/36) * topperAdjust;
-const overlapFactor = isMobile ? (isLandscape ? 0.16 : 0.18) : 0.38;
+const topperAdjust = isMobile ? (isLandscape ? 0.86 : 0.84) : 0.75;
+const computedTopperScale = getScale(true, topperLetters.length, letterSize, currentScale);
+const overlapFactor = isMobile ? (isLandscape ? 0.16 : 0.18) : 0.25;
 const topperOverlapPx = Math.round(240 * computedMainScale * overlapFactor);
 
   return (
