@@ -16,7 +16,7 @@ export const MarqueeHeroSection = () => {
   };
 
   return (
-    <section className="relative h-screen flex items-center justify-center px-4 overflow-hidden">
+    <section className="relative h-screen flex items-start justify-center px-4 pt-20 overflow-hidden">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
         <OptimizedImage
@@ -33,7 +33,7 @@ export const MarqueeHeroSection = () => {
         <div className="space-y-4">
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
             <span className="bg-gradient-to-r from-white to-white/90 bg-clip-text text-transparent">
-              MARQUEE LETTER RENTALS
+              Event Stand-Up Sign Rental Business
             </span>
           </h1>
           
