@@ -349,11 +349,11 @@ export const MarqueeVisualizer = () => {
       {/* Letter Display */}
       <div 
         ref={letterDisplayRef}
-        className="letter-positioning absolute top-[480px] left-1/2 transform -translate-x-1/2 z-[9999] flex flex-col items-center justify-end pointer-events-none min-w-full overflow-visible"
+        className="letter-positioning absolute top-[350px] left-1/2 transform -translate-x-1/2 z-[9999] flex flex-col items-center justify-end pointer-events-none min-w-full overflow-visible"
       >
         {/* Topper Line */}
         {topperLetters.length > 0 && (
-          <div className="topper-line letter-line flex justify-center flex-nowrap items-end overflow-visible px-8">
+          <div className="topper-line letter-line flex justify-center flex-nowrap items-end overflow-visible px-8 mb-1">
             {topperLetters.map((char, index) => (
               <LetterElement
                 key={`topper-${index}`}
