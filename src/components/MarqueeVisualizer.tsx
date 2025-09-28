@@ -231,11 +231,13 @@ const topperLetters = getTopperText();
 const computedMainScale = getScale(false, mainLetters.length, letterSize, currentScale);
 const isMobile = window.innerWidth <= 767;
 const isLandscape = window.innerWidth > window.innerHeight;
+// Keep topper a fixed proportion of main height regardless of text length
+const TOPPER_RATIO = 0.42; // ~42% of main line height matches reference
 const computedTopperScale = Math.max(
-  computedMainScale * (isMobile ? 0.85 : 0.75),
-  isMobile ? 0.08 : 0.10
+  computedMainScale * TOPPER_RATIO,
+  isMobile ? 0.10 : 0.12
 );
-const overlapFactor = isMobile ? (isLandscape ? 0.16 : 0.18) : 0.25;
+const overlapFactor = isMobile ? (isLandscape ? 0.14 : 0.16) : 0.18;
 const topperOverlapPx = Math.round(240 * computedMainScale * overlapFactor);
 
   return (
