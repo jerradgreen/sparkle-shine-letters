@@ -16,7 +16,7 @@ export const MarqueeHeroSection = () => {
   };
 
   return (
-    <section className="relative h-[70vh] flex items-center justify-center px-4 pt-16 overflow-hidden">
+    <section className="relative h-[70vh] flex flex-col justify-between px-4 pt-16 pb-8 overflow-hidden">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
         <OptimizedImage
@@ -28,37 +28,38 @@ export const MarqueeHeroSection = () => {
         <div className="absolute inset-0 bg-black/40" />
       </div>
       
-      {/* Content */}
-      <div className="relative z-10 text-center text-white max-w-4xl mx-auto space-y-8 md:space-y-12">
-        <div className="space-y-4">
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
+      {/* Content - Text at top */}
+      <div className="relative z-10 text-center text-white max-w-4xl mx-auto mt-8">
+        <div className="space-y-3">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
             <span className="bg-gradient-to-r from-white to-white/90 bg-clip-text text-transparent">
               Stand-up, Commercial Grade Marquee Lights
             </span>
           </h1>
           
-          <p className="text-xl md:text-2xl lg:text-3xl leading-relaxed opacity-95 max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl lg:text-2xl leading-relaxed opacity-95 max-w-3xl mx-auto">
             Marquee Lights That Make Every Event Unforgettable
           </p>
         </div>
+      </div>
         
-        <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-          <Button 
-            size="lg" 
-            className="text-lg px-10 py-6 bg-orange-500 hover:bg-orange-600 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
-            onClick={openQuoteForm}
-          >
-            Get Your Quote in Under 5 min
-          </Button>
-          
-          <Button 
-            size="lg" 
-            className="text-lg px-8 py-6 bg-blue-600 hover:bg-blue-700 text-white"
-            onClick={scrollToVisualizer}
-          >
-            Try the Visualizer
-          </Button>
-        </div>
+      {/* Buttons at bottom */}
+      <div className="relative z-10 flex flex-col sm:flex-row gap-6 justify-center items-center max-w-4xl mx-auto">
+        <Button 
+          size="lg" 
+          className="text-lg px-10 py-6 bg-orange-500 hover:bg-orange-600 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+          onClick={openQuoteForm}
+        >
+          Get Your Quote in Under 5 min
+        </Button>
+        
+        <Button 
+          size="lg" 
+          className="text-lg px-8 py-6 bg-blue-600 hover:bg-blue-700 text-white"
+          onClick={scrollToVisualizer}
+        >
+          Try the Visualizer
+        </Button>
       </div>
       
       {/* Scroll Indicator */}
