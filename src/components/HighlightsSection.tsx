@@ -20,23 +20,23 @@ export const HighlightsSection = () => {
   ];
 
   return (
-    <section className="py-8 bg-slate-50/80 border-y border-slate-200/50">
+    <section className="py-6 md:py-4 bg-slate-50/80 border-y border-slate-200/50">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-2 max-w-6xl mx-auto">
           {highlights.map((highlight, index) => {
             const IconComponent = highlight.icon;
             return (
-              <div key={index} className="flex md:flex-col items-center md:text-center space-x-4 md:space-x-0 md:space-y-3 bg-white/60 p-4 rounded-lg">
+              <div key={index} className="flex md:flex-row items-center md:text-left space-x-4 md:space-x-3 md:space-y-0 bg-white/60 p-3 md:p-2 rounded-lg">
                 <div className="flex-shrink-0">
-                  <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center">
-                    <IconComponent className="w-6 h-6 text-orange-600" />
+                  <div className="w-10 h-10 md:w-8 md:h-8 bg-orange-100 rounded-full flex items-center justify-center">
+                    <IconComponent className="w-5 h-5 md:w-4 md:h-4 text-orange-600" />
                   </div>
                 </div>
-                <div className="flex-1 md:flex-none">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-1">
+                <div className="flex-1">
+                  <h3 className="text-base md:text-sm font-semibold text-gray-900 mb-1 md:mb-0">
                     {highlight.title}
                   </h3>
-                  <p className="text-sm text-gray-600 leading-relaxed">
+                  <p className="text-sm md:text-xs text-gray-600 leading-relaxed">
                     {highlight.description}
                   </p>
                 </div>
