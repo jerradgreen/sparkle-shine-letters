@@ -33,16 +33,16 @@ export const MarqueeHeroSection = () => {
         <div className="space-y-4">
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
             <span className="bg-gradient-to-r from-white to-white/90 bg-clip-text text-transparent">
-              Event Stand-Up Sign Rental Business
+              Stand-up, Commercial Grade Marquee Lights
             </span>
           </h1>
           
           <p className="text-xl md:text-2xl lg:text-3xl leading-relaxed opacity-95 max-w-3xl mx-auto">
-            Commercial-quality stand-up marquee letters that make every event unforgettable
+            Marquee Lights That Make Every Event Unforgettable
           </p>
         </div>
         
-        <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mt-16">
+        <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mt-24">
           <Button 
             size="lg" 
             className="text-lg px-10 py-6 bg-orange-500 hover:bg-orange-600 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
