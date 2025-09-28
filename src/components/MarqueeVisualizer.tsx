@@ -126,12 +126,13 @@ const LetterElement = ({ character, isTopper, letterCount, index, letterSize, cu
 
 const getScale = (isTopper: boolean, letterCount: number, letterSize: string, currentScale: number) => {
   const isMobile = window.innerWidth <= 767;
+  // Use the same scale for both 36" and 48" to keep it simple
   const baseScales = { '15': 0.45, '36': 0.9, '48': 0.9 };
   const baseScalesMobile = { '15': 0.22, '36': 0.38, '48': 0.38 };
 
   if (!isTopper) {
-    // Main text scaling
-    let mainScale = isMobile ? baseScalesMobile[letterSize as keyof typeof baseScalesMobile] : baseScales[letterSize as keyof typeof baseScales];
+    // Main text scaling - same for both 36" and 48"
+    let mainScale = isMobile ? baseScalesMobile['36'] : baseScales['36'];
     const threshold = 10;
     if (letterCount > threshold) {
       const ratio = threshold / letterCount;
@@ -140,12 +141,10 @@ const getScale = (isTopper: boolean, letterCount: number, letterSize: string, cu
     const floor = isMobile ? 0.32 : 0.5;
     return Math.max(mainScale, floor);
   } else {
-    // Topper scaling - toppers are always 15" regardless of main size (36" or 48")
-    // Make toppers much smaller - about 40% of main text size
-    const sizeRatio = 15 / parseInt(letterSize); // 15/36 = 0.417, 15/48 = 0.3125
-    let baseTopperScale = isMobile ? baseScalesMobile[letterSize as keyof typeof baseScalesMobile] : baseScales[letterSize as keyof typeof baseScales];
-    let topperScale = baseTopperScale * sizeRatio * 0.75; // Make slightly larger
-    return Math.max(topperScale, isMobile ? 0.08 : 0.12);
+    // Topper scaling - fixed size relative to main text
+    let baseTopperScale = isMobile ? baseScalesMobile['36'] : baseScales['36'];
+    let topperScale = baseTopperScale * 0.4; // Fixed ratio to main text
+    return Math.max(topperScale, isMobile ? 0.12 : 0.18);
   }
 };
 
@@ -218,7 +217,7 @@ export const MarqueeVisualizer = () => {
         className="marquee-background absolute inset-0 bg-cover bg-no-repeat"
         style={{ 
           backgroundImage: `url(${BackgroundImage})`,
-          backgroundPosition: 'center 50%'
+          backgroundPosition: 'center 20%'
         }}
       >
         <div 
@@ -329,9 +328,9 @@ export const MarqueeVisualizer = () => {
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`}
         style={{
-          height: '35vh',
-          maxHeight: '400px',
-          minHeight: '250px',
+          height: '30vh',
+          maxHeight: '320px',
+          minHeight: '200px',
           overflow: 'hidden'
         }}
       >
@@ -342,20 +341,20 @@ export const MarqueeVisualizer = () => {
         ref={letterDisplayRef}
         className="letter-positioning absolute left-1/2 transform -translate-x-1/2 z-[9999] flex flex-col items-center justify-end pointer-events-none min-w-full overflow-visible"
         style={{
-          top: window.innerWidth >= 768 ? '320px' : window.innerWidth > window.innerHeight ? '380px' : '720px'
+          top: window.innerWidth >= 768 ? '360px' : window.innerWidth > window.innerHeight ? '320px' : '720px'
         }}
       >
         {/* Topper Line */}
         {topperLetters.length > 0 && (
-          <div className="topper-line letter-line flex justify-center flex-nowrap items-end overflow-visible px-8 -mb-9 md:-mb-11">
+          <div className="topper-line letter-line flex justify-center flex-nowrap items-end overflow-visible px-8 mb-2">
             {topperLetters.map((char, index) => (
               <LetterElement
                 key={`topper-${index}`}
                 character={char}
                 isTopper={true}
-                letterCount={mainLetters.length}
+                letterCount={topperLetters.length}
                 index={index}
-                letterSize={letterSize}
+                letterSize="36"
                 currentScale={currentScale}
               />
             ))}
@@ -372,7 +371,7 @@ export const MarqueeVisualizer = () => {
                 isTopper={false}
                 letterCount={mainLetters.length}
                 index={index}
-                letterSize={letterSize}
+                letterSize="36"
                 currentScale={currentScale}
               />
             ))
