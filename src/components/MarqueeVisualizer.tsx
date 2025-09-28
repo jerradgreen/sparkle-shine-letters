@@ -38,6 +38,12 @@ import Number2 from '@/assets/2_lights_on.png';
 import Number3 from '@/assets/3_lights_on.png';
 import Number4 from '@/assets/4_lights_on.png';
 import Number5 from '@/assets/5_lights_on.png';
+import Number6 from '@/assets/6_lights_on.png';
+import Number7 from '@/assets/7_lights_on.png';
+import Number8 from '@/assets/8_lights_on.png';
+import Number9 from '@/assets/9_lights_on.png';
+import AmpersandLights from '@/assets/ampersand_lights_on.png';
+import BackgroundImage from '@/assets/black_wall_background_image_4.png';
 
 // Letter images map
 const letterImages: Record<string, string> = {
@@ -47,10 +53,10 @@ const letterImages: Record<string, string> = {
   'M': MCutout, 'N': NCutout, 'O': OCutout, 'P': PCutout,
   'Q': QCutout, 'R': RCutout, 'S': SCutout, 'T': TCutout,
   'U': UCutout, 'V': VCutout, 'W': WCutout, 'X': XCutout,
-  'Y': YCutout, 'Z': ZCutout, '&': '/api/placeholder/240/240',
+  'Y': YCutout, 'Z': ZCutout, '&': AmpersandLights,
   '0': Number0, '1': Number1, '2': Number2, '3': Number3,
-  '4': Number4, '5': Number5, '6': '/api/placeholder/240/240', '7': '/api/placeholder/240/240',
-  '8': '/api/placeholder/240/240', '9': '/api/placeholder/240/240'
+  '4': Number4, '5': Number5, '6': Number6, '7': Number7,
+  '8': Number8, '9': Number9
 };
 
 interface LetterElementProps {
@@ -207,7 +213,7 @@ export const MarqueeVisualizer = () => {
       <div 
         className="marquee-background absolute inset-0 bg-cover bg-no-repeat bg-center"
         style={{ 
-          backgroundImage: "url('/api/placeholder/1920/1080')",
+          backgroundImage: `url(${BackgroundImage})`,
           backgroundPosition: 'center 50%'
         }}
       >
