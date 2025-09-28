@@ -349,7 +349,7 @@ export const MarqueeVisualizer = () => {
       {/* Letter Display */}
       <div 
         ref={letterDisplayRef}
-        className="letter-positioning absolute top-[580px] landscape:top-[420px] md:top-[380px] left-1/2 transform -translate-x-1/2 z-[9999] flex flex-col items-center justify-end pointer-events-none min-w-full overflow-visible"
+        className="letter-positioning absolute top-[720px] landscape:top-[520px] md:top-[380px] left-1/2 transform -translate-x-1/2 z-[9999] flex flex-col items-center justify-end pointer-events-none min-w-full overflow-visible"
       >
         {/* Topper Line */}
         {topperLetters.length > 0 && (
@@ -398,12 +398,6 @@ export const MarqueeVisualizer = () => {
         <p className="text-muted-foreground text-lg font-light mb-8">
           Available in 36" and 48" sizes with 15" toppers • Perfect for any celebration
         </p>
-        <Button 
-          onClick={openQuoteForm}
-          className="hidden md:block mx-auto bg-orange-500 hover:bg-orange-600 text-white font-semibold px-8 py-3 text-lg shadow-lg hover:shadow-xl transition-all duration-200 hover:-translate-y-0.5"
-        >
-          Get Quote in Under 5 min
-        </Button>
       </div>
     </div>
   );
