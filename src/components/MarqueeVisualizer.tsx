@@ -32,6 +32,12 @@ import WCutout from '@/assets/W_cutout.png';
 import XCutout from '@/assets/X_cutout.png';
 import YCutout from '@/assets/Y_cutout.png';
 import ZCutout from '@/assets/Z_cutout.png';
+import Number0 from '@/assets/0_lights_on.png';
+import Number1 from '@/assets/1_lights_on.png';
+import Number2 from '@/assets/2_lights_on.png';
+import Number3 from '@/assets/3_lights_on.png';
+import Number4 from '@/assets/4_lights_on.png';
+import Number5 from '@/assets/5_lights_on.png';
 
 // Letter images map
 const letterImages: Record<string, string> = {
@@ -42,8 +48,8 @@ const letterImages: Record<string, string> = {
   'Q': QCutout, 'R': RCutout, 'S': SCutout, 'T': TCutout,
   'U': UCutout, 'V': VCutout, 'W': WCutout, 'X': XCutout,
   'Y': YCutout, 'Z': ZCutout, '&': '/api/placeholder/240/240',
-  '0': '/api/placeholder/240/240', '1': '/api/placeholder/240/240', '2': '/api/placeholder/240/240', '3': '/api/placeholder/240/240',
-  '4': '/api/placeholder/240/240', '5': '/api/placeholder/240/240', '6': '/api/placeholder/240/240', '7': '/api/placeholder/240/240',
+  '0': Number0, '1': Number1, '2': Number2, '3': Number3,
+  '4': Number4, '5': Number5, '6': '/api/placeholder/240/240', '7': '/api/placeholder/240/240',
   '8': '/api/placeholder/240/240', '9': '/api/placeholder/240/240'
 };
 
