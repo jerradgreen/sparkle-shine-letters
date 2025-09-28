@@ -218,7 +218,7 @@ export const MarqueeVisualizer = () => {
         className="marquee-background absolute inset-0 bg-cover bg-no-repeat"
         style={{ 
           backgroundImage: `url(${BackgroundImage})`,
-          backgroundPosition: 'center 60%'
+          backgroundPosition: 'center 70%'
         }}
       >
         <div 
@@ -342,7 +342,7 @@ export const MarqueeVisualizer = () => {
         ref={letterDisplayRef}
         className="letter-positioning absolute left-1/2 transform -translate-x-1/2 z-[9999] flex flex-col items-center justify-end pointer-events-none min-w-full overflow-visible"
         style={{
-          top: window.innerWidth >= 768 ? '200px' : window.innerWidth > window.innerHeight ? '520px' : '720px'
+          top: window.innerWidth >= 768 ? '280px' : window.innerWidth > window.innerHeight ? '450px' : '720px'
         }}
       >
         {/* Topper Line */}
@@ -382,16 +382,6 @@ export const MarqueeVisualizer = () => {
             </p>
           )}
         </div>
-      </div>
-
-      {/* Info Section */}
-      <div className="info-section text-center mt-12 px-4">
-        <h3 className="text-3xl font-semibold tracking-wide mb-3" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.1)' }}>
-          Commercial Quality Marquee Letters, Numbers and Symbols
-        </h3>
-        <p className="text-muted-foreground text-lg font-light mb-8">
-          Available in 36" and 48" sizes with 15" toppers • Perfect for any celebration
-        </p>
       </div>
     </div>
   );
