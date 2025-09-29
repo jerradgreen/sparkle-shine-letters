@@ -22,7 +22,7 @@ export const PageTemplate = ({
   canonicalUrl,
   showNavigation = true,
   showFooter = true,
-  showChatbot = true
+  showChatbot = false
 }: PageTemplateProps) => {
   return (
     <HelmetProvider>

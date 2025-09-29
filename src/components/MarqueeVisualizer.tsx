@@ -169,7 +169,7 @@ export const MarqueeVisualizer = () => {
   const [isVisible, setIsVisible] = useState(false);
   
   const previewRef = useRef<HTMLDivElement>(null);
-  const letterDisplayRef = useRef<HTMLDivElement>(null);
+  const stageRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     setTimeout(() => setIsVisible(true), 300);
@@ -196,6 +196,98 @@ export const MarqueeVisualizer = () => {
   useEffect(() => {
     updateCurrentScale();
   }, [mainText, letterSize, updateCurrentScale]);
+
+  // Group-level fit function like Shopify
+  const fit = useCallback(() => {
+    if (!previewRef.current || !stageRef.current) return;
+
+    const isMobile = window.innerWidth <= 767;
+    const isPortrait = window.innerHeight > window.innerWidth;
+    
+    const cw = previewRef.current.clientWidth;
+    const ch = previewRef.current.clientHeight - 60;
+    
+    const mainLine = stageRef.current.querySelector('.main-line');
+    const topperLine = stageRef.current.querySelector('.topper-line');
+    
+    let contentWidth = 0;
+    let contentHeight = 0;
+    
+    if (mainLine) {
+      const rect = mainLine.getBoundingClientRect();
+      contentWidth = Math.max(contentWidth, mainLine.scrollWidth || rect.width);
+      contentHeight = Math.max(contentHeight, rect.height);
+    }
+    
+    if (topperLine) {
+      const rect = topperLine.getBoundingClientRect();
+      contentWidth = Math.max(contentWidth, topperLine.scrollWidth || rect.width);
+      contentHeight += rect.height + 40; // topper + gap
+    }
+    
+    const widthScale = contentWidth > 0 ? Math.min(1, cw / contentWidth) : 1;
+    const heightScale = contentHeight > 0 ? Math.min(1, ch / contentHeight) : 1;
+    
+    let finalScale;
+    if (isMobile && isPortrait) {
+      const safeWidth = Math.max(1, cw - 32);
+      finalScale = contentWidth > 0 ? Math.min(1, safeWidth / contentWidth) : 1;
+    } else if (isMobile && !isPortrait) {
+      const wideSafeWidth = Math.max(1, cw - 8);
+      finalScale = contentWidth > 0 ? Math.min(1, wideSafeWidth / contentWidth) : 1;
+    } else {
+      finalScale = Math.min(currentScale, widthScale, heightScale);
+    }
+    
+    const maxLift = 160;
+    const shiftUp = (1 - finalScale) * maxLift;
+    
+    stageRef.current.style.transform = `translateX(-50%) translateY(-${shiftUp}px) scale(${finalScale})`;
+  }, [currentScale]);
+
+  // Observers and event listeners
+  useEffect(() => {
+    const handleResize = () => setTimeout(fit, 100);
+    window.addEventListener('resize', handleResize, { passive: true });
+    
+    let resizeObserver: ResizeObserver;
+    let mutationObserver: MutationObserver;
+    
+    if (previewRef.current && 'ResizeObserver' in window) {
+      resizeObserver = new ResizeObserver(fit);
+      resizeObserver.observe(previewRef.current);
+    }
+    
+    if (stageRef.current && 'MutationObserver' in window) {
+      mutationObserver = new MutationObserver(() => requestAnimationFrame(fit));
+      mutationObserver.observe(stageRef.current, { 
+        childList: true, 
+        subtree: true, 
+        attributes: true 
+      });
+    }
+    
+    // Re-fit when images load
+    const handleImageLoad = () => fit();
+    const images = stageRef.current?.querySelectorAll('img');
+    images?.forEach(img => {
+      if (!img.complete) {
+        img.addEventListener('load', handleImageLoad, { once: true });
+      }
+    });
+    
+    // Initial fit
+    setTimeout(fit, 300);
+    
+    return () => {
+      window.removeEventListener('resize', handleResize);
+      resizeObserver?.disconnect();
+      mutationObserver?.disconnect();
+      images?.forEach(img => {
+        img.removeEventListener('load', handleImageLoad);
+      });
+    };
+  }, [fit]);
 
   const openQuoteForm = () => {
     const base = 'https://www.cognitoforms.com/VintageMarqueeLights/EventStyleLettersQuoteForm';
@@ -356,64 +448,62 @@ const bottomOffsetPx = isMobile ? 8 : 28;
       {/* Preview Container */}
       <div 
         ref={previewRef}
-        className={`preview-container relative z-0 w-full box-border transition-all duration-300 ${
+        className={`preview-container relative w-full box-border transition-all duration-300 overflow-visible ${
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`}
         style={{
           height: window.innerWidth >= 768 ? '35vh' : '30vh',
           maxHeight: window.innerWidth >= 768 ? '380px' : '320px',
-          minHeight: '200px',
-          overflow: 'hidden'
+          minHeight: '200px'
         }}
       >
-      </div>
-
-      {/* Letter Display - Anchored to bottom of container */}
-      <div 
-        ref={letterDisplayRef}
-        className="letter-positioning absolute left-1/2 transform -translate-x-1/2 z-0 flex flex-col items-center pointer-events-none min-w-full overflow-visible"
-style={{
-          bottom: `${bottomOffsetPx}px`
-        }}
-      >
-        {/* Topper Line */}
-        {topperLetters.length > 0 && (
-          <div className="topper-line letter-line relative z-30 flex justify-center flex-nowrap items-end overflow-visible px-8" style={{ marginBottom: `${topperGapPx}px` }}>
-            {topperLetters.map((char, index) => (
-              <LetterElement
-                key={`topper-${index}`}
-                character={char}
-                isTopper={true}
-                letterCount={topperLetters.length}
-                index={index}
-                letterSize="36"
-                currentScale={currentScale}
-                scaleOverride={computedTopperScale}
-              />
-            ))}
-          </div>
-        )}
-
-        {/* Main Line */}
-        <div className="main-line letter-line relative z-20 flex justify-center flex-nowrap items-end overflow-visible px-8">
-          {mainLetters.length > 0 ? (
-            mainLetters.map((char, index) => (
-              <LetterElement
-                key={`main-${index}`}
-                character={char}
-                isTopper={false}
-                letterCount={mainLetters.length}
-                index={index}
-                letterSize="36"
-                currentScale={currentScale}
-                scaleOverride={computedMainScale}
-              />
-            ))
-          ) : (
-            <p className="placeholder-text text-muted-foreground">
-              Enter text to see your marquee letters
-            </p>
+        {/* Unified Stage - Letters anchored inside preview */}
+        <div 
+          ref={stageRef}
+          className="absolute left-1/2 bottom-0 z-20 flex flex-col items-center pointer-events-none overflow-visible"
+          style={{
+            transformOrigin: 'bottom center'
+          }}
+        >
+          {/* Topper Line */}
+          {topperLetters.length > 0 && (
+            <div className="topper-line letter-line flex justify-center flex-nowrap items-end overflow-visible px-8" style={{ marginBottom: `${topperGapPx}px` }}>
+              {topperLetters.map((char, index) => (
+                <LetterElement
+                  key={`topper-${index}`}
+                  character={char}
+                  isTopper={true}
+                  letterCount={topperLetters.length}
+                  index={index}
+                  letterSize="36"
+                  currentScale={currentScale}
+                  scaleOverride={computedTopperScale}
+                />
+              ))}
+            </div>
           )}
+
+          {/* Main Line */}
+          <div className="main-line letter-line flex justify-center flex-nowrap items-end overflow-visible px-8">
+            {mainLetters.length > 0 ? (
+              mainLetters.map((char, index) => (
+                <LetterElement
+                  key={`main-${index}`}
+                  character={char}
+                  isTopper={false}
+                  letterCount={mainLetters.length}
+                  index={index}
+                  letterSize="36"
+                  currentScale={currentScale}
+                  scaleOverride={computedMainScale}
+                />
+              ))
+            ) : (
+              <p className="placeholder-text text-muted-foreground">
+                Enter text to see your marquee letters
+              </p>
+            )}
+          </div>
         </div>
       </div>
     </div>
