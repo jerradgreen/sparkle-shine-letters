@@ -230,13 +230,14 @@ const mainLetters = filterValidText(mainText);
 const topperLetters = getTopperText();
 const computedMainScale = getScale(false, mainLetters.length, letterSize, currentScale);
 const isMobile = window.innerWidth <= 767;
-// Use the enhanced scaling for topper that gets smaller faster
-const computedTopperScale = getScale(true, mainLetters.length, letterSize, currentScale);
 
-// Calculate margin that keeps topper attached to main letters
-// The margin should scale with the main text scale to maintain proportional positioning
-const baseMarginPx = isMobile ? 4 : 8;
-const topperMarginPx = Math.round(baseMarginPx * computedMainScale);
+// Topper should be proportionally smaller and scale down MORE aggressively than main text
+const TOPPER_BASE_RATIO = 0.42; // Basic size ratio (topper is ~42% of main letter height)
+const EXTRA_SCALE_FACTOR = Math.max(0.7, 1 - (mainLetters.length * 0.04)); // Gets smaller faster as text gets longer
+const computedTopperScale = computedMainScale * TOPPER_BASE_RATIO * EXTRA_SCALE_FACTOR;
+
+// Keep topper close to main letters with fixed small gap
+const topperMarginPx = isMobile ? 2 : 4;
 
   return (
     <div className="marquee-visualizer relative overflow-visible bg-background text-foreground">
