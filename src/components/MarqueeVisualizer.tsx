@@ -231,15 +231,12 @@ const topperLetters = getTopperText();
 const computedMainScale = getScale(false, mainLetters.length, letterSize, currentScale);
 const isMobile = window.innerWidth <= 767;
 
-// Topper should scale proportionally with main text, just smaller
-const TOPPER_BASE_RATIO = 0.42; // Basic size ratio (topper is ~42% of main letter height)
-// Apply same scaling factor as main text but with slight additional reduction
-const mainScalingFactor = computedMainScale / (isMobile ? 0.38 : 0.9); // How much main text has scaled from base
-const topperExtraReduction = Math.max(0.85, 1 - (mainLetters.length * 0.015)); // Gentle additional scaling
-const computedTopperScale = (isMobile ? 0.38 : 0.9) * TOPPER_BASE_RATIO * mainScalingFactor * topperExtraReduction;
+// Simple locked scaling: topper is exactly 42% of main scale
+const TOPPER_RATIO = 0.42;
+const computedTopperScale = computedMainScale * TOPPER_RATIO;
 
-// Keep margin proportional to main scale to maintain relative positioning
-const topperMarginPx = Math.round((isMobile ? 2 : 4) * mainScalingFactor);
+// Fixed small gap regardless of scale
+const topperGapPx = isMobile ? 4 : 8;
 
   return (
     <div className="marquee-visualizer relative overflow-visible bg-background text-foreground">
@@ -367,17 +364,17 @@ const topperMarginPx = Math.round((isMobile ? 2 : 4) * mainScalingFactor);
       >
       </div>
 
-      {/* Letter Display */}
+      {/* Letter Display - Anchored to bottom of container */}
       <div 
         ref={letterDisplayRef}
-        className="letter-positioning absolute left-1/2 transform -translate-x-1/2 z-0 flex flex-col items-center justify-end pointer-events-none min-w-full overflow-visible"
-style={{
-          top: window.innerWidth >= 768 ? '360px' : window.innerWidth > window.innerHeight ? '300px' : '740px'
+        className="letter-positioning absolute left-1/2 transform -translate-x-1/2 z-0 flex flex-col items-center pointer-events-none min-w-full overflow-visible"
+        style={{
+          bottom: '0px'
         }}
       >
         {/* Topper Line */}
         {topperLetters.length > 0 && (
-          <div className="topper-line letter-line relative z-30 flex justify-center flex-nowrap items-end overflow-visible px-8" style={{ marginBottom: `${topperMarginPx}px` }}>
+          <div className="topper-line letter-line relative z-30 flex justify-center flex-nowrap items-end overflow-visible px-8" style={{ marginBottom: `${topperGapPx}px` }}>
             {topperLetters.map((char, index) => (
               <LetterElement
                 key={`topper-${index}`}
