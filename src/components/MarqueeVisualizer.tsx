@@ -366,60 +366,12 @@ const bottomOffsetPx = isMobile ? 8 : 28;
           overflow: 'hidden'
         }}
       >
-        {/* Letter Display - Anchored to bottom of preview container */}
-        <div 
-          ref={letterDisplayRef}
-          className="letter-positioning absolute left-1/2 transform -translate-x-1/2 z-0 flex flex-col items-center pointer-events-none min-w-full overflow-visible"
-          style={{
-            bottom: `${bottomOffsetPx}px`
-          }}
-        >
-          {/* Topper Line */}
-          {topperLetters.length > 0 && (
-            <div className="topper-line letter-line relative z-30 flex justify-center flex-nowrap items-end overflow-visible px-8" style={{ marginBottom: `${topperGapPx}px` }}>
-              {topperLetters.map((char, index) => (
-                <LetterElement
-                  key={`topper-${index}`}
-                  character={char}
-                  isTopper={true}
-                  letterCount={topperLetters.length}
-                  index={index}
-                  letterSize="36"
-                  currentScale={currentScale}
-                  scaleOverride={computedTopperScale}
-                />
-              ))}
-            </div>
-          )}
-
-          {/* Main Line */}
-          <div className="main-line letter-line relative z-20 flex justify-center flex-nowrap items-end overflow-visible px-8">
-            {mainLetters.length > 0 ? (
-              mainLetters.map((char, index) => (
-                <LetterElement
-                  key={`main-${index}`}
-                  character={char}
-                  isTopper={false}
-                  letterCount={mainLetters.length}
-                  index={index}
-                  letterSize="36"
-                  currentScale={currentScale}
-                  scaleOverride={computedMainScale}
-                />
-              ))
-            ) : (
-              <p className="placeholder-text text-muted-foreground">
-                Enter text to see your marquee letters
-              </p>
-            )}
-          </div>
-        </div>
       </div>
 
       {/* Letter Display - Anchored to bottom of container */}
       <div 
         ref={letterDisplayRef}
-        className="hidden"
+        className="letter-positioning absolute left-1/2 transform -translate-x-1/2 z-0 flex flex-col items-center pointer-events-none min-w-full overflow-visible"
 style={{
           bottom: `${bottomOffsetPx}px`
         }}
