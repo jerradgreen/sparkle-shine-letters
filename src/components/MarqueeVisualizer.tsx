@@ -235,9 +235,11 @@ const isMobile = window.innerWidth <= 767;
 const TOPPER_RATIO = 0.42;
 const computedTopperScale = computedMainScale * TOPPER_RATIO;
 
-// Gap proportional to main letter height to keep visual distance constant
+// Gap proportional to main letter height with extra reduction for long text
 const mainLetterPx = 240 * computedMainScale;
-const topperGapPx = Math.max(2, Math.min(12, Math.round(mainLetterPx * (isMobile ? 0.02 : 0.03))));
+const lengthFactor = 1 / (1 + Math.max(0, mainLetters.length - 1) * (isMobile ? 0.05 : 0.08));
+const baseGapRatio = isMobile ? 0.012 : 0.008; // shrink faster as letters get smaller
+const topperGapPx = Math.max(1, Math.round(Math.min(mainLetterPx * baseGapRatio * lengthFactor, 10)));
 
 // Slight lift so the stack doesn't sit too low after bottom anchoring
 const bottomOffsetPx = isMobile ? 8 : 28;
