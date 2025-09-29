@@ -907,7 +907,7 @@ const RentalInventory = () => {
                 <Clock className="w-12 h-12 text-accent mr-4" />
                 <h3 className="text-3xl font-bold text-card-foreground">3–4 Months</h3>
               </div>
-              <p className="text-xl text-muted-foreground">Estimated turnaround from order finalization</p>
+              <p className="text-xl text-muted-foreground">From order to Delivery, with express options available</p>
             </CardContent>
           </Card>
 
