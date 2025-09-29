@@ -336,12 +336,12 @@ export const standUpSignsConfig: TemplateConfig = {
     title: "Event Gallery",
     subtitle: "See our marquee letters in action at real events",
     images: [
-      { src: "/src/assets/1969.jpeg", alt: "1969 marquee letters at elegant event" },
-      { src: "/src/assets/elev8.jpeg", alt: "ELEV8 marquee letters corporate event" },
-      { src: "/src/assets/marry-me.jpg", alt: "MARRY ME marquee proposal setup" },
-      { src: "/src/assets/drewia-hill.jpeg", alt: "DREWIA HILL marquee letters wedding celebration" },
-      { src: "/src/assets/setup-1.jpeg", alt: "Professional event setup with marquee letters" },
-      { src: "/src/assets/setup-2.jpg", alt: "Corporate event marquee letter display" }
+      { src: "src/assets/1969.jpeg", alt: "1969 marquee letters at elegant event" },
+      { src: "src/assets/elev8.jpeg", alt: "ELEV8 marquee letters corporate event" },
+      { src: "src/assets/marry-me.jpg", alt: "MARRY ME marquee proposal setup" },
+      { src: "src/assets/drewia-hill.jpeg", alt: "DREWIA HILL marquee letters wedding celebration" },
+      { src: "src/assets/setup-1.jpeg", alt: "Professional event setup with marquee letters" },
+      { src: "src/assets/setup-2.jpg", alt: "Corporate event marquee letter display" }
     ]
   },
   
