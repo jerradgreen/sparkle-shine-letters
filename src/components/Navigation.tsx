@@ -24,6 +24,10 @@ const Navigation = () => {
               36/48" Stand-Up Letters
             </Link>
             
+            <a href="https://www.vintagemarqueelights.com" className="text-foreground hover:text-primary font-medium">
+              Custom Signs
+            </a>
+            
             <a href="https://vintagemarqueelights.com/pages/custom-sign-request-form" className="text-foreground hover:text-primary font-medium">
               Custom Request Form
             </a>
@@ -68,6 +72,14 @@ const Navigation = () => {
               >
                 36/48" Stand-Up Letters
               </Link>
+              
+              <a
+                href="https://www.vintagemarqueelights.com"
+                className="text-foreground hover:text-primary font-medium py-2"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Custom Signs
+              </a>
               
               <a
                 href="https://vintagemarqueelights.com/pages/custom-sign-request-form"
