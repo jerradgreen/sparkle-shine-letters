@@ -231,13 +231,15 @@ const topperLetters = getTopperText();
 const computedMainScale = getScale(false, mainLetters.length, letterSize, currentScale);
 const isMobile = window.innerWidth <= 767;
 
-// Topper should be proportionally smaller and scale down MORE aggressively than main text
+// Topper should scale proportionally with main text, just smaller
 const TOPPER_BASE_RATIO = 0.42; // Basic size ratio (topper is ~42% of main letter height)
-const EXTRA_SCALE_FACTOR = Math.max(0.7, 1 - (mainLetters.length * 0.04)); // Gets smaller faster as text gets longer
-const computedTopperScale = computedMainScale * TOPPER_BASE_RATIO * EXTRA_SCALE_FACTOR;
+// Apply same scaling factor as main text but with slight additional reduction
+const mainScalingFactor = computedMainScale / (isMobile ? 0.38 : 0.9); // How much main text has scaled from base
+const topperExtraReduction = Math.max(0.85, 1 - (mainLetters.length * 0.015)); // Gentle additional scaling
+const computedTopperScale = (isMobile ? 0.38 : 0.9) * TOPPER_BASE_RATIO * mainScalingFactor * topperExtraReduction;
 
-// Keep topper close to main letters with fixed small gap
-const topperMarginPx = isMobile ? 2 : 4;
+// Keep margin proportional to main scale to maintain relative positioning
+const topperMarginPx = Math.round((isMobile ? 2 : 4) * mainScalingFactor);
 
   return (
     <div className="marquee-visualizer relative overflow-visible bg-background text-foreground">
