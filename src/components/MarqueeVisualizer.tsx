@@ -231,12 +231,16 @@ const topperLetters = getTopperText();
 const computedMainScale = getScale(false, mainLetters.length, letterSize, currentScale);
 const isMobile = window.innerWidth <= 767;
 
-// Simple locked scaling: topper is exactly 42% of main scale
+// Locked topper scale: exact ratio of main
 const TOPPER_RATIO = 0.42;
 const computedTopperScale = computedMainScale * TOPPER_RATIO;
 
-// Fixed small gap regardless of scale
-const topperGapPx = isMobile ? 4 : 8;
+// Gap proportional to main letter height to keep visual distance constant
+const mainLetterPx = 240 * computedMainScale;
+const topperGapPx = Math.max(2, Math.min(12, Math.round(mainLetterPx * (isMobile ? 0.02 : 0.03))));
+
+// Slight lift so the stack doesn't sit too low after bottom anchoring
+const bottomOffsetPx = isMobile ? 8 : 28;
 
   return (
     <div className="marquee-visualizer relative overflow-visible bg-background text-foreground">
@@ -368,8 +372,8 @@ const topperGapPx = isMobile ? 4 : 8;
       <div 
         ref={letterDisplayRef}
         className="letter-positioning absolute left-1/2 transform -translate-x-1/2 z-0 flex flex-col items-center pointer-events-none min-w-full overflow-visible"
-        style={{
-          bottom: '0px'
+style={{
+          bottom: `${bottomOffsetPx}px`
         }}
       >
         {/* Topper Line */}
@@ -380,7 +384,7 @@ const topperGapPx = isMobile ? 4 : 8;
                 key={`topper-${index}`}
                 character={char}
                 isTopper={true}
-                letterCount={mainLetters.length}
+                letterCount={topperLetters.length}
                 index={index}
                 letterSize="36"
                 currentScale={currentScale}
