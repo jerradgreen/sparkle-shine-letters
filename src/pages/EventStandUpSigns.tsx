@@ -52,21 +52,6 @@ const EventStandUpSigns = () => {
       <TestimonialSection config={standUpSignsConfig.testimonials} />
       <MarqueeVisualizer />
       
-      {/* Get Quote Section replacing pricing packages */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            {standUpSignsConfig.pricing.title}
-          </h2>
-          <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-            {standUpSignsConfig.pricing.subtitle}
-          </p>
-          <GetQuoteButton 
-            className="text-lg px-8 py-4"
-            children="Get Your Custom Quote"
-          />
-        </div>
-      </section>
 
       <GallerySection config={standUpSignsConfig.gallery} />
       <FAQSection config={standUpSignsConfig.faq} />
