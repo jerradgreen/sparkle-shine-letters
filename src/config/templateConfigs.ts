@@ -349,16 +349,8 @@ export const standUpSignsConfig: TemplateConfig = {
     title: "Frequently Asked Questions",
     items: [
       {
-        question: "Can I powder-coat the letters in a custom color?",
-        answer: "Yes — we can powder coat in just about any color. That said, white is by far the most versatile for weddings, corporate events, proms, and everything in between."
-      },
-      {
-        question: "Can I customize or change a package to fit my needs?",
-        answer: "Absolutely. Our standard packages are based on years of rental data, but you can select the exact mix of letters, numbers, symbols, toppers, or lighting options that match your niche or market."
-      },
-      {
         question: "What size are the letters? And do you offer larger ones?",
-        answer: "All of our rental packages include 36\" tall letters, which are the perfect mix of visibility and practicality. We do offer 48\" letters as well — they look amazing but require more space, effort, and cost to handle."
+        answer: "The event style letters are 36\" or 48\", but 36\" letters are recommended for quicker ship time and ease of storage, transport and setup. We can do larger letters if needed, just reach out for that."
       },
       {
         question: "What are toppers?",

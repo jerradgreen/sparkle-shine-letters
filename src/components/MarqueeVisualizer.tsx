@@ -143,11 +143,11 @@ const getScale = (isTopper: boolean, letterCount: number, letterSize: string, cu
     const mainFloor = isMobile ? 0.32 : 0.5;
     const finalMainScale = Math.max(mainBase * dynamicFactor, mainFloor);
 
-    // Topper follows main text exactly, with slight visual reduction
-    const topperAdjust = isMobile ? 0.85 : 0.75;
+    // Topper scales at a higher rate - gets smaller faster when main text scales down
+    const topperAdjust = isMobile ? 0.65 : 0.55; // Reduced from 0.85/0.75 to scale smaller faster
     const topperScale = finalMainScale * topperAdjust;
 
-    return Math.max(topperScale, isMobile ? 0.08 : 0.10);
+    return Math.max(topperScale, isMobile ? 0.06 : 0.08);
   }
 };
 
@@ -230,14 +230,13 @@ const mainLetters = filterValidText(mainText);
 const topperLetters = getTopperText();
 const computedMainScale = getScale(false, mainLetters.length, letterSize, currentScale);
 const isMobile = window.innerWidth <= 767;
-// Keep topper proportional to 15"/36" ratio - approximately 0.42
-const TOPPER_RATIO = 0.42;
-const computedTopperScale = computedMainScale * TOPPER_RATIO;
+// Use the enhanced scaling for topper that gets smaller faster
+const computedTopperScale = getScale(true, mainLetters.length, letterSize, currentScale);
 
-// Calculate overlap - topper should sit ON TOP of main letters, not overlap
-const topperHeightPx = 240 * computedTopperScale;
-const TOPPER_MARGIN_RATIO = 0.1; // small gap between topper and main letters
-const topperMarginPx = Math.round(topperHeightPx * TOPPER_MARGIN_RATIO);
+// Calculate margin that keeps topper attached to main letters
+// The margin should scale with the main text scale to maintain proportional positioning
+const baseMarginPx = isMobile ? 4 : 8;
+const topperMarginPx = Math.round(baseMarginPx * computedMainScale);
 
   return (
     <div className="marquee-visualizer relative overflow-visible bg-background text-foreground">

@@ -45,25 +45,14 @@ export const FAQSection = ({ config }: FAQSectionProps) => {
           ))}
         </Accordion>
         
-        {/* Contact CTA */}
-        <div className="mt-16 text-center space-y-4">
-          <p className="text-lg text-muted-foreground">
-            Still have questions? We're here to help!
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
-              href="tel:+1234567890" 
-              className="inline-flex items-center justify-center px-6 py-3 border border-primary text-primary hover:bg-primary hover:text-primary-foreground rounded-md transition-colors duration-300"
-            >
-              Call Us Now
-            </a>
-            <a 
-              href="mailto:info@business.com" 
-              className="inline-flex items-center justify-center px-6 py-3 bg-primary text-primary-foreground hover:bg-primary/90 rounded-md transition-colors duration-300"
-            >
-              Send Email
-            </a>
-          </div>
+        {/* Get Quote CTA */}
+        <div className="mt-16 text-center">
+          <button 
+            onClick={() => window.open('https://www.cognitoforms.com/VintageMarqueeLights/EventStyleLettersQuoteForm', '_blank')}
+            className="inline-flex items-center justify-center px-8 py-4 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-md transition-colors duration-300 text-lg"
+          >
+            Get Quote
+          </button>
         </div>
       </div>
     </section>
