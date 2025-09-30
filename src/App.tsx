@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Index from "./pages/Index";
 import RentalInventory from "./pages/RentalInventory";
 import EventStandUpSigns from "./pages/EventStandUpSigns";
+import WallHangingMarqueeSigns from "./pages/WallHangingMarqueeSigns";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -20,6 +21,7 @@ const App = () => (
           <Route path="/" element={<Navigate to="/rental-inventory" replace />} />
           <Route path="/rental-inventory" element={<RentalInventory />} />
           <Route path="/event-standup-signs" element={<EventStandUpSigns />} />
+          <Route path="/wall-hanging-signs" element={<WallHangingMarqueeSigns />} />
           <Route path="/dev-homepage" element={<Index />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

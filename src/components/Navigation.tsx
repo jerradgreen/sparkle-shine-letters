@@ -24,6 +24,10 @@ const Navigation = () => {
               36/48" Stand-Up Letters
             </Link>
             
+            <Link to="/wall-hanging-signs" className="text-foreground hover:text-primary font-medium">
+              Wall-Hanging Signs
+            </Link>
+            
             <a href="https://www.vintagemarqueelights.com" className="text-foreground hover:text-primary font-medium">
               Custom Signs
             </a>
@@ -71,6 +75,14 @@ const Navigation = () => {
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 36/48" Stand-Up Letters
+              </Link>
+              
+              <Link
+                to="/wall-hanging-signs"
+                className="text-foreground hover:text-primary font-medium py-2"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Wall-Hanging Signs
               </Link>
               
               <a

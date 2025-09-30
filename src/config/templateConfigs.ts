@@ -146,131 +146,170 @@ export const layeredSignsConfig: TemplateConfig = {
 
 // Wall-Hanging Marquee Signs Template
 export const wallHangingConfig: TemplateConfig = {
-  pageTitle: "Wall-Hanging Marquee Sign Rental - Space-Saving Event Signage Business",
-  metaDescription: "Start your wall-hanging marquee sign business. Space-efficient illuminated signs perfect for venues with limited floor space. Easy installation, maximum impact.",
-  keywords: ["wall hanging signs", "marquee signs", "space saving signs", "wall mounted letters", "venue signage"],
+  pageTitle: "Custom Wall-Hanging Marquee Signs - Vintage Painted Steel Letters",
+  metaDescription: "Individual marquee letters designed to hang on walls like artwork. Painted steel construction with warm G30 bulbs, perfect for shops, studios, and home décor.",
+  keywords: ["wall hanging marquee", "painted steel letters", "vintage marquee signs", "wall mounted lights", "retro signage", "industrial décor"],
   
   hero: {
-    headline: "Wall-Hanging Marquee Sign Business",
-    subheadline: "Space-saving illuminated signs that maximize impact in any venue. Perfect for walls, backdrops, and tight spaces where floor signs won't work.",
-    ctaText: "Get Wall Sign Package",
+    headline: "Custom Wall-Hanging Marquee Signs",
+    subheadline: "Individual painted steel letters that hang like artwork. Classic warm glow with G30 bulbs for shops, studios, and homes.",
+    ctaText: "Get Your Quote",
     ctaAction: "pricing",
     heroImage: "/src/assets/wall-hanging.jpg",
-    heroImageAlt: "Elegant wall-hanging marquee letters mounted on venue wall",
-    layout: "image-left"
+    heroImageAlt: "Vintage wall-hanging marquee letters on rustic wood wall",
+    layout: "image-right"
   },
   
   features: {
-    title: "Why Wall-Hanging Signs Are Game-Changers",
-    subtitle: "Solve the biggest venue challenge - limited floor space",
+    title: "Authentic Marquee Craftsmanship",
+    subtitle: "Built to last, designed to impress",
     items: [
       {
-        title: "Space Efficiency",
-        description: "Perfect for small venues, crowded dance floors, and spaces where floor signs create obstacles",
-        icon: "📐"
+        title: "Painted Steel Construction",
+        description: "Solid steel hand-painted for that rustic, retro, vintage finish. Develops authentic patina outdoors over time.",
+        icon: "🔨"
       },
       {
-        title: "Easy Installation",
-        description: "Quick-mount system installs on any wall surface in minutes. No complex setup or floor space needed",
-        icon: "🔧"
+        title: "Classic Warm Glow",
+        description: "Fitted with G30 globe bulbs—not LED—for that warm, inviting light that works beautifully day or night.",
+        icon: "💡"
       },
       {
-        title: "Versatile Mounting",
-        description: "Works on walls, backdrops, easels, or custom frames. Adaptable to any venue layout",
-        icon: "🎯"
+        title: "Simple Wall Mounting",
+        description: "Hangs easily on any wall like a framed picture. No floor stands or complex installation required.",
+        icon: "🖼️"
+      },
+      {
+        title: "Custom Letter Combinations",
+        description: "Order any combination of letters, numbers, or symbols. Spell out names, phrases, or simple words like BAR, LOVE, or OPEN.",
+        icon: "✍️"
+      },
+      {
+        title: "Indoor or Outdoor Use",
+        description: "Perfect indoors, but also great outdoors where they naturally weather and develop unique character.",
+        icon: "🏠"
+      },
+      {
+        title: "Optional Upgrades",
+        description: "Powder coating for modern weather resistance. Mounting bars and custom brackets for secure installation.",
+        icon: "⚙️"
       }
     ]
   },
   
   testimonials: {
-    title: "Wall-Hanging Success Stories",
+    title: "What Our Customers Say",
     items: [
       {
-        name: "Amanda Foster",
-        role: "Wedding Planner",
-        content: "These wall signs saved my business! So many venues have no floor space. Now I can do any location!",
+        name: "Sarah Mitchell",
+        role: "Coffee Shop Owner",
+        content: "The wall-hanging letters transformed our café! The warm glow creates the perfect ambiance and customers love taking photos with them.",
         rating: 5,
         image: "/src/assets/testimonial-sarah.jpg"
       },
       {
-        name: "Carlos Rivera",
-        role: "Event Rental Owner",
-        content: "Wall-hanging signs opened up 70% more venues for me. Bookings increased dramatically!",
+        name: "David Chen",
+        role: "Wedding Planner",
+        content: "These signs are perfect for photo backdrops! The vintage aesthetic and warm lighting photograph beautifully. Couples are obsessed!",
         rating: 5,
-        image: "/src/assets/testimonial-mike.jpg"
+        image: "/src/assets/testimonial-david-brick.jpg"
+      },
+      {
+        name: "LaKesha Williams",
+        role: "Boutique Owner",
+        content: "Love how they develop character over time! We have ours on our outdoor patio and the natural patina makes them look even better.",
+        rating: 5,
+        image: "/src/assets/testimonial-lakesha.jpg"
       }
     ]
   },
   
   pricing: {
-    title: "Wall-Hanging Sign Packages",
-    subtitle: "Space-saving signage business solutions",
+    title: "Custom Pricing",
+    subtitle: "Every sign is custom-made to your specifications",
     packages: [
       {
-        name: "Wall Starter",
-        description: "Enter the wall-mounting market",
-        priceRange: "$2,800 - $5,500",
-        features: ["6 wall-mount letters", "Mounting hardware", "Installation guide", "Basic LED kit", "Email support"],
-        ctaText: "Start Wall Business"
-      },
-      {
-        name: "Wall Professional",
-        description: "Complete wall signage business",
-        priceRange: "$9,500 - $17,000",
-        features: ["15 wall-mount sets", "Professional hardware", "Live training", "Marketing materials", "Territory rights"],
-        ctaText: "Go Wall Pro"
-      },
-      {
-        name: "Wall Enterprise",
-        description: "Dominate the wall signage market",
-        priceRange: "$22,000 - $38,000",
-        features: ["30 wall-mount sets", "Premium mounting", "Personal training", "Marketing package", "Multiple territories"],
-        ctaText: "Wall Domination"
+        name: "Get Your Quote",
+        description: "Wall-hanging marquee signs are custom-made based on your specific letter combination, size preferences, and finish options. Contact us for a personalized quote.",
+        priceRange: "Custom Pricing",
+        features: [
+          "Choose any letters, numbers, or symbols",
+          "Hand-painted steel construction",
+          "Warm G30 globe bulbs included",
+          "Simple wall mounting hardware",
+          "Indoor/outdoor rated",
+          "Optional powder coating available",
+          "Custom mounting brackets upon request"
+        ],
+        ctaText: "Request Custom Quote"
       }
     ]
   },
   
   gallery: {
     title: "Wall-Hanging Sign Gallery",
-    subtitle: "See how wall signs solve venue challenges",
+    subtitle: "See the vintage charm and warm glow in action",
     images: [
-      { src: "/src/assets/carousel-4.jpg", alt: "Wall-mounted marquee letters at wedding" },
-      { src: "/src/assets/carousel-5.jpg", alt: "Corporate wall signage installation" },
-      { src: "/src/assets/carousel-6.jpg", alt: "Backdrop wall hanging signs" }
+      { src: "/src/assets/wall-hanging.jpg", alt: "Rustic wall-hanging marquee letters on wood wall", caption: "Classic vintage finish on reclaimed wood" },
+      { src: "/src/assets/carousel-1.jpg", alt: "Wall-mounted marquee sign at event", caption: "Perfect for photo backdrops" },
+      { src: "/src/assets/carousel-2.jpg", alt: "Retail shop wall signage", caption: "Boutique storefront installation" },
+      { src: "/src/assets/carousel-4.jpg", alt: "Wedding wall décor", caption: "Wedding reception signage" },
+      { src: "/src/assets/carousel-5.jpg", alt: "Bar wall letters", caption: "Outdoor bar patio décor" },
+      { src: "/src/assets/carousel-6.jpg", alt: "Studio wall marquee", caption: "Home studio statement piece" }
     ]
   },
   
   faq: {
-    title: "Wall-Hanging Signs FAQ",
+    title: "Frequently Asked Questions",
     items: [
       {
-        question: "Will they damage venue walls?",
-        answer: "Our mounting system uses removable hardware that leaves no permanent marks. Venue-friendly and damage-free."
+        question: "Will the signs damage my walls?",
+        answer: "No! These letters hang just like a framed picture using standard wall mounting hardware. They're designed for easy installation and removal without damaging surfaces."
       },
       {
-        question: "How much weight can walls support?",
-        answer: "Our lightweight design works on any standard wall. Each letter weighs less than 5 pounds when mounted."
+        question: "How heavy are the letters?",
+        answer: "Each letter is made from painted steel but remains lightweight enough for standard wall mounting—typically 3-8 pounds depending on size. They work on any standard drywall with appropriate anchors."
       },
       {
-        question: "What if there's no wall space?",
-        answer: "We include backdrop frame attachments and easel mounts for venues without suitable wall space."
+        question: "Can I use these outdoors?",
+        answer: "Absolutely! While they're perfect indoors, these signs also work great outdoors. The painted steel will naturally develop a beautiful patina over time, adding to their vintage charm. For enhanced weather resistance, consider our powder coating upgrade."
+      },
+      {
+        question: "What kind of bulbs do they use?",
+        answer: "We use classic G30 globe bulbs—not LED—for that authentic warm glow that defines vintage marquee lighting. Replacement bulbs are readily available at most hardware stores."
+      },
+      {
+        question: "Can I order any letter combination?",
+        answer: "Yes! Order any combination of letters (A-Z), numbers (0-9), and symbols (&, #, @, etc.) to create your perfect custom sign. Popular choices include business names, single words like LOVE or BAR, and personalized phrases."
+      },
+      {
+        question: "What are the sizing options?",
+        answer: "We offer multiple sizes to fit your space and budget. Contact us with your specific needs and we'll provide dimensions and pricing for your custom configuration."
+      },
+      {
+        question: "Do you offer installation services?",
+        answer: "While the signs are designed for easy DIY installation, we can recommend professional installers in your area or provide guidance for larger installations."
+      },
+      {
+        question: "What's the difference between painted and powder-coated finishes?",
+        answer: "Our standard painted finish offers authentic vintage charm and will naturally patina outdoors. Powder coating provides a more modern, uniform look with enhanced weather resistance—perfect if you want that vintage aesthetic without the weathering effect."
       }
     ]
   },
   
   business: {
-    name: "Wall-Hanging Marquee Signs",
-    description: "Space-saving wall-mounted sign rental business",
-    type: "LocalBusiness",
-    industry: "event rental"
+    name: "Custom Wall-Hanging Marquee Signs",
+    description: "Individual painted steel marquee letters with warm G30 bulbs, designed for wall mounting in retail shops, studios, homes, and outdoor spaces.",
+    type: "Product",
+    industry: "home décor"
   },
   
   theme: {
-    primaryColor: "#EC4899",
-    secondaryColor: "#8B5CF6",
-    accentColor: "#06B6D4",
-    gradientFrom: "#EC4899",
-    gradientTo: "#8B5CF6"
+    primaryColor: "#D97706",
+    secondaryColor: "#92400E",
+    accentColor: "#F59E0B",
+    gradientFrom: "#D97706",
+    gradientTo: "#92400E"
   }
 };
 
