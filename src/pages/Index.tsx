@@ -136,13 +136,13 @@ const Index = () => {
       <ShopifyHeader />
 
       {/* Main Content */}
-      <div className="container mx-auto px-6 py-8">
+      <div className="container mx-auto px-6 py-4">
         {/* Hero Section */}
-        <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold mb-3 text-foreground">
+        <div className="text-center mb-6">
+          <h1 className="text-3xl md:text-4xl font-bold mb-2 text-foreground">
             What Style Are You Looking For?
           </h1>
-          <p className="text-xl text-muted-foreground mb-2 max-w-3xl mx-auto">
+          <p className="text-lg text-muted-foreground mb-1 max-w-3xl mx-auto">
             Click on the style that best matches your vision
           </p>
           <p className="text-sm text-muted-foreground max-w-3xl mx-auto">
@@ -151,8 +151,8 @@ const Index = () => {
         </div>
 
         {/* Visual Selection Grid */}
-        <div className="mb-16">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        <div className="mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
             {signStyles.map((style, index) => {
               const isNotSure = style.title.includes("Not Sure");
               
@@ -168,7 +168,7 @@ const Index = () => {
                           <img
                             src={style.image}
                             alt={style.title}
-                            className="w-full h-72 object-cover group-hover:scale-110 transition-transform duration-500"
+                            className="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-500"
                           />
                           <div className={`absolute inset-0 transition-all duration-300 ${
                             isNotSure 
@@ -195,7 +195,7 @@ const Index = () => {
                           <img
                             src={style.image}
                             alt={style.title}
-                            className="w-full h-72 object-cover group-hover:scale-110 transition-transform duration-500"
+                            className="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-500"
                           />
                           <div className={`absolute inset-0 transition-all duration-300 ${
                             isNotSure 
