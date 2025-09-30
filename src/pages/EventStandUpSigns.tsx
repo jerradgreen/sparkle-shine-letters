@@ -23,25 +23,6 @@ const EventStandUpSigns = () => {
       <ShopifyHeader />
       <MarqueeHeroSection />
       
-      {/* Hero Action Button */}
-      <section className="py-8 bg-white">
-        <div className="container mx-auto px-4 text-center">
-          <div className="flex justify-center max-w-4xl mx-auto">
-          <Button 
-            size="lg" 
-            className="text-sm md:text-lg px-6 md:px-10 py-4 md:py-6 bg-accent text-accent-foreground hover:bg-accent/90"
-            onClick={() => {
-                const visualizer = document.querySelector('.marquee-visualizer');
-                if (visualizer) {
-                  visualizer.scrollIntoView({ behavior: 'smooth' });
-                }
-              }}
-            >
-              Pick Your Letters – Preview Your Setup
-            </Button>
-          </div>
-        </div>
-      </section>
 
       <HighlightsSection />
       <TestimonialSection config={standUpSignsConfig.testimonials} />
