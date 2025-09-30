@@ -81,7 +81,7 @@ const RentalInventory = () => {
                     <Star key={i} className="w-4 h-4 text-yellow-500 fill-yellow-500" />
                   ))}
                 </div>
-                <blockquote className="text-sm text-muted-foreground italic mb-1 leading-relaxed">
+                <blockquote className="text-sm text-muted-foreground italic mb-0.5 leading-relaxed">
                   "The quality is exactly what we needed for our rental business. Best investment we've made for expanding our event services."
                 </blockquote>
                 <cite className="text-sm text-foreground font-semibold">— Farrah W., Tennessee</cite>
