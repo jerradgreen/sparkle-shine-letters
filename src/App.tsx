@@ -8,6 +8,8 @@ import Index from "./pages/Index";
 import RentalInventory from "./pages/RentalInventory";
 import EventStandUpSigns from "./pages/EventStandUpSigns";
 import WallHangingMarqueeSigns from "./pages/WallHangingMarqueeSigns";
+import LayeredSigns from "./pages/LayeredSigns";
+import FoodTruckSigns from "./pages/FoodTruckSigns";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -20,11 +22,12 @@ const App = () => (
         <Sonner />
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<Navigate to="/rental-inventory" replace />} />
+            <Route path="/" element={<Index />} />
             <Route path="/rental-inventory" element={<RentalInventory />} />
             <Route path="/event-standup-signs" element={<EventStandUpSigns />} />
             <Route path="/wall-hanging-signs" element={<WallHangingMarqueeSigns />} />
-            <Route path="/dev-homepage" element={<Index />} />
+            <Route path="/layered-signs" element={<LayeredSigns />} />
+            <Route path="/food-truck-signs" element={<FoodTruckSigns />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

@@ -442,3 +442,156 @@ export const standUpSignsConfig: TemplateConfig = {
     gradientTo: "#1E40AF"
   }
 };
+
+// Food Truck Signs Template
+export const foodTruckSignsConfig: TemplateConfig = {
+  pageTitle: "Custom Food Truck Marquee Signs - Illuminated Menu & Brand Signage",
+  metaDescription: "Custom marquee signs designed specifically for food trucks and mobile vendors. Bright, eye-catching illuminated signage that attracts customers and showcases your menu.",
+  keywords: ["food truck signs", "mobile vendor signs", "illuminated menu boards", "custom food signage", "food truck lighting", "vendor marquee signs"],
+  
+  hero: {
+    headline: "Custom Food Truck Marquee Signs",
+    subheadline: "Bold, illuminated signage that stops traffic and drives sales. Perfect for food trucks, trailers, and mobile vendors.",
+    ctaText: "Get Your Quote",
+    ctaAction: "pricing",
+    heroImage: "/src/assets/carousel-11.jpg",
+    heroImageAlt: "Illuminated food truck marquee sign with bright lighting",
+    layout: "image-right"
+  },
+  
+  features: {
+    title: "Why Food Trucks Choose Marquee Signs",
+    subtitle: "Stand out from the competition with professional illuminated signage",
+    items: [
+      {
+        title: "High Visibility",
+        description: "Bright marquee lighting ensures customers can see your truck from blocks away, day or night.",
+        icon: "🌟"
+      },
+      {
+        title: "Weather Resistant",
+        description: "Built tough for outdoor use. Rain, shine, or snow—your sign keeps working.",
+        icon: "☔"
+      },
+      {
+        title: "Custom Branding",
+        description: "Your name, logo, or menu items in any style or color combination. Make it uniquely yours.",
+        icon: "🎨"
+      },
+      {
+        title: "Energy Efficient LEDs",
+        description: "Bright LED bulbs that won't drain your power supply. Long-lasting and easy to replace.",
+        icon: "💡"
+      },
+      {
+        title: "Easy Installation",
+        description: "Designed to mount securely on food trucks, trailers, and vendor setups. Clear instructions included.",
+        icon: "🔧"
+      },
+      {
+        title: "Durable Construction",
+        description: "Powder-coated steel stands up to the rigors of mobile food service and constant travel.",
+        icon: "💪"
+      }
+    ]
+  },
+  
+  testimonials: {
+    title: "Happy Food Truck Owners",
+    items: [
+      {
+        name: "Marcus Rodriguez",
+        role: "Taco Truck Owner",
+        content: "Sales jumped 40% after installing our marquee sign! People spot us from way down the street now. Best investment I made.",
+        rating: 5,
+        image: "/src/assets/testimonial-mike.jpg"
+      },
+      {
+        name: "Jennifer Lee",
+        role: "BBQ Trailer Operator",
+        content: "The sign is a tank—survives all weather and travel. Looks just as good after a year as day one. Totally worth it!",
+        rating: 5,
+        image: "/src/assets/testimonial-sarah.jpg"
+      }
+    ]
+  },
+  
+  pricing: {
+    title: "Custom Food Truck Sign Pricing",
+    subtitle: "Every truck is different - we'll design the perfect sign for your setup",
+    packages: [
+      {
+        name: "Get Your Custom Quote",
+        description: "Food truck signs are custom-designed based on your specific needs—truck size, branding, mounting requirements, and budget. Contact us for a personalized quote.",
+        priceRange: "Custom Pricing",
+        features: [
+          "Custom design matching your brand",
+          "Any size to fit your truck or trailer",
+          "Powder-coated steel construction",
+          "Energy-efficient LED bulbs",
+          "Weather-resistant outdoor rating",
+          "Secure mounting hardware included",
+          "Easy electrical hookup instructions",
+          "Color and style options available"
+        ],
+        ctaText: "Request Food Truck Quote"
+      }
+    ]
+  },
+  
+  gallery: {
+    title: "Food Truck Sign Gallery",
+    subtitle: "See how marquee signs transform mobile food businesses",
+    images: [
+      { src: "/src/assets/carousel-10.jpg", alt: "Restaurant style marquee sign", caption: "Bold vintage style" },
+      { src: "/src/assets/carousel-11.jpg", alt: "Food service illuminated signage", caption: "Modern food truck setup" },
+      { src: "/src/assets/carousel-3.jpg", alt: "Custom vendor signage", caption: "Custom branding" },
+      { src: "/src/assets/carousel-5.jpg", alt: "Mobile vendor marquee", caption: "Eye-catching design" }
+    ]
+  },
+  
+  faq: {
+    title: "Food Truck Sign FAQ",
+    items: [
+      {
+        question: "Will the sign work with my truck's power system?",
+        answer: "Yes! Our LED signs are energy-efficient and designed to work with standard food truck electrical systems. We provide clear wiring instructions, and most installations take less than an hour."
+      },
+      {
+        question: "How do I mount the sign to my truck?",
+        answer: "We include all necessary mounting hardware and detailed instructions. Most signs mount to the truck's exterior using secure brackets. We can also provide custom mounting solutions based on your specific setup."
+      },
+      {
+        question: "Can the sign handle travel and weather?",
+        answer: "Absolutely! Our signs are built with powder-coated steel specifically for outdoor, mobile use. They're designed to withstand constant travel, weather exposure, and the vibrations of the road."
+      },
+      {
+        question: "What if I need to change my menu or branding?",
+        answer: "We can create modular signs that allow you to swap out certain elements, or design new signs as your business evolves. Many customers start with their business name and add menu boards later."
+      },
+      {
+        question: "How bright are the signs?",
+        answer: "Our LED marquee signs are highly visible day and night. They're bright enough to attract attention from a distance but not so bright that they're harsh or use excessive power."
+      },
+      {
+        question: "Do you offer financing?",
+        answer: "We can discuss payment plans for larger custom orders. Contact us to discuss options that work for your budget and business timeline."
+      }
+    ]
+  },
+  
+  business: {
+    name: "Food Truck Marquee Signs",
+    description: "Custom illuminated marquee signs for food trucks, trailers, and mobile vendors.",
+    type: "Product",
+    industry: "food service"
+  },
+  
+  theme: {
+    primaryColor: "#DC2626",
+    secondaryColor: "#EA580C",
+    accentColor: "#FBBF24",
+    gradientFrom: "#DC2626",
+    gradientTo: "#EA580C"
+  }
+};

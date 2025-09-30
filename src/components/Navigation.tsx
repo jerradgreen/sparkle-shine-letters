@@ -12,9 +12,9 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-16">
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <a href="https://www.vintagemarqueelights.com" className="text-foreground hover:text-primary font-medium">
+            <Link to="/" className="text-foreground hover:text-primary font-medium">
               Home
-            </a>
+            </Link>
             
             <Link to="/rental-inventory" className="text-foreground hover:text-primary font-medium">
               Build a Rental Inventory
@@ -28,9 +28,9 @@ const Navigation = () => {
               Wall-Hanging Signs
             </Link>
             
-            <a href="https://www.vintagemarqueelights.com" className="text-foreground hover:text-primary font-medium">
+            <Link to="/" className="text-foreground hover:text-primary font-medium">
               Custom Signs
-            </a>
+            </Link>
             
             <a href="https://vintagemarqueelights.com/pages/custom-sign-request-form" className="text-foreground hover:text-primary font-medium">
               Custom Request Form
@@ -53,13 +53,13 @@ const Navigation = () => {
         {isMobileMenuOpen && (
           <div className="md:hidden pb-4">
             <div className="flex flex-col space-y-2">
-              <a
-                href="https://www.vintagemarqueelights.com"
+              <Link
+                to="/"
                 className="text-foreground hover:text-primary font-medium py-2"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Home
-              </a>
+              </Link>
               
               <Link
                 to="/rental-inventory"
@@ -85,13 +85,13 @@ const Navigation = () => {
                 Wall-Hanging Signs
               </Link>
               
-              <a
-                href="https://www.vintagemarqueelights.com"
+              <Link
+                to="/"
                 className="text-foreground hover:text-primary font-medium py-2"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Custom Signs
-              </a>
+              </Link>
               
               <a
                 href="https://vintagemarqueelights.com/pages/custom-sign-request-form"
