@@ -85,6 +85,30 @@ const EventStandUpSigns = () => {
         </div>
       </section>
 
+      {/* CTA Section before Footer */}
+      <section className="py-16 px-4 bg-muted/30">
+        <div className="container mx-auto text-center max-w-3xl">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
+            Want to Make Your Event Memorable?
+          </h2>
+          <p className="text-lg md:text-xl text-muted-foreground mb-8">
+            Click below, test your letters and get a quote in less than 5 minutes.
+          </p>
+          <Button 
+            size="lg" 
+            className="text-sm md:text-lg px-6 md:px-10 py-4 md:py-6 bg-blue-600 hover:bg-blue-700 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+            onClick={() => {
+              const visualizer = document.querySelector('.marquee-visualizer');
+              if (visualizer) {
+                visualizer.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}
+          >
+            Pick Your Letters – Preview Your Setup
+          </Button>
+        </div>
+      </section>
+
       <ShopifyFooter />
     </PageTemplate>
   );
