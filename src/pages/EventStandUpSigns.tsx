@@ -89,7 +89,7 @@ const EventStandUpSigns = () => {
       <section className="py-16 px-4 bg-muted/30">
         <div className="container mx-auto text-center max-w-3xl">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
-            Want to Make Your Event Memorable?
+            Ready to Make Your Event Memorable?
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground mb-8">
             Click below, test your letters and get a quote in less than 5 minutes.
