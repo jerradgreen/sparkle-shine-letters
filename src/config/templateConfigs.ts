@@ -307,21 +307,21 @@ export const standUpSignsConfig: TemplateConfig = {
         role: "Wedding Planner",
         content: "Letters arrived safe and were amazing quality. The color-changing bulbs were a huge hit at the reception!",
         rating: 5,
-        image: "/src/assets/testimonial-white-female.jpg"
+        image: "/src/assets/testimonial-realistic-1.jpg"
       },
       {
         name: "David K.",
         role: "Corporate Event Manager", 
         content: "Perfect for our stage setup - everyone could see them and took pictures. The neon style was modern and professional.",
         rating: 5,
-        image: "/src/assets/testimonial-white-male.jpg"
+        image: "/src/assets/testimonial-realistic-2.jpg"
       },
       {
         name: "Jennifer L.",
         role: "Event Coordinator",
         content: "Ready to set up right out of the boxes. Great quality and exactly what we needed for our venue and event.",
         rating: 5,
-        image: "/src/assets/testimonial-black-woman.jpg"
+        image: "/src/assets/testimonial-realistic-3.jpg"
       }
     ]
   },
@@ -334,7 +334,7 @@ export const standUpSignsConfig: TemplateConfig = {
   
   gallery: {
     title: "Event Gallery",
-    subtitle: "See our marquee letters in action at real events",
+    subtitle: "See our marquee letters in action",
     images: [
       { src: "src/assets/1969.jpeg", alt: "1969 marquee letters at elegant event" },
       { src: "src/assets/elev8.jpeg", alt: "ELEV8 marquee letters corporate event" },

@@ -27,10 +27,10 @@ const EventStandUpSigns = () => {
       <section className="py-8 bg-white">
         <div className="container mx-auto px-4 text-center">
           <div className="flex justify-center max-w-4xl mx-auto">
-            <Button 
-              size="lg" 
-              className="text-sm md:text-lg px-6 md:px-10 py-4 md:py-6 bg-primary text-primary-foreground hover:bg-primary/90"
-              onClick={() => {
+          <Button 
+            size="lg" 
+            className="text-sm md:text-lg px-6 md:px-10 py-4 md:py-6 bg-[hsl(var(--primary))] text-primary-foreground hover:bg-[hsl(var(--primary))]/90"
+            onClick={() => {
                 const visualizer = document.querySelector('.marquee-visualizer');
                 if (visualizer) {
                   visualizer.scrollIntoView({ behavior: 'smooth' });
@@ -44,7 +44,6 @@ const EventStandUpSigns = () => {
       </section>
 
       <HighlightsSection />
-      <FeatureGrid config={standUpSignsConfig.features} />
       <TestimonialSection config={standUpSignsConfig.testimonials} />
       <MarqueeVisualizer />
       

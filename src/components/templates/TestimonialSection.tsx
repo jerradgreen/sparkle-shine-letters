@@ -36,7 +36,7 @@ export const TestimonialSection = ({ config }: TestimonialSectionProps) => {
           {config.items.map((testimonial, index) => (
             <Card 
               key={index} 
-              className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-0 bg-background/80 backdrop-blur-sm"
+              className="border-0 bg-background/80 backdrop-blur-sm"
             >
               <CardContent className="p-8 space-y-6">
                 {/* Rating Stars */}
@@ -57,7 +57,7 @@ export const TestimonialSection = ({ config }: TestimonialSectionProps) => {
                     <OptimizedImage
                       src={testimonial.image}
                       alt={`${testimonial.name} testimonial`}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                      className="w-full h-full object-cover"
                     />
                   </div>
                   <div className="text-center">
