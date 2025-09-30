@@ -29,7 +29,7 @@ const EventStandUpSigns = () => {
           <div className="flex justify-center max-w-4xl mx-auto">
             <Button 
               size="lg" 
-              className="text-sm md:text-lg px-6 md:px-10 py-4 md:py-6"
+              className="text-sm md:text-lg px-6 md:px-10 py-4 md:py-6 bg-primary text-primary-foreground hover:bg-primary/90"
               onClick={() => {
                 const visualizer = document.querySelector('.marquee-visualizer');
                 if (visualizer) {

@@ -1,19 +1,19 @@
-import { Star, Lightbulb, Package } from 'lucide-react';
+import { Check, Star, Truck } from 'lucide-react';
 
 export const HighlightsSection = () => {
   const highlights = [
     {
-      icon: Star,
+      icon: Check,
       title: "Durable & Self-Standing",
       description: "Made from powder-coated steel with extra-deep sides, these letters are built to last and stand on their own."
     },
-    {
-      icon: Lightbulb,
+  {
+    icon: Star,
       title: "Bold & Bright", 
       description: "At 36\" to 48\" tall with LED bulbs and a sleek finish, they make a big impact at weddings, proms, and parties."
     },
-    {
-      icon: Package,
+  {
+    icon: Truck,
       title: "Easy to Use & Transport",
       description: "Arrive pre-lit and ready to go, with optional reusable foam-lined boxes for simple storage and travel."
     }
