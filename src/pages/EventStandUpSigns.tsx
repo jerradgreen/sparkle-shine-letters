@@ -43,6 +43,7 @@ const EventStandUpSigns = () => {
         </div>
       </section>
 
+      <HighlightsSection />
       <FeatureGrid config={standUpSignsConfig.features} />
       <TestimonialSection config={standUpSignsConfig.testimonials} />
       <MarqueeVisualizer />
