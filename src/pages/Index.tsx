@@ -47,7 +47,7 @@ const signStyles = [
     description: "Separate marquee letters that hang on walls like artwork. Perfect for shops, studios & home décor.",
     image: chopSueySign,
     link: "/wall-hanging-signs",
-    imagePosition: "center 25%",
+    imagePosition: "center 10%",
   },
   {
     title: "3D Layered/All-in-One Logos, Designs",
@@ -60,7 +60,7 @@ const signStyles = [
     description: "Bold illuminated signage for food trucks & mobile vendors. More eyeballs = more sales!",
     image: foodTruckBarMonte,
     link: "/food-truck-signs",
-    imagePosition: "center 25%",
+    imagePosition: "center 10%",
   },
   {
     title: "36\"/48\" Event Letters",
