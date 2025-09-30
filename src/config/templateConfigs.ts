@@ -314,14 +314,14 @@ export const standUpSignsConfig: TemplateConfig = {
         role: "Corporate Event Manager", 
         content: "Perfect for our stage setup - everyone could see them and took pictures. The neon style was modern and professional.",
         rating: 5,
-        image: "/src/assets/testimonial-realistic-2.jpg"
+        image: "/src/assets/testimonial-david-brick.jpg"
       },
       {
         name: "LaKesha J.",
         role: "Event Coordinator",
         content: "Ready to set up right out of the boxes. Great quality and exactly what we needed for our venue and event.",
         rating: 5,
-        image: "/src/assets/testimonial-lakesha.jpg"
+        image: "/src/assets/testimonial-lakesha-outdoor.jpg"
       }
     ]
   },
