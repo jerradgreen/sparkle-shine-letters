@@ -56,7 +56,7 @@ const RentalInventory = () => {
               <img 
                 src={heroImage} 
                 alt="Professional marquee letter rental setup at Drewia Hill event showcasing profitable event rental business opportunity" 
-                className="rounded-lg shadow-2xl w-full h-32 object-cover"
+                className="rounded-lg shadow-2xl w-full h-32 object-cover object-[center_35%]"
                 loading="eager"
               />
             </div>
@@ -69,9 +69,9 @@ const RentalInventory = () => {
             {/* Mobile content */}
             <div className="text-left">
               <h1 className="text-xl font-bold text-foreground mb-2 leading-tight">
-                Build YOUR business. Boost your PROFITS. Our signs help you do both -- FAST.
+                Build YOUR business. Boost your PROFITS. We help you do both - FAST.
               </h1>
-              <p className="text-lg text-muted-foreground leading-relaxed">
+              <p className="text-lg text-muted-foreground leading-snug">
                 Tap into the event rental industry's HOTTEST segment, marquee lights — no franchise fees, no middleman.
               </p>
               
@@ -84,7 +84,7 @@ const RentalInventory = () => {
                 <blockquote className="text-sm text-muted-foreground italic mb-1 leading-relaxed">
                   "The quality is exactly what we needed for our rental business. Best investment we've made for expanding our event services."
                 </blockquote>
-                <cite className="text-sm text-foreground font-semibold">— Faith W., Tennessee</cite>
+                <cite className="text-sm text-foreground font-semibold">— Farrah W., Tennessee</cite>
               </div>
               
               {/* Mobile CTA button after review */}
@@ -129,7 +129,7 @@ const RentalInventory = () => {
                 <blockquote className="text-sm text-muted-foreground italic mb-2 leading-relaxed">
                   "The quality is exactly what we needed for our rental business. Best investment we've made for expanding our event services."
                 </blockquote>
-                <cite className="text-sm text-foreground font-semibold">— Faith W., Tennessee</cite>
+                <cite className="text-sm text-foreground font-semibold">— Farrah W., Tennessee</cite>
               </div>
             </div>
             <div className="relative">
