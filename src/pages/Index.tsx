@@ -47,24 +47,28 @@ const signStyles = [
     description: "Separate marquee letters that hang on walls like artwork. Perfect for shops, studios & home décor.",
     image: chopSueySign,
     link: "/wall-hanging-signs",
+    imagePosition: "center 65%",
   },
   {
-    title: "Layered/All-in-One Signs",
+    title: "3D Layered/All-in-One Logos, Designs",
     description: "Stunning 3D dimensional signs with multiple layers. Premium depth and visual impact.",
     image: layeredSigns,
     link: "/layered-signs",
   },
   {
     title: "Food Truck Signs",
-    description: "Bold illuminated signage for food trucks & mobile vendors. Weather-resistant & eye-catching.",
+    description: "Bold illuminated signage for food trucks & mobile vendors. More eyeballs = more sales!",
     image: foodTruckBarMonte,
     link: "/food-truck-signs",
+    imagePosition: "center 65%",
   },
   {
     title: "36\"/48\" Event Letters",
     description: "Large freestanding marquee letters for weddings, parties & corporate events. Easy setup.",
     image: eventStandup,
     link: "/event-standup-signs",
+    imagePosition: "center 35%",
+    imageScale: "scale-125",
   },
   {
     title: "Build Rental Inventory",
@@ -154,8 +158,6 @@ const Index = () => {
         <div className="mb-12">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
             {signStyles.map((style, index) => {
-              const isNotSure = style.title.includes("Not Sure");
-              
               return (
                 <Card 
                   key={index} 
@@ -168,13 +170,10 @@ const Index = () => {
                           <img
                             src={style.image}
                             alt={style.title}
-                            className="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-500"
+                            className={`w-full h-56 object-cover group-hover:scale-110 transition-transform duration-500 ${style.imageScale || ''}`}
+                            style={{ objectPosition: style.imagePosition || 'center' }}
                           />
-                          <div className={`absolute inset-0 transition-all duration-300 ${
-                            isNotSure 
-                              ? 'bg-primary/40 group-hover:bg-primary/50' 
-                              : 'bg-gradient-to-t from-black/80 via-black/40 to-transparent group-hover:from-black/90'
-                          }`}>
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent group-hover:from-black/90 transition-all duration-300">
                             <div className="absolute inset-0 flex flex-col justify-end p-6">
                               <h3 className="text-white font-bold text-2xl mb-2">
                                 {style.title}
@@ -195,13 +194,10 @@ const Index = () => {
                           <img
                             src={style.image}
                             alt={style.title}
-                            className="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-500"
+                            className={`w-full h-56 object-cover group-hover:scale-110 transition-transform duration-500 ${style.imageScale || ''}`}
+                            style={{ objectPosition: style.imagePosition || 'center' }}
                           />
-                          <div className={`absolute inset-0 transition-all duration-300 ${
-                            isNotSure 
-                              ? 'bg-primary/40 group-hover:bg-primary/50' 
-                              : 'bg-gradient-to-t from-black/80 via-black/40 to-transparent group-hover:from-black/90'
-                          }`}>
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent group-hover:from-black/90 transition-all duration-300">
                             <div className="absolute inset-0 flex flex-col justify-end p-6">
                               <h3 className="text-white font-bold text-2xl mb-2">
                                 {style.title}
