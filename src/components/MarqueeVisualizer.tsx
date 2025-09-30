@@ -203,26 +203,23 @@ export const MarqueeVisualizer = () => {
     const noMainTextEntered = mainText.trim().toUpperCase() === 'ENTER TEXT';
     const noTopperEntered = topperOption === 'NONE' || (topperOption === 'CUSTOM' && customTopper.trim() === '');
 
-    // If nothing meaningful was entered, open the blank form (no prefill)
-    if (noMainTextEntered && noTopperEntered) {
-      window.open(base, '_blank');
-      return;
-    }
-
-    // Otherwise, prefill what's available
-    const entry: Record<string, string> = {};
+    // Build entry object - always include Topper field (blank if none) so it shows on the form
+    const entry: Record<string, string> = {
+      Topper: '' // Always include Topper field, even if blank, to make it visible
+    };
+    
+    // Add topper value if one is selected
     if (!noTopperEntered && topperOption !== 'NONE') {
       entry.Topper = topperOption === 'CUSTOM' ? customTopper : topperOption;
     }
+    
+    // Add main text if entered
     if (!noMainTextEntered) {
       entry.MainTextLettersNumbersSymbols = mainText.toUpperCase();
       entry.MainTextSize = letterSize === '48' ? '48"' : '36"';
     }
 
-    const url = Object.keys(entry).length
-      ? `${base}?entry=${encodeURIComponent(JSON.stringify(entry))}`
-      : base;
-
+    const url = `${base}?entry=${encodeURIComponent(JSON.stringify(entry))}`;
     window.open(url, '_blank');
   };
 

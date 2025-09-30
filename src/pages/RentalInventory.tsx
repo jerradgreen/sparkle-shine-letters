@@ -905,22 +905,15 @@ const RentalInventory = () => {
             <CardContent className="p-8">
               <div className="flex items-center justify-center mb-4">
                 <Clock className="w-12 h-12 text-accent mr-4" />
-                <h3 className="text-3xl font-bold text-card-foreground">3–4 Months</h3>
+                <h3 className="text-3xl font-bold text-card-foreground">3–4 months, with express options available</h3>
               </div>
-              <p className="text-xl text-muted-foreground">From order to Delivery, with express options available</p>
+              <p className="text-xl text-muted-foreground">From order to delivery</p>
             </CardContent>
           </Card>
 
           <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
             Planning ahead ensures you get the best value without rush fees. Reserve your set early to stay ahead of peak event seasons.
           </p>
-
-          <div className="bg-accent/10 p-6 rounded-lg">
-            <h4 className="text-xl font-semibold mb-3 text-foreground">Need something sooner?</h4>
-            <p className="text-muted-foreground">
-              It's possible to air freight a small number of letters for an additional cost. That way, you can start showing off your new inventory, build marketing buzz, and begin drumming up business while the rest of your order is still en route.
-            </p>
-          </div>
         </div>
       </section>
 

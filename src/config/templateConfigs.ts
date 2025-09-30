@@ -319,7 +319,7 @@ export const standUpSignsConfig: TemplateConfig = {
       {
         name: "Jennifer L.",
         role: "Event Coordinator",
-        content: "Ready to set up right out of the foam-lined boxes. Great quality and exactly what we needed for our venue.",
+        content: "Ready to set up right out of the boxes. Great quality and exactly what we needed for our venue and event.",
         rating: 5,
         image: "/src/assets/testimonial-black-woman.jpg"
       }
