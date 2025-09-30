@@ -1,5 +1,18 @@
 import { TemplateConfig } from '@/types/template';
 
+// Import testimonial images
+import testimonialRealistic1 from '@/assets/testimonial-realistic-1.jpg';
+import testimonialDavidBrick from '@/assets/testimonial-david-brick.jpg';
+import testimonialLakeshaOutdoor from '@/assets/testimonial-lakesha-outdoor.jpg';
+
+// Import gallery images
+import image1969 from '@/assets/1969.jpeg';
+import imageElev8 from '@/assets/elev8.jpeg';
+import imageMarryMe from '@/assets/marry-me.jpg';
+import imageDrewiaHill from '@/assets/drewia-hill.jpeg';
+import imageSetup1 from '@/assets/setup-1.jpeg';
+import imageSetup2 from '@/assets/setup-2.jpg';
+
 // 3D Layered Signs Template
 export const layeredSignsConfig: TemplateConfig = {
   pageTitle: "3D Layered Sign Rental Business - Premium Dimensional Signage Package",
@@ -307,21 +320,21 @@ export const standUpSignsConfig: TemplateConfig = {
         role: "Wedding Planner",
         content: "Letters arrived safe and were amazing quality. The color-changing bulbs were a huge hit at the reception!",
         rating: 5,
-        image: "/src/assets/testimonial-realistic-1.jpg"
+        image: testimonialRealistic1
       },
       {
         name: "David K.",
         role: "Corporate Event Manager", 
         content: "Perfect for our stage setup - everyone could see them and took pictures. The neon style was modern and professional.",
         rating: 5,
-        image: "/src/assets/testimonial-david-brick.jpg"
+        image: testimonialDavidBrick
       },
       {
         name: "LaKesha J.",
         role: "Event Coordinator",
         content: "Ready to set up right out of the boxes. Great quality and exactly what we needed for our venue and event.",
         rating: 5,
-        image: "/src/assets/testimonial-lakesha-outdoor.jpg"
+        image: testimonialLakeshaOutdoor
       }
     ]
   },
@@ -336,12 +349,12 @@ export const standUpSignsConfig: TemplateConfig = {
     title: "Event Gallery",
     subtitle: "See our marquee lights in action",
     images: [
-      { src: "src/assets/1969.jpeg", alt: "1969 marquee letters at elegant event" },
-      { src: "src/assets/elev8.jpeg", alt: "ELEV8 marquee letters corporate event" },
-      { src: "src/assets/marry-me.jpg", alt: "MARRY ME marquee proposal setup" },
-      { src: "src/assets/drewia-hill.jpeg", alt: "DREWIA HILL marquee letters wedding celebration" },
-      { src: "src/assets/setup-1.jpeg", alt: "Professional event setup with marquee letters" },
-      { src: "src/assets/setup-2.jpg", alt: "Corporate event marquee letter display" }
+      { src: image1969, alt: "1969 marquee letters at elegant event" },
+      { src: imageElev8, alt: "ELEV8 marquee letters corporate event" },
+      { src: imageMarryMe, alt: "MARRY ME marquee proposal setup" },
+      { src: imageDrewiaHill, alt: "DREWIA HILL marquee letters wedding celebration" },
+      { src: imageSetup1, alt: "Professional event setup with marquee letters" },
+      { src: imageSetup2, alt: "Corporate event marquee letter display" }
     ]
   },
   

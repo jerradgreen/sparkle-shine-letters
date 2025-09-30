@@ -30,7 +30,7 @@ export const MarqueeHeroSection = () => {
       
       {/* Content - Text at top */}
       <div className="relative z-10 text-center text-white max-w-4xl mx-auto md:-mt-12">
-        <div className="space-y-2 md:space-y-3">
+        <div className="space-y-1">
           <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight">
             <span className="bg-gradient-to-r from-white to-white/90 bg-clip-text text-transparent">
               Stand-up, Commercial Grade Marquee Lights
@@ -45,18 +45,29 @@ export const MarqueeHeroSection = () => {
         
 
       {/* 5 Star Review from Ashley L. */}
-      <div className="relative z-10 bg-white/10 backdrop-blur-sm rounded-lg p-4 mx-4 md:mx-auto max-w-md mt-8 md:mt-12">
-        <div className="flex justify-center mb-2">
+      <div className="relative z-10 bg-white/10 backdrop-blur-sm rounded-lg p-3 mx-4 md:mx-auto max-w-md mt-4 md:mt-6">
+        <div className="flex justify-center mb-1">
           {[...Array(5)].map((_, i) => (
-            <span key={i} className="text-yellow-400 text-lg">★</span>
+            <span key={i} className="text-yellow-400 text-base">★</span>
           ))}
         </div>
-        <p className="text-white text-sm text-center italic mb-2">
+        <p className="text-white text-xs md:text-sm text-center italic mb-1">
           "We purchased marquee letters for our company event and they look absolutely amazing! The quality is outstanding and we plan on using them year after year for all our corporate gatherings."
         </p>
         <p className="text-white/80 text-xs text-center font-medium">
           Ashley L. - North Carolina
         </p>
+      </div>
+      
+      {/* CTA Button */}
+      <div className="relative z-10 flex justify-center mt-4 md:mt-6">
+        <Button 
+          onClick={scrollToVisualizer}
+          size="lg"
+          className="bg-accent text-accent-foreground hover:bg-accent/90 text-base md:text-lg px-6 md:px-8 py-4 md:py-6 h-auto shadow-lg"
+        >
+          Pick Your Letters – Preview Your Setup
+        </Button>
       </div>
       
       {/* Scroll Indicator */}
