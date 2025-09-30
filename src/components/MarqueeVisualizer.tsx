@@ -335,7 +335,7 @@ const bottomOffsetPx = isMobile ? 8 : 28;
                   />
                   <Button 
                     onClick={openQuoteForm}
-                    className="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-8 whitespace-nowrap"
+                    className="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-8 md:whitespace-nowrap whitespace-normal h-auto py-3 leading-tight"
                   >
                     Get Quote in Under 5 min
                   </Button>
