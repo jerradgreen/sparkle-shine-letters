@@ -9,27 +9,43 @@ import Footer from "@/components/Footer";
 import ShopifyHeader from "@/components/ShopifyHeader";
 
 // Import all assets
-import elev8 from "@/assets/elev8.jpeg";
-import foodTruckBarMonte from "@/assets/food-truck-bar-monte.jpg";
-import chopSueySign from "@/assets/chop-suey-sign.jpg";
+import carousel1 from "@/assets/carousel-1.jpg";
+import carousel2 from "@/assets/carousel-2.jpg";
+import carousel3 from "@/assets/carousel-3.jpg";
+import carousel4 from "@/assets/carousel-4.jpg";
+import carousel5 from "@/assets/carousel-5.jpg";
+import carousel6 from "@/assets/carousel-6.jpg";
+import carousel7 from "@/assets/carousel-7.jpg";
+import carousel8 from "@/assets/carousel-8.jpg";
+import carousel9 from "@/assets/carousel-9.png";
+import carousel10 from "@/assets/carousel-10.jpg";
+import carousel11 from "@/assets/carousel-11.jpg";
 import wallHanging from "@/assets/wall-hanging.jpg";
 import eventStandup from "@/assets/event-standup.jpg";
 import layeredSigns from "@/assets/layered-signs.jpg";
-import foodTruckSign from "@/assets/carousel-11.jpg";
 import rentalInventory from "@/assets/setup-1.jpeg";
+import foodTruckBarMonte from "@/assets/food-truck-bar-monte.jpg";
+import chopSueySign from "@/assets/chop-suey-sign.jpg";
 
 const carouselData = [
-  { image: elev8, title: "36\"/48\" Event Letters" },
-  { image: foodTruckBarMonte, title: "Food Trucks / Layered Signs" },
-  { image: chopSueySign, title: "Wall Letters", description: "Separate marquee letters that hang on walls like artwork. Perfect for restaurants, home décor, events and more!" },
-  { image: rentalInventory, title: "Build Rental Inventory", description: "Complete packages with options for any budget." },
+  { image: carousel1, title: "Separate Marquee Letters" },
+  { image: carousel2, title: "Custom Event Signage" },
+  { image: carousel3, title: "3D Layered Signs" },
+  { image: carousel4, title: "Arcade Style Letters" },
+  { image: carousel5, title: "Premium Marquee Display" },
+  { image: carousel6, title: "Professional Event Setup" },
+  { image: carousel7, title: "Vintage Marquee Collection" },
+  { image: carousel8, title: "Corporate Event Signage" },
+  { image: carousel9, title: "Custom Brand Display" },
+  { image: carousel10, title: "Restaurant & Bar Signs" },
+  { image: carousel11, title: "Food Service Signage" },
 ];
 
 const signStyles = [
   {
     title: "Individual Wall Letters",
     description: "Separate marquee letters that hang on walls like artwork. Perfect for shops, studios & home décor.",
-    image: wallHanging,
+    image: chopSueySign,
     link: "/wall-hanging-signs",
   },
   {
@@ -41,7 +57,7 @@ const signStyles = [
   {
     title: "Food Truck Signs",
     description: "Bold illuminated signage for food trucks & mobile vendors. Weather-resistant & eye-catching.",
-    image: foodTruckSign,
+    image: foodTruckBarMonte,
     link: "/food-truck-signs",
   },
   {
@@ -116,17 +132,17 @@ const Index = () => {
         <meta name="keywords" content="marquee signs, vintage marquee lights, custom marquee letters, wall hanging signs, event signs, food truck signs, layered signs, sign rental business" />
         <link rel="canonical" href="https://vintagemarqueelights.com/" />
       </Helmet>
-      <ShopifyHeader />
       <Navigation />
+      <ShopifyHeader />
 
       {/* Main Content */}
-      <div className="container mx-auto px-6 py-16">
+      <div className="container mx-auto px-6 py-8">
         {/* Hero Section */}
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
+        <div className="text-center mb-12">
+          <h1 className="text-4xl md:text-5xl font-bold mb-3 text-foreground">
             What Style Are You Looking For?
           </h1>
-          <p className="text-xl text-muted-foreground mb-3 max-w-3xl mx-auto">
+          <p className="text-xl text-muted-foreground mb-2 max-w-3xl mx-auto">
             Click on the style that best matches your vision
           </p>
           <p className="text-sm text-muted-foreground max-w-3xl mx-auto">
@@ -226,8 +242,7 @@ const Index = () => {
                   style={{ maxHeight: '48vh' }}
                 />
                 <div className="text-center mt-4">
-                  <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
-                  {item.description && <p className="text-muted-foreground">{item.description}</p>}
+                  <h3 className="text-xl font-semibold">{item.title}</h3>
                 </div>
               </div>
             ))}
