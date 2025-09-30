@@ -75,7 +75,7 @@ const RentalInventory = () => {
                 Tap into the event rental industry's HOTTEST segment, marquee lights — no franchise fees, no middleman.
               </p>
               
-              <div className="bg-muted/30 rounded-lg p-3 text-center mt-1">
+              <div className="bg-muted/30 rounded-lg p-3 text-center mt-0.5">
                 <div className="flex justify-center mb-1">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className="w-4 h-4 text-yellow-500 fill-yellow-500" />
@@ -88,7 +88,7 @@ const RentalInventory = () => {
               </div>
               
               {/* Mobile CTA button after review */}
-              <div className="mt-3">
+              <div className="mt-2">
                 <Button 
                   size="lg" 
                   className="text-lg px-8 py-6 w-full"
