@@ -317,11 +317,11 @@ export const standUpSignsConfig: TemplateConfig = {
         image: "/src/assets/testimonial-realistic-2.jpg"
       },
       {
-        name: "Jennifer L.",
+        name: "LaKesha J.",
         role: "Event Coordinator",
         content: "Ready to set up right out of the boxes. Great quality and exactly what we needed for our venue and event.",
         rating: 5,
-        image: "/src/assets/testimonial-realistic-3.jpg"
+        image: "/src/assets/testimonial-lakesha.jpg"
       }
     ]
   },
@@ -334,7 +334,7 @@ export const standUpSignsConfig: TemplateConfig = {
   
   gallery: {
     title: "Event Gallery",
-    subtitle: "See our marquee letters in action",
+    subtitle: "See our marquee lights in action",
     images: [
       { src: "src/assets/1969.jpeg", alt: "1969 marquee letters at elegant event" },
       { src: "src/assets/elev8.jpeg", alt: "ELEV8 marquee letters corporate event" },
