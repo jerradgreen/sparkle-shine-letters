@@ -29,7 +29,7 @@ const EventStandUpSigns = () => {
           <div className="flex justify-center max-w-4xl mx-auto">
             <Button 
               size="lg" 
-              className="text-sm md:text-lg px-6 md:px-10 py-4 md:py-6 bg-blue-600 hover:bg-blue-700 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+              className="text-sm md:text-lg px-6 md:px-10 py-4 md:py-6"
               onClick={() => {
                 const visualizer = document.querySelector('.marquee-visualizer');
                 if (visualizer) {
@@ -86,17 +86,18 @@ const EventStandUpSigns = () => {
       </section>
 
       {/* CTA Section before Footer */}
-      <section className="py-16 px-4 bg-muted/30">
+      <section className="py-16 px-4 bg-gradient-to-r from-primary to-primary/80 text-primary-foreground">
         <div className="container mx-auto text-center max-w-3xl">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Ready to Make Your Event Memorable?
           </h2>
-          <p className="text-lg md:text-xl text-muted-foreground mb-8">
+          <p className="text-lg md:text-xl mb-8">
             Click below, test your letters and get a quote in less than 5 minutes.
           </p>
           <Button 
+            variant="outline"
             size="lg" 
-            className="text-sm md:text-lg px-6 md:px-10 py-4 md:py-6 bg-blue-600 hover:bg-blue-700 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+            className="text-sm md:text-lg px-6 md:px-10 py-4 md:py-6 bg-primary-foreground/10 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/20"
             onClick={() => {
               const visualizer = document.querySelector('.marquee-visualizer');
               if (visualizer) {
