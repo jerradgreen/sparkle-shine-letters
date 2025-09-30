@@ -56,7 +56,7 @@ const RentalInventory = () => {
               <img 
                 src={heroImage} 
                 alt="Professional marquee letter rental setup at Drewia Hill event showcasing profitable event rental business opportunity" 
-                className="rounded-lg shadow-2xl w-full h-32 object-cover object-[center_35%]"
+                className="rounded-lg shadow-2xl w-full h-32 object-cover object-[center_65%]"
                 loading="eager"
               />
             </div>
