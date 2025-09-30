@@ -6,20 +6,12 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import ShopifyHeader from "@/components/ShopifyHeader";
 
 // Import all assets
-import logo from "@/assets/logo.png";
-import carousel1 from "@/assets/carousel-1.jpg";
-import carousel2 from "@/assets/carousel-2.jpg";
-import carousel3 from "@/assets/carousel-3.jpg";
-import carousel4 from "@/assets/carousel-4.jpg";
-import carousel5 from "@/assets/carousel-5.jpg";
-import carousel6 from "@/assets/carousel-6.jpg";
-import carousel7 from "@/assets/carousel-7.jpg";
-import carousel8 from "@/assets/carousel-8.jpg";
-import carousel9 from "@/assets/carousel-9.png";
-import carousel10 from "@/assets/carousel-10.jpg";
-import carousel11 from "@/assets/carousel-11.jpg";
+import elev8 from "@/assets/elev8.jpeg";
+import foodTruckBarMonte from "@/assets/food-truck-bar-monte.jpg";
+import chopSueySign from "@/assets/chop-suey-sign.jpg";
 import wallHanging from "@/assets/wall-hanging.jpg";
 import eventStandup from "@/assets/event-standup.jpg";
 import layeredSigns from "@/assets/layered-signs.jpg";
@@ -27,17 +19,10 @@ import foodTruckSign from "@/assets/carousel-11.jpg";
 import rentalInventory from "@/assets/setup-1.jpeg";
 
 const carouselData = [
-  { image: carousel1, title: "Separate Marquee Letters" },
-  { image: carousel2, title: "Custom Event Signage" },
-  { image: carousel3, title: "3D Layered Signs" },
-  { image: carousel4, title: "Arcade Style Letters" },
-  { image: carousel5, title: "Premium Marquee Display" },
-  { image: carousel6, title: "Professional Event Setup" },
-  { image: carousel7, title: "Vintage Marquee Collection" },
-  { image: carousel8, title: "Corporate Event Signage" },
-  { image: carousel9, title: "Custom Brand Display" },
-  { image: carousel10, title: "Restaurant & Bar Signs" },
-  { image: carousel11, title: "Food Service Signage" },
+  { image: elev8, title: "36\"/48\" Event Letters" },
+  { image: foodTruckBarMonte, title: "Food Trucks / Layered Signs" },
+  { image: chopSueySign, title: "Wall Letters", description: "Separate marquee letters that hang on walls like artwork. Perfect for restaurants, home décor, events and more!" },
+  { image: rentalInventory, title: "Build Rental Inventory", description: "Complete packages with options for any budget." },
 ];
 
 const signStyles = [
@@ -131,85 +116,26 @@ const Index = () => {
         <meta name="keywords" content="marquee signs, vintage marquee lights, custom marquee letters, wall hanging signs, event signs, food truck signs, layered signs, sign rental business" />
         <link rel="canonical" href="https://vintagemarqueelights.com/" />
       </Helmet>
+      <ShopifyHeader />
       <Navigation />
-      
-      {/* Header with Logo */}
-      <header className="p-6 text-center">
-        <img 
-          src={logo} 
-          alt="Vintage Marquee Lights" 
-          className="mx-auto max-h-24 md:max-h-32 w-auto"
-        />
-      </header>
-
-      {/* Hero Carousel */}
-      <div className="relative w-full overflow-hidden">
-        <div className="relative w-full">
-          {shuffledImages.map((item, index) => (
-            <div
-              key={index}
-              className={`${
-                index === currentSlide ? 'block' : 'hidden'
-              } w-full flex justify-center`}
-            >
-              <img
-                src={item.image}
-                alt={item.title}
-                className="w-full h-auto object-contain"
-                style={{ maxHeight: '48vh' }}
-              />
-            </div>
-          ))}
-        </div>
-
-        {/* Carousel Controls */}
-        <button
-          onClick={prevSlide}
-          className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 text-white p-2 rounded-full hover:bg-black/70 transition-colors"
-        >
-          <ChevronLeft className="w-6 h-6" />
-        </button>
-        
-        <button
-          onClick={nextSlide}
-          className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 text-white p-2 rounded-full hover:bg-black/70 transition-colors"
-        >
-          <ChevronRight className="w-6 h-6" />
-        </button>
-
-        {/* Dots Navigation */}
-        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
-          {shuffledImages.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentSlide(index)}
-              className={`w-3 h-3 rounded-full transition-colors ${
-                index === currentSlide ? 'bg-white' : 'bg-white/50'
-              }`}
-            />
-          ))}
-        </div>
-      </div>
-
-      {/* Credibility Blurb */}
-      <div className="text-center py-8 px-6 bg-muted/30">
-        <p className="text-lg md:text-xl font-semibold text-foreground max-w-4xl mx-auto">
-          Trusted by thousands of businesses, bars, and event pros since 2008.<br />
-          Proudly family-owned and the ORIGINAL Vintage Marquee Lights brand.
-        </p>
-      </div>
 
       {/* Main Content */}
       <div className="container mx-auto px-6 py-16">
-        {/* Visual Selection Grid */}
+        {/* Hero Section */}
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
             What Style Are You Looking For?
           </h1>
-          <p className="text-xl text-muted-foreground mb-12 max-w-3xl mx-auto">
+          <p className="text-xl text-muted-foreground mb-3 max-w-3xl mx-auto">
             Click on the style that best matches your vision
           </p>
-          
+          <p className="text-sm text-muted-foreground max-w-3xl mx-auto">
+            Trusted by thousands of businesses, event pros, and creatives across the U.S.
+          </p>
+        </div>
+
+        {/* Visual Selection Grid */}
+        <div className="mb-16">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {signStyles.map((style, index) => {
               const isNotSure = style.title.includes("Not Sure");
@@ -217,9 +143,7 @@ const Index = () => {
               return (
                 <Card 
                   key={index} 
-                  className={`group cursor-pointer hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 overflow-hidden ${
-                    isNotSure ? 'border-4 border-primary md:col-span-2 lg:col-span-3' : ''
-                  }`}
+                  className="group cursor-pointer hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 overflow-hidden"
                 >
                   <CardContent className="p-0">
                     {style.isExternal ? (
@@ -228,9 +152,7 @@ const Index = () => {
                           <img
                             src={style.image}
                             alt={style.title}
-                            className={`w-full object-cover group-hover:scale-110 transition-transform duration-500 ${
-                              isNotSure ? 'h-80' : 'h-72'
-                            }`}
+                            className="w-full h-72 object-cover group-hover:scale-110 transition-transform duration-500"
                           />
                           <div className={`absolute inset-0 transition-all duration-300 ${
                             isNotSure 
@@ -238,14 +160,10 @@ const Index = () => {
                               : 'bg-gradient-to-t from-black/80 via-black/40 to-transparent group-hover:from-black/90'
                           }`}>
                             <div className="absolute inset-0 flex flex-col justify-end p-6">
-                              <h3 className={`text-white font-bold mb-2 ${
-                                isNotSure ? 'text-3xl md:text-4xl' : 'text-2xl'
-                              }`}>
+                              <h3 className="text-white font-bold text-2xl mb-2">
                                 {style.title}
                               </h3>
-                              <p className={`text-white/90 ${
-                                isNotSure ? 'text-lg md:text-xl' : 'text-base'
-                              }`}>
+                              <p className="text-white/90 text-base">
                                 {style.description}
                               </p>
                               <div className="mt-4 text-white font-bold text-lg flex items-center gap-2">
@@ -261,9 +179,7 @@ const Index = () => {
                           <img
                             src={style.image}
                             alt={style.title}
-                            className={`w-full object-cover group-hover:scale-110 transition-transform duration-500 ${
-                              isNotSure ? 'h-80' : 'h-72'
-                            }`}
+                            className="w-full h-72 object-cover group-hover:scale-110 transition-transform duration-500"
                           />
                           <div className={`absolute inset-0 transition-all duration-300 ${
                             isNotSure 
@@ -271,14 +187,10 @@ const Index = () => {
                               : 'bg-gradient-to-t from-black/80 via-black/40 to-transparent group-hover:from-black/90'
                           }`}>
                             <div className="absolute inset-0 flex flex-col justify-end p-6">
-                              <h3 className={`text-white font-bold mb-2 ${
-                                isNotSure ? 'text-3xl md:text-4xl' : 'text-2xl'
-                              }`}>
+                              <h3 className="text-white font-bold text-2xl mb-2">
                                 {style.title}
                               </h3>
-                              <p className={`text-white/90 ${
-                                isNotSure ? 'text-lg md:text-xl' : 'text-base'
-                              }`}>
+                              <p className="text-white/90 text-base">
                                 {style.description}
                               </p>
                               <div className="mt-4 text-white font-semibold flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
@@ -293,6 +205,60 @@ const Index = () => {
                 </Card>
               );
             })}
+          </div>
+        </div>
+
+        {/* Carousel Section */}
+        <div className="relative w-full overflow-hidden mb-16 max-w-5xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-8 text-foreground">Recent Projects</h2>
+          <div className="relative w-full">
+            {shuffledImages.map((item, index) => (
+              <div
+                key={index}
+                className={`${
+                  index === currentSlide ? 'block' : 'hidden'
+                } w-full flex flex-col items-center`}
+              >
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="w-full h-auto object-contain rounded-lg"
+                  style={{ maxHeight: '48vh' }}
+                />
+                <div className="text-center mt-4">
+                  <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
+                  {item.description && <p className="text-muted-foreground">{item.description}</p>}
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Carousel Controls */}
+          <button
+            onClick={prevSlide}
+            className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 text-white p-2 rounded-full hover:bg-black/70 transition-colors"
+          >
+            <ChevronLeft className="w-6 h-6" />
+          </button>
+          
+          <button
+            onClick={nextSlide}
+            className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 text-white p-2 rounded-full hover:bg-black/70 transition-colors"
+          >
+            <ChevronRight className="w-6 h-6" />
+          </button>
+
+          {/* Dots Navigation */}
+          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+            {shuffledImages.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentSlide(index)}
+                className={`w-3 h-3 rounded-full transition-colors ${
+                  index === currentSlide ? 'bg-primary' : 'bg-muted-foreground/50'
+                }`}
+              />
+            ))}
           </div>
         </div>
 
