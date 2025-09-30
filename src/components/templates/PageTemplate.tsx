@@ -1,5 +1,4 @@
 import { ReactNode } from 'react';
-import { HelmetProvider } from 'react-helmet-async';
 import { TemplateConfig } from '@/types/template';
 import { SEOHead } from '@/components/seo/SEOHead';
 import { StructuredData } from '@/components/seo/StructuredData';
@@ -25,20 +24,18 @@ export const PageTemplate = ({
   showChatbot = true
 }: PageTemplateProps) => {
   return (
-    <HelmetProvider>
-      <div className="min-h-screen bg-background">
-        <SEOHead config={config} canonicalUrl={canonicalUrl} />
-        <StructuredData config={config} />
-        
-        {showNavigation && <Navigation />}
-        
-        <main className="relative">
-          {children}
-        </main>
-        
-        {showFooter && <Footer />}
-        {showChatbot && <Chatbot />}
-      </div>
-    </HelmetProvider>
+    <div className="min-h-screen bg-background">
+      <SEOHead config={config} canonicalUrl={canonicalUrl} />
+      <StructuredData config={config} />
+      
+      {showNavigation && <Navigation />}
+      
+      <main className="relative">
+        {children}
+      </main>
+      
+      {showFooter && <Footer />}
+      {showChatbot && <Chatbot />}
+    </div>
   );
 };
