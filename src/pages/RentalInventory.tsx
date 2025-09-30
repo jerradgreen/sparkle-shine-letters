@@ -69,7 +69,7 @@ const RentalInventory = () => {
             {/* Mobile content */}
             <div className="text-left">
               <h1 className="text-xl font-bold text-foreground mb-2 leading-tight">
-                Build YOUR business. Boost your PROFITS. Our marquee letter packages are designed to help you do both — FAST.
+                Build YOUR business. Boost your PROFITS. Our signs help you do both -- FAST.
               </h1>
               <p className="text-lg text-muted-foreground leading-relaxed">
                 Tap into the event rental industry's HOTTEST segment, marquee lights — no franchise fees, no middleman.
