@@ -49,6 +49,10 @@ const Navigation = () => {
               Build a Rental Inventory
             </Link>
             
+            <Link to="/event-standup-signs" className="text-foreground hover:text-primary font-medium">
+              36/48" Stand-Up Letters
+            </Link>
+            
             <a href="https://vintagemarqueelights.com/pages/custom-sign-request-form" className="text-foreground hover:text-primary font-medium">
               Custom Request Form
             </a>
@@ -125,6 +129,14 @@ const Navigation = () => {
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Build a Rental Inventory
+              </Link>
+              
+              <Link
+                to="/event-standup-signs"
+                className="text-foreground hover:text-primary font-medium py-2"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                36/48" Stand-Up Letters
               </Link>
               
               <a
