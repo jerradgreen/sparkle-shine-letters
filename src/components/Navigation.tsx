@@ -37,6 +37,9 @@ const Navigation = () => {
                   <Link to="/food-truck-signs" className="cursor-pointer">Food Trucks</Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
+                  <Link to="/event-standup-signs" className="cursor-pointer">Event Signs</Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
                   <a href="https://vintagemarqueelights.com/pages/custom-sign-request-form" className="cursor-pointer">Not Sure</a>
                 </DropdownMenuItem>
               </DropdownMenuContent>
@@ -46,9 +49,9 @@ const Navigation = () => {
               Build a Rental Inventory
             </Link>
             
-            <Link to="/event-standup-signs" className="text-foreground hover:text-primary font-medium">
-              36/48" Stand-Up Letters
-            </Link>
+            <a href="https://vintagemarqueelights.com/pages/custom-sign-request-form" className="text-foreground hover:text-primary font-medium">
+              Custom Request Form
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -99,6 +102,13 @@ const Navigation = () => {
                   >
                     Food Trucks
                   </Link>
+                  <Link
+                    to="/event-standup-signs"
+                    className="text-foreground hover:text-primary font-medium py-1"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Event Signs
+                  </Link>
                   <a
                     href="https://vintagemarqueelights.com/pages/custom-sign-request-form"
                     className="text-foreground hover:text-primary font-medium py-1"
@@ -117,13 +127,13 @@ const Navigation = () => {
                 Build a Rental Inventory
               </Link>
               
-              <Link
-                to="/event-standup-signs"
+              <a
+                href="https://vintagemarqueelights.com/pages/custom-sign-request-form"
                 className="text-foreground hover:text-primary font-medium py-2"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                36/48" Stand-Up Letters
-              </Link>
+                Custom Request Form
+              </a>
             </div>
           </div>
         )}
