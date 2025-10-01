@@ -55,7 +55,6 @@ const signStyles = [
     image: "https://dl.dropboxusercontent.com/scl/fi/zow5dope9wbfhay9lfcmq/custom-collage3.jpg?rlkey=btz40y0zyzbeb7h7y9kuajvbj",
     link: "https://vintagemarqueelights.com/pages/custom-sign-request-form",
     isExternal: true,
-    hideBottomText: true,
   },
 ];
 
@@ -106,18 +105,18 @@ const Index = () => {
                             style={{ objectPosition: style.imagePosition || 'center' }}
                           />
                           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent group-hover:from-black/90 transition-all duration-300">
-                            <div className="absolute inset-0 flex flex-col justify-end p-6">
-                              <h3 className="text-white font-bold text-2xl mb-2">
-                                {style.title}
-                              </h3>
-                              <p className="text-white/90 text-base">
-                                {style.description}
-                              </p>
-                              {!style.hideBottomText && (
-                                <div className="mt-4 text-white text-xs flex items-center gap-1">
-                                  click for more <span className="text-sm">→</span>
-                                </div>
-                              )}
+                            <div className="absolute inset-0 flex flex-col justify-center items-center text-center p-6">
+                              <div className="flex-1 flex flex-col justify-center">
+                                <h3 className="text-white font-bold text-2xl mb-2">
+                                  {style.title}
+                                </h3>
+                                <p className="text-white/90 text-sm leading-snug">
+                                  {style.description}
+                                </p>
+                              </div>
+                              <div className="text-white text-xs flex items-center gap-1 mt-auto">
+                                click for more <span className="text-sm">→</span>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -132,18 +131,18 @@ const Index = () => {
                             style={{ objectPosition: style.imagePosition || 'center' }}
                           />
                           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent group-hover:from-black/90 transition-all duration-300">
-                            <div className="absolute inset-0 flex flex-col justify-end p-6">
-                              <h3 className="text-white font-bold text-2xl mb-2">
-                                {style.title}
-                              </h3>
-                              <p className="text-white/90 text-base">
-                                {style.description}
-                              </p>
-                              {!style.hideBottomText && (
-                                <div className="mt-4 text-white text-xs flex items-center gap-1">
-                                  click for more <span className="text-sm">→</span>
-                                </div>
-                              )}
+                            <div className="absolute inset-0 flex flex-col justify-center items-center text-center p-6">
+                              <div className="flex-1 flex flex-col justify-center">
+                                <h3 className="text-white font-bold text-2xl mb-2">
+                                  {style.title}
+                                </h3>
+                                <p className="text-white/90 text-sm leading-snug">
+                                  {style.description}
+                                </p>
+                              </div>
+                              <div className="text-white text-xs flex items-center gap-1 mt-auto">
+                                click for more <span className="text-sm">→</span>
+                              </div>
                             </div>
                           </div>
                         </div>
