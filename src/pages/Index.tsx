@@ -81,16 +81,10 @@ const Index = () => {
           <p className="text-lg text-muted-foreground mb-2 max-w-3xl mx-auto">
             Choose the marquee sign style that fits your vision and see how easy it is to make it yours.
           </p>
-          <p className="text-xl font-medium text-foreground max-w-3xl mx-auto mb-1">
+          <p className="text-xl font-medium text-foreground max-w-3xl mx-auto">
             💡 Just click the style below to get started.
           </p>
-          <p className="text-sm text-muted-foreground italic max-w-3xl mx-auto">
-            Trusted by thousands of businesses, event pros, and creatives across the U.S.
-          </p>
         </div>
-
-        {/* Three Features Section */}
-        <HomeHighlightsSection />
 
         {/* Visual Selection Grid */}
         <div className="mb-12">
@@ -162,17 +156,20 @@ const Index = () => {
           </div>
         </div>
 
+        {/* Three Features Section */}
+        <HomeHighlightsSection />
+
         {/* 5-Star Review Section */}
         <div className="mb-12 max-w-4xl mx-auto">
           <Card className="bg-muted/30 border-2">
             <CardContent className="pt-6">
               <div className="flex justify-center mb-3">
                 {[1, 2, 3, 4, 5].map((star) => (
-                  <Star key={star} className="w-5 h-5 fill-primary text-primary" />
+                  <Star key={star} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
                 ))}
               </div>
               <p className="text-center text-muted-foreground mb-4 italic">
-                "From initial concept sketches to the final mockups and delivery, the entire process was seamless. The finished sign exceeded our expectations and has become a signature piece across all our locations. Professional, high-quality work from start to finish."
+                "From initial concept sketches to the final mockups and delivery, the entire process was seamless. The finished signs exceeded our expectations and has become a signature piece across all our locations. Professional, high-quality work from start to finish."
               </p>
               <p className="text-center font-semibold text-foreground">
                 — Michael A., SC
