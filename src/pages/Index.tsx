@@ -160,7 +160,7 @@ const Index = () => {
 
         {/* 5-Star Review Section */}
         <div className="mb-12 max-w-4xl mx-auto">
-          <Card className="bg-muted/30">
+          <Card className="bg-muted/30 border-0 shadow-none">
             <CardContent className="pt-6">
               <div className="flex justify-center mb-3">
                 {[1, 2, 3, 4, 5].map((star) => (
