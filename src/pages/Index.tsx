@@ -75,7 +75,7 @@ const Index = () => {
         {/* Hero Section */}
         <div className="text-center mb-4">
           <h1 className="text-3xl md:text-4xl font-bold mb-3 text-foreground">
-            Trusted by Thousands. Built for the Spotlight.
+            Trusted by Hundreds. Built for the Spotlight.
           </h1>
           <p className="text-lg text-muted-foreground mb-2 max-w-3xl mx-auto">
             Choose the marquee sign style that fits your vision and see how easy it is to make it yours.
@@ -201,26 +201,19 @@ const Index = () => {
         </div>
 
         {/* Contact Form Section */}
-        <div className="text-center py-12 px-6 bg-muted/20 rounded-lg mb-12">
-          <p className="text-lg md:text-xl text-foreground mb-6">
-            Got a quick question or just starting to explore?<br />
-            We're happy to help — send us a message below.
-          </p>
+        <div className="text-center py-16 px-6 bg-muted/20 rounded-lg mb-12">
+          <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6">
+            Need a full quote or want to design your sign now?
+          </h2>
           
-          <div className="max-w-2xl mx-auto mb-6">
-            <iframe 
-              src="https://www.cognitoforms.com/f/dufgHGZ4sU6F2rV69vJTrA/5" 
-              allow="payment" 
-              style={{border: 0, width: '100%'}} 
-              height="492"
-              title="Contact Form"
-            />
-          </div>
-          
-          <p className="text-muted-foreground">
-            Need a full quote or want to design your sign now?<br />
-            👉 <a href="https://vintagemarqueelights.com/pages/custom-sign-request-form" className="text-primary hover:underline font-medium">Click here to use our full request form</a>
-          </p>
+          <a 
+            href="https://vintagemarqueelights.com/pages/custom-sign-request-form"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-lg font-semibold text-lg hover:bg-primary/90 transition-colors"
+          >
+            👉 Click here to use our full request form
+          </a>
         </div>
       </div>
       
