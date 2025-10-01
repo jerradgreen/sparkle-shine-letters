@@ -1,7 +1,13 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 const Navigation = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -16,6 +22,26 @@ const Navigation = () => {
               Home
             </Link>
             
+            <DropdownMenu>
+              <DropdownMenuTrigger className="text-foreground hover:text-primary font-medium flex items-center gap-1">
+                Custom Signs <ChevronDown className="h-4 w-4" />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="bg-background">
+                <DropdownMenuItem asChild>
+                  <Link to="/wall-hanging-signs" className="cursor-pointer">Wall Letters</Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link to="/layered-signs" className="cursor-pointer">Logos</Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link to="/food-truck-signs" className="cursor-pointer">Food Trucks</Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <a href="https://vintagemarqueelights.com/pages/custom-sign-request-form" className="cursor-pointer">Not Sure</a>
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
+            
             <Link to="/rental-inventory" className="text-foreground hover:text-primary font-medium">
               Build a Rental Inventory
             </Link>
@@ -23,18 +49,6 @@ const Navigation = () => {
             <Link to="/event-standup-signs" className="text-foreground hover:text-primary font-medium">
               36/48" Stand-Up Letters
             </Link>
-            
-            <Link to="/wall-hanging-signs" className="text-foreground hover:text-primary font-medium">
-              Wall-Hanging Signs
-            </Link>
-            
-            <Link to="/" className="text-foreground hover:text-primary font-medium">
-              Custom Signs
-            </Link>
-            
-            <a href="https://vintagemarqueelights.com/pages/custom-sign-request-form" className="text-foreground hover:text-primary font-medium">
-              Custom Request Form
-            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -61,6 +75,40 @@ const Navigation = () => {
                 Home
               </Link>
               
+              <div className="py-2">
+                <div className="text-foreground font-medium mb-2">Custom Signs</div>
+                <div className="pl-4 flex flex-col space-y-2">
+                  <Link
+                    to="/wall-hanging-signs"
+                    className="text-foreground hover:text-primary font-medium py-1"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Wall Letters
+                  </Link>
+                  <Link
+                    to="/layered-signs"
+                    className="text-foreground hover:text-primary font-medium py-1"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Logos
+                  </Link>
+                  <Link
+                    to="/food-truck-signs"
+                    className="text-foreground hover:text-primary font-medium py-1"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Food Trucks
+                  </Link>
+                  <a
+                    href="https://vintagemarqueelights.com/pages/custom-sign-request-form"
+                    className="text-foreground hover:text-primary font-medium py-1"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Not Sure
+                  </a>
+                </div>
+              </div>
+              
               <Link
                 to="/rental-inventory"
                 className="text-foreground hover:text-primary font-medium py-2"
@@ -76,30 +124,6 @@ const Navigation = () => {
               >
                 36/48" Stand-Up Letters
               </Link>
-              
-              <Link
-                to="/wall-hanging-signs"
-                className="text-foreground hover:text-primary font-medium py-2"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Wall-Hanging Signs
-              </Link>
-              
-              <Link
-                to="/"
-                className="text-foreground hover:text-primary font-medium py-2"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Custom Signs
-              </Link>
-              
-              <a
-                href="https://vintagemarqueelights.com/pages/custom-sign-request-form"
-                className="text-foreground hover:text-primary font-medium py-2"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Custom Request Form
-              </a>
             </div>
           </div>
         )}
