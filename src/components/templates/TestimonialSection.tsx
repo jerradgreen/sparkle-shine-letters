@@ -58,6 +58,7 @@ export const TestimonialSection = ({ config }: TestimonialSectionProps) => {
                       src={testimonial.image}
                       alt={`${testimonial.name} testimonial`}
                       className="w-full h-full object-cover"
+                      style={testimonial.imageStyle}
                     />
                   </div>
                   <div className="text-center">

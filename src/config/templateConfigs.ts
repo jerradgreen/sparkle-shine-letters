@@ -373,7 +373,8 @@ export const standUpSignsConfig: TemplateConfig = {
         role: "Event Coordinator",
         content: "Ready to set up right out of the boxes. Great quality and exactly what we needed for our venue and event.",
         rating: 5,
-        image: testimonialLakeshaOutdoor
+        image: testimonialLakeshaOutdoor,
+        imageStyle: { filter: 'sepia(0.2) contrast(0.9) brightness(1.05) saturate(0.85)' }
       }
     ]
   },

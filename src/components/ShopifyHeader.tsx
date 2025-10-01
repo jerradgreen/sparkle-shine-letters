@@ -13,12 +13,12 @@ const ShopifyHeader = () => {
       {/* Simplified Header with Logo Only */}
       <div className="bg-transparent">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-center items-center py-4">
+          <div className="flex justify-center items-center py-2">
             <a href="https://vintagemarqueelights.com" className="flex items-center">
               <img 
                 src={logoImage} 
                 alt="Vintage Marquee Lights" 
-                className="h-16 w-auto"
+                className="h-12 w-auto"
               />
             </a>
           </div>

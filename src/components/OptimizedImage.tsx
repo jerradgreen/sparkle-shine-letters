@@ -6,9 +6,10 @@ interface OptimizedImageProps {
   className?: string;
   loading?: "lazy" | "eager";
   priority?: boolean;
+  style?: React.CSSProperties;
 }
 
-const OptimizedImage = ({ src, alt, className = "", loading = "lazy", priority = false }: OptimizedImageProps) => {
+const OptimizedImage = ({ src, alt, className = "", loading = "lazy", priority = false, style }: OptimizedImageProps) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
 
@@ -39,6 +40,7 @@ const OptimizedImage = ({ src, alt, className = "", loading = "lazy", priority =
         className={`${className} transition-opacity duration-300 ${
           isLoaded ? 'opacity-100' : 'opacity-0'
         }`}
+        style={style}
         loading={priority ? "eager" : loading}
         onLoad={handleLoad}
         onError={handleError}

@@ -36,6 +36,7 @@ export interface TemplateConfig {
       content: string;
       rating: number;
       image: string;
+      imageStyle?: React.CSSProperties;
     }>;
   };
   

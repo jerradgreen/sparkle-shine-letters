@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ShopifyHeader from "@/components/ShopifyHeader";
+import { HomeHighlightsSection } from "@/components/HomeHighlightsSection";
+import { Star } from "lucide-react";
 
 // Import all assets
 import eventStandup from "@/assets/event-standup.jpg";
@@ -15,7 +17,7 @@ import chopSueySign from "@/assets/chop-suey-sign.jpg";
 const signStyles = [
   {
     title: "Individual Wall Letters",
-    description: "Separate marquee letters that hang on walls like artwork. Perfect for shops, studios & home décor.",
+    description: "Separate marquee letters that hang on walls like artwork. Perfect for restaurants, shops, home decor or anywhere that needs a pop!",
     image: chopSueySign,
     link: "/wall-hanging-signs",
     imagePosition: "center 10%",
@@ -28,22 +30,22 @@ const signStyles = [
   },
   {
     title: "Food Truck Signs",
-    description: "Bold illuminated signage for food trucks & mobile vendors. More eyeballs = more sales!",
+    description: "Bold illuminated signage for food trucks, mobile vendors. More eyeballs, more sales!",
     image: foodTruckBarMonte,
     link: "/food-truck-signs",
     imagePosition: "center 10%",
   },
   {
-    title: "36\"/48\" Event Letters",
-    description: "Large freestanding marquee letters for weddings, parties & corporate events. Easy setup.",
+    title: "36\" - 48\" Stand-Up Signs for Events",
+    description: "Large, commercial grade, freestanding marquee letters for weddings, corporate events, or any celebration.",
     image: eventStandup,
     link: "/event-standup-signs",
     imagePosition: "center 35%",
     imageScale: "scale-125",
   },
   {
-    title: "Build Rental Inventory",
-    description: "Start your own marquee sign rental business. Complete packages with ongoing support.",
+    title: "Rental Inventory Packages",
+    description: "Purchase a rental inventory package and start your own marquee light rental business, or expand your current offerings.",
     image: rentalInventory,
     link: "/rental-inventory",
   },
@@ -53,6 +55,7 @@ const signStyles = [
     image: "https://dl.dropboxusercontent.com/scl/fi/zow5dope9wbfhay9lfcmq/custom-collage3.jpg?rlkey=btz40y0zyzbeb7h7y9kuajvbj",
     link: "https://vintagemarqueelights.com/pages/custom-sign-request-form",
     isExternal: true,
+    hideBottomText: true,
   },
 ];
 
@@ -71,17 +74,23 @@ const Index = () => {
       {/* Main Content */}
       <div className="container mx-auto px-6 py-4">
         {/* Hero Section */}
-        <div className="text-center mb-6">
-          <h1 className="text-3xl md:text-4xl font-bold mb-2 text-foreground">
-            What Style Are You Looking For?
+        <div className="text-center mb-4">
+          <h1 className="text-3xl md:text-4xl font-bold mb-3 text-foreground">
+            Trusted by Thousands. Built for the Spotlight.
           </h1>
-          <p className="text-lg text-muted-foreground mb-1 max-w-3xl mx-auto">
-            Click on the style that best matches your vision
+          <p className="text-lg text-muted-foreground mb-2 max-w-3xl mx-auto">
+            Choose the marquee sign style that fits your vision and see how easy it is to make it yours.
           </p>
-          <p className="text-sm text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-xl font-medium text-foreground max-w-3xl mx-auto mb-1">
+            💡 Just click the style below to get started.
+          </p>
+          <p className="text-sm text-muted-foreground italic max-w-3xl mx-auto">
             Trusted by thousands of businesses, event pros, and creatives across the U.S.
           </p>
         </div>
+
+        {/* Three Features Section */}
+        <HomeHighlightsSection />
 
         {/* Visual Selection Grid */}
         <div className="mb-12">
@@ -110,9 +119,11 @@ const Index = () => {
                               <p className="text-white/90 text-base">
                                 {style.description}
                               </p>
-                              <div className="mt-4 text-white font-bold text-lg flex items-center gap-2">
-                                Get a custom quote <span className="text-2xl">→</span>
-                              </div>
+                              {!style.hideBottomText && (
+                                <div className="mt-4 text-white text-xs flex items-center gap-1">
+                                  click for more <span className="text-sm">→</span>
+                                </div>
+                              )}
                             </div>
                           </div>
                         </div>
@@ -134,9 +145,11 @@ const Index = () => {
                               <p className="text-white/90 text-base">
                                 {style.description}
                               </p>
-                              <div className="mt-4 text-white font-semibold flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
-                                Click to explore <span className="text-xl">→</span>
-                              </div>
+                              {!style.hideBottomText && (
+                                <div className="mt-4 text-white text-xs flex items-center gap-1">
+                                  click for more <span className="text-sm">→</span>
+                                </div>
+                              )}
                             </div>
                           </div>
                         </div>
@@ -147,6 +160,28 @@ const Index = () => {
               );
             })}
           </div>
+        </div>
+
+        {/* 5-Star Review Section */}
+        <div className="mb-12 max-w-4xl mx-auto">
+          <Card className="bg-muted/30 border-2">
+            <CardContent className="pt-6">
+              <div className="flex justify-center mb-3">
+                {[1, 2, 3, 4, 5].map((star) => (
+                  <Star key={star} className="w-5 h-5 fill-primary text-primary" />
+                ))}
+              </div>
+              <p className="text-center text-muted-foreground mb-4 italic">
+                "From initial concept sketches to the final mockups and delivery, the entire process was seamless. The finished sign exceeded our expectations and has become a signature piece across all our locations. Professional, high-quality work from start to finish."
+              </p>
+              <p className="text-center font-semibold text-foreground">
+                — Michael A., SC
+              </p>
+              <p className="text-center text-sm text-muted-foreground">
+                Chain of Retail Food Stores
+              </p>
+            </CardContent>
+          </Card>
         </div>
 
         {/* Instagram Gallery Section */}
