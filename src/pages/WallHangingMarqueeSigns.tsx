@@ -9,9 +9,6 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Hammer, Lightbulb, Frame, PenTool, Home, Settings, Camera, Clock, Shield } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import OptimizedImage from "@/components/OptimizedImage";
-import processStep1 from "@/assets/process-step-1.mp4";
-import processStep2 from "@/assets/process-step-2.mp4";
-import processStep3 from "@/assets/process-step-3.mp4";
 import heroImage from "@/assets/wall-hanging.jpg";
 import { Check } from "lucide-react";
 
@@ -342,7 +339,7 @@ const WallHangingMarqueeSigns = () => {
             <div className="text-center">
               <div className="w-32 h-32 mx-auto mb-6 flex items-center justify-center rounded-lg overflow-hidden bg-muted/40 ring-1 ring-border/40">
                 <video 
-                  src={processStep1}
+                  src="/process-step-1.mp4"
                   autoPlay
                   loop
                   muted
@@ -364,7 +361,7 @@ const WallHangingMarqueeSigns = () => {
             <div className="text-center">
               <div className="w-32 h-32 mx-auto mb-6 flex items-center justify-center rounded-lg overflow-hidden bg-muted/40 ring-1 ring-border/40">
                 <video 
-                  src={processStep2}
+                  src="/process-step-2.mp4"
                   autoPlay
                   loop
                   muted
@@ -386,7 +383,7 @@ const WallHangingMarqueeSigns = () => {
             <div className="text-center">
               <div className="w-32 h-32 mx-auto mb-6 flex items-center justify-center rounded-lg overflow-hidden bg-muted/40 ring-1 ring-border/40">
                 <video 
-                  src={processStep3}
+                  src="/process-step-3.mp4"
                   autoPlay
                   loop
                   muted
