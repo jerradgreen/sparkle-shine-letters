@@ -338,14 +338,11 @@ const WallHangingMarqueeSigns = () => {
             {/* Step 1 */}
             <div className="text-center">
               <div className="w-32 h-32 mx-auto mb-6 flex items-center justify-center rounded-lg overflow-hidden bg-muted/40 ring-1 ring-border/40">
-                <video 
-                  src="/process-step-1.mp4"
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  preload="metadata"
+                <OptimizedImage 
+                  src="/lovable-uploads/d86c2d98-97ca-4233-a7b6-6fea60a0dc18.png" 
+                  alt="Step 1 - vintage marquee number 1" 
                   className="w-full h-full object-cover rounded-lg"
+                  loading="lazy"
                 />
               </div>
               <h3 className="text-2xl font-bold mb-4 text-foreground">Step 1: Tell Us What You Want</h3>
@@ -360,14 +357,11 @@ const WallHangingMarqueeSigns = () => {
             {/* Step 2 */}
             <div className="text-center">
               <div className="w-32 h-32 mx-auto mb-6 flex items-center justify-center rounded-lg overflow-hidden bg-muted/40 ring-1 ring-border/40">
-                <video 
-                  src="/process-step-2.mp4"
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  preload="metadata"
+                <OptimizedImage 
+                  src="/lovable-uploads/3a1aa8ae-0d8f-463a-9102-dd8aef074419.png" 
+                  alt="Step 2 - vintage marquee number 2" 
                   className="w-full h-full object-cover rounded-lg"
+                  loading="lazy"
                 />
               </div>
               <h3 className="text-2xl font-bold mb-4 text-foreground">Step 2: We Handcraft Your Sign</h3>
@@ -382,14 +376,11 @@ const WallHangingMarqueeSigns = () => {
             {/* Step 3 */}
             <div className="text-center">
               <div className="w-32 h-32 mx-auto mb-6 flex items-center justify-center rounded-lg overflow-hidden bg-muted/40 ring-1 ring-border/40">
-                <video 
-                  src="/process-step-3.mp4"
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  preload="metadata"
+                <OptimizedImage 
+                  src="/lovable-uploads/969e0a29-c68d-4a84-b260-590b946f35dd.png" 
+                  alt="Step 3 - vintage marquee number 3" 
                   className="w-full h-full object-cover rounded-lg"
+                  loading="lazy"
                 />
               </div>
               <h3 className="text-2xl font-bold mb-4 text-foreground">Step 3: Hang & Enjoy</h3>
@@ -415,45 +406,54 @@ const WallHangingMarqueeSigns = () => {
           <div className="grid md:grid-cols-3 gap-6">
             <Card className="overflow-hidden">
               <CardContent className="p-0">
-                <OptimizedImage 
-                  src="/src/assets/wall-hanging-freakshow.jpg" 
-                  alt="FREAKSHOW marquee letters final result" 
+                <video 
+                  src="/process-step-1.mp4"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  preload="metadata"
                   className="w-full h-64 object-cover"
-                  loading="lazy"
                 />
                 <div className="p-4">
-                  <h3 className="font-bold mb-1">FREAKSHOW</h3>
-                  <p className="text-sm text-muted-foreground">Bold vintage block letters with classic red finish</p>
+                  <h3 className="font-bold mb-1">Step 1: Your Vision</h3>
+                  <p className="text-sm text-muted-foreground">Share your ideas and we'll bring them to life</p>
                 </div>
               </CardContent>
             </Card>
 
             <Card className="overflow-hidden">
               <CardContent className="p-0">
-                <OptimizedImage 
-                  src="/src/assets/wall-hanging-parliament.jpg" 
-                  alt="Parliament script marquee sign" 
+                <video 
+                  src="/process-step-2.mp4"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  preload="metadata"
                   className="w-full h-64 object-cover"
-                  loading="lazy"
                 />
                 <div className="p-4">
-                  <h3 className="font-bold mb-1">Parliament</h3>
-                  <p className="text-sm text-muted-foreground">Elegant script font with warm copper tones</p>
+                  <h3 className="font-bold mb-1">Step 2: Expert Crafting</h3>
+                  <p className="text-sm text-muted-foreground">Watch your sign come together with care</p>
                 </div>
               </CardContent>
             </Card>
 
             <Card className="overflow-hidden">
               <CardContent className="p-0">
-                <OptimizedImage 
-                  src="/src/assets/wall-hanging-google.jpg" 
-                  alt="Google colorful marquee letters" 
+                <video 
+                  src="/process-step-3.mp4"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  preload="metadata"
                   className="w-full h-64 object-cover"
-                  loading="lazy"
                 />
                 <div className="p-4">
-                  <h3 className="font-bold mb-1">Google</h3>
-                  <p className="text-sm text-muted-foreground">Multi-color custom painted letters on reclaimed wood</p>
+                  <h3 className="font-bold mb-1">Step 3: Final Result</h3>
+                  <p className="text-sm text-muted-foreground">Your custom statement piece ready to shine</p>
                 </div>
               </CardContent>
             </Card>
