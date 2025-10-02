@@ -57,7 +57,7 @@ export const GallerySection = ({ config }: GallerySectionProps) => {
                 <OptimizedImage
                   src={image.src}
                   alt={image.alt}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500"
                 />
               </div>
               

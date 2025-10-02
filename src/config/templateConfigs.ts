@@ -4,6 +4,9 @@ import { TemplateConfig } from '@/types/template';
 import testimonialRealistic1 from '@/assets/testimonial-realistic-1.jpg';
 import testimonialDavidBrick from '@/assets/testimonial-david-brick.jpg';
 import testimonialLakeshaOutdoor from '@/assets/testimonial-lakesha-outdoor.jpg';
+import testimonialIndoorWoman from '@/assets/testimonial-indoor-woman.jpg';
+import testimonialOutdoorMan from '@/assets/testimonial-outdoor-man.jpg';
+import testimonialChefRestaurant from '@/assets/testimonial-chef-restaurant.jpg';
 
 // Import gallery images
 import image1969 from '@/assets/1969.jpeg';
@@ -207,21 +210,21 @@ export const wallHangingConfig: TemplateConfig = {
         role: "Coffee Shop Owner",
         content: "The wall-hanging letters transformed our café! The warm glow creates the perfect ambiance and customers love taking photos with them.",
         rating: 5,
-        image: "/src/assets/testimonial-sarah.jpg"
+        image: testimonialIndoorWoman
       },
       {
-        name: "David Chen",
-        role: "Wedding Planner",
-        content: "These signs are perfect for photo backdrops! The vintage aesthetic and warm lighting photograph beautifully. Couples are obsessed!",
+        name: "James Thompson",
+        role: "Bar Owner",
+        content: "These signs are perfect for our outdoor patio! The vintage aesthetic and warm lighting create an amazing atmosphere. Best decision we made!",
         rating: 5,
-        image: "/src/assets/testimonial-david-brick.jpg"
+        image: testimonialOutdoorMan
       },
       {
-        name: "LaKesha Williams",
-        role: "Boutique Owner",
-        content: "Love how they develop character over time! We have ours on our outdoor patio and the natural patina makes them look even better.",
+        name: "Chef Marcus Rodriguez",
+        role: "Restaurant Owner",
+        content: "Love how they look in our dining room! The authentic marquee glow gives our restaurant such great character and our customers can't stop posting photos.",
         rating: 5,
-        image: "/src/assets/testimonial-lakesha.jpg"
+        image: testimonialChefRestaurant
       }
     ]
   },

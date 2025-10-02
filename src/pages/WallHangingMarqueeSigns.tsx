@@ -38,7 +38,7 @@ const WallHangingMarqueeSigns = () => {
       <ShopifyHeader />
       
       {/* Hero Section */}
-      <section className="relative py-8 px-4 bg-gradient-to-br from-primary/10 to-accent/10 mt-4">
+      <section className="relative py-8 px-4 bg-gradient-to-br from-primary/10 to-accent/10">
         <div className="max-w-6xl mx-auto">
           {/* Mobile Layout */}
           <div className="lg:hidden">
@@ -82,15 +82,15 @@ const WallHangingMarqueeSigns = () => {
 
               {/* Review */}
               <div className="bg-card/50 p-4 rounded-lg border border-primary/20">
-                <div className="flex gap-1 mb-2">
+                <div className="flex gap-1 mb-2 justify-center">
                   {[...Array(5)].map((_, i) => (
                     <span key={i} className="text-yellow-500">★</span>
                   ))}
                 </div>
-                <p className="text-sm text-muted-foreground italic mb-2">
+                <p className="text-sm text-muted-foreground italic mb-2 text-center">
                   "These signs are absolutely stunning! The quality is top-notch and they add such character to our space."
                 </p>
-                <p className="text-xs text-muted-foreground font-semibold">— Michael A., SC</p>
+                <p className="text-xs text-muted-foreground font-semibold text-center">— Michael A., SC</p>
               </div>
             </div>
           </div>
@@ -136,15 +136,15 @@ const WallHangingMarqueeSigns = () => {
 
               {/* Review */}
               <div className="bg-card/50 p-4 rounded-lg border border-primary/20">
-                <div className="flex gap-1 mb-2">
+                <div className="flex gap-1 mb-2 justify-center">
                   {[...Array(5)].map((_, i) => (
                     <span key={i} className="text-yellow-500">★</span>
                   ))}
                 </div>
-                <p className="text-sm text-muted-foreground italic mb-2">
+                <p className="text-sm text-muted-foreground italic mb-2 text-center">
                   "These signs are absolutely stunning! The quality is top-notch and they add such character to our space."
                 </p>
-                <p className="text-xs text-muted-foreground font-semibold">— Michael A., SC</p>
+                <p className="text-xs text-muted-foreground font-semibold text-center">— Michael A., SC</p>
               </div>
             </div>
           </div>
@@ -152,36 +152,42 @@ const WallHangingMarqueeSigns = () => {
       </section>
 
       {/* Feature Cards - 3 features */}
-      <section className="py-8 px-4 bg-muted/30">
+      <section className="py-6 px-4 bg-muted/30">
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <Card className="border-primary/20 hover:border-primary/40 transition-colors">
-              <CardContent className="p-6 text-center">
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Hammer className="w-8 h-8 text-primary" />
+              <CardContent className="p-4 flex items-center gap-4">
+                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                  <Hammer className="w-6 h-6 text-primary" />
                 </div>
-                <h3 className="text-lg font-semibold mb-2 text-card-foreground">Painted Steel Construction</h3>
-                <p className="text-sm text-muted-foreground">Hand-painted, solid steel with vintage patina over time</p>
+                <div>
+                  <h3 className="text-base font-semibold mb-1 text-card-foreground">Painted Steel Construction</h3>
+                  <p className="text-xs text-muted-foreground">Hand-painted, solid steel with vintage patina over time</p>
+                </div>
               </CardContent>
             </Card>
 
             <Card className="border-primary/20 hover:border-primary/40 transition-colors">
-              <CardContent className="p-6 text-center">
-                <div className="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Lightbulb className="w-8 h-8 text-secondary" />
+              <CardContent className="p-4 flex items-center gap-4">
+                <div className="w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                  <Lightbulb className="w-6 h-6 text-secondary" />
                 </div>
-                <h3 className="text-lg font-semibold mb-2 text-card-foreground">Warm Classic Glow</h3>
-                <p className="text-sm text-muted-foreground">Globe bulbs with a warm, soft glow that photographs beautifully</p>
+                <div>
+                  <h3 className="text-base font-semibold mb-1 text-card-foreground">Warm Classic Glow</h3>
+                  <p className="text-xs text-muted-foreground">Globe bulbs with a warm, soft glow that photographs beautifully</p>
+                </div>
               </CardContent>
             </Card>
 
             <Card className="border-primary/20 hover:border-primary/40 transition-colors">
-              <CardContent className="p-6 text-center">
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <PenTool className="w-8 h-8 text-primary" />
+              <CardContent className="p-4 flex items-center gap-4">
+                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                  <PenTool className="w-6 h-6 text-primary" />
                 </div>
-                <h3 className="text-lg font-semibold mb-2 text-card-foreground">Any Font Style</h3>
-                <p className="text-sm text-muted-foreground">Choose from script, block, serif, or custom fonts to match your brand</p>
+                <div>
+                  <h3 className="text-base font-semibold mb-1 text-card-foreground">Any Font Style</h3>
+                  <p className="text-xs text-muted-foreground">Choose from script, block, serif, or custom fonts to match your brand</p>
+                </div>
               </CardContent>
             </Card>
           </div>
