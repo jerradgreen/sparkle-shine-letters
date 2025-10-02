@@ -151,13 +151,15 @@ export const wallHangingConfig: TemplateConfig = {
   keywords: ["wall hanging marquee", "painted steel letters", "vintage marquee signs", "wall mounted lights", "retro signage", "industrial décor"],
   
   hero: {
-    headline: "Custom Wall-Hanging Marquee Signs",
-    subheadline: "Individual painted steel letters that hang like artwork. Classic warm glow for shops, restaurants, homes, business, or anywhere looking for some style.",
-    ctaText: "Get Your Quote",
+    headline: "Bring Your Walls to Life with Vintage Marquee Letters",
+    subheadline: "Handcrafted steel letters that hang like artwork and glow with timeless charm. Perfect for homes, restaurants, studios, shops, or any space that needs bold personality.",
+    ctaText: "Get a Custom Quote in Under 5 Minutes",
+    secondaryCtaText: "See Real Sign Examples",
     ctaAction: "pricing",
     heroImage: "/src/assets/wall-hanging.jpg",
     heroImageAlt: "Vintage wall-hanging marquee letters on rustic wood wall",
-    layout: "image-right"
+    layout: "image-right",
+    trustBar: "Trusted by shops, studios, and restaurants across the country"
   },
   
   features: {

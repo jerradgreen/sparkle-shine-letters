@@ -9,10 +9,12 @@ export interface TemplateConfig {
     headline: string;
     subheadline: string;
     ctaText: string;
+    secondaryCtaText?: string;
     ctaAction: string;
     heroImage: string;
     heroImageAlt: string;
     layout: 'image-left' | 'image-right' | 'centered';
+    trustBar?: string;
   };
   
   // Features Section
