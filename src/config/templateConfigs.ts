@@ -7,8 +7,13 @@ import testimonialLakeshaOutdoor from '@/assets/testimonial-lakesha-outdoor.jpg'
 import testimonialIndoorWoman from '@/assets/testimonial-indoor-woman.jpg';
 import testimonialOutdoorMan from '@/assets/testimonial-outdoor-man.jpg';
 import testimonialChef from '@/assets/testimonial-chef-restaurant.jpg';
+import testimonialWhiteMale from '@/assets/testimonial-white-male.jpg';
+import testimonialBlackWoman from '@/assets/testimonial-black-woman.jpg';
 
 // Import gallery images
+import logoTucks1 from '@/assets/logo-tucks-1.jpg';
+import logoTucks2 from '@/assets/logo-tucks-2.jpg';
+import logoTucks3 from '@/assets/logo-tucks-3.jpg';
 import image1969 from '@/assets/1969.jpeg';
 import imageElev8 from '@/assets/elev8.jpeg';
 import imageMarryMe from '@/assets/marry-me.jpg';
@@ -24,6 +29,9 @@ import wallHangingParliament from '@/assets/wall-hanging-parliament.jpg';
 import galleryElement from '@/assets/gallery-element.jpg';
 import layeredSignsHero from '@/assets/layered-signs.jpg';
 import heroLockwoods from '@/assets/hero-lockwoods.jpg';
+import chopSueySign from '@/assets/chop-suey-sign.jpg';
+import marquee1 from '@/assets/marquee-1.png';
+import marquee2 from '@/assets/marquee-2.png';
 
 // 3D Layered Signs Template
 export const layeredSignsConfig: TemplateConfig = {
@@ -612,5 +620,179 @@ export const foodTruckSignsConfig: TemplateConfig = {
     accentColor: "#FBBF24",
     gradientFrom: "#DC2626",
     gradientTo: "#EA580C"
+  }
+};
+
+// 3D Logo Layered Signs Template
+export const logoSignsConfig: TemplateConfig = {
+  pageTitle: "3D Logo Layered Signs - Custom Brand Signage with Depth & Dimension",
+  metaDescription: "Custom layered metal signs that bring your logo to life with depth, color, and bold dimension. Perfect for walls, lobbies, event backdrops, and branded spaces.",
+  keywords: ["3D logo signs", "layered logo signs", "dimensional logo", "brand signage", "custom logo", "3D metal signs", "office signage"],
+  
+  hero: {
+    headline: "Make Your Brand Stand Out in 3D",
+    subheadline: "Custom layered metal signs that bring your logo to life with depth, color, and bold dimension. Perfect for walls, lobbies, event backdrops, and branded spaces.",
+    ctaText: "Get My Custom 3D Logo Quote",
+    secondaryCtaText: "See Real 3D Logos",
+    ctaAction: "pricing",
+    heroImage: logoTucks1,
+    heroImageAlt: "Tuck's Truffles 3D layered logo sign with dimensional depth",
+    layout: "image-left",
+    trustBar: "Trusted by businesses, creators, and event pros nationwide"
+  },
+  
+  features: {
+    title: "Why People Love Our 3D Logo Signs",
+    subtitle: "Built to make your brand impossible to ignore",
+    items: [
+      {
+        title: "Multi-Layer Metal Build",
+        description: "Each layer is precision-cut and assembled by hand to create stunning visual depth that makes your logo pop off the wall.",
+        icon: "🔧"
+      },
+      {
+        title: "Bold Branding That Pops",
+        description: "Eye-catching dimensional design that photographs beautifully and creates lasting impressions with clients and customers.",
+        icon: "✨"
+      },
+      {
+        title: "Lightweight & Mount-Ready",
+        description: "Despite the dramatic appearance, our signs are surprisingly lightweight and easy to install on any wall or backdrop.",
+        icon: "⚡"
+      },
+      {
+        title: "Indoor & Event-Ready",
+        description: "Perfect for office lobbies, retail stores, trade show booths, conference backdrops, and branded photo walls.",
+        icon: "🏢"
+      },
+      {
+        title: "Fully Custom Colors",
+        description: "Match your exact brand colors with precision painting. We can replicate any Pantone, hex code, or color sample you provide.",
+        icon: "🎨"
+      },
+      {
+        title: "Optional LED Backlighting",
+        description: "Add dramatic LED backlighting to make your logo glow and stand out even more in dim environments or evening events.",
+        icon: "💡"
+      }
+    ]
+  },
+  
+  testimonials: {
+    title: "What Business Owners Are Saying",
+    items: [
+      {
+        name: "Crystal R.",
+        role: "Boutique Owner",
+        content: "We love our new sign! It completely transformed our office wall and made our brand pop. Everyone asks where we got it.",
+        rating: 5,
+        image: testimonialWhiteMale
+      },
+      {
+        name: "Marcus T.",
+        role: "Event Planner",
+        content: "The 3D logo signs are a game-changer for our corporate events. Clients are blown away by the professional look and dimensional impact.",
+        rating: 5,
+        image: testimonialBlackWoman
+      },
+      {
+        name: "Jennifer L.",
+        role: "Marketing Director",
+        content: "Our 3D logo sign is the centerpiece of our lobby. It's a conversation starter and perfectly represents our brand's bold personality.",
+        rating: 5,
+        image: testimonialChef
+      }
+    ]
+  },
+  
+  pricing: {
+    title: "Custom Pricing for Your Brand",
+    subtitle: "Every logo is unique - let us create the perfect sign for you",
+    packages: [
+      {
+        name: "Get Your Custom Quote",
+        description: "3D logo signs are custom-made based on your logo complexity, size, color requirements, and finish options. Contact us for a personalized quote.",
+        priceRange: "Custom Pricing",
+        features: [
+          "Precision-cut metal layers",
+          "Hand-assembled construction",
+          "Exact brand color matching",
+          "Multiple size options available",
+          "Optional LED backlighting",
+          "Professional installation hardware",
+          "Perfect for offices, events, retail spaces"
+        ],
+        ctaText: "Request Custom Quote"
+      }
+    ]
+  },
+  
+  gallery: {
+    title: "Real 3D Logo Signs in Action",
+    subtitle: "See how dimensional signage transforms branded spaces",
+    images: [
+      { src: logoTucks1, alt: "Tuck's Truffles 3D layered logo sign" },
+      { src: logoTucks2, alt: "Tuck's Truffles dimensional logo close-up" },
+      { src: logoTucks3, alt: "Tuck's Truffles multi-layer logo installation" },
+      { src: chopSueySign, alt: "Chop Suey custom 3D logo sign" },
+      { src: marquee1, alt: "3D marquee logo with dimensional layers" },
+      { src: marquee2, alt: "Layered metal logo sign with depth" },
+      { src: galleryGoogle, alt: "Google colorful 3D logo letters" },
+      { src: galleryElement, alt: "Element 3D logo sign on wood wall" },
+      { src: galleryFreakshow, alt: "Freakshow dimensional logo display" }
+    ]
+  },
+  
+  faq: {
+    title: "Frequently Asked Questions",
+    items: [
+      {
+        question: "What's the turnaround time?",
+        answer: "Custom 3D logo signs typically take 4-6 weeks from final design approval to delivery. This includes design mockups, precision cutting, hand assembly, painting, and quality testing. Rush orders may be available for an additional fee."
+      },
+      {
+        question: "Can you match my logo colors exactly?",
+        answer: "Absolutely! We can match any Pantone color, hex code, or physical color sample you provide. Send us your brand guidelines and we'll ensure perfect color accuracy."
+      },
+      {
+        question: "How do I hang it?",
+        answer: "Each sign comes with professional mounting hardware. Most signs hang like a large picture frame using heavy-duty wall anchors. We provide detailed installation instructions, and professional installation services are available in select areas."
+      },
+      {
+        question: "Is this sign weatherproof?",
+        answer: "Our standard 3D logo signs are designed for indoor use in offices, lobbies, retail stores, and event spaces. For outdoor applications, we offer weather-resistant coating upgrades and sealed construction options."
+      },
+      {
+        question: "What if I don't have a logo yet?",
+        answer: "No problem! We work with businesses at all stages. We can recommend trusted graphic designers, or if you have a general idea, we can create simple mockups to help you visualize options before committing to a final design."
+      },
+      {
+        question: "What sizes are available?",
+        answer: "We create signs in a wide range of sizes, typically from 18 inches to 8 feet in width, depending on your logo design. During the quote process, we'll help you choose the perfect size for your space and budget."
+      },
+      {
+        question: "Can you add LED lighting?",
+        answer: "Yes! We offer optional LED backlighting that creates a dramatic halo effect behind your logo. This is especially popular for trade show booths, event backdrops, and evening installations."
+      },
+      {
+        question: "Do you work with food trucks and mobile vendors?",
+        answer: "Absolutely! Our lightweight construction makes these signs perfect for food trucks, trailers, and mobile vendors who want bold branding without adding excessive weight to their vehicles."
+      }
+    ]
+  },
+  
+  business: {
+    name: "3D Logo Layered Signs",
+    description: "Custom layered metal signs that bring logos to life with depth, color, and dimension for offices, events, and retail spaces.",
+    type: "Product",
+    industry: "commercial signage"
+  },
+  
+  theme: {
+    primaryColor: "#7C3AED",
+    secondaryColor: "#2563EB",
+    accentColor: "#8B5CF6",
+    gradientFrom: "#7C3AED",
+    gradientTo: "#2563EB"
   }
 };

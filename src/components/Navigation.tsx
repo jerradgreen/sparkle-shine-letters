@@ -30,9 +30,9 @@ const Navigation = () => {
                 <DropdownMenuItem asChild>
                   <Link to="/wall-hanging-signs" className="cursor-pointer">Wall Letters</Link>
                 </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link to="/layered-signs" className="cursor-pointer">Logos</Link>
-                </DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <Link to="/3d-logos" className="cursor-pointer">3D Logos</Link>
+              </DropdownMenuItem>
                 <DropdownMenuItem asChild>
                   <Link to="/food-truck-signs" className="cursor-pointer">Food Trucks</Link>
                 </DropdownMenuItem>
@@ -93,11 +93,11 @@ const Navigation = () => {
                     Wall Letters
                   </Link>
                   <Link
-                    to="/layered-signs"
+                    to="/3d-logos"
                     className="text-foreground hover:text-primary font-medium py-1"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
-                    Logos
+                    3D Logos
                   </Link>
                   <Link
                     to="/food-truck-signs"

@@ -10,6 +10,7 @@ import EventStandUpSigns from "./pages/EventStandUpSigns";
 import WallHangingMarqueeSigns from "./pages/WallHangingMarqueeSigns";
 import LayeredSigns from "./pages/LayeredSigns";
 import FoodTruckSigns from "./pages/FoodTruckSigns";
+import ThreeDLogos from "./pages/ThreeDLogos";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -28,6 +29,7 @@ const App = () => (
             <Route path="/wall-hanging-signs" element={<WallHangingMarqueeSigns />} />
             <Route path="/layered-signs" element={<LayeredSigns />} />
             <Route path="/food-truck-signs" element={<FoodTruckSigns />} />
+            <Route path="/3d-logos" element={<ThreeDLogos />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
