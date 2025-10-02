@@ -161,7 +161,7 @@ const ThreeDLogos = () => {
                 </div>
                 <div>
                   <h3 className="text-base font-semibold mb-1 text-card-foreground">Custom Layers, Real Depth</h3>
-                  <p className="text-xs text-muted-foreground">Multi-layered metal signs cut and built by hand for visual impact</p>
+                  <p className="text-xs text-muted-foreground">Multi-layered metal signs built by hand for dramatic dimensional branding</p>
                 </div>
               </CardContent>
             </Card>
@@ -173,7 +173,7 @@ const ThreeDLogos = () => {
                 </div>
                 <div>
                   <h3 className="text-base font-semibold mb-1 text-card-foreground">Unlimited Colors & Branding</h3>
-                  <p className="text-xs text-muted-foreground">Match any logo colors, brand style, or textures with full customization</p>
+                  <p className="text-xs text-muted-foreground">Match your brand style with layered paint, printing, or powder coating</p>
                 </div>
               </CardContent>
             </Card>
@@ -199,34 +199,6 @@ const ThreeDLogos = () => {
           <p className="text-sm text-muted-foreground font-medium">
             {logoSignsConfig.hero.trustBar}
           </p>
-        </div>
-      </section>
-
-      {/* Features Grid - 6 reasons */}
-      <section className="py-10 px-4 bg-gradient-to-b from-background to-muted/20">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-10">
-            <h2 className="text-3xl md:text-4xl font-bold mb-3">
-              <span className="bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent">
-                {logoSignsConfig.features.title}
-              </span>
-            </h2>
-            <p className="text-lg text-muted-foreground">{logoSignsConfig.features.subtitle}</p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {logoSignsConfig.features.items.map((feature, index) => (
-              <Card key={index} className="border-primary/20">
-                <CardContent className="p-6">
-                  <div className={`w-12 h-12 ${index % 2 === 0 ? 'bg-primary/10' : 'bg-secondary/10'} rounded-lg flex items-center justify-center mb-4`}>
-                    <span className={`text-2xl ${index % 2 === 0 ? 'text-primary' : 'text-secondary'}`}>{feature.icon}</span>
-                  </div>
-                  <h3 className="text-lg font-bold mb-2">{feature.title}</h3>
-                  <p className="text-sm text-muted-foreground">{feature.description}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
         </div>
       </section>
 
@@ -365,7 +337,7 @@ const ThreeDLogos = () => {
               </div>
               <h3 className="text-xl font-bold mb-3 text-foreground">Ships Ready to Install</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
-                Your sign arrives with mounting hardware and instructions. Just hang it up and watch your brand come to life.
+                Your sign arrives ready to hang. Just mount it and watch your brand come to life.
               </p>
             </div>
           </div>
@@ -380,20 +352,9 @@ const ThreeDLogos = () => {
             {logoSignsConfig.faq.items.map((item, index) => (
               <div key={index} className="space-y-2">
                 <h3 className="font-bold text-lg">{item.question}</h3>
-                <p className="text-muted-foreground">{item.answer}</p>
+                <p className="text-muted-foreground text-sm">{item.answer}</p>
               </div>
             ))}
-          </div>
-
-          <div className="mt-10 text-center">
-            <h3 className="text-2xl font-bold mb-4">Your logo deserves to be seen in 3D.</h3>
-            <Button 
-              size="lg" 
-              className="text-lg px-8 py-6"
-              onClick={() => window.open('https://www.cognitoforms.com/VintageMarqueeLights/EventStyleLettersQuoteForm', '_blank')}
-            >
-              Get My Custom 3D Logo Quote
-            </Button>
           </div>
         </div>
       </section>

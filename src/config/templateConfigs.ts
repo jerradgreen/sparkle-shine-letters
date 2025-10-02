@@ -9,9 +9,8 @@ import testimonialOutdoorMan from '@/assets/testimonial-outdoor-man.jpg';
 import testimonialChef from '@/assets/testimonial-chef-restaurant.jpg';
 import testimonialWhiteMale from '@/assets/testimonial-white-male.jpg';
 import testimonialBlackWoman from '@/assets/testimonial-black-woman.jpg';
-import testimonialPhoneSelfie1 from '@/assets/testimonial-phone-selfie-1.jpg';
-import testimonialPolaroid1 from '@/assets/testimonial-polaroid-1.jpg';
-import testimonialPhoneSelfie2 from '@/assets/testimonial-phone-selfie-2.jpg';
+import testimonialRealistic2 from '@/assets/testimonial-realistic-2.jpg';
+import testimonialRealistic3 from '@/assets/testimonial-realistic-3.jpg';
 
 // Import gallery images
 import logoTucks1 from '@/assets/logo-tucks-1.jpg';
@@ -695,21 +694,21 @@ export const logoSignsConfig: TemplateConfig = {
         role: "Boutique Owner",
         content: "We love our new sign! It completely transformed our office wall and made our brand pop. Everyone asks where we got it.",
         rating: 5,
-        image: testimonialPhoneSelfie1
+        image: testimonialRealistic1
       },
       {
         name: "Marcus T.",
         role: "Event Planner",
         content: "The 3D logo signs are a game-changer for our corporate events. Clients are blown away by the professional look and dimensional impact.",
         rating: 5,
-        image: testimonialPolaroid1
+        image: testimonialRealistic2
       },
       {
         name: "Jennifer L.",
         role: "Marketing Director",
         content: "Our layered sign is the centerpiece of our lobby. It's a conversation starter and perfectly represents our brand's bold personality.",
         rating: 5,
-        image: testimonialPhoneSelfie2
+        image: testimonialRealistic3
       }
     ]
   },
@@ -737,8 +736,8 @@ export const logoSignsConfig: TemplateConfig = {
   },
   
   gallery: {
-    title: "Real 3D Logos in Real Spaces",
-    subtitle: "See how dimensional signage transforms branded spaces",
+    title: "3D Layered Logo Sign Gallery",
+    subtitle: "",
     images: [
       { src: chicagoLayeredSign, alt: "Chicago layered 3D logo sign" },
       { src: exitzero1LayeredSign, alt: "Exit Zero layered dimensional logo" },
@@ -753,24 +752,28 @@ export const logoSignsConfig: TemplateConfig = {
     title: "Frequently Asked Questions",
     items: [
       {
-        question: "How do I hang a 3D logo sign?",
-        answer: "Most signs include mounting holes or can be paired with a custom frame or bar. We'll make it easy."
+        question: "What kind of file do you need?",
+        answer: "We prefer an Illustrator or vector file for the best quality, but we can work with most file types including JPG, PNG, and PDF."
       },
       {
         question: "Can you match my brand colors exactly?",
-        answer: "Yes! We can color-match using provided HEX, Pantone, or CMYK references."
+        answer: "Yes! We can color-match using provided HEX, Pantone, or CMYK references. Custom color matching is an additional cost."
       },
       {
         question: "What sizes do you offer?",
-        answer: "We can make almost any size, but most signs range from 24\" to 60\" wide. Let us know what space you're working with."
+        answer: "We can make almost any size, but most signs range from 24\" to 60\" wide. Let us know what space you're working with. We charge by the square-inch and per color."
       },
       {
         question: "Can I use my logo or design?",
         answer: "Yes — just upload it! We work from logos, sketches, or even rough concepts."
       },
       {
-        question: "Do these signs light up?",
-        answer: "Yes — backlighting or internal lighting is available as an upgrade."
+        question: "How do they ship?",
+        answer: "Typically we ship UPS ground unless the size is too large, then we use freight."
+      },
+      {
+        question: "What's the turn-around time?",
+        answer: "We need 4-6 weeks from the day the order is finalized to handcraft your custom sign. Rush orders are available for an additional fee if you need it sooner."
       }
     ]
   },
