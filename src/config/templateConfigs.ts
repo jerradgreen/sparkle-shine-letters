@@ -6,7 +6,7 @@ import testimonialDavidBrick from '@/assets/testimonial-david-brick.jpg';
 import testimonialLakeshaOutdoor from '@/assets/testimonial-lakesha-outdoor.jpg';
 import testimonialIndoorWoman from '@/assets/testimonial-indoor-woman.jpg';
 import testimonialOutdoorMan from '@/assets/testimonial-outdoor-man.jpg';
-import testimonialDavid from '@/assets/testimonial-david-brick.jpg';
+import testimonialChef from '@/assets/testimonial-chef-restaurant.jpg';
 
 // Import gallery images
 import image1969 from '@/assets/1969.jpeg';
@@ -233,7 +233,7 @@ export const wallHangingConfig: TemplateConfig = {
         role: "Restaurant Owner",
         content: "The custom marquee sign has become the centerpiece of our restaurant. It creates the perfect ambiance and our customers love it!",
         rating: 5,
-        image: testimonialDavid
+        image: testimonialChef
       }
     ]
   },

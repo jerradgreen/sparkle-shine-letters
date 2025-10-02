@@ -35,12 +35,6 @@ export const GallerySection = ({ config }: GallerySectionProps) => {
                   className="w-full h-full object-contain"
                 />
               </div>
-              
-              {image.caption && (
-                <div className="absolute bottom-0 left-0 right-0 bg-black/50 text-white text-center p-2">
-                  <p className="text-sm">{image.caption}</p>
-                </div>
-              )}
             </div>
           ))}
         </div>
