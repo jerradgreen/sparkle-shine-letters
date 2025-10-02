@@ -12,6 +12,9 @@ import testimonialBlackWoman from '@/assets/testimonial-black-woman.jpg';
 import testimonialRealistic2 from '@/assets/testimonial-realistic-2.jpg';
 import testimonialRealistic3 from '@/assets/testimonial-realistic-3.jpg';
 import testimonialVintagePolaroid from '@/assets/testimonial-vintage-polaroid.jpg';
+import testimonialFoodVendor1 from '@/assets/testimonial-food-vendor-1.jpg';
+import testimonialFoodVendor2 from '@/assets/testimonial-food-vendor-2.jpg';
+import testimonialBarbcutieTruck from '@/assets/testimonial-barbcutie-truck.jpg';
 
 // Import gallery images
 import logoTucks1 from '@/assets/logo-tucks-1.jpg';
@@ -41,6 +44,7 @@ import heroLockwoods from '@/assets/hero-lockwoods.jpg';
 import chopSueySign from '@/assets/chop-suey-sign.jpg';
 import marquee1 from '@/assets/marquee-1.png';
 import marquee2 from '@/assets/marquee-2.png';
+import foodTruckBarMonte from '@/assets/food-truck-bar-monte.jpg';
 
 // 3D Layered Signs Template
 export const layeredSignsConfig: TemplateConfig = {
@@ -486,48 +490,35 @@ export const foodTruckSignsConfig: TemplateConfig = {
   keywords: ["food truck signs", "mobile vendor signs", "illuminated menu boards", "custom food signage", "food truck lighting", "vendor marquee signs"],
   
   hero: {
-    headline: "Custom Food Truck Marquee Signs",
-    subheadline: "Bold, illuminated signage that stops traffic and drives sales. Perfect for food trucks, trailers, and mobile vendors.",
-    ctaText: "Get Your Quote",
+    headline: "Turn Heads and Attract Customers with Signs Made for Mobile Vendors",
+    subheadline: "Custom signs designed for food trucks, trailers, and pop-up vendors. From glowing marquee letters to bold logos, these signs help you stand out and stay booked.",
+    ctaText: "Get a Custom Sign Quote in Under 5 Minutes",
+    secondaryCtaText: "See Real Vendor Signs",
     ctaAction: "pricing",
-    heroImage: "/src/assets/carousel-11.jpg",
-    heroImageAlt: "Illuminated food truck marquee sign with bright lighting",
-    layout: "image-right"
+    heroImage: foodTruckBarMonte,
+    heroImageAlt: "Bar Monte food truck with illuminated marquee sign",
+    layout: "image-right",
+    trustBar: "Trusted by food truck owners and mobile vendors nationwide"
   },
   
   features: {
-    title: "Why Food Trucks Choose Marquee Signs",
-    subtitle: "Stand out from the competition with professional illuminated signage",
+    title: "Why Mobile Vendors Love Our Signs",
+    subtitle: "Built for the road and designed to attract customers",
     items: [
       {
-        title: "High Visibility",
-        description: "Bright marquee lighting ensures customers can see your truck from blocks away, day or night.",
-        icon: "🌟"
+        title: "Made for the Road",
+        description: "Lightweight, secure, and built to handle mobile life — from streets to festivals",
+        icon: "🚚"
       },
       {
-        title: "Weather Resistant",
-        description: "Built tough for outdoor use. Rain, shine, or snow—your sign keeps working.",
-        icon: "☔"
-      },
-      {
-        title: "Custom Branding",
-        description: "Your name, logo, or menu items in any style or color combination. Make it uniquely yours.",
-        icon: "🎨"
-      },
-      {
-        title: "Energy Efficient LEDs",
-        description: "Bright LED bulbs that won't drain your power supply. Long-lasting and easy to replace.",
+        title: "Glows Day and Night",
+        description: "Bright bulbs and bold letters get noticed, even in crowded vendor rows",
         icon: "💡"
       },
       {
-        title: "Easy Installation",
-        description: "Designed to mount securely on food trucks, trailers, and vendor setups. Clear instructions included.",
-        icon: "🔧"
-      },
-      {
-        title: "Durable Construction",
-        description: "Powder-coated steel stands up to the rigors of mobile food service and constant travel.",
-        icon: "💪"
+        title: "Custom Words or Logos",
+        description: "Spell your truck name, best-selling item, or show off your full logo in 3D",
+        icon: "🎨"
       }
     ]
   },
@@ -536,18 +527,25 @@ export const foodTruckSignsConfig: TemplateConfig = {
     title: "Happy Food Truck Owners",
     items: [
       {
-        name: "Marcus Rodriguez",
-        role: "Taco Truck Owner",
-        content: "Sales jumped 40% after installing our marquee sign! People spot us from way down the street now. Best investment I made.",
+        name: "Tyrell M.",
+        role: "Owner, Buns & BBQ",
+        content: "Our trailer went from blending in to being the center of attention. We doubled our foot traffic after adding the sign.",
         rating: 5,
-        image: "/src/assets/testimonial-mike.jpg"
+        image: testimonialFoodVendor1
       },
       {
-        name: "Jennifer Lee",
-        role: "BBQ Trailer Operator",
-        content: "The sign is a tank—survives all weather and travel. Looks just as good after a year as day one. Totally worth it!",
+        name: "Maria S.",
+        role: "Food Truck Operator",
+        content: "People spot us from blocks away now. The sign paid for itself in two months from the extra customers it brought in!",
         rating: 5,
-        image: "/src/assets/testimonial-sarah.jpg"
+        image: testimonialFoodVendor2
+      },
+      {
+        name: "BAR-B-CUTIE Food Truck",
+        role: "Mobile BBQ Vendor",
+        content: "Best decision we made for our business. The glowing sign makes us impossible to miss at festivals and events.",
+        rating: 5,
+        image: testimonialBarbcutieTruck
       }
     ]
   },
@@ -576,18 +574,20 @@ export const foodTruckSignsConfig: TemplateConfig = {
   },
   
   gallery: {
-    title: "Food Truck Sign Gallery",
-    subtitle: "See how marquee signs transform mobile food businesses",
+    title: "Real Vendor Signs in Action",
+    subtitle: "",
     images: [
-      { src: "/src/assets/carousel-10.jpg", alt: "Restaurant style marquee sign", caption: "Bold vintage style" },
-      { src: "/src/assets/carousel-11.jpg", alt: "Food service illuminated signage", caption: "Modern food truck setup" },
-      { src: "/src/assets/carousel-3.jpg", alt: "Custom vendor signage", caption: "Custom branding" },
-      { src: "/src/assets/carousel-5.jpg", alt: "Mobile vendor marquee", caption: "Eye-catching design" }
+      { src: foodTruckBarMonte, alt: "Bar Monte food truck with illuminated sign" },
+      { src: chopSueySign, alt: "Chop Suey vintage marquee sign" },
+      { src: marquee1, alt: "Custom marquee sign for food vendor" },
+      { src: marquee2, alt: "Bold illuminated food truck signage" },
+      { src: carousel2, alt: "Vintage style food service sign" },
+      { src: galleryElement, alt: "Modern food truck marquee letters" }
     ]
   },
   
   faq: {
-    title: "Food Truck Sign FAQ",
+    title: "Frequently Asked Questions",
     items: [
       {
         question: "Will the sign work with my truck's power system?",
@@ -602,16 +602,16 @@ export const foodTruckSignsConfig: TemplateConfig = {
         answer: "Absolutely! Our signs are built with powder-coated steel specifically for outdoor, mobile use. They're designed to withstand constant travel, weather exposure, and the vibrations of the road."
       },
       {
-        question: "What if I need to change my menu or branding?",
-        answer: "We can create modular signs that allow you to swap out certain elements, or design new signs as your business evolves. Many customers start with their business name and add menu boards later."
+        question: "What kind of bulbs do you use?",
+        answer: "We use LED bulbs with E12 (candelabra) bases — long-lasting, energy efficient, and easy to replace. You'll receive spare bulbs with your order, and if you ever need more, we can ship replacements. You can also find fun or creative options on Amazon that fit the same base."
       },
       {
-        question: "How bright are the signs?",
-        answer: "Our LED marquee signs are highly visible day and night. They're bright enough to attract attention from a distance but not so bright that they're harsh or use excessive power."
+        question: "What's the turn-around time?",
+        answer: "We need 4-6 weeks from the day the order is finalized to handcraft your custom sign. Rush orders are available for an additional fee if you need it sooner."
       },
       {
-        question: "Do you offer financing?",
-        answer: "We can discuss payment plans for larger custom orders. Contact us to discuss options that work for your budget and business timeline."
+        question: "What sizes do you offer?",
+        answer: "We can make almost any size to fit your truck or trailer. Let us know what space you're working with and we'll design the perfect sign for you."
       }
     ]
   },
