@@ -152,7 +152,7 @@ export const wallHangingConfig: TemplateConfig = {
   
   hero: {
     headline: "Custom Wall-Hanging Marquee Signs",
-    subheadline: "Individual painted steel letters that hang like artwork. Classic warm glow with G30 bulbs for shops, studios, and homes.",
+    subheadline: "Individual painted steel letters that hang like artwork. Classic warm glow for shops, restaurants, homes, business, or anywhere looking for some style.",
     ctaText: "Get Your Quote",
     ctaAction: "pricing",
     heroImage: "/src/assets/wall-hanging.jpg",
@@ -247,7 +247,7 @@ export const wallHangingConfig: TemplateConfig = {
   },
   
   gallery: {
-    title: "Wall-Hanging Sign Gallery",
+    title: "Custom Letter Signs Gallery",
     subtitle: "See the vintage charm and warm glow in action",
     images: [
       { src: "/src/assets/wall-hanging.jpg", alt: "Rustic wall-hanging marquee letters on wood wall", caption: "Classic vintage finish on reclaimed wood" },
