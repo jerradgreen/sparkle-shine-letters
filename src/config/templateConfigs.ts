@@ -12,7 +12,7 @@ import testimonialBlackWoman from '@/assets/testimonial-black-woman.jpg';
 import testimonialRealistic2 from '@/assets/testimonial-realistic-2.jpg';
 import testimonialRealistic3 from '@/assets/testimonial-realistic-3.jpg';
 import testimonialVintagePolaroid from '@/assets/testimonial-vintage-polaroid.jpg';
-import testimonialFoodVendor1 from '@/assets/testimonial-food-vendor-1.jpg';
+import testimonialFoodVendor1 from '@/assets/testimonial-food-vendor-1-bright.jpg';
 import testimonialFoodVendor2 from '@/assets/testimonial-food-vendor-2.jpg';
 import testimonialBarbcutieTruck from '@/assets/testimonial-barbcutie-truck.jpg';
 
@@ -45,6 +45,12 @@ import chopSueySign from '@/assets/chop-suey-sign.jpg';
 import marquee1 from '@/assets/marquee-1.png';
 import marquee2 from '@/assets/marquee-2.png';
 import foodTruckBarMonte from '@/assets/food-truck-bar-monte.jpg';
+import foodTruckBar from '@/assets/food-truck-bar.jpg';
+import foodTruckHouseFood from '@/assets/food-truck-house-food.jpg';
+import foodTruckCoffeeBuns from '@/assets/food-truck-coffee-buns.jpg';
+import foodTruckDonuts from '@/assets/food-truck-donuts.jpg';
+import foodTruckSmokehouse from '@/assets/food-truck-smokehouse.jpg';
+import foodTruckSteakstop from '@/assets/food-truck-steakstop.jpg';
 
 // 3D Layered Signs Template
 export const layeredSignsConfig: TemplateConfig = {
@@ -493,12 +499,12 @@ export const foodTruckSignsConfig: TemplateConfig = {
     headline: "Turn Heads and Attract Customers with Signs Made for Mobile Vendors",
     subheadline: "Custom signs designed for food trucks, trailers, and pop-up vendors. From glowing marquee letters to bold logos, these signs help you stand out and stay booked.",
     ctaText: "Get a Custom Sign Quote in Under 5 Minutes",
-    secondaryCtaText: "See Real Vendor Signs",
+    secondaryCtaText: "See Gallery",
     ctaAction: "pricing",
     heroImage: foodTruckBarMonte,
     heroImageAlt: "Bar Monte food truck with illuminated marquee sign",
     layout: "image-right",
-    trustBar: "Trusted by food truck owners and mobile vendors nationwide"
+    
   },
   
   features: {
@@ -507,7 +513,7 @@ export const foodTruckSignsConfig: TemplateConfig = {
     items: [
       {
         title: "Made for the Road",
-        description: "Lightweight, secure, and built to handle mobile life — from streets to festivals",
+        description: "Bold and bright, secure, and built to handle mobile life — from streets to festivals",
         icon: "🚚"
       },
       {
@@ -574,15 +580,15 @@ export const foodTruckSignsConfig: TemplateConfig = {
   },
   
   gallery: {
-    title: "Real Vendor Signs in Action",
+    title: "Vendor Sign Gallery",
     subtitle: "",
     images: [
-      { src: foodTruckBarMonte, alt: "Bar Monte food truck with illuminated sign" },
-      { src: chopSueySign, alt: "Chop Suey vintage marquee sign" },
-      { src: marquee1, alt: "Custom marquee sign for food vendor" },
-      { src: marquee2, alt: "Bold illuminated food truck signage" },
-      { src: carousel2, alt: "Vintage style food service sign" },
-      { src: galleryElement, alt: "Modern food truck marquee letters" }
+      { src: foodTruckBar, alt: "BAR illuminated marquee sign at food venue" },
+      { src: foodTruckHouseFood, alt: "House Food & Booze turquoise marquee sign on food truck" },
+      { src: foodTruckCoffeeBuns, alt: "Coffee & Buns illuminated marquee letters" },
+      { src: foodTruckDonuts, alt: "Let's Eat Donuts marquee sign on orange food truck" },
+      { src: foodTruckSmokehouse, alt: "Smokehouse red and yellow gradient marquee letters" },
+      { src: foodTruckSteakstop, alt: "Steak Stop large red marquee letters" }
     ]
   },
   
@@ -590,28 +596,32 @@ export const foodTruckSignsConfig: TemplateConfig = {
     title: "Frequently Asked Questions",
     items: [
       {
-        question: "Will the sign work with my truck's power system?",
-        answer: "Yes! Our LED signs are energy-efficient and designed to work with standard food truck electrical systems. We provide clear wiring instructions, and most installations take less than an hour."
-      },
-      {
-        question: "How do I mount the sign to my truck?",
-        answer: "We include all necessary mounting hardware and detailed instructions. Most signs mount to the truck's exterior using secure brackets. We can also provide custom mounting solutions based on your specific setup."
+        question: "What kind of power system do these signs use?",
+        answer: "Yes, they plug in like a lamp and are low wattage. LEDs are available as an upgrade."
       },
       {
         question: "Can the sign handle travel and weather?",
-        answer: "Absolutely! Our signs are built with powder-coated steel specifically for outdoor, mobile use. They're designed to withstand constant travel, weather exposure, and the vibrations of the road."
+        answer: "Yes, we can build a bracket that folds down for easy transport. Our signs are built with durable metal construction and we offer various finish options including standard paint, natural patina/rust finishes, or powder coating for added weather resistance."
       },
       {
         question: "What kind of bulbs do you use?",
-        answer: "We use LED bulbs with E12 (candelabra) bases — long-lasting, energy efficient, and easy to replace. You'll receive spare bulbs with your order, and if you ever need more, we can ship replacements. You can also find fun or creative options on Amazon that fit the same base."
+        answer: "We use commercial-grade incandescent bulbs that give that classic warm marquee glow. Each bulb is easily replaceable, and we include extras with your order."
       },
       {
-        question: "What's the turn-around time?",
-        answer: "We need 4-6 weeks from the day the order is finalized to handcraft your custom sign. Rush orders are available for an additional fee if you need it sooner."
+        question: "What's the turnaround time?",
+        answer: "For these signs, we need 6-8 weeks from design approval to completion. This allows us to craft each sign with the quality and attention to detail your business deserves."
+      },
+      {
+        question: "How do I install the sign on my truck?",
+        answer: "You are responsible for mounting to your truck. We don't do any installations. These are plug-n-play signs. We are not trailer builders, so you would be responsible for that aspect. There are some leaking concerns, etc. to consider, so it requires some experienced installers or builders to properly mount them."
       },
       {
         question: "What sizes do you offer?",
-        answer: "We can make almost any size to fit your truck or trailer. Let us know what space you're working with and we'll design the perfect sign for you."
+        answer: "We can make almost any size to fit your truck or trailer. We charge by the square-inch and per color. Let us know what space you're working with and we'll design the perfect sign for you."
+      },
+      {
+        question: "How do they ship?",
+        answer: "Typically we ship UPS Ground unless the size is too large, then we use freight shipping to ensure your sign arrives safely."
       }
     ]
   },

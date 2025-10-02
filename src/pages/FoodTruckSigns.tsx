@@ -193,14 +193,6 @@ const FoodTruckSigns = () => {
         </div>
       </section>
 
-      {/* Trust Bar */}
-      <section className="py-4 px-4 bg-background">
-        <div className="max-w-6xl mx-auto text-center">
-          <p className="text-sm text-muted-foreground font-medium">
-            {foodTruckSignsConfig.hero.trustBar}
-          </p>
-        </div>
-      </section>
 
       {/* Testimonials */}
       <section className="py-10 bg-gradient-to-b from-background to-muted/20">
@@ -244,7 +236,7 @@ const FoodTruckSigns = () => {
       <section className="py-16 px-4 bg-gradient-to-br from-primary/10 to-accent/10">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
-            Ready to Get Started?
+            Ready to Stand Out?
           </h2>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
             Join successful entrepreneurs who have transformed their food service with an incredible sign that makes people notice them!
