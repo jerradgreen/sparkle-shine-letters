@@ -6,12 +6,6 @@ import { wallHangingConfig } from "@/config/templateConfigs";
 import ShopifyHeader from "@/components/ShopifyHeader";
 import ShopifyFooter from "@/components/ShopifyFooter";
 import { Button } from "@/components/ui/button";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
 import { Hammer, Lightbulb, Frame, PenTool, Home, Settings, Camera, Clock, Shield } from "lucide-react";
 
 const WallHangingMarqueeSigns = () => {
@@ -30,7 +24,7 @@ const WallHangingMarqueeSigns = () => {
       <ShopifyHeader />
       
       {/* Hero Section */}
-      <div className="-mt-8">
+      <div className="-mt-20">
         <HeroSection 
           config={wallHangingConfig.hero}
           onCTAClick={handleCTAClick}
@@ -38,149 +32,129 @@ const WallHangingMarqueeSigns = () => {
       </div>
 
       {/* 10 Reasons Section */}
-      <section className="py-20 bg-gradient-to-b from-muted/20 to-background">
+      <section className="py-10 bg-gradient-to-b from-muted/20 to-background">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">🔟 10 Reasons to Choose Vintage Marquee Lights for Your Custom Sign</h2>
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-bold mb-2">🔟 10 Reasons to Choose Vintage Marquee Lights for Your Custom Sign</h2>
           </div>
-          <div className="max-w-5xl mx-auto space-y-8">
-            <div className="bg-card rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow border border-border">
-              <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                  <Hammer className="w-6 h-6 text-primary" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold mb-2">1. Authentic Steel Construction</h3>
-                  <p className="text-muted-foreground">
-                    Crafted from solid, hand-painted steel, our signs have a rugged, industrial feel and vintage finish that naturally develops character over time—no plastic or shortcuts.
-                  </p>
-                </div>
+          <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-4">
+            <div className="flex items-start gap-3 p-4">
+              <div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
+                <Hammer className="w-4 h-4 text-primary" />
+              </div>
+              <div>
+                <h3 className="font-bold mb-1">1. Authentic Steel Construction</h3>
+                <p className="text-sm text-muted-foreground">
+                  Crafted from solid, hand-painted steel, our signs have a rugged, industrial feel and vintage finish that naturally develops character over time—no plastic or shortcuts.
+                </p>
               </div>
             </div>
 
-            <div className="bg-card rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow border border-border">
-              <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                  <Lightbulb className="w-6 h-6 text-primary" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold mb-2">2. Warm Classic Glow</h3>
-                  <p className="text-muted-foreground">
-                    Fitted with globe bulbs that emit a soft, warm glow, our signs add an inviting ambiance that looks stunning in person and photographs beautifully—day or night.
-                  </p>
-                </div>
+            <div className="flex items-start gap-3 p-4">
+              <div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
+                <Lightbulb className="w-4 h-4 text-primary" />
+              </div>
+              <div>
+                <h3 className="font-bold mb-1">2. Warm Classic Glow</h3>
+                <p className="text-sm text-muted-foreground">
+                  Fitted with globe bulbs that emit a soft, warm glow, our signs add an inviting ambiance that looks stunning in person and photographs beautifully—day or night.
+                </p>
               </div>
             </div>
 
-            <div className="bg-card rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow border border-border">
-              <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                  <Frame className="w-6 h-6 text-primary" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold mb-2">3. Effortless Wall Mounting</h3>
-                  <p className="text-muted-foreground">
-                    No complicated install. These signs hang on your wall like framed art—no stands, no hassle, just plug in and enjoy.
-                  </p>
-                </div>
+            <div className="flex items-start gap-3 p-4">
+              <div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
+                <Frame className="w-4 h-4 text-primary" />
+              </div>
+              <div>
+                <h3 className="font-bold mb-1">3. Effortless Wall Mounting</h3>
+                <p className="text-sm text-muted-foreground">
+                  No complicated install. These signs hang on your wall like framed art—no stands, no hassle, just plug in and enjoy.
+                </p>
               </div>
             </div>
 
-            <div className="bg-card rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow border border-border">
-              <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                  <Home className="w-6 h-6 text-primary" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold mb-2">4. Indoor or Outdoor Ready</h3>
-                  <p className="text-muted-foreground">
-                    Perfect for cozy interiors or open-air settings. Signs can be used indoors or outdoors, where they weather naturally and develop unique character over time.
-                  </p>
-                </div>
+            <div className="flex items-start gap-3 p-4">
+              <div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
+                <Home className="w-4 h-4 text-primary" />
+              </div>
+              <div>
+                <h3 className="font-bold mb-1">4. Indoor or Outdoor Ready</h3>
+                <p className="text-sm text-muted-foreground">
+                  Perfect for cozy interiors or open-air settings. Signs can be used indoors or outdoors, where they weather naturally and develop unique character over time.
+                </p>
               </div>
             </div>
 
-            <div className="bg-card rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow border border-border">
-              <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                  <PenTool className="w-6 h-6 text-primary" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold mb-2">5. Custom Letter Combinations</h3>
-                  <p className="text-muted-foreground">
-                    Spell out anything you want—names, initials, slogans, or simple words like LOVE, OPEN, or BAR. Mix letters, numbers, and symbols to create your perfect message.
-                  </p>
-                </div>
+            <div className="flex items-start gap-3 p-4">
+              <div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
+                <PenTool className="w-4 h-4 text-primary" />
+              </div>
+              <div>
+                <h3 className="font-bold mb-1">5. Custom Letter Combinations</h3>
+                <p className="text-sm text-muted-foreground">
+                  Spell out anything you want—names, initials, slogans, or simple words like LOVE, OPEN, or BAR. Mix letters, numbers, and symbols to create your perfect message.
+                </p>
               </div>
             </div>
 
-            <div className="bg-card rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow border border-border">
-              <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                  <Home className="w-6 h-6 text-primary" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold mb-2">6. Perfect for Any Setting</h3>
-                  <p className="text-muted-foreground">
-                    From retail stores and events to photo studios, home décor, and outdoor patios, these signs elevate any environment with vintage charm and bold personality.
-                  </p>
-                </div>
+            <div className="flex items-start gap-3 p-4">
+              <div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
+                <Home className="w-4 h-4 text-primary" />
+              </div>
+              <div>
+                <h3 className="font-bold mb-1">6. Perfect for Any Setting</h3>
+                <p className="text-sm text-muted-foreground">
+                  From retail stores and events to photo studios, home décor, and outdoor patios, these signs elevate any environment with vintage charm and bold personality.
+                </p>
               </div>
             </div>
 
-            <div className="bg-card rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow border border-border">
-              <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                  <Settings className="w-6 h-6 text-primary" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold mb-2">7. Optional Upgrades</h3>
-                  <p className="text-muted-foreground">
-                    Need extra weather protection or hardware? Ask about powder coating, custom mounting brackets, or installation bars for added durability and convenience.
-                  </p>
-                </div>
+            <div className="flex items-start gap-3 p-4">
+              <div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
+                <Settings className="w-4 h-4 text-primary" />
+              </div>
+              <div>
+                <h3 className="font-bold mb-1">7. Optional Upgrades</h3>
+                <p className="text-sm text-muted-foreground">
+                  Need extra weather protection or hardware? Ask about powder coating, custom mounting brackets, or installation bars for added durability and convenience.
+                </p>
               </div>
             </div>
 
-            <div className="bg-card rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow border border-border">
-              <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                  <Camera className="w-6 h-6 text-primary" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold mb-2">8. Photo-Ready Glow</h3>
-                  <p className="text-muted-foreground">
-                    The warm bulb lighting is ideal for photography, making your sign a perfect backdrop for weddings, brand shoots, or personal portraits.
-                  </p>
-                </div>
+            <div className="flex items-start gap-3 p-4">
+              <div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
+                <Camera className="w-4 h-4 text-primary" />
+              </div>
+              <div>
+                <h3 className="font-bold mb-1">8. Photo-Ready Glow</h3>
+                <p className="text-sm text-muted-foreground">
+                  The warm bulb lighting is ideal for photography, making your sign a perfect backdrop for weddings, brand shoots, or personal portraits.
+                </p>
               </div>
             </div>
 
-            <div className="bg-card rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow border border-border">
-              <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                  <Clock className="w-6 h-6 text-primary" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold mb-2">9. Timeless Style That Ages Beautifully</h3>
-                  <p className="text-muted-foreground">
-                    Unlike trendy decor that fades fast, our signs look better with time. The finish ages gracefully, and each piece develops a story of its own.
-                  </p>
-                </div>
+            <div className="flex items-start gap-3 p-4">
+              <div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
+                <Clock className="w-4 h-4 text-primary" />
+              </div>
+              <div>
+                <h3 className="font-bold mb-1">9. Timeless Style That Ages Beautifully</h3>
+                <p className="text-sm text-muted-foreground">
+                  Unlike trendy decor that fades fast, our signs look better with time. The finish ages gracefully, and each piece develops a story of its own.
+                </p>
               </div>
             </div>
 
-            <div className="bg-card rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow border border-border">
-              <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                  <Shield className="w-6 h-6 text-primary" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold mb-2">10. Built to Last</h3>
-                  <p className="text-muted-foreground">
-                    Whether it's a one-night celebration or a permanent install, these signs are built for the long haul. Trusted by thousands of businesses and creatives nationwide.
-                  </p>
-                </div>
+            <div className="flex items-start gap-3 p-4">
+              <div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
+                <Shield className="w-4 h-4 text-primary" />
+              </div>
+              <div>
+                <h3 className="font-bold mb-1">10. Built to Last</h3>
+                <p className="text-sm text-muted-foreground">
+                  Whether it's a one-night celebration or a permanent install, these signs are built for the long haul. Trusted by thousands of businesses and creatives nationwide.
+                </p>
               </div>
             </div>
           </div>
@@ -188,21 +162,21 @@ const WallHangingMarqueeSigns = () => {
       </section>
 
       {/* Testimonials */}
-      <section className="py-20 bg-muted/30">
+      <section className="py-10 bg-muted/30">
         <div className="container mx-auto px-4">
           <TestimonialSection config={wallHangingConfig.testimonials} />
         </div>
       </section>
 
       {/* Gallery */}
-      <section className="py-20 bg-gradient-to-b from-background to-muted/20">
+      <section className="py-10 bg-gradient-to-b from-background to-muted/20">
         <div className="container mx-auto px-4">
           <GallerySection config={wallHangingConfig.gallery} />
         </div>
       </section>
 
       {/* Get Quote CTA */}
-      <section id="pricing" className="py-20 bg-muted/30">
+      <section id="pricing" className="py-10 bg-muted/30">
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-4xl font-bold mb-6">Ready for Your Custom Quote?</h2>
@@ -221,31 +195,25 @@ const WallHangingMarqueeSigns = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20 bg-gradient-to-b from-background to-muted/20">
-        <div className="container mx-auto px-4 max-w-4xl">
-          <h2 className="text-4xl font-bold text-center mb-4">{wallHangingConfig.faq.title}</h2>
-          <p className="text-center text-muted-foreground mb-12 text-lg">
+      <section className="py-10 bg-gradient-to-b from-background to-muted/20">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <h2 className="text-3xl font-bold text-center mb-2">{wallHangingConfig.faq.title}</h2>
+          <p className="text-center text-muted-foreground mb-8">
             Everything you need to know about wall-hanging marquee signs
           </p>
           
-          <Accordion type="single" collapsible className="space-y-4">
+          <div className="grid md:grid-cols-2 gap-6">
             {wallHangingConfig.faq.items.map((item, index) => (
-              <AccordionItem 
-                key={index} 
-                value={`item-${index}`}
-                className="bg-card border border-border rounded-lg px-6 hover:border-primary/50 transition-colors"
-              >
-                <AccordionTrigger className="text-left hover:no-underline py-6">
-                  <span className="text-lg font-semibold pr-4">{item.question}</span>
-                </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground pb-6 text-base leading-relaxed">
+              <div key={index} className="space-y-2">
+                <h3 className="text-lg font-bold">{item.question}</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
                   {item.answer}
-                </AccordionContent>
-              </AccordionItem>
+                </p>
+              </div>
             ))}
-          </Accordion>
+          </div>
 
-          <div className="text-center mt-12">
+          <div className="text-center mt-8">
             <Button 
               size="lg" 
               className="text-lg px-8"
@@ -258,7 +226,7 @@ const WallHangingMarqueeSigns = () => {
       </section>
 
       {/* Final CTA */}
-      <section className="py-20 bg-muted/30">
+      <section className="py-10 bg-muted/30">
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-3xl mx-auto bg-card rounded-2xl p-12 shadow-xl border border-border">
             <h2 className="text-4xl font-bold mb-6">Ready to Light Up Your Space?</h2>
