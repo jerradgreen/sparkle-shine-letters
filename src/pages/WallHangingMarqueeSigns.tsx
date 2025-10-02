@@ -9,6 +9,9 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Hammer, Lightbulb, Frame, PenTool, Home, Settings, Camera, Clock, Shield } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import OptimizedImage from "@/components/OptimizedImage";
+import processStep1 from "@/assets/process-step-1.mp4";
+import processStep2 from "@/assets/process-step-2.mp4";
+import processStep3 from "@/assets/process-step-3.mp4";
 import heroImage from "@/assets/wall-hanging.jpg";
 import { Check } from "lucide-react";
 
@@ -338,11 +341,14 @@ const WallHangingMarqueeSigns = () => {
             {/* Step 1 */}
             <div className="text-center">
               <div className="w-32 h-32 mx-auto mb-6 flex items-center justify-center rounded-lg overflow-hidden bg-muted/40 ring-1 ring-border/40">
-                <OptimizedImage 
-                  src="/lovable-uploads/d86c2d98-97ca-4233-a7b6-6fea60a0dc18.png" 
-                  alt="Step 1 - vintage marquee number 1" 
+                <video 
+                  src={processStep1}
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  preload="metadata"
                   className="w-full h-full object-cover rounded-lg"
-                  loading="lazy"
                 />
               </div>
               <h3 className="text-2xl font-bold mb-4 text-foreground">Step 1: Tell Us What You Want</h3>
@@ -357,11 +363,14 @@ const WallHangingMarqueeSigns = () => {
             {/* Step 2 */}
             <div className="text-center">
               <div className="w-32 h-32 mx-auto mb-6 flex items-center justify-center rounded-lg overflow-hidden bg-muted/40 ring-1 ring-border/40">
-                <OptimizedImage 
-                  src="/lovable-uploads/3a1aa8ae-0d8f-463a-9102-dd8aef074419.png" 
-                  alt="Step 2 - vintage marquee number 2" 
+                <video 
+                  src={processStep2}
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  preload="metadata"
                   className="w-full h-full object-cover rounded-lg"
-                  loading="lazy"
                 />
               </div>
               <h3 className="text-2xl font-bold mb-4 text-foreground">Step 2: We Handcraft Your Sign</h3>
@@ -376,11 +385,14 @@ const WallHangingMarqueeSigns = () => {
             {/* Step 3 */}
             <div className="text-center">
               <div className="w-32 h-32 mx-auto mb-6 flex items-center justify-center rounded-lg overflow-hidden bg-muted/40 ring-1 ring-border/40">
-                <OptimizedImage 
-                  src="/lovable-uploads/969e0a29-c68d-4a84-b260-590b946f35dd.png" 
-                  alt="Step 3 - vintage marquee number 3" 
+                <video 
+                  src={processStep3}
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  preload="metadata"
                   className="w-full h-full object-cover rounded-lg"
-                  loading="lazy"
                 />
               </div>
               <h3 className="text-2xl font-bold mb-4 text-foreground">Step 3: Hang & Enjoy</h3>
