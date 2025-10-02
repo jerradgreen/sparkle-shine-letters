@@ -39,6 +39,7 @@ import carousel2 from '@/assets/carousel-2.jpg';
 import galleryGoogle from '@/assets/gallery-google.jpg';
 import wallHangingParliament from '@/assets/wall-hanging-parliament.jpg';
 import galleryElement from '@/assets/gallery-element.jpg';
+import wallHangingWineHouse from '@/assets/wall-hanging-wine-house.jpg';
 import layeredSignsHero from '@/assets/layered-signs.jpg';
 import heroLockwoods from '@/assets/hero-lockwoods.jpg';
 import chopSueySign from '@/assets/chop-suey-sign.jpg';
@@ -296,7 +297,7 @@ export const wallHangingConfig: TemplateConfig = {
       { src: carousel2, alt: "Retail shop wall signage", caption: "Boutique storefront installation" },
       { src: galleryGoogle, alt: "Google colorful marquee letters on wood wall", caption: "Custom colorful letter installation" },
       { src: wallHangingParliament, alt: "Parliament script marquee sign in coffee shop", caption: "Elegant script lettering in café setting" },
-      { src: galleryElement, alt: "Element marquee letters on wood wall", caption: "Modern industrial style lettering" }
+      { src: wallHangingWineHouse, alt: "Wine House marquee letters on building exterior", caption: "Outdoor patio installation with warm glow" }
     ]
   },
   
