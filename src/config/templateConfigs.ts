@@ -256,11 +256,11 @@ export const wallHangingConfig: TemplateConfig = {
     subtitle: "See the vintage charm and warm glow in action",
     images: [
       { src: "/src/assets/wall-hanging.jpg", alt: "Rustic wall-hanging marquee letters on wood wall", caption: "Classic vintage finish on reclaimed wood" },
-      { src: "/src/assets/carousel-1.jpg", alt: "Wall-mounted marquee sign at event", caption: "Perfect for photo backdrops" },
+      { src: "/src/assets/gallery-freakshow.jpg", alt: "FREAKSHOW marquee letters display", caption: "Bold vintage marquee lettering" },
       { src: "/src/assets/carousel-2.jpg", alt: "Retail shop wall signage", caption: "Boutique storefront installation" },
-      { src: "/src/assets/wall-hanging-freakshow.jpg", alt: "FREAKSHOW marquee letters display", caption: "Bold vintage marquee lettering" },
+      { src: "/src/assets/gallery-google.jpg", alt: "Google colorful marquee letters on wood wall", caption: "Custom colorful letter installation" },
       { src: "/src/assets/wall-hanging-parliament.jpg", alt: "Parliament script marquee sign in coffee shop", caption: "Elegant script lettering in café setting" },
-      { src: "/src/assets/wall-hanging-google.jpg", alt: "Google colorful marquee letters on wood wall", caption: "Custom colorful letter installation" }
+      { src: "/src/assets/gallery-element.jpg", alt: "Element marquee letters on wood wall", caption: "Modern industrial style lettering" }
     ]
   },
   
@@ -269,7 +269,7 @@ export const wallHangingConfig: TemplateConfig = {
     items: [
       {
         question: "How easy are these to hang?",
-        answer: "Super easy! These signs hang on your wall just like framed artwork. Each letter comes with mounting hardware and hangs with standard picture hooks or wall anchors. Simply hang and plug in."
+        answer: "Super easy! These signs hang on your wall just like framed artwork using a simple nail or screw. More permanent mounting options are available if needed. Simply hang and plug in."
       },
       {
         question: "How heavy are the letters?",
@@ -281,7 +281,7 @@ export const wallHangingConfig: TemplateConfig = {
       },
       {
         question: "What kind of bulbs do they use?",
-        answer: "We use G30 globe bulbs that can be replaced with any candelabra-sized base bulb that is 7w or less, including LEDs. Replacement bulbs are readily available at most hardware stores."
+        answer: "We use G30 globe bulbs that can be replaced with any candelabra-sized base bulb that is 7w or less, including LEDs. Amazon is the best place to find a wide variety of bulb options."
       },
       {
         question: "What are the sizing options?",
@@ -289,7 +289,7 @@ export const wallHangingConfig: TemplateConfig = {
       },
       {
         question: "Do you offer installation services?",
-        answer: "These signs are easy to hang and plug in with a standard plug—no professional installation needed! Simply hang them like picture frames and you're ready to go."
+        answer: "These signs are easy to hang and plug in with a standard plug—no professional installation needed! Framing bars are an optional upgrade to connect all the letters together, making it hang as a single unit for ease of hanging in a high or difficult location."
       },
       {
         question: "What's the difference between painted and powder-coated finishes?",
