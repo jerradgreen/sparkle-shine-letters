@@ -11,7 +11,7 @@ import { Truck, Lightbulb, Palette } from "lucide-react";
 import OptimizedImage from "@/components/OptimizedImage";
 import foodTruckHero from "@/assets/food-truck-bar-monte.jpg";
 
-const FoodTruckSigns = () => {
+const MobileVendorSigns = () => {
   const scrollToForm = () => {
     const formSection = document.getElementById('quote-form');
     if (formSection) {
@@ -29,7 +29,7 @@ const FoodTruckSigns = () => {
   return (
     <PageTemplate 
       config={foodTruckSignsConfig}
-      canonicalUrl="https://www.vintagemarqueelights.com/food-truck-signs"
+      canonicalUrl="https://www.vintagemarqueelights.com/mobile-vendor-signs"
       showNavigation={true}
       showFooter={false}
       showChatbot={false}
@@ -256,4 +256,4 @@ const FoodTruckSigns = () => {
   );
 };
 
-export default FoodTruckSigns;
+export default MobileVendorSigns;

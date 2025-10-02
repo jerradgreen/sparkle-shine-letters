@@ -34,7 +34,7 @@ const Navigation = () => {
                 <Link to="/3d-logos" className="cursor-pointer">3D Logos</Link>
               </DropdownMenuItem>
                 <DropdownMenuItem asChild>
-                  <Link to="/food-truck-signs" className="cursor-pointer">Food Trucks</Link>
+                  <Link to="/mobile-vendor-signs" className="cursor-pointer">Mobile Vendors</Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
                   <Link to="/event-standup-signs" className="cursor-pointer">Event Signs</Link>
@@ -100,11 +100,11 @@ const Navigation = () => {
                     3D Logos
                   </Link>
                   <Link
-                    to="/food-truck-signs"
+                    to="/mobile-vendor-signs"
                     className="text-foreground hover:text-primary font-medium py-1"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
-                    Food Trucks
+                    Mobile Vendors
                   </Link>
                   <Link
                     to="/event-standup-signs"

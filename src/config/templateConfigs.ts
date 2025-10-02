@@ -618,10 +618,6 @@ export const foodTruckSignsConfig: TemplateConfig = {
       {
         question: "What sizes do you offer?",
         answer: "We can make almost any size to fit your truck or trailer. We charge by the square-inch and per color. Let us know what space you're working with and we'll design the perfect sign for you."
-      },
-      {
-        question: "How do they ship?",
-        answer: "Typically we ship UPS Ground unless the size is too large, then we use freight shipping to ensure your sign arrives safely."
       }
     ]
   },
