@@ -208,21 +208,21 @@ export const wallHangingConfig: TemplateConfig = {
       {
         name: "Sarah Mitchell",
         role: "Coffee Shop Owner",
-        content: "The wall-hanging letters transformed our café! The warm glow creates the perfect ambiance and customers love taking photos with them.",
+        content: "The wall-hanging letters transformed our café! The warm glow creates the perfect ambiance.",
         rating: 5,
         image: testimonialIndoorWoman
       },
       {
         name: "James Thompson",
         role: "Bar Owner",
-        content: "These signs are perfect for our outdoor patio! The vintage aesthetic and warm lighting create an amazing atmosphere. Best decision we made!",
+        content: "These signs are perfect for our outdoor patio! The vintage aesthetic and warm lighting create an amazing atmosphere.",
         rating: 5,
         image: testimonialOutdoorMan
       },
       {
         name: "Chef Marcus Rodriguez",
         role: "Restaurant Owner",
-        content: "Love how they look in our dining room! The authentic marquee glow gives our restaurant such great character and our customers can't stop posting photos.",
+        content: "Love how they look in our dining room! The authentic marquee glow gives our restaurant such great character.",
         rating: 5,
         image: testimonialChefRestaurant
       }
@@ -268,8 +268,8 @@ export const wallHangingConfig: TemplateConfig = {
     title: "Frequently Asked Questions",
     items: [
       {
-        question: "Will the signs damage my walls?",
-        answer: "No! These letters hang just like a framed picture using standard wall mounting hardware. They're designed for easy installation and removal without damaging surfaces."
+        question: "How easy are these to hang?",
+        answer: "Super easy! These signs hang on your wall just like framed artwork. Each letter comes with mounting hardware and hangs with standard picture hooks or wall anchors. Simply hang and plug in."
       },
       {
         question: "How heavy are the letters?",
@@ -281,23 +281,27 @@ export const wallHangingConfig: TemplateConfig = {
       },
       {
         question: "What kind of bulbs do they use?",
-        answer: "We use classic G30 globe bulbs—not LED—for that authentic warm glow that defines vintage marquee lighting. Replacement bulbs are readily available at most hardware stores."
-      },
-      {
-        question: "Can I order any letter combination?",
-        answer: "Yes! Order any combination of letters (A-Z), numbers (0-9), and symbols (&, #, @, etc.) to create your perfect custom sign. Popular choices include business names, single words like LOVE or BAR, and personalized phrases."
+        answer: "We use G30 globe bulbs that can be replaced with any candelabra-sized base bulb that is 7w or less, including LEDs. Replacement bulbs are readily available at most hardware stores."
       },
       {
         question: "What are the sizing options?",
-        answer: "We offer multiple sizes to fit your space and budget. Contact us with your specific needs and we'll provide dimensions and pricing for your custom configuration."
+        answer: "We charge the same price for letters from 12\" up to 24\", with tiered pricing after that. Pricing is based on size and font style. Decorative, serif, or script fonts are a little more than simple sans-serif style fonts."
       },
       {
         question: "Do you offer installation services?",
-        answer: "While the signs are designed for easy DIY installation, we can recommend professional installers in your area or provide guidance for larger installations."
+        answer: "These signs are easy to hang and plug in with a standard plug—no professional installation needed! Simply hang them like picture frames and you're ready to go."
       },
       {
         question: "What's the difference between painted and powder-coated finishes?",
-        answer: "Our standard painted finish offers authentic vintage charm and will naturally patina outdoors. Powder coating provides a more modern, uniform look with enhanced weather resistance—perfect if you want that vintage aesthetic without the weathering effect."
+        answer: "We can do the weathered/distressed vintage look when painting. If used outdoors, painted signs will continue to rust and patina over time for that authentic vintage character. If you don't want the rustic weathered look, the powder coat upgrade is available and gives it a smooth, shiny look with enhanced weather protection."
+      },
+      {
+        question: "What's the turn-around time?",
+        answer: "We need 4-6 weeks from the day the order is finalized to handcraft your custom sign. Rush orders are available for an additional fee if you need it sooner."
+      },
+      {
+        question: "What kind of power do they require?",
+        answer: "These signs use a standard 2-prong plug for power—just plug them in like you would a lamp. No special wiring or electrical work required."
       }
     ]
   },
