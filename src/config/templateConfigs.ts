@@ -16,6 +16,15 @@ import imageDrewiaHill from '@/assets/drewia-hill.jpeg';
 import imageSetup1 from '@/assets/setup-1.jpeg';
 import imageSetup2 from '@/assets/setup-2.jpg';
 
+import wallHanging from '@/assets/wall-hanging.jpg';
+import galleryFreakshow from '@/assets/gallery-freakshow.jpg';
+import carousel2 from '@/assets/carousel-2.jpg';
+import galleryGoogle from '@/assets/gallery-google.jpg';
+import wallHangingParliament from '@/assets/wall-hanging-parliament.jpg';
+import galleryElement from '@/assets/gallery-element.jpg';
+import layeredSignsHero from '@/assets/layered-signs.jpg';
+import heroLockwoods from '@/assets/hero-lockwoods.jpg';
+
 // 3D Layered Signs Template
 export const layeredSignsConfig: TemplateConfig = {
   pageTitle: "3D Layered Sign Rental Business - Premium Dimensional Signage Package",
@@ -27,7 +36,7 @@ export const layeredSignsConfig: TemplateConfig = {
     subheadline: "Create stunning dimensional displays with premium layered signs. Eye-catching depth and professional appeal that commands premium pricing.",
     ctaText: "Get 3D Package Info",
     ctaAction: "pricing",
-    heroImage: "/src/assets/layered-signs.jpg",
+    heroImage: layeredSignsHero,
     heroImageAlt: "Premium 3D layered sign with dimensional depth at elegant event",
     layout: "image-right"
   },
@@ -159,7 +168,7 @@ export const wallHangingConfig: TemplateConfig = {
     ctaText: "Get a Custom Quote in Under 5 Minutes",
     secondaryCtaText: "See Real Sign Examples",
     ctaAction: "pricing",
-    heroImage: "/src/assets/wall-hanging.jpg",
+    heroImage: wallHanging,
     heroImageAlt: "Vintage wall-hanging marquee letters on rustic wood wall",
     layout: "image-right",
     trustBar: "Trusted by shops, studios, and restaurants across the country"
@@ -255,12 +264,12 @@ export const wallHangingConfig: TemplateConfig = {
     title: "Real Signs in Real Spaces",
     subtitle: "See the vintage charm and warm glow in action",
     images: [
-      { src: "/src/assets/wall-hanging.jpg", alt: "Rustic wall-hanging marquee letters on wood wall", caption: "Classic vintage finish on reclaimed wood" },
-      { src: "/src/assets/gallery-freakshow.jpg", alt: "FREAKSHOW marquee letters display", caption: "Bold vintage marquee lettering" },
-      { src: "/src/assets/carousel-2.jpg", alt: "Retail shop wall signage", caption: "Boutique storefront installation" },
-      { src: "/src/assets/gallery-google.jpg", alt: "Google colorful marquee letters on wood wall", caption: "Custom colorful letter installation" },
-      { src: "/src/assets/wall-hanging-parliament.jpg", alt: "Parliament script marquee sign in coffee shop", caption: "Elegant script lettering in café setting" },
-      { src: "/src/assets/gallery-element.jpg", alt: "Element marquee letters on wood wall", caption: "Modern industrial style lettering" }
+      { src: wallHanging, alt: "Rustic wall-hanging marquee letters on wood wall", caption: "Classic vintage finish on reclaimed wood" },
+      { src: galleryFreakshow, alt: "FREAKSHOW marquee letters display", caption: "Bold vintage marquee lettering" },
+      { src: carousel2, alt: "Retail shop wall signage", caption: "Boutique storefront installation" },
+      { src: galleryGoogle, alt: "Google colorful marquee letters on wood wall", caption: "Custom colorful letter installation" },
+      { src: wallHangingParliament, alt: "Parliament script marquee sign in coffee shop", caption: "Elegant script lettering in café setting" },
+      { src: galleryElement, alt: "Element marquee letters on wood wall", caption: "Modern industrial style lettering" }
     ]
   },
   
@@ -333,7 +342,7 @@ export const standUpSignsConfig: TemplateConfig = {
     subheadline: "Commercial-quality stand-up marquee letters that make every event unforgettable",
     ctaText: "Get Your Quote",
     ctaAction: "pricing",
-    heroImage: "/src/assets/hero-lockwoods.jpg",
+    heroImage: heroLockwoods,
     heroImageAlt: "THE LOCKWOODS marquee letters with couple dancing at elegant event",
     layout: "centered"
   },
