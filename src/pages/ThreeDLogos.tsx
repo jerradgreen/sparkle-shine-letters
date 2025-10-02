@@ -7,7 +7,7 @@ import ShopifyFooter from "@/components/ShopifyFooter";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Layers, Eye, Zap, Building2, Palette, Lightbulb, Check } from "lucide-react";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+
 import OptimizedImage from "@/components/OptimizedImage";
 import logoHero from "@/assets/logo-tucks-1.jpg";
 
@@ -184,8 +184,8 @@ const ThreeDLogos = () => {
                   <Zap className="w-6 h-6 text-primary" />
                 </div>
                 <div>
-                  <h3 className="text-base font-semibold mb-1 text-card-foreground">Easy to Install</h3>
-                  <p className="text-xs text-muted-foreground">Lightweight options for walls, trade shows, lobbies, and events</p>
+                  <h3 className="text-base font-semibold mb-1 text-card-foreground">Installs Like Art, Glows Like Magic</h3>
+                  <p className="text-xs text-muted-foreground">Hangs like a picture and plugs in like a lamp — easy and seamless</p>
                 </div>
               </CardContent>
             </Card>
@@ -216,128 +216,16 @@ const ThreeDLogos = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {logoSignsConfig.features.items.map((feature, index) => (
-              <Card key={index} className="border-primary/20 hover:border-primary/40 transition-all hover:shadow-lg">
+              <Card key={index} className="border-primary/20">
                 <CardContent className="p-6">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                    <span className="text-2xl">{feature.icon}</span>
+                  <div className={`w-12 h-12 ${index % 2 === 0 ? 'bg-primary/10' : 'bg-secondary/10'} rounded-lg flex items-center justify-center mb-4`}>
+                    <span className={`text-2xl ${index % 2 === 0 ? 'text-primary' : 'text-secondary'}`}>{feature.icon}</span>
                   </div>
                   <h3 className="text-lg font-bold mb-2">{feature.title}</h3>
                   <p className="text-sm text-muted-foreground">{feature.description}</p>
                 </CardContent>
               </Card>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 10 Reasons Section */}
-      <section className="py-10 bg-muted/30">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold mb-2">10 Reasons to Choose a 3D Logo Sign for Your Brand</h2>
-          </div>
-          <div className="max-w-5xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-6">
-              <div className="flex gap-3">
-                <Check className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-                <div>
-                  <h3 className="font-bold mb-2">1. Unmatched Visual Impact</h3>
-                  <p className="text-muted-foreground text-sm">
-                    3D layered signs create dramatic depth that flat signs simply can't match. Your logo literally jumps off the wall and commands attention in any space.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex gap-3">
-                <Check className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-                <div>
-                  <h3 className="font-bold mb-2">2. Perfect Brand Color Matching</h3>
-                  <p className="text-muted-foreground text-sm">
-                    We match your exact brand colors using Pantone codes, hex values, or physical samples. Your logo will look exactly as it should, every single time.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex gap-3">
-                <Check className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-                <div>
-                  <h3 className="font-bold mb-2">3. Instagram-Ready Design</h3>
-                  <p className="text-muted-foreground text-sm">
-                    These signs photograph beautifully from every angle. The dimensional layers create natural shadows that make photos pop on social media and marketing materials.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex gap-3">
-                <Check className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-                <div>
-                  <h3 className="font-bold mb-2">4. Versatile for Any Space</h3>
-                  <p className="text-muted-foreground text-sm">
-                    Perfect for office lobbies, retail stores, trade show booths, restaurant walls, event backdrops, photo walls, and anywhere your brand needs to shine.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex gap-3">
-                <Check className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-                <div>
-                  <h3 className="font-bold mb-2">5. Surprisingly Lightweight</h3>
-                  <p className="text-muted-foreground text-sm">
-                    Despite the dramatic appearance, our precision-cut metal layers are lightweight and easy to mount. No structural reinforcement needed for most walls.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex gap-3">
-                <Check className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-                <div>
-                  <h3 className="font-bold mb-2">6. Professional Hand Craftsmanship</h3>
-                  <p className="text-muted-foreground text-sm">
-                    Each layer is precision-cut, hand-assembled, carefully painted, and quality-tested. This is artisan-level work that shows in every detail.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex gap-3">
-                <Check className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-                <div>
-                  <h3 className="font-bold mb-2">7. Optional LED Backlighting</h3>
-                  <p className="text-muted-foreground text-sm">
-                    Add dramatic LED backlighting to create a halo effect that makes your logo glow. Perfect for evening events, dimly lit spaces, and extra wow factor.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex gap-3">
-                <Check className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-                <div>
-                  <h3 className="font-bold mb-2">8. Great for Mobile Branding</h3>
-                  <p className="text-muted-foreground text-sm">
-                    Food trucks, trailers, and mobile vendors love our lightweight construction. Bold branding without adding excessive weight to your vehicle or setup.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex gap-3">
-                <Check className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-                <div>
-                  <h3 className="font-bold mb-2">9. Built to Last</h3>
-                  <p className="text-muted-foreground text-sm">
-                    Quality materials and construction mean your sign will look amazing for years. This is an investment in your brand that pays dividends in impressions and recognition.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex gap-3">
-                <Check className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-                <div>
-                  <h3 className="font-bold mb-2">10. Works Without a Final Logo</h3>
-                  <p className="text-muted-foreground text-sm">
-                    Don't have a finalized logo yet? No problem. We can work with rough concepts, provide design recommendations, or help you visualize options before you commit.
-                  </p>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -362,6 +250,72 @@ const ThreeDLogos = () => {
       <section id="gallery" className="py-10 bg-muted/30">
         <div className="container mx-auto px-4">
           <GallerySection config={logoSignsConfig.gallery} />
+        </div>
+      </section>
+
+      {/* From Sketch to Statement Piece Section */}
+      <section className="py-10 px-4 bg-gradient-to-b from-background to-muted/20">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-3 text-foreground">From Sketch to Statement Piece</h2>
+          <p className="text-center text-muted-foreground mb-8">
+            Watch your vision come to life with handcrafted precision
+          </p>
+          
+          <div className="grid md:grid-cols-3 gap-6">
+            <Card className="overflow-hidden">
+              <CardContent className="p-0">
+                <video 
+                  src="/process-step-1.mp4"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  preload="metadata"
+                  className="w-full h-64 object-cover"
+                />
+                <div className="p-4">
+                  <h3 className="font-bold mb-1">Step 1: Your Vision</h3>
+                  <p className="text-sm text-muted-foreground">Share your ideas and we'll bring them to life</p>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="overflow-hidden">
+              <CardContent className="p-0">
+                <video 
+                  src="/process-step-2.mp4"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  preload="metadata"
+                  className="w-full h-64 object-cover"
+                />
+                <div className="p-4">
+                  <h3 className="font-bold mb-1">Step 2: Expert Crafting</h3>
+                  <p className="text-sm text-muted-foreground">Watch your sign come together with care</p>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="overflow-hidden">
+              <CardContent className="p-0">
+                <video 
+                  src="/process-step-3.mp4"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  preload="metadata"
+                  className="w-full h-64 object-cover"
+                />
+                <div className="p-4">
+                  <h3 className="font-bold mb-1">Step 3: Final Reveal</h3>
+                  <p className="text-sm text-muted-foreground">Your custom sign ready to shine</p>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
         </div>
       </section>
 
@@ -420,23 +374,16 @@ const ThreeDLogos = () => {
 
       {/* FAQ Section */}
       <section id="quote-form" className="py-10 px-4 bg-muted/30">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-8 text-foreground">
-            {logoSignsConfig.faq.title}
-          </h2>
-          
-          <Accordion type="single" collapsible className="w-full space-y-4">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-10">{logoSignsConfig.faq.title}</h2>
+          <div className="grid md:grid-cols-2 gap-x-12 gap-y-6 max-w-5xl mx-auto">
             {logoSignsConfig.faq.items.map((item, index) => (
-              <AccordionItem key={index} value={`item-${index}`} className="bg-card border border-border rounded-lg px-6">
-                <AccordionTrigger className="text-left text-base font-semibold hover:text-primary">
-                  {item.question}
-                </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground pt-2">
-                  {item.answer}
-                </AccordionContent>
-              </AccordionItem>
+              <div key={index} className="space-y-2">
+                <h3 className="font-bold text-lg">{item.question}</h3>
+                <p className="text-muted-foreground">{item.answer}</p>
+              </div>
             ))}
-          </Accordion>
+          </div>
 
           <div className="mt-10 text-center">
             <h3 className="text-2xl font-bold mb-4">Your logo deserves to be seen in 3D.</h3>

@@ -9,6 +9,9 @@ import testimonialOutdoorMan from '@/assets/testimonial-outdoor-man.jpg';
 import testimonialChef from '@/assets/testimonial-chef-restaurant.jpg';
 import testimonialWhiteMale from '@/assets/testimonial-white-male.jpg';
 import testimonialBlackWoman from '@/assets/testimonial-black-woman.jpg';
+import testimonialPhoneSelfie1 from '@/assets/testimonial-phone-selfie-1.jpg';
+import testimonialPolaroid1 from '@/assets/testimonial-polaroid-1.jpg';
+import testimonialPhoneSelfie2 from '@/assets/testimonial-phone-selfie-2.jpg';
 
 // Import gallery images
 import logoTucks1 from '@/assets/logo-tucks-1.jpg';
@@ -20,6 +23,12 @@ import imageMarryMe from '@/assets/marry-me.jpg';
 import imageDrewiaHill from '@/assets/drewia-hill.jpeg';
 import imageSetup1 from '@/assets/setup-1.jpeg';
 import imageSetup2 from '@/assets/setup-2.jpg';
+import chicagoLayeredSign from '@/assets/chicago-layered-sign.jpg';
+import exitzero1LayeredSign from '@/assets/exitzero1-layered-sign.jpg';
+import layeredSignOffice from '@/assets/layered-sign-office.jpeg';
+import layeredSignWorkshop from '@/assets/layered-sign-workshop.jpg';
+import layeredSignRetail from '@/assets/layered-sign-retail.jpg';
+import layeredSignStudio from '@/assets/layered-sign-studio.jpeg';
 
 import wallHanging from '@/assets/wall-hanging.jpg';
 import galleryFreakshow from '@/assets/gallery-freakshow.jpg';
@@ -686,21 +695,21 @@ export const logoSignsConfig: TemplateConfig = {
         role: "Boutique Owner",
         content: "We love our new sign! It completely transformed our office wall and made our brand pop. Everyone asks where we got it.",
         rating: 5,
-        image: testimonialWhiteMale
+        image: testimonialPhoneSelfie1
       },
       {
         name: "Marcus T.",
         role: "Event Planner",
         content: "The 3D logo signs are a game-changer for our corporate events. Clients are blown away by the professional look and dimensional impact.",
         rating: 5,
-        image: testimonialBlackWoman
+        image: testimonialPolaroid1
       },
       {
         name: "Jennifer L.",
         role: "Marketing Director",
-        content: "Our 3D logo sign is the centerpiece of our lobby. It's a conversation starter and perfectly represents our brand's bold personality.",
+        content: "Our layered sign is the centerpiece of our lobby. It's a conversation starter and perfectly represents our brand's bold personality.",
         rating: 5,
-        image: testimonialChef
+        image: testimonialPhoneSelfie2
       }
     ]
   },
@@ -728,18 +737,15 @@ export const logoSignsConfig: TemplateConfig = {
   },
   
   gallery: {
-    title: "Real 3D Logo Signs in Action",
+    title: "Real 3D Logos in Real Spaces",
     subtitle: "See how dimensional signage transforms branded spaces",
     images: [
-      { src: logoTucks1, alt: "Tuck's Truffles 3D layered logo sign" },
-      { src: logoTucks2, alt: "Tuck's Truffles dimensional logo close-up" },
-      { src: logoTucks3, alt: "Tuck's Truffles multi-layer logo installation" },
-      { src: chopSueySign, alt: "Chop Suey custom 3D logo sign" },
-      { src: marquee1, alt: "3D marquee logo with dimensional layers" },
-      { src: marquee2, alt: "Layered metal logo sign with depth" },
-      { src: galleryGoogle, alt: "Google colorful 3D logo letters" },
-      { src: galleryElement, alt: "Element 3D logo sign on wood wall" },
-      { src: galleryFreakshow, alt: "Freakshow dimensional logo display" }
+      { src: chicagoLayeredSign, alt: "Chicago layered 3D logo sign" },
+      { src: exitzero1LayeredSign, alt: "Exit Zero layered dimensional logo" },
+      { src: layeredSignOffice, alt: "3D layered logo in office setting" },
+      { src: layeredSignWorkshop, alt: "Layered logo sign in workshop" },
+      { src: layeredSignRetail, alt: "3D logo in retail space" },
+      { src: layeredSignStudio, alt: "Dimensional logo in studio" }
     ]
   },
   
@@ -747,36 +753,24 @@ export const logoSignsConfig: TemplateConfig = {
     title: "Frequently Asked Questions",
     items: [
       {
-        question: "What's the turnaround time?",
-        answer: "Custom 3D logo signs typically take 4-6 weeks from final design approval to delivery. This includes design mockups, precision cutting, hand assembly, painting, and quality testing. Rush orders may be available for an additional fee."
+        question: "How do I hang a 3D logo sign?",
+        answer: "Most signs include mounting holes or can be paired with a custom frame or bar. We'll make it easy."
       },
       {
-        question: "Can you match my logo colors exactly?",
-        answer: "Absolutely! We can match any Pantone color, hex code, or physical color sample you provide. Send us your brand guidelines and we'll ensure perfect color accuracy."
+        question: "Can you match my brand colors exactly?",
+        answer: "Yes! We can color-match using provided HEX, Pantone, or CMYK references."
       },
       {
-        question: "How do I hang it?",
-        answer: "Each sign comes with professional mounting hardware. Most signs hang like a large picture frame using heavy-duty wall anchors. We provide detailed installation instructions, and professional installation services are available in select areas."
+        question: "What sizes do you offer?",
+        answer: "We can make almost any size, but most signs range from 24\" to 60\" wide. Let us know what space you're working with."
       },
       {
-        question: "Is this sign weatherproof?",
-        answer: "Our standard 3D logo signs are designed for indoor use in offices, lobbies, retail stores, and event spaces. For outdoor applications, we offer weather-resistant coating upgrades and sealed construction options."
+        question: "Can I use my logo or design?",
+        answer: "Yes — just upload it! We work from logos, sketches, or even rough concepts."
       },
       {
-        question: "What if I don't have a logo yet?",
-        answer: "No problem! We work with businesses at all stages. We can recommend trusted graphic designers, or if you have a general idea, we can create simple mockups to help you visualize options before committing to a final design."
-      },
-      {
-        question: "What sizes are available?",
-        answer: "We create signs in a wide range of sizes, typically from 18 inches to 8 feet in width, depending on your logo design. During the quote process, we'll help you choose the perfect size for your space and budget."
-      },
-      {
-        question: "Can you add LED lighting?",
-        answer: "Yes! We offer optional LED backlighting that creates a dramatic halo effect behind your logo. This is especially popular for trade show booths, event backdrops, and evening installations."
-      },
-      {
-        question: "Do you work with food trucks and mobile vendors?",
-        answer: "Absolutely! Our lightweight construction makes these signs perfect for food trucks, trailers, and mobile vendors who want bold branding without adding excessive weight to their vehicles."
+        question: "Do these signs light up?",
+        answer: "Yes — backlighting or internal lighting is available as an upgrade."
       }
     ]
   },
