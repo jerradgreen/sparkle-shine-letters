@@ -323,6 +323,129 @@ const WallHangingMarqueeSigns = () => {
         </div>
       </section>
 
+      {/* How It Works Section */}
+      <section className="py-10 px-4">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-12 text-foreground">How to Get Started</h2>
+          
+          <div className="grid md:grid-cols-3 gap-12">
+            {/* Step 1 */}
+            <div className="text-center">
+              <div className="w-32 h-32 mx-auto mb-6 flex items-center justify-center rounded-lg overflow-hidden bg-muted/40 ring-1 ring-border/40">
+                <OptimizedImage 
+                  src="/lovable-uploads/d86c2d98-97ca-4233-a7b6-6fea60a0dc18.png" 
+                  alt="Step 1 - vintage marquee number 1" 
+                  className="w-full h-full object-cover rounded-lg"
+                  loading="lazy"
+                />
+              </div>
+              <h3 className="text-2xl font-bold mb-4 text-foreground">Step 1: Tell Us What You Want</h3>
+              <p className="text-muted-foreground leading-relaxed">
+                Choose your letters, font style, size, and finish. We'll create a custom quote based on your exact specifications.
+              </p>
+              <div className="mt-6 flex justify-center">
+                <div className="w-16 h-0.5 bg-primary"></div>
+              </div>
+            </div>
+
+            {/* Step 2 */}
+            <div className="text-center">
+              <div className="w-32 h-32 mx-auto mb-6 flex items-center justify-center rounded-lg overflow-hidden bg-muted/40 ring-1 ring-border/40">
+                <OptimizedImage 
+                  src="/lovable-uploads/3a1aa8ae-0d8f-463a-9102-dd8aef074419.png" 
+                  alt="Step 2 - vintage marquee number 2" 
+                  className="w-full h-full object-cover rounded-lg"
+                  loading="lazy"
+                />
+              </div>
+              <h3 className="text-2xl font-bold mb-4 text-foreground">Step 2: We Handcraft Your Sign</h3>
+              <p className="text-muted-foreground leading-relaxed">
+                Each letter is hand-painted, wired, and tested. Your custom sign is built with care and attention to detail.
+              </p>
+              <div className="mt-6 flex justify-center">
+                <div className="w-16 h-0.5 bg-primary"></div>
+              </div>
+            </div>
+
+            {/* Step 3 */}
+            <div className="text-center">
+              <div className="w-32 h-32 mx-auto mb-6 flex items-center justify-center rounded-lg overflow-hidden bg-muted/40 ring-1 ring-border/40">
+                <OptimizedImage 
+                  src="/lovable-uploads/969e0a29-c68d-4a84-b260-590b946f35dd.png" 
+                  alt="Step 3 - vintage marquee number 3" 
+                  className="w-full h-full object-cover rounded-lg"
+                  loading="lazy"
+                />
+              </div>
+              <h3 className="text-2xl font-bold mb-4 text-foreground">Step 3: Hang & Enjoy</h3>
+              <p className="text-muted-foreground leading-relaxed">
+                Receive your sign ready to hang. Simple wall mounting, plug in, and watch your space transform.
+              </p>
+              <div className="mt-6 flex justify-center">
+                <div className="w-16 h-0.5 bg-primary"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Before and After Section */}
+      <section className="py-10 px-4 bg-muted/30">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-3 text-foreground">From Sketch to Statement Piece</h2>
+          <p className="text-center text-muted-foreground mb-8">
+            Watch your vision come to life with handcrafted precision
+          </p>
+          
+          <div className="grid md:grid-cols-3 gap-6">
+            <Card className="overflow-hidden">
+              <CardContent className="p-0">
+                <OptimizedImage 
+                  src="/src/assets/wall-hanging-freakshow.jpg" 
+                  alt="FREAKSHOW marquee letters final result" 
+                  className="w-full h-64 object-cover"
+                  loading="lazy"
+                />
+                <div className="p-4">
+                  <h3 className="font-bold mb-1">FREAKSHOW</h3>
+                  <p className="text-sm text-muted-foreground">Bold vintage block letters with classic red finish</p>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="overflow-hidden">
+              <CardContent className="p-0">
+                <OptimizedImage 
+                  src="/src/assets/wall-hanging-parliament.jpg" 
+                  alt="Parliament script marquee sign" 
+                  className="w-full h-64 object-cover"
+                  loading="lazy"
+                />
+                <div className="p-4">
+                  <h3 className="font-bold mb-1">Parliament</h3>
+                  <p className="text-sm text-muted-foreground">Elegant script font with warm copper tones</p>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="overflow-hidden">
+              <CardContent className="p-0">
+                <OptimizedImage 
+                  src="/src/assets/wall-hanging-google.jpg" 
+                  alt="Google colorful marquee letters" 
+                  className="w-full h-64 object-cover"
+                  loading="lazy"
+                />
+                <div className="p-4">
+                  <h3 className="font-bold mb-1">Google</h3>
+                  <p className="text-sm text-muted-foreground">Multi-color custom painted letters on reclaimed wood</p>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* Quote Form Anchor - No embedded form */}
       <section id="quote-form" className="py-2">
         {/* This section serves as scroll anchor for CTA buttons */}

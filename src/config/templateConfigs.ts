@@ -249,15 +249,15 @@ export const wallHangingConfig: TemplateConfig = {
   },
   
   gallery: {
-    title: "Custom Letter Signs Gallery",
+    title: "Real Signs in Real Spaces",
     subtitle: "See the vintage charm and warm glow in action",
     images: [
       { src: "/src/assets/wall-hanging.jpg", alt: "Rustic wall-hanging marquee letters on wood wall", caption: "Classic vintage finish on reclaimed wood" },
       { src: "/src/assets/carousel-1.jpg", alt: "Wall-mounted marquee sign at event", caption: "Perfect for photo backdrops" },
       { src: "/src/assets/carousel-2.jpg", alt: "Retail shop wall signage", caption: "Boutique storefront installation" },
-      { src: "/src/assets/carousel-4.jpg", alt: "Wedding wall décor", caption: "Wedding reception signage" },
-      { src: "/src/assets/carousel-5.jpg", alt: "Bar wall letters", caption: "Outdoor bar patio décor" },
-      { src: "/src/assets/carousel-6.jpg", alt: "Studio wall marquee", caption: "Home studio statement piece" }
+      { src: "/src/assets/wall-hanging-freakshow.jpg", alt: "FREAKSHOW marquee letters display", caption: "Bold vintage marquee lettering" },
+      { src: "/src/assets/wall-hanging-parliament.jpg", alt: "Parliament script marquee sign in coffee shop", caption: "Elegant script lettering in café setting" },
+      { src: "/src/assets/wall-hanging-google.jpg", alt: "Google colorful marquee letters on wood wall", caption: "Custom colorful letter installation" }
     ]
   },
   
