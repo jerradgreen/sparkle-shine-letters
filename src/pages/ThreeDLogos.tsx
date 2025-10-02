@@ -155,11 +155,11 @@ const ThreeDLogos = () => {
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <Card className="border-primary/20 hover:border-primary/40 transition-colors">
-              <CardContent className="p-4 flex items-center gap-4">
+              <CardContent className="p-4 flex items-center gap-4 min-h-[100px]">
                 <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
                   <Layers className="w-6 h-6 text-primary" />
                 </div>
-                <div>
+                <div className="flex flex-col justify-center">
                   <h3 className="text-base font-semibold mb-1 text-card-foreground">Custom Layers, Real Depth</h3>
                   <p className="text-xs text-muted-foreground">Multi-layered metal signs built by hand for dramatic dimensional branding</p>
                 </div>
@@ -167,11 +167,11 @@ const ThreeDLogos = () => {
             </Card>
 
             <Card className="border-primary/20 hover:border-primary/40 transition-colors">
-              <CardContent className="p-4 flex items-center gap-4">
+              <CardContent className="p-4 flex items-center gap-4 min-h-[100px]">
                 <div className="w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center flex-shrink-0">
                   <Palette className="w-6 h-6 text-secondary" />
                 </div>
-                <div>
+                <div className="flex flex-col justify-center">
                   <h3 className="text-base font-semibold mb-1 text-card-foreground">Unlimited Colors & Branding</h3>
                   <p className="text-xs text-muted-foreground">Match your brand style with layered paint, printing, or powder coating</p>
                 </div>
@@ -222,6 +222,59 @@ const ThreeDLogos = () => {
       <section id="gallery" className="py-10 bg-muted/30">
         <div className="container mx-auto px-4">
           <GallerySection config={logoSignsConfig.gallery} />
+        </div>
+      </section>
+
+      {/* How It Works Section */}
+      <section className="py-10 px-4 bg-gradient-to-b from-background to-muted/20">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-12 text-foreground">How It Works</h2>
+          
+          <div className="grid md:grid-cols-4 gap-8">
+            {/* Step 1 */}
+            <div className="text-center">
+              <div className="w-20 h-20 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center">
+                <span className="text-3xl font-bold text-primary">1</span>
+              </div>
+              <h3 className="text-xl font-bold mb-3 text-foreground">Submit Your Logo</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                Send us your logo file or concept. We'll discuss size, colors, materials, and any special requests.
+              </p>
+            </div>
+
+            {/* Step 2 */}
+            <div className="text-center">
+              <div className="w-20 h-20 mx-auto mb-4 bg-secondary/10 rounded-full flex items-center justify-center">
+                <span className="text-3xl font-bold text-secondary">2</span>
+              </div>
+              <h3 className="text-xl font-bold mb-3 text-foreground">Approve the Mockup</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                We create a detailed mockup showing layers, colors, and dimensions. You approve before we start building.
+              </p>
+            </div>
+
+            {/* Step 3 */}
+            <div className="text-center">
+              <div className="w-20 h-20 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center">
+                <span className="text-3xl font-bold text-primary">3</span>
+              </div>
+              <h3 className="text-xl font-bold mb-3 text-foreground">We Build It by Hand</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                Each layer is precision-cut, hand-assembled, painted to perfection, and quality-tested.
+              </p>
+            </div>
+
+            {/* Step 4 */}
+            <div className="text-center">
+              <div className="w-20 h-20 mx-auto mb-4 bg-secondary/10 rounded-full flex items-center justify-center">
+                <span className="text-3xl font-bold text-secondary">4</span>
+              </div>
+              <h3 className="text-xl font-bold mb-3 text-foreground">Ships Ready to Install</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                Your sign arrives ready to hang. Just mount it and watch your brand come to life.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -287,59 +340,6 @@ const ThreeDLogos = () => {
                 </div>
               </CardContent>
             </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* How It Works Section */}
-      <section className="py-10 px-4 bg-gradient-to-b from-background to-muted/20">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12 text-foreground">How It Works</h2>
-          
-          <div className="grid md:grid-cols-4 gap-8">
-            {/* Step 1 */}
-            <div className="text-center">
-              <div className="w-20 h-20 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center">
-                <span className="text-3xl font-bold text-primary">1</span>
-              </div>
-              <h3 className="text-xl font-bold mb-3 text-foreground">Submit Your Logo</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">
-                Send us your logo file or concept. We'll discuss size, colors, materials, and any special requests.
-              </p>
-            </div>
-
-            {/* Step 2 */}
-            <div className="text-center">
-              <div className="w-20 h-20 mx-auto mb-4 bg-secondary/10 rounded-full flex items-center justify-center">
-                <span className="text-3xl font-bold text-secondary">2</span>
-              </div>
-              <h3 className="text-xl font-bold mb-3 text-foreground">Approve the Mockup</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">
-                We create a detailed mockup showing layers, colors, and dimensions. You approve before we start building.
-              </p>
-            </div>
-
-            {/* Step 3 */}
-            <div className="text-center">
-              <div className="w-20 h-20 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center">
-                <span className="text-3xl font-bold text-primary">3</span>
-              </div>
-              <h3 className="text-xl font-bold mb-3 text-foreground">We Build It by Hand</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">
-                Each layer is precision-cut, hand-assembled, painted to perfection, and quality-tested.
-              </p>
-            </div>
-
-            {/* Step 4 */}
-            <div className="text-center">
-              <div className="w-20 h-20 mx-auto mb-4 bg-secondary/10 rounded-full flex items-center justify-center">
-                <span className="text-3xl font-bold text-secondary">4</span>
-              </div>
-              <h3 className="text-xl font-bold mb-3 text-foreground">Ships Ready to Install</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">
-                Your sign arrives ready to hang. Just mount it and watch your brand come to life.
-              </p>
-            </div>
           </div>
         </div>
       </section>

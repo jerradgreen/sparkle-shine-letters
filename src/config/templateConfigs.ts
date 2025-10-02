@@ -11,6 +11,7 @@ import testimonialWhiteMale from '@/assets/testimonial-white-male.jpg';
 import testimonialBlackWoman from '@/assets/testimonial-black-woman.jpg';
 import testimonialRealistic2 from '@/assets/testimonial-realistic-2.jpg';
 import testimonialRealistic3 from '@/assets/testimonial-realistic-3.jpg';
+import testimonialVintagePolaroid from '@/assets/testimonial-vintage-polaroid.jpg';
 
 // Import gallery images
 import logoTucks1 from '@/assets/logo-tucks-1.jpg';
@@ -641,7 +642,7 @@ export const logoSignsConfig: TemplateConfig = {
     headline: "Make Your Brand Stand Out in 3D",
     subheadline: "Custom layered metal signs that bring your logo to life with depth, color, and bold dimension. Perfect for walls, lobbies, event backdrops, and branded spaces.",
     ctaText: "Get My Custom 3D Logo Quote",
-    secondaryCtaText: "See Real 3D Logos",
+    secondaryCtaText: "Click for Examples",
     ctaAction: "pricing",
     heroImage: logoTucks1,
     heroImageAlt: "Tuck's Truffles 3D layered logo sign with dimensional depth",
@@ -694,14 +695,14 @@ export const logoSignsConfig: TemplateConfig = {
         role: "Boutique Owner",
         content: "We love our new sign! It completely transformed our office wall and made our brand pop. Everyone asks where we got it.",
         rating: 5,
-        image: testimonialRealistic1
+        image: testimonialVintagePolaroid
       },
       {
         name: "Marcus T.",
         role: "Event Planner",
         content: "The 3D logo signs are a game-changer for our corporate events. Clients are blown away by the professional look and dimensional impact.",
         rating: 5,
-        image: testimonialRealistic2
+        image: testimonialDavidBrick
       },
       {
         name: "Jennifer L.",
