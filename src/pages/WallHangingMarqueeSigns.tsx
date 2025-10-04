@@ -13,11 +13,8 @@ import heroImage from "@/assets/wall-hanging.jpg";
 import { Check } from "lucide-react";
 
 const WallHangingMarqueeSigns = () => {
-  const scrollToForm = () => {
-    const formSection = document.getElementById('quote-form');
-    if (formSection) {
-      formSection.scrollIntoView({ behavior: 'smooth' });
-    }
+  const openQuoteForm = () => {
+    window.open('https://www.cognitoforms.com/VintageMarqueeLights/IndividualWallHangingLettersnumbers', '_blank');
   };
 
   const scrollToGallery = () => {
@@ -66,7 +63,7 @@ const WallHangingMarqueeSigns = () => {
                 <Button 
                   size="lg" 
                   className="text-base px-8 py-6 w-full"
-                  onClick={scrollToForm}
+                  onClick={openQuoteForm}
                 >
                   {wallHangingConfig.hero.ctaText}
                 </Button>
@@ -120,7 +117,7 @@ const WallHangingMarqueeSigns = () => {
                 <Button 
                   size="lg" 
                   className="text-lg px-8 py-6 w-full"
-                  onClick={scrollToForm}
+                  onClick={openQuoteForm}
                 >
                   {wallHangingConfig.hero.ctaText}
                 </Button>
@@ -314,7 +311,7 @@ const WallHangingMarqueeSigns = () => {
             <Button 
               size="lg" 
               className="text-lg px-8 py-6"
-              onClick={scrollToForm}
+              onClick={openQuoteForm}
             >
               Get Your Custom Quote
             </Button>
@@ -489,7 +486,7 @@ const WallHangingMarqueeSigns = () => {
             <Button 
               size="lg" 
               className="text-lg px-8"
-              onClick={scrollToForm}
+              onClick={openQuoteForm}
             >
               Get Your Custom Quote
             </Button>
