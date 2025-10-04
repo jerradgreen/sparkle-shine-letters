@@ -12,11 +12,8 @@ import OptimizedImage from "@/components/OptimizedImage";
 import foodTruckHero from "@/assets/food-truck-bar-monte.jpg";
 
 const MobileVendorSigns = () => {
-  const scrollToForm = () => {
-    const formSection = document.getElementById('quote-form');
-    if (formSection) {
-      formSection.scrollIntoView({ behavior: 'smooth' });
-    }
+  const openQuoteForm = () => {
+    window.open('https://www.cognitoforms.com/VintageMarqueeLights/MobileVendorSignForm', '_blank');
   };
 
   const scrollToGallery = () => {
@@ -65,7 +62,7 @@ const MobileVendorSigns = () => {
                 <Button 
                   size="lg" 
                   className="text-base px-8 py-6 w-full"
-                  onClick={scrollToForm}
+                  onClick={openQuoteForm}
                 >
                   {foodTruckSignsConfig.hero.ctaText}
                 </Button>
@@ -109,7 +106,7 @@ const MobileVendorSigns = () => {
                 <Button 
                   size="lg" 
                   className="text-lg px-8 py-6 w-full"
-                  onClick={scrollToForm}
+                  onClick={openQuoteForm}
                 >
                   {foodTruckSignsConfig.hero.ctaText}
                 </Button>
@@ -202,7 +199,7 @@ const MobileVendorSigns = () => {
             <Button 
               size="lg" 
               className="text-lg px-8 py-6"
-              onClick={scrollToForm}
+              onClick={openQuoteForm}
             >
               Get Your Custom Quote
             </Button>
@@ -244,7 +241,7 @@ const MobileVendorSigns = () => {
           <Button 
             size="lg" 
             className="text-lg px-12 py-6"
-            onClick={scrollToForm}
+            onClick={openQuoteForm}
           >
             Get Quote
           </Button>

@@ -12,11 +12,8 @@ import OptimizedImage from "@/components/OptimizedImage";
 import logoHero from "@/assets/logo-tucks-1.jpg";
 
 const ThreeDLogos = () => {
-  const scrollToForm = () => {
-    const formSection = document.getElementById('quote-form');
-    if (formSection) {
-      formSection.scrollIntoView({ behavior: 'smooth' });
-    }
+  const openQuoteForm = () => {
+    window.open('https://www.cognitoforms.com/VintageMarqueeLights/_3DLogoLayeredSignForm', '_blank');
   };
 
   const scrollToGallery = () => {
@@ -65,7 +62,7 @@ const ThreeDLogos = () => {
                 <Button 
                   size="lg" 
                   className="text-base px-8 py-6 w-full"
-                  onClick={scrollToForm}
+                  onClick={openQuoteForm}
                 >
                   {logoSignsConfig.hero.ctaText}
                 </Button>
@@ -109,7 +106,7 @@ const ThreeDLogos = () => {
                 <Button 
                   size="lg" 
                   className="text-lg px-8 py-6 w-full"
-                  onClick={scrollToForm}
+                  onClick={openQuoteForm}
                 >
                   {logoSignsConfig.hero.ctaText}
                 </Button>
@@ -210,7 +207,7 @@ const ThreeDLogos = () => {
             <Button 
               size="lg" 
               className="text-lg px-8 py-6"
-              onClick={scrollToForm}
+              onClick={openQuoteForm}
             >
               Get Your Custom Quote
             </Button>
