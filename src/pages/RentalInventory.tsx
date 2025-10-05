@@ -20,9 +20,9 @@ import setup1Image from "@/assets/setup-1.jpeg";
 import setup2Image from "@/assets/setup-2.jpg";
 import marqueeDetailImage from "@/assets/marquee-detail.jpg";
 import testimonialSarahImage from "@/assets/testimonial-sarah.jpg";
-import marquee1Image from "@/assets/marquee-1.png";
-import marquee2Image from "@/assets/marquee-2.png";
-import marquee3Image from "@/assets/marquee-3.png";
+const marquee1Image = "https://cdn.shopify.com/s/files/1/1403/8315/files/1_lights_on_studio.webp";
+const marquee2Image = "https://cdn.shopify.com/s/files/1/1403/8315/files/2_lights_on_studio.webp";
+const marquee3Image = "https://cdn.shopify.com/s/files/1/1403/8315/files/3_lights_on_studio.webp";
 import testimonialMikeImage from "@/assets/testimonial-mike.jpg";
 
 const RentalInventory = () => {
