@@ -5,59 +5,55 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { Label } from '@/components/ui/label';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 
-// Letter images imports
-import ACutout from '@/assets/A_cutout.png';
-import BCutout from '@/assets/B_cutout.png';
-import CCutout from '@/assets/C_cutout.png';
-import DCutout from '@/assets/D_cutout.png';
-import ECutout from '@/assets/E_cutout.png';
-import FCutout from '@/assets/F_cutout.png';
-import GCutout from '@/assets/G_cutout.png';
-import HCutout from '@/assets/H_cutout.png';
-import ICutout from '@/assets/I_cutout.png';
-import JCutout from '@/assets/J_cutout.png';
-import KCutout from '@/assets/K_cutout.png';
-import LCutout from '@/assets/L_cutout.png';
-import MCutout from '@/assets/M_cutout.png';
-import NCutout from '@/assets/N_cutout.png';
-import OCutout from '@/assets/O_cutout.png';
-import PCutout from '@/assets/P_cutout.png';
-import QCutout from '@/assets/Q_cutout.png';
-import RCutout from '@/assets/R_cutout.png';
-import SCutout from '@/assets/S_cutout.png';
-import TCutout from '@/assets/T_cutout.png';
-import UCutout from '@/assets/U_cutout.png';
-import VCutout from '@/assets/V_cutout.png';
-import WCutout from '@/assets/W_cutout.png';
-import XCutout from '@/assets/X_cutout.png';
-import YCutout from '@/assets/Y_cutout.png';
-import ZCutout from '@/assets/Z_cutout.png';
-import Number0 from '@/assets/0_lights_on.png';
-import Number1 from '@/assets/1_lights_on.png';
-import Number2 from '@/assets/2_lights_on.png';
-import Number3 from '@/assets/3_lights_on.png';
-import Number4 from '@/assets/4_lights_on.png';
-import Number5 from '@/assets/5_lights_on.png';
-import Number6 from '@/assets/6_lights_on.png';
-import Number7 from '@/assets/7_lights_on.png';
-import Number8 from '@/assets/8_lights_on.png';
-import Number9 from '@/assets/9_lights_on.png';
-import AmpersandLights from '@/assets/ampersand_lights_on.png';
-import BackgroundImage from '@/assets/black_wall_background_image_4.png';
+// Shopify CDN base URL
+const SHOPIFY_CDN_BASE = 'https://cdn.shopify.com/s/files/1/1403/8315/files';
 
-// Letter images map
+// Helper function to generate Shopify CDN URL
+const getShopifyImageUrl = (filename: string) => `${SHOPIFY_CDN_BASE}/${filename}.webp`;
+
+// Letter images map - using Shopify CDN .webp files
 const letterImages: Record<string, string> = {
-  'A': ACutout, 'B': BCutout, 'C': CCutout, 'D': DCutout,
-  'E': ECutout, 'F': FCutout, 'G': GCutout, 'H': HCutout,
-  'I': ICutout, 'J': JCutout, 'K': KCutout, 'L': LCutout,
-  'M': MCutout, 'N': NCutout, 'O': OCutout, 'P': PCutout,
-  'Q': QCutout, 'R': RCutout, 'S': SCutout, 'T': TCutout,
-  'U': UCutout, 'V': VCutout, 'W': WCutout, 'X': XCutout,
-  'Y': YCutout, 'Z': ZCutout, '&': AmpersandLights,
-  '0': Number0, '1': Number1, '2': Number2, '3': Number3,
-  '4': Number4, '5': Number5, '6': Number6, '7': Number7,
-  '8': Number8, '9': Number9
+  'A': getShopifyImageUrl('A_cutout'),
+  'B': getShopifyImageUrl('B_cutout'),
+  'C': getShopifyImageUrl('C_cutout'),
+  'D': getShopifyImageUrl('D_cutout'),
+  'E': getShopifyImageUrl('E_cutout'),
+  'F': getShopifyImageUrl('F_cutout'),
+  'G': getShopifyImageUrl('G_cutout'),
+  'H': getShopifyImageUrl('H_cutout'),
+  'I': getShopifyImageUrl('I_cutout'),
+  'J': getShopifyImageUrl('J_cutout'),
+  'K': getShopifyImageUrl('K_cutout'),
+  'L': getShopifyImageUrl('L_cutout'),
+  'M': getShopifyImageUrl('M_cutout'),
+  'N': getShopifyImageUrl('N_cutout'),
+  'O': getShopifyImageUrl('O_cutout'),
+  'P': getShopifyImageUrl('P_cutout'),
+  'Q': getShopifyImageUrl('Q_cutout'),
+  'R': getShopifyImageUrl('R_cutout'),
+  'S': getShopifyImageUrl('S_cutout'),
+  'T': getShopifyImageUrl('T_cutout'),
+  'U': getShopifyImageUrl('U_cutout'),
+  'V': getShopifyImageUrl('V_cutout'),
+  'W': getShopifyImageUrl('W_cutout'),
+  'X': getShopifyImageUrl('X_cutout'),
+  'Y': getShopifyImageUrl('Y_cutout'),
+  'Z': getShopifyImageUrl('Z_cutout'),
+  '&': getShopifyImageUrl('ampersand_lights_on'),
+  '0': getShopifyImageUrl('0_lights_on'),
+  '1': getShopifyImageUrl('1_lights_on'),
+  '2': getShopifyImageUrl('2_lights_on'),
+  '3': getShopifyImageUrl('3_lights_on'),
+  '4': getShopifyImageUrl('4_lights_on'),
+  '5': getShopifyImageUrl('5_lights_on'),
+  '6': getShopifyImageUrl('6_lights_on'),
+  '7': getShopifyImageUrl('7_lights_on'),
+  '8': getShopifyImageUrl('8_lights_on'),
+  '9': getShopifyImageUrl('9_lights_on')
 };
+
+// Background image from Shopify CDN
+const BackgroundImage = getShopifyImageUrl('black_wall_background_image_4');
 
 interface LetterElementProps {
   character: string;
