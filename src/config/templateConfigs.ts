@@ -28,10 +28,10 @@ import imageSetup1 from '@/assets/setup-1.jpeg';
 import imageSetup2 from '@/assets/setup-2.jpg';
 import chicagoLayeredSign from '@/assets/chicago-layered-sign.jpg';
 import exitzero1LayeredSign from '@/assets/exitzero1-layered-sign.jpg';
-import layeredSignOffice from '@/assets/layered-sign-office.jpeg';
-import layeredSignWorkshop from '@/assets/layered-sign-workshop.jpg';
-import layeredSignRetail from '@/assets/layered-sign-retail.jpg';
-import layeredSignStudio from '@/assets/layered-sign-studio.jpeg';
+const layeredSignOffice = 'https://cdn.shopify.com/s/files/1/1403/8315/files/IMG_6390_layered-sign.jpg?v=1759694027';
+const layeredSignWorkshop = 'https://cdn.shopify.com/s/files/1/1403/8315/files/BarbaryCoast2.jpg?v=1759690725';
+const layeredSignRetail = 'https://cdn.shopify.com/s/files/1/1403/8315/files/IMG_4392_layered_sign.jpg?v=1759690802';
+const layeredSignStudio = 'https://cdn.shopify.com/s/files/1/1403/8315/files/IMG_9105_2_1bbbf469-e3b3-4b57-b166-8bc3402e2d7c.jpg?v=1759697187';
 
 import wallHanging from '@/assets/wall-hanging.jpg';
 import galleryFreakshow from '@/assets/gallery-freakshow.jpg';
