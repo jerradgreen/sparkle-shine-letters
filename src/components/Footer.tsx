@@ -45,13 +45,6 @@ const Footer = () => {
               >
                 Mobile Vendor Signs
               </Link>
-            </div>
-          </div>
-
-          {/* Services Column */}
-          <div>
-            <h4 className="font-bold text-foreground mb-4 text-lg">Services</h4>
-            <div className="flex flex-col gap-3">
               <Link 
                 to="/rental-inventory" 
                 onClick={() => window.scrollTo(0, 0)}
@@ -65,15 +58,28 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary transition-colors"
               >
-                Custom Request Form
+                Not Sure?
               </a>
+              <button
+                onClick={scrollToGallery}
+                className="text-muted-foreground hover:text-primary transition-colors text-left"
+              >
+                Gallery
+              </button>
+            </div>
+          </div>
+
+          {/* Contact Column */}
+          <div>
+            <h4 className="font-bold text-foreground mb-4 text-lg">Contact</h4>
+            <div className="flex flex-col gap-3">
               <a 
                 href="https://www.cognitoforms.com/VintageMarqueeLights/CustomVintageMarqueeLightsQuoteRequest"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary transition-colors"
               >
-                Not Sure?
+                Custom Request Form
               </a>
             </div>
           </div>
@@ -81,7 +87,7 @@ const Footer = () => {
           {/* Company Column */}
           <div>
             <h4 className="font-bold text-foreground mb-4 text-lg">Company</h4>
-            <div className="flex flex-col gap-3">
+            <div className="flex flex-col gap-3 mb-6">
               <a 
                 href="https://vintagemarqueelights.com/pages/about-us"
                 target="_blank"
@@ -90,12 +96,6 @@ const Footer = () => {
               >
                 About
               </a>
-              <button
-                onClick={scrollToGallery}
-                className="text-muted-foreground hover:text-primary transition-colors text-left"
-              >
-                Gallery
-              </button>
               <a 
                 href="https://vintagemarqueelights.com/policies/privacy-policy"
                 target="_blank"
@@ -105,27 +105,26 @@ const Footer = () => {
                 Privacy Policy
               </a>
             </div>
-          </div>
-        </div>
-
-        {/* Contact Info */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8 pb-8 border-b border-border">
-          <div>
-            <h4 className="font-semibold text-foreground mb-3">Made In:</h4>
-            <p className="text-muted-foreground leading-relaxed">
-              Myrtle Beach, SC<br />
-              Boise, ID<br />
-              Chicago, IL<br />
-              Marietta, GA<br />
-              Winston-Salem, NC<br />
-              and beyond!
-            </p>
-          </div>
-          <div>
-            <h4 className="font-semibold text-foreground mb-3">Follow Us</h4>
-            <p className="text-muted-foreground">
-              Instagram: @vintagemarqueelights
-            </p>
+            
+            <div className="mb-6">
+              <h5 className="font-semibold text-foreground mb-2 text-sm">Made In:</h5>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                Myrtle Beach, SC<br />
+                Boise, ID<br />
+                Chicago, IL<br />
+                Marietta, GA<br />
+                Winston-Salem, NC<br />
+                and beyond!
+              </p>
+            </div>
+            
+            <div>
+              <h5 className="font-semibold text-foreground mb-2 text-sm">Follow Us</h5>
+              <p className="text-muted-foreground text-sm">
+                Instagram: @vintagemarqueelights<br />
+                Facebook: @vintagemarqueelights
+              </p>
+            </div>
           </div>
         </div>
 
