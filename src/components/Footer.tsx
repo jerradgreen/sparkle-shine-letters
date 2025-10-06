@@ -66,6 +66,14 @@ const Footer = () => {
               >
                 Gallery
               </button>
+              <a 
+                href="https://vintagemarqueelights.com/blogs/news"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-primary transition-colors"
+              >
+                Projects Blog
+              </a>
             </div>
           </div>
 
