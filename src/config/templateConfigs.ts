@@ -647,7 +647,7 @@ export const logoSignsConfig: TemplateConfig = {
   
   hero: {
     headline: "Make Your Brand Stand Out in 3D",
-    subheadline: "Custom layered metal signs that bring your logo to life with depth, color, and bold dimension. Perfect for walls, lobbies, event backdrops, and branded spaces.",
+    subheadline: "Custom layered metal signs that bring your logo to life with depth, color, and bold dimension. Perfect for home walls, lobbies, event backdrops, and branded spaces.",
     ctaText: "Get My Custom 3D Logo Quote",
     secondaryCtaText: "Click for Examples",
     ctaAction: "pricing",
