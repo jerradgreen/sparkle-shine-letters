@@ -40,7 +40,7 @@ const Navigation = () => {
                   <Link to="/event-standup-signs" className="cursor-pointer">Event Signs</Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
-                  <a href="https://vintagemarqueelights.com/pages/custom-sign-request-form" className="cursor-pointer">Not Sure</a>
+                  <a href="https://www.cognitoforms.com/VintageMarqueeLights/CustomVintageMarqueeLightsQuoteRequest" className="cursor-pointer">Not Sure</a>
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
@@ -53,7 +53,7 @@ const Navigation = () => {
               36/48" Stand-Up Letters
             </Link>
             
-            <a href="https://vintagemarqueelights.com/pages/custom-sign-request-form" className="text-foreground hover:text-primary font-medium">
+            <a href="https://www.cognitoforms.com/VintageMarqueeLights/CustomVintageMarqueeLightsQuoteRequest" className="text-foreground hover:text-primary font-medium">
               Custom Request Form
             </a>
           </div>
@@ -114,7 +114,7 @@ const Navigation = () => {
                     Event Signs
                   </Link>
                   <a
-                    href="https://vintagemarqueelights.com/pages/custom-sign-request-form"
+                    href="https://www.cognitoforms.com/VintageMarqueeLights/CustomVintageMarqueeLightsQuoteRequest"
                     className="text-foreground hover:text-primary font-medium py-1"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
@@ -140,7 +140,7 @@ const Navigation = () => {
               </Link>
               
               <a
-                href="https://vintagemarqueelights.com/pages/custom-sign-request-form"
+                href="https://www.cognitoforms.com/VintageMarqueeLights/CustomVintageMarqueeLightsQuoteRequest"
                 className="text-foreground hover:text-primary font-medium py-2"
                 onClick={() => setIsMobileMenuOpen(false)}
               >

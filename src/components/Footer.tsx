@@ -16,10 +16,10 @@ const Footer = () => {
           <Link to="/" className="text-foreground hover:text-primary font-medium">
             Home
           </Link>
-          <Link to="/wall-hanging" className="text-foreground hover:text-primary font-medium">
+          <Link to="/wall-hanging-signs" className="text-foreground hover:text-primary font-medium">
             Wall-Hanging Letters
           </Link>
-          <Link to="/event-standup" className="text-foreground hover:text-primary font-medium">
+          <Link to="/event-standup-signs" className="text-foreground hover:text-primary font-medium">
             Event / Stand-Up Letters
           </Link>
           <Link to="/rental-inventory" className="text-foreground hover:text-primary font-medium">
@@ -34,21 +34,10 @@ const Footer = () => {
           >
             Gallery
           </button>
-          <Link to="/about" className="text-foreground hover:text-primary font-medium">
+          <a href="https://vintagemarqueelights.com/pages/about-us" className="text-foreground hover:text-primary font-medium">
             About
-          </Link>
-          <button
-            onClick={() => {
-              const contactSection = document.querySelector('.text-center.py-12.px-6.bg-muted\\/20');
-              if (contactSection) {
-                contactSection.scrollIntoView({ behavior: 'smooth' });
-              }
-            }}
-            className="text-foreground hover:text-primary font-medium text-left"
-          >
-            Contact
-          </button>
-          <a href="https://vintagemarqueelights.com/pages/custom-sign-request-form" className="text-foreground hover:text-primary font-medium">
+          </a>
+          <a href="https://www.cognitoforms.com/VintageMarqueeLights/CustomVintageMarqueeLightsQuoteRequest" className="text-foreground hover:text-primary font-medium">
             Custom Request Form
           </a>
         </div>
