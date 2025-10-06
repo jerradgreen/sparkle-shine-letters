@@ -453,7 +453,7 @@ export const standUpSignsConfig: TemplateConfig = {
       },
       {
         question: "What are toppers?",
-        answer: "Toppers are smaller word signs like THE, MR&MRS, CLASS OF, and BABY. Each phrase is pre-mounted on a shared base so you can easily set them on top of your 36\" letters for layered displays — and extra rental income."
+        answer: "Toppers are 15\" tall word signs like THE, MR&MRS, CLASS OF, and BABY. Each phrase is pre-mounted on a shared base so you can easily set them on top of your 36\" letters for layered displays — and extra rental income."
       },
       {
         question: "How much can I rent the letters for?",

@@ -679,7 +679,7 @@ const RentalInventory = () => {
             {/* FAQ Item 10 */}
             <div className="border-b border-border pb-4">
               <h3 className="text-base font-bold mb-2 text-foreground">Q: What are toppers?</h3>
-              <p className="text-sm text-muted-foreground">Toppers are smaller word signs like THE, MR&MRS, CLASS OF, and BABY. Each phrase is pre-mounted on a shared base so you can easily set them on top of your 36" letters for layered displays — and extra rental income.</p>
+              <p className="text-sm text-muted-foreground">Toppers are 15" tall word signs like THE, MR&MRS, CLASS OF, and BABY. Each phrase is pre-mounted on a shared base so you can easily set them on top of your 36" letters for layered displays — and extra rental income.</p>
             </div>
 
             {/* Business & Pricing Group */}
