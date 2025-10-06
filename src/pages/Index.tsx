@@ -26,13 +26,13 @@ const signStyles = [
     title: "3D Layered/All-in-One Logos, Designs",
     description: "Stunning 3D dimensional signs with multiple layers. Premium depth and visual impact.",
     image: layeredSigns,
-    link: "/layered-signs",
+    link: "/3d-logos",
   },
   {
     title: "Food Truck Signs",
     description: "Bold illuminated signage for food trucks, mobile vendors. More eyeballs, more sales!",
     image: foodTruckBarMonte,
-    link: "/food-truck-signs",
+    link: "/mobile-vendor-signs",
     imagePosition: "center 10%",
   },
   {
@@ -53,7 +53,7 @@ const signStyles = [
     title: "Not Sure? Let's Talk!",
     description: "Have something totally different in mind? We love custom projects. Tell us your vision.",
     image: "https://dl.dropboxusercontent.com/scl/fi/zow5dope9wbfhay9lfcmq/custom-collage3.jpg?rlkey=btz40y0zyzbeb7h7y9kuajvbj",
-    link: "https://vintagemarqueelights.com/pages/custom-sign-request-form",
+    link: "https://www.cognitoforms.com/VintageMarqueeLights/CustomVintageMarqueeLightsQuoteRequest",
     isExternal: true,
   },
 ];

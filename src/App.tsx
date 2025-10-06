@@ -8,7 +8,7 @@ import Index from "./pages/Index";
 import RentalInventory from "./pages/RentalInventory";
 import EventStandUpSigns from "./pages/EventStandUpSigns";
 import WallHangingMarqueeSigns from "./pages/WallHangingMarqueeSigns";
-import LayeredSigns from "./pages/LayeredSigns";
+
 import MobileVendorSigns from "./pages/MobileVendorSigns";
 import ThreeDLogos from "./pages/ThreeDLogos";
 import NotFound from "./pages/NotFound";
@@ -27,7 +27,7 @@ const App = () => (
             <Route path="/rental-inventory" element={<RentalInventory />} />
             <Route path="/event-standup-signs" element={<EventStandUpSigns />} />
             <Route path="/wall-hanging-signs" element={<WallHangingMarqueeSigns />} />
-            <Route path="/layered-signs" element={<LayeredSigns />} />
+            
             <Route path="/mobile-vendor-signs" element={<MobileVendorSigns />} />
             <Route path="/3d-logos" element={<ThreeDLogos />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

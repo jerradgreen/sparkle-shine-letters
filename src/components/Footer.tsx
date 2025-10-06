@@ -22,9 +22,6 @@ const Footer = () => {
           <Link to="/event-standup" className="text-foreground hover:text-primary font-medium">
             Event / Stand-Up Letters
           </Link>
-          <Link to="/layered-signs" className="text-foreground hover:text-primary font-medium">
-            3D Layered Signs
-          </Link>
           <Link to="/rental-inventory" className="text-foreground hover:text-primary font-medium">
             Rental Inventory
           </Link>
@@ -59,7 +56,7 @@ const Footer = () => {
         {/* Contact Info */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
           <div>
-            <h4 className="font-semibold text-foreground mb-2">Locations</h4>
+            <h4 className="font-semibold text-foreground mb-2">Made In:</h4>
             <p className="text-muted-foreground">
               Myrtle Beach, SC<br />
               Boise, ID<br />
