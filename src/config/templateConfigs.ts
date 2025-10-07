@@ -709,7 +709,7 @@ export const logoSignsConfig: TemplateConfig = {
         role: "Event Planner",
         content: "The 3D logo signs are a game-changer for our corporate events. Clients are blown away by the professional look and dimensional impact.",
         rating: 5,
-        image: testimonialDavidBrick
+        image: testimonialWhiteMale
       },
       {
         name: "Jennifer L.",
