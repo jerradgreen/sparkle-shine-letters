@@ -103,6 +103,8 @@ const Index = () => {
                             alt={style.title}
                             className={`w-full h-56 object-cover group-hover:scale-110 transition-transform duration-500 ${style.imageScale || ''}`}
                             style={{ objectPosition: style.imagePosition || 'center' }}
+                            loading="lazy"
+                            decoding="async"
                           />
                           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent group-hover:from-black/90 transition-all duration-300">
                             <div className="absolute inset-0 flex flex-col justify-center items-center text-center p-6">
@@ -122,13 +124,15 @@ const Index = () => {
                         </div>
                       </a>
                     ) : (
-                      <Link to={style.link} className="block">
+                       <Link to={style.link} className="block">
                         <div className="relative overflow-hidden">
                           <img
                             src={style.image}
                             alt={style.title}
                             className={`w-full h-56 object-cover group-hover:scale-110 transition-transform duration-500 ${style.imageScale || ''}`}
                             style={{ objectPosition: style.imagePosition || 'center' }}
+                            loading="lazy"
+                            decoding="async"
                           />
                           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent group-hover:from-black/90 transition-all duration-300">
                             <div className="absolute inset-0 flex flex-col justify-center items-center text-center p-6">
@@ -196,6 +200,7 @@ const Index = () => {
               scrolling="no" 
               style={{ border: 'none', overflow: 'hidden', width: '100%', maxWidth: '1275px', height: 'auto', aspectRatio: '1/1' }} 
               title="Posts from Instagram"
+              loading="lazy"
             />
           </div>
         </div>

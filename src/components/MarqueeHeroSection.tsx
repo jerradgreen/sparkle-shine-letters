@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button';
-import OptimizedImage from '@/components/OptimizedImage';
+import PerformantImage from '@/components/PerformantImage';
 import heroLockwoods from '@/assets/hero-lockwoods.jpg';
 
 export const MarqueeHeroSection = () => {
@@ -19,11 +19,13 @@ export const MarqueeHeroSection = () => {
     <section className="relative h-[50vh] md:h-[70vh] flex flex-col justify-between px-4 pt-8 md:pt-16 pb-6 md:pb-8 overflow-hidden">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
-        <OptimizedImage
+        <PerformantImage
           src={heroLockwoods}
           alt="THE LOCKWOODS marquee letters with couple dancing at elegant event"
           className="w-full h-full object-cover object-[center_60%]"
           priority
+          fetchPriority="high"
+          sizes="100vw"
         />
         <div className="absolute inset-0 bg-black/40" />
       </div>
