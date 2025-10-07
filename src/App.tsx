@@ -9,9 +9,9 @@ import Index from "./pages/Index";
 import RentalInventory from "./pages/RentalInventory";
 import EventStandUpSigns from "./pages/EventStandUpSigns";
 import WallHangingMarqueeSigns from "./pages/WallHangingMarqueeSigns";
-
 import MobileVendorSigns from "./pages/MobileVendorSigns";
 import ThreeDLogos from "./pages/ThreeDLogos";
+import ThankYou from "./pages/ThankYou";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -29,9 +29,9 @@ const App = () => (
             <Route path="/rental-inventory" element={<RentalInventory />} />
             <Route path="/event-standup-signs" element={<EventStandUpSigns />} />
             <Route path="/wall-hanging-signs" element={<WallHangingMarqueeSigns />} />
-            
             <Route path="/mobile-vendor-signs" element={<MobileVendorSigns />} />
             <Route path="/3d-logos" element={<ThreeDLogos />} />
+            <Route path="/thank-you" element={<ThankYou />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
