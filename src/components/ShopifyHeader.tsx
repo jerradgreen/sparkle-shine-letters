@@ -14,7 +14,7 @@ const ShopifyHeader = () => {
       <div className="bg-transparent">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-center items-center py-2">
-            <a href="https://vintagemarqueelights.com" className="flex items-center">
+            <a href="/" className="flex items-center">
               <img 
                 src={logoImage} 
                 alt="Vintage Marquee Lights" 
