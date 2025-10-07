@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -7,9 +6,6 @@ import { Lightbulb, Star, Package, Clock, Mail, Zap, DollarSign, Percent, Check,
 import ShopifyHeader from "@/components/ShopifyHeader";
 import ShopifyFooter from "@/components/ShopifyFooter";
 import Navigation from "@/components/Navigation";
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
 import OptimizedImage from "@/components/OptimizedImage";
 
 import heroImage from "@/assets/hero-image.jpg";
@@ -26,21 +22,7 @@ const marquee3Image = "https://cdn.shopify.com/s/files/1/1403/8315/files/3_light
 import testimonialMikeImage from "@/assets/testimonial-mike.jpg";
 
 const RentalInventory = () => {
-  const [open, setOpen] = useState(false);
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
-
-  const buildUrl = () => {
-    const payload = {
-      Name: { First: firstName, Last: lastName },
-      Phone: phone,
-      EmailpleaseCheckSpellingBeforeSubmitting: email,
-      WhatStyleOfSignAreYouWantingUsToMake: "Rental Inventory Package Info",
-    };
-    return "https://vintagemarqueelights.com/pages/custom-sign-request-form?entry=" + encodeURIComponent(JSON.stringify(payload));
-  };
+  const formUrl = "https://www.cognitoforms.com/VintageMarqueeLights/CustomVintageMarqueeLightsQuoteRequest";
 
   return (
     <div className="min-h-screen bg-background">
@@ -92,9 +74,9 @@ const RentalInventory = () => {
                 <Button 
                   size="lg" 
                   className="text-lg px-8 py-6 w-full"
-                  onClick={() => setOpen(true)}
+                  asChild
                 >
-                  Get Package Pricing Now
+                  <a href={formUrl} target="_blank" rel="noopener noreferrer">Get Package Pricing Now</a>
                 </Button>
               </div>
             </div>
@@ -115,9 +97,9 @@ const RentalInventory = () => {
               <Button 
                 size="lg" 
                 className="text-lg px-8 py-6 w-full mb-4"
-                onClick={() => setOpen(true)}
+                asChild
               >
-                Get Package Pricing Now
+                <a href={formUrl} target="_blank" rel="noopener noreferrer">Get Package Pricing Now</a>
               </Button>
               
               <div className="bg-muted/30 rounded-lg p-4 text-center">
@@ -189,9 +171,9 @@ const RentalInventory = () => {
             <Button 
               size="lg" 
               className="text-lg px-8 py-6 w-full"
-              onClick={() => setOpen(true)}
+              asChild
             >
-              Get Package Pricing Now
+              <a href={formUrl} target="_blank" rel="noopener noreferrer">Get Package Pricing Now</a>
             </Button>
           </div>
         </div>
@@ -435,11 +417,11 @@ const RentalInventory = () => {
       <section className="py-12 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <Button 
-            onClick={() => setOpen(true)}
             size="lg" 
             className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 text-xl font-semibold rounded-lg transition-all duration-300 hover:scale-105"
+            asChild
           >
-            Get Package Pricing Now
+            <a href={formUrl} target="_blank" rel="noopener noreferrer">Get Package Pricing Now</a>
           </Button>
         </div>
       </section>
@@ -643,9 +625,9 @@ const RentalInventory = () => {
           <Button 
             size="lg" 
             className="text-lg px-8 py-6"
-            onClick={() => setOpen(true)}
+            asChild
           >
-            Get Package Pricing Now
+            <a href={formUrl} target="_blank" rel="noopener noreferrer">Get Package Pricing Now</a>
           </Button>
         </div>
       </section>
@@ -932,9 +914,9 @@ const RentalInventory = () => {
               variant="outline" 
               size="lg" 
               className="text-lg px-8 py-4 bg-primary-foreground/10 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/20"
-              onClick={() => setOpen(true)}
+              asChild
             >
-              Get Package Pricing Now
+              <a href={formUrl} target="_blank" rel="noopener noreferrer">Get Package Pricing Now</a>
             </Button>
           </div>
           
@@ -943,41 +925,6 @@ const RentalInventory = () => {
           </p>
         </div>
       </section>
-
-
-      <Dialog open={open} onOpenChange={setOpen}>
-        <DialogContent aria-describedby={undefined}>
-          <DialogHeader>
-            <DialogTitle>Prefill your info - click submit on next page</DialogTitle>
-          </DialogHeader>
-          <div className="grid gap-4">
-            <div className="grid grid-cols-2 gap-3">
-              <div className="grid gap-2">
-                <Label htmlFor="first">First name</Label>
-                <Input id="first" value={firstName} onChange={(e) => setFirstName(e.target.value)} />
-              </div>
-              <div className="grid gap-2">
-                <Label htmlFor="last">Last name</Label>
-                <Input id="last" value={lastName} onChange={(e) => setLastName(e.target.value)} />
-              </div>
-            </div>
-            <div className="grid gap-2">
-              <Label htmlFor="email">Email</Label>
-              <Input id="email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
-            </div>
-            <div className="grid gap-2">
-              <Label htmlFor="phone">Phone</Label>
-              <Input id="phone" type="tel" value={phone} onChange={(e) => setPhone(e.target.value)} />
-            </div>
-          </div>
-          <p className="text-xs text-muted-foreground mt-4 text-center">
-            If you don't see the information in your inbox in 5-10 minutes, please check your junk/spam folder.
-          </p>
-          <DialogFooter>
-            <Button onClick={() => { const url = buildUrl(); window.open(url, "_blank"); setOpen(false); }}>Open Form</Button>
-          </DialogFooter>
-        </DialogContent>
-      </Dialog>
 
       <ShopifyFooter />
     </div>
