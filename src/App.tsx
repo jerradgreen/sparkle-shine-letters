@@ -31,7 +31,7 @@ const App = () => (
             <Route path="/wall-hanging-signs" element={<WallHangingMarqueeSigns />} />
             <Route path="/mobile-vendor-signs" element={<MobileVendorSigns />} />
             <Route path="/3d-logos" element={<ThreeDLogos />} />
-            <Route path="/thank-you" element={<ThankYou />} />
+            <Route path="/thank-you-for-submitting-a-form" element={<ThankYou />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
