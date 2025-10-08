@@ -6,13 +6,14 @@ import Footer from "@/components/Footer";
 import ShopifyHeader from "@/components/ShopifyHeader";
 import { HomeHighlightsSection } from "@/components/HomeHighlightsSection";
 import { Star } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
 
 // All images now loaded from Shopify CDN for optimal performance with explicit dimensions
 const signStyles = [
   {
     title: "Individual Wall Letters",
     description: "Separate marquee letters that hang on walls like artwork. Perfect for restaurants, shops, home decor or anywhere that needs a pop!",
-    image: "https://cdn.shopify.com/s/files/1/1403/8315/files/Chop_Suey_a1aaee95-b586-4fb9-880d-2bc12998e8ee.jpg?v=1759691041",
+    image: "https://cdn.shopify.com/s/files/1/1403/8315/files/Chop_Suey_a1aaee95-b586-4fb9-880d-2bc12998e8ee_800x.jpg?v=1759691041",
     link: "/wall-hanging-signs",
     imagePosition: "center 10%",
     width: 1200,
@@ -22,7 +23,7 @@ const signStyles = [
   {
     title: "3D Layered/All-in-One Logos, Designs",
     description: "Stunning 3D dimensional signs with multiple layers. Premium depth and visual impact.",
-    image: "https://cdn.shopify.com/s/files/1/1403/8315/files/IMG_6390_layered-sign.jpg?v=1759694027",
+    image: "https://cdn.shopify.com/s/files/1/1403/8315/files/IMG_6390_layered-sign_800x.jpg?v=1759694027",
     link: "/3d-logos",
     width: 1200,
     height: 900,
@@ -30,7 +31,7 @@ const signStyles = [
   {
     title: "Rental Inventory Packages",
     description: "Purchase a rental inventory package and start your own marquee light rental business, or expand your current offerings.",
-    image: "https://cdn.shopify.com/s/files/1/1403/8315/files/Screenshot_2025-05-30_at_9.00.29_AM-topaz.jpg?v=1759690055",
+    image: "https://cdn.shopify.com/s/files/1/1403/8315/files/Screenshot_2025-05-30_at_9.00.29_AM-topaz_800x.jpg?v=1759690055",
     link: "/rental-inventory",
     width: 1200,
     height: 900,
@@ -38,7 +39,7 @@ const signStyles = [
   {
     title: "36\" - 48\" Stand-Up Signs for Events",
     description: "Large, commercial grade, freestanding marquee letters for weddings, corporate events, or any celebration.",
-    image: "https://cdn.shopify.com/s/files/1/1403/8315/files/drewia_hill_lowres.jpg?v=1759248963",
+    image: "https://cdn.shopify.com/s/files/1/1403/8315/files/drewia_hill_lowres_800x.jpg?v=1759248963",
     link: "/event-standup-signs",
     imagePosition: "center 35%",
     imageScale: "scale-125",
@@ -48,7 +49,7 @@ const signStyles = [
   {
     title: "Food Truck Signs",
     description: "Bold illuminated signage for food trucks, mobile vendors. More eyeballs, more sales!",
-    image: "https://cdn.shopify.com/s/files/1/1403/8315/files/IMG_9138.jpg?v=1759690342",
+    image: "https://cdn.shopify.com/s/files/1/1403/8315/files/IMG_9138_800x.jpg?v=1759690342",
     link: "/mobile-vendor-signs",
     imagePosition: "center 10%",
     width: 1200,
@@ -57,7 +58,7 @@ const signStyles = [
   {
     title: "Not Sure? Let's Talk!",
     description: "Have something totally different in mind? We love custom projects. Tell us your vision.",
-    image: "https://dl.dropboxusercontent.com/scl/fi/zow5dope9wbfhay9lfcmq/custom-collage3.jpg?rlkey=btz40y0zyzbeb7h7y9kuajvbj",
+    image: "https://cdn.shopify.com/s/files/1/1403/8315/files/custom_collage3.webp?v=1759890260",
     link: "https://www.cognitoforms.com/VintageMarqueeLights/CustomVintageMarqueeLightsQuoteRequest",
     isExternal: true,
     width: 724,
@@ -66,6 +67,28 @@ const signStyles = [
 ];
 
 const Index = () => {
+  const [showInstagram, setShowInstagram] = useState(false);
+  const instagramRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !showInstagram) {
+            setShowInstagram(true);
+          }
+        });
+      },
+      { rootMargin: '100px' }
+    );
+
+    if (instagramRef.current) {
+      observer.observe(instagramRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, [showInstagram]);
+
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
@@ -198,23 +221,29 @@ const Index = () => {
         </div>
 
         {/* Instagram Gallery Section - Lazy loaded for performance */}
-        <div id="gallery" className="text-center mb-12">
+        <div id="gallery" className="text-center mb-12" ref={instagramRef}>
           <h3 className="text-2xl font-bold mb-6">Our Recent Work</h3>
           <p className="text-muted-foreground mb-4">
             Follow us on Instagram to see our latest creations and projects
           </p>
           
           <div className="flex justify-center">
-            <iframe 
-              src="https://snapwidget.com/embed/1103824" 
-              className="snapwidget-widget max-w-full" 
-              allowTransparency={true} 
-              frameBorder="0" 
-              scrolling="no" 
-              style={{ border: 'none', overflow: 'hidden', width: '100%', maxWidth: '1275px', height: 'auto', aspectRatio: '1/1' }} 
-              title="Posts from Instagram"
-              loading="lazy"
-            />
+            {showInstagram ? (
+              <iframe 
+                src="https://snapwidget.com/embed/1103824" 
+                className="snapwidget-widget max-w-full" 
+                allowTransparency={true} 
+                frameBorder="0" 
+                scrolling="no" 
+                style={{ border: 'none', overflow: 'hidden', width: '100%', maxWidth: '1275px', height: 'auto', aspectRatio: '1/1' }} 
+                title="Posts from Instagram"
+              />
+            ) : (
+              <div 
+                className="bg-muted animate-pulse max-w-full" 
+                style={{ width: '100%', maxWidth: '1275px', aspectRatio: '1/1' }}
+              />
+            )}
           </div>
         </div>
 
