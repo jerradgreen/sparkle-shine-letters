@@ -4,8 +4,8 @@ const ShopifyHeader = () => {
   return (
     <header className="w-full bg-gradient-to-br from-primary/10 to-accent/10">
       {/* Top Banner */}
-      <div className="bg-primary text-primary-foreground text-center py-2 px-4">
-        <p className="text-sm font-medium">
+      <div className="bg-[hsl(197,85%,35%)] text-primary-foreground text-center py-2 px-4">
+        <p className="text-sm font-semibold">
           The Original Vintage Marquee Light Makers
         </p>
       </div>

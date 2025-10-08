@@ -77,7 +77,7 @@ const Index = () => {
           <h1 className="text-3xl md:text-4xl font-bold mb-3 text-foreground">
             Trusted by Hundreds. Built for the Spotlight.
           </h1>
-          <p className="text-lg text-muted-foreground mb-2 max-w-3xl mx-auto">
+          <p className="text-lg text-[hsl(197,35%,45%)] mb-2 max-w-3xl mx-auto font-medium">
             Choose the marquee sign style that fits your vision and see how easy it is to make it yours.
           </p>
           <p className="text-xl font-medium text-foreground max-w-3xl mx-auto">
@@ -105,6 +105,8 @@ const Index = () => {
                             style={{ objectPosition: style.imagePosition || 'center' }}
                             loading="lazy"
                             decoding="async"
+                            width="724"
+                            height="625"
                           />
                           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent group-hover:from-black/90 transition-all duration-300">
                             <div className="absolute inset-0 flex flex-col justify-center items-center text-center p-6">
@@ -133,6 +135,8 @@ const Index = () => {
                             style={{ objectPosition: style.imagePosition || 'center' }}
                             loading="lazy"
                             decoding="async"
+                            width="724"
+                            height="625"
                           />
                           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent group-hover:from-black/90 transition-all duration-300">
                             <div className="absolute inset-0 flex flex-col justify-center items-center text-center p-6">
