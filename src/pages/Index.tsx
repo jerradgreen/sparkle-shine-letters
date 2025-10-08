@@ -7,38 +7,32 @@ import ShopifyHeader from "@/components/ShopifyHeader";
 import { HomeHighlightsSection } from "@/components/HomeHighlightsSection";
 import { Star } from "lucide-react";
 
-// Import all assets
-import eventStandup from "@/assets/event-standup.jpg";
-import layeredSigns from "@/assets/layered-signs.jpg";
-import rentalInventory from "@/assets/setup-1.jpeg";
-import foodTruckBarMonte from "@/assets/food-truck-bar-monte.jpg";
-import chopSueySign from "@/assets/chop-suey-sign.jpg";
-
+// All images now loaded from Shopify CDN for optimal performance
 const signStyles = [
   {
     title: "Individual Wall Letters",
     description: "Separate marquee letters that hang on walls like artwork. Perfect for restaurants, shops, home decor or anywhere that needs a pop!",
-    image: chopSueySign,
+    image: "https://cdn.shopify.com/s/files/1/1403/8315/files/Chop_Suey_a1aaee95-b586-4fb9-880d-2bc12998e8ee.jpg?v=1759691041",
     link: "/wall-hanging-signs",
     imagePosition: "center 10%",
   },
   {
     title: "3D Layered/All-in-One Logos, Designs",
     description: "Stunning 3D dimensional signs with multiple layers. Premium depth and visual impact.",
-    image: layeredSigns,
+    image: "https://cdn.shopify.com/s/files/1/1403/8315/files/IMG_6390_layered-sign.jpg?v=1759694027",
     link: "/3d-logos",
   },
   {
     title: "Food Truck Signs",
     description: "Bold illuminated signage for food trucks, mobile vendors. More eyeballs, more sales!",
-    image: foodTruckBarMonte,
+    image: "https://cdn.shopify.com/s/files/1/1403/8315/files/IMG_9138.jpg?v=1759690342",
     link: "/mobile-vendor-signs",
     imagePosition: "center 10%",
   },
   {
     title: "36\" - 48\" Stand-Up Signs for Events",
     description: "Large, commercial grade, freestanding marquee letters for weddings, corporate events, or any celebration.",
-    image: eventStandup,
+    image: "https://cdn.shopify.com/s/files/1/1403/8315/files/drewia_hill_lowres.jpg?v=1759248963",
     link: "/event-standup-signs",
     imagePosition: "center 35%",
     imageScale: "scale-125",
@@ -46,7 +40,7 @@ const signStyles = [
   {
     title: "Rental Inventory Packages",
     description: "Purchase a rental inventory package and start your own marquee light rental business, or expand your current offerings.",
-    image: rentalInventory,
+    image: "https://cdn.shopify.com/s/files/1/1403/8315/files/Screenshot_2025-05-30_at_9.00.29_AM-topaz.jpg?v=1759690055",
     link: "/rental-inventory",
   },
   {
