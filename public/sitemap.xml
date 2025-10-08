@@ -1,43 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://yoursite.com/</loc>
+    <loc>https://inventory.vintagemarqueelights.com/</loc>
     <lastmod>2025-10-08</lastmod>
     <priority>1.0</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://yoursite.com/rental-inventory</loc>
+    <loc>https://inventory.vintagemarqueelights.com/rental-inventory</loc>
     <lastmod>2025-10-08</lastmod>
     <priority>0.9</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://yoursite.com/event-standup-signs</loc>
+    <loc>https://inventory.vintagemarqueelights.com/event-standup-signs</loc>
     <lastmod>2025-10-08</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://yoursite.com/wall-hanging-signs</loc>
+    <loc>https://inventory.vintagemarqueelights.com/wall-hanging-signs</loc>
     <lastmod>2025-10-08</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://yoursite.com/mobile-vendor-signs</loc>
+    <loc>https://inventory.vintagemarqueelights.com/mobile-vendor-signs</loc>
     <lastmod>2025-10-08</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://yoursite.com/3d-logos</loc>
+    <loc>https://inventory.vintagemarqueelights.com/3d-logos</loc>
     <lastmod>2025-10-08</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://yoursite.com/thank-you-for-submitting-a-form</loc>
+    <loc>https://inventory.vintagemarqueelights.com/thank-you-for-submitting-a-form</loc>
     <lastmod>2025-10-08</lastmod>
     <priority>0.3</priority>
     <changefreq>yearly</changefreq>
