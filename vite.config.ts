@@ -39,5 +39,13 @@ export default defineConfig(({ mode }) => ({
     },
     cssCodeSplit: true,
     chunkSizeWarningLimit: 1000,
+    cssMinify: true,
+    minify: 'terser',
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true,
+      },
+    },
   },
 }));

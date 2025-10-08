@@ -31,6 +31,8 @@ const RentalInventory = () => {
       <Helmet>
         <title>Marquee Letter Rental Business Package - Event Signage Inventory for Sale</title>
         <meta name="description" content="Start your own marquee letter rental business. Premium vintage-style illuminated letters, complete inventory packages, and everything you need to launch a profitable event signage business." />
+        {/* Preload critical hero image to improve LCP */}
+        <link rel="preload" as="image" href={heroImage} fetchPriority="high" />
       </Helmet>
       <Navigation />
       <ShopifyHeader />
