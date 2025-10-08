@@ -12,7 +12,7 @@ export const StructuredData = ({ config }: StructuredDataProps) => {
     "name": config.business.name,
     "description": config.business.description,
     "url": window.location.origin,
-    "logo": `${window.location.origin}/logo.png`,
+    "logo": "https://cdn.shopify.com/s/files/1/1403/8315/files/small_logo.webp?v=1759941778",
     "image": config.hero.heroImage,
     "telephone": config.business.location?.phone,
     "address": config.business.location ? {

@@ -1,5 +1,3 @@
-import logoImage from "@/assets/logo.png";
-
 const ShopifyHeader = () => {
   return (
     <header className="w-full bg-gradient-to-br from-primary/10 to-accent/10">
@@ -16,7 +14,7 @@ const ShopifyHeader = () => {
           <div className="flex justify-center items-center py-2">
             <a href="/" className="flex items-center">
               <img 
-                src={logoImage} 
+                src="https://cdn.shopify.com/s/files/1/1403/8315/files/small_logo.webp?v=1759941778" 
                 alt="Vintage Marquee Lights" 
                 className="h-12 w-auto"
               />
