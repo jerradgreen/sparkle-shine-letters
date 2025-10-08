@@ -41,7 +41,6 @@ import wallHangingParliament from '@/assets/wall-hanging-parliament.jpg';
 import galleryElement from '@/assets/gallery-element.jpg';
 import wallHangingWineHouse from '@/assets/wall-hanging-wine-house.jpg';
 import layeredSignsHero from '@/assets/layered-signs.jpg';
-import heroLockwoods from '@/assets/hero-lockwoods.jpg';
 import chopSueySign from '@/assets/chop-suey-sign.jpg';
 const marquee1 = 'https://cdn.shopify.com/s/files/1/1403/8315/files/1_lights_on_studio.webp';
 const marquee2 = 'https://cdn.shopify.com/s/files/1/1403/8315/files/2_lights_on_studio.webp';
@@ -370,7 +369,7 @@ export const standUpSignsConfig: TemplateConfig = {
     subheadline: "Commercial-quality stand-up marquee letters that make every event unforgettable",
     ctaText: "Get Your Quote",
     ctaAction: "pricing",
-    heroImage: heroLockwoods,
+    heroImage: '/images/hero-lockwoods.webp',
     heroImageAlt: "THE LOCKWOODS marquee letters with couple dancing at elegant event",
     layout: "centered"
   },
