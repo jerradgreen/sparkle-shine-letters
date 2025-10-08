@@ -8,9 +8,10 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Hammer, Lightbulb, Frame, PenTool, Home, Settings, Camera, Clock, Shield } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import OptimizedImage from "@/components/OptimizedImage";
+import PerformantImage from "@/components/PerformantImage";
 import heroImage from "@/assets/wall-hanging.jpg";
 import { Check } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 
 const WallHangingMarqueeSigns = () => {
   const openQuoteForm = () => {
@@ -25,14 +26,25 @@ const WallHangingMarqueeSigns = () => {
   };
 
   return (
-    <PageTemplate 
-      config={wallHangingConfig}
-      canonicalUrl="https://inventory.vintagemarqueelights.com/wall-hanging-signs"
-      showNavigation={true}
-      showFooter={false}
-      showChatbot={false}
-    >
-      <ShopifyHeader />
+    <>
+      <Helmet>
+        <link 
+          rel="preload" 
+          as="image" 
+          href={heroImage}
+          fetchPriority="high"
+          imageSrcSet={`${heroImage} 1x`}
+          imageSizes="(max-width: 1023px) 100vw, 50vw"
+        />
+      </Helmet>
+      <PageTemplate 
+        config={wallHangingConfig}
+        canonicalUrl="https://inventory.vintagemarqueelights.com/wall-hanging-signs"
+        showNavigation={true}
+        showFooter={false}
+        showChatbot={false}
+      >
+        <ShopifyHeader />
       
       {/* Hero Section */}
       <section className="relative py-8 px-4 bg-gradient-to-br from-primary/10 to-accent/10">
@@ -41,11 +53,14 @@ const WallHangingMarqueeSigns = () => {
           <div className="lg:hidden">
             {/* Mobile image first */}
             <div className="mb-4">
-              <OptimizedImage 
+              <PerformantImage 
                 src={heroImage} 
                 alt="Beer Happy wall-hanging marquee letters" 
                 className="rounded-lg shadow-2xl w-full h-64 object-cover"
-                loading="eager"
+                priority={true}
+                fetchPriority="high"
+                sizes="100vw"
+                showPlaceholder={false}
               />
             </div>
             
@@ -96,11 +111,13 @@ const WallHangingMarqueeSigns = () => {
           <div className="hidden lg:grid lg:grid-cols-2 gap-12 items-center">
             {/* Image on left */}
             <div className="relative">
-              <OptimizedImage 
+              <PerformantImage 
                 src={heroImage} 
                 alt="Beer Happy wall-hanging marquee letters" 
                 className="rounded-lg shadow-2xl w-full h-auto object-cover"
-                loading="eager"
+                loading="lazy"
+                fetchPriority="low"
+                sizes="50vw"
               />
             </div>
             
@@ -335,7 +352,7 @@ const WallHangingMarqueeSigns = () => {
             {/* Step 1 */}
             <div className="text-center">
               <div className="w-32 h-32 mx-auto mb-6 flex items-center justify-center rounded-lg overflow-hidden bg-muted/40 ring-1 ring-border/40">
-              <OptimizedImage 
+              <PerformantImage 
                 src="https://cdn.shopify.com/s/files/1/1403/8315/files/1_lights_on_studio.webp?v=1759678401" 
                 alt="Step 1 - vintage marquee number 1" 
                 className="w-full h-full object-cover rounded-lg"
@@ -355,7 +372,7 @@ const WallHangingMarqueeSigns = () => {
             {/* Step 2 */}
             <div className="text-center">
               <div className="w-32 h-32 mx-auto mb-6 flex items-center justify-center rounded-lg overflow-hidden bg-muted/40 ring-1 ring-border/40">
-              <OptimizedImage 
+              <PerformantImage 
                 src="https://cdn.shopify.com/s/files/1/1403/8315/files/2_lights_on_studio.webp?v=1759678401" 
                 alt="Step 2 - vintage marquee number 2" 
                 className="w-full h-full object-cover rounded-lg"
@@ -375,7 +392,7 @@ const WallHangingMarqueeSigns = () => {
             {/* Step 3 */}
             <div className="text-center">
               <div className="w-32 h-32 mx-auto mb-6 flex items-center justify-center rounded-lg overflow-hidden bg-muted/40 ring-1 ring-border/40">
-              <OptimizedImage 
+              <PerformantImage 
                 src="https://cdn.shopify.com/s/files/1/1403/8315/files/3_lights_on_studio.webp?v=1759678401" 
                 alt="Step 3 - vintage marquee number 3" 
                 className="w-full h-full object-cover rounded-lg"
@@ -500,6 +517,7 @@ const WallHangingMarqueeSigns = () => {
 
       <ShopifyFooter />
     </PageTemplate>
+    </>
   );
 };
 
