@@ -21,6 +21,47 @@
     <link rel="preload" as="image" href="/images/hero-lockwoods.webp" fetchpriority="high">
     <link rel="preload" as="image" href="/images/hero-rental-setup.webp" fetchpriority="high">
     
+    <!-- Critical CSS inline to eliminate render-blocking -->
+    <style>
+      :root {
+        --background: 42 100% 97%;
+        --foreground: 195 100% 20%;
+        --card: 0 0% 100%;
+        --card-foreground: 195 100% 20%;
+        --popover: 0 0% 100%;
+        --popover-foreground: 195 100% 20%;
+        --primary: 195 85% 32%;
+        --primary-foreground: 42 100% 97%;
+        --secondary: 18 100% 75%;
+        --secondary-foreground: 195 100% 20%;
+        --muted: 42 50% 92%;
+        --muted-foreground: 195 25% 40%;
+        --accent: 18 100% 75%;
+        --accent-foreground: 195 100% 20%;
+        --destructive: 0 84.2% 60.2%;
+        --destructive-foreground: 210 40% 98%;
+        --border: 214.3 31.8% 91.4%;
+        --input: 214.3 31.8% 91.4%;
+        --ring: 222.2 84% 4.9%;
+        --radius: 0.5rem;
+        --marquee-glow: 45 100% 51%;
+        --marquee-wood: 30 25% 8%;
+        --marquee-concrete: 220 13% 18%;
+      }
+      * { border-color: hsl(var(--border)); }
+      body { 
+        margin: 0;
+        background-color: hsl(var(--background)); 
+        color: hsl(var(--foreground));
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        -webkit-font-smoothing: antialiased;
+      }
+    </style>
+    
+    <!-- Load full CSS asynchronously -->
+    <link rel="stylesheet" href="/src/main.tsx" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="/src/main.tsx"></noscript>
+    
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
     {
