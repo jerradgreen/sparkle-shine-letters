@@ -7,6 +7,7 @@ import ShopifyHeader from "@/components/ShopifyHeader";
 import ShopifyFooter from "@/components/ShopifyFooter";
 import Navigation from "@/components/Navigation";
 import PerformantImage from "@/components/PerformantImage";
+import { Helmet } from "react-helmet-async";
 
 // Optimized CDN images with WebP format
 const heroImage = "https://cdn.shopify.com/s/files/1/1403/8315/files/R_C_rentals_marquee_letters_setup.webp?v=1759891750&width=1200";
@@ -27,6 +28,10 @@ const RentalInventory = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Marquee Letter Rental Business Package - Event Signage Inventory for Sale</title>
+        <meta name="description" content="Start your own marquee letter rental business. Premium vintage-style illuminated letters, complete inventory packages, and everything you need to launch a profitable event signage business." />
+      </Helmet>
       <Navigation />
       <ShopifyHeader />
       {/* Hero Section */}

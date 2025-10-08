@@ -3,10 +3,14 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { CheckCircle } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 
 const ThankYou = () => {
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Thank You - Vintage Marquee Lights</title>
+      </Helmet>
       <Navigation />
       
       <main className="container mx-auto px-4 py-20 flex flex-col items-center justify-center min-h-[60vh]">
