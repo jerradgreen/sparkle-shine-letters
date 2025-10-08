@@ -650,7 +650,7 @@ export const logoSignsConfig: TemplateConfig = {
     ctaText: "Get My Custom 3D Logo Quote",
     secondaryCtaText: "Click for Examples",
     ctaAction: "pricing",
-    heroImage: logoTucks1,
+    heroImage: "https://cdn.shopify.com/s/files/1/1403/8315/files/logo-tucks-1.jpg?v=1759693606",
     heroImageAlt: "Tuck's Truffles 3D layered logo sign with dimensional depth",
     layout: "image-left",
     trustBar: "Trusted by businesses, creators, and event pros nationwide"
@@ -746,8 +746,8 @@ export const logoSignsConfig: TemplateConfig = {
     title: "3D Layered Logo Sign Gallery",
     subtitle: "",
     images: [
-      { src: chicagoLayeredSign, alt: "Chicago layered 3D logo sign" },
-      { src: exitzero1LayeredSign, alt: "Exit Zero layered dimensional logo" },
+      { src: "https://cdn.shopify.com/s/files/1/1403/8315/files/chicago_layered-sign.jpg?v=1759695333", alt: "Chicago layered 3D logo sign" },
+      { src: "https://cdn.shopify.com/s/files/1/1403/8315/files/image_-_2023-06-08T131820.287.png?v=1759695499", alt: "Exit Zero layered dimensional logo" },
       { src: layeredSignOffice, alt: "3D layered logo in office setting" },
       { src: layeredSignWorkshop, alt: "Layered logo sign in workshop" },
       { src: layeredSignRetail, alt: "3D logo in retail space" },
