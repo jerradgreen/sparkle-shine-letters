@@ -335,12 +335,13 @@ const WallHangingMarqueeSigns = () => {
             {/* Step 1 */}
             <div className="text-center">
               <div className="w-32 h-32 mx-auto mb-6 flex items-center justify-center rounded-lg overflow-hidden bg-muted/40 ring-1 ring-border/40">
-                <OptimizedImage 
-                  src="/lovable-uploads/d86c2d98-97ca-4233-a7b6-6fea60a0dc18.png" 
-                  alt="Step 1 - vintage marquee number 1" 
-                  className="w-full h-full object-cover rounded-lg"
-                  loading="lazy"
-                />
+              <OptimizedImage 
+                src="https://cdn.shopify.com/s/files/1/1403/8315/files/1_lights_on_studio.webp?v=1759678401" 
+                alt="Step 1 - vintage marquee number 1" 
+                className="w-full h-full object-cover rounded-lg"
+                loading="lazy"
+                fetchPriority="low"
+              />
               </div>
               <h3 className="text-2xl font-bold mb-4 text-foreground">Step 1: Tell Us What You Want</h3>
               <p className="text-muted-foreground leading-relaxed">
@@ -354,12 +355,13 @@ const WallHangingMarqueeSigns = () => {
             {/* Step 2 */}
             <div className="text-center">
               <div className="w-32 h-32 mx-auto mb-6 flex items-center justify-center rounded-lg overflow-hidden bg-muted/40 ring-1 ring-border/40">
-                <OptimizedImage 
-                  src="/lovable-uploads/3a1aa8ae-0d8f-463a-9102-dd8aef074419.png" 
-                  alt="Step 2 - vintage marquee number 2" 
-                  className="w-full h-full object-cover rounded-lg"
-                  loading="lazy"
-                />
+              <OptimizedImage 
+                src="https://cdn.shopify.com/s/files/1/1403/8315/files/2_lights_on_studio.webp?v=1759678401" 
+                alt="Step 2 - vintage marquee number 2" 
+                className="w-full h-full object-cover rounded-lg"
+                loading="lazy"
+                fetchPriority="low"
+              />
               </div>
               <h3 className="text-2xl font-bold mb-4 text-foreground">Step 2: We Handcraft Your Sign</h3>
               <p className="text-muted-foreground leading-relaxed">
@@ -373,12 +375,13 @@ const WallHangingMarqueeSigns = () => {
             {/* Step 3 */}
             <div className="text-center">
               <div className="w-32 h-32 mx-auto mb-6 flex items-center justify-center rounded-lg overflow-hidden bg-muted/40 ring-1 ring-border/40">
-                <OptimizedImage 
-                  src="/lovable-uploads/969e0a29-c68d-4a84-b260-590b946f35dd.png" 
-                  alt="Step 3 - vintage marquee number 3" 
-                  className="w-full h-full object-cover rounded-lg"
-                  loading="lazy"
-                />
+              <OptimizedImage 
+                src="https://cdn.shopify.com/s/files/1/1403/8315/files/3_lights_on_studio.webp?v=1759678401" 
+                alt="Step 3 - vintage marquee number 3" 
+                className="w-full h-full object-cover rounded-lg"
+                loading="lazy"
+                fetchPriority="low"
+              />
               </div>
               <h3 className="text-2xl font-bold mb-4 text-foreground">Step 3: Hang & Enjoy</h3>
               <p className="text-muted-foreground leading-relaxed">

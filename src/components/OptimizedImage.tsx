@@ -7,9 +7,10 @@ interface OptimizedImageProps {
   loading?: "lazy" | "eager";
   priority?: boolean;
   style?: React.CSSProperties;
+  fetchPriority?: "high" | "low" | "auto";
 }
 
-const OptimizedImage = ({ src, alt, className = "", loading = "lazy", priority = false, style }: OptimizedImageProps) => {
+const OptimizedImage = ({ src, alt, className = "", loading = "lazy", priority = false, style, fetchPriority = "auto" }: OptimizedImageProps) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
 
@@ -45,6 +46,7 @@ const OptimizedImage = ({ src, alt, className = "", loading = "lazy", priority =
         onLoad={handleLoad}
         onError={handleError}
         decoding="async"
+        fetchPriority={priority ? "high" : fetchPriority}
       />
     </div>
   );
