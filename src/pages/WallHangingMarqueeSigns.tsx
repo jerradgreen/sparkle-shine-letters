@@ -27,7 +27,7 @@ const WallHangingMarqueeSigns = () => {
   return (
     <PageTemplate 
       config={wallHangingConfig}
-      canonicalUrl="https://www.vintagemarqueelights.com/wall-hanging-signs"
+      canonicalUrl="https://inventory.vintagemarqueelights.com/wall-hanging-signs"
       showNavigation={true}
       showFooter={false}
       showChatbot={false}

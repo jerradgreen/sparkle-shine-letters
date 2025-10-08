@@ -37,7 +37,7 @@ const ThreeDLogos = () => {
       </Helmet>
       <PageTemplate 
         config={logoSignsConfig}
-        canonicalUrl="https://www.vintagemarqueelights.com/3d-logos"
+        canonicalUrl="https://inventory.vintagemarqueelights.com/3d-logos"
         showNavigation={true}
         showFooter={false}
         showChatbot={false}

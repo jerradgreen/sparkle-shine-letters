@@ -95,7 +95,7 @@ const Index = () => {
         <title>Vintage Marquee Lights - Custom Marquee Signs & Letters | Original Since 2008</title>
         <meta name="description" content="Premium custom marquee signs and letters. Choose from wall-hanging letters, 3D layered signs, food truck signage, event letters, or rental inventory packages. Family-owned since 2008." />
         <meta name="keywords" content="marquee signs, vintage marquee lights, custom marquee letters, wall hanging signs, event signs, food truck signs, layered signs, sign rental business" />
-        <link rel="canonical" href="https://vintagemarqueelights.com/" />
+        <link rel="canonical" href="https://inventory.vintagemarqueelights.com/" />
       </Helmet>
       <Navigation />
       <ShopifyHeader />

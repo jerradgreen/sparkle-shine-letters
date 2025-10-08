@@ -27,7 +27,7 @@ const MobileVendorSigns = () => {
   return (
     <PageTemplate 
       config={foodTruckSignsConfig}
-      canonicalUrl="https://www.vintagemarqueelights.com/mobile-vendor-signs"
+      canonicalUrl="https://inventory.vintagemarqueelights.com/mobile-vendor-signs"
       showNavigation={true}
       showFooter={false}
       showChatbot={false}

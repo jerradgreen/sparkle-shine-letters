@@ -53,7 +53,7 @@ const EventStandUpSigns = () => {
             variant="outline"
             size="lg"
             className="text-sm md:text-base h-auto py-4 md:py-2 whitespace-normal md:whitespace-nowrap leading-tight"
-            onClick={() => window.open('https://www.vintagemarqueelights.com', '_blank')}
+            onClick={() => window.open('https://inventory.vintagemarqueelights.com', '_blank')}
           >
             <span className="block md:inline">
               Looking for a different style of sign?<br className="md:hidden" /> Click here to go to the homepage
