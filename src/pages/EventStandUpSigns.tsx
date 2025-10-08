@@ -10,6 +10,7 @@ import { Button } from '@/components/ui/button';
 import { standUpSignsConfig } from '@/config/templateConfigs';
 import ShopifyHeader from '@/components/ShopifyHeader';
 import ShopifyFooter from '@/components/ShopifyFooter';
+import { Helmet } from 'react-helmet-async';
 
 const EventStandUpSigns = () => {
   return (
@@ -20,6 +21,17 @@ const EventStandUpSigns = () => {
       showNavigation={true}
       showFooter={false}
     >
+      <Helmet>
+        <title>Event Stand-Up Marquee Letters - Commercial Grade Rental Signs</title>
+        <meta name="description" content="Professional stand-up marquee letters for events. Commercial grade, perfect for weddings, corporate events, and special occasions." />
+        {/* Preload locally hosted hero image for optimal LCP */}
+        <link 
+          rel="preload" 
+          as="image" 
+          href="/images/hero-lockwoods.webp"
+          fetchPriority="high"
+        />
+      </Helmet>
       <ShopifyHeader />
       <MarqueeHeroSection />
       

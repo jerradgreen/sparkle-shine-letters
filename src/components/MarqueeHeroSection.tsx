@@ -1,6 +1,8 @@
 import { Button } from '@/components/ui/button';
 import PerformantImage from '@/components/PerformantImage';
-import heroLockwoods from '@/assets/hero-lockwoods.jpg';
+
+// Locally hosted optimized WebP image for faster LCP
+const heroLockwoods = '/images/hero-lockwoods.webp';
 
 export const MarqueeHeroSection = () => {
   const scrollToVisualizer = () => {
