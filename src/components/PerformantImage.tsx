@@ -59,7 +59,7 @@ const PerformantImage = ({
         loading={priority ? "eager" : loading}
         onLoad={handleLoad}
         onError={handleError}
-        decoding="async"
+        decoding={priority ? "sync" : "async"}
         fetchPriority={priority ? "high" : fetchPriority}
         sizes={sizes}
       />
