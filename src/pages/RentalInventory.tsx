@@ -11,7 +11,7 @@ import { Helmet } from "react-helmet-async";
 
 // Optimized CDN images with WebP format
 const heroImage = "https://cdn.shopify.com/s/files/1/1403/8315/files/R_C_rentals_marquee_letters_setup.webp?v=1759891750&width=1200";
-const heroImageMobile = "https://cdn.shopify.com/s/files/1/1403/8315/files/R_C_rentals_marquee_letters_setup_mobile.webp?v=1759927767";
+const heroImageMobile = "https://cdn.shopify.com/s/files/1/1403/8315/files/R_C_rentals_marquee_letters_setup.webp?v=1759891750&width=600&height=400&crop=center";
 const elev8Image = "https://cdn.shopify.com/s/files/1/1403/8315/files/elev8.jpg?v=1759695171&width=800&format=webp";
 const year1969Image = "https://cdn.shopify.com/s/files/1/1403/8315/files/1969_dda088f4-5c78-4279-a35a-1ec3a0cdb96e.jpg?v=1759689998&width=800&format=webp";
 const marryMeImage = "https://cdn.shopify.com/s/files/1/1403/8315/files/marry_me.jpg?v=1678754881&width=800&format=webp";
