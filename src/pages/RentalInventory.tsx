@@ -6,19 +6,20 @@ import { Lightbulb, Star, Package, Clock, Mail, Zap, DollarSign, Percent, Check,
 import ShopifyHeader from "@/components/ShopifyHeader";
 import ShopifyFooter from "@/components/ShopifyFooter";
 import Navigation from "@/components/Navigation";
-import OptimizedImage from "@/components/OptimizedImage";
+import PerformantImage from "@/components/PerformantImage";
 
-import heroImage from "@/assets/hero-image.jpg";
-import elev8Image from "@/assets/elev8.jpeg";
-import year1969Image from "@/assets/1969.jpeg";
-import marryMeImage from "@/assets/marry-me.jpg";
-import setup1Image from "@/assets/setup-1.jpeg";
-import setup2Image from "@/assets/setup-2.jpg";
-import marqueeDetailImage from "@/assets/marquee-detail.jpg";
-import testimonialSarahImage from "@/assets/testimonial-sarah.jpg";
+// Optimized CDN images with WebP format
+const heroImage = "https://cdn.shopify.com/s/files/1/1403/8315/files/R_C_rentals_marquee_letters_setup.webp?v=1759891750&width=1200";
+const elev8Image = "https://cdn.shopify.com/s/files/1/1403/8315/files/elev8.jpg?v=1759695171&width=800&format=webp";
+const year1969Image = "https://cdn.shopify.com/s/files/1/1403/8315/files/1969_dda088f4-5c78-4279-a35a-1ec3a0cdb96e.jpg?v=1759689998&width=800&format=webp";
+const marryMeImage = "https://cdn.shopify.com/s/files/1/1403/8315/files/marry_me.jpg?v=1678754881&width=800&format=webp";
+const setup1Image = "https://cdn.shopify.com/s/files/1/1403/8315/files/Screenshot_2025-05-30_at_9.00.29_AM-topaz.jpg?v=1759690055&width=800&format=webp";
+const setup2Image = "https://cdn.shopify.com/s/files/1/1403/8315/files/Screenshot_2025-05-30_at_9.01.21_AM-topaz_copy.jpg?v=1759690105&width=800&format=webp";
+const marqueeDetailImage = "https://cdn.shopify.com/s/files/1/1403/8315/files/DSCF1221_copy.jpg?v=1759690151&width=800&format=webp";
 const marquee1Image = "https://cdn.shopify.com/s/files/1/1403/8315/files/1_lights_on_studio.webp";
 const marquee2Image = "https://cdn.shopify.com/s/files/1/1403/8315/files/2_lights_on_studio.webp";
 const marquee3Image = "https://cdn.shopify.com/s/files/1/1403/8315/files/3_lights_on_studio.webp";
+import testimonialSarahImage from "@/assets/testimonial-sarah.jpg";
 import testimonialMikeImage from "@/assets/testimonial-mike.jpg";
 
 const RentalInventory = () => {
@@ -35,11 +36,13 @@ const RentalInventory = () => {
           <div className="lg:hidden -mt-2">
             {/* Mobile image first */}
             <div className="mb-3">
-              <img 
+              <PerformantImage 
                 src={heroImage} 
                 alt="Professional marquee letter rental setup at Drewia Hill event showcasing profitable event rental business opportunity" 
                 className="rounded-lg shadow-2xl w-full h-32 object-cover object-[center_65%]"
-                loading="eager"
+                priority={true}
+                fetchPriority="high"
+                sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </div>
             
@@ -115,10 +118,13 @@ const RentalInventory = () => {
               </div>
             </div>
             <div className="relative">
-              <img 
+              <PerformantImage 
                 src={heroImage} 
                 alt="Drewia Hill marquee letters event setup" 
                 className="rounded-lg shadow-2xl w-full h-auto object-cover"
+                priority={true}
+                fetchPriority="high"
+                sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </div>
           </div>
@@ -252,11 +258,12 @@ const RentalInventory = () => {
 
               {/* Image - takes 1 column */}
               <div className="lg:col-span-1">
-              <OptimizedImage 
+              <PerformantImage 
                 src="/lovable-uploads/605ef708-58df-4fec-9e34-3f7232153fd9.png" 
                 alt="Jerrad Green and family, founders of Vintage Marquee Lights rental business" 
                 className="rounded-lg shadow-lg w-full h-auto object-cover"
                 loading="lazy"
+                sizes="(max-width: 1024px) 100vw, 33vw"
               />
               </div>
             </div>
@@ -309,11 +316,12 @@ const RentalInventory = () => {
             {/* Testimonial 1 */}
             <div className="text-center p-6 bg-card border border-border rounded-lg shadow-sm">
               <div className="mb-4">
-                <OptimizedImage 
+                <PerformantImage 
                   src={testimonialSarahImage} 
                   alt="Sarah M. satisfied marquee letter rental business customer testimonial" 
                   className="w-16 h-16 rounded-full mx-auto object-cover"
                   loading="lazy"
+                  sizes="64px"
                 />
               </div>
               <div className="flex justify-center mb-4">
@@ -789,45 +797,57 @@ const RentalInventory = () => {
           <h2 className="text-4xl font-bold text-center mb-12 text-foreground">See Our Letters in Action</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div className="relative overflow-hidden rounded-lg">
-              <img 
+              <PerformantImage 
                 src={elev8Image} 
                 alt="ELEV8 marquee letters setup" 
                 className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
+                loading="lazy"
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
               />
             </div>
             <div className="relative overflow-hidden rounded-lg">
-              <img 
+              <PerformantImage 
                 src={year1969Image} 
                 alt="1969 marquee numbers display" 
                 className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
+                loading="lazy"
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
               />
             </div>
             <div className="relative overflow-hidden rounded-lg">
-              <img 
+              <PerformantImage 
                 src={marryMeImage} 
                 alt="Marry Me marquee letters wedding setup" 
                 className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
+                loading="lazy"
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
               />
             </div>
             <div className="relative overflow-hidden rounded-lg">
-              <img 
+              <PerformantImage 
                 src={setup1Image} 
                 alt="Marquee letters event setup" 
                 className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
+                loading="lazy"
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
               />
             </div>
             <div className="relative overflow-hidden rounded-lg">
-              <img 
+              <PerformantImage 
                 src={setup2Image} 
                 alt="Professional marquee letter display" 
                 className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
+                loading="lazy"
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
               />
             </div>
             <div className="relative overflow-hidden rounded-lg">
-              <img 
+              <PerformantImage 
                 src={marqueeDetailImage} 
                 alt="Close-up of marquee letter construction and quality" 
                 className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
+                loading="lazy"
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
               />
             </div>
           </div>
