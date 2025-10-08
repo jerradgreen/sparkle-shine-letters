@@ -24,13 +24,15 @@ const EventStandUpSigns = () => {
       <Helmet>
         <title>Event Stand-Up Marquee Letters - Commercial Grade Rental Signs</title>
         <meta name="description" content="Professional stand-up marquee letters for events. Commercial grade, perfect for weddings, corporate events, and special occasions." />
-        {/* Preload locally hosted hero image for optimal LCP */}
+        {/* Critical: Preload hero image in HEAD to eliminate Load Delay */}
         <link 
           rel="preload" 
           as="image" 
           href="/images/hero-lockwoods.webp"
           fetchPriority="high"
         />
+        {/* Ensure image is decoded before render */}
+        <link rel="prefetch" href="/images/hero-lockwoods.webp" />
       </Helmet>
       <ShopifyHeader />
       <MarqueeHeroSection />

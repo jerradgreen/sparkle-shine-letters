@@ -1,5 +1,4 @@
 import { Button } from '@/components/ui/button';
-import PerformantImage from '@/components/PerformantImage';
 
 // Locally hosted optimized WebP image for faster LCP
 const heroLockwoods = '/images/hero-lockwoods.webp';
@@ -19,15 +18,17 @@ export const MarqueeHeroSection = () => {
 
   return (
     <section className="relative h-[50vh] md:h-[70vh] flex flex-col justify-between px-4 pt-8 md:pt-16 pb-6 md:pb-8 overflow-hidden">
-      {/* Background Image with Overlay */}
+      {/* Background Image with Overlay - Optimized for LCP */}
       <div className="absolute inset-0">
-        <PerformantImage
+        <img
           src={heroLockwoods}
           alt="THE LOCKWOODS marquee letters with couple dancing at elegant event"
           className="w-full h-full object-cover object-[center_60%]"
-          priority
+          loading="eager"
+          decoding="sync"
           fetchPriority="high"
-          sizes="100vw"
+          width="1200"
+          height="800"
         />
         <div className="absolute inset-0 bg-black/40" />
       </div>
