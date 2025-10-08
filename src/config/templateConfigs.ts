@@ -195,7 +195,7 @@ export const wallHangingConfig: TemplateConfig = {
     ctaText: "Get a Custom Quote in Under 5 Minutes",
     secondaryCtaText: "See Real Sign Examples",
     ctaAction: "pricing",
-    heroImage: wallHanging,
+    heroImage: "https://cdn.shopify.com/s/files/1/1403/8315/files/IMG_89FDB5B68894-1.jpg?v=1759690677",
     heroImageAlt: "Vintage wall-hanging marquee letters on rustic wood wall",
     layout: "image-right",
     trustBar: "Trusted by shops, studios, and restaurants across the country"
