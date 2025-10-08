@@ -9,6 +9,7 @@ interface PerformantImageProps {
   style?: React.CSSProperties;
   fetchPriority?: "high" | "low" | "auto";
   sizes?: string;
+  showPlaceholder?: boolean;
 }
 
 /**
@@ -23,7 +24,8 @@ const PerformantImage = ({
   priority = false, 
   style,
   fetchPriority = "auto",
-  sizes
+  sizes,
+  showPlaceholder = true
 }: PerformantImageProps) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
@@ -46,14 +48,14 @@ const PerformantImage = ({
 
   return (
     <div className={`relative ${className}`}>
-      {!isLoaded && (
+      {showPlaceholder && !isLoaded && (
         <div className={`absolute inset-0 bg-muted animate-pulse ${className}`} />
       )}
       <img
         src={src}
         alt={alt}
-        className={`${className} transition-opacity duration-300 ${
-          isLoaded ? 'opacity-100' : 'opacity-0'
+        className={`${className} ${showPlaceholder ? 'transition-opacity duration-300' : ''} ${
+          showPlaceholder ? (isLoaded ? 'opacity-100' : 'opacity-0') : 'opacity-100'
         }`}
         style={style}
         loading={priority ? "eager" : loading}

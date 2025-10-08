@@ -7,8 +7,9 @@ import ShopifyFooter from "@/components/ShopifyFooter";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Layers, Eye, Zap, Building2, Palette, Lightbulb, Check } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 
-import OptimizedImage from "@/components/OptimizedImage";
+import PerformantImage from "@/components/PerformantImage";
 
 const ThreeDLogos = () => {
   const openQuoteForm = () => {
@@ -23,14 +24,25 @@ const ThreeDLogos = () => {
   };
 
   return (
-    <PageTemplate 
-      config={logoSignsConfig}
-      canonicalUrl="https://www.vintagemarqueelights.com/3d-logos"
-      showNavigation={true}
-      showFooter={false}
-      showChatbot={false}
-    >
-      <ShopifyHeader />
+    <>
+      <Helmet>
+        <link 
+          rel="preload" 
+          as="image" 
+          href={logoSignsConfig.hero.heroImage}
+          fetchPriority="high"
+          imageSrcSet={`${logoSignsConfig.hero.heroImage} 1x`}
+          imageSizes="100vw"
+        />
+      </Helmet>
+      <PageTemplate 
+        config={logoSignsConfig}
+        canonicalUrl="https://www.vintagemarqueelights.com/3d-logos"
+        showNavigation={true}
+        showFooter={false}
+        showChatbot={false}
+      >
+        <ShopifyHeader />
       
       {/* Hero Section */}
       <section className="relative py-8 px-4 bg-gradient-to-br from-primary/10 to-accent/10">
@@ -39,11 +51,14 @@ const ThreeDLogos = () => {
           <div className="lg:hidden">
             {/* Mobile image first */}
             <div className="mb-4">
-              <OptimizedImage 
+              <PerformantImage 
                 src={logoSignsConfig.hero.heroImage} 
                 alt="Tuck's Truffles 3D layered logo sign" 
                 className="rounded-lg shadow-2xl w-full h-64 object-cover"
-                loading="eager"
+                priority={true}
+                fetchPriority="high"
+                sizes="100vw"
+                showPlaceholder={false}
               />
             </div>
             
@@ -135,11 +150,13 @@ const ThreeDLogos = () => {
 
             {/* Image on right */}
             <div className="relative">
-              <OptimizedImage 
+              <PerformantImage 
                 src={logoSignsConfig.hero.heroImage} 
                 alt="Tuck's Truffles 3D layered logo sign" 
                 className="rounded-lg shadow-2xl w-full h-auto object-cover"
-                loading="eager"
+                loading="lazy"
+                fetchPriority="low"
+                sizes="50vw"
               />
             </div>
           </div>
@@ -356,7 +373,8 @@ const ThreeDLogos = () => {
       </section>
 
       <ShopifyFooter />
-    </PageTemplate>
+      </PageTemplate>
+    </>
   );
 };
 
