@@ -9,7 +9,6 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Layers, Eye, Zap, Building2, Palette, Lightbulb, Check } from "lucide-react";
 
 import OptimizedImage from "@/components/OptimizedImage";
-import logoHero from "@/assets/logo-tucks-1.jpg";
 
 const ThreeDLogos = () => {
   const openQuoteForm = () => {
@@ -41,7 +40,7 @@ const ThreeDLogos = () => {
             {/* Mobile image first */}
             <div className="mb-4">
               <OptimizedImage 
-                src={logoHero} 
+                src={logoSignsConfig.hero.heroImage} 
                 alt="Tuck's Truffles 3D layered logo sign" 
                 className="rounded-lg shadow-2xl w-full h-64 object-cover"
                 loading="eager"
@@ -137,7 +136,7 @@ const ThreeDLogos = () => {
             {/* Image on right */}
             <div className="relative">
               <OptimizedImage 
-                src={logoHero} 
+                src={logoSignsConfig.hero.heroImage} 
                 alt="Tuck's Truffles 3D layered logo sign" 
                 className="rounded-lg shadow-2xl w-full h-auto object-cover"
                 loading="eager"
