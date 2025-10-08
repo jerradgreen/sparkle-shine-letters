@@ -7,7 +7,7 @@ import ShopifyHeader from "@/components/ShopifyHeader";
 import { HomeHighlightsSection } from "@/components/HomeHighlightsSection";
 import { Star } from "lucide-react";
 
-// All images now loaded from Shopify CDN for optimal performance
+// All images now loaded from Shopify CDN for optimal performance with explicit dimensions
 const signStyles = [
   {
     title: "Individual Wall Letters",
@@ -15,12 +15,17 @@ const signStyles = [
     image: "https://cdn.shopify.com/s/files/1/1403/8315/files/Chop_Suey_a1aaee95-b586-4fb9-880d-2bc12998e8ee.jpg?v=1759691041",
     link: "/wall-hanging-signs",
     imagePosition: "center 10%",
+    width: 1200,
+    height: 900,
+    fetchPriority: "high" as const,
   },
   {
     title: "3D Layered/All-in-One Logos, Designs",
     description: "Stunning 3D dimensional signs with multiple layers. Premium depth and visual impact.",
     image: "https://cdn.shopify.com/s/files/1/1403/8315/files/IMG_6390_layered-sign.jpg?v=1759694027",
     link: "/3d-logos",
+    width: 1200,
+    height: 900,
   },
   {
     title: "Food Truck Signs",
@@ -28,6 +33,8 @@ const signStyles = [
     image: "https://cdn.shopify.com/s/files/1/1403/8315/files/IMG_9138.jpg?v=1759690342",
     link: "/mobile-vendor-signs",
     imagePosition: "center 10%",
+    width: 1200,
+    height: 900,
   },
   {
     title: "36\" - 48\" Stand-Up Signs for Events",
@@ -36,12 +43,16 @@ const signStyles = [
     link: "/event-standup-signs",
     imagePosition: "center 35%",
     imageScale: "scale-125",
+    width: 1200,
+    height: 900,
   },
   {
     title: "Rental Inventory Packages",
     description: "Purchase a rental inventory package and start your own marquee light rental business, or expand your current offerings.",
     image: "https://cdn.shopify.com/s/files/1/1403/8315/files/Screenshot_2025-05-30_at_9.00.29_AM-topaz.jpg?v=1759690055",
     link: "/rental-inventory",
+    width: 1200,
+    height: 900,
   },
   {
     title: "Not Sure? Let's Talk!",
@@ -49,6 +60,8 @@ const signStyles = [
     image: "https://dl.dropboxusercontent.com/scl/fi/zow5dope9wbfhay9lfcmq/custom-collage3.jpg?rlkey=btz40y0zyzbeb7h7y9kuajvbj",
     link: "https://www.cognitoforms.com/VintageMarqueeLights/CustomVintageMarqueeLightsQuoteRequest",
     isExternal: true,
+    width: 724,
+    height: 625,
   },
 ];
 
@@ -99,8 +112,9 @@ const Index = () => {
                             style={{ objectPosition: style.imagePosition || 'center' }}
                             loading="lazy"
                             decoding="async"
-                            width="724"
-                            height="625"
+                            width={style.width}
+                            height={style.height}
+                            fetchPriority={style.fetchPriority}
                           />
                           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent group-hover:from-black/90 transition-all duration-300">
                             <div className="absolute inset-0 flex flex-col justify-center items-center text-center p-6">
@@ -129,8 +143,9 @@ const Index = () => {
                             style={{ objectPosition: style.imagePosition || 'center' }}
                             loading="lazy"
                             decoding="async"
-                            width="724"
-                            height="625"
+                            width={style.width}
+                            height={style.height}
+                            fetchPriority={style.fetchPriority}
                           />
                           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent group-hover:from-black/90 transition-all duration-300">
                             <div className="absolute inset-0 flex flex-col justify-center items-center text-center p-6">
@@ -182,7 +197,7 @@ const Index = () => {
           </Card>
         </div>
 
-        {/* Instagram Gallery Section */}
+        {/* Instagram Gallery Section - Lazy loaded for performance */}
         <div id="gallery" className="text-center mb-12">
           <h3 className="text-2xl font-bold mb-6">Our Recent Work</h3>
           <p className="text-muted-foreground mb-4">
