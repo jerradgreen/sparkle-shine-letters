@@ -7,8 +7,9 @@ import ShopifyFooter from "@/components/ShopifyFooter";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Truck, Lightbulb, Palette } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 
-import OptimizedImage from "@/components/OptimizedImage";
+import PerformantImage from "@/components/PerformantImage";
 import foodTruckHero from "@/assets/food-truck-bar-monte.jpg";
 
 const MobileVendorSigns = () => {
@@ -31,6 +32,16 @@ const MobileVendorSigns = () => {
       showFooter={false}
       showChatbot={false}
     >
+      <Helmet>
+        <link
+          rel="preload"
+          as="image"
+          href={foodTruckHero}
+          fetchPriority="high"
+          imageSrcSet={`${foodTruckHero} 1024w`}
+          imageSizes="(max-width: 1024px) 100vw, 50vw"
+        />
+      </Helmet>
       <ShopifyHeader />
       
       {/* Hero Section */}
@@ -40,11 +51,14 @@ const MobileVendorSigns = () => {
           <div className="lg:hidden">
             {/* Mobile image first */}
             <div className="mb-4">
-              <OptimizedImage 
+              <PerformantImage 
                 src={foodTruckHero} 
                 alt="Bar Monte food truck with illuminated marquee sign" 
                 className="rounded-lg shadow-2xl w-full h-64 object-cover"
-                loading="eager"
+                priority={true}
+                fetchPriority="high"
+                sizes="100vw"
+                showPlaceholder={false}
               />
             </div>
             
@@ -136,11 +150,13 @@ const MobileVendorSigns = () => {
 
             {/* Image on right */}
             <div className="relative">
-              <OptimizedImage 
+              <PerformantImage 
                 src={foodTruckHero} 
                 alt="Bar Monte food truck with illuminated marquee sign" 
                 className="rounded-lg shadow-2xl w-full h-auto object-cover"
-                loading="eager"
+                loading="lazy"
+                fetchPriority="low"
+                sizes="50vw"
               />
             </div>
           </div>
