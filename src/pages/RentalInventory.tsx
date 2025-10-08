@@ -9,9 +9,9 @@ import Navigation from "@/components/Navigation";
 import PerformantImage from "@/components/PerformantImage";
 import { Helmet } from "react-helmet-async";
 
-// Optimized CDN images - Phase 1 Aggressive LCP optimization
-const heroImage = "https://cdn.shopify.com/s/files/1/1403/8315/files/R_C_rentals_marquee_letters_setup.webp?v=1759891750&width=1200&quality=85";
-const heroImageMobile = "https://cdn.shopify.com/s/files/1/1403/8315/files/R_C_rentals_marquee_letters_setup.webp?v=1759891750&width=400&height=300&crop=center&quality=75";
+// Locally hosted optimized images for faster LCP
+const heroImage = "/images/hero-rental-setup.webp";
+const heroImageMobile = "/images/hero-rental-setup.webp";
 const elev8Image = "https://cdn.shopify.com/s/files/1/1403/8315/files/elev8.jpg?v=1759695171&width=800&format=webp";
 const year1969Image = "https://cdn.shopify.com/s/files/1/1403/8315/files/1969_dda088f4-5c78-4279-a35a-1ec3a0cdb96e.jpg?v=1759689998&width=800&format=webp";
 const marryMeImage = "https://cdn.shopify.com/s/files/1/1403/8315/files/marry_me.jpg?v=1678754881&width=800&format=webp";
@@ -32,15 +32,11 @@ const RentalInventory = () => {
       <Helmet>
         <title>Marquee Letter Rental Business Package - Event Signage Inventory for Sale</title>
         <meta name="description" content="Start your own marquee letter rental business. Premium vintage-style illuminated letters, complete inventory packages, and everything you need to launch a profitable event signage business." />
-        {/* Optimized preload strategy for LCP - Single responsive preload */}
-        <link rel="preconnect" href="https://cdn.shopify.com" crossOrigin="anonymous" />
-        <link rel="dns-prefetch" href="https://cdn.shopify.com" />
+        {/* Preload locally hosted hero image for optimal LCP */}
         <link 
           rel="preload" 
           as="image" 
-          href={heroImageMobile}
-          imageSrcSet={`${heroImageMobile} 400w, ${heroImage} 1200w`}
-          imageSizes="(max-width: 1024px) 100vw, 50vw"
+          href={heroImage}
           fetchPriority="high"
         />
       </Helmet>
@@ -56,7 +52,7 @@ const RentalInventory = () => {
             <PerformantImage 
               src={heroImageMobile}
               alt="Professional marquee letter rental setup at Drewia Hill event showcasing profitable event rental business opportunity" 
-              className="rounded-lg shadow-2xl w-full h-40 object-cover object-[center_65%]"
+              className="rounded-lg shadow-2xl w-full h-48 object-cover object-[center_65%]"
               priority={true}
               fetchPriority="high"
               sizes="100vw"
