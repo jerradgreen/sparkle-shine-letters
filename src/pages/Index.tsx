@@ -30,9 +30,8 @@ const signStyles = [
   {
     title: "Food Truck Signs",
     description: "Bold illuminated signage for food trucks, mobile vendors. More eyeballs, more sales!",
-    image: "https://cdn.shopify.com/s/files/1/1403/8315/files/IMG_9138.jpg?v=1759690342",
-    link: "/mobile-vendor-signs",
-    imagePosition: "center 10%",
+    image: "https://cdn.shopify.com/s/files/1/1403/8315/files/Screenshot_2025-05-30_at_9.00.29_AM-topaz.jpg?v=1759690055",
+    link: "/rental-inventory",
     width: 1200,
     height: 900,
   },
@@ -49,8 +48,9 @@ const signStyles = [
   {
     title: "Rental Inventory Packages",
     description: "Purchase a rental inventory package and start your own marquee light rental business, or expand your current offerings.",
-    image: "https://cdn.shopify.com/s/files/1/1403/8315/files/Screenshot_2025-05-30_at_9.00.29_AM-topaz.jpg?v=1759690055",
-    link: "/rental-inventory",
+    image: "https://cdn.shopify.com/s/files/1/1403/8315/files/IMG_9138.jpg?v=1759690342",
+    link: "/mobile-vendor-signs",
+    imagePosition: "center 10%",
     width: 1200,
     height: 900,
   },
