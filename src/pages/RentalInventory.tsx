@@ -266,11 +266,12 @@ const RentalInventory = () => {
               {/* Image - takes 1 column */}
               <div className="lg:col-span-1">
               <PerformantImage 
-                src="/lovable-uploads/605ef708-58df-4fec-9e34-3f7232153fd9.png" 
+                src="https://cdn.shopify.com/s/files/1/1403/8315/files/family_lores.webp?v=1759926679" 
                 alt="Jerrad Green and family, founders of Vintage Marquee Lights rental business" 
                 className="rounded-lg shadow-lg w-full h-auto object-cover"
                 loading="lazy"
-                sizes="(max-width: 1024px) 100vw, 33vw"
+                fetchPriority="low"
+                sizes="(max-width: 768px) calc(100vw - 2rem), (max-width: 1024px) calc(100vw - 4rem), 33vw"
               />
               </div>
             </div>
