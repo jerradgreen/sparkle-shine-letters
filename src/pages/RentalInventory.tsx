@@ -9,9 +9,9 @@ import Navigation from "@/components/Navigation";
 import PerformantImage from "@/components/PerformantImage";
 import { Helmet } from "react-helmet-async";
 
-// Optimized CDN images with WebP format
-const heroImage = "https://cdn.shopify.com/s/files/1/1403/8315/files/R_C_rentals_marquee_letters_setup.webp?v=1759891750&width=1200";
-const heroImageMobile = "https://cdn.shopify.com/s/files/1/1403/8315/files/R_C_rentals_marquee_letters_setup.webp?v=1759891750&width=600&height=400&crop=center";
+// Optimized CDN images with WebP format - Aggressive compression for LCP
+const heroImage = "https://cdn.shopify.com/s/files/1/1403/8315/files/R_C_rentals_marquee_letters_setup.webp?v=1759891750&width=1200&quality=85";
+const heroImageMobile = "https://cdn.shopify.com/s/files/1/1403/8315/files/R_C_rentals_marquee_letters_setup.webp?v=1759891750&width=500&height=350&crop=center&quality=80";
 const elev8Image = "https://cdn.shopify.com/s/files/1/1403/8315/files/elev8.jpg?v=1759695171&width=800&format=webp";
 const year1969Image = "https://cdn.shopify.com/s/files/1/1403/8315/files/1969_dda088f4-5c78-4279-a35a-1ec3a0cdb96e.jpg?v=1759689998&width=800&format=webp";
 const marryMeImage = "https://cdn.shopify.com/s/files/1/1403/8315/files/marry_me.jpg?v=1678754881&width=800&format=webp";
@@ -32,9 +32,12 @@ const RentalInventory = () => {
       <Helmet>
         <title>Marquee Letter Rental Business Package - Event Signage Inventory for Sale</title>
         <meta name="description" content="Start your own marquee letter rental business. Premium vintage-style illuminated letters, complete inventory packages, and everything you need to launch a profitable event signage business." />
-        {/* Preload critical hero image to improve LCP */}
+        {/* Preload critical hero image to improve LCP - Mobile optimized */}
       <link rel="preload" as="image" href={heroImageMobile} media="(max-width: 1024px)" fetchPriority="high" />
       <link rel="preload" as="image" href={heroImage} media="(min-width: 1025px)" fetchPriority="high" />
+      {/* Preconnect to Shopify CDN for faster asset loading */}
+      <link rel="preconnect" href="https://cdn.shopify.com" crossOrigin="anonymous" />
+      <link rel="dns-prefetch" href="https://cdn.shopify.com" />
       </Helmet>
       <Navigation />
       <ShopifyHeader />
@@ -51,7 +54,7 @@ const RentalInventory = () => {
               className="rounded-lg shadow-2xl w-full h-32 object-cover object-[center_65%]"
               priority={true}
               fetchPriority="high"
-              sizes="(max-width: 1024px) 100vw, 50vw"
+              sizes="100vw"
             />
             </div>
             
