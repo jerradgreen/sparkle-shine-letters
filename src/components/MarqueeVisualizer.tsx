@@ -233,7 +233,7 @@ const mainLetterPx = 240 * computedMainScale;
 const topperGapPx = Math.max(1, Math.round(mainLetterPx * 0.06)); // Fixed 6% of main letter height
 
 // Slight lift so the stack doesn't sit too low after bottom anchoring
-const bottomOffsetPx = isMobile ? 8 : 28;
+const bottomOffsetPx = isMobile ? 16 : 28;
 
   return (
     <div className="marquee-visualizer relative overflow-visible bg-background text-foreground">
@@ -262,21 +262,21 @@ const bottomOffsetPx = isMobile ? 8 : 28;
       </p>
 
       {/* Main Content */}
-      <div className="content-container relative z-10 w-full max-w-7xl mx-auto p-8">
+      <div className="content-container relative z-10 w-full max-w-7xl mx-auto p-4 md:p-8">
         <div className="md:flex md:justify-center md:scale-85 md:origin-top">
-          <Card className="marquee-card bg-card/90 backdrop-blur-sm border-border/50 shadow-lg mb-8 relative z-10">
-            <CardHeader className="text-center">
-              <CardTitle className="text-3xl font-bold mb-2 uppercase">
-                STAND-UP MARQUEE VISUALIZER-TYPE IT OUT!
+          <Card className="marquee-card bg-card/90 backdrop-blur-sm border-border/50 shadow-lg mb-4 md:mb-8 relative z-10">
+            <CardHeader className="text-center p-4 md:p-6">
+              <CardTitle className="text-xl md:text-3xl font-bold mb-1 md:mb-2 uppercase">
+                MARQUEE VISUALIZER
               </CardTitle>
-              <CardDescription>
+              <CardDescription className="text-xs md:text-sm hidden md:block">
                 Commercial, self-standing, powder coated steel marquee letters for any event or celebration.
               </CardDescription>
             </CardHeader>
-            <CardContent>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div className="space-y-2">
-                  <Label htmlFor="letterSize">Choose Letter Size</Label>
+            <CardContent className="p-4 md:p-6">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4">
+                <div className="space-y-1.5 md:space-y-2">
+                  <Label htmlFor="letterSize" className="text-xs md:text-sm">Choose Letter Size</Label>
                   <Select value={letterSize} onValueChange={setLetterSize}>
                     <SelectTrigger>
                       <SelectValue />
@@ -288,8 +288,8 @@ const bottomOffsetPx = isMobile ? 8 : 28;
                   </Select>
                 </div>
 
-                <div className="space-y-2">
-                  <Label htmlFor="topperOption">Select A Topper (if needed)</Label>
+                <div className="space-y-1.5 md:space-y-2">
+                  <Label htmlFor="topperOption" className="text-xs md:text-sm">Select A Topper (if needed)</Label>
                   <Select value={topperOption} onValueChange={setTopperOption}>
                     <SelectTrigger className="z-[10000]">
                       <SelectValue />
@@ -306,8 +306,8 @@ const bottomOffsetPx = isMobile ? 8 : 28;
                 </div>
 
                 {topperOption === 'CUSTOM' && (
-                  <div className="space-y-2">
-                    <Label htmlFor="customTopper">Custom Topper Text</Label>
+                  <div className="space-y-1.5 md:space-y-2">
+                    <Label htmlFor="customTopper" className="text-xs md:text-sm">Custom Topper Text</Label>
                     <Input
                       id="customTopper"
                       value={customTopper}
@@ -319,8 +319,8 @@ const bottomOffsetPx = isMobile ? 8 : 28;
                 )}
               </div>
 
-              <div className="mt-4 space-y-2">
-                <Label htmlFor="mainText">Type Your Main Text Here</Label>
+              <div className="mt-3 md:mt-4 space-y-1.5 md:space-y-2">
+                <Label htmlFor="mainText" className="text-xs md:text-sm">Type Your Main Text Here</Label>
                 <div className="flex gap-4 items-stretch max-md:flex-col">
                   <Input
                     id="mainText"
@@ -358,9 +358,9 @@ const bottomOffsetPx = isMobile ? 8 : 28;
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`}
         style={{
-          height: window.innerWidth >= 768 ? '35vh' : '30vh',
-          maxHeight: window.innerWidth >= 768 ? '380px' : '320px',
-          minHeight: '200px',
+          height: window.innerWidth >= 768 ? '35vh' : '12vh',
+          maxHeight: window.innerWidth >= 768 ? '380px' : '120px',
+          minHeight: '80px',
           overflow: 'hidden'
         }}
       >
