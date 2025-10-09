@@ -265,7 +265,7 @@ const bottomOffsetPx = isMobile ? 40 : 28;
         <div className="md:flex md:justify-center md:scale-85 md:origin-top">
           <Card className="marquee-card bg-card/90 backdrop-blur-sm border-border/50 shadow-lg mb-4 md:mb-8 relative z-10">
             <CardHeader className="text-center p-4 md:p-6">
-              <CardTitle className="text-xl md:text-3xl font-bold mb-1 md:mb-2 uppercase">
+              <CardTitle className="text-base md:text-3xl font-bold mb-1 md:mb-2 uppercase">
                 MARQUEE VISUALIZER
               </CardTitle>
               <CardDescription className="text-xs md:text-sm hidden md:block">
