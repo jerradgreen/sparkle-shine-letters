@@ -228,12 +228,11 @@ const isMobile = window.innerWidth <= 767;
 const TOPPER_RATIO = 0.42;
 const computedTopperScale = computedMainScale * TOPPER_RATIO;
 
-// Fixed ratio gap that scales directly with main letter height
-const mainLetterPx = 240 * computedMainScale;
-const topperGapPx = Math.max(1, Math.round(mainLetterPx * 0.06)); // Fixed 6% of main letter height
+// Toppers should touch the main text - minimal/no gap
+const topperGapPx = 0;
 
-// Slight lift so the stack doesn't sit too low after bottom anchoring
-const bottomOffsetPx = isMobile ? 16 : 28;
+// More space between card and letters
+const bottomOffsetPx = isMobile ? 40 : 28;
 
   return (
     <div className="marquee-visualizer relative overflow-visible bg-background text-foreground">
@@ -289,7 +288,7 @@ const bottomOffsetPx = isMobile ? 16 : 28;
                 </div>
 
                 <div className="space-y-1.5 md:space-y-2">
-                  <Label htmlFor="topperOption" className="text-xs md:text-sm">Select A Topper (if needed)</Label>
+                  <Label htmlFor="topperOption" className="text-xs md:text-sm">Select a topper if needed (15" tall connected letters that set on top of the main text)</Label>
                   <Select value={topperOption} onValueChange={setTopperOption}>
                     <SelectTrigger className="z-[10000]">
                       <SelectValue />
@@ -358,9 +357,9 @@ const bottomOffsetPx = isMobile ? 16 : 28;
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`}
         style={{
-          height: window.innerWidth >= 768 ? '35vh' : '12vh',
-          maxHeight: window.innerWidth >= 768 ? '380px' : '120px',
-          minHeight: '80px',
+          height: window.innerWidth >= 768 ? '35vh' : '18vh',
+          maxHeight: window.innerWidth >= 768 ? '380px' : '180px',
+          minHeight: '120px',
           overflow: 'hidden'
         }}
       >
