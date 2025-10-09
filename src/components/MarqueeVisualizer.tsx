@@ -121,8 +121,11 @@ const LetterElement = ({ character, isTopper, letterCount, index, letterSize, cu
   );
 };
 
-const getScale = (isTopper: boolean, letterCount: number, letterSize: string, currentScale: number) => {
+const getScale = (isTopper: boolean, letterCount: number, letterSize: string, currentScale: number, isMobilePortrait?: boolean) => {
   const isMobile = window.innerWidth <= 767;
+  const isPortrait = window.innerHeight > window.innerWidth;
+  const mobilePortrait = isMobile && isPortrait;
+  
   // Use the same scale for both 36" and 48" to keep it simple
   const baseScales = { '15': 0.45, '36': 0.9, '48': 0.9 };
   const baseScalesMobile = { '15': 0.22, '36': 0.38, '48': 0.38 };
@@ -139,8 +142,8 @@ const getScale = (isTopper: boolean, letterCount: number, letterSize: string, cu
     const mainFloor = isMobile ? 0.32 : 0.5;
     const finalMainScale = Math.max(mainBase * dynamicFactor, mainFloor);
 
-    // Topper scales at a higher rate - gets smaller faster when main text scales down
-    const topperAdjust = isMobile ? 0.65 : 0.55; // Reduced from 0.85/0.75 to scale smaller faster
+    // Mobile portrait: topper scales more aggressively to stay proportional
+    const topperAdjust = mobilePortrait ? 0.50 : isMobile ? 0.65 : 0.55;
     const topperScale = finalMainScale * topperAdjust;
 
     return Math.max(topperScale, isMobile ? 0.06 : 0.08);
@@ -163,12 +166,26 @@ export const MarqueeVisualizer = () => {
   const [mainText, setMainText] = useState('ENTER TEXT');
   const [currentScale, setCurrentScale] = useState(1);
   const [isVisible, setIsVisible] = useState(false);
+  const [viewportW, setViewportW] = useState(window.innerWidth);
   
   const previewRef = useRef<HTMLDivElement>(null);
   const letterDisplayRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     setTimeout(() => setIsVisible(true), 300);
+  }, []);
+
+  // Mobile-only viewport tracking for orientation changes
+  useEffect(() => {
+    if (window.innerWidth <= 767) {
+      const handleResize = () => setViewportW(window.innerWidth);
+      window.addEventListener('resize', handleResize);
+      window.addEventListener('orientationchange', handleResize);
+      return () => {
+        window.removeEventListener('resize', handleResize);
+        window.removeEventListener('orientationchange', handleResize);
+      };
+    }
   }, []);
 
   const filterValidText = (text: string) => {
@@ -221,15 +238,16 @@ export const MarqueeVisualizer = () => {
 
 const mainLetters = filterValidText(mainText);
 const topperLetters = getTopperText();
-const computedMainScale = getScale(false, mainLetters.length, letterSize, currentScale);
 const isMobile = window.innerWidth <= 767;
+const isPortrait = window.innerHeight > window.innerWidth;
+const mobilePortrait = isMobile && isPortrait;
 
-// Locked topper scale: exact ratio of main
-const TOPPER_RATIO = 0.42;
-const computedTopperScale = computedMainScale * TOPPER_RATIO;
+const computedMainScale = getScale(false, mainLetters.length, letterSize, currentScale, mobilePortrait);
+const computedTopperScale = getScale(true, topperLetters.length, '15', currentScale, mobilePortrait);
 
-// Toppers should touch the main text - minimal/no gap
-const topperGapPx = 0;
+// Dynamic gap for mobile portrait - creates visual connection between topper and main
+const mainLetterPx = 240 * computedMainScale;
+const topperGapPx = mobilePortrait ? -Math.max(4, Math.round(mainLetterPx * 0.06)) : 0;
 
 // More space between card and letters
 const bottomOffsetPx = isMobile ? 40 : 28;
