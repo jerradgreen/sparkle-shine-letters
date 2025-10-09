@@ -243,11 +243,15 @@ const isPortrait = window.innerHeight > window.innerWidth;
 const mobilePortrait = isMobile && isPortrait;
 
 const computedMainScale = getScale(false, mainLetters.length, letterSize, currentScale, mobilePortrait);
-const computedTopperScale = getScale(true, topperLetters.length, '15', currentScale, mobilePortrait);
 
-// Dynamic gap for mobile portrait - creates visual connection between topper and main
+// Topper must follow main text scale exactly with real-world ratio (15" topper vs 36"/48" main)
+const mainInches = parseInt(letterSize, 10) || 36;
+const topperRatioToMain = 15 / mainInches; // 0.4167 for 36", 0.3125 for 48"
+const computedTopperScale = computedMainScale * topperRatioToMain;
+
+// Dynamic gap for mobile portrait - keeps topper visually touching the main text
 const mainLetterPx = 240 * computedMainScale;
-const topperGapPx = mobilePortrait ? -Math.max(4, Math.round(mainLetterPx * 0.06)) : 0;
+const topperGapPx = mobilePortrait ? -Math.max(6, Math.round(mainLetterPx * 0.08)) : 0;
 
 // More space between card and letters
 const bottomOffsetPx = isMobile ? 40 : 28;
