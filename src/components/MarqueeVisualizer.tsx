@@ -326,6 +326,11 @@ const bottomOffsetPx = isMobile ? 8 : 28;
                     id="mainText"
                     value={mainText}
                     onChange={(e) => setMainText(e.target.value)}
+                    onFocus={() => {
+                      if (mainText === 'ENTER TEXT') {
+                        setMainText('');
+                      }
+                    }}
                     placeholder="Type Your Main Text Here"
                     className="text-lg flex-1"
                   />
