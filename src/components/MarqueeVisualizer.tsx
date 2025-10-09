@@ -163,6 +163,7 @@ export const MarqueeVisualizer = () => {
   const [mainText, setMainText] = useState('ENTER TEXT');
   const [currentScale, setCurrentScale] = useState(1);
   const [isVisible, setIsVisible] = useState(false);
+  const [viewportW, setViewportW] = useState(typeof window !== 'undefined' ? window.innerWidth : 1024);
   
   const previewRef = useRef<HTMLDivElement>(null);
   const letterDisplayRef = useRef<HTMLDivElement>(null);
@@ -189,9 +190,21 @@ export const MarqueeVisualizer = () => {
     setCurrentScale(scale);
   }, [mainText, letterSize, currentScale]);
 
-  useEffect(() => {
-    updateCurrentScale();
-  }, [mainText, letterSize, updateCurrentScale]);
+useEffect(() => {
+  updateCurrentScale();
+}, [mainText, letterSize, updateCurrentScale]);
+
+useEffect(() => {
+  const onResize = () => {
+    setViewportW(window.innerWidth);
+  };
+  window.addEventListener('resize', onResize);
+  window.addEventListener('orientationchange', onResize);
+  return () => {
+    window.removeEventListener('resize', onResize);
+    window.removeEventListener('orientationchange', onResize);
+  };
+}, []);
 
   const openQuoteForm = () => {
     const base = 'https://www.cognitoforms.com/VintageMarqueeLights/EventStyleLettersQuoteForm';
@@ -228,8 +241,9 @@ const isMobile = window.innerWidth <= 767;
 const TOPPER_RATIO = 0.42;
 const computedTopperScale = computedMainScale * TOPPER_RATIO;
 
-// Toppers should touch the main text - minimal/no gap
-const topperGapPx = 0;
+// Slight negative gap to ensure topper visually touches main letters
+const mainLetterPx = 240 * computedMainScale;
+const topperGapPx = -Math.max(4, Math.round(mainLetterPx * 0.06));
 
 // More space between card and letters
 const bottomOffsetPx = isMobile ? 40 : 28;
@@ -375,7 +389,7 @@ style={{
       >
         {/* Topper Line */}
         {topperLetters.length > 0 && (
-          <div className="topper-line letter-line relative z-30 flex justify-center flex-nowrap items-end overflow-visible px-8" style={{ marginBottom: `${topperGapPx}px` }}>
+          <div className="topper-line letter-line relative z-30 flex justify-center flex-nowrap items-end overflow-visible px-8" style={{ marginBottom: `${topperGapPx}px`, marginTop: `${Math.min(0, topperGapPx)}px` }}>
             {topperLetters.map((char, index) => (
               <LetterElement
                 key={`topper-${index}`}
