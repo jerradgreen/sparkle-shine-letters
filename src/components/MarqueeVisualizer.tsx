@@ -216,12 +216,10 @@ export const MarqueeVisualizer = () => {
     const noMainTextEntered = mainText.trim().toUpperCase() === 'ENTER TEXT';
     const noTopperEntered = topperOption === 'NONE' || (topperOption === 'CUSTOM' && customTopper.trim() === '');
 
-    // Build entry object - always include Topper field (blank if none) so it shows on the form
-    const entry: Record<string, string> = {
-      Topper: '' // Always include Topper field, even if blank, to make it visible
-    };
+    // Build entry object - only include Topper field if a topper is selected
+    const entry: Record<string, string> = {};
     
-    // Add topper value if one is selected
+    // Only add topper field if one is actually selected
     if (!noTopperEntered && topperOption !== 'NONE') {
       entry.Topper = topperOption === 'CUSTOM' ? customTopper : topperOption;
     }
