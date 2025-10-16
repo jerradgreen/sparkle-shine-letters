@@ -7,6 +7,7 @@ interface FormPageTemplateProps {
   title: string;
   description: string;
   formId: string;
+  prefill?: Record<string, any>;
   children?: ReactNode;
 }
 
@@ -14,6 +15,7 @@ export const FormPageTemplate = ({
   title, 
   description, 
   formId,
+  prefill,
   children 
 }: FormPageTemplateProps) => {
   const containerId = `cognito-form-container-${formId}`;
@@ -30,7 +32,19 @@ export const FormPageTemplate = ({
       const w = window as any;
       if (container && w.Cognito && typeof w.Cognito.mount === 'function') {
         try {
-          w.Cognito.mount(formId, `#${containerId}`);
+          if (prefill && typeof w.Cognito.prefill === 'function') {
+            // Global prefill (per Cognito docs)
+            w.Cognito.prefill(prefill);
+          }
+          const instance = w.Cognito.mount(formId, `#${containerId}`);
+          if (prefill && instance && typeof instance.prefill === 'function') {
+            // Instance prefill to ensure radio/choice fields are set
+            instance.prefill(prefill);
+            // Retry once after mount in case fields render lazily
+            setTimeout(() => {
+              try { instance.prefill(prefill); } catch {}
+            }, 800);
+          }
         } catch (e) {
           console.error('Cognito mount failed', e);
         }
@@ -71,7 +85,7 @@ export const FormPageTemplate = ({
       const container = document.getElementById(containerId);
       if (container) container.innerHTML = '';
     };
-  }, [formId]);
+  }, [formId, JSON.stringify(prefill)]);
 
   return (
     <div className="min-h-screen bg-background">
