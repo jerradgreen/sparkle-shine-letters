@@ -10,7 +10,7 @@ const RentalInventoryQuote = () => {
         try {
           // Prefill the form - adjust field name if needed based on your Cognito form setup
           w.Cognito.prefill('1', {
-            'WhatAreYouLookingFor': 'Rental Inventory Package Info'
+            'WhatStyleOfSignAreYouWantingUsToMake': 'Rental Inventory Package Info'
           });
         } catch (e) {
           console.error('Cognito prefill failed', e);
