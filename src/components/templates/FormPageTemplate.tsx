@@ -57,8 +57,8 @@ export const FormPageTemplate = ({
             </p>
           </div>
           
-          <div className="bg-card rounded-lg shadow-lg p-6 md:p-8">
-            <div className="cognito"></div>
+          <div className="bg-card rounded-lg shadow-lg p-6 md:p-8 min-h-[600px]">
+            <div className="cognito" id="cognito-form-container"></div>
             {children}
           </div>
         </div>
