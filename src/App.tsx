@@ -32,6 +32,7 @@ const App = () => (
             <Route path="/mobile-vendor-signs" element={<MobileVendorSigns />} />
             <Route path="/3d-logos" element={<ThreeDLogos />} />
             <Route path="/thank-you-for-submitting-a-form" element={<ThankYou />} />
+            <Route path="/build-inventory" element={<Navigate to="/rental-inventory" replace />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
