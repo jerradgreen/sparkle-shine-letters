@@ -13,6 +13,12 @@ import MobileVendorSigns from "./pages/MobileVendorSigns";
 import ThreeDLogos from "./pages/ThreeDLogos";
 import ThankYou from "./pages/ThankYou";
 import NotFound from "./pages/NotFound";
+import WallHangingQuote from "./pages/forms/WallHangingQuote";
+import ThreeDLogosQuote from "./pages/forms/ThreeDLogosQuote";
+import RentalInventoryQuote from "./pages/forms/RentalInventoryQuote";
+import EventStandupQuote from "./pages/forms/EventStandupQuote";
+import MobileVendorQuote from "./pages/forms/MobileVendorQuote";
+import CustomQuote from "./pages/forms/CustomQuote";
 
 const queryClient = new QueryClient();
 
@@ -32,6 +38,12 @@ const App = () => (
             <Route path="/mobile-vendor-signs" element={<MobileVendorSigns />} />
             <Route path="/3d-logos" element={<ThreeDLogos />} />
             <Route path="/thank-you-for-submitting-a-form" element={<ThankYou />} />
+            <Route path="/quote/wall-hanging" element={<WallHangingQuote />} />
+            <Route path="/quote/3d-logos" element={<ThreeDLogosQuote />} />
+            <Route path="/quote/rental-inventory" element={<RentalInventoryQuote />} />
+            <Route path="/quote/event-standup" element={<EventStandupQuote />} />
+            <Route path="/quote/mobile-vendor" element={<MobileVendorQuote />} />
+            <Route path="/quote/custom" element={<CustomQuote />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

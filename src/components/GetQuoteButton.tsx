@@ -1,25 +1,26 @@
 import { Button } from '@/components/ui/button';
+import { useNavigate } from 'react-router-dom';
 
 interface GetQuoteButtonProps {
-  prefilled?: boolean;
+  formType?: 'wall-hanging' | '3d-logos' | 'rental-inventory' | 'event-standup' | 'mobile-vendor' | 'custom';
   className?: string;
   children?: React.ReactNode;
 }
 
 export const GetQuoteButton = ({ 
-  prefilled = false, 
+  formType = 'custom', 
   className = "",
   children = "Get Quote"
 }: GetQuoteButtonProps) => {
-  const openQuoteForm = () => {
-    const baseUrl = 'https://www.cognitoforms.com/VintageMarqueeLights/EventStyleLettersQuoteForm';
-    const url = prefilled ? baseUrl : baseUrl;
-    window.open(url, '_blank');
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate(`/quote/${formType}`);
   };
 
   return (
     <Button
-      onClick={openQuoteForm}
+      onClick={handleClick}
       className={`bg-orange-500 hover:bg-orange-600 text-white font-semibold ${className}`}
     >
       {children}
