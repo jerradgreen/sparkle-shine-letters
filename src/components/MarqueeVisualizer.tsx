@@ -213,7 +213,20 @@ export const MarqueeVisualizer = () => {
   }, [mainText, letterSize, updateCurrentScale]);
 
   const openQuoteForm = () => {
-    navigate('/quote/event-standup');
+    // Build URL parameters to prefill the form
+    const params = new URLSearchParams();
+    params.set('mainText', mainText);
+    params.set('letterSize', letterSize);
+    
+    // Handle topper
+    if (topperOption === 'CUSTOM' && customTopper) {
+      params.set('topper', customTopper);
+    } else if (topperOption !== 'NONE') {
+      params.set('topper', topperOption);
+    }
+    // If NONE, don't add topper param at all
+    
+    navigate(`/quote/event-standup?${params.toString()}`);
   };
 
 const mainLetters = filterValidText(mainText);
