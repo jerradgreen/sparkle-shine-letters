@@ -8,6 +8,7 @@ import ShopifyFooter from "@/components/ShopifyFooter";
 import Navigation from "@/components/Navigation";
 import PerformantImage from "@/components/PerformantImage";
 import { Helmet } from "react-helmet-async";
+import { useNavigate } from "react-router-dom";
 
 // Locally hosted optimized images for faster LCP
 const heroImage = "/images/hero-rental-setup.webp";
@@ -25,7 +26,11 @@ import testimonialSarahImage from "@/assets/testimonial-sarah.jpg";
 import testimonialMikeImage from "@/assets/testimonial-mike.jpg";
 
 const RentalInventory = () => {
-  const formUrl = "https://www.cognitoforms.com/VintageMarqueeLights/CustomVintageMarqueeLightsQuoteRequest";
+  const navigate = useNavigate();
+  
+  const openQuoteForm = () => {
+    navigate('/quote/rental-inventory');
+  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -87,13 +92,13 @@ const RentalInventory = () => {
               
               {/* Mobile CTA button after review */}
               <div className="-mt-3">
-                <Button 
-                  size="lg" 
-                  className="text-lg px-8 py-6 w-full"
-                  asChild
-                >
-                  <a href={formUrl} target="_blank" rel="noopener noreferrer">Get Package Pricing Now</a>
-                </Button>
+              <Button 
+                size="lg" 
+                className="text-lg px-8 py-6 w-full"
+                onClick={openQuoteForm}
+              >
+                Get Package Pricing Now
+              </Button>
               </div>
             </div>
           </div>
@@ -110,13 +115,13 @@ const RentalInventory = () => {
               <p className="text-lg text-muted-foreground mb-4 leading-relaxed">
                 Tap into the event rental industry's HOTTEST segment, marquee lights — no franchise fees, no middleman.
               </p>
-              <Button 
-                size="lg" 
-                className="text-lg px-8 py-6 w-full mb-4"
-                asChild
-              >
-                <a href={formUrl} target="_blank" rel="noopener noreferrer">Get Package Pricing Now</a>
-              </Button>
+            <Button 
+              size="lg" 
+              className="text-lg px-8 py-6 w-full mb-4"
+              onClick={openQuoteForm}
+            >
+              Get Package Pricing Now
+            </Button>
               
               <div className="bg-muted/30 rounded-lg p-4 text-center">
                 <div className="flex justify-center mb-2">
@@ -190,9 +195,9 @@ const RentalInventory = () => {
             <Button 
               size="lg" 
               className="text-lg px-8 py-6 w-full"
-              asChild
+              onClick={openQuoteForm}
             >
-              <a href={formUrl} target="_blank" rel="noopener noreferrer">Get Package Pricing Now</a>
+              Get Package Pricing Now
             </Button>
           </div>
         </div>
@@ -450,9 +455,9 @@ const RentalInventory = () => {
           <Button 
             size="lg" 
             className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 text-xl font-semibold rounded-lg transition-all duration-300 hover:scale-105"
-            asChild
+            onClick={openQuoteForm}
           >
-            <a href={formUrl} target="_blank" rel="noopener noreferrer">Get Package Pricing Now</a>
+            Get Package Pricing Now
           </Button>
         </div>
       </section>
@@ -656,9 +661,9 @@ const RentalInventory = () => {
           <Button 
             size="lg" 
             className="text-lg px-8 py-6"
-            asChild
+            onClick={openQuoteForm}
           >
-            <a href={formUrl} target="_blank" rel="noopener noreferrer">Get Package Pricing Now</a>
+            Get Package Pricing Now
           </Button>
         </div>
       </section>
@@ -957,9 +962,9 @@ const RentalInventory = () => {
               variant="outline" 
               size="lg" 
               className="text-lg px-8 py-4 bg-primary-foreground/10 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/20"
-              asChild
+              onClick={openQuoteForm}
             >
-              <a href={formUrl} target="_blank" rel="noopener noreferrer">Get Package Pricing Now</a>
+              Get Package Pricing Now
             </Button>
           </div>
           

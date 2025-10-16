@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 
 const Navigation = () => {
+  const navigate = useNavigate();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
@@ -40,7 +41,7 @@ const Navigation = () => {
                   <Link to="/event-standup-signs" className="cursor-pointer">Event Signs</Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
-                  <a href="https://www.cognitoforms.com/VintageMarqueeLights/CustomVintageMarqueeLightsQuoteRequest" className="cursor-pointer">Not Sure</a>
+                  <Link to="/quote/custom" className="cursor-pointer">Not Sure</Link>
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
@@ -53,9 +54,9 @@ const Navigation = () => {
               36/48" Stand-Up Letters
             </Link>
             
-            <a href="https://www.cognitoforms.com/VintageMarqueeLights/CustomVintageMarqueeLightsQuoteRequest" className="text-foreground hover:text-primary font-medium">
+            <Link to="/quote/custom" className="text-foreground hover:text-primary font-medium">
               Custom Request Form
-            </a>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -114,13 +115,13 @@ const Navigation = () => {
                   >
                     Event Signs
                   </Link>
-                  <a
-                    href="https://www.cognitoforms.com/VintageMarqueeLights/CustomVintageMarqueeLightsQuoteRequest"
+                  <Link
+                    to="/quote/custom"
                     className="text-foreground hover:text-primary font-medium py-1"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     Not Sure
-                  </a>
+                  </Link>
                 </div>
               </div>
               
@@ -140,13 +141,13 @@ const Navigation = () => {
                 36/48" Stand-Up Letters
               </Link>
               
-              <a
-                href="https://www.cognitoforms.com/VintageMarqueeLights/CustomVintageMarqueeLightsQuoteRequest"
+              <Link
+                to="/quote/custom"
                 className="text-foreground hover:text-primary font-medium py-2"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Custom Request Form
-              </a>
+              </Link>
             </div>
           </div>
         )}

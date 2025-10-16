@@ -1,6 +1,7 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Footer = () => {
+  const navigate = useNavigate();
   const scrollToGallery = () => {
     const gallerySection = document.getElementById('gallery');
     if (gallerySection) {
@@ -52,14 +53,12 @@ const Footer = () => {
               >
                 Build a Rental Inventory
               </Link>
-              <a 
-                href="https://www.cognitoforms.com/VintageMarqueeLights/CustomVintageMarqueeLightsQuoteRequest"
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link 
+                to="/quote/custom"
                 className="text-muted-foreground hover:text-primary transition-colors"
               >
                 Not Sure?
-              </a>
+              </Link>
               <button
                 onClick={scrollToGallery}
                 className="text-muted-foreground hover:text-primary transition-colors text-left"
@@ -81,14 +80,12 @@ const Footer = () => {
           <div>
             <h4 className="font-bold text-foreground mb-4 text-lg">Contact</h4>
             <div className="flex flex-col gap-3">
-              <a 
-                href="https://www.cognitoforms.com/VintageMarqueeLights/CustomVintageMarqueeLightsQuoteRequest"
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link 
+                to="/quote/custom"
                 className="text-muted-foreground hover:text-primary transition-colors"
               >
                 Custom Request Form
-              </a>
+              </Link>
             </div>
           </div>
 

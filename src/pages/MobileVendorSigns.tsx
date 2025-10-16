@@ -8,13 +8,16 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Truck, Lightbulb, Palette } from "lucide-react";
 import { Helmet } from "react-helmet-async";
+import { useNavigate } from "react-router-dom";
 
 import PerformantImage from "@/components/PerformantImage";
 import foodTruckHero from "@/assets/food-truck-bar-monte.jpg";
 
 const MobileVendorSigns = () => {
+  const navigate = useNavigate();
+  
   const openQuoteForm = () => {
-    window.open('https://www.cognitoforms.com/VintageMarqueeLights/MobileVendorSignForm', '_blank');
+    navigate('/quote/mobile-vendor');
   };
 
   const scrollToGallery = () => {

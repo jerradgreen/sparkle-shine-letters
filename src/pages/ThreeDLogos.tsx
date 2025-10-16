@@ -8,12 +8,15 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Layers, Eye, Zap, Building2, Palette, Lightbulb, Check } from "lucide-react";
 import { Helmet } from "react-helmet-async";
+import { useNavigate } from "react-router-dom";
 
 import PerformantImage from "@/components/PerformantImage";
 
 const ThreeDLogos = () => {
+  const navigate = useNavigate();
+  
   const openQuoteForm = () => {
-    window.open('https://www.cognitoforms.com/VintageMarqueeLights/_3DLogoLayeredSignForm', '_blank');
+    navigate('/quote/3d-logos');
   };
 
   const scrollToGallery = () => {

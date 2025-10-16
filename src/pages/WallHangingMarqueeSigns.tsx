@@ -12,10 +12,13 @@ import PerformantImage from "@/components/PerformantImage";
 import heroImage from "@/assets/wall-hanging.jpg";
 import { Check } from "lucide-react";
 import { Helmet } from "react-helmet-async";
+import { useNavigate } from "react-router-dom";
 
 const WallHangingMarqueeSigns = () => {
+  const navigate = useNavigate();
+  
   const openQuoteForm = () => {
-    window.open('https://www.cognitoforms.com/VintageMarqueeLights/IndividualWallHangingLettersnumbers', '_blank');
+    navigate('/quote/wall-hanging');
   };
 
   const scrollToGallery = () => {

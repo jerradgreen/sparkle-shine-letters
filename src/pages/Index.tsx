@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { Card, CardContent } from "@/components/ui/card";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ShopifyHeader from "@/components/ShopifyHeader";
@@ -59,14 +59,15 @@ const signStyles = [
     title: "Not Sure? Let's Talk!",
     description: "Have something totally different in mind? We love custom projects. Tell us your vision.",
     image: "https://cdn.shopify.com/s/files/1/1403/8315/files/custom_collage3.webp?v=1759890260",
-    link: "https://www.cognitoforms.com/VintageMarqueeLights/CustomVintageMarqueeLightsQuoteRequest",
-    isExternal: true,
+    link: "/quote/custom",
+    isExternal: false,
     width: 724,
     height: 625,
   },
 ];
 
 const Index = () => {
+  const navigate = useNavigate();
   const [showInstagram, setShowInstagram] = useState(false);
   const instagramRef = useRef<HTMLDivElement>(null);
 
@@ -253,14 +254,12 @@ const Index = () => {
             Need a full quote or want to design your sign now?
           </h2>
           
-          <a 
-            href="https://www.cognitoforms.com/VintageMarqueeLights/CustomVintageMarqueeLightsQuoteRequest"
-            target="_blank"
-            rel="noopener noreferrer"
+          <button 
+            onClick={() => navigate('/quote/custom')}
             className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-lg font-semibold text-lg hover:bg-primary/90 transition-colors"
           >
             👉 Click here to use our full request form
-          </a>
+          </button>
         </div>
       </div>
       
