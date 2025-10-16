@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
@@ -160,6 +161,7 @@ const getKerning = (isTopper: boolean, letterCount: number) => {
 };
 
 export const MarqueeVisualizer = () => {
+  const navigate = useNavigate();
   const [letterSize, setLetterSize] = useState('36');
   const [topperOption, setTopperOption] = useState('NONE');
   const [customTopper, setCustomTopper] = useState('');
@@ -211,27 +213,7 @@ export const MarqueeVisualizer = () => {
   }, [mainText, letterSize, updateCurrentScale]);
 
   const openQuoteForm = () => {
-    const base = 'https://www.cognitoforms.com/VintageMarqueeLights/EventStyleLettersQuoteForm';
-
-    const noMainTextEntered = mainText.trim().toUpperCase() === 'ENTER TEXT';
-    const noTopperEntered = topperOption === 'NONE' || (topperOption === 'CUSTOM' && customTopper.trim() === '');
-
-    // Build entry object - only include Topper field if a topper is selected
-    const entry: Record<string, string> = {};
-    
-    // Only add topper field if one is actually selected
-    if (!noTopperEntered && topperOption !== 'NONE') {
-      entry.Topper = topperOption === 'CUSTOM' ? customTopper : topperOption;
-    }
-    
-    // Add main text if entered
-    if (!noMainTextEntered) {
-      entry.MainTextLettersNumbersSymbols = mainText.toUpperCase();
-      entry.MainTextSize = letterSize === '48' ? '48"' : '36"';
-    }
-
-    const url = `${base}?entry=${encodeURIComponent(JSON.stringify(entry))}`;
-    window.open(url, '_blank');
+    navigate('/quote/event-standup');
   };
 
 const mainLetters = filterValidText(mainText);
