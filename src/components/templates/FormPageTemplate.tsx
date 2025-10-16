@@ -16,12 +16,13 @@ export const FormPageTemplate = ({
   formId,
   children 
 }: FormPageTemplateProps) => {
+  const containerId = `cognito-form-container-${formId}`;
   useEffect(() => {
     let isMounted = true;
 
     const mountForm = () => {
       if (!isMounted) return;
-      const container = document.getElementById('cognito-form-container');
+      const container = document.getElementById(containerId);
       // Clear any previous render
       if (container) {
         container.innerHTML = '';
@@ -29,7 +30,7 @@ export const FormPageTemplate = ({
       const w = window as any;
       if (container && w.Cognito && typeof w.Cognito.mount === 'function') {
         try {
-          w.Cognito.mount(formId, '#cognito-form-container');
+          w.Cognito.mount(formId, `#${containerId}`);
         } catch (e) {
           console.error('Cognito mount failed', e);
         }
@@ -67,7 +68,7 @@ export const FormPageTemplate = ({
 
     return () => {
       isMounted = false;
-      const container = document.getElementById('cognito-form-container');
+      const container = document.getElementById(containerId);
       if (container) container.innerHTML = '';
     };
   }, [formId]);
@@ -87,7 +88,7 @@ export const FormPageTemplate = ({
           <h1 className="sr-only">{title}</h1>
           
           <div className="bg-card rounded-lg shadow-lg p-6 md:p-8 min-h-[600px]">
-            <div className="cognito" id="cognito-form-container"></div>
+            <div className="cognito" id={containerId}></div>
             {children}
           </div>
         </div>
