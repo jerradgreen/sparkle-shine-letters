@@ -251,14 +251,14 @@ const Index = () => {
         {/* Contact Form Section */}
         <div className="text-center py-16 px-6 bg-muted/20 rounded-lg mb-12">
           <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6">
-            Need a full quote or want to design your sign now?
+            Not sure which style is right for you?
           </h2>
           
           <button 
-            onClick={() => navigate('/quote/custom')}
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-lg font-semibold text-lg hover:bg-primary/90 transition-colors"
           >
-            👉 Click here to use our full request form
+            👉 Click to select your style of sign
           </button>
         </div>
       </div>
