@@ -9,7 +9,6 @@ import Navigation from "@/components/Navigation";
 import PerformantImage from "@/components/PerformantImage";
 import { Helmet } from "react-helmet-async";
 import { useNavigate } from "react-router-dom";
-import { ExitIntentPopup } from "@/components/ExitIntentPopup";
 import { RentalGuideDownloadSection } from "@/components/RentalGuideDownloadSection";
 
 // Locally hosted optimized images for faster LCP
@@ -36,7 +35,6 @@ const RentalInventory = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <ExitIntentPopup />
       <Helmet>
         <title>Marquee Letter Rental Business Package - Event Signage Inventory for Sale</title>
         <meta name="description" content="Start your own marquee letter rental business. Premium vintage-style illuminated letters, complete inventory packages, and everything you need to launch a profitable event signage business." />
