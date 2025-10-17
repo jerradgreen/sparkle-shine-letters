@@ -1,44 +1,82 @@
 import { useEffect, useState } from "react";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
-import { Download, X } from "lucide-react";
-import { useNavigate } from "react-router-dom";
+import { Download } from "lucide-react";
+import { useNavigate, useBlocker } from "react-router-dom";
 
 const STORAGE_KEY = "rental-guide-exit-intent-shown";
 
+// Routes that should NOT trigger the exit intent popup
+const FORM_ROUTES = [
+  '/quote/',
+  '/download/',
+  '/thank-you-for-submitting-a-form'
+];
+
+const shouldShowPopup = (pathname: string) => {
+  return !FORM_ROUTES.some(route => pathname.startsWith(route));
+};
+
 export const ExitIntentPopup = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isActive, setIsActive] = useState(false);
   const navigate = useNavigate();
 
+  // Check if already shown
+  const hasShown = localStorage.getItem(STORAGE_KEY);
+
+  // Block internal navigation to non-form pages
+  const blocker = useBlocker(({ nextLocation }) => {
+    if (!hasShown && isActive) {
+      return shouldShowPopup(nextLocation.pathname);
+    }
+    return false;
+  });
+
   useEffect(() => {
-    // Check if already shown
-    const hasShown = localStorage.getItem(STORAGE_KEY);
     if (hasShown) return;
 
-    let isExiting = false;
+    // Activate blocking after 5 seconds
+    const timer = setTimeout(() => {
+      setIsActive(true);
+    }, 5000);
 
-    const handleMouseLeave = (e: MouseEvent) => {
-      // Only trigger if mouse is leaving through the top
-      if (e.clientY <= 10 && !isExiting) {
-        isExiting = true;
-        setIsOpen(true);
-        localStorage.setItem(STORAGE_KEY, "true");
+    // Handle browser-level exits (close tab, new URL, etc.)
+    const handleBeforeUnload = (e: BeforeUnloadEvent) => {
+      if (!hasShown && isActive) {
+        e.preventDefault();
+        e.returnValue = '';
       }
     };
 
-    // Add event listener with a small delay to avoid immediate triggers
-    const timer = setTimeout(() => {
-      document.addEventListener("mouseleave", handleMouseLeave);
-    }, 5000); // Wait 5 seconds before enabling exit intent
+    window.addEventListener('beforeunload', handleBeforeUnload);
 
     return () => {
       clearTimeout(timer);
-      document.removeEventListener("mouseleave", handleMouseLeave);
+      window.removeEventListener('beforeunload', handleBeforeUnload);
     };
-  }, []);
+  }, [hasShown, isActive]);
+
+  // Show popup when blocker is triggered
+  useEffect(() => {
+    if (blocker.state === 'blocked') {
+      setIsOpen(true);
+      localStorage.setItem(STORAGE_KEY, "true");
+    }
+  }, [blocker.state]);
 
   const handleDownload = () => {
+    if (blocker.state === 'blocked') {
+      blocker.reset();
+    }
     navigate("/download/rental-guide");
+    setIsOpen(false);
+  };
+
+  const handleContinue = () => {
+    if (blocker.state === 'blocked') {
+      blocker.proceed();
+    }
     setIsOpen(false);
   };
 
@@ -85,10 +123,10 @@ export const ExitIntentPopup = () => {
             </Button>
             <Button 
               variant="ghost" 
-              onClick={() => setIsOpen(false)}
+              onClick={handleContinue}
               className="w-full text-muted-foreground"
             >
-              No thanks, I'll pass
+              {blocker.state === 'blocked' ? 'Continue Browsing' : "No thanks, I'll pass"}
             </Button>
           </div>
         </div>
