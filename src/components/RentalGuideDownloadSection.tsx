@@ -13,7 +13,10 @@ export const RentalGuideDownloadSection = () => {
           <CardContent className="p-8">
             <div className="grid md:grid-cols-2 gap-8 items-center">
               {/* Left side - Visual preview */}
-              <div className="relative">
+              <div 
+                className="relative cursor-pointer transition-transform hover:scale-105"
+                onClick={() => navigate("/download/rental-guide")}
+              >
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 rounded-lg blur-xl"></div>
                 <div className="relative bg-card border-2 border-primary/30 rounded-lg p-6 text-center">
                   <Download className="w-16 h-16 text-primary mx-auto mb-4" />
