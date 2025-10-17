@@ -5,7 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, Navigate, useLocation } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import { ScrollToTop } from "@/components/ScrollToTop";
-import { ExitIntentPopup } from "@/components/ExitIntentPopup";
+
 import Index from "./pages/Index";
 import RentalInventory from "./pages/RentalInventory";
 import EventStandUpSigns from "./pages/EventStandUpSigns";
@@ -25,25 +25,10 @@ import RentalGuideThankYou from "./pages/download/RentalGuideThankYou";
 
 const queryClient = new QueryClient();
 
-// Routes where the exit intent popup should NOT be shown
-const FORM_ROUTES = [
-  '/quote/',
-  '/download/',
-  '/thank-you-for-submitting-a-form',
-  '/download/rental-guide-thank-you'
-];
-
-const shouldShowExitIntent = (pathname: string) => {
-  return !FORM_ROUTES.some(route => pathname.startsWith(route));
-};
-
 const RouterContent = () => {
-  const location = useLocation();
-  
   return (
     <>
       <ScrollToTop />
-      {shouldShowExitIntent(location.pathname) && <ExitIntentPopup />}
       <Routes>
         <Route path="/" element={<Index />} />
         <Route path="/rental-inventory" element={<RentalInventory />} />
