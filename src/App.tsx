@@ -19,6 +19,8 @@ import RentalInventoryQuote from "./pages/forms/RentalInventoryQuote";
 import EventStandupQuote from "./pages/forms/EventStandupQuote";
 import MobileVendorQuote from "./pages/forms/MobileVendorQuote";
 import CustomQuote from "./pages/forms/CustomQuote";
+import RentalGuide from "./pages/download/RentalGuide";
+import RentalGuideThankYou from "./pages/download/RentalGuideThankYou";
 
 const queryClient = new QueryClient();
 
@@ -44,6 +46,8 @@ const App = () => (
             <Route path="/quote/event-standup" element={<EventStandupQuote />} />
             <Route path="/quote/mobile-vendor" element={<MobileVendorQuote />} />
             <Route path="/quote/custom" element={<CustomQuote />} />
+            <Route path="/download/rental-guide" element={<RentalGuide />} />
+            <Route path="/download/rental-guide-thank-you" element={<RentalGuideThankYou />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
