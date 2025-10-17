@@ -10,11 +10,18 @@ const STORAGE_KEY = "rental-guide-exit-intent-shown";
 const FORM_ROUTES = [
   '/quote/',
   '/download/',
-  '/thank-you-for-submitting-a-form'
+  '/thank-you-for-submitting-a-form',
+  '/rental-inventory',
+  '/wall-hanging-signs',
+  '/3d-logos',
+  '/mobile-vendor-signs',
+  '/event-standup-signs',
+  '/'
 ];
 
 const shouldShowPopup = (pathname: string) => {
-  return !FORM_ROUTES.some(route => pathname.startsWith(route));
+  // Don't show popup if navigating to any of these routes
+  return !FORM_ROUTES.some(route => pathname.startsWith(route) || pathname === route);
 };
 
 export const ExitIntentPopup = () => {
