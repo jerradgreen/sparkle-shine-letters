@@ -2,57 +2,32 @@ import { useEffect, useState } from "react";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Download } from "lucide-react";
-import { useNavigate, useBlocker } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const STORAGE_KEY = "rental-guide-exit-intent-shown";
 
-// Routes that should NOT trigger the exit intent popup
-const FORM_ROUTES = [
-  '/quote/',
-  '/download/',
-  '/thank-you-for-submitting-a-form',
-  '/rental-inventory',
-  '/wall-hanging-signs',
-  '/3d-logos',
-  '/mobile-vendor-signs',
-  '/event-standup-signs',
-  '/'
-];
-
-const shouldShowPopup = (pathname: string) => {
-  // Don't show popup if navigating to any of these routes
-  return !FORM_ROUTES.some(route => pathname.startsWith(route) || pathname === route);
-};
-
 export const ExitIntentPopup = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isActive, setIsActive] = useState(false);
   const navigate = useNavigate();
 
-  // Check if already shown
-  const hasShown = localStorage.getItem(STORAGE_KEY);
-
-  // Block internal navigation to non-form pages
-  const blocker = useBlocker(({ nextLocation }) => {
-    if (!hasShown && isActive) {
-      return shouldShowPopup(nextLocation.pathname);
-    }
-    return false;
-  });
-
   useEffect(() => {
+    // Check if already shown
+    const hasShown = localStorage.getItem(STORAGE_KEY);
     if (hasShown) return;
 
-    // Activate blocking after 5 seconds
+    let isActive = false;
+
+    // Activate after 5 seconds
     const timer = setTimeout(() => {
-      setIsActive(true);
+      isActive = true;
     }, 5000);
 
-    // Handle browser-level exits (close tab, new URL, etc.)
+    // Handle browser-level exits only (close tab, new URL, external links)
     const handleBeforeUnload = (e: BeforeUnloadEvent) => {
       if (!hasShown && isActive) {
         e.preventDefault();
         e.returnValue = '';
+        localStorage.setItem(STORAGE_KEY, "true");
       }
     };
 
@@ -62,28 +37,10 @@ export const ExitIntentPopup = () => {
       clearTimeout(timer);
       window.removeEventListener('beforeunload', handleBeforeUnload);
     };
-  }, [hasShown, isActive]);
-
-  // Show popup when blocker is triggered
-  useEffect(() => {
-    if (blocker.state === 'blocked') {
-      setIsOpen(true);
-      localStorage.setItem(STORAGE_KEY, "true");
-    }
-  }, [blocker.state]);
+  }, []);
 
   const handleDownload = () => {
-    if (blocker.state === 'blocked') {
-      blocker.reset();
-    }
     navigate("/download/rental-guide");
-    setIsOpen(false);
-  };
-
-  const handleContinue = () => {
-    if (blocker.state === 'blocked') {
-      blocker.proceed();
-    }
     setIsOpen(false);
   };
 
@@ -130,10 +87,10 @@ export const ExitIntentPopup = () => {
             </Button>
             <Button 
               variant="ghost" 
-              onClick={handleContinue}
+              onClick={() => setIsOpen(false)}
               className="w-full text-muted-foreground"
             >
-              {blocker.state === 'blocked' ? 'Continue Browsing' : "No thanks, I'll pass"}
+              No thanks, I'll pass
             </Button>
           </div>
         </div>
