@@ -5,7 +5,7 @@ const RentalGuide = () => {
     <FormPageTemplate
       title="Download Free Rental Guide"
       description="Get our comprehensive guide to starting your marquee light rental business"
-      formId="1"
+      formId="11"
       prefill={{ 'WhatStyleOfSignAreYouWantingUsToMake': 'Download Rental Guide' }}
     />
   );

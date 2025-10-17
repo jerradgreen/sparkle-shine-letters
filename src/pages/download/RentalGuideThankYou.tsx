@@ -59,22 +59,10 @@ const RentalGuideThankYou = () => {
           {/* Next Steps */}
           <div className="text-left mb-12">
             <h2 className="text-2xl font-bold mb-6 text-center">Ready to Get Started?</h2>
-            <div className="grid md:grid-cols-2 gap-6">
-              <Link to="/rental-inventory">
+            <div className="flex justify-center">
+              <Link to="/quote/rental-inventory" className="w-full max-w-md">
                 <div className="bg-card border rounded-lg p-6 hover:shadow-lg transition-shadow h-full">
-                  <h3 className="text-xl font-semibold mb-2">Browse Our Rental Inventory</h3>
-                  <p className="text-muted-foreground mb-4">
-                    Explore our complete collection of marquee lights available for rent
-                  </p>
-                  <Button variant="outline" className="w-full">
-                    View Inventory <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
-                </div>
-              </Link>
-              
-              <Link to="/quote/rental-inventory">
-                <div className="bg-card border rounded-lg p-6 hover:shadow-lg transition-shadow h-full">
-                  <h3 className="text-xl font-semibold mb-2">Get a Custom Quote</h3>
+                  <h3 className="text-xl font-semibold mb-2">Rental Inventory Quote</h3>
                   <p className="text-muted-foreground mb-4">
                     Let us help you build the perfect rental package for your business
                   </p>
