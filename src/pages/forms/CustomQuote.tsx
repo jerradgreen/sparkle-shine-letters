@@ -21,7 +21,7 @@ const CustomQuote = () => {
 
         // Wait until Cognito form loads
         window.addEventListener("load", function() {
-          const form = document.querySelector(formSelector + " form");
+          const form = document.querySelector(\`\${formSelector} form\`);
           if (!form) return;
 
           // Optional: capture IP in hidden field called ip_address
@@ -38,7 +38,7 @@ const CustomQuote = () => {
             const elapsed = (Date.now() - startTime) / 1000;
             if (elapsed < MIN_SECONDS_BEFORE_SUBMIT) {
               e.preventDefault();
-              alert("Please wait a few seconds before submitting.");
+              alert("Almost done! Please wait just another moment before submitting.");
               return false;
             }
           });
