@@ -19,8 +19,10 @@ const EventStandupQuote = () => {
         const prefillData: Record<string, string> = {};
         
         if (mainText) prefillData['MainText'] = mainText;
-        if (letterSize) prefillData['LetterSize'] = `${letterSize} inches`;
+        if (letterSize) prefillData['MainTextSize'] = `${letterSize} inches`;
         if (topper) prefillData['TopperText'] = topper;
+        
+        console.log('Prefilling form with:', prefillData);
         
         // Prefill the form
         try {
@@ -31,9 +33,19 @@ const EventStandupQuote = () => {
       }
     };
 
-    // Try prefill after a short delay to ensure form is mounted
-    const timer = setTimeout(prefillForm, 1000);
-    return () => clearTimeout(timer);
+    // Try prefill multiple times with delays to ensure it works
+    let attempts = 0;
+    const maxAttempts = 3;
+    const attemptPrefill = setInterval(() => {
+      if (attempts >= maxAttempts) {
+        clearInterval(attemptPrefill);
+        return;
+      }
+      prefillForm();
+      attempts++;
+    }, 800);
+    
+    return () => clearInterval(attemptPrefill);
   }, [location.search]);
 
   return (
