@@ -15,7 +15,7 @@ const RentalGuideThankYou = () => {
       try {
         const sessionId = sessionStorage.getItem('rental_guide_session') || crypto.randomUUID();
         
-        await supabase.functions.invoke('track-download', {
+        const { error } = await supabase.functions.invoke('track-download', {
           body: {
             event_type: 'thank_you_page_view',
             referrer: document.referrer || 'direct',
@@ -24,13 +24,18 @@ const RentalGuideThankYou = () => {
           }
         });
 
-        console.log('Tracked thank you page view');
+        if (error) {
+          console.error('Tracking error:', error);
+        } else {
+          console.log('Tracked thank you page view');
+        }
       } catch (error) {
+        // Silent fail
         console.error('Error tracking thank you page view:', error);
       }
     };
 
-    trackThankYouPageView();
+    setTimeout(trackThankYouPageView, 500);
   }, []);
 
   const handleDownloadClick = async () => {
