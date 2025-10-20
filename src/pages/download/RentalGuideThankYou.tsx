@@ -1,61 +1,12 @@
-import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { CheckCircle, Download, Mail, ArrowRight } from "lucide-react";
 import { Helmet } from "react-helmet-async";
-import { supabase } from "@/integrations/supabase/client";
 
 const RentalGuideThankYou = () => {
   const pdfUrl = "https://cdn.shopify.com/s/files/1/1403/8315/files/start_marquee_business_infographic_copy.pdf?v=1760708935";
-
-  useEffect(() => {
-    const trackThankYouPageView = async () => {
-      try {
-        const sessionId = sessionStorage.getItem('rental_guide_session') || crypto.randomUUID();
-        
-        const { error } = await supabase.functions.invoke('track-download', {
-          body: {
-            event_type: 'thank_you_page_view',
-            referrer: document.referrer || 'direct',
-            user_agent: navigator.userAgent,
-            session_id: sessionId,
-          }
-        });
-
-        if (error) {
-          console.error('Tracking error:', error);
-        } else {
-          console.log('Tracked thank you page view');
-        }
-      } catch (error) {
-        // Silent fail
-        console.error('Error tracking thank you page view:', error);
-      }
-    };
-
-    setTimeout(trackThankYouPageView, 500);
-  }, []);
-
-  const handleDownloadClick = async () => {
-    try {
-      const sessionId = sessionStorage.getItem('rental_guide_session') || crypto.randomUUID();
-      
-      await supabase.functions.invoke('track-download', {
-        body: {
-          event_type: 'download_click',
-          referrer: document.referrer || 'direct',
-          user_agent: navigator.userAgent,
-          session_id: sessionId,
-        }
-      });
-
-      console.log('Tracked download click');
-    } catch (error) {
-      console.error('Error tracking download click:', error);
-    }
-  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -89,7 +40,6 @@ const RentalGuideThankYou = () => {
               download="marquee-light-rental-guide.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              onClick={handleDownloadClick}
             >
               <Button size="lg" className="text-lg px-8">
                 <Download className="mr-2 h-5 w-5" />

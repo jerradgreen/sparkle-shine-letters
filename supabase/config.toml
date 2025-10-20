@@ -2,6 +2,3 @@ project_id = "kjfjqtmtvxawmwjeedrd"
 
 [functions.verify-email]
 verify_jwt = false
-
-[functions.track-download]
-verify_jwt = false

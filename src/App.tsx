@@ -22,7 +22,6 @@ import MobileVendorQuote from "./pages/forms/MobileVendorQuote";
 import CustomQuote from "./pages/forms/CustomQuote";
 import RentalGuide from "./pages/download/RentalGuide";
 import RentalGuideThankYou from "./pages/download/RentalGuideThankYou";
-import DownloadStats from "./pages/admin/DownloadStats";
 
 const queryClient = new QueryClient();
 
@@ -46,7 +45,6 @@ const RouterContent = () => {
         <Route path="/quote/custom" element={<CustomQuote />} />
         <Route path="/download/rental-guide" element={<RentalGuide />} />
         <Route path="/download/rental-guide-thank-you" element={<RentalGuideThankYou />} />
-        <Route path="/admin/download-stats" element={<DownloadStats />} />
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />
       </Routes>
