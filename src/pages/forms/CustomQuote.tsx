@@ -14,7 +14,6 @@ const CustomQuote = () => {
         // Block obvious foreign-market devices
         const ua = navigator.userAgent.toLowerCase();
         if (BAD_KEYWORDS.some(k => ua.includes(k))) {
-          console.warn("Spam device detected:", ua);
           window.location.href = "https://www.vintagemarqueelights.com";
           return;
         }

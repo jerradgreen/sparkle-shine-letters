@@ -77,7 +77,6 @@ const Chatbot = () => {
       });
 
       if (error) {
-        console.error('Email verification error:', error);
         // Proceed anyway if verification service fails
         setShowEmailInput(false);
         addWelcomeMessage();
@@ -94,7 +93,6 @@ const Chatbot = () => {
       addWelcomeMessage();
 
     } catch (error) {
-      console.error('Email verification failed:', error);
       // Fallback: proceed anyway if verification completely fails
       setShowEmailInput(false);
       addWelcomeMessage();
@@ -120,10 +118,10 @@ const Chatbot = () => {
       });
 
       if (error) {
-        console.error('Error sending chat transcript:', error);
+        // Silent fail - transcript not critical
       }
     } catch (error) {
-      console.error('Error sending chat transcript:', error);
+      // Silent fail - transcript not critical
     }
   };
 
@@ -196,7 +194,6 @@ const Chatbot = () => {
 
       setMessages(prev => [...prev, assistantMessage]);
     } catch (error) {
-      console.error('Error sending message:', error);
       const errorMessage: Message = {
         id: (Date.now() + 1).toString(),
         content: "I'm sorry, I'm having trouble connecting right now. Please try again or contact us directly through our quote form.",

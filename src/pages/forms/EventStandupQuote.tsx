@@ -6,11 +6,23 @@ const EventStandupQuote = () => {
   const location = useLocation();
 
   useEffect(() => {
+    // Security: Sanitize URL parameters to prevent XSS
+    const sanitizeParam = (value: string | null): string => {
+      if (!value) return '';
+      // Remove script tags and HTML, limit length
+      return value
+        .replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '')
+        .replace(/<[^>]+>/g, '')
+        .replace(/[<>'"]/g, '')
+        .trim()
+        .slice(0, 100);
+    };
+
     // Get URL parameters from visualizer
     const params = new URLSearchParams(location.search);
-    const mainText = params.get('mainText');
-    const letterSize = params.get('letterSize');
-    const topper = params.get('topper');
+    const mainText = sanitizeParam(params.get('mainText'));
+    const letterSize = sanitizeParam(params.get('letterSize'));
+    const topper = sanitizeParam(params.get('topper'));
 
     // Add anti-spam honeypot monitoring script
     const script = document.createElement('script');
@@ -51,8 +63,6 @@ const EventStandupQuote = () => {
         if (letterSize) prefillData['MainTextSize2'] = letterSize;
         if (topper) prefillData['TopperText'] = topper;
         prefillData['ZipCodeForDeliveryEstimate'] = '';
-        
-        console.log('Prefilling form with:', prefillData);
         
         // Prefill the form
         try {
