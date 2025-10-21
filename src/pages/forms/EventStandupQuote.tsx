@@ -12,6 +12,35 @@ const EventStandupQuote = () => {
     const letterSize = params.get('letterSize');
     const topper = params.get('topper');
 
+    // Add anti-spam honeypot monitoring script
+    const script = document.createElement('script');
+    script.textContent = `
+      (function() {
+        window.addEventListener("load", function() {
+          const form = document.querySelector(".cognito form");
+          if (!form) return;
+
+          // Monitor honeypot field
+          const honeypot = form.querySelector("input[name='ZipCodeForDeliveryEstimate']");
+          if (honeypot) {
+            honeypot.value = '';
+            honeypot.style.display = 'none';
+            
+            // Block submission if honeypot gets filled (spam bot behavior)
+            form.addEventListener("submit", function(e) {
+              if (honeypot.value && honeypot.value.trim() !== '') {
+                e.preventDefault();
+                console.warn("Spam detected: honeypot filled");
+                window.location.href = "https://www.vintagemarqueelights.com";
+                return false;
+              }
+            });
+          }
+        });
+      })();
+    `;
+    document.body.appendChild(script);
+
     // Wait for Cognito form to be available
     const prefillForm = () => {
       const w = window as any;
@@ -19,8 +48,9 @@ const EventStandupQuote = () => {
         const prefillData: Record<string, string> = {};
         
         if (mainText) prefillData['MainText'] = mainText;
-        if (letterSize) prefillData['MainTextSize'] = `${letterSize} inches`;
+        if (letterSize) prefillData['MainTextSize2'] = letterSize;
         if (topper) prefillData['TopperText'] = topper;
+        prefillData['ZipCodeForDeliveryEstimate'] = '';
         
         console.log('Prefilling form with:', prefillData);
         
@@ -45,7 +75,10 @@ const EventStandupQuote = () => {
       attempts++;
     }, 800);
     
-    return () => clearInterval(attemptPrefill);
+    return () => {
+      clearInterval(attemptPrefill);
+      document.body.removeChild(script);
+    };
   }, [location.search]);
 
   return (

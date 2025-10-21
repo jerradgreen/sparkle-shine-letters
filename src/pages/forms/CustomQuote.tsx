@@ -6,7 +6,7 @@ const CustomQuote = () => {
     const script = document.createElement('script');
     script.textContent = `
       (function() {
-        const MIN_SECONDS_BEFORE_SUBMIT = 3;
+        const MIN_SECONDS_BEFORE_SUBMIT = 1;
         const BAD_KEYWORDS = ["vivo","oppo","realme","xiaomi","iqoo","tecno","infinix","redmi","huawei"];
         const formSelector = ".cognito";
         let startTime = Date.now();
@@ -38,7 +38,7 @@ const CustomQuote = () => {
             const elapsed = (Date.now() - startTime) / 1000;
             if (elapsed < MIN_SECONDS_BEFORE_SUBMIT) {
               e.preventDefault();
-              alert("Almost done! Please wait just another moment before submitting.");
+              alert("Please wait a moment before submitting.");
               return false;
             }
           });
