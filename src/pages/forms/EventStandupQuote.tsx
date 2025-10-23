@@ -59,7 +59,7 @@ const EventStandupQuote = () => {
       if (w.Cognito && typeof w.Cognito.prefill === 'function') {
         const prefillData: Record<string, string> = {};
         
-        if (mainText) prefillData['MainText'] = mainText;
+        if (mainText) prefillData['MainTextLettersNumbersSymbols'] = mainText;
         if (letterSize) prefillData['MainTextSize2'] = letterSize;
         if (topper) prefillData['TopperText'] = topper;
         prefillData['ZipCodeForDeliveryEstimate'] = '';
