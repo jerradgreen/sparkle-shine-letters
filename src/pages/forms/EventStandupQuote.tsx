@@ -31,8 +31,8 @@ const EventStandupQuote = () => {
   if (mainText) prefillData['MainTextLettersNumbersSymbols'] = mainText;
   if (mappedSize) prefillData['MainTextSize2'] = mappedSize;
   if (topper) {
-    prefillData['DoYouWantATopper'] = 'Yes';
-    prefillData['TopperText'] = topper;
+    prefillData['Topper'] = topper;
+    prefillData['Topper?'] = topper; // Try both with and without question mark
   }
   prefillData['ZipCodeForDeliveryEstimate'] = ''; // Honeypot field
 
@@ -71,71 +71,58 @@ const EventStandupQuote = () => {
     };
   }, []);
 
-  // Ensure topper field becomes visible when provided by visualizer
+  // Ensure topper field is filled when provided by visualizer
   useEffect(() => {
     if (!topper) return;
+    
     let attempts = 0;
-    const max = 10;
-    const iv = setInterval(() => {
+    const maxAttempts = 30; // 12 seconds total (30 × 400ms)
+    
+    const fillTopperField = setInterval(() => {
       attempts++;
       const form = document.querySelector('.cognito form') as HTMLFormElement | null;
       if (!form) return;
 
-      let toggled = false;
-      // Try radio/checkbox controls likely named for topper visibility
-      const inputs = Array.from(form.querySelectorAll("input[type='radio'], input[type='checkbox']")) as HTMLInputElement[];
-      for (const input of inputs) {
-        const name = (input.name || '').toLowerCase();
-        const id = (input.id || '').toLowerCase();
-        const label = input.id ? (form.querySelector(`label[for="${input.id}"]`) as HTMLLabelElement | null) : null;
-        const labelText = (label?.innerText || '').toLowerCase();
-        const isTopperControl = name.includes('topper') || id.includes('topper') || labelText.includes('topper');
-        const isYes = (input.value || '').toLowerCase() === 'yes' || (input.value || '').toLowerCase() === 'true';
-        if (isTopperControl && isYes) {
-          if (!input.checked) {
-            input.checked = true;
-            input.dispatchEvent(new Event('change', { bubbles: true }));
-          }
-          toggled = true;
-          break;
-        }
-      }
+      // Find the topper textbox by multiple selectors
+      let topperInput = form.querySelector<HTMLInputElement | HTMLTextAreaElement>(
+        "input[name*='Topper'], textarea[name*='Topper'], input[aria-label*='Topper'], input[placeholder*='Topper']"
+      );
 
-      // Try selects that may control visibility
-      if (!toggled) {
-        const selects = Array.from(form.querySelectorAll('select')) as HTMLSelectElement[];
-        for (const sel of selects) {
-          const name = (sel.name || '').toLowerCase();
-          if (name.includes('topper')) {
-            const yesOption = Array.from(sel.options).find(
-              (o) => o.text.toLowerCase() === 'yes' || o.value.toLowerCase() === 'yes' || o.value.toLowerCase() === 'true'
-            );
-            if (yesOption) {
-              sel.value = yesOption.value;
-              sel.dispatchEvent(new Event('change', { bubbles: true }));
-              toggled = true;
-              break;
-            }
+      // Also try finding by label text "Topper?"
+      if (!topperInput) {
+        const labels = Array.from(form.querySelectorAll('label'));
+        const topperLabel = labels.find(l => l.textContent?.trim().toLowerCase().includes('topper'));
+        if (topperLabel) {
+          const labelFor = topperLabel.getAttribute('for');
+          if (labelFor) {
+            topperInput = form.querySelector<HTMLInputElement | HTMLTextAreaElement>(`#${labelFor}`);
           }
         }
       }
 
-      // Fill the topper text if the input is present
-      const topperInput = (form.querySelector("input[name*='TopperText'], textarea[name*='TopperText']") as
-        | HTMLInputElement
-        | HTMLTextAreaElement
-        | null);
       if (topperInput) {
+        // Fill the field
         topperInput.value = topper;
         topperInput.dispatchEvent(new Event('input', { bubbles: true }));
+        topperInput.dispatchEvent(new Event('change', { bubbles: true }));
+
+        // Ensure field is visible if hidden
+        const container = topperInput.closest('.c-field, .field, div[style*="display: none"]');
+        if (container instanceof HTMLElement && container.style.display === 'none') {
+          container.style.display = '';
+        }
+
+        console.log('Topper field filled successfully');
+        clearInterval(fillTopperField);
       }
 
-      if ((toggled && topperInput) || attempts >= max) {
-        clearInterval(iv);
+      if (attempts >= maxAttempts) {
+        console.log('Topper field not found after retries');
+        clearInterval(fillTopperField);
       }
-    }, 600);
+    }, 400);
 
-    return () => clearInterval(iv);
+    return () => clearInterval(fillTopperField);
   }, [topper]);
 
   return (
