@@ -36,13 +36,13 @@ export const MarqueeHeroSection = () => {
       {/* Content - Text at top */}
       <div className="relative z-10 text-center text-white max-w-4xl mx-auto md:-mt-12">
         <div className="space-y-0.5">
-          <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight">
+          <h1 className="text-xl md:text-2xl lg:text-3xl font-bold leading-tight">
             <span className="bg-gradient-to-r from-white to-white/90 bg-clip-text text-transparent">
               Commercial-Grade Marquee Lights
             </span>
           </h1>
           
-          <p className="text-lg md:text-xl lg:text-2xl font-semibold leading-relaxed opacity-95">
+          <p className="text-sm md:text-base lg:text-lg font-semibold leading-relaxed opacity-95">
             (For Purchase, We Do Not Rent)
           </p>
           
