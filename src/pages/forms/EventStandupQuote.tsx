@@ -5,25 +5,35 @@ import { useLocation } from 'react-router-dom';
 const EventStandupQuote = () => {
   const location = useLocation();
 
+  // Security: Sanitize URL parameters to prevent XSS
+  const sanitizeParam = (value: string | null): string => {
+    if (!value) return '';
+    // Remove script tags and HTML, limit length
+    return value
+      .replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '')
+      .replace(/<[^>]+>/g, '')
+      .replace(/[<>'"]/g, '')
+      .trim()
+      .slice(0, 100);
+  };
+
+  // Get URL parameters from visualizer
+  const params = new URLSearchParams(location.search);
+  const mainText = sanitizeParam(params.get('mainText'));
+  const letterSize = sanitizeParam(params.get('letterSize'));
+  const topper = sanitizeParam(params.get('topper'));
+
+  // Map letter size to match radio button values in Cognito form
+  const mappedSize = letterSize === '36' ? '36"' : letterSize === '48' ? '48"' : '';
+
+  // Build prefill data object
+  const prefillData: Record<string, string> = {};
+  if (mainText) prefillData['MainTextLettersNumbersSymbols'] = mainText;
+  if (mappedSize) prefillData['MainTextSize2'] = mappedSize;
+  if (topper) prefillData['TopperText'] = topper;
+  prefillData['ZipCodeForDeliveryEstimate'] = ''; // Honeypot field
+
   useEffect(() => {
-    // Security: Sanitize URL parameters to prevent XSS
-    const sanitizeParam = (value: string | null): string => {
-      if (!value) return '';
-      // Remove script tags and HTML, limit length
-      return value
-        .replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '')
-        .replace(/<[^>]+>/g, '')
-        .replace(/[<>'"]/g, '')
-        .trim()
-        .slice(0, 100);
-    };
-
-    // Get URL parameters from visualizer
-    const params = new URLSearchParams(location.search);
-    const mainText = sanitizeParam(params.get('mainText'));
-    const letterSize = sanitizeParam(params.get('letterSize'));
-    const topper = sanitizeParam(params.get('topper'));
-
     // Add anti-spam honeypot monitoring script
     const script = document.createElement('script');
     script.textContent = `
@@ -52,50 +62,18 @@ const EventStandupQuote = () => {
       })();
     `;
     document.body.appendChild(script);
-
-    // Wait for Cognito form to be available
-    const prefillForm = () => {
-      const w = window as any;
-      if (w.Cognito && typeof w.Cognito.prefill === 'function') {
-        const prefillData: Record<string, string> = {};
-        
-        if (mainText) prefillData['MainTextLettersNumbersSymbols'] = mainText;
-        if (letterSize) prefillData['MainTextSize2'] = letterSize;
-        if (topper) prefillData['TopperText'] = topper;
-        prefillData['ZipCodeForDeliveryEstimate'] = '';
-        
-        // Prefill the form
-        try {
-          w.Cognito.prefill('7', prefillData);
-        } catch (e) {
-          console.error('Cognito prefill failed', e);
-        }
-      }
-    };
-
-    // Try prefill multiple times with delays to ensure it works
-    let attempts = 0;
-    const maxAttempts = 3;
-    const attemptPrefill = setInterval(() => {
-      if (attempts >= maxAttempts) {
-        clearInterval(attemptPrefill);
-        return;
-      }
-      prefillForm();
-      attempts++;
-    }, 800);
     
     return () => {
-      clearInterval(attemptPrefill);
       document.body.removeChild(script);
     };
-  }, [location.search]);
+  }, []);
 
   return (
     <FormPageTemplate
       title="Event Stand-Up Letters Quote"
       description="Get a custom quote for event stand-up marquee letters"
       formId="7"
+      prefill={prefillData}
     />
   );
 };
