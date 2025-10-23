@@ -71,6 +71,73 @@ const EventStandupQuote = () => {
     };
   }, []);
 
+  // Ensure topper field becomes visible when provided by visualizer
+  useEffect(() => {
+    if (!topper) return;
+    let attempts = 0;
+    const max = 10;
+    const iv = setInterval(() => {
+      attempts++;
+      const form = document.querySelector('.cognito form') as HTMLFormElement | null;
+      if (!form) return;
+
+      let toggled = false;
+      // Try radio/checkbox controls likely named for topper visibility
+      const inputs = Array.from(form.querySelectorAll("input[type='radio'], input[type='checkbox']")) as HTMLInputElement[];
+      for (const input of inputs) {
+        const name = (input.name || '').toLowerCase();
+        const id = (input.id || '').toLowerCase();
+        const label = input.id ? (form.querySelector(`label[for="${input.id}"]`) as HTMLLabelElement | null) : null;
+        const labelText = (label?.innerText || '').toLowerCase();
+        const isTopperControl = name.includes('topper') || id.includes('topper') || labelText.includes('topper');
+        const isYes = (input.value || '').toLowerCase() === 'yes' || (input.value || '').toLowerCase() === 'true';
+        if (isTopperControl && isYes) {
+          if (!input.checked) {
+            input.checked = true;
+            input.dispatchEvent(new Event('change', { bubbles: true }));
+          }
+          toggled = true;
+          break;
+        }
+      }
+
+      // Try selects that may control visibility
+      if (!toggled) {
+        const selects = Array.from(form.querySelectorAll('select')) as HTMLSelectElement[];
+        for (const sel of selects) {
+          const name = (sel.name || '').toLowerCase();
+          if (name.includes('topper')) {
+            const yesOption = Array.from(sel.options).find(
+              (o) => o.text.toLowerCase() === 'yes' || o.value.toLowerCase() === 'yes' || o.value.toLowerCase() === 'true'
+            );
+            if (yesOption) {
+              sel.value = yesOption.value;
+              sel.dispatchEvent(new Event('change', { bubbles: true }));
+              toggled = true;
+              break;
+            }
+          }
+        }
+      }
+
+      // Fill the topper text if the input is present
+      const topperInput = (form.querySelector("input[name*='TopperText'], textarea[name*='TopperText']") as
+        | HTMLInputElement
+        | HTMLTextAreaElement
+        | null);
+      if (topperInput) {
+        topperInput.value = topper;
+        topperInput.dispatchEvent(new Event('input', { bubbles: true }));
+      }
+
+      if ((toggled && topperInput) || attempts >= max) {
+        clearInterval(iv);
+      }
+    }, 600);
+
+    return () => clearInterval(iv);
+  }, [topper]);
+
   return (
     <FormPageTemplate
       title="Event Stand-Up Letters Quote"
