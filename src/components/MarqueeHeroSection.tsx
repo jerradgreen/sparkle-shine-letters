@@ -42,7 +42,7 @@ export const MarqueeHeroSection = () => {
             </span>
           </h1>
           
-          <p className="text-sm md:text-base lg:text-lg font-semibold leading-relaxed opacity-95">
+          <p className="text-xs md:text-sm font-semibold leading-relaxed opacity-95">
             (For Purchase, We Do Not Rent)
           </p>
           
