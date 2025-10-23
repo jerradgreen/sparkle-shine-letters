@@ -47,7 +47,7 @@ export const MarqueeHeroSection = () => {
           </p>
           
           <p className="text-base md:text-lg lg:text-xl leading-relaxed opacity-90 max-w-3xl mx-auto">
-            Marquee Lights That Make Every Event Unforgettable
+            Make Every Event Unforgettable
           </p>
         </div>
       </div>
