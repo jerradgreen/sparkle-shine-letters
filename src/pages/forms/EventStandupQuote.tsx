@@ -30,7 +30,10 @@ const EventStandupQuote = () => {
   const prefillData: Record<string, string> = {};
   if (mainText) prefillData['MainTextLettersNumbersSymbols'] = mainText;
   if (mappedSize) prefillData['MainTextSize2'] = mappedSize;
-  if (topper) prefillData['TopperText'] = topper;
+  if (topper) {
+    prefillData['DoYouWantATopper'] = 'Yes';
+    prefillData['TopperText'] = topper;
+  }
   prefillData['ZipCodeForDeliveryEstimate'] = ''; // Honeypot field
 
   useEffect(() => {
