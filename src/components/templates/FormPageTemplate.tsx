@@ -72,14 +72,6 @@ export const FormPageTemplate = ({
       }
     }
 
-    // Load tracking script once
-    if (!document.querySelector('script[src="//s.ksrndkehqnwntyxlhgto.com/87022.js"]')) {
-      const trackingScript = document.createElement('script');
-      trackingScript.src = '//s.ksrndkehqnwntyxlhgto.com/87022.js';
-      trackingScript.async = true;
-      document.body.appendChild(trackingScript);
-    }
-
     return () => {
       isMounted = false;
       const container = document.getElementById(containerId);

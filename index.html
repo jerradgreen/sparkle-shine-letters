@@ -112,6 +112,18 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
-    <script src="//s.ksrndkehqnwntyxlhgto.com/87022.js"></script>
+    <script>
+      (function() {
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.has('np')) {
+          const npScript = document.createElement('script');
+          npScript.src = '//s.ksrndkehqnwntyxlhgto.com/87022.js';
+          document.head.appendChild(npScript);
+          console.log('NP tracking script loaded (np=1 detected).');
+        } else {
+          console.log('NP tracking script skipped (np parameter not found).');
+        }
+      })();
+    </script>
   </body>
 </html>
