@@ -8,6 +8,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { CartDrawer } from "@/components/CartDrawer";
 
 const Navigation = () => {
   const navigate = useNavigate();
@@ -53,10 +54,18 @@ const Navigation = () => {
             <Link to="/event-standup-signs" className="text-foreground hover:text-primary font-medium">
               36/48" Stand-Up Letters
             </Link>
+
+            <Link to="/shop/36-inch-letters" className="text-foreground hover:text-primary font-medium">
+              Shop 36" Letters
+            </Link>
             
             <Link to="/quote/custom" className="text-foreground hover:text-primary font-medium">
               Custom Request Form
             </Link>
+          </div>
+
+          <div className="ml-auto">
+            <CartDrawer />
           </div>
 
           {/* Mobile Menu Button */}
@@ -139,6 +148,14 @@ const Navigation = () => {
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 36/48" Stand-Up Letters
+              </Link>
+
+              <Link
+                to="/shop/36-inch-letters"
+                className="text-foreground hover:text-primary font-medium py-2"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Shop 36" Letters
               </Link>
               
               <Link
