@@ -46,6 +46,19 @@ const EventStandUpSigns = () => {
       <TestimonialSection config={standUpSignsConfig.testimonials} />
       <MarqueeVisualizer />
       
+      {/* In-Stock Inventory Button */}
+      <section className="py-8 bg-background">
+        <div className="container mx-auto px-4 text-center">
+          <Button 
+            size="lg"
+            className="bg-orange-500 hover:bg-orange-600 text-white font-semibold text-sm md:text-base px-6 md:px-8 py-4"
+            onClick={() => window.open('https://www.vintagemarqueelights.com/collections/in-stock-36-stand-up-event-letters-ready-to-ship', '_blank')}
+          >
+            View Our In-Stock, Ready to Ship Inventory
+          </Button>
+        </div>
+      </section>
+
       {/* Link to Homepage */}
       <section className="py-8 bg-muted/30">
         <div className="container mx-auto px-4 text-center">
