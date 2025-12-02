@@ -6,7 +6,7 @@ import { CheckCircle, Download, Mail, ArrowRight } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 
 const RentalGuideThankYou = () => {
-  const pdfUrl = "https://cdn.shopify.com/s/files/1/1403/8315/files/start_marquee_business_infographic_copy.pdf?v=1760708935";
+  const pdfUrl = "/downloads/rental-business-guide.pdf";
 
   return (
     <div className="min-h-screen bg-background">
