@@ -55,9 +55,6 @@ const Navigation = () => {
               36/48" Stand-Up Letters
             </Link>
 
-            <Link to="/shop/36-inch-letters" className="text-foreground hover:text-primary font-medium">
-              Shop 36" Letters
-            </Link>
             
             <Link to="/quote/custom" className="text-foreground hover:text-primary font-medium">
               Custom Request Form
@@ -150,13 +147,6 @@ const Navigation = () => {
                 36/48" Stand-Up Letters
               </Link>
 
-              <Link
-                to="/shop/36-inch-letters"
-                className="text-foreground hover:text-primary font-medium py-2"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Shop 36" Letters
-              </Link>
               
               <Link
                 to="/quote/custom"
