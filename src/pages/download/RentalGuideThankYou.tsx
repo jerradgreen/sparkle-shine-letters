@@ -35,14 +35,17 @@ const RentalGuideThankYou = () => {
             <p className="text-muted-foreground mb-6">
               Click below to instantly download your comprehensive rental business infographic
             </p>
-            <Button 
-              size="lg" 
-              className="text-lg px-8"
-              onClick={() => window.open(pdfUrl, '_blank')}
+            <a 
+              href={pdfUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block"
             >
-              <Download className="mr-2 h-5 w-5" />
-              Download PDF Guide
-            </Button>
+              <Button size="lg" className="text-lg px-8">
+                <Download className="mr-2 h-5 w-5" />
+                Download PDF Guide
+              </Button>
+            </a>
           </div>
 
           {/* Email Confirmation */}
