@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { CheckCircle, Download, Mail, ArrowRight } from "lucide-react";
+import { CheckCircle, Download, ArrowRight } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 
 const RentalGuideThankYou = () => {
@@ -48,13 +48,6 @@ const RentalGuideThankYou = () => {
             </a>
           </div>
 
-          {/* Email Confirmation */}
-          <div className="bg-muted/50 border rounded-lg p-6 mb-12">
-            <Mail className="w-8 h-8 text-primary mx-auto mb-3" />
-            <p className="text-sm text-muted-foreground">
-              A copy of this guide has also been sent to your email for easy access later
-            </p>
-          </div>
 
           {/* Next Steps */}
           <div className="text-left mb-12">
