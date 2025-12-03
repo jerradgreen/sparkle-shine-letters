@@ -47,7 +47,7 @@ const EventStandUpSigns = () => {
         <div className="container mx-auto px-4 text-center">
           <Button 
             size="lg"
-            className="bg-orange-500 hover:bg-orange-600 text-white font-semibold text-sm md:text-base px-6 md:px-8 py-4"
+            className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold text-sm md:text-base px-6 md:px-8 py-4"
             onClick={() => window.open('https://vintagemarqueelights.com/collections/in-stock-36-stand-up-event-letters-ready-to-ship', '_blank')}
           >
             SHOP Ready-to-Ship Letters
