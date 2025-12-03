@@ -48,7 +48,7 @@ const Navigation = () => {
             </DropdownMenu>
             
             <Link to="/rental-inventory" className="text-foreground hover:text-primary font-medium">
-              Build a Rental Inventory
+              Start Your Rental Biz
             </Link>
             
             <Link to="/event-standup-signs" className="text-foreground hover:text-primary font-medium">
@@ -144,7 +144,7 @@ const Navigation = () => {
                 className="text-foreground hover:text-primary font-medium py-2"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Build a Rental Inventory
+                Start Your Rental Biz
               </Link>
               
               <Link
