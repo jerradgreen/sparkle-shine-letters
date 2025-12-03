@@ -55,6 +55,14 @@ const Navigation = () => {
               36/48" Stand-Up Letters
             </Link>
 
+            <a 
+              href="https://vintagemarqueelights.com/collections/in-stock-36-stand-up-event-letters-ready-to-ship" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-foreground hover:text-primary font-medium"
+            >
+              SHOP Ready-to-Ship
+            </a>
             
             <Link to="/quote/custom" className="text-foreground hover:text-primary font-medium">
               Custom Request Form
@@ -147,6 +155,15 @@ const Navigation = () => {
                 36/48" Stand-Up Letters
               </Link>
 
+              <a
+                href="https://vintagemarqueelights.com/collections/in-stock-36-stand-up-event-letters-ready-to-ship"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-foreground hover:text-primary font-medium py-2"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                SHOP Ready-to-Ship
+              </a>
               
               <Link
                 to="/quote/custom"
