@@ -45,7 +45,6 @@ const WallHangingMarqueeSigns = () => {
         canonicalUrl="https://inventory.vintagemarqueelights.com/wall-hanging-signs"
         showNavigation={true}
         showFooter={false}
-        showChatbot={false}
       >
         <ShopifyHeader />
       

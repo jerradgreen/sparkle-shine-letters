@@ -17,7 +17,6 @@ const EventStandUpSigns = () => {
     <PageTemplate 
       config={standUpSignsConfig}
       canonicalUrl="https://yoursite.com/event-standup-signs"
-      showChatbot={false}
       showNavigation={true}
       showFooter={false}
     >
