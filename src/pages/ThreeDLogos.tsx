@@ -43,7 +43,6 @@ const ThreeDLogos = () => {
         canonicalUrl="https://inventory.vintagemarqueelights.com/3d-logos"
         showNavigation={true}
         showFooter={false}
-        showChatbot={false}
       >
         <ShopifyHeader />
       

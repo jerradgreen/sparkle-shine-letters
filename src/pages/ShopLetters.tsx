@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import Chatbot from "@/components/Chatbot";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Loader2, Search, ShoppingCart } from "lucide-react";
@@ -175,7 +174,6 @@ const ShopLetters = () => {
       </main>
 
       <Footer />
-      <Chatbot />
     </div>
   );
 };

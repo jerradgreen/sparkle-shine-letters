@@ -33,7 +33,6 @@ const MobileVendorSigns = () => {
       canonicalUrl="https://inventory.vintagemarqueelights.com/mobile-vendor-signs"
       showNavigation={true}
       showFooter={false}
-      showChatbot={false}
     >
       <Helmet>
         <link

@@ -4,7 +4,6 @@ import { SEOHead } from '@/components/seo/SEOHead';
 import { StructuredData } from '@/components/seo/StructuredData';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import Chatbot from '@/components/Chatbot';
 
 interface PageTemplateProps {
   config: TemplateConfig;
@@ -12,7 +11,6 @@ interface PageTemplateProps {
   canonicalUrl?: string;
   showNavigation?: boolean;
   showFooter?: boolean;
-  showChatbot?: boolean;
 }
 
 export const PageTemplate = ({ 
@@ -20,8 +18,7 @@ export const PageTemplate = ({
   children, 
   canonicalUrl,
   showNavigation = true,
-  showFooter = true,
-  showChatbot = true
+  showFooter = true
 }: PageTemplateProps) => {
   return (
     <div className="min-h-screen bg-background">
@@ -35,7 +32,6 @@ export const PageTemplate = ({
       </main>
       
       {showFooter && <Footer />}
-      {showChatbot && <Chatbot />}
     </div>
   );
 };

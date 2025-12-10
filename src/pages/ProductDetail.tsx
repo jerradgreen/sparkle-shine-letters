@@ -3,7 +3,6 @@ import { useParams, Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import Chatbot from "@/components/Chatbot";
 import { Button } from "@/components/ui/button";
 import { Loader2, ShoppingCart, ChevronRight } from "lucide-react";
 import { ShopifyProduct, storefrontApiRequest, GET_PRODUCT_BY_HANDLE_QUERY } from "@/lib/shopify";
@@ -194,7 +193,6 @@ const ProductDetail = () => {
       </main>
 
       <Footer />
-      <Chatbot />
     </div>
   );
 };
