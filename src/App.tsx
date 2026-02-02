@@ -24,6 +24,12 @@ import RentalGuide from "./pages/download/RentalGuide";
 import RentalGuideThankYou from "./pages/download/RentalGuideThankYou";
 import ShopLetters from "./pages/ShopLetters";
 import ProductDetail from "./pages/ProductDetail";
+import WallHangingThankYou from "./pages/thank-you/WallHangingThankYou";
+import ThreeDLogosThankYou from "./pages/thank-you/ThreeDLogosThankYou";
+import RentalInventoryThankYou from "./pages/thank-you/RentalInventoryThankYou";
+import EventStandupThankYou from "./pages/thank-you/EventStandupThankYou";
+import MobileVendorThankYou from "./pages/thank-you/MobileVendorThankYou";
+import CustomThankYou from "./pages/thank-you/CustomThankYou";
 
 const queryClient = new QueryClient();
 
@@ -49,6 +55,12 @@ const RouterContent = () => {
         <Route path="/download/rental-guide-thank-you" element={<RentalGuideThankYou />} />
         <Route path="/shop/36-inch-letters" element={<ShopLetters />} />
         <Route path="/product/:handle" element={<ProductDetail />} />
+        <Route path="/thank-you/wall-hanging" element={<WallHangingThankYou />} />
+        <Route path="/thank-you/3d-logos" element={<ThreeDLogosThankYou />} />
+        <Route path="/thank-you/rental-inventory" element={<RentalInventoryThankYou />} />
+        <Route path="/thank-you/event-standup" element={<EventStandupThankYou />} />
+        <Route path="/thank-you/mobile-vendor" element={<MobileVendorThankYou />} />
+        <Route path="/thank-you/custom" element={<CustomThankYou />} />
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />
       </Routes>
