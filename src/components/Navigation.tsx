@@ -8,11 +8,34 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 import { CartDrawer } from "@/components/CartDrawer";
+
+const signTypeOptions = [
+  { label: "Wall Letters", description: "Custom marquee letters for walls", path: "/quote/wall-hanging" },
+  { label: "3D Logos", description: "Dimensional logos for your brand", path: "/quote/3d-logos" },
+  { label: "Mobile Vendors", description: "Signs for food trucks & carts", path: "/quote/mobile-vendor" },
+  { label: "Stand-Up Letters", description: "36\" & 48\" event letters", path: "/quote/event-standup" },
+  { label: "Rental Inventory", description: "Start your rental business", path: "/quote/rental-inventory" },
+  { label: "Not Sure / Other", description: "We'll help you figure it out", path: "/quote/custom" },
+];
 
 const Navigation = () => {
   const navigate = useNavigate();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isSignTypeDialogOpen, setIsSignTypeDialogOpen] = useState(false);
+
+  const handleSignTypeSelect = (path: string) => {
+    setIsSignTypeDialogOpen(false);
+    setIsMobileMenuOpen(false);
+    navigate(path);
+  };
 
   return (
     <nav className="bg-background border-b border-border sticky top-0 z-50">
@@ -39,7 +62,10 @@ const Navigation = () => {
                   <Link to="/mobile-vendor-signs" className="cursor-pointer">Mobile Vendors</Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
-                  <Link to="/event-standup-signs" className="cursor-pointer">Event Signs</Link>
+                  <Link to="/event-standup-signs" className="cursor-pointer">Stand-Up Letters</Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link to="/rental-inventory" className="cursor-pointer">Rental Inventory</Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
                   <Link to="/quote/custom" className="cursor-pointer">Not Sure</Link>
@@ -64,9 +90,30 @@ const Navigation = () => {
               SHOP Ready-to-Ship
             </a>
             
-            <Link to="/quote/custom" className="text-foreground hover:text-primary font-medium">
-              Custom Request Form
-            </Link>
+            <Dialog open={isSignTypeDialogOpen} onOpenChange={setIsSignTypeDialogOpen}>
+              <DialogTrigger asChild>
+                <button className="text-foreground hover:text-primary font-medium">
+                  Custom Request Form
+                </button>
+              </DialogTrigger>
+              <DialogContent className="sm:max-w-md">
+                <DialogHeader>
+                  <DialogTitle className="text-center text-xl">What type of sign are you interested in?</DialogTitle>
+                </DialogHeader>
+                <div className="grid grid-cols-2 gap-3 mt-4">
+                  {signTypeOptions.map((option) => (
+                    <button
+                      key={option.path}
+                      onClick={() => handleSignTypeSelect(option.path)}
+                      className="flex flex-col items-center justify-center p-4 rounded-lg border border-border bg-background hover:bg-accent hover:border-primary transition-colors text-center"
+                    >
+                      <span className="font-medium text-foreground">{option.label}</span>
+                      <span className="text-xs text-muted-foreground mt-1">{option.description}</span>
+                    </button>
+                  ))}
+                </div>
+              </DialogContent>
+            </Dialog>
           </div>
 
           <div className="ml-auto">
@@ -127,7 +174,14 @@ const Navigation = () => {
                     className="text-foreground hover:text-primary font-medium py-1"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
-                    Event Signs
+                    Stand-Up Letters
+                  </Link>
+                  <Link
+                    to="/rental-inventory"
+                    className="text-foreground hover:text-primary font-medium py-1"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Rental Inventory
                   </Link>
                   <Link
                     to="/quote/custom"
@@ -165,13 +219,30 @@ const Navigation = () => {
                 SHOP Ready-to-Ship
               </a>
               
-              <Link
-                to="/quote/custom"
-                className="text-foreground hover:text-primary font-medium py-2"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Custom Request Form
-              </Link>
+              <Dialog open={isSignTypeDialogOpen} onOpenChange={setIsSignTypeDialogOpen}>
+                <DialogTrigger asChild>
+                  <button className="text-foreground hover:text-primary font-medium py-2 text-left">
+                    Custom Request Form
+                  </button>
+                </DialogTrigger>
+                <DialogContent className="sm:max-w-md">
+                  <DialogHeader>
+                    <DialogTitle className="text-center text-xl">What type of sign are you interested in?</DialogTitle>
+                  </DialogHeader>
+                  <div className="grid grid-cols-2 gap-3 mt-4">
+                    {signTypeOptions.map((option) => (
+                      <button
+                        key={option.path}
+                        onClick={() => handleSignTypeSelect(option.path)}
+                        className="flex flex-col items-center justify-center p-4 rounded-lg border border-border bg-background hover:bg-accent hover:border-primary transition-colors text-center"
+                      >
+                        <span className="font-medium text-foreground">{option.label}</span>
+                        <span className="text-xs text-muted-foreground mt-1">{option.description}</span>
+                      </button>
+                    ))}
+                  </div>
+                </DialogContent>
+              </Dialog>
             </div>
           </div>
         )}
