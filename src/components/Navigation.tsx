@@ -23,7 +23,7 @@ const signTypeOptions = [
   { label: "Mobile Vendors", description: "Signs for food trucks & carts", path: "/quote/mobile-vendor" },
   { label: "Stand-Up Letters", description: "36\" & 48\" event letters", path: "/quote/event-standup" },
   { label: "Rental Inventory", description: "Start your rental business", path: "/quote/rental-inventory" },
-  { label: "Not Sure / Other", description: "We'll help you figure it out", path: "/quote/custom" },
+  { label: "Not Sure / Other", description: "We'll help you figure it out", path: "/quote/not-sure" },
 ];
 
 const Navigation = () => {
@@ -68,7 +68,7 @@ const Navigation = () => {
                   <Link to="/rental-inventory" className="cursor-pointer">Rental Inventory</Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
-                  <Link to="/quote/custom" className="cursor-pointer">Not Sure</Link>
+                  <Link to="/quote/not-sure" className="cursor-pointer">Not Sure</Link>
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
@@ -184,7 +184,7 @@ const Navigation = () => {
                     Rental Inventory
                   </Link>
                   <Link
-                    to="/quote/custom"
+                    to="/quote/not-sure"
                     className="text-foreground hover:text-primary font-medium py-1"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >

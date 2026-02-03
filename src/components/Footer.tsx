@@ -14,7 +14,7 @@ const signTypeOptions = [
   { label: "Mobile Vendors", description: "Signs for food trucks & carts", path: "/quote/mobile-vendor" },
   { label: "Stand-Up Letters", description: "36\" & 48\" event letters", path: "/quote/event-standup" },
   { label: "Rental Inventory", description: "Start your rental business", path: "/quote/rental-inventory" },
-  { label: "Not Sure / Other", description: "We'll help you figure it out", path: "/quote/custom" },
+  { label: "Not Sure / Other", description: "We'll help you figure it out", path: "/quote/not-sure" },
 ];
 
 const Footer = () => {
