@@ -20,6 +20,7 @@ import RentalInventoryQuote from "./pages/forms/RentalInventoryQuote";
 import EventStandupQuote from "./pages/forms/EventStandupQuote";
 import MobileVendorQuote from "./pages/forms/MobileVendorQuote";
 import CustomQuote from "./pages/forms/CustomQuote";
+import NotSureQuote from "./pages/forms/NotSureQuote";
 import RentalGuide from "./pages/download/RentalGuide";
 import RentalGuideThankYou from "./pages/download/RentalGuideThankYou";
 import ShopLetters from "./pages/ShopLetters";
@@ -30,6 +31,7 @@ import RentalInventoryThankYou from "./pages/thank-you/RentalInventoryThankYou";
 import EventStandupThankYou from "./pages/thank-you/EventStandupThankYou";
 import MobileVendorThankYou from "./pages/thank-you/MobileVendorThankYou";
 import CustomThankYou from "./pages/thank-you/CustomThankYou";
+import NotSureThankYou from "./pages/thank-you/NotSureThankYou";
 
 const queryClient = new QueryClient();
 
@@ -51,6 +53,7 @@ const RouterContent = () => {
         <Route path="/quote/event-standup" element={<EventStandupQuote />} />
         <Route path="/quote/mobile-vendor" element={<MobileVendorQuote />} />
         <Route path="/quote/custom" element={<CustomQuote />} />
+        <Route path="/quote/not-sure" element={<NotSureQuote />} />
         <Route path="/download/rental-guide" element={<RentalGuide />} />
         <Route path="/download/rental-guide-thank-you" element={<RentalGuideThankYou />} />
         <Route path="/shop/36-inch-letters" element={<ShopLetters />} />
@@ -61,6 +64,7 @@ const RouterContent = () => {
         <Route path="/thank-you/event-standup" element={<EventStandupThankYou />} />
         <Route path="/thank-you/mobile-vendor" element={<MobileVendorThankYou />} />
         <Route path="/thank-you/custom" element={<CustomThankYou />} />
+        <Route path="/thank-you/not-sure" element={<NotSureThankYou />} />
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />
       </Routes>
