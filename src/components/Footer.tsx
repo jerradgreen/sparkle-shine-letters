@@ -1,12 +1,36 @@
+import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+
+const signTypeOptions = [
+  { label: "Wall Letters", description: "Custom marquee letters for walls", path: "/quote/wall-hanging" },
+  { label: "3D Layered Signs", description: "For logos/more complicated designs in a round, square or any shape", path: "/quote/3d-logos" },
+  { label: "Mobile Vendors", description: "Signs for food trucks & carts", path: "/quote/mobile-vendor" },
+  { label: "Stand-Up Letters", description: "36\" & 48\" event letters", path: "/quote/event-standup" },
+  { label: "Rental Inventory", description: "Start your rental business", path: "/quote/rental-inventory" },
+  { label: "Not Sure / Other", description: "We'll help you figure it out", path: "/quote/custom" },
+];
 
 const Footer = () => {
   const navigate = useNavigate();
+  const [isSignTypeDialogOpen, setIsSignTypeDialogOpen] = useState(false);
+
   const scrollToGallery = () => {
     const gallerySection = document.getElementById('gallery');
     if (gallerySection) {
       gallerySection.scrollIntoView({ behavior: 'smooth' });
     }
+  };
+
+  const handleSignTypeSelect = (path: string) => {
+    setIsSignTypeDialogOpen(false);
+    navigate(path);
   };
 
   return (
@@ -51,7 +75,7 @@ const Footer = () => {
                 onClick={() => window.scrollTo(0, 0)}
                 className="text-muted-foreground hover:text-primary transition-colors"
               >
-                Build a Rental Inventory
+                Start Your Rental Biz
               </Link>
               <Link 
                 to="/quote/custom"
@@ -80,12 +104,30 @@ const Footer = () => {
           <div>
             <h4 className="font-bold text-foreground mb-4 text-lg">Contact</h4>
             <div className="flex flex-col gap-3">
-              <Link 
-                to="/quote/custom"
-                className="text-muted-foreground hover:text-primary transition-colors"
-              >
-                Custom Request Form
-              </Link>
+              <Dialog open={isSignTypeDialogOpen} onOpenChange={setIsSignTypeDialogOpen}>
+                <DialogTrigger asChild>
+                  <button className="text-muted-foreground hover:text-primary transition-colors text-left">
+                    Custom Request Form
+                  </button>
+                </DialogTrigger>
+                <DialogContent className="sm:max-w-md">
+                  <DialogHeader>
+                    <DialogTitle className="text-center text-xl">What type of sign are you interested in?</DialogTitle>
+                  </DialogHeader>
+                  <div className="grid grid-cols-2 gap-3 mt-4">
+                    {signTypeOptions.map((option) => (
+                      <button
+                        key={option.path}
+                        onClick={() => handleSignTypeSelect(option.path)}
+                        className="flex flex-col items-center justify-center p-4 rounded-lg border border-border bg-background hover:bg-accent hover:border-primary transition-colors text-center"
+                      >
+                        <span className="font-medium text-foreground">{option.label}</span>
+                        <span className="text-xs text-muted-foreground mt-1">{option.description}</span>
+                      </button>
+                    ))}
+                  </div>
+                </DialogContent>
+              </Dialog>
             </div>
           </div>
 
