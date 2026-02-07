@@ -1,49 +1,36 @@
 
 
-## Create "Not Sure" Form Page + Thank-You Page
+## Merge Rental Guide Download into Rental Inventory Thank-You Page
 
-### What We're Creating
-1. A new form page for users who aren't sure what sign type they need
-2. A dedicated thank-you page for tracking conversions from this form
-3. Update navigation to route "Not Sure / Other" to the new form
+### What Changes
 
-### Files to Create
+**1. Update `src/pages/download/RentalGuide.tsx`**
+- Change `formId` from `"11"` to `"1"` (same form as rental inventory)
+- Change prefill value to `'Rental Inventory Package Info'` (identical submission, triggers same Zapier automation)
 
-**1. `src/pages/forms/NotSureQuote.tsx`** (Route: `/quote/not-sure`)
-- Uses `FormPageTemplate` component
-- Cognito Form ID: `12`
-- Title: "Custom Sign Request"
-- Description: SEO-friendly description
+**2. Redesign `src/pages/thank-you/RentalInventoryThankYou.tsx`**
 
-**2. `src/pages/thank-you/NotSureThankYou.tsx`** (Route: `/thank-you/not-sure`)
-- Same structure as other thank-you pages
-- Matches existing design pattern
+The updated page will flow like this, top to bottom:
 
-### Files to Modify
+1. Green checkmark icon
+2. **"Thank You!"** heading
+3. **Email notice:** A styled card/banner that says: *"We will email you rental package pricing info. Please check your email in about 10-15 minutes."* -- with a mail icon for visual emphasis
+4. **PDF download card:** The download section from the existing Rental Guide Thank-You page, with the Download icon, "Download Your Free Guide" heading, description, and a button linking to `/downloads/rental-business-guide.pdf`
+5. **"Return to Home"** button
 
-**3. `src/App.tsx`**
-- Import `NotSureQuote` and `NotSureThankYou`
-- Add routes:
-  - `/quote/not-sure` → `NotSureQuote`
-  - `/thank-you/not-sure` → `NotSureThankYou`
+What gets removed from the current page:
+- The old generic message ("We've received your submission and will get back to you shortly...")
 
-**4. `src/components/Navigation.tsx`**
-- Update `signTypeOptions` array: change "Not Sure / Other" path from `/quote/custom` to `/quote/not-sure`
+What gets added:
+- The email notice with the 10-15 minute timeframe
+- The PDF download card (pulled from `RentalGuideThankYou.tsx`)
 
-**5. `src/components/Footer.tsx`**
-- Update `signTypeOptions` array: change "Not Sure / Other" path from `/quote/custom` to `/quote/not-sure`
+**3. No route changes needed**
+- Both `/quote/rental-inventory` and `/download/rental-guide` use Form ID 1
+- Cognito Form 1 redirects to `/thank-you/rental-inventory`
+- The `/download/rental-guide-thank-you` route stays in the codebase but won't be actively used
 
-### Cognito Form Redirect Setup
-After implementation, set your Cognito Form redirect URL to:
-```
-https://sparkle-shine-letters.lovable.app/thank-you/not-sure
-```
-
-### Summary of Routes
-
-| Option | Form Route | Thank-You Route |
-|--------|------------|-----------------|
-| Not Sure / Other | `/quote/not-sure` | `/thank-you/not-sure` |
-
-This keeps `/quote/custom` available if you still want a separate "Custom" form, or you can redirect it to the new Not Sure form later.
+### Cognito Setup Reminder
+Make sure Cognito Form 1 redirects to:
+`https://sparkle-shine-letters.lovable.app/thank-you/rental-inventory`
 
