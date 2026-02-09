@@ -7,7 +7,7 @@ const signTypeOptions = [
   { label: "Wall Letters", description: "Custom marquee letters for walls", path: "/quote/wall-hanging" },
   { label: "3D Layered Signs", description: "For logos/more complicated designs in a round, square or any shape", path: "/quote/3d-logos" },
   { label: "Mobile Vendors", description: "Signs for food trucks & carts", path: "/quote/mobile-vendor" },
-  { label: "Stand-Up Letters", description: '36" & 48" event letters', path: "/quote/event-standup" },
+  { label: "Stand-Up Letters", description: '36" & 48" event letters', path: "/quote/event-standup?showTopper=true" },
   { label: "Rental Inventory", description: "Start your rental business", path: "/quote/rental-inventory" },
   { label: "Not Sure / Other", description: "We'll help you figure it out", path: "/quote/not-sure" },
 ];
