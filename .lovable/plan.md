@@ -1,32 +1,24 @@
 
 
-## Create a Dedicated Sign Type Selection Page
+## Fix: Blank /quote Page
 
-### The Problem
-Your old website has a link that needs to redirect somewhere, but the sign type chooser currently only exists as a popup dialog -- there's no standalone URL to link to.
+### Root Cause
+The `SEOHead` component expects a full `TemplateConfig` object with properties like `config.pageTitle`, `config.keywords`, `config.business.name`, `config.hero.heroImage`, and `config.theme.primaryColor`. The `QuoteSelector` page passes a minimal object cast with `as any`, so `SEOHead` crashes trying to call `.join()` on `undefined` (the missing `keywords` array), which causes the entire page to go blank.
 
-### The Solution
-Create a new page at `/quote` (or `/get-started` -- your choice) that displays the same 6 sign type options as the popup, but as a full page. You can then point your old website's link to this URL.
+### Fix
+Replace the `SEOHead` usage in `QuoteSelector.tsx` with a simple `Helmet` component directly, since this page doesn't have a full template config. This avoids the crash while still setting the page title and meta description.
 
-### How It Will Look
-- Navigation bar at top
-- A heading like "What type of sign are you interested in?"
-- The same 6 option cards in a grid: Wall Letters, 3D Layered Signs, Mobile Vendors, Stand-Up Letters, Rental Inventory, Not Sure / Other
-- Clicking any option navigates to the corresponding quote form
-- Footer at bottom
+**File: `src/pages/QuoteSelector.tsx`**
 
-### Technical Details
+- Remove the `SEOHead` import
+- Add a `Helmet` import from `react-helmet-async`
+- Replace the `<SEOHead config={...} />` line with a simple `<Helmet>` block that sets just the title and description
 
-**New file: `src/pages/QuoteSelector.tsx`**
-- A simple page component with Navigation, the 6 option cards (reusing the same `signTypeOptions` data from `Navigation.tsx`), and Footer
-- Each card links to its respective `/quote/...` route
-- Styled consistently with the rest of the site
+```
+<Helmet>
+  <title>Get a Quote - What Type of Sign Are You Looking For?</title>
+  <meta name="description" content="Choose your sign type to get a custom quote from Vintage Marquee Lights." />
+</Helmet>
+```
 
-**Update: `src/App.tsx`**
-- Add a route for `/quote` pointing to the new `QuoteSelector` page
-- Existing `/quote/wall-hanging`, `/quote/3d-logos`, etc. routes remain unchanged
-
-### What You Do After
-Point your old website's redirect to:
-`https://sparkle-shine-letters.lovable.app/quote`
-
+No other files need to change.
