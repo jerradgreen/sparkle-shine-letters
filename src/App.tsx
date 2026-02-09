@@ -23,6 +23,7 @@ import CustomQuote from "./pages/forms/CustomQuote";
 import NotSureQuote from "./pages/forms/NotSureQuote";
 import RentalGuide from "./pages/download/RentalGuide";
 import RentalGuideThankYou from "./pages/download/RentalGuideThankYou";
+import QuoteSelector from "./pages/QuoteSelector";
 import ShopLetters from "./pages/ShopLetters";
 import ProductDetail from "./pages/ProductDetail";
 import WallHangingThankYou from "./pages/thank-you/WallHangingThankYou";
@@ -47,6 +48,7 @@ const RouterContent = () => {
         <Route path="/mobile-vendor-signs" element={<MobileVendorSigns />} />
         <Route path="/3d-logos" element={<ThreeDLogos />} />
         <Route path="/thank-you-for-submitting-a-form" element={<ThankYou />} />
+        <Route path="/quote" element={<QuoteSelector />} />
         <Route path="/quote/wall-hanging" element={<WallHangingQuote />} />
         <Route path="/quote/3d-logos" element={<ThreeDLogosQuote />} />
         <Route path="/quote/rental-inventory" element={<RentalInventoryQuote />} />
