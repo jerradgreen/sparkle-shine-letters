@@ -24,7 +24,7 @@ const QuoteSelector = () => {
       <Navigation />
       <main className="container mx-auto px-4 py-16 max-w-2xl">
         <p className="text-sm text-muted-foreground text-center mb-4">
-          (Welcome to our NEW site!)
+          Welcome to our NEW site!
         </p>
         <h1 className="text-2xl md:text-3xl font-bold text-center text-foreground mb-8">
           Select the style of sign to open the correct Quote Request Form
