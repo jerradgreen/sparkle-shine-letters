@@ -22,6 +22,7 @@ const EventStandupQuote = () => {
   const mainText = sanitizeParam(params.get('mainText'));
   const letterSize = sanitizeParam(params.get('letterSize'));
   const topper = sanitizeParam(params.get('topper'));
+  const showTopper = params.get('showTopper') === 'true';
 
   // Map letter size to match radio button values in Cognito form
   const mappedSize = letterSize === '36' ? '36"' : letterSize === '48' ? '48"' : '';
@@ -124,6 +125,66 @@ const EventStandupQuote = () => {
 
     return () => clearInterval(fillTopperField);
   }, [topper]);
+
+  // Force Topper field visible when coming from quote selector/nav popup
+  useEffect(() => {
+    if (!showTopper || topper) return; // Skip if already handled by visualizer prefill
+
+    let attempts = 0;
+    const maxAttempts = 30;
+
+    const revealTopperField = setInterval(() => {
+      attempts++;
+      const form = document.querySelector('.cognito form') as HTMLFormElement | null;
+      if (!form) {
+        if (attempts >= maxAttempts) clearInterval(revealTopperField);
+        return;
+      }
+
+      // Find labels containing "Topper" text
+      const labels = Array.from(form.querySelectorAll('label, .c-label, .c-section-title'));
+      const topperLabel = labels.find(l => l.textContent?.trim().toLowerCase().includes('topper'));
+
+      if (topperLabel) {
+        // Walk up to find hidden container(s) and reveal them
+        let el: HTMLElement | null = topperLabel as HTMLElement;
+        while (el && el !== form) {
+          if (el instanceof HTMLElement) {
+            const style = window.getComputedStyle(el);
+            if (style.display === 'none') {
+              el.style.display = '';
+            }
+          }
+          el = el.parentElement;
+        }
+
+        // Also find the input itself and reveal its container
+        const labelFor = topperLabel.getAttribute('for');
+        if (labelFor) {
+          const input = form.querySelector(`#${labelFor}`);
+          if (input) {
+            let parent: HTMLElement | null = input as HTMLElement;
+            while (parent && parent !== form) {
+              if (parent instanceof HTMLElement && window.getComputedStyle(parent).display === 'none') {
+                parent.style.display = '';
+              }
+              parent = parent.parentElement;
+            }
+          }
+        }
+
+        console.log('Topper field revealed successfully');
+        clearInterval(revealTopperField);
+      }
+
+      if (attempts >= maxAttempts) {
+        console.log('Topper field not found for reveal');
+        clearInterval(revealTopperField);
+      }
+    }, 400);
+
+    return () => clearInterval(revealTopperField);
+  }, [showTopper, topper]);
 
   return (
     <FormPageTemplate
