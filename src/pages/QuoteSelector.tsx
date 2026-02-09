@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { SEOHead } from "@/components/seo/SEOHead";
 
 const signTypeOptions = [
   { label: "Wall Letters", description: "Custom marquee letters for walls", path: "/quote/wall-hanging" },
@@ -17,7 +17,10 @@ const QuoteSelector = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEOHead config={{ seo: { title: "Get a Quote – What Type of Sign Are You Looking For?", description: "Choose your sign type to get a custom quote from Vintage Marquee Lights." } } as any} />
+      <Helmet>
+        <title>Get a Quote – What Type of Sign Are You Looking For?</title>
+        <meta name="description" content="Choose your sign type to get a custom quote from Vintage Marquee Lights." />
+      </Helmet>
       <Navigation />
       <main className="container mx-auto px-4 py-16 max-w-2xl">
         <h1 className="text-3xl md:text-4xl font-bold text-center text-foreground mb-10">
