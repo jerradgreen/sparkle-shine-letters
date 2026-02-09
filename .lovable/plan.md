@@ -1,25 +1,32 @@
 
 
-## Update Cognito Prefill Value for Rental Inventory Radio Button
+## Create a Dedicated Sign Type Selection Page
 
-You renamed the radio button in Cognito Forms, so the prefill value in the code needs to match exactly.
+### The Problem
+Your old website has a link that needs to redirect somewhere, but the sign type chooser currently only exists as a popup dialog -- there's no standalone URL to link to.
 
-### Changes
+### The Solution
+Create a new page at `/quote` (or `/get-started` -- your choice) that displays the same 6 sign type options as the popup, but as a full page. You can then point your old website's link to this URL.
 
-Two files need the same one-line update -- changing the prefill value from the old name to the new one:
+### How It Will Look
+- Navigation bar at top
+- A heading like "What type of sign are you interested in?"
+- The same 6 option cards in a grid: Wall Letters, 3D Layered Signs, Mobile Vendors, Stand-Up Letters, Rental Inventory, Not Sure / Other
+- Clicking any option navigates to the corresponding quote form
+- Footer at bottom
 
-| File | Old Value | New Value |
-|------|-----------|-----------|
-| `src/pages/forms/RentalInventoryQuote.tsx` | `Rental Inventory Package Info` | `Rental Inventory Package Info/Download Biz Guide` |
-| `src/pages/download/RentalGuide.tsx` | `Rental Inventory Package Info` | `Rental Inventory Package Info/Download Biz Guide` |
+### Technical Details
 
-### What This Affects
-- The rental inventory quote page at `/quote/rental-inventory`
-- The rental guide download page at `/download/rental-guide`
-- Both will continue to pre-select the correct radio button on Cognito Form 1, matching the renamed option
+**New file: `src/pages/QuoteSelector.tsx`**
+- A simple page component with Navigation, the 6 option cards (reusing the same `signTypeOptions` data from `Navigation.tsx`), and Footer
+- Each card links to its respective `/quote/...` route
+- Styled consistently with the rest of the site
 
-### Nothing Else Changes
-- Form ID stays as `"1"`
-- Redirect behavior stays the same
-- Zapier automation continues to fire as before (since the form submission still comes from the same form)
+**Update: `src/App.tsx`**
+- Add a route for `/quote` pointing to the new `QuoteSelector` page
+- Existing `/quote/wall-hanging`, `/quote/3d-logos`, etc. routes remain unchanged
+
+### What You Do After
+Point your old website's redirect to:
+`https://sparkle-shine-letters.lovable.app/quote`
 
