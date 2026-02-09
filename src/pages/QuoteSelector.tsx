@@ -23,6 +23,9 @@ const QuoteSelector = () => {
       </Helmet>
       <Navigation />
       <main className="container mx-auto px-4 py-16 max-w-2xl">
+        <p className="text-sm text-muted-foreground text-center mb-4">
+          (You were redirected from our old site to our new site, so either browse around or select the style of sign you're wanting a quote on. Thanks!)
+        </p>
         <h1 className="text-3xl md:text-4xl font-bold text-center text-foreground mb-10">
           What type of sign are you interested in?
         </h1>
