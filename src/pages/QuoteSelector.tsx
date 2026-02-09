@@ -26,8 +26,8 @@ const QuoteSelector = () => {
         <p className="text-sm text-muted-foreground text-center mb-4">
           (You were redirected from our old site to our new site, so either browse around or select the style of sign you're wanting a quote on. Thanks!)
         </p>
-        <h1 className="text-3xl md:text-4xl font-bold text-center text-foreground mb-10">
-          What type of sign are you interested in?
+        <h1 className="text-2xl md:text-3xl font-bold text-center text-foreground mb-8">
+          Select the style of sign to open the correct Quote Request Form
         </h1>
         <div className="grid grid-cols-2 gap-4">
           {signTypeOptions.map((option) => (
