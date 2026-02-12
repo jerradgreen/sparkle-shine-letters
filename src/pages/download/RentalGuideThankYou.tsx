@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -6,6 +7,9 @@ import { CheckCircle, Download, ArrowRight } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 
 const RentalGuideThankYou = () => {
+  useEffect(() => {
+    (window as any).fbq?.('track', 'Lead');
+  }, []);
   const pdfUrl = "/downloads/rental-business-guide.pdf";
 
   return (
