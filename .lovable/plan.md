@@ -1,23 +1,36 @@
 
+## Install Meta/Facebook Pixel Across Your Site
 
-## Implement Topper Field Visibility via Space-Character Prefill
+### Current Setup
+Your site already has tracking scripts installed in `index.html`:
+- Google Analytics (gtag.js)
+- Contentsquare Analytics
+- Optional NP tracking script
 
-### Summary
-When `showTopper=true` is in the URL (from quote selector or nav popup) and no `topper` value exists, prefill the Topper field with a single space to trigger Cognito's "Topper is filled out" condition. Remove the DOM-polling reveal logic since prefill handles it more reliably.
+### Solution
+Add the Meta Pixel code to `index.html` in the `<head>` section, right after the Contentsquare Analytics line. This ensures:
+- The pixel loads on every page of your site
+- It's installed alongside your other tracking scripts
+- Consistent pixel firing across all routes (quote pages, thank you pages, etc.)
 
-### Flow Behavior (unchanged)
-- **Visualizer with topper**: Topper param has value, field prefilled and visible -- no change
-- **Visualizer without topper**: No topper params at all, field stays hidden -- no change  
-- **Quote selector / nav popup**: `showTopper=true`, field prefilled with space, becomes visible
+### Implementation
+**File: `index.html`**
 
-### Changes
+Add the Meta Pixel initialization code after line 108 (Contentsquare Analytics). The code includes:
+1. The main Meta Pixel tracking script
+2. The `fbq('init', '443717751929130')` call with your Pixel ID
+3. The `fbq('track', 'PageView')` call for automatic page view tracking
+4. The noscript fallback image for users without JavaScript
 
-**File: `src/pages/forms/EventStandupQuote.tsx`**
+### What This Enables
+- Automatic PageView tracking on all pages
+- Ability to set up custom events (conversions) from your forms
+- Retargeting audiences for Meta ads
+- Conversion tracking for quote submissions and thank you pages
 
-1. In the prefill data block (around lines 30-37), add a condition: if `showTopper` is true and `topper` is empty, set `prefillData['Topper']` and `prefillData['Topper?']` to `" "` (single space)
-
-2. Remove the DOM-polling `useEffect` block (lines 128-185) that was added in the last edit to "reveal" the Topper field by walking the DOM. This approach doesn't work because Cognito doesn't render the field at all until its condition is met. The prefill approach replaces it.
-
-### Why This Works
-Cognito's conditional logic for the Topper field is "show when Topper is filled out." A single space counts as "filled out" to Cognito, so it renders the field. The user sees an effectively empty field they can type into or leave blank.
+### Testing
+After installation:
+1. Use Meta's Pixel Helper browser extension to verify the pixel is firing
+2. Test on a few different pages (home, quote forms, thank you pages)
+3. Check that PageView events are being tracked
 
