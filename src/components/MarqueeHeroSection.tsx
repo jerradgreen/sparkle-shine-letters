@@ -49,7 +49,7 @@ export const MarqueeHeroSection = () => {
       </div>
 
       {/* Pricing Info - Above review */}
-      <div className="relative z-10 text-center text-white max-w-2xl mx-auto space-y-1">
+      <div className="relative z-10 text-center text-white max-w-2xl mx-auto space-y-1 mt-auto mb-1">
         <p className="text-xs md:text-sm font-semibold leading-snug">
           Event-style marquee letters start at $800. Most full setups range from $3,000–$10,000+ depending on size and quantity.
         </p>
@@ -60,7 +60,7 @@ export const MarqueeHeroSection = () => {
       </div>
 
       {/* Bottom section - Review (mobile at bottom, desktop with button) */}
-      <div className="relative z-10 mx-4 mt-auto pb-0">
+      <div className="relative z-10 mx-4 pb-0">
         {/* 5 Star Review from Ashley L. - Mobile: at bottom, Desktop: with button */}
         <div className="md:hidden bg-white/10 backdrop-blur-sm rounded-lg p-3 w-full max-w-2xl mx-auto">
           <div className="flex justify-center mb-1">
