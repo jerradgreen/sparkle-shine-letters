@@ -17,13 +17,13 @@ export const MarqueeHeroSection = () => {
   };
 
   return (
-    <section className="relative h-[50vh] md:h-[70vh] flex flex-col justify-between px-4 pt-8 md:pt-16 pb-6 md:pb-8 overflow-hidden">
+    <section className="relative h-[55vh] md:h-[70vh] flex flex-col justify-between px-4 pt-8 md:pt-16 pb-6 md:pb-8 overflow-hidden">
       {/* Background Image with Overlay - Optimized for LCP */}
       <div className="absolute inset-0">
         <img
           src={heroLockwoods}
           alt="THE LOCKWOODS marquee letters with couple dancing at elegant event"
-          className="w-full h-full object-cover object-[center_60%]"
+          className="w-full h-full object-cover object-[center_50%]"
           loading="eager"
           decoding="sync"
           fetchPriority="high"
@@ -42,14 +42,21 @@ export const MarqueeHeroSection = () => {
             </span>
           </h1>
           
-          <p className="text-xs md:text-sm font-semibold leading-relaxed opacity-95">
-            (For Purchase, We Do Not Rent)
-          </p>
-          
           <p className="text-base md:text-lg lg:text-xl leading-relaxed opacity-90 max-w-3xl mx-auto">
             Make Every Event Unforgettable
           </p>
         </div>
+      </div>
+
+      {/* Pricing Info - Above review */}
+      <div className="relative z-10 text-center text-white max-w-2xl mx-auto space-y-1">
+        <p className="text-xs md:text-sm font-semibold leading-snug">
+          Event-style marquee letters start at $800. Most full setups range from $3,000–$10,000+ depending on size and quantity.
+        </p>
+        <p className="text-[10px] md:text-xs leading-snug opacity-80">
+          Pricing shown reflects individual letter purchases for events and businesses.{' '}
+          Looking to start a rental company? <a href="/rental-inventory" className="underline hover:text-accent">Visit our Rental Inventory page</a>.
+        </p>
       </div>
 
       {/* Bottom section - Review (mobile at bottom, desktop with button) */}
