@@ -75,8 +75,11 @@ const RentalInventory = () => {
               <h1 className="text-xl font-bold text-foreground mb-2 leading-tight">
                 Build YOUR business. Boost your PROFITS. We help you do both - FAST.
               </h1>
-              <p className="text-lg text-muted-foreground leading-snug">
-                Tap into the event rental industry's HOTTEST segment, marquee lights — no franchise fees, no middleman.
+              <p className="text-base text-muted-foreground leading-snug mb-2">
+                Tap into one of the event industry's highest-margin segments — with commercial-grade inventory built to last and NO franchise fees.
+              </p>
+              <p className="text-sm text-muted-foreground leading-relaxed mb-3">
+                Rental inventory packages are a serious business investment. Most clients invest between $20,000–$45,000+ depending on configuration. Many recover their investment within the first year through consistent bookings.
               </p>
               
               <div className="bg-muted/30 rounded-lg p-3 text-center -mt-2">
@@ -98,7 +101,7 @@ const RentalInventory = () => {
                 className="text-lg px-8 py-6 w-full"
                 onClick={openQuoteForm}
               >
-                Get Package Pricing Now
+                Get Rental Package Pricing Now
               </Button>
               </div>
             </div>
@@ -113,15 +116,18 @@ const RentalInventory = () => {
               <h1 className="text-2xl xl:text-3xl font-bold text-foreground mb-4 leading-tight">
                 Build YOUR business. Boost your PROFITS. Our marquee letter packages are designed to help you do both — FAST.
               </h1>
-              <p className="text-lg text-muted-foreground mb-4 leading-relaxed">
-                Tap into the event rental industry's HOTTEST segment, marquee lights — no franchise fees, no middleman.
+              <p className="text-lg text-muted-foreground mb-3 leading-relaxed">
+                Tap into one of the event industry's highest-margin segments — with commercial-grade inventory built to last and NO franchise fees.
               </p>
-            <Button 
+              <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
+                Rental inventory packages are a serious business investment. Most clients invest between $20,000–$45,000+ depending on configuration. Many recover their investment within the first year through consistent bookings.
+              </p>
+            <Button
               size="lg" 
               className="text-lg px-8 py-6 w-full mb-4"
               onClick={openQuoteForm}
             >
-              Get Package Pricing Now
+              Get Rental Package Pricing Now
             </Button>
               
               <div className="bg-muted/30 rounded-lg p-4 text-center">
@@ -198,7 +204,7 @@ const RentalInventory = () => {
               className="text-lg px-8 py-6 w-full"
               onClick={openQuoteForm}
             >
-              Get Package Pricing Now
+              Get Rental Package Pricing Now
             </Button>
           </div>
         </div>
