@@ -57,6 +57,17 @@ export const MarqueeHeroSection = () => {
         </div>
       </div>
 
+      {/* Pricing Info - Bottom of hero */}
+      <div className="relative z-10 text-center text-white max-w-2xl mx-auto space-y-1 mb-2">
+        <p className="text-xs md:text-sm font-semibold leading-snug">
+          Event-style marquee letters start at $800. Most full setups range from $3,000–$10,000+ depending on size and quantity.
+        </p>
+        <p className="text-[10px] md:text-xs leading-snug opacity-80">
+          Pricing shown reflects individual letter purchases for events and businesses.{' '}
+          Looking to start a rental company? <a href="/rental-inventory" className="underline hover:text-accent">Visit our Rental Inventory page</a>.
+        </p>
+      </div>
+
     </section>
 
     {/* Review and CTA - Below hero */}
