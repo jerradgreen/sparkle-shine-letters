@@ -17,7 +17,7 @@ export const MarqueeHeroSection = () => {
   };
 
   return (
-    <section className="relative h-[55vh] md:h-[70vh] flex flex-col justify-between px-4 pt-8 md:pt-16 pb-6 md:pb-8 overflow-hidden">
+    <section className="relative h-[55vh] md:h-[70vh] flex flex-col justify-end px-4 pb-3 md:pb-4 overflow-hidden">
       {/* Background Image with Overlay - Optimized for LCP */}
       <div className="absolute inset-0">
         <img
