@@ -48,10 +48,10 @@ export const MarqueeHeroSection = () => {
         </div>
 
         {/* Mobile-only pricing text */}
-        <div className="md:hidden mt-3 text-center max-w-2xl mx-auto">
-          <p className="text-xs font-semibold leading-snug">
-            36" letters start at $800. Setups can range from $3,000-$10,000+.
-          </p>
+         <div className="md:hidden mt-3 text-center max-w-2xl mx-auto">
+           <p className="text-sm font-semibold leading-snug">
+             Commercial-grade 36" marquee letters start at $800 — built for long-term business use, not one-night events
+           </p>
           <p className="text-[10px] leading-snug opacity-80 mt-0.5">
             Pricing shown reflects individual purchases. Looking to start a rental company? <a href="/rental-inventory" className="underline hover:text-accent">Visit our Rental Inventory page</a>.
           </p>
@@ -59,10 +59,10 @@ export const MarqueeHeroSection = () => {
       </div>
 
       {/* Pricing Info - Above review */}
-      <div className="hidden md:block relative z-10 text-center text-white max-w-2xl mx-auto space-y-1 mt-auto mb-1">
-        <p className="text-xs md:text-sm font-semibold leading-snug">
-          36" letters start at $800. Setups can range from $3,000-$10,000+.
-        </p>
+       <div className="hidden md:block relative z-10 text-center text-white max-w-2xl mx-auto space-y-1 mt-auto mb-1">
+         <p className="text-sm md:text-base font-semibold leading-snug">
+           Commercial-grade 36" marquee letters start at $800 — built for long-term business use, not one-night events
+         </p>
         <p className="text-[10px] md:text-xs leading-snug opacity-80">
           Pricing shown reflects individual purchases. Looking to start a rental company? <a href="/rental-inventory" className="underline hover:text-accent">Visit our Rental Inventory page</a>.
         </p>
