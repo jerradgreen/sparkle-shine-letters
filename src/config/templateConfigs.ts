@@ -193,7 +193,7 @@ export const wallHangingConfig: TemplateConfig = {
     headline: "Bring Your Walls to Life with Vintage Marquee Letters",
     subheadline: "Handcrafted steel letters that hang like artwork and glow with timeless charm. Perfect for homes, restaurants, studios, shops, or any space that needs bold personality.",
     ctaText: "Get a Custom Quote in Under 5 Minutes",
-    secondaryCtaText: "See Real Sign Examples",
+    secondaryCtaText: "See Sign Examples",
     ctaAction: "pricing",
     heroImage: "https://cdn.shopify.com/s/files/1/1403/8315/files/IMG_89FDB5B68894-1.jpg?v=1759690677",
     heroImageAlt: "Vintage wall-hanging marquee letters on rustic wood wall",
