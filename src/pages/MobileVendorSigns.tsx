@@ -69,8 +69,14 @@ const MobileVendorSigns = () => {
               <h1 className="text-2xl font-bold text-foreground mb-3 leading-tight">
                 {foodTruckSignsConfig.hero.headline}
               </h1>
-              <p className="text-base text-muted-foreground leading-relaxed mb-6">
+              <p className="text-base text-muted-foreground leading-relaxed mb-4">
                 {foodTruckSignsConfig.hero.subheadline}
+              </p>
+              <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
+                Hand-crafted by experienced metal fabricators — not mass-produced plastic signage.
+              </p>
+              <p className="text-sm text-muted-foreground mb-6 leading-relaxed">
+                Custom food truck and mobile vendor signs typically start around $3,000. Most full builds range from $5,000–$10,000+ depending on size, lighting, and fabrication detail.
               </p>
               
               {/* Mobile CTA buttons */}
@@ -114,8 +120,14 @@ const MobileVendorSigns = () => {
               <h1 className="text-3xl xl:text-4xl font-bold text-foreground mb-4 leading-tight">
                 {foodTruckSignsConfig.hero.headline}
               </h1>
-              <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
+              <p className="text-lg text-muted-foreground mb-4 leading-relaxed">
                 {foodTruckSignsConfig.hero.subheadline}
+              </p>
+              <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
+                Hand-crafted by experienced metal fabricators — not mass-produced plastic signage.
+              </p>
+              <p className="text-sm text-muted-foreground mb-6 leading-relaxed">
+                Custom food truck and mobile vendor signs typically start around $3,000. Most full builds range from $5,000–$10,000+ depending on size, lighting, and fabrication detail.
               </p>
               
               <div className="space-y-3 mb-6">
