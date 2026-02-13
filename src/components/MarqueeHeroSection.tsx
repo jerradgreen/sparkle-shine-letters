@@ -60,7 +60,7 @@ export const MarqueeHeroSection = () => {
       </div>
 
       {/* Bottom section - Review (mobile at bottom, desktop with button) */}
-      <div className="relative z-10 mx-4 mt-4">
+      <div className="relative z-10 mx-4 mt-auto">
         {/* 5 Star Review from Ashley L. - Mobile: at bottom, Desktop: with button */}
         <div className="md:hidden bg-white/10 backdrop-blur-sm rounded-lg p-3 w-full max-w-2xl mx-auto">
           <div className="flex justify-center mb-1">
