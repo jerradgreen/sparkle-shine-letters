@@ -78,9 +78,9 @@ const RentalInventory = () => {
               <p className="text-base text-muted-foreground leading-snug mb-2">
                 Tap into one of the event industry's highest-margin segments — with commercial-grade inventory built to last and NO franchise fees.
               </p>
-              <p className="text-sm text-muted-foreground leading-relaxed mb-3">
-                Rental inventory packages are a serious business investment. Most clients invest between $20,000–$45,000+ depending on configuration. Many recover their investment within the first year through consistent bookings.
-              </p>
+               <p className="text-sm text-muted-foreground leading-relaxed mb-3">
+                 Rental inventory packages are revenue-producing assets — not décor. Most clients invest between $20,000–$45,000+ depending on configuration. With consistent bookings, many recover their investment within the first year and continue generating profit for years after.
+               </p>
               
               <div className="bg-muted/30 rounded-lg p-3 text-center -mt-2">
                 <div className="flex justify-center mb-1">
@@ -100,9 +100,9 @@ const RentalInventory = () => {
                 size="lg" 
                 className="text-lg px-8 py-6 w-full"
                 onClick={openQuoteForm}
-              >
-                Get Rental Package Pricing Now
-              </Button>
+               >
+                 Request Package Pricing
+               </Button>
               </div>
             </div>
           </div>
@@ -119,16 +119,16 @@ const RentalInventory = () => {
               <p className="text-lg text-muted-foreground mb-3 leading-relaxed">
                 Tap into one of the event industry's highest-margin segments — with commercial-grade inventory built to last and NO franchise fees.
               </p>
-              <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
-                Rental inventory packages are a serious business investment. Most clients invest between $20,000–$45,000+ depending on configuration. Many recover their investment within the first year through consistent bookings.
-              </p>
+               <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
+                 Rental inventory packages are revenue-producing assets — not décor. Most clients invest between $20,000–$45,000+ depending on configuration. With consistent bookings, many recover their investment within the first year and continue generating profit for years after.
+               </p>
             <Button
               size="lg" 
               className="text-lg px-8 py-6 w-full mb-4"
               onClick={openQuoteForm}
-            >
-              Get Rental Package Pricing Now
-            </Button>
+             >
+               Request Package Pricing
+             </Button>
               
               <div className="bg-muted/30 rounded-lg p-4 text-center">
                 <div className="flex justify-center mb-2">
@@ -203,9 +203,9 @@ const RentalInventory = () => {
               size="lg" 
               className="text-lg px-8 py-6 w-full"
               onClick={openQuoteForm}
-            >
-              Get Rental Package Pricing Now
-            </Button>
+             >
+               Request Package Pricing
+             </Button>
           </div>
         </div>
       </section>
