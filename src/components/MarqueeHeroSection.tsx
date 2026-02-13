@@ -17,7 +17,8 @@ export const MarqueeHeroSection = () => {
   };
 
   return (
-    <section className="relative h-[65vh] md:h-[80vh] flex flex-col justify-between px-4 pt-8 md:pt-16 pb-4 md:pb-6 overflow-hidden">
+    <>
+    <section className="relative h-[55vh] md:h-[70vh] flex flex-col justify-between px-4 pt-8 md:pt-16 pb-4 md:pb-6 overflow-hidden">
       {/* Background Image with Overlay - Optimized for LCP */}
       <div className="absolute inset-0">
         <img
@@ -59,39 +60,28 @@ export const MarqueeHeroSection = () => {
         </p>
       </div>
 
-      {/* Bottom section - Review (mobile at bottom, desktop with button) */}
-      <div className="relative z-10 mx-4">
-        {/* 5 Star Review from Ashley L. - Mobile: at bottom, Desktop: with button */}
-        <div className="md:hidden bg-white/10 backdrop-blur-sm rounded-lg p-3 w-full max-w-2xl mx-auto">
+    </section>
+
+    {/* Review and CTA - Below hero */}
+    <section className="py-6 bg-black/90 text-white">
+      <div className="container mx-auto px-4">
+        {/* Review */}
+        <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 w-full max-w-2xl mx-auto">
           <div className="flex justify-center mb-1">
             {[...Array(5)].map((_, i) => (
               <span key={i} className="text-yellow-400 text-base">★</span>
             ))}
           </div>
-          <p className="text-white text-xs text-center italic mb-1">
+          <p className="text-white text-xs md:text-sm text-center italic mb-1">
             "We purchased marquee letters for our company event and they look absolutely amazing! The quality is outstanding and we plan on using them year after year for all our corporate gatherings."
           </p>
           <p className="text-white/80 text-xs text-center font-medium">
             Ashley L. - North Carolina
           </p>
         </div>
-
-        {/* Desktop: Review and Button together */}
-        <div className="hidden md:flex flex-col items-center gap-3">
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 w-full max-w-2xl">
-            <div className="flex justify-center mb-1">
-              {[...Array(5)].map((_, i) => (
-                <span key={i} className="text-yellow-400 text-base">★</span>
-              ))}
-            </div>
-            <p className="text-white text-xs md:text-sm text-center italic mb-1">
-              "We purchased marquee letters for our company event and they look absolutely amazing! The quality is outstanding and we plan on using them year after year for all our corporate gatherings."
-            </p>
-            <p className="text-white/80 text-xs text-center font-medium">
-              Ashley L. - North Carolina
-            </p>
-          </div>
-          
+        
+        {/* Button - Desktop only (mobile has its own in EventStandUpSigns) */}
+        <div className="hidden md:flex justify-center mt-4">
           <Button 
             onClick={scrollToVisualizer}
             size="lg"
@@ -102,5 +92,6 @@ export const MarqueeHeroSection = () => {
         </div>
       </div>
     </section>
+    </>
   );
 };
