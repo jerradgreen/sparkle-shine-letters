@@ -23,7 +23,7 @@ export const MarqueeHeroSection = () => {
         <img
           src={heroLockwoods}
           alt="THE LOCKWOODS marquee letters with couple dancing at elegant event"
-          className="w-full h-full object-cover object-[center_50%]"
+          className="w-full h-full object-cover object-[center_70%]"
           loading="eager"
           decoding="sync"
           fetchPriority="high"
