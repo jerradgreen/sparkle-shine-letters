@@ -496,10 +496,10 @@ export const foodTruckSignsConfig: TemplateConfig = {
   keywords: ["food truck signs", "mobile vendor signs", "illuminated menu boards", "custom food signage", "food truck lighting", "vendor marquee signs"],
   
   hero: {
-    headline: "Turn Heads and Attract Customers with Signs Made for Mobile Vendors",
-    subheadline: "Custom signs designed for food trucks, trailers, and pop-up vendors. From glowing marquee letters to bold logos, these signs help you stand out and stay booked.",
-    ctaText: "Get a Custom Sign Quote",
-    secondaryCtaText: "See Gallery",
+    headline: "Custom Signs That Make Your Food Truck Impossible to Ignore",
+    subheadline: "Custom-fabricated metal signs built for food trucks, trailers, and pop-ups. From glowing marquee letters to bold layered logos, we create high-impact signage that draws attention and drives foot traffic.",
+    ctaText: "Start My Custom Food Truck Sign",
+    secondaryCtaText: "Explore Food Truck Projects",
     ctaAction: "pricing",
     heroImage: foodTruckBarMonte,
     heroImageAlt: "Bar Monte food truck with illuminated marquee sign",
