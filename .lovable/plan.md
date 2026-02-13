@@ -1,36 +1,20 @@
 
-## Install Meta/Facebook Pixel Across Your Site
 
-### Current Setup
-Your site already has tracking scripts installed in `index.html`:
-- Google Analytics (gtag.js)
-- Contentsquare Analytics
-- Optional NP tracking script
+## Move Pricing Text Below Headline on Mobile Only
 
-### Solution
-Add the Meta Pixel code to `index.html` in the `<head>` section, right after the Contentsquare Analytics line. This ensures:
-- The pixel loads on every page of your site
-- It's installed alongside your other tracking scripts
-- Consistent pixel firing across all routes (quote pages, thank you pages, etc.)
+**Problem:** On mobile, the pricing text and review are jumbled together at the bottom of the hero. On desktop it looks fine.
 
-### Implementation
-**File: `index.html`**
+**Solution:** Show the pricing text right below "Make Every Event Unforgettable" on mobile only, and keep it in its current position (above the review) on desktop only.
 
-Add the Meta Pixel initialization code after line 108 (Contentsquare Analytics). The code includes:
-1. The main Meta Pixel tracking script
-2. The `fbq('init', '443717751929130')` call with your Pixel ID
-3. The `fbq('track', 'PageView')` call for automatic page view tracking
-4. The noscript fallback image for users without JavaScript
+### Technical Details
 
-### What This Enables
-- Automatic PageView tracking on all pages
-- Ability to set up custom events (conversions) from your forms
-- Retargeting audiences for Meta ads
-- Conversion tracking for quote submissions and thank you pages
+**File:** `src/components/MarqueeHeroSection.tsx`
 
-### Testing
-After installation:
-1. Use Meta's Pixel Helper browser extension to verify the pixel is firing
-2. Test on a few different pages (home, quote forms, thank you pages)
-3. Check that PageView events are being tracked
+1. Add a **mobile-only copy** of the pricing text inside the top content block (below "Make Every Event Unforgettable"), using `md:hidden` to hide it on desktop.
+
+2. Add `hidden md:block` to the **existing pricing text block** so it only shows on desktop, keeping the current desktop layout unchanged.
+
+This way:
+- **Mobile:** Headline > Subheadline > Pricing text > (space) > Review at bottom
+- **Desktop:** No change from current layout
 
