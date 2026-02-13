@@ -75,10 +75,10 @@ const WallHangingMarqueeSigns = () => {
                 {wallHangingConfig.hero.subheadline}
               </p>
               
-              {/* Pricing Info */}
-              <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
-                Wall-hanging letters start at $490 per letter. Complete custom installations typically range from $1,500–$5,000+.
-              </p>
+               {/* Pricing Info */}
+               <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
+                 Hand-fabricated metal marquee letters start at $490 per letter. Most custom installs range $1,500–$5,000+ depending on size and complexity.
+               </p>
 
                {/* Mobile CTA buttons */}
                <div className="space-y-3 mb-6">
@@ -136,10 +136,10 @@ const WallHangingMarqueeSigns = () => {
                 {wallHangingConfig.hero.subheadline}
               </p>
                
-              {/* Pricing Info */}
-              <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
-                Wall-hanging letters start at $490 per letter. Complete custom installations typically range from $1,500–$5,000+.
-              </p>
+               {/* Pricing Info */}
+               <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
+                 Hand-fabricated metal marquee letters start at $490 per letter. Most custom installs range $1,500–$5,000+ depending on size and complexity.
+               </p>
 
                <div className="space-y-3 mb-6">
                  <Button 
