@@ -17,7 +17,7 @@ export const MarqueeHeroSection = () => {
   };
 
   return (
-    <section className="relative h-[55vh] md:h-[70vh] flex flex-col justify-end px-4 pb-3 md:pb-4 overflow-hidden">
+    <section className="relative h-[55vh] md:h-[70vh] flex flex-col justify-between px-4 pt-8 md:pt-16 pb-6 md:pb-8 overflow-hidden">
       {/* Background Image with Overlay - Optimized for LCP */}
       <div className="absolute inset-0">
         <img
@@ -60,7 +60,7 @@ export const MarqueeHeroSection = () => {
       </div>
 
       {/* Bottom section - Review (mobile at bottom, desktop with button) */}
-      <div className="relative z-10 mx-4 mt-auto">
+      <div className="relative z-10 mx-4 mt-4">
         {/* 5 Star Review from Ashley L. - Mobile: at bottom, Desktop: with button */}
         <div className="md:hidden bg-white/10 backdrop-blur-sm rounded-lg p-3 w-full max-w-2xl mx-auto">
           <div className="flex justify-center mb-1">
