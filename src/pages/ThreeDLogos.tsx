@@ -69,8 +69,15 @@ const ThreeDLogos = () => {
               <h1 className="text-2xl font-bold text-foreground mb-3 leading-tight">
                 {logoSignsConfig.hero.headline}
               </h1>
-              <p className="text-base text-muted-foreground leading-relaxed mb-6">
+              <p className="text-base text-muted-foreground leading-relaxed mb-4">
                 {logoSignsConfig.hero.subheadline}
+              </p>
+              
+              <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
+                Built by experienced metal fabricators — not mass-produced.
+              </p>
+              <p className="text-sm text-muted-foreground mb-6 leading-relaxed">
+                Custom 3D layered metal signs typically start around $1,500. Most commissioned pieces range from $2,500–$7,500+ depending on size, layers, and detail.
               </p>
               
               {/* Mobile CTA buttons */}
@@ -114,8 +121,15 @@ const ThreeDLogos = () => {
               <h1 className="text-3xl xl:text-4xl font-bold text-foreground mb-4 leading-tight">
                 {logoSignsConfig.hero.headline}
               </h1>
-              <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
+              <p className="text-lg text-muted-foreground mb-4 leading-relaxed">
                 {logoSignsConfig.hero.subheadline}
+              </p>
+              
+              <p className="text-sm text-muted-foreground mb-2 leading-relaxed">
+                Built by experienced metal fabricators — not mass-produced.
+              </p>
+              <p className="text-sm text-muted-foreground mb-6 leading-relaxed">
+                Custom 3D layered metal signs typically start around $1,500. Most commissioned pieces range from $2,500–$7,500+ depending on size, layers, and detail.
               </p>
               
               <div className="space-y-3 mb-6">

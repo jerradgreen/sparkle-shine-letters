@@ -645,10 +645,10 @@ export const logoSignsConfig: TemplateConfig = {
   keywords: ["3D logo signs", "layered logo signs", "dimensional logo", "brand signage", "custom logo", "3D metal signs", "office signage"],
   
   hero: {
-    headline: "Make Your Brand Stand Out in 3D",
-    subheadline: "Custom layered metal signs that bring your logo to life with depth, color, and bold dimension. Perfect for home walls, lobbies, event backdrops, and branded spaces.",
-    ctaText: "Get My Custom 3D Logo Quote",
-    secondaryCtaText: "Click for Examples",
+    headline: "Custom Fabricated 3D Metal Signs That Command Attention",
+    subheadline: "Each piece is custom-built in metal with layered depth, hand-finished detail, and a bold vintage edge. Designed for brands, boutiques, restaurants, and spaces that want more than a standard sign — they want a focal point.",
+    ctaText: "Start Your Custom Project",
+    secondaryCtaText: "Explore Past Custom Builds",
     ctaAction: "pricing",
     heroImage: "https://cdn.shopify.com/s/files/1/1403/8315/files/logo-tucks-1.jpg?v=1759693606",
     heroImageAlt: "Tuck's Truffles 3D layered logo sign with dimensional depth",
