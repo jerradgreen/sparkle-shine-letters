@@ -68,17 +68,17 @@ const WallHangingMarqueeSigns = () => {
             
             {/* Mobile content */}
             <div className="text-left">
-              <h1 className="text-2xl font-bold text-foreground mb-3 leading-tight">
+              <h1 className="text-xl font-bold text-foreground mb-2 leading-tight">
                 {wallHangingConfig.hero.headline}
               </h1>
-              <p className="text-base text-muted-foreground leading-relaxed mb-6">
+              <p className="text-sm text-muted-foreground leading-relaxed mb-2">
                 {wallHangingConfig.hero.subheadline}
               </p>
               
-               {/* Pricing Info */}
-               <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
-                 Wall-hanging letters start at $490 per letter. Complete custom installations typically range from $1,500–$5,000+.
-               </p>
+              {/* Pricing Info */}
+              <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
+                Wall-hanging letters start at $490 per letter. Complete custom installations typically range from $1,500–$5,000+.
+              </p>
 
                {/* Mobile CTA buttons */}
                <div className="space-y-3 mb-6">
@@ -128,16 +128,18 @@ const WallHangingMarqueeSigns = () => {
               />
             </div>
             
-            {/* Text on right */}
             <div className="text-left">
-              <h1 className="text-3xl xl:text-4xl font-bold text-foreground mb-4 leading-tight">
+              <h1 className="text-2xl xl:text-3xl font-bold text-foreground mb-3 leading-tight">
                 {wallHangingConfig.hero.headline}
               </h1>
+              <p className="text-base text-muted-foreground leading-relaxed mb-2">
+                {wallHangingConfig.hero.subheadline}
+              </p>
                
-               {/* Pricing Info */}
-               <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
-                 Wall-hanging letters start at $490 per letter. Complete custom installations typically range from $1,500–$5,000+.
-               </p>
+              {/* Pricing Info */}
+              <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
+                Wall-hanging letters start at $490 per letter. Complete custom installations typically range from $1,500–$5,000+.
+              </p>
 
                <div className="space-y-3 mb-6">
                  <Button 
