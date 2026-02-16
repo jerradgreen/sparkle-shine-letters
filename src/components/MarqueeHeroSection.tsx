@@ -50,22 +50,16 @@ export const MarqueeHeroSection = () => {
         {/* Mobile-only pricing text */}
          <div className="md:hidden mt-3 text-center max-w-2xl mx-auto">
            <p className="text-sm font-semibold leading-snug">
-             Commercial-grade 36" marquee letters start at $800 — built for long-term business use, not one-night events
-           </p>
-          <p className="text-[10px] leading-snug opacity-80 mt-0.5">
-            Pricing shown reflects individual purchases. Looking to start a rental company? <a href="/rental-inventory" className="underline hover:text-accent">Visit our Rental Inventory page</a>.
-          </p>
+              Starting at $800. Built for long-term business use, not just one-nighters.
+            </p>
         </div>
       </div>
 
       {/* Pricing Info - Above review */}
        <div className="hidden md:block relative z-10 text-center text-white max-w-2xl mx-auto space-y-1 mt-auto mb-1">
          <p className="text-sm md:text-base font-semibold leading-snug">
-           Commercial-grade 36" marquee letters start at $800 — built for long-term business use, not one-night events
+           Starting at $800. Built for long-term business use, not just one-nighters.
          </p>
-        <p className="text-[10px] md:text-xs leading-snug opacity-80">
-          Pricing shown reflects individual purchases. Looking to start a rental company? <a href="/rental-inventory" className="underline hover:text-accent">Visit our Rental Inventory page</a>.
-        </p>
       </div>
 
       {/* Bottom section - Review (mobile at bottom, desktop with button) */}
