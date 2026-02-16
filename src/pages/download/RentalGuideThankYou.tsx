@@ -17,6 +17,7 @@ const RentalGuideThankYou = () => {
       <Helmet>
         <title>Download Your Free Rental Guide - Vintage Marquee Lights</title>
         <meta name="description" content="Your free marquee light rental business guide is ready to download" />
+        <meta name="robots" content="noindex, nofollow" />
       </Helmet>
       <Navigation />
       
