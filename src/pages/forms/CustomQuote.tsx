@@ -1,62 +1,30 @@
-import { useEffect } from 'react';
-import { FormPageTemplate } from '@/components/templates/FormPageTemplate';
+import { useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
+import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
+import { SignStyleImageGrid } from "@/components/SignStyleImageGrid";
 
 const CustomQuote = () => {
-  useEffect(() => {
-    const script = document.createElement('script');
-    script.textContent = `
-      (function() {
-        const MIN_SECONDS_BEFORE_SUBMIT = 1;
-        const BAD_KEYWORDS = ["vivo","oppo","realme","xiaomi","iqoo","tecno","infinix","redmi","huawei"];
-        const formSelector = ".cognito";
-        let startTime = Date.now();
-
-        // Block obvious foreign-market devices
-        const ua = navigator.userAgent.toLowerCase();
-        if (BAD_KEYWORDS.some(k => ua.includes(k))) {
-          window.location.href = "https://www.vintagemarqueelights.com";
-          return;
-        }
-
-        // Wait until Cognito form loads
-        window.addEventListener("load", function() {
-          const form = document.querySelector(\`\${formSelector} form\`);
-          if (!form) return;
-
-          // Optional: capture IP in hidden field called ip_address
-          fetch("https://api.ipify.org?format=json")
-            .then(r => r.json())
-            .then(data => {
-              const ipField = form.querySelector("input[name='ip_address']");
-              if (ipField) ipField.value = data.ip;
-            })
-            .catch(() => {});
-
-          // Add small human-like delay requirement
-          form.addEventListener("submit", function(e) {
-            const elapsed = (Date.now() - startTime) / 1000;
-            if (elapsed < MIN_SECONDS_BEFORE_SUBMIT) {
-              e.preventDefault();
-              alert("Please wait a moment before submitting.");
-              return false;
-            }
-          });
-        });
-      })();
-    `;
-    document.body.appendChild(script);
-
-    return () => {
-      document.body.removeChild(script);
-    };
-  }, []);
+  const navigate = useNavigate();
 
   return (
-    <FormPageTemplate
-      title="Custom Marquee Lights Quote"
-      description="Get a custom quote for vintage marquee lights"
-      formId="1"
-    />
+    <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Custom Marquee Lights Quote</title>
+        <meta name="description" content="Get a custom quote for vintage marquee lights. Choose your sign style to get started." />
+      </Helmet>
+      <Navigation />
+      <main className="container mx-auto px-4 py-16 max-w-5xl">
+        <p className="text-sm text-muted-foreground text-center mb-4">
+          Welcome to our NEW site!
+        </p>
+        <h1 className="text-2xl md:text-3xl font-bold text-center text-foreground mb-8">
+          Select the style of sign to open the correct Quote Request Form
+        </h1>
+        <SignStyleImageGrid onSelect={(path) => navigate(path)} />
+      </main>
+      <Footer />
+    </div>
   );
 };
 

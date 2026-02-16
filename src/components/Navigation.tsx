@@ -16,15 +16,7 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { CartDrawer } from "@/components/CartDrawer";
-
-const signTypeOptions = [
-  { label: "Wall Letters", description: "Custom marquee letters for walls", path: "/quote/wall-hanging" },
-  { label: "3D Layered Signs", description: "For logos/more complicated designs in a round, square or any shape", path: "/quote/3d-logos" },
-  { label: "Mobile Vendors", description: "Signs for food trucks & carts", path: "/quote/mobile-vendor" },
-  { label: "Stand-Up Letters", description: "36\" & 48\" event letters", path: "/quote/event-standup?showTopper=true" },
-  { label: "Rental Inventory", description: "Start your rental business", path: "/quote/rental-inventory" },
-  { label: "Not Sure / Other", description: "We'll help you figure it out", path: "/quote/not-sure" },
-];
+import { SignStyleImageGrid } from "@/components/SignStyleImageGrid";
 
 const Navigation = () => {
   const navigate = useNavigate();
@@ -36,6 +28,24 @@ const Navigation = () => {
     setIsMobileMenuOpen(false);
     navigate(path);
   };
+
+  const signTypeDialog = (
+    <Dialog open={isSignTypeDialogOpen} onOpenChange={setIsSignTypeDialogOpen}>
+      <DialogTrigger asChild>
+        <button className="text-foreground hover:text-primary font-medium">
+          Custom Request Form
+        </button>
+      </DialogTrigger>
+      <DialogContent className="sm:max-w-2xl max-h-[90vh] overflow-y-auto">
+        <DialogHeader>
+          <DialogTitle className="text-center text-xl">What type of sign are you interested in?</DialogTitle>
+        </DialogHeader>
+        <div className="mt-4">
+          <SignStyleImageGrid variant="compact" onSelect={handleSignTypeSelect} />
+        </div>
+      </DialogContent>
+    </Dialog>
+  );
 
   return (
     <nav className="bg-background border-b border-border sticky top-0 z-50">
@@ -81,31 +91,7 @@ const Navigation = () => {
               36/48" Stand-Up Letters
             </Link>
 
-            
-            <Dialog open={isSignTypeDialogOpen} onOpenChange={setIsSignTypeDialogOpen}>
-              <DialogTrigger asChild>
-                <button className="text-foreground hover:text-primary font-medium">
-                  Custom Request Form
-                </button>
-              </DialogTrigger>
-              <DialogContent className="sm:max-w-md">
-                <DialogHeader>
-                  <DialogTitle className="text-center text-xl">What type of sign are you interested in?</DialogTitle>
-                </DialogHeader>
-                <div className="grid grid-cols-2 gap-3 mt-4">
-                  {signTypeOptions.map((option) => (
-                    <button
-                      key={option.path}
-                      onClick={() => handleSignTypeSelect(option.path)}
-                      className="flex flex-col items-center justify-center p-4 rounded-lg border border-border bg-background hover:bg-accent hover:border-primary transition-colors text-center"
-                    >
-                      <span className="font-medium text-foreground">{option.label}</span>
-                      <span className="text-xs text-muted-foreground mt-1">{option.description}</span>
-                    </button>
-                  ))}
-                </div>
-              </DialogContent>
-            </Dialog>
+            {signTypeDialog}
           </div>
 
           <div className="ml-auto">
@@ -140,92 +126,24 @@ const Navigation = () => {
               <div className="py-2">
                 <div className="text-foreground font-medium mb-2">Custom Signs</div>
                 <div className="pl-4 flex flex-col space-y-2">
-                  <Link
-                    to="/wall-hanging-signs"
-                    className="text-foreground hover:text-primary font-medium py-1"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    Wall Letters
-                  </Link>
-                  <Link
-                    to="/3d-logos"
-                    className="text-foreground hover:text-primary font-medium py-1"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    3D Logos
-                  </Link>
-                  <Link
-                    to="/mobile-vendor-signs"
-                    className="text-foreground hover:text-primary font-medium py-1"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    Mobile Vendors
-                  </Link>
-                  <Link
-                    to="/event-standup-signs"
-                    className="text-foreground hover:text-primary font-medium py-1"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    Stand-Up Letters
-                  </Link>
-                  <Link
-                    to="/rental-inventory"
-                    className="text-foreground hover:text-primary font-medium py-1"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    Rental Inventory
-                  </Link>
-                  <Link
-                    to="/quote/not-sure"
-                    className="text-foreground hover:text-primary font-medium py-1"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    Not Sure
-                  </Link>
+                  <Link to="/wall-hanging-signs" className="text-foreground hover:text-primary font-medium py-1" onClick={() => setIsMobileMenuOpen(false)}>Wall Letters</Link>
+                  <Link to="/3d-logos" className="text-foreground hover:text-primary font-medium py-1" onClick={() => setIsMobileMenuOpen(false)}>3D Logos</Link>
+                  <Link to="/mobile-vendor-signs" className="text-foreground hover:text-primary font-medium py-1" onClick={() => setIsMobileMenuOpen(false)}>Mobile Vendors</Link>
+                  <Link to="/event-standup-signs" className="text-foreground hover:text-primary font-medium py-1" onClick={() => setIsMobileMenuOpen(false)}>Stand-Up Letters</Link>
+                  <Link to="/rental-inventory" className="text-foreground hover:text-primary font-medium py-1" onClick={() => setIsMobileMenuOpen(false)}>Rental Inventory</Link>
+                  <Link to="/quote/not-sure" className="text-foreground hover:text-primary font-medium py-1" onClick={() => setIsMobileMenuOpen(false)}>Not Sure</Link>
                 </div>
               </div>
               
-              <Link
-                to="/rental-inventory"
-                className="text-foreground hover:text-primary font-medium py-2"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
+              <Link to="/rental-inventory" className="text-foreground hover:text-primary font-medium py-2" onClick={() => setIsMobileMenuOpen(false)}>
                 Start Your Rental Biz
               </Link>
               
-              <Link
-                to="/event-standup-signs"
-                className="text-foreground hover:text-primary font-medium py-2"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
+              <Link to="/event-standup-signs" className="text-foreground hover:text-primary font-medium py-2" onClick={() => setIsMobileMenuOpen(false)}>
                 36/48" Stand-Up Letters
               </Link>
 
-              
-              <Dialog open={isSignTypeDialogOpen} onOpenChange={setIsSignTypeDialogOpen}>
-                <DialogTrigger asChild>
-                  <button className="text-foreground hover:text-primary font-medium py-2 text-left">
-                    Custom Request Form
-                  </button>
-                </DialogTrigger>
-                <DialogContent className="sm:max-w-md">
-                  <DialogHeader>
-                    <DialogTitle className="text-center text-xl">What type of sign are you interested in?</DialogTitle>
-                  </DialogHeader>
-                  <div className="grid grid-cols-2 gap-3 mt-4">
-                    {signTypeOptions.map((option) => (
-                      <button
-                        key={option.path}
-                        onClick={() => handleSignTypeSelect(option.path)}
-                        className="flex flex-col items-center justify-center p-4 rounded-lg border border-border bg-background hover:bg-accent hover:border-primary transition-colors text-center"
-                      >
-                        <span className="font-medium text-foreground">{option.label}</span>
-                        <span className="text-xs text-muted-foreground mt-1">{option.description}</span>
-                      </button>
-                    ))}
-                  </div>
-                </DialogContent>
-              </Dialog>
+              {signTypeDialog}
             </div>
           </div>
         )}
