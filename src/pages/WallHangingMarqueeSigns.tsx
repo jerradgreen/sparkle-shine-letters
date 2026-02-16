@@ -77,7 +77,7 @@ const WallHangingMarqueeSigns = () => {
               
                {/* Pricing Info */}
                <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
-                 Hand-fabricated metal marquee letters start at $490 per letter. Most custom installs range $1,500–$5,000+ depending on size and complexity.
+                 Most hand-fabricated, artisan metal marquee letter custom builds range $2500-$7000+ depending on size and complexity.
                </p>
 
                {/* Mobile CTA buttons */}
@@ -138,7 +138,7 @@ const WallHangingMarqueeSigns = () => {
                
                {/* Pricing Info */}
                <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
-                 Hand-fabricated metal marquee letters start at $490 per letter. Most custom installs range $1,500–$5,000+ depending on size and complexity.
+                 Most hand-fabricated, artisan metal marquee letter custom builds range $2500-$7000+ depending on size and complexity.
                </p>
 
                <div className="space-y-3 mb-6">
@@ -282,7 +282,7 @@ const WallHangingMarqueeSigns = () => {
                 <div>
                   <h3 className="font-bold mb-2">6. Perfect for Any Setting</h3>
                   <p className="text-muted-foreground text-sm">
-                    From retail stores and events to photo studios, home décor, and outdoor patios, these signs elevate any environment with vintage charm and bold personality.
+                    From retail stores and events to photo studios, home décor, and outdoor patios, these signs elevate any environment with vintage charm and bold personality. We are not a traditional sign shop, we are metal artists building signs with maximum character.
                   </p>
                 </div>
               </div>

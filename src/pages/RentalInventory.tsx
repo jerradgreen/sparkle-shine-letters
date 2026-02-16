@@ -79,7 +79,7 @@ const RentalInventory = () => {
                 Tap into one of the event industry's highest-margin segments — with commercial-grade inventory built to last and NO franchise fees.
               </p>
                <p className="text-sm text-muted-foreground leading-relaxed mb-3">
-                 Rental inventory packages are revenue-producing assets — not décor. Most clients invest between $20,000–$45,000+ depending on configuration. With consistent bookings, many recover their investment within the first year and continue generating profit for years after.
+                 Rental inventory packages are revenue-producing assets — not décor. Most clients invest $15,000-$35,000 depending on configuration. With consistent bookings, many recover their investment within the first year and continue generating profit for years after.
                </p>
               
               <div className="bg-muted/30 rounded-lg p-3 text-center -mt-2">
@@ -120,7 +120,7 @@ const RentalInventory = () => {
                 Tap into one of the event industry's highest-margin segments — with commercial-grade inventory built to last and NO franchise fees.
               </p>
                <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
-                 Rental inventory packages are revenue-producing assets — not décor. Most clients invest between $20,000–$45,000+ depending on configuration. With consistent bookings, many recover their investment within the first year and continue generating profit for years after.
+                 Rental inventory packages are revenue-producing assets — not décor. Most clients invest $15,000-$35,000 depending on configuration. With consistent bookings, many recover their investment within the first year and continue generating profit for years after.
                </p>
             <Button
               size="lg" 
