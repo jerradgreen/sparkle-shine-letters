@@ -2,44 +2,98 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://inventory.vintagemarqueelights.com/</loc>
-    <lastmod>2025-10-08</lastmod>
+    <lastmod>2026-02-16</lastmod>
     <priority>1.0</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://inventory.vintagemarqueelights.com/rental-inventory</loc>
-    <lastmod>2025-10-08</lastmod>
+    <lastmod>2026-02-16</lastmod>
     <priority>0.9</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://inventory.vintagemarqueelights.com/event-standup-signs</loc>
-    <lastmod>2025-10-08</lastmod>
+    <lastmod>2026-02-16</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://inventory.vintagemarqueelights.com/wall-hanging-signs</loc>
-    <lastmod>2025-10-08</lastmod>
+    <lastmod>2026-02-16</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://inventory.vintagemarqueelights.com/mobile-vendor-signs</loc>
-    <lastmod>2025-10-08</lastmod>
+    <lastmod>2026-02-16</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://inventory.vintagemarqueelights.com/3d-logos</loc>
-    <lastmod>2025-10-08</lastmod>
+    <lastmod>2026-02-16</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://inventory.vintagemarqueelights.com/thank-you-for-submitting-a-form</loc>
-    <lastmod>2025-10-08</lastmod>
-    <priority>0.3</priority>
+    <loc>https://inventory.vintagemarqueelights.com/quote</loc>
+    <lastmod>2026-02-16</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://inventory.vintagemarqueelights.com/quote/custom</loc>
+    <lastmod>2026-02-16</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://inventory.vintagemarqueelights.com/quote/wall-hanging</loc>
+    <lastmod>2026-02-16</lastmod>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://inventory.vintagemarqueelights.com/quote/3d-logos</loc>
+    <lastmod>2026-02-16</lastmod>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://inventory.vintagemarqueelights.com/quote/rental-inventory</loc>
+    <lastmod>2026-02-16</lastmod>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://inventory.vintagemarqueelights.com/quote/event-standup</loc>
+    <lastmod>2026-02-16</lastmod>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://inventory.vintagemarqueelights.com/quote/mobile-vendor</loc>
+    <lastmod>2026-02-16</lastmod>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://inventory.vintagemarqueelights.com/quote/not-sure</loc>
+    <lastmod>2026-02-16</lastmod>
+    <priority>0.5</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://inventory.vintagemarqueelights.com/shop/36-inch-letters</loc>
+    <lastmod>2026-02-16</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://inventory.vintagemarqueelights.com/download/rental-guide</loc>
+    <lastmod>2026-02-16</lastmod>
+    <priority>0.5</priority>
     <changefreq>yearly</changefreq>
   </url>
 </urlset>

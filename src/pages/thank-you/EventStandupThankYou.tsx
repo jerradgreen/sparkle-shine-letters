@@ -14,6 +14,7 @@ const EventStandupThankYou = () => {
     <div className="min-h-screen bg-background">
       <Helmet>
         <title>Thank You - Vintage Marquee Lights</title>
+        <meta name="robots" content="noindex, nofollow" />
       </Helmet>
       <Navigation />
       
