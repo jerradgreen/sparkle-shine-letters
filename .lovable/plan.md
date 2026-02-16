@@ -1,39 +1,78 @@
 
 
-# Text Updates Across 4 Pages
+# Upgrade Sign Selection to Image Cards Everywhere
 
-## 1. Wall Hanging Page (`src/pages/WallHangingMarqueeSigns.tsx`)
+## What We're Doing
 
-**Pricing text** (lines 80 and 141) -- replace both with:
-> "Most hand-fabricated, artisan metal marquee letter custom builds range $2500-$7000+ depending on size and complexity."
+Three places currently show sign-type selection options as plain text boxes. We'll upgrade all three to use the same beautiful image card style seen on the homepage -- with photos, titles, descriptions, and a "click to quote" label instead of "click for more."
 
-**Reason #6 text** (line 285) -- after "vintage charm and bold personality." add:
-> "We are not a traditional sign shop, we are metal artists building signs with maximum character."
+## The Three Locations
 
-## 2. Mobile Vendor Page (`src/pages/MobileVendorSigns.tsx`)
+1. **`/quote/custom` page** (`src/pages/forms/CustomQuote.tsx`) -- Currently shows a blank Cognito form. We'll replace it with the 6 image card grid that routes to the correct quote form for each sign type (same as `/quote` but with images).
 
-**Pricing paragraph** (lines 78-80 and 129-131) -- replace both with:
-> "Custom mobile vendor signs typically start around $3,000 including roof mount/stand. Most full builds range from $5,000-$10,000 depending on size, font style and details."
+2. **`/quote` page** (`src/pages/QuoteSelector.tsx`) -- Currently shows 6 plain text boxes. We'll replace them with the same image card grid.
 
-## 3. Event Style Hero (`src/components/MarqueeHeroSection.tsx`)
+3. **Navigation "Custom Request Form" modal** (`src/components/Navigation.tsx`) -- Currently shows 6 plain text boxes in a dialog. We'll add images to these boxes as well (slightly smaller to fit the modal).
 
-**Mobile pricing text** (line 53) -- change to:
-> "Starting at $800. Built for long-term business use, not just one-nighters."
+## Shared Data
 
-**Mobile disclaimer** (lines 55-57) -- remove entirely
+We'll create a single shared data file so all three locations pull from the same sign style definitions (images, titles, descriptions, and quote form paths). This avoids duplicating the image URLs and data in three places.
 
-**Desktop pricing text** (line 64) -- same change as mobile
+## Visual Style
 
-**Desktop disclaimer** (lines 66-68) -- remove entirely
+Each card will look like the homepage cards:
+- Background image with gradient overlay
+- Title and description text overlaid
+- "click to quote" label at bottom (instead of "click for more")
+- Hover effect with image zoom
 
-## 4. Rental Inventory Page (`src/pages/RentalInventory.tsx`)
+The modal version will use smaller cards to fit the dialog width.
 
-**Investment range** (lines 82 and 123) -- in both mobile and desktop, change:
-- "Most clients invest between $20,000-$45,000+" to "Most clients invest $15,000-$35,000"
-- Rest of sentence stays the same
+---
 
-### Summary of files changed
-- `src/pages/WallHangingMarqueeSigns.tsx` -- 3 edits (2 pricing, 1 reason text)
-- `src/pages/MobileVendorSigns.tsx` -- 2 edits (mobile + desktop pricing)
-- `src/components/MarqueeHeroSection.tsx` -- 4 edits (2 pricing text changes, 2 disclaimer removals)
-- `src/pages/RentalInventory.tsx` -- 2 edits (mobile + desktop investment range)
+## Technical Details
+
+### New file: `src/data/signStyleQuoteOptions.ts`
+
+A shared array with 6 entries, each containing:
+- `title`, `description`, `image` (Shopify CDN URL), `path` (quote form route), `imagePosition` (optional)
+
+Using the same images from the homepage `signStyles` array but with quote-form paths:
+- Wall Letters -> `/quote/wall-hanging`
+- 3D Layered Signs -> `/quote/3d-logos`
+- Mobile Vendors -> `/quote/mobile-vendor`
+- Stand-Up Letters -> `/quote/event-standup?showTopper=true`
+- Rental Inventory -> `/quote/rental-inventory`
+- Not Sure / Other -> `/quote/not-sure`
+
+### New component: `src/components/SignStyleImageGrid.tsx`
+
+A reusable grid component that renders the image cards. Accepts a prop for card size variant (`default` for full pages, `compact` for modal) and an `onSelect` callback.
+
+### Modified: `src/pages/forms/CustomQuote.tsx`
+
+- Remove the blank Cognito form entirely
+- Replace with the `SignStyleImageGrid` component inside a page layout with Navigation/Footer
+- Clicking a card navigates to the appropriate quote form
+
+### Modified: `src/pages/QuoteSelector.tsx`
+
+- Replace the plain text button grid with the `SignStyleImageGrid` component
+- Keep existing page wrapper (Navigation, Footer, Helmet)
+
+### Modified: `src/components/Navigation.tsx`
+
+- In the Dialog for "Custom Request Form" (both desktop and mobile), replace the plain text buttons with `SignStyleImageGrid` using `compact` variant
+- Widen the dialog slightly (`sm:max-w-2xl`) to accommodate image cards
+- Each card click closes the dialog and navigates to the quote form
+
+### Files changed summary
+
+| File | Action |
+|---|---|
+| `src/data/signStyleQuoteOptions.ts` | New -- shared data |
+| `src/components/SignStyleImageGrid.tsx` | New -- reusable image grid component |
+| `src/pages/forms/CustomQuote.tsx` | Replace blank form with image grid page |
+| `src/pages/QuoteSelector.tsx` | Replace text buttons with image grid |
+| `src/components/Navigation.tsx` | Add images to modal (both desktop and mobile instances) |
+
