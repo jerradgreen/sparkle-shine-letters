@@ -1,20 +1,39 @@
 
 
-## Move Pricing Text Below Headline on Mobile Only
+# Text Updates Across 4 Pages
 
-**Problem:** On mobile, the pricing text and review are jumbled together at the bottom of the hero. On desktop it looks fine.
+## 1. Wall Hanging Page (`src/pages/WallHangingMarqueeSigns.tsx`)
 
-**Solution:** Show the pricing text right below "Make Every Event Unforgettable" on mobile only, and keep it in its current position (above the review) on desktop only.
+**Pricing text** (lines 80 and 141) -- replace both with:
+> "Most hand-fabricated, artisan metal marquee letter custom builds range $2500-$7000+ depending on size and complexity."
 
-### Technical Details
+**Reason #6 text** (line 285) -- after "vintage charm and bold personality." add:
+> "We are not a traditional sign shop, we are metal artists building signs with maximum character."
 
-**File:** `src/components/MarqueeHeroSection.tsx`
+## 2. Mobile Vendor Page (`src/pages/MobileVendorSigns.tsx`)
 
-1. Add a **mobile-only copy** of the pricing text inside the top content block (below "Make Every Event Unforgettable"), using `md:hidden` to hide it on desktop.
+**Pricing paragraph** (lines 78-80 and 129-131) -- replace both with:
+> "Custom mobile vendor signs typically start around $3,000 including roof mount/stand. Most full builds range from $5,000-$10,000 depending on size, font style and details."
 
-2. Add `hidden md:block` to the **existing pricing text block** so it only shows on desktop, keeping the current desktop layout unchanged.
+## 3. Event Style Hero (`src/components/MarqueeHeroSection.tsx`)
 
-This way:
-- **Mobile:** Headline > Subheadline > Pricing text > (space) > Review at bottom
-- **Desktop:** No change from current layout
+**Mobile pricing text** (line 53) -- change to:
+> "Starting at $800. Built for long-term business use, not just one-nighters."
 
+**Mobile disclaimer** (lines 55-57) -- remove entirely
+
+**Desktop pricing text** (line 64) -- same change as mobile
+
+**Desktop disclaimer** (lines 66-68) -- remove entirely
+
+## 4. Rental Inventory Page (`src/pages/RentalInventory.tsx`)
+
+**Investment range** (lines 82 and 123) -- in both mobile and desktop, change:
+- "Most clients invest between $20,000-$45,000+" to "Most clients invest $15,000-$35,000"
+- Rest of sentence stays the same
+
+### Summary of files changed
+- `src/pages/WallHangingMarqueeSigns.tsx` -- 3 edits (2 pricing, 1 reason text)
+- `src/pages/MobileVendorSigns.tsx` -- 2 edits (mobile + desktop pricing)
+- `src/components/MarqueeHeroSection.tsx` -- 4 edits (2 pricing text changes, 2 disclaimer removals)
+- `src/pages/RentalInventory.tsx` -- 2 edits (mobile + desktop investment range)
