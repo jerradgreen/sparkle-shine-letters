@@ -157,9 +157,9 @@ const RentalInventory = () => {
       </section>
 
       {/* H2 Section — Commercial-Grade Inventory */}
-      <section className="py-8 px-4">
+      <section className="py-4 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6">
+          <h2 className="text-lg md:text-xl font-bold text-foreground mb-3">
             Marquee Letter Rental Business Packages — Commercial-Grade Inventory
           </h2>
           <p className="text-sm md:text-base text-muted-foreground leading-relaxed mb-4">
