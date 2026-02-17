@@ -365,7 +365,7 @@ export const standUpSignsConfig: TemplateConfig = {
   keywords: ["commercial marquee letters", "marquee letters for sale", "36 inch marquee letters", "48 inch marquee letters", "stand-up marquee letters", "marquee letters for schools", "marquee letters for universities", "marquee letters for corporate events", "custom marquee letters for events", "marquee numbers and symbols"],
   
   hero: {
-    headline: "Commercial 36\" & 48\" Stand-Up Marquee Letters for Sale",
+    headline: "Commercial 36\" & 48\" Stand-Up Marquee Letters",
     subheadline: "Built for schools, universities, corporations, and event companies that need bold, reusable signage for every occasion.",
     ctaText: "Get Your Quote",
     ctaAction: "pricing",
