@@ -5,17 +5,17 @@ export const HighlightsSection = () => {
     {
       icon: Check,
       title: "Durable & Self-Standing",
-      description: "Made from powder-coated steel with extra-deep sides, these letters are built to last and stand on their own."
+      description: "Powder-coated steel construction with a self-standing base design. Built for repeated setup and teardown across years of events."
     },
   {
     icon: Star,
       title: "Bold & Bright", 
-      description: "At 36\" to 48\" tall with LED bulbs and a sleek finish, they make a big impact at graduations, pep rallies, corporate events, and brand activations."
+      description: "36-inch and 48-inch tall with LED bulbs. High-visibility impact for graduations, pep rallies, conferences, and brand activations."
     },
   {
     icon: Truck,
       title: "Easy to Use & Transport",
-      description: "Arrive pre-lit and ready to go, with optional reusable foam-lined boxes for simple storage and travel."
+      description: "Arrive pre-lit and ready to deploy. Optional foam-lined boxes for long-term storage and repeated transport between venues."
     }
   ];
 
