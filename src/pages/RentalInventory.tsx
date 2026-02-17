@@ -924,6 +924,9 @@ const RentalInventory = () => {
           <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
             Instead of piecing inventory together over time, many entrepreneurs launch faster with complete, ready-to-rent packages that include durable steel letters, LED lighting, protective transport boxes, and a proven mix of high-demand characters. With proper pricing, marketing, and local vendor partnerships, many rental businesses recover their initial investment within the first year and continue generating revenue from the same inventory for years to come.
           </p>
+          <p className="text-sm md:text-base text-muted-foreground leading-relaxed mt-4">
+            Our marquee letter rental business packages are built for entrepreneurs and established event rental companies nationwide who want commercial-grade inventory designed for repeat bookings, safe transport, and long-term profitability. These are revenue-producing rental assets — not decorative props — engineered specifically for professional rental operations.
+          </p>
         </div>
       </section>
 
