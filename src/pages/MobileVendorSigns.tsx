@@ -256,6 +256,14 @@ const MobileVendorSigns = () => {
               </div>
             ))}
           </div>
+
+          <p className="text-muted-foreground text-sm mt-8 max-w-5xl mx-auto">
+            Many mobile vendors and event companies expand their offerings with{' '}
+            <a href="/rental-inventory" className="text-primary underline hover:text-primary/80 transition-colors">
+              commercial marquee letter rental business packages
+            </a>{' '}
+            that generate consistent income through repeat bookings.
+          </p>
         </div>
       </section>
 

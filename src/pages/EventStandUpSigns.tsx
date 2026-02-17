@@ -84,6 +84,14 @@ const EventStandUpSigns = () => {
               </div>
             ))}
           </div>
+
+          <p className="text-sm text-muted-foreground mt-8 max-w-5xl mx-auto">
+            Interested in using these letters as revenue-producing assets? Our{' '}
+            <a href="/rental-inventory" className="text-primary underline hover:text-primary/80 transition-colors">
+              commercial marquee letter rental inventory packages
+            </a>{' '}
+            are built for durability, transport, and strong return on investment.
+          </p>
         </div>
       </section>
 

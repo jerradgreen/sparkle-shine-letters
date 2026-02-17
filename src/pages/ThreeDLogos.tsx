@@ -385,6 +385,14 @@ const ThreeDLogos = () => {
               </div>
             ))}
           </div>
+
+          <p className="text-muted-foreground text-sm mt-8 max-w-5xl mx-auto">
+            In addition to custom layered and dimensional signage, we also manufacture{' '}
+            <a href="/rental-inventory" className="text-primary underline hover:text-primary/80 transition-colors">
+              commercial marquee letter rental business packages
+            </a>{' '}
+            for entrepreneurs and event companies looking to build a scalable rental division.
+          </p>
         </div>
       </section>
 
