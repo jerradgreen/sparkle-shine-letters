@@ -513,6 +513,14 @@ const WallHangingMarqueeSigns = () => {
             ))}
           </div>
 
+          <p className="text-muted-foreground text-sm mt-8 max-w-5xl mx-auto">
+            If you're looking to turn marquee letters into recurring revenue, explore our{' '}
+            <a href="/rental-inventory" className="text-primary underline hover:text-primary/80 transition-colors">
+              marquee letter rental business packages
+            </a>{' '}
+            designed specifically for repeat bookings and long-term profitability.
+          </p>
+
           <div className="text-center mt-8">
             <Button 
               size="lg" 
