@@ -37,8 +37,8 @@ const RentalInventory = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Commercial Marquee Letter Rental Business Packages | Vintage Marquee Lights</title>
-        <meta name="description" content="Commercial-grade marquee letter rental business packages built for entrepreneurs and event rental companies. Durable 36&quot; letters, high-ROI inventory, and scalable packages designed for long-term rental success." />
+        <title>Marquee Letter Rental Business Inventory | 36″ &amp; 48″ Commercial-Grade Letters</title>
+        <meta name="description" content="Commercial-grade 36&quot; and 48&quot; marquee letter rental inventory for event businesses. Learn investment ranges, ROI potential, and how to build scalable letter, number, and symbol inventory." />
         {/* Preload locally hosted hero image for optimal LCP */}
         <link 
           rel="preload" 
@@ -74,7 +74,7 @@ const RentalInventory = () => {
              {/* Mobile content */}
              <div className="text-left">
                <h1 className="text-xl font-bold text-foreground mb-2 leading-tight">
-                  Start or Expand a Commercial Marquee Letter Rental Business
+                  Marquee Letter Rental Business Inventory – Commercial-Grade 36″ &amp; 48″ Letters
                 </h1>
                 <p className="text-base text-muted-foreground leading-snug mb-2">
                   Our commercial-grade marquee letter packages are designed for repeat rentals, long-term durability, and strong ROI. Get a proven inventory foundation with premium 36″ letters, durable finishes, and logistics handled—so you can launch faster or scale what you already have.
@@ -115,8 +115,8 @@ const RentalInventory = () => {
                   Built for Entrepreneurs & Established Event Rental Companies
                </p>
                <h1 className="text-2xl xl:text-3xl font-bold text-foreground mb-4 leading-tight">
-                  Start or Expand a Commercial Marquee Letter Rental Business
-                </h1>
+                   Marquee Letter Rental Business Inventory – Commercial-Grade 36″ &amp; 48″ Letters
+                 </h1>
                <p className="text-lg text-muted-foreground mb-3 leading-relaxed">
                  Our commercial-grade marquee letter packages are designed for repeat rentals, long-term durability, and strong ROI. Get a proven inventory foundation with premium 36″ letters, durable finishes, and logistics handled—so you can launch faster or scale what you already have.
                </p>
@@ -157,17 +157,29 @@ const RentalInventory = () => {
         </div>
       </section>
 
+      {/* New introductory paragraph — directly under hero, above "Why Most Event Businesses" */}
+      <section className="py-4 px-4">
+        <div className="max-w-4xl mx-auto">
+          <p className="text-base text-muted-foreground leading-relaxed mb-4">
+            If you're building or expanding a marquee letter rental business, your inventory determines your earning capacity. Our commercial-grade 36″ letters are the industry standard for rental companies, with 48″ options available for larger-scale displays and premium bookings. Complete inventory includes letters, numbers, symbols, and optional double-row display stands — allowing you to service weddings, corporate events, school functions, milestone celebrations, and fully custom names or event titles without turning away high-value bookings.
+          </p>
+          <p className="text-base text-muted-foreground leading-relaxed">
+            This page outlines realistic inventory investment ranges (typically $12,000–$35,000 depending on scope), revenue potential per event, and how to structure scalable inventory correctly from the start.
+          </p>
+        </div>
+      </section>
+
       {/* H2 Section — Commercial-Grade Inventory */}
       <section className="py-4 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-lg md:text-xl font-bold text-foreground mb-3">
-            Marquee Letter Rental Business Packages — Commercial-Grade Inventory
+            Commercial-Grade Marquee Rental Inventory
           </h2>
           <p className="text-sm md:text-base text-muted-foreground leading-relaxed mb-4">
-            Owning your own marquee letter rental inventory allows you to generate revenue from repeat bookings without paying franchise fees or ongoing royalties. Our packages are designed specifically for entrepreneurs and event rental companies who want a scalable, asset-based business model.
+            Owning your own marquee letter rental inventory allows you to generate revenue from repeat bookings without paying franchise fees or ongoing royalties. Our commercial marquee letters are available in complete sets — letters A–Z, numbers 0–9, symbols such as the ampersand and other common event characters — along with optional double-row display stands. The 36-inch marquee letters are the most common rental size, while 48-inch marquee letters are available for higher-impact displays and premium bookings.
           </p>
           <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
-            Each inventory package includes commercial-grade, event-ready marquee letters built for durability, transport, and high-visibility impact. These are not decorative props — they are revenue-producing assets designed for long-term use and strong return on investment.
+            Because of commercial production efficiencies, building complete inventory up front is significantly more cost-effective than ordering small quantities over time. Each piece is built from steel with a durable powder-coated finish, designed for repeated transport and long-term use — these are revenue-producing assets, not decorative props.
           </p>
         </div>
       </section>
