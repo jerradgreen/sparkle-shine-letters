@@ -73,9 +73,9 @@ const RentalInventory = () => {
              {/* Mobile content */}
              <div className="text-left">
                <h1 className="text-xl font-bold text-foreground mb-2 leading-tight">
-                 Commercial Marquee Letter Rental Business Packages
-               </h1>
-               <p className="text-base text-muted-foreground leading-snug mb-2">
+                  Start or Expand a Commercial Marquee Letter Rental Business
+                </h1>
+                <p className="text-base text-muted-foreground leading-snug mb-2">
                  Our commercial-grade marquee letter rental business packages are built for entrepreneurs and event rental companies who want to start or expand a profitable marquee rental inventory. Each package includes durable 36″ letters (with 48″ options available) designed for repeated bookings, long-term use, and strong ROI.
                </p>
                <p className="text-sm text-muted-foreground leading-relaxed mb-3">
@@ -114,8 +114,8 @@ const RentalInventory = () => {
                  For Entrepreneurs & Event Rental Companies
                </p>
                <h1 className="text-2xl xl:text-3xl font-bold text-foreground mb-4 leading-tight">
-                 Commercial Marquee Letter Rental Business Packages
-               </h1>
+                  Start or Expand a Commercial Marquee Letter Rental Business
+                </h1>
                <p className="text-lg text-muted-foreground mb-3 leading-relaxed">
                  Our commercial-grade marquee letter rental business packages are built for entrepreneurs and event rental companies who want to start or expand a profitable marquee rental inventory. Each package includes durable 36″ letters (with 48″ options available) designed for repeated bookings, long-term use, and strong ROI.
                </p>
