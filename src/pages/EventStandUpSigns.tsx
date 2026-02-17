@@ -41,6 +41,20 @@ const EventStandUpSigns = () => {
         </div>
       </section>
 
+      {/* Institutional / Repeat-Use Block */}
+      <section className="py-8 px-4 bg-background">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-lg md:text-xl font-bold text-foreground mb-3 text-center">
+            Who Buys Commercial Marquee Letters?
+          </h2>
+          <p className="text-sm md:text-base text-muted-foreground leading-relaxed mb-3">
+            Our stand-up marquee letters are purchased by <strong>high schools, middle schools, universities, athletic departments, corporations, and event companies</strong> that use them repeatedly — not just once. Common use cases include pep rallies, graduations, fundraisers, recruiting events, brand activations, conferences, and stage backdrops.
+          </p>
+          <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
+            Schools and teams spelling out their name, companies displaying a brand or hashtag, and event businesses offering custom setups — all of these require enough letters, numbers, and symbols to meet demand. Buying a partial set means turning down jobs and leaving money on the table.
+          </p>
+        </div>
+      </section>
 
       <HighlightsSection />
       <TestimonialSection config={standUpSignsConfig.testimonials} />
@@ -60,6 +74,26 @@ const EventStandUpSigns = () => {
               Looking for a different style of sign?<br className="md:hidden" /> Click here to go to the homepage
             </span>
           </Button>
+        </div>
+      </section>
+
+      {/* What to Buy — Inventory Guidance */}
+      <section className="py-8 px-4 bg-muted/20">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-lg md:text-xl font-bold text-foreground mb-3 text-center">
+            What to Buy: Letters, Numbers, Symbols &amp; Accessories
+          </h2>
+          <ul className="text-sm md:text-base text-muted-foreground space-y-2 list-disc list-inside">
+            <li><strong>Letters A–Z</strong> and <strong>numbers 0–9</strong> — spell names, dates, years, and custom phrases.</li>
+            <li><strong>Symbols</strong> — ampersand (&amp;), hashtag (#), heart (♥), and more.</li>
+            <li><strong>36″ letters</strong> are the standard size. <strong>48″ letters</strong> are available for maximum visibility at larger venues.</li>
+            <li><strong>15″ topper phrases</strong> (THE, MR&amp;MRS, CLASS OF, BABY) sit on top of your letters for layered displays.</li>
+            <li><strong>Double-row display stands</strong> (optional) hold two rows of letters side by side for longer messages.</li>
+            <li><strong>Foam-lined boxes</strong> (optional) for safe storage and repeated transport.</li>
+          </ul>
+          <p className="text-sm text-muted-foreground mt-4 italic">
+            We strongly recommend ordering your full inventory upfront. Commercial production runs are more efficient at scale — adding small quantities later typically costs more per unit and extends lead times.
+          </p>
         </div>
       </section>
 
@@ -86,15 +120,19 @@ const EventStandUpSigns = () => {
           </div>
 
           <p className="text-sm text-muted-foreground mt-8 max-w-5xl mx-auto">
-            Interested in using these letters as revenue-producing assets? Our{' '}
+            Starting a marquee letter rental business? Our{' '}
             <a href="/rental-inventory" className="text-primary underline hover:text-primary/80 transition-colors">
-              commercial marquee letter rental inventory packages
+              commercial rental inventory packages
             </a>{' '}
-             are built for durability, transport, and strong return on investment.
+            are designed for durability, transport, and strong return on investment.
           </p>
 
           <p className="text-sm text-muted-foreground mt-4 max-w-5xl mx-auto">
-            For business owners interested in building recurring event revenue, event-style marquee letters often form the foundation of a <a href="/rental-business" className="text-primary underline hover:text-primary/80 transition-colors">structured rental inventory strategy</a>.
+            Need a different style of sign? Explore our{' '}
+            <a href="/wall-hanging-signs" className="text-primary underline hover:text-primary/80 transition-colors">
+              wall-hanging marquee signs and custom layered logos
+            </a>{' '}
+            for permanent installations, retail displays, and branded décor.
           </p>
         </div>
       </section>

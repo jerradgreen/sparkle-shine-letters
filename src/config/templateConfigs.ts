@@ -360,17 +360,17 @@ export const wallHangingConfig: TemplateConfig = {
 
 // Event Style Stand-Up Signs Template
 export const standUpSignsConfig: TemplateConfig = {
-  pageTitle: "Event Stand-Up Sign Rental Business - Portable Event Signage Package",
-  metaDescription: "Start your event stand-up sign business. Portable, quick-setup signs perfect for any event. Easy transport, professional appearance, fast ROI.",
-  keywords: ["stand up signs", "portable signs", "event signage", "quick setup signs", "mobile signage"],
+  pageTitle: "Commercial Marquee Letters for Sale | 36\" & 48\" Stand-Up Letters for Events",
+  metaDescription: "Commercial-grade 36\" and 48\" stand-up marquee letters for schools, universities, corporations, and event businesses. Self-standing, LED-lit, and built for repeat use. Letters, numbers, symbols, and topper phrases available.",
+  keywords: ["commercial marquee letters", "marquee letters for sale", "36 inch marquee letters", "48 inch marquee letters", "stand-up marquee letters", "marquee letters for schools", "marquee letters for universities", "marquee letters for corporate events", "custom marquee letters for events", "marquee numbers and symbols"],
   
   hero: {
-    headline: "MARQUEE LETTER RENTALS",
-    subheadline: "Commercial-quality stand-up marquee letters that make every event unforgettable",
+    headline: "Commercial 36\" & 48\" Stand-Up Marquee Letters for Sale",
+    subheadline: "Built for schools, universities, corporations, and event companies that need bold, reusable signage for every occasion.",
     ctaText: "Get Your Quote",
     ctaAction: "pricing",
     heroImage: '/images/hero-lockwoods.webp',
-    heroImageAlt: "THE LOCKWOODS marquee letters with couple dancing at elegant event",
+    heroImageAlt: "36-inch stand-up marquee letters spelling THE LOCKWOODS at an elegant event venue",
     layout: "centered"
   },
   
@@ -385,7 +385,7 @@ export const standUpSignsConfig: TemplateConfig = {
       },
       {
         title: "Bold & Bright",
-        description: "At 36\" to 48\" tall with LED bulbs and a sleek finish, they make a big impact at weddings, proms, and parties.",
+        description: "At 36\" to 48\" tall with LED bulbs and a sleek finish, they make a big impact at graduations, pep rallies, corporate events, and brand activations.",
         icon: "✨"
       },
       {
@@ -434,12 +434,12 @@ export const standUpSignsConfig: TemplateConfig = {
     title: "Event Gallery",
     subtitle: "See our marquee lights in action",
     images: [
-      { src: image1969, alt: "1969 marquee letters at elegant event" },
-      { src: imageElev8, alt: "ELEV8 marquee letters corporate event" },
-      { src: imageMarryMe, alt: "MARRY ME marquee proposal setup" },
-      { src: imageDrewiaHill, alt: "DREWIA HILL marquee letters wedding celebration" },
-      { src: imageSetup1, alt: "Professional event setup with marquee letters" },
-      { src: imageSetup2, alt: "Corporate event marquee letter display" }
+      { src: image1969, alt: "36-inch marquee numbers spelling 1969 at a themed event" },
+      { src: imageElev8, alt: "36-inch stand-up marquee letters spelling ELEV8 at a corporate brand activation" },
+      { src: imageMarryMe, alt: "36-inch marquee letters spelling MARRY ME at an outdoor proposal event" },
+      { src: imageDrewiaHill, alt: "36-inch stand-up marquee letters spelling a custom name at an event venue" },
+      { src: imageSetup1, alt: "Professional setup of 36-inch commercial marquee letters on stage" },
+      { src: imageSetup2, alt: "Stand-up marquee letters displayed at a corporate event venue" }
     ]
   },
   
@@ -447,37 +447,49 @@ export const standUpSignsConfig: TemplateConfig = {
     title: "Frequently Asked Questions",
     items: [
       {
-        question: "What size are the letters? And do you offer larger ones?",
-        answer: "The event style letters are 36\" or 48\", but 36\" letters are recommended for quicker ship time and ease of storage, transport and setup. We can do larger letters if needed, just reach out for that."
+        question: "What sizes are available?",
+        answer: "We offer 36\" and 48\" stand-up marquee letters. The 36\" size is the most popular — it's easier to store, transport, and set up, and ships faster. The 48\" size is available for buyers who need maximum visibility at large venues or outdoor events."
+      },
+      {
+        question: "What's the difference between 36\" and 48\" letters?",
+        answer: "Both sizes are built the same way — powder-coated steel, LED-lit, self-standing. The 48\" letters are taller and more visible from a distance, making them ideal for large auditoriums, outdoor stadiums, or convention halls. The 36\" letters are easier to handle and store, and work great for most indoor venues, stages, and event spaces."
+      },
+      {
+        question: "Do you sell numbers and symbols too?",
+        answer: "Yes. We offer the full alphabet A–Z, numbers 0–9, and common symbols including the ampersand (&), hashtag (#), and heart (♥). This lets you spell out dates, years, scores, hashtags, and custom phrases beyond just names."
       },
       {
         question: "What are toppers?",
-        answer: "Toppers are 15\" tall word signs like THE, MR&MRS, CLASS OF, and BABY. Each phrase is pre-mounted on a shared base so you can easily set them on top of your 36\" letters for layered displays — and extra rental income."
+        answer: "Toppers are 15\" tall word signs like THE, MR&MRS, CLASS OF, and BABY. Each phrase is pre-mounted on a shared base so you can set them on top of your 36\" letters for layered displays — great for graduations, team events, and branded setups."
       },
       {
-        question: "How much can I rent the letters for?",
-        answer: "Typical rates range from $75–$150 per letter, depending on your market. You can also offer bundles, delivery/setup add-ons, or even client pickup (with proper documentation and damage policies). You're in control of the pricing — it's your business."
+        question: "Do you offer display stands?",
+        answer: "Yes. We offer optional double-row display stands that hold two rows of letters side by side. These are useful for spelling out longer names, dates, or phrases in a compact footprint."
+      },
+      {
+        question: "How are the letters packaged for shipping?",
+        answer: "Letters ship in reusable foam-lined boxes designed for repeated use. Each letter is individually cushioned to prevent damage during transit and storage. The boxes are built to last through many events — not just one shipment."
       },
       {
         question: "Where are these made?",
-        answer: "We manufacture our letters overseas through a trusted production partner I've worked with for over 10 years. That relationship is what allows us to offer this level of quality, powder coating, precision packing, and attention to detail — all at a price that simply wouldn't be possible if made locally."
+        answer: "We manufacture our letters overseas through a trusted production partner we've worked with for over 10 years. That relationship is what allows us to offer this level of quality, powder coating, precision packing, and attention to detail — all at a price that simply wouldn't be possible if made locally."
       },
       {
         question: "Is there a warranty?",
-        answer: "Yes. We replace any items damaged beyond simple repair during shipping or due to a manufacturing issue. We do not replace items damaged from dropping, tipping, or event misuse. That said, the product is built strong and packed well — breakage is rare, and we'll always take care of you if it's something on our end."
+        answer: "Yes. We replace any items damaged beyond simple repair during shipping or due to a manufacturing issue. We do not replace items damaged from dropping, tipping, or misuse. The product is built strong and packed well — breakage is rare, and we'll always take care of you if it's something on our end."
       },
       {
         question: "What kind of bulbs do you use?",
-        answer: "We use LED bulbs with E12 (candelabra) bases — long-lasting, energy efficient, and easy to replace. You'll receive spare bulbs with your order, and if you ever need more, we can ship replacements. You can also find fun or creative options on Amazon that fit the same base."
+        answer: "We use LED bulbs with E12 (candelabra) bases — long-lasting, energy efficient, and easy to replace. You'll receive spare bulbs with your order, and if you ever need more, we can ship replacements. You can also find compatible options on Amazon that fit the same base."
       }
     ]
   },
   
   business: {
-    name: "Event Stand-Up Signs",
-    description: "Portable event stand-up sign rental business",
+    name: "Commercial Stand-Up Marquee Letters",
+    description: "Commercial-grade stand-up marquee letters for schools, universities, corporations, and event businesses",
     type: "LocalBusiness",
-    industry: "event rental"
+    industry: "commercial signage"
   },
   
   theme: {
