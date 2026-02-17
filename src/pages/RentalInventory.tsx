@@ -76,7 +76,7 @@ const RentalInventory = () => {
                  Commercial Marquee Letter Rental Business Packages
                </h1>
                <p className="text-base text-muted-foreground leading-snug mb-2">
-                 Our commercial-grade marquee letter rental business packages are built for entrepreneurs and event rental companies who want to start or expand a profitable marquee rental inventory. Each package includes durable 36″ letters designed for repeated bookings, long-term use, and strong ROI.
+                 Our commercial-grade marquee letter rental business packages are built for entrepreneurs and event rental companies who want to start or expand a profitable marquee rental inventory. Each package includes durable 36″ letters (with 48″ options available) designed for repeated bookings, long-term use, and strong ROI.
                </p>
                <p className="text-sm text-muted-foreground leading-relaxed mb-3">
                  Rental inventory packages are revenue-producing assets — not décor. Most clients invest $15,000-$35,000 depending on configuration. With consistent bookings, many recover their investment within the first year and continue generating profit for years after.
@@ -117,7 +117,7 @@ const RentalInventory = () => {
                  Commercial Marquee Letter Rental Business Packages
                </h1>
                <p className="text-lg text-muted-foreground mb-3 leading-relaxed">
-                 Our commercial-grade marquee letter rental business packages are built for entrepreneurs and event rental companies who want to start or expand a profitable marquee rental inventory. Each package includes durable 36″ letters designed for repeated bookings, long-term use, and strong ROI.
+                 Our commercial-grade marquee letter rental business packages are built for entrepreneurs and event rental companies who want to start or expand a profitable marquee rental inventory. Each package includes durable 36″ letters (with 48″ options available) designed for repeated bookings, long-term use, and strong ROI.
                </p>
                <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
                  Rental inventory packages are revenue-producing assets — not décor. Most clients invest $15,000-$35,000 depending on configuration. With consistent bookings, many recover their investment within the first year and continue generating profit for years after.
@@ -153,6 +153,21 @@ const RentalInventory = () => {
               />
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* H2 Section — Commercial-Grade Inventory */}
+      <section className="py-8 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6">
+            Marquee Letter Rental Business Packages — Commercial-Grade Inventory
+          </h2>
+          <p className="text-sm md:text-base text-muted-foreground leading-relaxed mb-4">
+            Owning your own marquee letter rental inventory allows you to generate revenue from repeat bookings without paying franchise fees or ongoing royalties. Our packages are designed specifically for entrepreneurs and event rental companies who want a scalable, asset-based business model.
+          </p>
+          <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
+            Each inventory package includes commercial-grade, event-ready marquee letters built for durability, transport, and high-visibility impact. These are not decorative props — they are revenue-producing assets designed for long-term use and strong return on investment.
+          </p>
         </div>
       </section>
 
@@ -791,6 +806,11 @@ const RentalInventory = () => {
               <h3 className="text-base font-bold mb-2 text-foreground">Q: How much storage space will I need?</h3>
               <p className="text-sm text-muted-foreground">Keeping everything in boxes? Plan for 300–400 sq ft and solid shelving.</p>
               <p className="text-sm text-muted-foreground mt-1">One client removed the boxes and fit an entire 112-piece package into a 10×20 unit using Uline shelves. Either way, efficient organization will make a huge difference.</p>
+            </div>
+            {/* FAQ Item 14 */}
+            <div className="border-b border-border pb-4">
+              <h3 className="text-base font-bold mb-2 text-foreground">Q: Is this for event rentals or starting my own rental business?</h3>
+              <p className="text-sm text-muted-foreground">These packages are specifically built for entrepreneurs and event rental companies who want to own their own marquee letter rental inventory. This is not a short-term event rental — it's a business investment.</p>
             </div>
           </div>
 
