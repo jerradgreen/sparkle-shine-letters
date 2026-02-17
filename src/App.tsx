@@ -25,6 +25,7 @@ import RentalGuide from "./pages/download/RentalGuide";
 import RentalGuideThankYou from "./pages/download/RentalGuideThankYou";
 import QuoteSelector from "./pages/QuoteSelector";
 import RentalBusiness from "./pages/RentalBusiness";
+import RentalBusinessStartupCost from "./pages/RentalBusinessStartupCost";
 import ShopLetters from "./pages/ShopLetters";
 import ProductDetail from "./pages/ProductDetail";
 import WallHangingThankYou from "./pages/thank-you/WallHangingThankYou";
@@ -60,6 +61,7 @@ const RouterContent = () => {
         <Route path="/download/rental-guide" element={<RentalGuide />} />
         <Route path="/download/rental-guide-thank-you" element={<RentalGuideThankYou />} />
         <Route path="/rental-business" element={<RentalBusiness />} />
+        <Route path="/rental-business/startup-cost" element={<RentalBusinessStartupCost />} />
         <Route path="/shop/36-inch-letters" element={<ShopLetters />} />
         <Route path="/product/:handle" element={<ProductDetail />} />
         <Route path="/thank-you/wall-hanging" element={<WallHangingThankYou />} />
