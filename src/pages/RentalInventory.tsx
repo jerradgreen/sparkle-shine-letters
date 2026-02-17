@@ -289,29 +289,6 @@ const RentalInventory = () => {
         </div>
       </section>
 
-      {/* Learn More About Starting a Rental Business */}
-      <section className="py-12 px-4">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-6 text-foreground">
-            Learn More About Starting a Marquee Letter Rental Business
-          </h2>
-          <p className="text-base text-muted-foreground leading-relaxed mb-6 text-center">
-            If you're researching how to start or scale a marquee letter rental business, these in-depth guides break down startup investment, inventory strategy, and long-term profitability.
-          </p>
-          <ul className="list-disc list-inside text-base text-muted-foreground leading-relaxed space-y-3 pl-4">
-            <li>
-              <Link to="/rental-business/startup-cost" className="text-primary hover:underline font-semibold">How Much Does It Cost to Start a Marquee Letter Rental Business?</Link>
-            </li>
-            <li>
-              <Link to="/rental-business/building-a-scalable-inventory" className="text-primary hover:underline font-semibold">Building a Scalable Marquee Letter Inventory</Link>
-            </li>
-            <li>
-              <Link to="/rental-business/profitability" className="text-primary hover:underline font-semibold">Marquee Letter Rental Business Profitability Guide</Link>
-            </li>
-          </ul>
-        </div>
-      </section>
-
       {/* SEO FAQ Section - Starting a Marquee Letter Rental Business */}
       <section className="py-16 px-4">
         <div className="max-w-4xl mx-auto">
@@ -772,6 +749,29 @@ const RentalInventory = () => {
           >
             Get Package Pricing Now
           </Button>
+        </div>
+      </section>
+
+      {/* Learn More About Starting a Rental Business */}
+      <section className="py-12 px-4">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-6 text-foreground">
+            Learn More About Starting a Marquee Letter Rental Business
+          </h2>
+          <p className="text-base text-muted-foreground leading-relaxed mb-6 text-center">
+            If you're researching how to start or scale a marquee letter rental business, these in-depth guides break down startup investment, inventory strategy, and long-term profitability.
+          </p>
+          <ul className="list-disc list-inside text-base text-muted-foreground leading-relaxed space-y-3 pl-4">
+            <li>
+              <Link to="/rental-business/startup-cost" className="text-primary hover:underline font-semibold">How Much Does It Cost to Start a Marquee Letter Rental Business?</Link>
+            </li>
+            <li>
+              <Link to="/rental-business/building-a-scalable-inventory" className="text-primary hover:underline font-semibold">Building a Scalable Marquee Letter Inventory</Link>
+            </li>
+            <li>
+              <Link to="/rental-business/profitability" className="text-primary hover:underline font-semibold">Marquee Letter Rental Business Profitability Guide</Link>
+            </li>
+          </ul>
         </div>
       </section>
 
