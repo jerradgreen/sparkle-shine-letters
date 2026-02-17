@@ -360,8 +360,8 @@ export const wallHangingConfig: TemplateConfig = {
 
 // Event Style Stand-Up Signs Template
 export const standUpSignsConfig: TemplateConfig = {
-  pageTitle: "Commercial Marquee Letters for Sale | 36\" & 48\" Stand-Up Letters for Events",
-  metaDescription: "Commercial-grade 36\" and 48\" stand-up marquee letters for schools, universities, corporations, and event businesses. Self-standing, LED-lit, and built for repeat use. Letters, numbers, symbols, and topper phrases available.",
+  pageTitle: "Commercial 36\" & 48\" Stand-Up Marquee Letters | Schools & Corporate Events",
+  metaDescription: "Commercial-grade 36\" and 48\" stand-up marquee letters for schools, universities, teams, and corporate events. Built for repeat use and long-term ownership.",
   keywords: ["commercial marquee letters", "marquee letters for sale", "36 inch marquee letters", "48 inch marquee letters", "stand-up marquee letters", "marquee letters for schools", "marquee letters for universities", "marquee letters for corporate events", "custom marquee letters for events", "marquee numbers and symbols"],
   
   hero: {
