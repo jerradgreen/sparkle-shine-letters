@@ -912,6 +912,21 @@ const RentalInventory = () => {
         </div>
       </section>
 
+      {/* How to Start Section */}
+      <section className="py-8 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-lg md:text-xl font-bold text-foreground mb-3">
+            How to Start a Marquee Letter Rental Business
+          </h2>
+          <p className="text-sm md:text-base text-muted-foreground leading-relaxed mb-4">
+            Owning your own marquee letter rental inventory allows you to generate revenue from repeat bookings without franchise fees or ongoing royalties. Marquee letters are in high demand for weddings, birthdays, baby showers, corporate events, schools, hotels, and festivals — and they're highly "Instagrammable," eye-catching centerpieces that clients are willing to pay premium rates for.
+          </p>
+          <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
+            Each package includes durable 36″ commercial-grade letters with powder-coated finishes, long-lasting LED bulbs (with optional color-changing or LED neon upgrades), and reusable foam-lined transport boxes. With the right marketing and referral partners — venues, planners, decor companies, and schools — many owners book events before their inventory even arrives and recover their investment quickly.
+          </p>
+        </div>
+      </section>
+
       {/* Packages & Pricing */}
       <section className="py-16 px-4 bg-gradient-to-r from-primary/5 to-accent/5">
         <div className="max-w-6xl mx-auto">
