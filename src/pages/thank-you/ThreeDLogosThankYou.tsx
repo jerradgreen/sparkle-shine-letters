@@ -14,6 +14,7 @@ const ThreeDLogosThankYou = () => {
     <div className="min-h-screen bg-background">
       <Helmet>
         <title>Thank You - Vintage Marquee Lights</title>
+        <meta name="description" content="Thank you for your 3D layered logo sign quote request. We'll follow up shortly." />
         <meta name="robots" content="noindex, nofollow" />
       </Helmet>
       <Navigation />
