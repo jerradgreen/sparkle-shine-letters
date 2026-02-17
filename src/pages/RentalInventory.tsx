@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -285,6 +286,40 @@ const RentalInventory = () => {
               Rather than viewing marquee letters as décor, successful event businesses treat them as scalable inventory — assets that can book across weddings, corporate events, proms, milestone birthdays, and private parties year after year.
             </p>
           </div>
+        </div>
+      </section>
+
+      {/* SEO FAQ Section - Starting a Marquee Letter Rental Business */}
+      <section className="py-16 px-4">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-8 text-foreground">
+            Frequently Asked Questions About Starting a Marquee Letter Rental Business
+          </h2>
+          <div className="space-y-8">
+            <div>
+              <h3 className="text-xl font-semibold text-foreground mb-2">How much does it cost to start a marquee letter rental business?</h3>
+              <p className="text-base text-muted-foreground leading-relaxed">Startup investment varies depending on inventory size, but most professional rental operators begin with $15,000–$35,000 in commercial-grade letters, numbers, and toppers. The key is selecting high-demand characters that book consistently across weddings, corporate events, and private parties.</p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-foreground mb-2">How much can you make renting marquee letters?</h3>
+              <p className="text-base text-muted-foreground leading-relaxed">A typical 36″ marquee letter rents for $75–$125 per letter per event. Most bookings include 4–6 letters or numbers, generating $400–$700+ per event. With just 3–5 bookings per month, many operators generate $1,200–$3,500+ monthly from the same inventory.</p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-foreground mb-2">What inventory should I buy first?</h3>
+              <p className="text-base text-muted-foreground leading-relaxed">The most versatile starting inventory includes 36″ A–Z letters, popular numbers (0–9), and common word toppers like "MR & MRS," "LOVE," and "THE." High-demand characters maximize booking flexibility while minimizing storage complexity.</p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-foreground mb-2">How long does it take to recover your investment?</h3>
+              <p className="text-base text-muted-foreground leading-relaxed">Many rental companies recover their initial investment within the first year through consistent bookings and repeat clients. Because commercial-grade letters are built for durability and transport, they continue generating revenue for years beyond break-even.</p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-foreground mb-2">Are commercial marquee letters different from decorative props?</h3>
+              <p className="text-base text-muted-foreground leading-relaxed">Yes. Commercial-grade marquee letters are designed for repeated rentals, transportation, and long-term durability. They use steel construction, professional finishes, and serviceable LED systems — unlike decorative or consumer-grade products.</p>
+            </div>
+          </div>
+          <p className="text-base text-muted-foreground leading-relaxed mt-8 text-center">
+            Ready to launch? <Link to="/rental-inventory" className="text-primary hover:underline font-semibold">Explore our complete marquee letter rental business packages</Link>.
+          </p>
         </div>
       </section>
 
