@@ -264,6 +264,30 @@ const RentalInventory = () => {
         </div>
       </section>
 
+      {/* ROI Section */}
+      <section className="py-16 px-4">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-8 text-foreground">What Does the ROI Look Like for a Marquee Letter Rental Business?</h2>
+          <div className="space-y-4">
+            <p className="text-base text-muted-foreground leading-relaxed">
+              Unlike many event investments that are single-use or trend-dependent, commercial-grade marquee letters are durable revenue assets designed to generate repeat bookings for years.
+            </p>
+            <p className="text-base text-muted-foreground leading-relaxed">
+              A typical 36″ marquee letter rental ranges from $75–$125 per letter per event, depending on market and event type. Many bookings include 4–6 letters or numbers, placing average event revenue between $400–$700+ per booking.
+            </p>
+            <p className="text-base text-muted-foreground leading-relaxed">
+              For rental companies securing just 3–5 events per month, that can represent $1,200–$3,500+ in monthly revenue from the same inventory set.
+            </p>
+            <p className="text-base text-muted-foreground leading-relaxed">
+              While results vary based on pricing, marketing, and local demand, many operators recover their initial investment within the first year and continue generating revenue long after break-even. Because the letters are built from steel and designed for transport, they're intended to withstand frequent rentals and long-term use.
+            </p>
+            <p className="text-base text-muted-foreground leading-relaxed">
+              Rather than viewing marquee letters as décor, successful event businesses treat them as scalable inventory — assets that can book across weddings, corporate events, proms, milestone birthdays, and private parties year after year.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* You Don't Need a Franchise Section */}
       <section className="py-12 px-4">
         <div className="max-w-6xl mx-auto">
