@@ -318,7 +318,7 @@ const RentalInventory = () => {
             </div>
           </div>
           <p className="text-base text-muted-foreground leading-relaxed mt-8 text-center">
-            Ready to launch? <Link to="/rental-inventory" className="text-primary hover:underline font-semibold">Explore our complete marquee letter rental business packages</Link>.
+            Ready to launch? <button onClick={openQuoteForm} className="text-primary hover:underline font-semibold cursor-pointer bg-transparent border-none p-0 inline text-base">Explore our complete marquee letter rental business packages</button>.
           </p>
         </div>
       </section>
