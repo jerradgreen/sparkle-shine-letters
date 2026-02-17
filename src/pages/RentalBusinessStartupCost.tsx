@@ -39,7 +39,7 @@ const RentalBusinessStartupCost = () => {
                   The majority of your startup capital goes toward durable 36-inch steel marquee letters, numbers, and high-demand characters. Commercial-grade construction matters because these units are transported, set up, and broken down repeatedly — often multiple times per week during peak season. Inventory that can't withstand that cycle becomes a liability, not an asset.
                 </p>
                 <p className="text-base text-muted-foreground leading-relaxed">
-                  Serious operators focus their initial investment on versatile alphabet coverage, high-demand numbers, popular event word combinations, and foam-lined transport protection that preserves finish quality and structural integrity over hundreds of uses.
+                  Serious operators focus their initial investment on versatile alphabet coverage, high-demand numbers, popular event word combinations, and foam-lined transport protection that preserves finish quality and structural integrity over hundreds of uses. Strategic inventory planning, including letters, numbers, symbols, and display configurations, is essential when building a <Link to="/rental-business/building-a-scalable-inventory" className="text-primary hover:underline font-semibold">scalable rental operation</Link>.
                 </p>
               </div>
             </section>
