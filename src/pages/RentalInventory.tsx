@@ -37,7 +37,7 @@ const RentalInventory = () => {
     <div className="min-h-screen bg-background">
       <Helmet>
         <title>Commercial Marquee Letter Packages for Rental Businesses | Start or Expand Your Inventory</title>
-        <meta name="description" content="Commercial-grade marquee letter packages built for entrepreneurs and event rental companies. Start or expand your marquee letter rental business with high-profit, revenue-producing inventory. No franchise fees." />
+        <meta name="description" content="Commercial-grade marquee letter rental business packages built for entrepreneurs and event rental companies. Start or expand your marquee rental inventory with durable, revenue-producing assets." />
         {/* Preload locally hosted hero image for optimal LCP */}
         <link 
           rel="preload" 
