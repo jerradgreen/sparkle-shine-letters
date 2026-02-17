@@ -157,9 +157,12 @@ const RentalInventory = () => {
         </div>
       </section>
 
-      {/* New introductory paragraph — directly under hero, above "Why Most Event Businesses" */}
-      <section className="py-4 px-4">
+      {/* Intro section — directly under hero, above "Why Most Event Businesses" */}
+      <section className="py-8 px-4">
         <div className="max-w-4xl mx-auto">
+          <h2 className="text-lg md:text-xl font-bold text-foreground mb-4 text-center">
+            Build Your Marquee Letter Rental Business with the Right Inventory
+          </h2>
           <p className="text-base text-muted-foreground leading-relaxed mb-4">
             If you're building or expanding a marquee letter rental business, your inventory determines your earning capacity. Our commercial-grade 36″ letters are the industry standard for rental companies, with 48″ options available for larger-scale displays and premium bookings. Complete inventory includes letters, numbers, symbols, and optional double-row display stands — allowing you to service weddings, corporate events, school functions, milestone celebrations, and fully custom names or event titles without turning away high-value bookings.
           </p>
