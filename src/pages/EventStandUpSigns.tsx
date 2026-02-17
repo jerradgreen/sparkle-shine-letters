@@ -129,7 +129,11 @@ const EventStandUpSigns = () => {
           <p className="text-sm text-muted-foreground mt-4 max-w-5xl mx-auto">
             Need a different style of sign? Explore our{' '}
             <a href="/wall-hanging-signs" className="text-primary underline hover:text-primary/80 transition-colors">
-              wall-hanging marquee signs and custom layered logos
+              wall-hanging marquee signs
+            </a>{' '}
+            and{' '}
+            <a href="/3d-logos" className="text-primary underline hover:text-primary/80 transition-colors">
+              custom layered logos
             </a>{' '}
             for permanent installations, retail displays, and branded décor.
           </p>
