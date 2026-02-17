@@ -51,7 +51,7 @@ const EventStandUpSigns = () => {
             Our stand-up marquee letters are purchased by <strong>high schools, middle schools, universities, athletic departments, corporations, and event companies</strong> that use them repeatedly — not just once. Common use cases include pep rallies, graduations, fundraisers, recruiting events, brand activations, conferences, and stage backdrops.
           </p>
           <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
-            Schools and teams spelling out their name, companies displaying a brand or hashtag, and event businesses offering custom setups — all of these require enough letters, numbers, and symbols to meet demand. Buying a partial set means turning down jobs and leaving money on the table.
+            Owning only a partial alphabet limits what you can spell — which limits what events you can serve. Limited inventory forces compromises or turned-down bookings. Adding letters later is typically less efficient and more expensive per unit than ordering a complete set upfront.
           </p>
         </div>
       </section>
@@ -120,11 +120,10 @@ const EventStandUpSigns = () => {
           </div>
 
           <p className="text-sm text-muted-foreground mt-8 max-w-5xl mx-auto">
-            Starting a marquee letter rental business? Our{' '}
+            Starting a rental inventory business instead? See our{' '}
             <a href="/rental-inventory" className="text-primary underline hover:text-primary/80 transition-colors">
-              commercial rental inventory packages
-            </a>{' '}
-            are designed for durability, transport, and strong return on investment.
+              Commercial Rental Inventory page
+            </a>.
           </p>
 
           <p className="text-sm text-muted-foreground mt-4 max-w-5xl mx-auto">
@@ -141,7 +140,7 @@ const EventStandUpSigns = () => {
       <section className="py-16 px-4 bg-gradient-to-r from-primary to-primary/80 text-primary-foreground">
         <div className="container mx-auto text-center max-w-3xl">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Ready to Make Your Event Memorable?
+            Ready to Invest in Commercial Marquee Letters?
           </h2>
           <p className="text-lg md:text-xl mb-8">
             Click below, test your letters and get a quote in less than 5 minutes.
