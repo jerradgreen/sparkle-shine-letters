@@ -10,7 +10,7 @@ export const HighlightsSection = () => {
   {
     icon: Star,
       title: "Bold & Bright", 
-      description: "At 36\" to 48\" tall with LED bulbs and a sleek finish, they make a big impact at weddings, proms, and parties."
+      description: "At 36\" to 48\" tall with LED bulbs and a sleek finish, they make a big impact at graduations, pep rallies, corporate events, and brand activations."
     },
   {
     icon: Truck,

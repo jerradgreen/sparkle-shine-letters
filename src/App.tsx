@@ -37,6 +37,10 @@ import EventStandupThankYou from "./pages/thank-you/EventStandupThankYou";
 import MobileVendorThankYou from "./pages/thank-you/MobileVendorThankYou";
 import CustomThankYou from "./pages/thank-you/CustomThankYou";
 import NotSureThankYou from "./pages/thank-you/NotSureThankYou";
+import BlogIndex from "./pages/blog/BlogIndex";
+import WhySchoolsBuyMarqueeLetters from "./pages/blog/WhySchoolsBuyMarqueeLetters";
+import ThirtySixVsFortyEightInchMarqueeLetters from "./pages/blog/ThirtySixVsFortyEightInchMarqueeLetters";
+import UniversitiesTeamsMarqueeLetters from "./pages/blog/UniversitiesTeamsMarqueeLetters";
 
 const queryClient = new QueryClient();
 
@@ -75,6 +79,10 @@ const RouterContent = () => {
         <Route path="/thank-you/mobile-vendor" element={<MobileVendorThankYou />} />
         <Route path="/thank-you/custom" element={<CustomThankYou />} />
         <Route path="/thank-you/not-sure" element={<NotSureThankYou />} />
+        <Route path="/blog" element={<BlogIndex />} />
+        <Route path="/blog/why-schools-buy-commercial-marquee-letters" element={<WhySchoolsBuyMarqueeLetters />} />
+        <Route path="/blog/36-vs-48-inch-marquee-letters" element={<ThirtySixVsFortyEightInchMarqueeLetters />} />
+        <Route path="/blog/universities-teams-marquee-letters-branding" element={<UniversitiesTeamsMarqueeLetters />} />
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />
       </Routes>

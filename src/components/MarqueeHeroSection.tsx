@@ -22,7 +22,7 @@ export const MarqueeHeroSection = () => {
       <div className="absolute inset-0">
         <img
           src={heroLockwoods}
-          alt="THE LOCKWOODS marquee letters with couple dancing at elegant event"
+          alt="36-inch stand-up marquee letters spelling THE LOCKWOODS at an elegant event venue"
           className="w-full h-full object-cover object-[center_70%]"
           loading="eager"
           decoding="sync"
@@ -36,21 +36,21 @@ export const MarqueeHeroSection = () => {
       {/* Content - Text at top */}
       <div className="relative z-10 text-center text-white max-w-4xl mx-auto md:-mt-12">
         <div className="space-y-0.5">
-          <h1 className="text-xl md:text-2xl lg:text-3xl font-bold leading-tight">
+        <h1 className="text-xl md:text-2xl lg:text-3xl font-bold leading-tight">
             <span className="bg-gradient-to-r from-white to-white/90 bg-clip-text text-transparent">
-              Commercial-Grade Marquee Lights
+              Commercial 36″ &amp; 48″ Stand-Up Marquee Letters for Sale
             </span>
           </h1>
           
           <p className="text-base md:text-lg lg:text-xl leading-relaxed opacity-90 max-w-3xl mx-auto">
-            Make Every Event Unforgettable
+            Built for schools, universities, corporations, and event companies that need bold, reusable signage for every occasion.
           </p>
         </div>
 
         {/* Mobile-only pricing text */}
          <div className="md:hidden mt-3 text-center max-w-2xl mx-auto">
            <p className="text-sm font-semibold leading-snug">
-              Starting at $800. Built for long-term business use, not just one-nighters.
+              36″ letters starting at $800. Letters, numbers, symbols, and topper phrases available.
             </p>
         </div>
       </div>
@@ -58,7 +58,7 @@ export const MarqueeHeroSection = () => {
       {/* Pricing Info - Above review */}
        <div className="hidden md:block relative z-10 text-center text-white max-w-2xl mx-auto space-y-1 mt-auto mb-1">
          <p className="text-sm md:text-base font-semibold leading-snug">
-           Starting at $800. Built for long-term business use, not just one-nighters.
+           36″ letters starting at $800. Letters, numbers, symbols, and topper phrases available.
          </p>
       </div>
 
