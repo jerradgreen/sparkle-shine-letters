@@ -366,11 +366,11 @@ export const standUpSignsConfig: TemplateConfig = {
   
   hero: {
     headline: "Commercial 36\" & 48\" Stand-Up Marquee Letters",
-    subheadline: "Built for schools, universities, corporations, and event companies that need bold, reusable signage for every occasion.",
+    subheadline: "Commercial-grade steel marquee letters built for schools, universities, and corporations that need durable, reusable signage across years of events.",
     ctaText: "Get Your Quote",
     ctaAction: "pricing",
     heroImage: '/images/hero-lockwoods.webp',
-    heroImageAlt: "36-inch stand-up marquee letters spelling THE LOCKWOODS at an elegant event venue",
+    heroImageAlt: "Stand-up marquee letters displayed at an indoor event venue",
     layout: "centered"
   },
   
@@ -380,17 +380,17 @@ export const standUpSignsConfig: TemplateConfig = {
     items: [
       {
         title: "Durable & Self-Standing",
-        description: "Made from powder-coated steel with extra-deep sides, these letters are built to last and stand on their own.",
+        description: "Powder-coated steel construction with a self-standing base design. Built for repeated setup and teardown across years of events.",
         icon: "✓"
       },
       {
         title: "Bold & Bright",
-        description: "At 36\" to 48\" tall with LED bulbs and a sleek finish, they make a big impact at graduations, pep rallies, corporate events, and brand activations.",
+        description: "36-inch and 48-inch tall with LED bulbs. High-visibility impact for graduations, pep rallies, conferences, and brand activations.",
         icon: "✨"
       },
       {
         title: "Easy to Use & Transport",
-        description: "Arrive pre-lit and ready to go, with optional reusable foam-lined boxes for simple storage and travel.",
+        description: "Arrive pre-lit and ready to deploy. Optional foam-lined boxes for long-term storage and repeated transport between venues.",
         icon: "⚡"
       }
     ]
@@ -434,12 +434,12 @@ export const standUpSignsConfig: TemplateConfig = {
     title: "Event Gallery",
     subtitle: "See our marquee lights in action",
     images: [
-      { src: image1969, alt: "36-inch marquee numbers spelling 1969 at a themed event" },
-      { src: imageElev8, alt: "36-inch stand-up marquee letters spelling ELEV8 at a corporate brand activation" },
-      { src: imageMarryMe, alt: "36-inch marquee letters spelling MARRY ME at an outdoor proposal event" },
-      { src: imageDrewiaHill, alt: "36-inch stand-up marquee letters spelling a custom name at an event venue" },
-      { src: imageSetup1, alt: "Professional setup of 36-inch commercial marquee letters on stage" },
-      { src: imageSetup2, alt: "Stand-up marquee letters displayed at a corporate event venue" }
+      { src: image1969, alt: "Marquee numbers displayed at a graduation-themed event" },
+      { src: imageElev8, alt: "Stand-up marquee letters spelling ELEV8 at an event venue" },
+      { src: imageMarryMe, alt: "Stand-up marquee letters spelling MARRY ME at an indoor event display" },
+      { src: imageDrewiaHill, alt: "Stand-up marquee letters displayed at an event venue" },
+      { src: imageSetup1, alt: "Marquee letters displayed on a stage setup" },
+      { src: imageSetup2, alt: "Stand-up marquee letters displayed at an event venue" }
     ]
   },
   
@@ -480,7 +480,11 @@ export const standUpSignsConfig: TemplateConfig = {
       },
       {
         question: "What kind of bulbs do you use?",
-        answer: "We use LED bulbs with E12 (candelabra) bases — long-lasting, energy efficient, and easy to replace. You'll receive spare bulbs with your order, and if you ever need more, we can ship replacements. You can also find compatible options on Amazon that fit the same base."
+        answer: "We use LED bulbs designed for durability and easy replacement. You'll receive spare bulbs with your order, and replacements are available if needed."
+      },
+      {
+        question: "Are these letters suitable for long-term institutional use?",
+        answer: "Yes. These letters are built with powder-coated steel and LED bulbs designed for repeated setup and teardown. Schools, universities, and corporate teams use them across dozens of events per year. With foam-lined storage boxes, they transport safely and store compactly between deployments."
       }
     ]
   },

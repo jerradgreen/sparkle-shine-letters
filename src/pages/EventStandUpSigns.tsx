@@ -45,7 +45,7 @@ const EventStandUpSigns = () => {
       <section className="py-8 px-4 bg-background">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-lg md:text-xl font-bold text-foreground mb-3 text-center">
-            Who Buys Commercial Marquee Letters?
+            Who Buys Commercial Stand-Up Marquee Letters?
           </h2>
           <p className="text-sm md:text-base text-muted-foreground leading-relaxed mb-3">
             Our stand-up marquee letters are purchased by <strong>high schools, middle schools, universities, athletic departments, corporations, and event companies</strong> that use them repeatedly — not just once. Common use cases include pep rallies, graduations, fundraisers, recruiting events, brand activations, conferences, and stage backdrops.
@@ -57,6 +57,19 @@ const EventStandUpSigns = () => {
       </section>
 
       <HighlightsSection />
+
+      {/* Built for Institutional Use */}
+      <section className="py-8 px-4 bg-muted/20">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-lg md:text-xl font-bold text-foreground mb-3 text-center">
+            Built for Institutional Use
+          </h2>
+          <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
+            The 36-inch size is the most common choice for institutional buyers — easy to store, transport, and deploy across a full calendar of events. The 48-inch size is available for high-visibility venues such as auditoriums, outdoor stadiums, and convention halls. Every letter is designed for repeated transport and setup, with powder-coated steel construction that holds up across years of use. Many schools, universities, and corporate teams keep these as repeat-use event inventory.
+          </p>
+        </div>
+      </section>
+
       <TestimonialSection config={standUpSignsConfig.testimonials} />
       <MarqueeVisualizer />
       
@@ -122,18 +135,18 @@ const EventStandUpSigns = () => {
           <p className="text-sm text-muted-foreground mt-8 max-w-5xl mx-auto">
             Starting a rental inventory business instead? See our{' '}
             <a href="/rental-inventory" className="text-primary underline hover:text-primary/80 transition-colors">
-              Commercial Rental Inventory page
+              Commercial Rental Inventory Packages
             </a>.
           </p>
 
           <p className="text-sm text-muted-foreground mt-4 max-w-5xl mx-auto">
             Need a different style of sign? Explore our{' '}
             <a href="/wall-hanging-signs" className="text-primary underline hover:text-primary/80 transition-colors">
-              wall-hanging marquee signs
+              Wall-Hanging Marquee Signs
             </a>{' '}
             and{' '}
             <a href="/3d-logos" className="text-primary underline hover:text-primary/80 transition-colors">
-              custom layered logos
+              Custom Layered Logos
             </a>{' '}
             for permanent installations, retail displays, and branded décor.
           </p>

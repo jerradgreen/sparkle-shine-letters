@@ -22,7 +22,7 @@ export const MarqueeHeroSection = () => {
       <div className="absolute inset-0">
         <img
           src={heroLockwoods}
-          alt="36-inch stand-up marquee letters spelling THE LOCKWOODS at an elegant event venue"
+          alt="Stand-up marquee letters displayed at an indoor event venue"
           className="w-full h-full object-cover object-[center_70%]"
           loading="eager"
           decoding="sync"
@@ -43,7 +43,7 @@ export const MarqueeHeroSection = () => {
           </h1>
           
           <p className="text-base md:text-lg lg:text-xl leading-relaxed opacity-90 max-w-3xl mx-auto">
-            Built for schools, universities, corporations, and event companies that need bold, reusable signage for every occasion.
+            Commercial-grade steel marquee letters built for schools, universities, and corporations that need durable, reusable signage across years of events.
           </p>
         </div>
 
