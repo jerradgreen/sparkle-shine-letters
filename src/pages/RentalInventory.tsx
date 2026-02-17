@@ -919,10 +919,10 @@ const RentalInventory = () => {
             How to Start a Marquee Letter Rental Business
           </h2>
           <p className="text-sm md:text-base text-muted-foreground leading-relaxed mb-4">
-            Owning your own marquee letter rental inventory allows you to generate revenue from repeat bookings without franchise fees or ongoing royalties. Marquee letters are in high demand for weddings, birthdays, baby showers, corporate events, schools, hotels, and festivals — and they're highly "Instagrammable," eye-catching centerpieces that clients are willing to pay premium rates for.
+            Starting a marquee letter rental business begins with choosing high-demand inventory that can book consistently across weddings, corporate events, proms, and private parties. The most successful rental companies focus on versatile 36″ letters, popular numbers, and word toppers that maximize booking flexibility while minimizing storage complexity.
           </p>
           <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
-            Each package includes durable 36″ commercial-grade letters with powder-coated finishes, long-lasting LED bulbs (with optional color-changing or LED neon upgrades), and reusable foam-lined transport boxes. With the right marketing and referral partners — venues, planners, decor companies, and schools — many owners book events before their inventory even arrives and recover their investment quickly.
+            Instead of piecing inventory together over time, many entrepreneurs launch faster with complete, ready-to-rent packages that include durable steel letters, LED lighting, protective transport boxes, and a proven mix of high-demand characters. With proper pricing, marketing, and local vendor partnerships, many rental businesses recover their initial investment within the first year and continue generating revenue from the same inventory for years to come.
           </p>
         </div>
       </section>
