@@ -14,6 +14,7 @@ const ThankYou = () => {
     <div className="min-h-screen bg-background">
       <Helmet>
         <title>Thank You - Vintage Marquee Lights</title>
+        <meta name="description" content="Thank you for contacting Vintage Marquee Lights. We'll be in touch shortly." />
         <meta name="robots" content="noindex, nofollow" />
       </Helmet>
       <Navigation />

@@ -16,6 +16,7 @@ const RentalInventoryThankYou = () => {
     <div className="min-h-screen bg-background">
       <Helmet>
         <title>Thank You - Vintage Marquee Lights</title>
+        <meta name="description" content="Thank you for your rental inventory package inquiry. Check your email for pricing details." />
         <meta name="robots" content="noindex, nofollow" />
       </Helmet>
       <Navigation />
