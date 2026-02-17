@@ -1,22 +1,30 @@
 
 
-## Content Updates for /rental-inventory Hero Section
+## Remaining Updates for /rental-inventory
 
-### 1. Change both H1s (mobile + desktop)
-- **Mobile (line 75-77):** Replace "Build YOUR business. Boost your PROFITS. We help you do both - FAST." with "Commercial Marquee Letter Rental Business Packages"
-- **Desktop (line 116-118):** Replace "Build YOUR business. Boost your PROFITS. Our marquee letter packages are designed to help you do both -- FAST." with "Commercial Marquee Letter Rental Business Packages"
+### What's Already Done
+- H1 updated (both mobile + desktop)
+- Intro paragraph updated (both mobile + desktop)
+- Small line above H1 changed to "For Entrepreneurs & Event Rental Companies" as a `<p>` tag
 
-### 2. Replace intro paragraphs
-- **Mobile (lines 78-80):** Replace "Tap into one of the event industry's highest-margin segments..." with: "Our commercial-grade marquee letter rental business packages are built for entrepreneurs and event rental companies who want to start or expand a profitable marquee rental inventory. Each package includes durable 36" letters designed for repeated bookings, long-term use, and strong ROI."
-- **Desktop (lines 119-121):** Same replacement
+### What Still Needs to Be Done
 
-### 3. Fix the small line above the H1
-- **Mobile (line 69-71):** Change text from "Entrepreneurs and Business Owners" to "For Entrepreneurs & Event Rental Companies". The element is already a `<p>` tag, so no structural change needed -- it stays as `<p>`.
-- **Desktop (line 113-114):** Same text change. Also already a `<p>` tag -- no structural change needed.
+**1. Update intro paragraph text (minor tweak)**
+Add "(with 48" options available)" to the existing intro paragraph in both mobile and desktop versions. Current text says "...durable 36" letters designed for..." -- needs to say "...durable 36" letters (with 48" options available) designed for..."
+
+**2. Add new H2 section between hero and feature cards (line ~158)**
+Insert a new `<section>` block after the hero closes and before the Feature Cards section. It will contain:
+- A proper `<h2>` tag: "Marquee Letter Rental Business Packages -- Commercial-Grade Inventory"
+- Two paragraphs about owning inventory and what each package includes
+
+**3. Add new FAQ item before Objection Busters (line ~795)**
+Insert a new FAQ entry:
+- Q: "Is this for event rentals or starting my own rental business?"
+- A: "These packages are specifically built for entrepreneurs and event rental companies who want to own their own marquee letter rental inventory. This is not a short-term event rental -- it's a business investment."
 
 ### Technical Details
 - **File:** `src/pages/RentalInventory.tsx`
-- All changes are text-only replacements within existing elements
-- No new components, imports, or structural changes required
-- Both mobile and desktop variants of the `<p>` subtitles are already correctly using non-heading tags
+- No new components, imports, or dependencies
+- New H2 section uses existing Tailwind classes consistent with page styling
+- FAQ entry follows the existing pattern (h3 for question, p for answer, border-b styling)
 
