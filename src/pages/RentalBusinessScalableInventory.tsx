@@ -154,7 +154,7 @@ const RentalBusinessScalableInventory = () => {
                   <li>Stronger early booking capacity</li>
                 </ul>
                 <p className="text-base text-muted-foreground leading-relaxed">
-                  A well-planned initial investment positions the business for long-term stability instead of reactive expansion.
+                  A well-planned initial investment positions the business for long-term stability instead of reactive expansion. Understanding <Link to="/rental-business/startup-cost" className="text-primary hover:underline font-semibold">total startup investment requirements</Link> is equally important when planning long-term inventory strategy.
                 </p>
               </div>
             </section>
