@@ -2,14 +2,13 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import { Button } from '@/components/ui/button';
 
 const RentalBusinessStartupCost = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
         <title>How Much Does It Cost to Start a Marquee Letter Rental Business?</title>
-        <meta name="description" content="Discover the real startup costs of a marquee letter rental business. Equipment, inventory, transport, marketing, and ROI explained for serious entrepreneurs." />
+        <meta name="description" content="Learn the realistic startup investment for a marquee letter rental business. Understand inventory costs, revenue potential, and how long it takes to break even." />
         <link rel="canonical" href="https://sparkle-shine-letters.lovable.app/rental-business/startup-cost" />
       </Helmet>
 
@@ -25,113 +24,85 @@ const RentalBusinessStartupCost = () => {
             {/* Intro */}
             <div className="space-y-6 mb-16">
               <p className="text-base text-muted-foreground leading-relaxed">
-                It's one of the first questions every aspiring rental operator asks — and the answer depends entirely on whether you're testing the waters casually or building a serious, scalable commercial operation. The difference between a hobby setup and a professional rental business comes down to inventory quality, character selection, and how you plan to handle transport, marketing, and client experience. This article is part of our <Link to="/rental-business" className="text-primary hover:underline font-semibold">complete guide to starting a marquee letter rental business</Link>.
+                Starting a marquee letter rental business requires a serious inventory investment if you plan to operate professionally. While some people try to piece together inventory slowly, most successful operators begin with a structured, commercial-grade setup designed for long-term rental use. This article is part of our <Link to="/rental-business" className="text-primary hover:underline font-semibold">complete guide to starting a marquee letter rental business</Link>.
               </p>
               <p className="text-base text-muted-foreground leading-relaxed">
-                Below, we break down the real numbers — from inventory and equipment to marketing and storage — so you can plan your launch with confidence. These figures are based on what successful commercial operators actually spend, not wishful estimates or consumer-grade shortcuts.
+                The largest and most important startup cost is inventory. A well-planned commercial marquee letter rental business typically requires an investment between $12,000 and $35,000 depending on scale, character selection, and expansion goals.
               </p>
             </div>
 
-            {/* Initial Inventory */}
+            {/* Primary Investment */}
             <section className="mb-16">
-              <h2 className="text-3xl font-bold mb-6 text-foreground">Initial Inventory Investment</h2>
+              <h2 className="text-3xl font-bold mb-6 text-foreground">The Primary Investment: Commercial-Grade Inventory</h2>
               <div className="space-y-6">
                 <p className="text-base text-muted-foreground leading-relaxed">
-                  The largest portion of your startup budget goes toward commercial-grade 36-inch marquee letters, numbers, and word toppers. A full A–Z alphabet set, numbers 0–9, and popular toppers like "MR &amp; MRS," "LOVE," and "THE" give you maximum booking flexibility across weddings, corporate events, birthdays, and holiday parties. Expect to invest $12,000–$25,000 on your starting character set, depending on size and quantity.
+                  The majority of your startup capital goes toward durable 36-inch steel marquee letters, numbers, and high-demand characters. Commercial-grade construction matters because these units are transported, set up, and broken down repeatedly — often multiple times per week during peak season. Inventory that can't withstand that cycle becomes a liability, not an asset.
                 </p>
                 <p className="text-base text-muted-foreground leading-relaxed">
-                  Choosing the right characters from the start is critical. High-demand letters and numbers that work across multiple event types will generate significantly more bookings than specialty or novelty pieces. Equally important is selecting inventory built for repeated transport and setup — flimsy construction leads to costly repairs and lost revenue.
+                  Serious operators focus their initial investment on versatile alphabet coverage, high-demand numbers, popular event word combinations, and foam-lined transport protection that preserves finish quality and structural integrity over hundreds of uses.
                 </p>
               </div>
             </section>
 
-            {/* Transportation & Storage */}
+            {/* 36" Standard */}
             <section className="mb-16">
-              <h2 className="text-3xl font-bold mb-6 text-foreground">Transportation &amp; Storage Costs</h2>
+              <h2 className="text-3xl font-bold mb-6 text-foreground">Why 36" Letters Are the Industry Standard</h2>
               <div className="space-y-6">
                 <p className="text-base text-muted-foreground leading-relaxed">
-                  Protecting your investment during transport is non-negotiable. Foam-lined transport cases or custom-fitted boxes prevent scratches, dents, and bulb damage during delivery and pickup. A quality set of protective cases typically runs $1,000–$3,000 depending on how many characters you're transporting at once.
+                  The 36-inch marquee letter has become the most requested size across weddings, corporate events, schools, and private parties. At three feet tall, they create immediate visual impact in both indoor and outdoor settings while remaining practical for a single operator to transport, load, and position on-site.
                 </p>
                 <p className="text-base text-muted-foreground leading-relaxed">
-                  You'll also need adequate vehicle space — most operators use an SUV, van, or small trailer — and a clean, dry storage area that keeps inventory organized and accessible. Climate-controlled storage is ideal but not always necessary; the priority is keeping letters upright, protected, and easy to load for events.
+                  This size strikes the ideal balance between visibility and versatility. They're large enough to anchor a photo backdrop or stage display, yet compact enough to fit in an SUV or small trailer without specialized equipment. For operators building a rental fleet, the 36-inch format offers the widest booking potential across event types and venue sizes.
                 </p>
               </div>
             </section>
 
-            {/* Lighting & Electrical */}
+            {/* Revenue Per Event */}
             <section className="mb-16">
-              <h2 className="text-3xl font-bold mb-6 text-foreground">Lighting &amp; Electrical Components</h2>
+              <h2 className="text-3xl font-bold mb-6 text-foreground">Revenue Per Event: What Operators Typically Earn</h2>
               <div className="space-y-6">
                 <p className="text-base text-muted-foreground leading-relaxed">
-                  Commercial marquee letters use warm-white LED globe bulbs that create the signature vintage glow clients expect. Budget $200–$600 for replacement bulbs and spare wiring to keep on hand. Reliable wiring systems are essential — poorly soldered connections or thin gauge wire will fail under repeated use, leading to on-site failures and unhappy clients.
+                  Rental pricing varies by market, but many operators charge per letter or per word combination. A typical 4–5 letter word rental can generate strong event-level revenue, especially when paired with add-ons like numbers, toppers, or delivery and setup services. Markets with higher event density and fewer competitors tend to support premium pricing.
                 </p>
                 <p className="text-base text-muted-foreground leading-relaxed">
-                  Look for letters with serviceable electrical systems where individual bulbs and sockets can be replaced without rewiring the entire unit. Commercial safety considerations include proper grounding, UL-listed components, and weather-resistant connections for outdoor events.
-                </p>
-              </div>
-            </section>
-
-            {/* Marketing & Booking */}
-            <section className="mb-16">
-              <h2 className="text-3xl font-bold mb-6 text-foreground">Marketing &amp; Booking Costs</h2>
-              <div className="space-y-6">
-                <p className="text-base text-muted-foreground leading-relaxed">
-                  A professional website, quality event photography, and targeted social media advertising are the foundation of your marketing strategy. Expect to invest $1,000–$3,000 initially for a website, branded materials, and your first round of paid ads on Instagram, Facebook, or Google. Professional photos of your letters at real events are your single most powerful marketing asset.
-                </p>
-                <p className="text-base text-muted-foreground leading-relaxed">
-                  Building relationships with wedding planners, event venues, and corporate event coordinators creates a steady referral pipeline that reduces your dependence on paid advertising over time. Many successful operators find that vendor partnerships generate the majority of their bookings within the first year.
-                </p>
-              </div>
-            </section>
-
-            {/* Total Startup Range */}
-            <section className="mb-16">
-              <h2 className="text-3xl font-bold mb-6 text-foreground">Total Startup Range</h2>
-              <div className="space-y-6">
-                <p className="text-base text-muted-foreground leading-relaxed">
-                  A conservative but professional setup — including a solid character set, transport protection, spare lighting, and basic marketing — typically falls in the $15,000–$20,000 range. A fully scalable professional operation with a comprehensive inventory, premium transport cases, professional branding, and an advertising budget starts closer to $25,000–$35,000.
-                </p>
-                <p className="text-base text-muted-foreground leading-relaxed">
-                  The key distinction is mindset: this is an investment in revenue-generating assets, not a sunk expense. Every dollar spent on quality inventory and professional presentation pays for itself many times over through years of repeat bookings. Operators who treat this as a real business from day one consistently outperform those who try to cut corners on startup costs.
+                  Because the same inventory is rented repeatedly with minimal per-event costs, profit margins in the marquee letter rental space are significantly higher than most event rental categories. Revenue scales with booking frequency — and operators who invest in marketing and vendor relationships tend to see consistent month-over-month growth.
                 </p>
               </div>
             </section>
 
             {/* Break Even */}
             <section className="mb-16">
-              <h2 className="text-3xl font-bold mb-6 text-foreground">How Long Until You Break Even?</h2>
+              <h2 className="text-3xl font-bold mb-6 text-foreground">How Long Does It Take to Break Even?</h2>
               <div className="space-y-6">
                 <p className="text-base text-muted-foreground leading-relaxed">
-                  At an average booking rate of $400–$700 per event, operators who book 3–5 events per month generate $1,200–$3,500+ in monthly revenue. At that pace, most operators recover their full startup investment within 8–14 months. As your reputation grows and repeat clients return, booking frequency and average order value tend to increase naturally.
+                  Break-even timelines depend on several factors: event frequency, pricing structure, local market demand, and the character mix in your inventory. Operators who select high-demand characters and market their services consistently tend to recover their initial inventory investment faster than those who buy impulsively or rely solely on word-of-mouth.
                 </p>
                 <p className="text-base text-muted-foreground leading-relaxed">
-                  Scaling is straightforward: as demand exceeds your current inventory capacity, you add more characters and expand your service area. Because commercial-grade letters last for years of heavy use, every new piece of inventory extends your revenue potential without replacing what you already own.
+                  Many operators recover their initial inventory investment within the first year when inventory is selected strategically and marketed consistently. However, individual results vary based on market conditions, effort, and business execution — there are no guaranteed outcomes in any rental business.
                 </p>
               </div>
             </section>
 
-            {/* Commercial-Grade Matters */}
+            {/* Investment vs Expense */}
             <section className="mb-16">
-              <h2 className="text-3xl font-bold mb-6 text-foreground">Commercial-Grade Inventory Matters</h2>
+              <h2 className="text-3xl font-bold mb-6 text-foreground">Investment vs Expense</h2>
               <div className="space-y-6">
                 <p className="text-base text-muted-foreground leading-relaxed">
-                  Durability directly impacts your ROI. Letters built with steel frames, professional powder-coat finishes, and serviceable LED systems survive hundreds of events without structural or electrical failure. Cheap imports and consumer-grade alternatives may cost less upfront, but they warp, break, and fail — turning your investment into a liability instead of an asset.
+                  Marquee rental inventory is a reusable revenue asset — not a one-time expense. Unlike event decor that depreciates quickly or consumable supplies that need constant replenishment, durable commercial-grade letters can generate revenue for years when maintained properly. Each booking adds to the cumulative return on your original investment.
                 </p>
                 <p className="text-base text-muted-foreground leading-relaxed">
-                  For serious operators building a real business, commercial-grade inventory isn't optional — it's the foundation everything else is built on. The difference between a rental business that thrives and one that struggles almost always comes down to the quality of the inventory.
+                  This distinction matters when evaluating startup costs. The initial outlay isn't a cost of doing business — it's the acquisition of assets that produce recurring income. Operators who understand this invest in quality from the start rather than replacing cheap inventory repeatedly.
                 </p>
               </div>
             </section>
 
             {/* CTA */}
-            <div className="text-center">
+            <section className="text-center">
+              <h2 className="text-3xl font-bold mb-6 text-foreground">Ready to Launch?</h2>
               <p className="text-base text-muted-foreground leading-relaxed mb-8 max-w-2xl mx-auto">
-                If you're ready to invest in commercial-grade inventory built for long-term rental use, <Link to="/rental-inventory" className="text-primary hover:underline font-semibold">explore our complete marquee letter rental business packages</Link>.
+                If you're serious about building or expanding a marquee letter rental business with commercial-grade inventory designed for long-term use, explore our <Link to="/rental-inventory" className="text-primary hover:underline font-semibold">complete rental business packages</Link>.
               </p>
-              <Button asChild className="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-8 py-3 text-lg h-auto">
-                <Link to="/rental-inventory">Explore Commercial Rental Packages</Link>
-              </Button>
-            </div>
+            </section>
           </div>
         </article>
       </main>
