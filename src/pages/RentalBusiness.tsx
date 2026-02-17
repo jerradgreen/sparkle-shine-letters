@@ -84,6 +84,25 @@ const RentalBusiness = () => {
               </div>
             </section>
 
+            {/* Explore Detailed Guides */}
+            <section className="mb-16">
+              <h2 className="text-3xl font-bold mb-6 text-foreground">Explore Detailed Guides</h2>
+              <p className="text-base text-muted-foreground leading-relaxed mb-6">
+                Below are in-depth resources to help you plan and structure your rental business properly.
+              </p>
+              <ul className="list-disc list-inside text-base text-muted-foreground leading-relaxed space-y-3 pl-4">
+                <li>
+                  <Link to="/rental-business/startup-cost" className="text-primary hover:underline font-semibold">How Much Does It Cost to Start a Marquee Letter Rental Business?</Link>
+                </li>
+                <li>
+                  <Link to="/rental-business/building-a-scalable-inventory" className="text-primary hover:underline font-semibold">How to Build a Scalable Marquee Letter Rental Inventory</Link>
+                </li>
+                <li>
+                  <Link to="/rental-business/profitability" className="text-primary hover:underline font-semibold">Is a Marquee Letter Rental Business Profitable?</Link>
+                </li>
+              </ul>
+            </section>
+
             {/* CTA */}
             <section className="text-center">
               <h2 className="text-3xl font-bold mb-6 text-foreground">Ready to Launch?</h2>
