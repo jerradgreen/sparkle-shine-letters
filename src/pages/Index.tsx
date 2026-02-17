@@ -262,6 +262,13 @@ const Index = () => {
           </button>
         </div>
 
+        {/* Rental Business Contextual Link */}
+        <div className="mb-8 max-w-3xl mx-auto">
+          <p className="text-muted-foreground leading-relaxed">
+            For entrepreneurs and event companies exploring recurring revenue opportunities, <Link to="/rental-business" className="text-primary underline hover:text-primary/80 transition-colors font-semibold">starting a marquee letter rental business</Link> requires strategic inventory planning and commercial-grade equipment designed for long-term use.
+          </p>
+        </div>
+
         {/* Contextual Authority / SEO Section */}
         <div className="mb-12 max-w-3xl mx-auto">
           <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">

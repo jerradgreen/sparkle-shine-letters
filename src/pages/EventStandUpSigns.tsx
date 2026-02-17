@@ -90,7 +90,11 @@ const EventStandUpSigns = () => {
             <a href="/rental-inventory" className="text-primary underline hover:text-primary/80 transition-colors">
               commercial marquee letter rental inventory packages
             </a>{' '}
-            are built for durability, transport, and strong return on investment.
+             are built for durability, transport, and strong return on investment.
+          </p>
+
+          <p className="text-sm text-muted-foreground mt-4 max-w-5xl mx-auto">
+            For business owners interested in building recurring event revenue, event-style marquee letters often form the foundation of a <a href="/rental-business" className="text-primary underline hover:text-primary/80 transition-colors">structured rental inventory strategy</a>.
           </p>
         </div>
       </section>
