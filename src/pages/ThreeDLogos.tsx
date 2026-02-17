@@ -391,7 +391,11 @@ const ThreeDLogos = () => {
             <a href="/rental-inventory" className="text-primary underline hover:text-primary/80 transition-colors">
               commercial marquee letter rental business packages
             </a>{' '}
-            for entrepreneurs and event companies looking to build a scalable rental division.
+             for entrepreneurs and event companies looking to build a scalable rental division.
+          </p>
+
+          <p className="text-muted-foreground text-sm mt-4 max-w-5xl mx-auto">
+            While layered signage is typically designed for permanent branding installations, some entrepreneurs expand into freestanding marquee inventory as part of a <a href="/rental-business" className="text-primary underline hover:text-primary/80 transition-colors">broader event-focused business model</a>.
           </p>
         </div>
       </section>

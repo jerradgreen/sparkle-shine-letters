@@ -521,6 +521,10 @@ const WallHangingMarqueeSigns = () => {
             designed specifically for repeat bookings and long-term profitability.
           </p>
 
+          <p className="text-muted-foreground text-sm mt-4 max-w-5xl mx-auto">
+            While wall-mounted signage serves permanent installations, many entrepreneurs choose freestanding marquee inventory when <a href="/rental-business" className="text-primary underline hover:text-primary/80 transition-colors">launching a rental operation</a> that serves weddings, schools, and corporate events.
+          </p>
+
           <div className="text-center mt-8">
             <Button 
               size="lg" 
