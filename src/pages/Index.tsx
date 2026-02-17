@@ -261,6 +261,20 @@ const Index = () => {
             👉 Click to select your style of sign
           </button>
         </div>
+
+        {/* Contextual Authority / SEO Section */}
+        <div className="mb-12 max-w-3xl mx-auto">
+          <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
+            Start a Commercial Marquee Letter Rental Business
+          </h2>
+          <p className="text-muted-foreground leading-relaxed">
+            Looking to start or expand a marquee letter rental business? Our{' '}
+            <Link to="/rental-inventory" className="text-primary underline hover:text-primary/80 transition-colors">
+              commercial marquee letter rental business packages
+            </Link>{' '}
+            are built for entrepreneurs and event rental companies who want durable, high-ROI inventory designed for repeated bookings and long-term profitability.
+          </p>
+        </div>
       </div>
       
       <Footer />
