@@ -400,9 +400,9 @@ export const standUpSignsConfig: TemplateConfig = {
     title: "Event Success Stories",
     items: [
       {
-        name: "Sarah M.",
-        role: "Wedding Planner",
-        content: "Letters arrived safe and were amazing quality. The color-changing bulbs were a huge hit at the reception!",
+        name: "Events",
+        role: "University of Texas",
+        content: "We purchased marquee letters for multiple university events, including graduation and athletic pep rallies. The quality is exceptional, and they've become a core part of our campus event branding.",
         rating: 5,
         image: testimonialRealistic1
       },
