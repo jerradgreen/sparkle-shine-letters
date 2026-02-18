@@ -185,7 +185,7 @@ export const layeredSignsConfig: TemplateConfig = {
 
 // Wall-Hanging Marquee Signs Template
 export const wallHangingConfig: TemplateConfig = {
-  pageTitle: "Custom Wall-Hanging Marquee Signs - Vintage Painted Steel Letters",
+  pageTitle: "Custom Wall-Hanging Marquee Letters | Vintage Marquee Lights",
   metaDescription: "Individual marquee letters designed to hang on walls like artwork. Painted steel construction with warm G30 bulbs, perfect for shops, studios, and home décor.",
   keywords: ["wall hanging marquee", "painted steel letters", "vintage marquee signs", "wall mounted lights", "retro signage", "industrial décor"],
   
@@ -217,7 +217,7 @@ export const wallHangingConfig: TemplateConfig = {
       },
       {
         title: "Simple Wall Mounting",
-        description: "Hangs easily on any wall like a framed picture. No floor stands or complex installation required.",
+        description: "Wall-mounted marquee letters that hang like framed art. No floor stands or complex installation required — just mount, plug in, and enjoy.",
         icon: "🖼️"
       },
       {
@@ -289,14 +289,14 @@ export const wallHangingConfig: TemplateConfig = {
   
   gallery: {
     title: "Real Signs in Real Spaces",
-    subtitle: "See the vintage charm and warm glow in action",
+    subtitle: "See handcrafted marquee wall art installed in restaurants, bars, shops, and homes",
     images: [
-      { src: wallHanging, alt: "Rustic wall-hanging marquee letters on wood wall", caption: "Classic vintage finish on reclaimed wood" },
-      { src: galleryFreakshow, alt: "FREAKSHOW marquee letters display", caption: "Bold vintage marquee lettering" },
-      { src: carousel2, alt: "Retail shop wall signage", caption: "Boutique storefront installation" },
-      { src: galleryGoogle, alt: "Google colorful marquee letters on wood wall", caption: "Custom colorful letter installation" },
-      { src: wallHangingParliament, alt: "Parliament script marquee sign in coffee shop", caption: "Elegant script lettering in café setting" },
-      { src: wallHangingWineHouse, alt: "Wine House marquee letters on building exterior", caption: "Outdoor patio installation with warm glow" }
+      { src: wallHanging, alt: "Wall-mounted light-up marquee letters on rustic wood wall", caption: "Classic vintage finish on reclaimed wood" },
+      { src: galleryFreakshow, alt: "Custom metal marquee wall art spelling FREAKSHOW", caption: "Bold vintage marquee lettering" },
+      { src: carousel2, alt: "Vintage steel marquee letters in a retail storefront", caption: "Boutique storefront installation" },
+      { src: galleryGoogle, alt: "Colorful wall-mounted marquee letters spelling GOOGLE on wood wall", caption: "Custom colorful letter installation" },
+      { src: wallHangingParliament, alt: "Script lighted letters mounted in cafe", caption: "Elegant script lettering in café setting" },
+      { src: wallHangingWineHouse, alt: "Exterior wall-mounted marquee sign on building", caption: "Outdoor patio installation with warm glow" }
     ]
   },
   
@@ -309,7 +309,7 @@ export const wallHangingConfig: TemplateConfig = {
       },
       {
         question: "How heavy are the letters?",
-        answer: "Each letter is made from painted steel but remains lightweight enough for standard wall mounting—typically 3-8 pounds depending on size. They work on any standard drywall with appropriate anchors."
+        answer: "Each custom metal marquee letter is made from painted steel but remains lightweight enough for standard wall mounting — typically 3-8 pounds depending on size. They work on any standard drywall with appropriate anchors."
       },
       {
         question: "Can I use these outdoors?",

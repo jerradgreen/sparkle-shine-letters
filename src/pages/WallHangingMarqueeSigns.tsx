@@ -282,7 +282,7 @@ const WallHangingMarqueeSigns = () => {
                 <div>
                   <h3 className="font-bold mb-2">6. Perfect for Any Setting</h3>
                   <p className="text-muted-foreground text-sm">
-                    From retail stores and events to photo studios, home décor, and outdoor patios, these signs elevate any environment with vintage charm and bold personality. We are not a traditional sign shop, we are metal artists building signs with maximum character.
+                    From restaurants and bars to retail shops, studios, offices, and curated homes — these letters transform any wall into a statement. We operate as artisan metal fabricators, crafting commissioned marquee letter installations with enduring character.
                   </p>
                 </div>
               </div>
@@ -514,15 +514,10 @@ const WallHangingMarqueeSigns = () => {
           </div>
 
           <p className="text-muted-foreground text-sm mt-8 max-w-5xl mx-auto">
-            If you're looking to turn marquee letters into recurring revenue, explore our{' '}
-            <a href="/rental-inventory" className="text-primary underline hover:text-primary/80 transition-colors">
-              marquee letter rental business packages
-            </a>{' '}
-            designed specifically for repeat bookings and long-term profitability.
-          </p>
-
-          <p className="text-muted-foreground text-sm mt-4 max-w-5xl mx-auto">
-            While wall-mounted signage serves permanent installations, many entrepreneurs choose freestanding marquee inventory when <a href="/rental-business" className="text-primary underline hover:text-primary/80 transition-colors">launching a rental operation</a> that serves weddings, schools, and corporate events.
+            Looking for freestanding letters instead? Explore our{' '}
+            <a href="/event-standup-signs" className="text-primary underline hover:text-primary/80 transition-colors">
+              36" and 48" stand-up marquee letters
+            </a>.
           </p>
 
           <div className="text-center mt-8">
