@@ -1,95 +1,79 @@
 
 
-## Wall-Hanging Page Refinements
+## Wall-Hanging Page — Authority Depth Pass
 
-Copy and SEO adjustments only. No layout, structure, pricing, or design changes.
-
----
-
-### 1. SEO Title Update
-
-**File:** `src/config/templateConfigs.ts` (line 188)
-
-Change `pageTitle` to:
-> `Custom Wall-Hanging Marquee Letters | Vintage Marquee Lights`
-
-(55 characters -- under 60)
+Content depth optimization only. No layout, pricing, or design changes.
 
 ---
 
-### 2. Remove Negative Framing in "10 Reasons"
+### 1. Add "Built for Permanent Wall Installation" Micro-Section
 
-**File:** `src/pages/WallHangingMarqueeSigns.tsx` (lines 284-286)
+**File:** `src/pages/WallHangingMarqueeSigns.tsx`
 
-Replace Reason 6 description:
+Insert a new section block just above the FAQ section (before line 497), styled consistently with the existing paragraph blocks:
+
+```
+<section className="py-8 px-4 bg-muted/20">
+  <div className="max-w-4xl mx-auto text-center">
+    <h2 className="text-2xl font-bold mb-4">Built for Permanent Wall Installation</h2>
+    <p className="text-muted-foreground text-sm leading-relaxed">
+      These wall-mounted marquee letters are fabricated from steel with reinforced backs designed for secure mounting. Whether installed on drywall, brick, wood, or concrete, they are built to hang like framed artwork while delivering the presence of architectural lighting. Each commissioned build is intended for long-term installation — not temporary decor.
+    </p>
+  </div>
+</section>
+```
+
+---
+
+### 2. Strengthen Mounting FAQ
+
+**File:** `src/config/templateConfigs.ts` (line 307-308)
+
+Change the first FAQ entry:
+
+- **Question** from: `"How easy are these to hang?"`
+  To: `"How do wall-mounted marquee letters install?"`
+
+- **Answer** to: `"Our wall-mounted marquee letters install using reinforced mounting points on the back of each letter. They hang similarly to framed art using anchors appropriate for your wall type. For larger words or permanent commercial installations, custom mounting bars can be fabricated for additional structural support."`
+
+---
+
+### 3. Add Material Authority Sentence in Features
+
+**File:** `src/config/templateConfigs.ts` (line 210)
+
+Append to the Painted Steel Construction description:
 
 From:
-> "From retail stores and events to photo studios, home decor, and outdoor patios, these signs elevate any environment with vintage charm and bold personality. We are not a traditional sign shop, we are metal artists building signs with maximum character."
+> "Solid steel hand-painted for that rustic, retro, vintage finish. Develops authentic patina outdoors over time."
 
 To:
-> "From restaurants and bars to retail shops, studios, offices, and curated homes -- these letters transform any wall into a statement. We operate as artisan metal fabricators, crafting commissioned marquee letter installations with enduring character."
+> "Solid steel hand-painted for that rustic, retro, vintage finish. Develops authentic patina outdoors over time. Unlike lightweight decorative alternatives, these are true custom metal marquee letters fabricated from steel for structural integrity and long-term durability."
 
 ---
 
-### 3. Semantic Keyword Expansion (3 phrases, 1 each)
+### 4. Add Designer-Focused Line in Hero Area
 
-**a) "wall-mounted marquee letters"** -- in Feature description
+**File:** `src/pages/WallHangingMarqueeSigns.tsx`
 
-**File:** `src/config/templateConfigs.ts` (line 220)
+Add one line below the subheadline in both mobile (after line 76) and desktop (after line 137) layouts:
 
-Change Simple Wall Mounting description to:
-> "Wall-mounted marquee letters that hang like framed art. No floor stands or complex installation required -- just mount, plug in, and enjoy."
+```
+<p className="text-sm text-muted-foreground leading-relaxed mb-2">
+  Frequently commissioned by interior designers, restaurant owners, and brand builders seeking distinctive marquee wall art.
+</p>
+```
 
-**b) "marquee wall art"** -- in Gallery subtitle
-
-**File:** `src/config/templateConfigs.ts` (line 292)
-
-Change subtitle to:
-> "See handcrafted marquee wall art installed in restaurants, bars, shops, and homes"
-
-**c) "custom metal marquee letters"** -- in FAQ answer
-
-**File:** `src/config/templateConfigs.ts` (line 312) -- the "How heavy are the letters?" answer
-
-Change to:
-> "Each custom metal marquee letter is made from painted steel but remains lightweight enough for standard wall mounting -- typically 3-8 pounds depending on size. They work on any standard drywall with appropriate anchors."
+Same size and styling as the existing subheadline paragraph — no font enlargement.
 
 ---
 
-### 4. Subtle Internal Link to Stand-Up Letters
+### 5. No Modifications To
 
-**File:** `src/pages/WallHangingMarqueeSigns.tsx` (lines 516-526)
-
-Remove both existing rental-focused paragraphs. Replace with one understated sentence:
-
-> Looking for freestanding letters instead? Explore our [36" and 48" stand-up marquee letters](/event-standup-signs).
-
-Styled the same as the removed text (`text-muted-foreground text-sm`, max-w-5xl).
-
----
-
-### 5. Gallery ALT Text Variation
-
-**File:** `src/config/templateConfigs.ts` (lines 294-299)
-
-Updated ALTs with natural rotation:
-
-- wallHanging: "Wall-mounted light-up marquee letters on rustic wood wall"
-- galleryFreakshow: "Custom metal marquee wall art spelling FREAKSHOW"
-- carousel2: "Vintage steel marquee letters in a retail storefront"
-- galleryGoogle: "Colorful wall-mounted marquee letters spelling GOOGLE on wood wall"
-- wallHangingParliament: "Script lighted letters mounted in cafe"
-- wallHangingWineHouse: "Exterior wall-mounted marquee sign on building"
-
----
-
-### 6. Verification
-
-- No rental, event, stand-up, layered sign, or 3D logo language remains (except the one subtle cross-link)
-- Artisan/bespoke/commissioned positioning maintained
-- Pricing unchanged
-- Layout and structure unchanged
-- Three semantic keywords placed naturally (one each)
-- No keyword stuffing
-- ALT text varied and literal
+- Pricing
+- Gallery layout or images
+- CTA buttons
+- Testimonials
+- Internal stand-up link at bottom
+- No rental, stand-up, layered sign, or 3D logo language introduced
 
