@@ -1,116 +1,95 @@
 
 
-## Authority + Buyer Positioning Optimization (with Safety Corrections)
+## Wall-Hanging Page Refinements
 
-All changes refine positioning and authority for institutional buyers. No layout, pricing, structure, or design changes.
-
----
-
-### 1. Strengthen Hero Subheadline
-
-**File:** `src/components/MarqueeHeroSection.tsx` (line 46) and `src/config/templateConfigs.ts` (line 369)
-
-Current:
-> "Built for schools, universities, corporations, and event companies that need bold, reusable signage for every occasion."
-
-New:
-> "Commercial-grade steel marquee letters built for schools, universities, and corporations that need durable, reusable signage across years of events."
-
-Updated in both files to keep them in sync.
+Copy and SEO adjustments only. No layout, structure, pricing, or design changes.
 
 ---
 
-### 2. Update "Who Buys" Section Header
+### 1. SEO Title Update
 
-**File:** `src/pages/EventStandUpSigns.tsx` (line 48)
+**File:** `src/config/templateConfigs.ts` (line 188)
 
-Change from: "Who Buys Commercial Marquee Letters?"
-To: "Who Buys Commercial Stand-Up Marquee Letters?"
+Change `pageTitle` to:
+> `Custom Wall-Hanging Marquee Letters | Vintage Marquee Lights`
 
-Stays H2.
-
----
-
-### 3. Strengthen Benefits Cards
-
-**File:** `src/components/HighlightsSection.tsx` (lines 8, 13, 18) and `src/config/templateConfigs.ts` (lines 383, 388, 393)
-
-Updated descriptions (no E12, no warm-glow, no bulb base references):
-
-- **Durable and Self-Standing:** "Powder-coated steel construction with a self-standing base design. Built for repeated setup and teardown across years of events."
-- **Bold and Bright:** "36-inch and 48-inch tall with LED bulbs. High-visibility impact for graduations, pep rallies, conferences, and brand activations."
-- **Easy to Use and Transport:** "Arrive pre-lit and ready to deploy. Optional foam-lined boxes for long-term storage and repeated transport between venues."
+(55 characters -- under 60)
 
 ---
 
-### 4. Add "Built for Institutional Use" Micro-Section
+### 2. Remove Negative Framing in "10 Reasons"
 
-**File:** `src/pages/EventStandUpSigns.tsx` -- insert between `<HighlightsSection />` (line 59) and `<TestimonialSection />` (line 60)
+**File:** `src/pages/WallHangingMarqueeSigns.tsx` (lines 284-286)
 
-New section:
+Replace Reason 6 description:
 
-> **Built for Institutional Use** (H2)
->
-> The 36-inch size is the most common choice for institutional buyers -- easy to store, transport, and deploy across a full calendar of events. The 48-inch size is available for high-visibility venues such as auditoriums, outdoor stadiums, and convention halls. Every letter is designed for repeated transport and setup, with powder-coated steel construction that holds up across years of use. Many schools, universities, and corporate teams keep these as repeat-use event inventory.
+From:
+> "From retail stores and events to photo studios, home decor, and outdoor patios, these signs elevate any environment with vintage charm and bold personality. We are not a traditional sign shop, we are metal artists building signs with maximum character."
 
-Styled with `py-8 px-4 bg-muted/20`, `max-w-4xl mx-auto`, matching existing paragraph blocks.
-
----
-
-### 5. FAQ Updates
-
-**File:** `src/config/templateConfigs.ts`
-
-**Bulb FAQ (line 482-484):** Replace answer with:
-> "We use LED bulbs designed for durability and easy replacement. You'll receive spare bulbs with your order, and replacements are available if needed."
-
-Remove all references to E12, candelabra base, warm-glow, and Amazon.
-
-**Add one new FAQ** at end of items array:
-- **Q:** "Are these letters suitable for long-term institutional use?"
-- **A:** "Yes. These letters are built with powder-coated steel and LED bulbs designed for repeated setup and teardown. Schools, universities, and corporate teams use them across dozens of events per year. With foam-lined storage boxes, they transport safely and store compactly between deployments."
+To:
+> "From restaurants and bars to retail shops, studios, offices, and curated homes -- these letters transform any wall into a statement. We operate as artisan metal fabricators, crafting commissioned marquee letter installations with enduring character."
 
 ---
 
-### 6. Internal Linking Anchor Text
+### 3. Semantic Keyword Expansion (3 phrases, 1 each)
 
-**File:** `src/pages/EventStandUpSigns.tsx`
+**a) "wall-mounted marquee letters"** -- in Feature description
 
-- Line 125: "Commercial Rental Inventory page" becomes "Commercial Rental Inventory Packages"
-- Line 132: "wall-hanging marquee signs" becomes "Wall-Hanging Marquee Signs"
-- Line 136: "custom layered logos" becomes "Custom Layered Logos"
+**File:** `src/config/templateConfigs.ts` (line 220)
 
-URLs unchanged.
+Change Simple Wall Mounting description to:
+> "Wall-mounted marquee letters that hang like framed art. No floor stands or complex installation required -- just mount, plug in, and enjoy."
 
----
+**b) "marquee wall art"** -- in Gallery subtitle
 
-### 7. Image ALT Text (Literal and Accurate)
+**File:** `src/config/templateConfigs.ts` (line 292)
 
-**File:** `src/components/MarqueeHeroSection.tsx` (line 25)
-- Change to: "Stand-up marquee letters displayed at an indoor event venue"
+Change subtitle to:
+> "See handcrafted marquee wall art installed in restaurants, bars, shops, and homes"
 
-**File:** `src/config/templateConfigs.ts` (gallery ALTs, lines 437-442)
-- image1969: "Marquee numbers displayed at a graduation-themed event"
-- imageElev8: "Stand-up marquee letters spelling ELEV8 at an event venue"
-- imageMarryMe: "Stand-up marquee letters spelling MARRY ME at an indoor event display"
-- imageDrewiaHill: "Stand-up marquee letters displayed at an event venue"
-- imageSetup1: "Marquee letters displayed on a stage setup"
-- imageSetup2: "Stand-up marquee letters displayed at an event venue"
+**c) "custom metal marquee letters"** -- in FAQ answer
 
-Also update hero ALT in config (line 373):
-- "Stand-up marquee letters displayed at an indoor event venue"
+**File:** `src/config/templateConfigs.ts` (line 312) -- the "How heavy are the letters?" answer
+
+Change to:
+> "Each custom metal marquee letter is made from painted steel but remains lightweight enough for standard wall mounting -- typically 3-8 pounds depending on size. They work on any standard drywall with appropriate anchors."
 
 ---
 
-### 8. Verification Checklist
+### 4. Subtle Internal Link to Stand-Up Letters
 
-- No bulb base type (E12) mentioned anywhere
-- No color temperature or "warm-glow" promises
-- ALT text is literal and factual -- no assumed sizes, no "corporate" or "proposal" labels
-- No "not one-time purchases" phrasing
-- Only 1 H1 (in MarqueeHeroSection)
-- H1 does NOT contain "for sale"
-- Meta title and description unchanged (already correct)
-- $800 price for 36" only, no 48" price
-- No rental-business pricing language
+**File:** `src/pages/WallHangingMarqueeSigns.tsx` (lines 516-526)
+
+Remove both existing rental-focused paragraphs. Replace with one understated sentence:
+
+> Looking for freestanding letters instead? Explore our [36" and 48" stand-up marquee letters](/event-standup-signs).
+
+Styled the same as the removed text (`text-muted-foreground text-sm`, max-w-5xl).
+
+---
+
+### 5. Gallery ALT Text Variation
+
+**File:** `src/config/templateConfigs.ts` (lines 294-299)
+
+Updated ALTs with natural rotation:
+
+- wallHanging: "Wall-mounted light-up marquee letters on rustic wood wall"
+- galleryFreakshow: "Custom metal marquee wall art spelling FREAKSHOW"
+- carousel2: "Vintage steel marquee letters in a retail storefront"
+- galleryGoogle: "Colorful wall-mounted marquee letters spelling GOOGLE on wood wall"
+- wallHangingParliament: "Script lighted letters mounted in cafe"
+- wallHangingWineHouse: "Exterior wall-mounted marquee sign on building"
+
+---
+
+### 6. Verification
+
+- No rental, event, stand-up, layered sign, or 3D logo language remains (except the one subtle cross-link)
+- Artisan/bespoke/commissioned positioning maintained
+- Pricing unchanged
+- Layout and structure unchanged
+- Three semantic keywords placed naturally (one each)
+- No keyword stuffing
+- ALT text varied and literal
 
