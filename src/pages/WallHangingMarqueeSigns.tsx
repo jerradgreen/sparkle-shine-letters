@@ -74,6 +74,9 @@ const WallHangingMarqueeSigns = () => {
               <p className="text-sm text-muted-foreground leading-relaxed mb-2">
                 {wallHangingConfig.hero.subheadline}
               </p>
+              <p className="text-sm text-muted-foreground leading-relaxed mb-2">
+                Frequently commissioned by interior designers, restaurant owners, and brand builders seeking distinctive marquee wall art.
+              </p>
               
                {/* Pricing Info */}
                <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
@@ -134,6 +137,9 @@ const WallHangingMarqueeSigns = () => {
               </h1>
               <p className="text-base text-muted-foreground leading-relaxed mb-2">
                 {wallHangingConfig.hero.subheadline}
+              </p>
+              <p className="text-sm text-muted-foreground leading-relaxed mb-2">
+                Frequently commissioned by interior designers, restaurant owners, and brand builders seeking distinctive marquee wall art.
               </p>
                
                {/* Pricing Info */}
@@ -492,6 +498,16 @@ const WallHangingMarqueeSigns = () => {
       {/* Quote Form Anchor - No embedded form */}
       <section id="quote-form" className="py-2">
         {/* This section serves as scroll anchor for CTA buttons */}
+      </section>
+
+      {/* Built for Permanent Wall Installation */}
+      <section className="py-8 px-4 bg-muted/20">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-2xl font-bold mb-4">Built for Permanent Wall Installation</h2>
+          <p className="text-muted-foreground text-sm leading-relaxed">
+            These wall-mounted marquee letters are fabricated from steel with reinforced backs designed for secure mounting. Whether installed on drywall, brick, wood, or concrete, they are built to hang like framed artwork while delivering the presence of architectural lighting. Each commissioned build is intended for long-term installation — not temporary decor.
+          </p>
+        </div>
       </section>
 
       {/* FAQ Section */}

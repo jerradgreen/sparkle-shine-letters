@@ -207,7 +207,7 @@ export const wallHangingConfig: TemplateConfig = {
     items: [
       {
         title: "Painted Steel Construction",
-        description: "Solid steel hand-painted for that rustic, retro, vintage finish. Develops authentic patina outdoors over time.",
+        description: "Solid steel hand-painted for that rustic, retro, vintage finish. Develops authentic patina outdoors over time. Unlike lightweight decorative alternatives, these are true custom metal marquee letters fabricated from steel for structural integrity and long-term durability.",
         icon: "🔨"
       },
       {
@@ -304,8 +304,8 @@ export const wallHangingConfig: TemplateConfig = {
     title: "Frequently Asked Questions",
     items: [
       {
-        question: "How easy are these to hang?",
-        answer: "Super easy! These signs hang on your wall just like framed artwork using a simple nail or screw. More permanent mounting options are available if needed. Simply hang and plug in."
+        question: "How do wall-mounted marquee letters install?",
+        answer: "Our wall-mounted marquee letters install using reinforced mounting points on the back of each letter. They hang similarly to framed art using anchors appropriate for your wall type. For larger words or permanent commercial installations, custom mounting bars can be fabricated for additional structural support."
       },
       {
         question: "How heavy are the letters?",
