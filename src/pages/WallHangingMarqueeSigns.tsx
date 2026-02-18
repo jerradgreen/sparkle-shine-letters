@@ -500,12 +500,12 @@ const WallHangingMarqueeSigns = () => {
         {/* This section serves as scroll anchor for CTA buttons */}
       </section>
 
-      {/* Built for Permanent Wall Installation */}
+      {/* Designed to Hang Like Art */}
       <section className="py-8 px-4 bg-muted/20">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-2xl font-bold mb-4">Built for Permanent Wall Installation</h2>
+          <h2 className="text-2xl font-bold mb-4">Designed to Hang Like Art</h2>
           <p className="text-muted-foreground text-sm leading-relaxed">
-            These wall-mounted marquee letters are fabricated from steel with reinforced backs designed for secure mounting. Whether installed on drywall, brick, wood, or concrete, they are built to hang like framed artwork while delivering the presence of architectural lighting. Each commissioned build is intended for long-term installation — not temporary decor.
+            These wall-mounted marquee letters are fabricated from steel and designed to hang cleanly and securely on standard wall surfaces. Whether displayed for a weekend event, a tradeshow, or installed in a restaurant or home for years, they mount simply — like framed artwork — while delivering the presence of illuminated statement pieces.
           </p>
         </div>
       </section>
