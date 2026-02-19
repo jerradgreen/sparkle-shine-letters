@@ -1,7 +1,7 @@
 import { Button } from '@/components/ui/button';
 
 // Locally hosted optimized WebP image for faster LCP
-const heroLockwoods = '/images/hero-lockwoods.webp';
+const heroImage = '/images/hero-lexus-event.png';
 
 export const MarqueeHeroSection = () => {
   const scrollToVisualizer = () => {
@@ -21,7 +21,7 @@ export const MarqueeHeroSection = () => {
       {/* Background Image with Overlay - Optimized for LCP */}
       <div className="absolute inset-0">
         <img
-          src={heroLockwoods}
+          src={heroImage}
           alt="Stand-up marquee letters displayed at an indoor event venue"
           className="w-full h-full object-cover object-[center_70%]"
           loading="eager"
