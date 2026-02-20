@@ -20,12 +20,6 @@ const MobileVendorSigns = () => {
     navigate('/quote/mobile-vendor');
   };
 
-  const scrollToGallery = () => {
-    const gallerySection = document.getElementById('gallery');
-    if (gallerySection) {
-      gallerySection.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
 
   return (
     <PageTemplate 
@@ -75,50 +69,17 @@ const MobileVendorSigns = () => {
               <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
                 Hand-crafted by experienced metal fabricators — not mass-produced plastic signage. Whether you want an illuminated or light up food truck sign, every piece is built to last.
               </p>
-              <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
-                Built for food trucks, coffee trailers, mobile bars, pop-ups, Airstream vendors, event booths, and traveling businesses, our custom metal signage is engineered to attract attention, withstand travel, and elevate your brand wherever you park.
-              </p>
-              <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
-                For fully integrated brand marks and dimensional metal logo builds, explore our <Link to="/3d-logos" className="text-primary underline hover:text-primary/80 transition-colors">Custom Logo Signs</Link> designed for high-impact branding.
-              </p>
-              <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
-                Custom mobile vendor signs typically start around $3,000 including roof mount/stand. Most full builds range from $5,000-$10,000 depending on size, font style and details.
-              </p>
               <p className="text-sm text-muted-foreground mb-6 leading-relaxed">
-                For many vendors, the right illuminated food truck sign becomes their most powerful marketing tool — drawing attention from blocks away and increasing walk-up traffic at festivals, markets, and high-traffic events.
+                Custom mobile vendor signs typically start around $3,000. Most full builds range from $5,000–$10,000 depending on size, font style, and details.
               </p>
               
-              {/* Mobile CTA buttons */}
-              <div className="space-y-3 mb-6">
-                <Button 
-                  size="lg" 
-                  className="text-base px-8 py-6 w-full"
-                  onClick={openQuoteForm}
-                >
-                  {foodTruckSignsConfig.hero.ctaText}
-                </Button>
-                <Button 
-                  size="lg" 
-                  variant="outline"
-                  className="text-base px-8 py-6 w-full"
-                  onClick={scrollToGallery}
-                >
-                  {foodTruckSignsConfig.hero.secondaryCtaText}
-                </Button>
-              </div>
-
-              {/* Review */}
-              <div className="bg-card/50 p-4 rounded-lg border border-primary/20">
-                <div className="flex gap-1 mb-2 justify-center">
-                  {[...Array(5)].map((_, i) => (
-                    <span key={i} className="text-yellow-500">★</span>
-                  ))}
-                </div>
-                <p className="text-sm text-muted-foreground italic mb-2 text-center">
-                  "Our trailer went from blending in to being the center of attention. We doubled our foot traffic after adding the sign."
-                </p>
-                <p className="text-xs text-muted-foreground font-semibold text-center">— Tyrell M., Owner, Buns & BBQ</p>
-              </div>
+              <Button 
+                size="lg" 
+                className="text-base px-8 py-6 w-full"
+                onClick={openQuoteForm}
+              >
+                {foodTruckSignsConfig.hero.ctaText}
+              </Button>
             </div>
           </div>
 
@@ -135,49 +96,17 @@ const MobileVendorSigns = () => {
               <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
                 Hand-crafted by experienced metal fabricators — not mass-produced plastic signage. Whether you want an illuminated or light up food truck sign, every piece is built to last.
               </p>
-              <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
-                Built for food trucks, coffee trailers, mobile bars, pop-ups, Airstream vendors, event booths, and traveling businesses, our custom metal signage is engineered to attract attention, withstand travel, and elevate your brand wherever you park.
-              </p>
-              <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
-                For fully integrated brand marks and dimensional metal logo builds, explore our <Link to="/3d-logos" className="text-primary underline hover:text-primary/80 transition-colors">Custom Logo Signs</Link> designed for high-impact branding.
-              </p>
-              <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
-                Custom mobile vendor signs typically start around $3,000 including roof mount/stand. Most full builds range from $5,000-$10,000 depending on size, font style and details.
-              </p>
               <p className="text-sm text-muted-foreground mb-6 leading-relaxed">
-                For many vendors, the right illuminated food truck sign becomes their most powerful marketing tool — drawing attention from blocks away and increasing walk-up traffic at festivals, markets, and high-traffic events.
+                Custom mobile vendor signs typically start around $3,000. Most full builds range from $5,000–$10,000 depending on size, font style, and details.
               </p>
               
-              <div className="space-y-3 mb-6">
-                <Button 
-                  size="lg" 
-                  className="text-lg px-8 py-6 w-full"
-                  onClick={openQuoteForm}
-                >
-                  {foodTruckSignsConfig.hero.ctaText}
-                </Button>
-                <Button 
-                  size="lg" 
-                  variant="outline"
-                  className="text-lg px-8 py-6 w-full"
-                  onClick={scrollToGallery}
-                >
-                  {foodTruckSignsConfig.hero.secondaryCtaText}
-                </Button>
-              </div>
-
-              {/* Review */}
-              <div className="bg-card/50 p-4 rounded-lg border border-primary/20">
-                <div className="flex gap-1 mb-2 justify-center">
-                  {[...Array(5)].map((_, i) => (
-                    <span key={i} className="text-yellow-500">★</span>
-                  ))}
-                </div>
-                <p className="text-sm text-muted-foreground italic mb-2 text-center">
-                  "Our trailer went from blending in to being the center of attention. We doubled our foot traffic after adding the sign."
-                </p>
-                <p className="text-xs text-muted-foreground font-semibold text-center">— Tyrell M., Owner, Buns & BBQ</p>
-              </div>
+              <Button 
+                size="lg" 
+                className="text-lg px-8 py-6 w-full"
+                onClick={openQuoteForm}
+              >
+                {foodTruckSignsConfig.hero.ctaText}
+              </Button>
             </div>
 
             {/* Image on right */}
@@ -238,6 +167,23 @@ const MobileVendorSigns = () => {
         </div>
       </section>
 
+      {/* Custom Food Truck & Trailer Signage — SEO Depth Section */}
+      <section className="py-10 px-4 bg-gradient-to-b from-background to-muted/20">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-8">Custom Food Truck & Trailer Signage</h2>
+          <div className="space-y-4 max-w-5xl mx-auto">
+            <p className="text-muted-foreground text-sm leading-relaxed">
+              Our custom food truck signage and trailer signage is fabricated from welded steel and designed for bold visual impact across mobile environments — from food trucks and coffee trailers to mobile bars, pop-ups, and event vendor setups. Every illuminated food truck sign is hand-built with marquee-style bulbs or LED options to maximize visibility day and night.
+            </p>
+            <p className="text-muted-foreground text-sm leading-relaxed">
+              We can fabricate permanent, removable, or fold-down bracket options depending on how you plan to mount your sign. Final installation and mounting methods are handled by the customer or their installer based on their specific vehicle setup.
+            </p>
+            <p className="text-muted-foreground text-sm leading-relaxed">
+              For fully integrated brand marks and dimensional metal logo builds, explore our <Link to="/3d-logos" className="text-primary underline hover:text-primary/80 transition-colors">Custom Logo Signs</Link>. Need freestanding illuminated letters for mobile displays and events? Check out our <Link to="/event-standup-signs" className="text-primary underline hover:text-primary/80 transition-colors">36"/48" Stand-Up Letters</Link>.
+            </p>
+          </div>
+        </div>
+      </section>
 
       {/* Testimonials */}
       <section className="py-10 bg-gradient-to-b from-background to-muted/20">
@@ -262,23 +208,6 @@ const MobileVendorSigns = () => {
         </div>
       </section>
 
-      {/* Custom Food Truck & Trailer Signage — SEO Depth Section */}
-      <section className="py-10 px-4 bg-gradient-to-b from-background to-muted/20">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-8">Custom Food Truck & Trailer Signage</h2>
-          <div className="space-y-4 max-w-5xl mx-auto">
-            <p className="text-muted-foreground text-sm leading-relaxed">
-              Our custom food truck signage and trailer signage is fabricated from welded steel and designed for bold visual impact across mobile environments — from food trucks and coffee trailers to mobile bars, pop-ups, and event vendor setups. Every illuminated food truck sign is hand-built with marquee-style bulbs or LED options to maximize visibility day and night.
-            </p>
-            <p className="text-muted-foreground text-sm leading-relaxed">
-              We can fabricate permanent, removable, or fold-down bracket options depending on how you plan to mount your sign. Final installation and mounting methods are handled by the customer or their installer based on their specific vehicle setup.
-            </p>
-            <p className="text-muted-foreground text-sm leading-relaxed">
-              For fully integrated brand marks and dimensional metal logo builds, explore our <Link to="/3d-logos" className="text-primary underline hover:text-primary/80 transition-colors">Custom Logo Signs</Link>. Need freestanding illuminated letters for mobile displays and events? Check out our <Link to="/event-standup-signs" className="text-primary underline hover:text-primary/80 transition-colors">36"/48" Stand-Up Letters</Link>.
-            </p>
-          </div>
-        </div>
-      </section>
 
       {/* FAQ Section */}
       <section id="quote-form" className="py-10 px-4 bg-gradient-to-b from-background to-muted/20">
@@ -305,9 +234,6 @@ const MobileVendorSigns = () => {
             Many mobile vendors and event operators also diversify their services by <a href="/rental-business" className="text-primary underline hover:text-primary/80 transition-colors">starting a marquee letter rental business</a> to increase average booking value and recurring revenue potential.
           </p>
 
-          <p className="text-muted-foreground text-sm mt-4 max-w-5xl mx-auto">
-            Need freestanding illuminated letters instead of mounted signage? Explore our <Link to="/event-standup-signs" className="text-primary underline hover:text-primary/80 transition-colors">36"/48" Stand-Up Letters</Link> for mobile displays and events.
-          </p>
         </div>
       </section>
 
