@@ -617,7 +617,7 @@ export const foodTruckSignsConfig: TemplateConfig = {
       },
       {
         question: "Can the sign handle travel and weather?",
-        answer: "Yes, we can build a bracket that folds down for easy transport. Our signs are built with durable metal construction and we offer various finish options including standard paint, natural patina/rust finishes, or powder coating for added weather resistance."
+        answer: "Yes — these signs are built from metal construction, and we can fabricate permanent, removable, or fold-down bracket options depending on your setup. Final installation and mounting methods are handled by the customer or their installer based on the specific truck or trailer."
       },
       {
         question: "What kind of bulbs do you use?",
@@ -629,7 +629,7 @@ export const foodTruckSignsConfig: TemplateConfig = {
       },
       {
         question: "How do I install the sign on my truck?",
-        answer: "You are responsible for mounting to your truck. We don't do any installations. These are plug-n-play signs. We are not trailer builders, so you would be responsible for that aspect. There are some leaking concerns, etc. to consider, so it requires some experienced installers or builders to properly mount them."
+        answer: "Installation and mounting are handled by you or your installer based on your vehicle setup. We can fabricate bracket styles (permanent, removable, or fold-down) to match your project, and you'll choose the final mounting method that works best for your truck or trailer."
       },
       {
         question: "What sizes do you offer?",
@@ -641,7 +641,7 @@ export const foodTruckSignsConfig: TemplateConfig = {
       },
       {
         question: "Can these signs be used on a truck or trailer that travels on highways?",
-        answer: "Our signs are fabricated from welded steel, and we can provide bracket style options based on your project. Installation and mounting methods are determined by the customer or their installer to ensure proper fit and safety for their specific truck or trailer."
+        answer: "Our signs are fabricated from welded steel, and we can provide bracket style options based on your project. Installation and mounting methods are determined by the customer or their installer to ensure proper fit for their specific truck or trailer."
       },
       {
         question: "Can these signs run off my truck's power system?",
