@@ -640,7 +640,7 @@ export const foodTruckSignsConfig: TemplateConfig = {
         answer: "It depends on available roof or fascia space. We charge by the square inch and per color, so smaller builds (2-3 letters) start lower while full-width name signs scale up accordingly. Roof-mount signs need clearance for transport, while side-mount signs can run longer. Send us your truck dimensions and we will recommend the best fit."
       },
       {
-        question: "Are these signs safe for highway travel?",
+        question: "Can these signs be used on a truck or trailer that travels on highways?",
         answer: "Our signs are fabricated from welded steel, and we can provide bracket style options based on your project. Installation and mounting methods are determined by the customer or their installer to ensure proper fit and safety for their specific truck or trailer."
       },
       {
