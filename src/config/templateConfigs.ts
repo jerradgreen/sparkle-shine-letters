@@ -657,11 +657,11 @@ export const foodTruckSignsConfig: TemplateConfig = {
 // 3D Logo Layered Signs Template
 export const logoSignsConfig: TemplateConfig = {
   pageTitle: "Custom Logo Signs | Dimensional Metal Signage",
-  metaDescription: "Custom layered metal signs that bring your logo to life with depth, color, and bold dimension. Perfect for walls, lobbies, event backdrops, and branded spaces.",
-  keywords: ["3D logo signs", "layered logo signs", "dimensional logo", "brand signage", "custom logo", "3D metal signs", "office signage"],
+  metaDescription: "Custom logo signs built with layered metal for depth, color, and bold dimension. Perfect for walls, lobbies, event backdrops, and branded spaces.",
+  keywords: ["custom logo signs", "custom metal signs", "dimensional logo signs", "layered logo signs", "brand signage", "logo signage", "office signage"],
   
   hero: {
-    headline: "Custom Fabricated 3D Metal Signs That Command Attention",
+    headline: "Custom Logo Signs That Command Attention",
     subheadline: "Each piece is custom-built in metal with layered depth, hand-finished detail, and a bold vintage edge. Designed for brands, boutiques, restaurants, and spaces that want more than a standard sign — they want a focal point.",
     ctaText: "Start Your Custom Project",
     secondaryCtaText: "Explore Past Custom Builds",
@@ -673,7 +673,7 @@ export const logoSignsConfig: TemplateConfig = {
   },
   
   features: {
-    title: "Why People Love Our 3D Logo Signs",
+    title: "Why People Love Our Custom Logo Signs",
     subtitle: "Built to make your brand impossible to ignore",
     items: [
       {
@@ -722,7 +722,7 @@ export const logoSignsConfig: TemplateConfig = {
       {
         name: "Marcus T.",
         role: "Event Planner",
-        content: "The 3D logo signs are a game-changer for our corporate events. Clients are blown away by the professional look and dimensional impact.",
+        content: "The custom logo signs are a game-changer for our corporate events. Clients are blown away by the professional look and dimensional impact.",
         rating: 5,
         image: testimonialWhiteMale
       },
@@ -742,7 +742,7 @@ export const logoSignsConfig: TemplateConfig = {
     packages: [
       {
         name: "Get Your Custom Quote",
-        description: "3D logo signs are custom-made based on your logo complexity, size, color requirements, and finish options. Contact us for a personalized quote.",
+        description: "Custom logo signs are made to order based on your logo complexity, size, color requirements, and finish options. Contact us for a personalized quote.",
         priceRange: "Custom Pricing",
         features: [
           "Precision-cut metal layers",
@@ -759,15 +759,15 @@ export const logoSignsConfig: TemplateConfig = {
   },
   
   gallery: {
-    title: "3D Layered Logo Sign Gallery",
+    title: "Custom Logo Sign Gallery",
     subtitle: "",
     images: [
-      { src: "https://cdn.shopify.com/s/files/1/1403/8315/files/chicago_layered-sign.jpg?v=1759695333", alt: "Chicago layered 3D logo sign" },
-      { src: "https://cdn.shopify.com/s/files/1/1403/8315/files/image_-_2023-06-08T131820.287.png?v=1759695499", alt: "Exit Zero layered dimensional logo" },
-      { src: layeredSignOffice, alt: "3D layered logo in office setting" },
-      { src: layeredSignWorkshop, alt: "Layered logo sign in workshop" },
-      { src: layeredSignRetail, alt: "3D logo in retail space" },
-      { src: layeredSignStudio, alt: "Dimensional logo in studio" }
+      { src: "https://cdn.shopify.com/s/files/1/1403/8315/files/chicago_layered-sign.jpg?v=1759695333", alt: "Chicago custom layered logo sign" },
+      { src: "https://cdn.shopify.com/s/files/1/1403/8315/files/image_-_2023-06-08T131820.287.png?v=1759695499", alt: "Exit Zero custom dimensional logo sign" },
+      { src: layeredSignOffice, alt: "Custom logo sign in office setting" },
+      { src: layeredSignWorkshop, alt: "Custom logo sign in workshop" },
+      { src: layeredSignRetail, alt: "Custom logo sign in retail space" },
+      { src: layeredSignStudio, alt: "Custom dimensional logo sign in studio" }
     ]
   },
   
@@ -802,8 +802,8 @@ export const logoSignsConfig: TemplateConfig = {
   },
   
   business: {
-    name: "3D Logo Layered Signs",
-    description: "Custom layered metal signs that bring logos to life with depth, color, and dimension for offices, events, and retail spaces.",
+    name: "Custom Logo Signs",
+    description: "Custom logo signs built with layered metal to bring your brand to life with depth, color, and dimension for offices, events, and retail spaces.",
     type: "Product",
     industry: "commercial signage"
   },

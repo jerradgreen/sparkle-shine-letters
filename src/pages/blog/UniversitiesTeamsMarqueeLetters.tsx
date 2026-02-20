@@ -40,7 +40,7 @@ const UniversitiesTeamsMarqueeLetters = () => {
 
           <h2 className="text-xl font-semibold text-foreground mt-8 mb-3">Permanent Branded Signage</h2>
           <p className="text-muted-foreground leading-relaxed mb-4">
-            Some universities also invest in <Link to="/3d-logos" className="text-primary underline hover:text-primary/80">custom 3D logos and layered signs</Link> for permanent installations in athletic facilities, locker rooms, and training centers. These complement the portable stand-up letters and give the program a consistent branded look across venues.
+            Some universities also invest in <Link to="/3d-logos" className="text-primary underline hover:text-primary/80">custom logo signs</Link> for permanent installations in athletic facilities, locker rooms, and training centers. These complement the portable stand-up letters and give the program a consistent branded look across venues.
           </p>
 
           <h2 className="text-xl font-semibold text-foreground mt-8 mb-3">What Universities Typically Order</h2>

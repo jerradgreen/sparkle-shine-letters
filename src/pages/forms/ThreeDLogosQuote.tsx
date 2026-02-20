@@ -3,8 +3,8 @@ import { FormPageTemplate } from '@/components/templates/FormPageTemplate';
 const ThreeDLogosQuote = () => {
   return (
     <FormPageTemplate
-      title="3D Logo Layered Sign Quote"
-      description="Get a custom quote for 3D layered logo signs"
+      title="Custom Logo Sign Quote"
+      description="Get a custom quote for your custom logo sign"
       formId="9"
     />
   );
