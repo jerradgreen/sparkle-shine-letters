@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Truck, Lightbulb, Palette } from "lucide-react";
 import { Helmet } from "react-helmet-async";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 import PerformantImage from "@/components/PerformantImage";
 import foodTruckHero from "@/assets/food-truck-bar-monte.jpg";
@@ -73,10 +73,22 @@ const MobileVendorSigns = () => {
                 {foodTruckSignsConfig.hero.subheadline}
               </p>
               <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
-                Hand-crafted by experienced metal fabricators — not mass-produced plastic signage.
+                Hand-crafted by experienced metal fabricators — not mass-produced plastic signage. Whether you want an illuminated or light up food truck sign, every piece is built to last.
+              </p>
+              <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
+                Built for food trucks, coffee trailers, mobile bars, pop-ups, Airstream vendors, event booths, and traveling businesses, our custom metal signage is engineered to attract attention, withstand travel, and elevate your brand wherever you park.
+              </p>
+              <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
+                For fully integrated brand marks and dimensional metal logo builds, explore our <Link to="/3d-logos" className="text-primary underline hover:text-primary/80 transition-colors">Custom Logo Signs</Link> designed for high-impact branding.
+              </p>
+              <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
+                Custom mobile vendor signs typically start around $3,000 including roof mount/stand. Most full builds range from $5,000-$10,000 depending on size, font style and details.
+              </p>
+              <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
+                Whether you're launching a new truck or upgrading an established brand, the right custom food truck signage becomes your most visible marketing asset at every event.
               </p>
               <p className="text-sm text-muted-foreground mb-6 leading-relaxed">
-                Custom mobile vendor signs typically start around $3,000 including roof mount/stand. Most full builds range from $5,000-$10,000 depending on size, font style and details.
+                For many vendors, the right illuminated food truck sign becomes their most powerful marketing tool — drawing attention from blocks away and increasing walk-up traffic at festivals, markets, and high-traffic events.
               </p>
               
               {/* Mobile CTA buttons */}
@@ -124,10 +136,22 @@ const MobileVendorSigns = () => {
                 {foodTruckSignsConfig.hero.subheadline}
               </p>
               <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
-                Hand-crafted by experienced metal fabricators — not mass-produced plastic signage.
+                Hand-crafted by experienced metal fabricators — not mass-produced plastic signage. Whether you want an illuminated or light up food truck sign, every piece is built to last.
+              </p>
+              <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
+                Built for food trucks, coffee trailers, mobile bars, pop-ups, Airstream vendors, event booths, and traveling businesses, our custom metal signage is engineered to attract attention, withstand travel, and elevate your brand wherever you park.
+              </p>
+              <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
+                For fully integrated brand marks and dimensional metal logo builds, explore our <Link to="/3d-logos" className="text-primary underline hover:text-primary/80 transition-colors">Custom Logo Signs</Link> designed for high-impact branding.
+              </p>
+              <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
+                Custom mobile vendor signs typically start around $3,000 including roof mount/stand. Most full builds range from $5,000-$10,000 depending on size, font style and details.
+              </p>
+              <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
+                Whether you're launching a new truck or upgrading an established brand, the right custom food truck signage becomes your most visible marketing asset at every event.
               </p>
               <p className="text-sm text-muted-foreground mb-6 leading-relaxed">
-                Custom mobile vendor signs typically start around $3,000 including roof mount/stand. Most full builds range from $5,000-$10,000 depending on size, font style and details.
+                For many vendors, the right illuminated food truck sign becomes their most powerful marketing tool — drawing attention from blocks away and increasing walk-up traffic at festivals, markets, and high-traffic events.
               </p>
               
               <div className="space-y-3 mb-6">
@@ -244,6 +268,24 @@ const MobileVendorSigns = () => {
         </div>
       </section>
 
+      {/* Durable Food Truck & Trailer Signage Built for the Road */}
+      <section className="py-10 px-4 bg-gradient-to-b from-background to-muted/20">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-8">Durable Food Truck & Trailer Signage Built for the Road</h2>
+          <div className="space-y-4 max-w-5xl mx-auto">
+            <p className="text-muted-foreground text-sm leading-relaxed">
+              Our custom food truck signage and trailer signage is fabricated from welded steel with travel-safe mounting brackets, designed for repeated transport between events, festivals, and daily service locations.
+            </p>
+            <p className="text-muted-foreground text-sm leading-relaxed">
+              Every sign receives a weather-resistant finish that performs in rain, wind, and direct sun. Secure fastening points prevent shifting during transit, and folding bracket options keep your sign protected on the highway.
+            </p>
+            <p className="text-muted-foreground text-sm leading-relaxed">
+              Power options include standard plug-in connections and LED upgrades for lower consumption. These illuminated food truck signs run efficiently off inverters or generators, making them reliable mobile vendor signs for high-traffic events and daily operations.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* FAQ Section */}
       <section id="quote-form" className="py-10 px-4 bg-gradient-to-b from-background to-muted/20">
         <div className="max-w-6xl mx-auto">
@@ -267,6 +309,10 @@ const MobileVendorSigns = () => {
 
           <p className="text-muted-foreground text-sm mt-4 max-w-5xl mx-auto">
             Many mobile vendors and event operators also diversify their services by <a href="/rental-business" className="text-primary underline hover:text-primary/80 transition-colors">starting a marquee letter rental business</a> to increase average booking value and recurring revenue potential.
+          </p>
+
+          <p className="text-muted-foreground text-sm mt-4 max-w-5xl mx-auto">
+            Need freestanding illuminated letters instead of mounted signage? Explore our <Link to="/event-standup-signs" className="text-primary underline hover:text-primary/80 transition-colors">36"/48" Stand-Up Letters</Link> for mobile displays and events.
           </p>
         </div>
       </section>

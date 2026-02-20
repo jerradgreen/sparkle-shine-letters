@@ -512,7 +512,7 @@ export const foodTruckSignsConfig: TemplateConfig = {
   keywords: ["food truck signs", "mobile vendor signs", "illuminated menu boards", "custom food signage", "food truck lighting", "vendor marquee signs"],
   
   hero: {
-    headline: "Custom Signs That Make Your Food Truck Impossible to Ignore",
+    headline: "Custom Food Truck & Mobile Business Signage That's Impossible to Ignore",
     subheadline: "Custom-fabricated metal signs built for food trucks, trailers, and pop-ups. From glowing marquee letters to bold layered logos, we create high-impact signage that draws attention and drives foot traffic.",
     ctaText: "Start My Custom Food Truck Sign",
     secondaryCtaText: "Explore Food Truck Projects",
@@ -634,6 +634,18 @@ export const foodTruckSignsConfig: TemplateConfig = {
       {
         question: "What sizes do you offer?",
         answer: "We can make almost any size to fit your truck or trailer. We charge by the square-inch and per color. Let us know what space you're working with and we'll design the perfect sign for you."
+      },
+      {
+        question: "What size sign works best for a food truck or trailer?",
+        answer: "It depends on available roof or fascia space. We charge by the square inch and per color, so smaller builds (2-3 letters) start lower while full-width name signs scale up accordingly. Roof-mount signs need clearance for transport, while side-mount signs can run longer. Send us your truck dimensions and we will recommend the best fit."
+      },
+      {
+        question: "Are these signs safe for highway travel?",
+        answer: "Yes. Our signs are fabricated from welded steel with secure mounting points designed to handle road vibration and wind. We recommend folding brackets for signs that extend above the roofline. The signs themselves are surprisingly lightweight relative to their visual impact, which reduces stress on your vehicle structure during transit."
+      },
+      {
+        question: "Can these signs run off my truck's power system?",
+        answer: "Yes. Our food truck signage is low wattage and plugs in like a standard lamp. Typical power draw is comparable to a small household lamp. Many vendors run them through an inverter connected to their truck battery or generator. LED upgrades are available for even lower power consumption and longer lifespan."
       }
     ]
   },
