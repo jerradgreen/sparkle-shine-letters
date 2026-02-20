@@ -224,15 +224,15 @@ const MobileVendorSigns = () => {
           </div>
 
           <p className="text-muted-foreground text-sm mt-8 max-w-5xl mx-auto">
-            Many mobile vendors and event companies expand their offerings with{' '}
+            Looking to add another revenue stream? Explore our{' '}
             <a href="/rental-inventory" className="text-primary underline hover:text-primary/80 transition-colors">
-              commercial marquee letter rental business packages
+              commercial marquee letter rental packages
             </a>{' '}
-             that generate consistent income through repeat bookings.
+            designed for consistent income through repeat bookings.
           </p>
 
           <p className="text-muted-foreground text-sm mt-4 max-w-5xl mx-auto">
-            Many mobile vendors and event operators also diversify their services by <a href="/rental-business" className="text-primary underline hover:text-primary/80 transition-colors">starting a marquee letter rental business</a> to increase average booking value and recurring revenue potential.
+            You can also diversify your services by <a href="/rental-business" className="text-primary underline hover:text-primary/80 transition-colors">starting a marquee letter rental business</a> to increase average booking value and recurring revenue potential.
           </p>
 
         </div>
