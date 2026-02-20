@@ -61,7 +61,7 @@ const Footer = () => {
                 onClick={() => window.scrollTo(0, 0)}
                 className="text-muted-foreground hover:text-primary transition-colors"
               >
-                3D Logos
+                Custom Logo Signs
               </Link>
               <Link 
                 to="/mobile-vendor-signs" 

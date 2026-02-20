@@ -656,7 +656,7 @@ export const foodTruckSignsConfig: TemplateConfig = {
 
 // 3D Logo Layered Signs Template
 export const logoSignsConfig: TemplateConfig = {
-  pageTitle: "3D Logo Layered Signs - Custom Brand Signage with Depth & Dimension",
+  pageTitle: "Custom Logo Signs | Dimensional Metal Signage",
   metaDescription: "Custom layered metal signs that bring your logo to life with depth, color, and bold dimension. Perfect for walls, lobbies, event backdrops, and branded spaces.",
   keywords: ["3D logo signs", "layered logo signs", "dimensional logo", "brand signage", "custom logo", "3D metal signs", "office signage"],
   
