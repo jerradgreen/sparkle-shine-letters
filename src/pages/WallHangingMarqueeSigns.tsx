@@ -536,6 +536,14 @@ const WallHangingMarqueeSigns = () => {
             </a>.
           </p>
 
+          <p className="text-muted-foreground text-sm mt-4 max-w-5xl mx-auto">
+            If you need a fully branded mark rather than individual letters, explore our{' '}
+            <a href="/3d-logos" className="text-primary underline hover:text-primary/80 transition-colors">
+              Custom Logo Signs
+            </a>{' '}
+            fabricated in layered metal.
+          </p>
+
           <div className="text-center mt-8">
             <Button 
               size="lg" 

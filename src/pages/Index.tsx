@@ -116,6 +116,13 @@ const Index = () => {
           </p>
         </div>
 
+        {/* Custom Logo Signs contextual link */}
+        <div className="max-w-3xl mx-auto mb-8">
+          <p className="text-muted-foreground leading-relaxed">
+            Our <Link to="/3d-logos" className="text-primary underline hover:text-primary/80 transition-colors font-semibold">Custom Logo Signs</Link> are fabricated in layered metal with dimensional depth and hand-finished detail, designed to become the focal point of restaurants, boutiques, and office interiors. These commissioned builds elevate brand presence beyond flat signage and create a statement that feels architectural and intentional.
+          </p>
+        </div>
+
         {/* Visual Selection Grid */}
         <div className="mb-12">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
