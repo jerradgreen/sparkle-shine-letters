@@ -654,7 +654,7 @@ export const foodTruckSignsConfig: TemplateConfig = {
   }
 };
 
-// 3D Logo Layered Signs Template
+// Custom Logo Signs Template
 export const logoSignsConfig: TemplateConfig = {
   pageTitle: "Custom Logo Signs | Dimensional Metal Signage",
   metaDescription: "Custom logo signs built with layered metal for depth, color, and bold dimension. Perfect for walls, lobbies, event backdrops, and branded spaces.",
@@ -662,12 +662,12 @@ export const logoSignsConfig: TemplateConfig = {
   
   hero: {
     headline: "Custom Logo Signs That Command Attention",
-    subheadline: "Each piece is custom-built in metal with layered depth, hand-finished detail, and a bold vintage edge. Designed for brands, boutiques, restaurants, and spaces that want more than a standard sign — they want a focal point.",
+    subheadline: "Each piece is custom-built in metal with layered depth, hand-finished detail, and a bold vintage edge. Designed for brands, boutiques, restaurants, and spaces that want more than a standard sign — they want a focal point. Ideal for brands seeking custom business signage that feels architectural, intentional, and distinctly their own.",
     ctaText: "Start Your Custom Project",
     secondaryCtaText: "Explore Past Custom Builds",
     ctaAction: "pricing",
     heroImage: "https://cdn.shopify.com/s/files/1/1403/8315/files/logo-tucks-1.jpg?v=1759693606",
-    heroImageAlt: "Tuck's Truffles 3D layered logo sign with dimensional depth",
+    heroImageAlt: "Tuck's Truffles custom layered logo sign with dimensional depth",
     layout: "image-left",
     trustBar: "Trusted by businesses, creators, and event pros nationwide"
   },
@@ -797,6 +797,10 @@ export const logoSignsConfig: TemplateConfig = {
       {
         question: "What's the turn-around time?",
         answer: "We need 4-6 weeks from the day the order is finalized to handcraft your custom sign. Rush orders are available for an additional fee if you need it sooner."
+      },
+      {
+        question: "What do you need from me to build a custom logo sign?",
+        answer: "A vector file (AI, SVG, or PDF) gives us the cleanest result, but we can absolutely work from a high-resolution PNG or JPG. Beyond the artwork, we'll confirm the size that fits your space, your brand colors, whether it's going indoors or outdoors, and your ideal timeline. From there, we handle the rest — mockup, fabrication, and delivery."
       }
     ]
   },
