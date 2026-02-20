@@ -66,7 +66,7 @@ const Navigation = () => {
                   <Link to="/wall-hanging-signs" className="cursor-pointer">Wall Letters</Link>
                 </DropdownMenuItem>
               <DropdownMenuItem asChild>
-                <Link to="/3d-logos" className="cursor-pointer">3D Logos</Link>
+                <Link to="/3d-logos" className="cursor-pointer">Custom Logo Signs</Link>
               </DropdownMenuItem>
                 <DropdownMenuItem asChild>
                   <Link to="/mobile-vendor-signs" className="cursor-pointer">Mobile Vendors</Link>
@@ -127,7 +127,7 @@ const Navigation = () => {
                 <div className="text-foreground font-medium mb-2">Custom Signs</div>
                 <div className="pl-4 flex flex-col space-y-2">
                   <Link to="/wall-hanging-signs" className="text-foreground hover:text-primary font-medium py-1" onClick={() => setIsMobileMenuOpen(false)}>Wall Letters</Link>
-                  <Link to="/3d-logos" className="text-foreground hover:text-primary font-medium py-1" onClick={() => setIsMobileMenuOpen(false)}>3D Logos</Link>
+                  <Link to="/3d-logos" className="text-foreground hover:text-primary font-medium py-1" onClick={() => setIsMobileMenuOpen(false)}>Custom Logo Signs</Link>
                   <Link to="/mobile-vendor-signs" className="text-foreground hover:text-primary font-medium py-1" onClick={() => setIsMobileMenuOpen(false)}>Mobile Vendors</Link>
                   <Link to="/event-standup-signs" className="text-foreground hover:text-primary font-medium py-1" onClick={() => setIsMobileMenuOpen(false)}>Stand-Up Letters</Link>
                   <Link to="/rental-inventory" className="text-foreground hover:text-primary font-medium py-1" onClick={() => setIsMobileMenuOpen(false)}>Rental Inventory</Link>
