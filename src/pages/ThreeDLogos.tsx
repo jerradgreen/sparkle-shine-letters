@@ -254,10 +254,10 @@ const ThreeDLogos = () => {
           <h2 className="text-3xl font-bold mb-6 text-foreground">Fabricated Metal Branding, Built as a Statement Piece</h2>
           
           <p className="text-muted-foreground mb-4 leading-relaxed">
-            Flat signage fades into the background. A custom metal sign with layered depth commands attention because it occupies real space — light catches the edges, shadows shift between layers, and the logo feels alive on the wall. Each dimensional logo sign we build is fabricated from precision-cut metal, stacked and assembled by hand to create a sculptural quality that printed or routed signs simply can't match.
+            Flat signage fades into the background. Custom metal signs with layered depth command attention because it occupies real space — light catches the edges, shadows shift between layers, and the logo feels alive on the wall. Each dimensional logo sign we build is fabricated from precision-cut metal, stacked and assembled by hand to create a sculptural quality that printed or routed signs simply can't match.
           </p>
           <p className="text-muted-foreground leading-relaxed">
-            Every commission is bespoke: colors are matched to your brand, layers are engineered for visual impact, and finishes are hand-applied with a vintage edge that gives each piece warmth and character. This isn't signage off a production line — it's fabricated metal branding, built as a statement piece for spaces that demand more.
+            Every commission is bespoke: colors are matched to your brand, layers are engineered for visual impact, and finishes are hand-applied with a vintage edge that gives each piece warmth and character. It's fabricated metal branding, built as a statement piece for spaces that demand more.
           </p>
         </div>
       </section>
