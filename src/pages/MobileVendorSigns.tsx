@@ -127,6 +127,7 @@ const MobileVendorSigns = () => {
       {/* Feature Cards - 3 features above fold */}
       <section className="py-6 px-4 bg-muted/30">
         <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-6">Built for Mobile Businesses</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <Card className="border-primary/20 hover:border-primary/40 transition-colors">
               <CardContent className="p-4 flex items-center gap-4 min-h-[100px]">
@@ -135,7 +136,7 @@ const MobileVendorSigns = () => {
                 </div>
                 <div className="flex flex-col justify-center">
                   <h3 className="text-base font-semibold mb-1 text-card-foreground">Made for the Road</h3>
-                  <p className="text-xs text-muted-foreground">Lightweight, secure, and built to handle mobile life — from streets to festivals</p>
+                  <p className="text-xs text-muted-foreground">Designed for food trucks, trailers, and mobile vendors.</p>
                 </div>
               </CardContent>
             </Card>
@@ -147,7 +148,7 @@ const MobileVendorSigns = () => {
                 </div>
                 <div className="flex flex-col justify-center">
                   <h3 className="text-base font-semibold mb-1 text-card-foreground">Glows Day and Night</h3>
-                  <p className="text-xs text-muted-foreground">Bright bulbs and bold letters get noticed, even in crowded vendor rows</p>
+                  <p className="text-xs text-muted-foreground">Illuminated marquee letters draw attention at events and festivals.</p>
                 </div>
               </CardContent>
             </Card>
@@ -159,7 +160,7 @@ const MobileVendorSigns = () => {
                 </div>
                 <div className="flex flex-col justify-center">
                   <h3 className="text-base font-semibold mb-1 text-card-foreground">Custom Words or Logos</h3>
-                  <p className="text-xs text-muted-foreground">Spell your truck name, best-selling item, or show off your full logo in 3D</p>
+                  <p className="text-xs text-muted-foreground">Spell your truck name or showcase your dimensional logo.</p>
                 </div>
               </CardContent>
             </Card>
