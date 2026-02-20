@@ -641,7 +641,7 @@ export const foodTruckSignsConfig: TemplateConfig = {
       },
       {
         question: "Are these signs safe for highway travel?",
-        answer: "Yes. Our signs are fabricated from welded steel with secure mounting points designed to handle road vibration and wind. We recommend folding brackets for signs that extend above the roofline. The signs themselves are surprisingly lightweight relative to their visual impact, which reduces stress on your vehicle structure during transit."
+        answer: "Our signs are fabricated from welded steel, and we can provide bracket style options based on your project. Installation and mounting methods are determined by the customer or their installer to ensure proper fit and safety for their specific truck or trailer."
       },
       {
         question: "Can these signs run off my truck's power system?",
