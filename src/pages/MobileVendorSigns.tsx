@@ -262,19 +262,19 @@ const MobileVendorSigns = () => {
         </div>
       </section>
 
-      {/* Durable Food Truck & Trailer Signage Built for the Road */}
+      {/* Custom Food Truck & Trailer Signage — SEO Depth Section */}
       <section className="py-10 px-4 bg-gradient-to-b from-background to-muted/20">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-8">Durable Food Truck & Trailer Signage Built for the Road</h2>
+          <h2 className="text-3xl font-bold text-center mb-8">Custom Food Truck & Trailer Signage</h2>
           <div className="space-y-4 max-w-5xl mx-auto">
             <p className="text-muted-foreground text-sm leading-relaxed">
-              Our custom food truck signage and trailer signage is fabricated from welded steel and built for bold visual impact in mobile environments.
+              Our custom food truck signage and trailer signage is fabricated from welded steel and designed for bold visual impact across mobile environments — from food trucks and coffee trailers to mobile bars, pop-ups, and event vendor setups. Every illuminated food truck sign is hand-built with marquee-style bulbs or LED options to maximize visibility day and night.
             </p>
             <p className="text-muted-foreground text-sm leading-relaxed">
-              We can fabricate permanent, removable, or fold-down bracket options depending on how you plan to mount your sign. Final installation and mounting methods are handled by you or your installer based on your specific vehicle setup.
+              We can fabricate permanent, removable, or fold-down bracket options depending on how you plan to mount your sign. Final installation and mounting methods are handled by the customer or their installer based on their specific vehicle setup.
             </p>
             <p className="text-muted-foreground text-sm leading-relaxed">
-              Power options include standard plug-in connections and LED upgrades for lower consumption. These illuminated food truck signs are designed for reliable daily use at events and service locations.
+              For fully integrated brand marks and dimensional metal logo builds, explore our <Link to="/3d-logos" className="text-primary underline hover:text-primary/80 transition-colors">Custom Logo Signs</Link>. Need freestanding illuminated letters for mobile displays and events? Check out our <Link to="/event-standup-signs" className="text-primary underline hover:text-primary/80 transition-colors">36"/48" Stand-Up Letters</Link>.
             </p>
           </div>
         </div>
