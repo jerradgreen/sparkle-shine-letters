@@ -55,7 +55,7 @@ const ThreeDLogos = () => {
             <div className="mb-4">
               <PerformantImage 
                 src={logoSignsConfig.hero.heroImage} 
-                alt="Tuck's Truffles 3D layered logo sign" 
+                alt="Tuck's Truffles custom layered logo sign" 
                 className="rounded-lg shadow-2xl w-full h-64 object-cover"
                 priority={true}
                 fetchPriority="high"
@@ -77,7 +77,7 @@ const ThreeDLogos = () => {
                 Built by experienced metal fabricators — not mass-produced.
               </p>
               <p className="text-sm text-muted-foreground mb-6 leading-relaxed">
-                Custom 3D layered metal signs typically start around $1,500. Most commissioned pieces range from $2,500–$7,500+ depending on size, layers, and detail.
+                Custom logo signs typically start around $1,500. Most commissioned pieces range from $2,500–$7,500+ depending on size, layers, and detail.
               </p>
               
               {/* Mobile CTA buttons */}
@@ -129,7 +129,7 @@ const ThreeDLogos = () => {
                 Built by experienced metal fabricators — not mass-produced.
               </p>
               <p className="text-sm text-muted-foreground mb-6 leading-relaxed">
-                Custom 3D layered metal signs typically start around $1,500. Most commissioned pieces range from $2,500–$7,500+ depending on size, layers, and detail.
+                Custom logo signs typically start around $1,500. Most commissioned pieces range from $2,500–$7,500+ depending on size, layers, and detail.
               </p>
               
               <div className="space-y-3 mb-6">
@@ -168,7 +168,7 @@ const ThreeDLogos = () => {
             <div className="relative">
               <PerformantImage 
                 src={logoSignsConfig.hero.heroImage} 
-                alt="Tuck's Truffles 3D layered logo sign" 
+                alt="Tuck's Truffles custom layered logo sign" 
                 className="rounded-lg shadow-2xl w-full h-auto object-cover"
                 loading="lazy"
                 fetchPriority="low"
