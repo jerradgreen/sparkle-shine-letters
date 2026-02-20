@@ -48,7 +48,7 @@ const EventStandUpSigns = () => {
             Who Buys Commercial Stand-Up Marquee Letters?
           </h2>
           <p className="text-sm md:text-base text-muted-foreground leading-relaxed mb-3">
-            Our stand-up marquee letters are purchased by <strong>high schools, middle schools, universities, athletic departments, corporations, and event companies</strong> that use them repeatedly — not just once. Common use cases include pep rallies, graduations, fundraisers, recruiting events, brand activations, conferences, and stage backdrops.
+            Our stand-up marquee letters are purchased by <strong>schools, universities, athletic departments, corporations, and event companies</strong> that use them repeatedly — not just once. Common use cases include pep rallies, graduations, fundraisers, recruiting events, brand activations, conferences, and stage backdrops.
           </p>
           <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
             Schools and teams commonly purchase their full name, mascot, or slogan. Universities invest in marquee letters for campus-wide branding across graduations, athletic events, and recruiting. Corporations often purchase their company name or a recurring event title for use year after year. Owning your own letters ensures consistent branding, eliminates rental coordination, and allows you to deploy them whenever needed.
