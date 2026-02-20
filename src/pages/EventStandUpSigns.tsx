@@ -150,6 +150,13 @@ const EventStandUpSigns = () => {
             </a>{' '}
             for permanent installations, retail displays, and branded décor.
           </p>
+          <p className="text-sm text-muted-foreground mt-4 max-w-5xl mx-auto">
+            If your project calls for a fully integrated brand mark rather than freestanding letters, our{' '}
+            <a href="/3d-logos" className="text-primary underline hover:text-primary/80 transition-colors">
+              Custom Logo Signs
+            </a>{' '}
+            offer layered metal fabrication with dimensional depth and hand-finished detail.
+          </p>
         </div>
       </section>
 
