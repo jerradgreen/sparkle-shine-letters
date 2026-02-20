@@ -1,8 +1,8 @@
 
 
-## Mobile Vendor Page — Liability-Safe Refinement
+## Mobile Vendor Page — Tweaked Refactor
 
-Tightening the hero section and removing installation/safety liability language from the SEO section and FAQ.
+Three targeted changes on top of the approved structural refactor plan.
 
 ---
 
@@ -10,48 +10,49 @@ Tightening the hero section and removing installation/safety liability language 
 
 | File | Changes |
 |------|---------|
-| `src/pages/MobileVendorSigns.tsx` | Remove conversion sentence from hero (both layouts), replace "Built for the Road" section body |
-| `src/config/templateConfigs.ts` | Replace highway travel FAQ answer |
+| `src/pages/MobileVendorSigns.tsx` | Delete "Durable Food Truck & Trailer Signage" section (lines 265-281); ensure the new "Custom Food Truck & Trailer Signage" SEO section (from the approved plan) is added and includes bracket info, liability sentence, and both internal links |
+| `src/config/templateConfigs.ts` | Change FAQ question text from "Are these signs safe for highway travel?" to "Can these signs be used on a truck or trailer that travels on highways?" (line 643) |
 
 ---
 
-### 1. Hero Section — Remove Extra Conversion Sentence
+### 1. Delete Redundant Section
 
-Remove the "Whether you're launching a new truck..." paragraph from both mobile (line 87-89) and desktop (line 150-152) layouts. This keeps the hero to: H1, subheadline, hand-crafted paragraph, "Built for" paragraph, Custom Logo Signs link, pricing anchor, revenue line, then CTAs.
-
-The "light up food truck sign" phrase remains in the hand-crafted paragraph (once only). H1 stays unchanged.
+Remove the entire "Durable Food Truck & Trailer Signage Built for the Road" section (lines 265-281 in `MobileVendorSigns.tsx`), including its H2 and all three body paragraphs. This content is now covered by the new SEO section.
 
 ---
 
-### 2. Replace "Durable Food Truck & Trailer Signage Built for the Road" Section Body
+### 2. Keep New SEO Section as Only Depth Section
 
-H2 stays as-is. Replace the three paragraphs (lines 276-284) with:
+The new section from the approved refactor plan (H2: "Custom Food Truck & Trailer Signage") serves as the single SEO depth section. It will include:
 
-**Paragraph 1:**
-"Our custom food truck signage and trailer signage is fabricated from welded steel and built for bold visual impact in mobile environments."
+- Bracket styles: permanent, removable, fold-down
+- Liability sentence: "Final installation and mounting methods are handled by the customer or their installer based on their specific vehicle setup."
+- Internal link to Custom Logo Signs (`/3d-logos`)
+- Internal link to 36"/48" Stand-Up Letters (`/event-standup-signs`)
 
-**Paragraph 2:**
-"We can fabricate permanent, removable, or fold-down bracket options depending on how you plan to mount your sign. Final installation and mounting methods are handled by you or your installer based on your specific vehicle setup."
-
-**Paragraph 3:**
-"Power options include standard plug-in connections and LED upgrades for lower consumption. These illuminated food truck signs are designed for reliable daily use at events and service locations."
-
-Removes: highway safety guarantees, weather resistance promises, road vibration language, transit stress claims.
+Placed between the Quick Benefits section and Testimonials (per the approved plan's section order).
 
 ---
 
-### 3. Replace Highway Travel FAQ Answer
+### 3. Update FAQ Question Text
 
-In `src/config/templateConfigs.ts` (line 644), replace the answer for "Are these signs safe for highway travel?" with:
+In `src/config/templateConfigs.ts` (line 643), change the question from:
 
-"Our signs are fabricated from welded steel, and we can provide bracket style options based on your project. Installation and mounting methods are determined by the customer or their installer to ensure proper fit and safety for their specific truck or trailer."
+"Are these signs safe for highway travel?"
+
+to:
+
+"Can these signs be used on a truck or trailer that travels on highways?"
+
+The answer stays exactly as currently written.
 
 ---
 
-### 4. No Changes To
+### What stays untouched
 
-- H1 (stays as-is)
-- Power FAQ (stays as-is)
-- Layout, testimonials, CTAs, pricing anchors, visual hierarchy
-- "Light up food truck sign" phrase (remains once in hero)
+- H1, subheadline, hero structure
+- Pricing anchors
+- Testimonials, gallery, bottom CTA
+- All other FAQ items
+- No new claims or guarantees added
 
