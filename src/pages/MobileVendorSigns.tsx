@@ -84,9 +84,6 @@ const MobileVendorSigns = () => {
               <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
                 Custom mobile vendor signs typically start around $3,000 including roof mount/stand. Most full builds range from $5,000-$10,000 depending on size, font style and details.
               </p>
-              <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
-                Whether you're launching a new truck or upgrading an established brand, the right custom food truck signage becomes your most visible marketing asset at every event.
-              </p>
               <p className="text-sm text-muted-foreground mb-6 leading-relaxed">
                 For many vendors, the right illuminated food truck sign becomes their most powerful marketing tool — drawing attention from blocks away and increasing walk-up traffic at festivals, markets, and high-traffic events.
               </p>
@@ -146,9 +143,6 @@ const MobileVendorSigns = () => {
               </p>
               <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
                 Custom mobile vendor signs typically start around $3,000 including roof mount/stand. Most full builds range from $5,000-$10,000 depending on size, font style and details.
-              </p>
-              <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
-                Whether you're launching a new truck or upgrading an established brand, the right custom food truck signage becomes your most visible marketing asset at every event.
               </p>
               <p className="text-sm text-muted-foreground mb-6 leading-relaxed">
                 For many vendors, the right illuminated food truck sign becomes their most powerful marketing tool — drawing attention from blocks away and increasing walk-up traffic at festivals, markets, and high-traffic events.
@@ -274,13 +268,13 @@ const MobileVendorSigns = () => {
           <h2 className="text-3xl font-bold text-center mb-8">Durable Food Truck & Trailer Signage Built for the Road</h2>
           <div className="space-y-4 max-w-5xl mx-auto">
             <p className="text-muted-foreground text-sm leading-relaxed">
-              Our custom food truck signage and trailer signage is fabricated from welded steel with travel-safe mounting brackets, designed for repeated transport between events, festivals, and daily service locations.
+              Our custom food truck signage and trailer signage is fabricated from welded steel and built for bold visual impact in mobile environments.
             </p>
             <p className="text-muted-foreground text-sm leading-relaxed">
-              Every sign receives a weather-resistant finish that performs in rain, wind, and direct sun. Secure fastening points prevent shifting during transit, and folding bracket options keep your sign protected on the highway.
+              We can fabricate permanent, removable, or fold-down bracket options depending on how you plan to mount your sign. Final installation and mounting methods are handled by you or your installer based on your specific vehicle setup.
             </p>
             <p className="text-muted-foreground text-sm leading-relaxed">
-              Power options include standard plug-in connections and LED upgrades for lower consumption. These illuminated food truck signs run efficiently off inverters or generators, making them reliable mobile vendor signs for high-traffic events and daily operations.
+              Power options include standard plug-in connections and LED upgrades for lower consumption. These illuminated food truck signs are designed for reliable daily use at events and service locations.
             </p>
           </div>
         </div>
