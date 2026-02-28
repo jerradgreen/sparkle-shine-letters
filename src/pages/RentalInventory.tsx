@@ -82,8 +82,11 @@ const RentalInventory = () => {
                <p className="text-sm text-muted-foreground leading-relaxed mb-3">
                  Rental inventory packages are revenue-producing assets — not décor. Most clients invest $15,000-$35,000 depending on configuration. With consistent bookings, many recover their investment within the first year and continue generating profit for years after.
                </p>
+               <p className="text-sm text-primary/80 font-medium mb-3">
+                 Financing available through Shop Pay Installments — apply in seconds at checkout.
+               </p>
               
-              <div className="bg-muted/30 rounded-lg p-3 text-center -mt-2">
+               <div className="bg-muted/30 rounded-lg p-3 text-center -mt-2">
                 <div className="flex justify-center mb-1">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className="w-4 h-4 text-yellow-500 fill-yellow-500" />
@@ -122,6 +125,9 @@ const RentalInventory = () => {
                </p>
                <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
                  Rental inventory packages are revenue-producing assets — not décor. Most clients invest $15,000-$35,000 depending on configuration. With consistent bookings, many recover their investment within the first year and continue generating profit for years after.
+               </p>
+               <p className="text-sm text-primary/80 font-medium mb-4">
+                 Financing available through Shop Pay Installments — apply in seconds at checkout.
                </p>
             <Button
               size="lg" 
@@ -496,7 +502,7 @@ const RentalInventory = () => {
               </div>
               <h3 className="text-2xl font-bold mb-4 text-foreground">Step 1: Get a Quote in Around 5 Minutes</h3>
               <p className="text-muted-foreground leading-relaxed">
-                Fill out a quick form and we'll send you pricing, package options, and everything you need to make the right move.
+                Fill out a quick form and we'll send you pricing, package options, and everything you need to make the right move. Flexible financing is available through Shop Pay Installments — approval takes seconds, no lengthy application.
               </p>
               <div className="mt-6 flex justify-center">
                 <div className="w-16 h-0.5 bg-primary"></div>
