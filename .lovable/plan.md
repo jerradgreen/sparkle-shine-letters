@@ -1,58 +1,35 @@
 
 
-## Mobile Vendor Page — Tweaked Refactor
+## Add Shop Pay Installments Financing Messaging to Rental Inventory Page
 
-Three targeted changes on top of the approved structural refactor plan.
-
----
-
-### Files Edited
-
-| File | Changes |
-|------|---------|
-| `src/pages/MobileVendorSigns.tsx` | Delete "Durable Food Truck & Trailer Signage" section (lines 265-281); ensure the new "Custom Food Truck & Trailer Signage" SEO section (from the approved plan) is added and includes bracket info, liability sentence, and both internal links |
-| `src/config/templateConfigs.ts` | Change FAQ question text from "Are these signs safe for highway travel?" to "Can these signs be used on a truck or trailer that travels on highways?" (line 643) |
+Two subtle touchpoints — no new sections, no layout changes.
 
 ---
 
-### 1. Delete Redundant Section
+### File: `src/pages/RentalInventory.tsx`
 
-Remove the entire "Durable Food Truck & Trailer Signage Built for the Road" section (lines 265-281 in `MobileVendorSigns.tsx`), including its H2 and all three body paragraphs. This content is now covered by the new SEO section.
+**Change 1 — Hero financing line (both mobile + desktop)**
 
----
+Add a single muted line directly below the pricing/investment paragraph in both layouts:
 
-### 2. Keep New SEO Section as Only Depth Section
+```
+Financing available through Shop Pay Installments — apply in seconds at checkout.
+```
 
-The new section from the approved refactor plan (H2: "Custom Food Truck & Trailer Signage") serves as the single SEO depth section. It will include:
+- **Mobile** (after line 83, the `$15,000-$35,000` paragraph): Add a new `<p>` with `text-sm text-primary/80 font-medium`
+- **Desktop** (after line 124, the same investment paragraph): Add a matching `<p>`
 
-- Bracket styles: permanent, removable, fold-down
-- Liability sentence: "Final installation and mounting methods are handled by the customer or their installer based on their specific vehicle setup."
-- Internal link to Custom Logo Signs (`/3d-logos`)
-- Internal link to 36"/48" Stand-Up Letters (`/event-standup-signs`)
+**Change 2 — "How to Get Started" Step 1 mention**
 
-Placed between the Quick Benefits section and Testimonials (per the approved plan's section order).
+After the existing Step 1 description (line 499), append a second sentence:
 
----
+```
+Flexible financing is available through Shop Pay Installments — approval takes seconds, no lengthy application.
+```
 
-### 3. Update FAQ Question Text
-
-In `src/config/templateConfigs.ts` (line 643), change the question from:
-
-"Are these signs safe for highway travel?"
-
-to:
-
-"Can these signs be used on a truck or trailer that travels on highways?"
-
-The answer stays exactly as currently written.
+Same `<p>` tag, just extending the text.
 
 ---
 
-### What stays untouched
-
-- H1, subheadline, hero structure
-- Pricing anchors
-- Testimonials, gallery, bottom CTA
-- All other FAQ items
-- No new claims or guarantees added
+Two files edited: `src/pages/RentalInventory.tsx` only. No new components, no layout changes.
 
