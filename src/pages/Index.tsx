@@ -106,7 +106,7 @@ const Index = () => {
         {/* Hero Section */}
         <div className="text-center mb-4">
           <h1 className="text-3xl md:text-4xl font-bold mb-3 text-foreground">
-            Trusted by Hundreds. Built for the Spotlight.
+            Custom Marquee Signs & Letters — Trusted by Hundreds Since 2008
           </h1>
           <p className="text-lg text-[hsl(197,35%,45%)] mb-2 max-w-3xl mx-auto font-medium">
             Choose the marquee sign style that fits your vision and see how easy it is to make it yours.
@@ -223,7 +223,7 @@ const Index = () => {
 
         {/* Instagram Gallery Section - Lazy loaded for performance */}
         <div id="gallery" className="text-center mb-12" ref={instagramRef}>
-          <h3 className="text-2xl font-bold mb-6">Our Recent Work</h3>
+          <h2 className="text-2xl font-bold mb-6">Our Recent Marquee Sign Projects</h2>
           <p className="text-muted-foreground mb-4">
             Follow us on Instagram to see our latest creations and projects
           </p>
@@ -262,13 +262,6 @@ const Index = () => {
           </button>
         </div>
 
-        {/* Rental Business Contextual Link */}
-        <div className="mb-8 max-w-3xl mx-auto">
-          <p className="text-muted-foreground leading-relaxed">
-            For entrepreneurs and event companies exploring recurring revenue opportunities, <Link to="/rental-business" className="text-primary underline hover:text-primary/80 transition-colors font-semibold">starting a marquee letter rental business</Link> requires strategic inventory planning and commercial-grade equipment designed for long-term use.
-          </p>
-        </div>
-
         {/* Custom Logo Signs contextual link */}
         <div className="max-w-3xl mx-auto mb-8">
           <p className="text-muted-foreground leading-relaxed">
@@ -282,11 +275,14 @@ const Index = () => {
             Start a Commercial Marquee Letter Rental Business
           </h2>
           <p className="text-muted-foreground leading-relaxed">
-            Looking to start or expand a marquee letter rental business? Our{' '}
-            <Link to="/rental-inventory" className="text-primary underline hover:text-primary/80 transition-colors">
+            Our{' '}
+            <Link to="/rental-inventory" className="text-primary underline hover:text-primary/80 transition-colors font-semibold">
               commercial marquee letter rental business packages
             </Link>{' '}
-            are built for entrepreneurs and event rental companies who want durable, high-ROI inventory designed for repeated bookings and long-term profitability.
+            are built for entrepreneurs and event rental companies who want durable, high-ROI inventory designed for repeated bookings and long-term profitability. Learn more about{' '}
+            <Link to="/rental-business" className="text-primary underline hover:text-primary/80 transition-colors font-semibold">
+              starting a marquee letter rental business
+            </Link>, from startup costs to scaling your inventory.
           </p>
         </div>
       </div>

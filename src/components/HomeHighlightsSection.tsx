@@ -25,6 +25,7 @@ export const HomeHighlightsSection = () => {
   return (
     <section className="py-8 bg-muted/30 border-y border-border">
       <div className="container mx-auto px-4">
+        <h2 className="text-2xl md:text-3xl font-bold text-center mb-6 text-foreground">Handcrafted Marquee Signs for Every Space</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {highlights.map((highlight, index) => {
             const Icon = highlight.icon;
