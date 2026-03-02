@@ -164,7 +164,7 @@ const RentalInventory = () => {
       </section>
 
       {/* Intro section — directly under hero, above "Why Most Event Businesses" */}
-      <section className="py-8 px-4">
+      <section id="4ft-marquee-letters" className="py-8 px-4">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-lg md:text-xl font-bold text-foreground mb-4 text-center">
             Build Your Marquee Letter Rental Business with the Right Inventory
@@ -179,7 +179,7 @@ const RentalInventory = () => {
       </section>
 
       {/* H2 Section — Commercial-Grade Inventory */}
-      <section className="py-4 px-4">
+      <section id="full-alphabet-sets" className="py-4 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-lg md:text-xl font-bold text-foreground mb-3">
             Commercial-Grade Marquee Rental Inventory
@@ -287,7 +287,7 @@ const RentalInventory = () => {
       </section>
 
       {/* ROI Section */}
-      <section className="py-16 px-4">
+      <section id="pricing-packages" className="py-16 px-4">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-8 text-foreground">What Does the ROI Look Like for a Marquee Letter Rental Business?</h2>
           <div className="space-y-4">
@@ -345,7 +345,7 @@ const RentalInventory = () => {
       </section>
 
       {/* You Don't Need a Franchise Section */}
-      <section className="py-12 px-4">
+      <section id="no-franchise-fees" className="py-12 px-4">
         <div className="max-w-6xl mx-auto">
           <div className="bg-card border border-border rounded-lg p-6 shadow-sm">
             <div className="grid lg:grid-cols-3 gap-8 items-center">
@@ -429,7 +429,9 @@ const RentalInventory = () => {
       </section>
 
       {/* Rental Guide Download Section */}
-      <RentalGuideDownloadSection />
+      <div id="rental-biz-guide">
+        <RentalGuideDownloadSection />
+      </div>
 
       {/* Testimonials Section */}
       <section className="py-16 px-4">
