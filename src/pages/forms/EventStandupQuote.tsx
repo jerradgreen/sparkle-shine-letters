@@ -25,7 +25,7 @@ const EventStandupQuote = () => {
   const showTopper = params.get('showTopper') === 'true';
 
   // Map letter size to match radio button values in Cognito form
-  const mappedSize = letterSize === '36' ? '36"' : letterSize === '48' ? '48"' : '';
+  const mappedSize = letterSize === '48' ? '48"' : '36"';
 
   // Build prefill data object
   const prefillData: Record<string, string> = {};
