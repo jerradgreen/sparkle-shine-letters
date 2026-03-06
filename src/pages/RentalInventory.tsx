@@ -345,7 +345,7 @@ const RentalInventory = () => {
       </section>
 
       {/* You Don't Need a Franchise Section */}
-      <section id="no-franchise-fees" className="py-12 px-4">
+      <section id="business" className="py-12 px-4 scroll-mt-24">
         <div className="max-w-6xl mx-auto">
           <div className="bg-card border border-border rounded-lg p-6 shadow-sm">
             <div className="grid lg:grid-cols-3 gap-8 items-center">
@@ -682,9 +682,12 @@ const RentalInventory = () => {
       </section>
 
       {/* Product Features Section */}
-      <section className="py-16 px-4 bg-muted/20">
+      <section id="included" className="py-16 px-4 bg-muted/20 scroll-mt-24">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12 text-foreground">Product Features That Set Us Apart</h2>
+          <h2 className="text-3xl font-bold text-center mb-12 text-foreground">What's Included in a Rental Inventory Package</h2>
+          <p className="text-base text-muted-foreground leading-relaxed mb-8 text-center max-w-4xl mx-auto">
+            Every rental inventory package includes commercial-grade steel marquee letters, numbers, and symbols — along with LED bulbs, reusable foam-lined shipping boxes for safe transport and storage, and professional powder-coated finishes built to withstand years of repeated rental use.
+          </p>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Feature A - Blue */}
@@ -955,9 +958,12 @@ const RentalInventory = () => {
       </section>
 
       {/* Photo Gallery */}
-      <section className="py-8 px-4">
+      <section id="examples" className="py-8 px-4 scroll-mt-24">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-12 text-foreground">See Our Letters in Action</h2>
+          <h2 className="text-4xl font-bold text-center mb-12 text-foreground">Example Rental Inventory Sets</h2>
+          <p className="text-base text-muted-foreground leading-relaxed mb-8 text-center max-w-4xl mx-auto">
+            See how rental companies and event businesses use our marquee letter inventory at weddings, corporate events, and private celebrations. These are real configurations from active rental operators.
+          </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div className="relative overflow-hidden rounded-lg">
               <PerformantImage 
@@ -1036,9 +1042,12 @@ const RentalInventory = () => {
       </section>
 
       {/* Packages & Pricing */}
-      <section className="py-16 px-4 bg-gradient-to-r from-primary/5 to-accent/5">
+      <section id="packages" className="py-16 px-4 bg-gradient-to-r from-primary/5 to-accent/5 scroll-mt-24">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-12 text-foreground">Packages & Pricing</h2>
+          <h2 className="text-4xl font-bold text-center mb-12 text-foreground">Rental Inventory Packages</h2>
+          <p className="text-base text-muted-foreground leading-relaxed mb-8 text-center">
+            Our rental inventory packages range from 25 to 112+ pieces and are designed specifically for event rental companies. Whether you're launching a new marquee letter rental business or expanding an existing operation, each package is built around the highest-demand characters to maximize booking flexibility from day one.
+          </p>
           <p className="text-xl text-center text-muted-foreground mb-12">
             We offer flexible packages designed to grow with your rental business.
           </p>
