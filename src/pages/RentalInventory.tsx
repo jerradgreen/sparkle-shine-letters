@@ -682,9 +682,12 @@ const RentalInventory = () => {
       </section>
 
       {/* Product Features Section */}
-      <section className="py-16 px-4 bg-muted/20">
+      <section id="included" className="py-16 px-4 bg-muted/20 scroll-mt-24">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12 text-foreground">Product Features That Set Us Apart</h2>
+          <h2 className="text-3xl font-bold text-center mb-12 text-foreground">What's Included in a Rental Inventory Package</h2>
+          <p className="text-base text-muted-foreground leading-relaxed mb-8 text-center max-w-4xl mx-auto">
+            Every rental inventory package includes commercial-grade steel marquee letters, numbers, and symbols — along with LED bulbs, reusable foam-lined shipping boxes for safe transport and storage, and professional powder-coated finishes built to withstand years of repeated rental use.
+          </p>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Feature A - Blue */}
