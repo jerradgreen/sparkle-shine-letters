@@ -1036,9 +1036,12 @@ const RentalInventory = () => {
       </section>
 
       {/* Packages & Pricing */}
-      <section className="py-16 px-4 bg-gradient-to-r from-primary/5 to-accent/5">
+      <section id="packages" className="py-16 px-4 bg-gradient-to-r from-primary/5 to-accent/5 scroll-mt-24">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-12 text-foreground">Packages & Pricing</h2>
+          <h2 className="text-4xl font-bold text-center mb-12 text-foreground">Rental Inventory Packages</h2>
+          <p className="text-base text-muted-foreground leading-relaxed mb-8 text-center">
+            Our rental inventory packages range from 25 to 112+ pieces and are designed specifically for event rental companies. Whether you're launching a new marquee letter rental business or expanding an existing operation, each package is built around the highest-demand characters to maximize booking flexibility from day one.
+          </p>
           <p className="text-xl text-center text-muted-foreground mb-12">
             We offer flexible packages designed to grow with your rental business.
           </p>
