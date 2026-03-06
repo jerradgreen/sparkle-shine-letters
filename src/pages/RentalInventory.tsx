@@ -345,7 +345,7 @@ const RentalInventory = () => {
       </section>
 
       {/* You Don't Need a Franchise Section */}
-      <section id="no-franchise-fees" className="py-12 px-4">
+      <section id="business" className="py-12 px-4 scroll-mt-24">
         <div className="max-w-6xl mx-auto">
           <div className="bg-card border border-border rounded-lg p-6 shadow-sm">
             <div className="grid lg:grid-cols-3 gap-8 items-center">
