@@ -45,13 +45,13 @@ const EventStandUpSigns = () => {
       <section className="py-8 px-4 bg-background">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-lg md:text-xl font-bold text-foreground mb-3 text-center">
-            Who Buys Commercial Stand-Up Marquee Letters?
+            Who Buys Commercial Freestanding Marquee Letters?
           </h2>
           <p className="text-sm md:text-base text-muted-foreground leading-relaxed mb-3">
-            Our stand-up marquee letters are purchased by <strong>schools, universities, athletic departments, corporations, and event companies</strong> that use them repeatedly — not just once. Common use cases include pep rallies, graduations, fundraisers, recruiting events, brand activations, conferences, and stage backdrops.
+            Our freestanding marquee letters are purchased by <strong>universities, event companies, venues, athletic departments, corporate marketing teams, and schools</strong> that need reusable event signage — not a one-time decoration. Common use cases include graduations, brand activations, conferences, recruiting events, donor events, pep rallies, stage displays, and sponsor activations.
           </p>
           <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
-            Schools and teams commonly purchase their full name, mascot, or slogan. Universities invest in marquee letters for campus-wide branding across graduations, athletic events, and recruiting. Corporations often purchase their company name or a recurring event title for use year after year. Owning your own letters ensures consistent branding, eliminates rental coordination, and allows you to deploy them whenever needed.
+            Universities invest in marquee letters for campus-wide branding across graduations, athletic events, and recruiting. Event companies and venues purchase sets for repeated client deployments. Corporate teams buy their company name or recurring event title for year-after-year use. Schools purchase letters for graduations, pep rallies, and branded campus events. Owning your own letters ensures consistent branding, eliminates rental coordination, and allows you to deploy them whenever needed.
           </p>
         </div>
       </section>
