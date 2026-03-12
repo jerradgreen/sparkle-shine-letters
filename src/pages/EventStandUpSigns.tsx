@@ -164,7 +164,7 @@ const EventStandUpSigns = () => {
       <section className="py-16 px-4 bg-gradient-to-r from-primary to-primary/80 text-primary-foreground">
         <div className="container mx-auto text-center max-w-3xl">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Ready to Invest in Commercial Marquee Letters?
+            Ready to Invest in Commercial Freestanding Marquee Letters?
           </h2>
           <p className="text-lg md:text-xl mb-8">
             Click below, test your letters and get a quote in less than 5 minutes.

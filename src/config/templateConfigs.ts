@@ -484,14 +484,22 @@ export const standUpSignsConfig: TemplateConfig = {
       },
       {
         question: "Are these letters suitable for long-term institutional use?",
-        answer: "Yes. These letters are built with powder-coated steel and LED bulbs designed for repeated setup and teardown. Schools, universities, and corporate teams use them across dozens of events per year. With foam-lined storage boxes, they transport safely and store compactly between deployments."
+        answer: "Yes. These freestanding illuminated event letters are built with powder-coated steel and LED bulbs designed for repeated setup and teardown. Universities, event companies, venues, athletic departments, and schools use them across dozens of events per year. With foam-lined storage boxes, they transport safely and store compactly between deployments."
+      },
+      {
+        question: "Are these the same as school marquee signs or reader boards?",
+        answer: "No. These are freestanding illuminated event letters used for graduations, stage backdrops, branding, and promotional displays. They are not permanent roadside school reader boards or changeable message-center signs."
+      },
+      {
+        question: "Are these for rent or for purchase?",
+        answer: "These commercial stand-up marquee letters are sold for long-term ownership and repeated use. They are commonly purchased by universities, event companies, venues, brands, and schools that use them across multiple events each year."
       }
     ]
   },
   
   business: {
     name: "Commercial Stand-Up Marquee Letters",
-    description: "Commercial-grade stand-up marquee letters for schools, universities, corporations, and event businesses",
+    description: "Commercial-grade freestanding marquee letters for sale to universities, venues, event companies, and institutional buyers",
     type: "LocalBusiness",
     industry: "commercial signage"
   },
