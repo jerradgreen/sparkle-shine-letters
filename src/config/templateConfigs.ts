@@ -360,13 +360,13 @@ export const wallHangingConfig: TemplateConfig = {
 
 // Event Style Stand-Up Signs Template
 export const standUpSignsConfig: TemplateConfig = {
-  pageTitle: "Commercial 36\" & 48\" Stand-Up Marquee Letters | Schools & Corporate Events",
-  metaDescription: "Commercial-grade 36\" and 48\" stand-up marquee letters for schools, universities, teams, and corporate events. Built for repeat use and long-term ownership.",
-  keywords: ["commercial marquee letters", "marquee letters for sale", "36 inch marquee letters", "48 inch marquee letters", "stand-up marquee letters", "marquee letters for schools", "marquee letters for universities", "marquee letters for corporate events", "custom marquee letters for events", "marquee numbers and symbols"],
+  pageTitle: "Commercial Stand-Up Marquee Letters for Sale | 36\" & 48\" Freestanding Letters",
+  metaDescription: "Commercial-grade 36\" and 48\" freestanding marquee letters for sale. Built for repeated event use by universities, venues, event companies, brands, and schools for graduations, activations, and stage displays.",
+  keywords: ["commercial marquee letters for sale", "freestanding marquee letters", "36 inch marquee letters", "48 inch marquee letters", "stand-up marquee letters for events", "marquee letters for universities", "marquee letters for corporate events", "event marquee letters", "marquee numbers and symbols", "commercial event signage"],
   
   hero: {
-    headline: "Commercial 36\" & 48\" Stand-Up Marquee Letters",
-    subheadline: "Commercial-grade steel marquee letters built for schools, universities, and corporations that need durable, reusable signage across years of events.",
+    headline: "Commercial Stand-Up Marquee Letters for Sale",
+    subheadline: "Freestanding 36\" and 48\" marquee letters built for repeated use at events, graduations, brand activations, and venue displays.",
     ctaText: "Get Your Quote",
     ctaAction: "pricing",
     heroImage: '/images/hero-lockwoods.webp',
@@ -484,14 +484,22 @@ export const standUpSignsConfig: TemplateConfig = {
       },
       {
         question: "Are these letters suitable for long-term institutional use?",
-        answer: "Yes. These letters are built with powder-coated steel and LED bulbs designed for repeated setup and teardown. Schools, universities, and corporate teams use them across dozens of events per year. With foam-lined storage boxes, they transport safely and store compactly between deployments."
+        answer: "Yes. These freestanding illuminated event letters are built with powder-coated steel and LED bulbs designed for repeated setup and teardown. Universities, event companies, venues, athletic departments, and schools use them across dozens of events per year. With foam-lined storage boxes, they transport safely and store compactly between deployments."
+      },
+      {
+        question: "Are these the same as school marquee signs or reader boards?",
+        answer: "No. These are freestanding illuminated event letters used for graduations, stage backdrops, branding, and promotional displays. They are not permanent roadside school reader boards or changeable message-center signs."
+      },
+      {
+        question: "Are these for rent or for purchase?",
+        answer: "These commercial stand-up marquee letters are sold for long-term ownership and repeated use. They are commonly purchased by universities, event companies, venues, brands, and schools that use them across multiple events each year."
       }
     ]
   },
   
   business: {
     name: "Commercial Stand-Up Marquee Letters",
-    description: "Commercial-grade stand-up marquee letters for schools, universities, corporations, and event businesses",
+    description: "Commercial-grade freestanding marquee letters for sale to universities, venues, event companies, and institutional buyers",
     type: "LocalBusiness",
     industry: "commercial signage"
   },

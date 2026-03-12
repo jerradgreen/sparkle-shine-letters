@@ -38,12 +38,12 @@ export const MarqueeHeroSection = () => {
         <div className="space-y-0.5">
         <h1 className="text-xl md:text-2xl lg:text-3xl font-bold leading-tight">
             <span className="bg-gradient-to-r from-white to-white/90 bg-clip-text text-transparent">
-              Commercial 36″ &amp; 48″ Stand-Up Marquee Letters
+              Commercial Stand-Up Marquee Letters for Sale
             </span>
           </h1>
           
           <p className="text-base md:text-lg lg:text-xl leading-relaxed opacity-90 max-w-3xl mx-auto">
-            Commercial-grade steel marquee letters built for schools, universities, and corporations that need durable, reusable signage across years of events.
+            Freestanding 36″ and 48″ marquee letters built for repeated use at events, graduations, brand activations, and venue displays.
           </p>
         </div>
 

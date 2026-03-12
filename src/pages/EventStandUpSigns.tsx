@@ -16,7 +16,7 @@ const EventStandUpSigns = () => {
   return (
     <PageTemplate 
       config={standUpSignsConfig}
-      canonicalUrl="https://yoursite.com/event-standup-signs"
+      canonicalUrl="https://inventory.vintagemarqueelights.com/event-standup-signs"
       showNavigation={true}
       showFooter={false}
     >
@@ -45,13 +45,13 @@ const EventStandUpSigns = () => {
       <section className="py-8 px-4 bg-background">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-lg md:text-xl font-bold text-foreground mb-3 text-center">
-            Who Buys Commercial Stand-Up Marquee Letters?
+            Who Buys Commercial Freestanding Marquee Letters?
           </h2>
           <p className="text-sm md:text-base text-muted-foreground leading-relaxed mb-3">
-            Our stand-up marquee letters are purchased by <strong>schools, universities, athletic departments, corporations, and event companies</strong> that use them repeatedly — not just once. Common use cases include pep rallies, graduations, fundraisers, recruiting events, brand activations, conferences, and stage backdrops.
+            Our freestanding marquee letters are purchased by <strong>universities, event companies, venues, athletic departments, corporate marketing teams, and schools</strong> that need reusable event signage — not a one-time decoration. Common use cases include graduations, brand activations, conferences, recruiting events, donor events, pep rallies, stage displays, and sponsor activations.
           </p>
           <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
-            Schools and teams commonly purchase their full name, mascot, or slogan. Universities invest in marquee letters for campus-wide branding across graduations, athletic events, and recruiting. Corporations often purchase their company name or a recurring event title for use year after year. Owning your own letters ensures consistent branding, eliminates rental coordination, and allows you to deploy them whenever needed.
+            Universities invest in marquee letters for campus-wide branding across graduations, athletic events, and recruiting. Event companies and venues purchase sets for repeated client deployments. Corporate teams buy their company name or recurring event title for year-after-year use. Schools purchase letters for graduations, pep rallies, and branded campus events. Owning your own letters ensures consistent branding, eliminates rental coordination, and allows you to deploy them whenever needed.
           </p>
         </div>
       </section>
@@ -62,10 +62,10 @@ const EventStandUpSigns = () => {
       <section className="py-8 px-4 bg-muted/20">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-lg md:text-xl font-bold text-foreground mb-3 text-center">
-            Built for Institutional Use
+            Built for Repeated Event Deployment
           </h2>
           <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
-            The 36-inch size is the most common choice for institutional buyers — easy to store, transport, and deploy across a full calendar of events. The 48-inch size is available for high-visibility venues such as auditoriums, outdoor stadiums, and convention halls. Every letter is designed for repeated transport and setup, with powder-coated steel construction that holds up across years of use. Many schools, universities, and corporate teams keep these as repeat-use event inventory.
+            The 36-inch size is the most popular choice — easy to store, transport, and deploy across a full calendar of events. The 48-inch size is available for high-visibility venues such as auditoriums, outdoor stadiums, and convention halls. Every freestanding letter is built with powder-coated steel construction designed for repeated transport and setup across years of use. Universities, event companies, venues, athletic departments, and schools purchase these as long-term reusable event signage.
           </p>
         </div>
       </section>
@@ -164,7 +164,7 @@ const EventStandUpSigns = () => {
       <section className="py-16 px-4 bg-gradient-to-r from-primary to-primary/80 text-primary-foreground">
         <div className="container mx-auto text-center max-w-3xl">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Ready to Invest in Commercial Marquee Letters?
+            Ready to Invest in Commercial Freestanding Marquee Letters?
           </h2>
           <p className="text-lg md:text-xl mb-8">
             Click below, test your letters and get a quote in less than 5 minutes.
