@@ -62,10 +62,10 @@ const EventStandUpSigns = () => {
       <section className="py-8 px-4 bg-muted/20">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-lg md:text-xl font-bold text-foreground mb-3 text-center">
-            Built for Institutional Use
+            Built for Repeated Event Deployment
           </h2>
           <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
-            The 36-inch size is the most common choice for institutional buyers — easy to store, transport, and deploy across a full calendar of events. The 48-inch size is available for high-visibility venues such as auditoriums, outdoor stadiums, and convention halls. Every letter is designed for repeated transport and setup, with powder-coated steel construction that holds up across years of use. Many schools, universities, and corporate teams keep these as repeat-use event inventory.
+            The 36-inch size is the most popular choice — easy to store, transport, and deploy across a full calendar of events. The 48-inch size is available for high-visibility venues such as auditoriums, outdoor stadiums, and convention halls. Every freestanding letter is built with powder-coated steel construction designed for repeated transport and setup across years of use. Universities, event companies, venues, athletic departments, and schools purchase these as long-term reusable event signage.
           </p>
         </div>
       </section>
