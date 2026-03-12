@@ -16,7 +16,7 @@ const EventStandUpSigns = () => {
   return (
     <PageTemplate 
       config={standUpSignsConfig}
-      canonicalUrl="https://yoursite.com/event-standup-signs"
+      canonicalUrl="https://inventory.vintagemarqueelights.com/event-standup-signs"
       showNavigation={true}
       showFooter={false}
     >
