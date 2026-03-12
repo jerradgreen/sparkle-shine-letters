@@ -32,11 +32,11 @@ export const SEOHead = ({ config, canonicalUrl }: SEOHeadProps) => {
       <meta property="og:locale" content="en_US" />
       
       {/* Twitter */}
-      <meta property="twitter:card" content="summary_large_image" />
-      <meta property="twitter:url" content={currentUrl} />
-      <meta property="twitter:title" content={config.pageTitle} />
-      <meta property="twitter:description" content={config.metaDescription} />
-      <meta property="twitter:image" content={config.hero.heroImage} />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:url" content={currentUrl} />
+      <meta name="twitter:title" content={config.pageTitle} />
+      <meta name="twitter:description" content={config.metaDescription} />
+      <meta name="twitter:image" content={config.hero.heroImage} />
       
       {/* Performance & Preconnect */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
