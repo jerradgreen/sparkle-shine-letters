@@ -180,7 +180,7 @@ const EventStandUpSigns = () => {
               }
             }}
           >
-            Pick Your Letters – Preview Your Setup
+            Build Your Set & Get a Quote
           </Button>
         </div>
       </section>
