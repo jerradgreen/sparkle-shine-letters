@@ -38,7 +38,7 @@ export const MarqueeHeroSection = () => {
         <div className="space-y-0.5">
         <h1 className="text-xl md:text-2xl lg:text-3xl font-bold leading-tight">
             <span className="bg-gradient-to-r from-white to-white/90 bg-clip-text text-transparent">
-              Commercial Stand-Up Marquee Letters for Sale
+              Own Your Event Branding — Reusable Marquee Letters Built for Years of Use
             </span>
           </h1>
           
