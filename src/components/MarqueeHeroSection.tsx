@@ -100,7 +100,7 @@ export const MarqueeHeroSection = () => {
             size="lg"
             className="bg-accent text-accent-foreground hover:bg-accent/90 text-sm md:text-base px-6 md:px-8 shadow-lg"
           >
-            Pick Your Letters – Preview Your Setup
+            Build Your Set & Get a Quote
           </Button>
         </div>
       </div>
