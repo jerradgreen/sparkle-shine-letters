@@ -1,35 +1,35 @@
 
 
-## Add Anchor IDs to Rental Inventory Page for Google Ads Sitelinks
+## Google Tag Cleanup
 
-No anchors exist on the page currently. Here are the 5 anchors mapped to existing sections:
+### Current State
 
-### File: `src/pages/RentalInventory.tsx`
+Only **one** Google tag exists in the codebase: `AW-999837409` in `index.html` (lines 97-105). Neither `AW-17646919806` nor `GT-WVRKWBMM` appear anywhere in the code.
 
-| Sitelink | Anchor ID | Section (line) |
-|----------|-----------|----------------|
-| 4ft Marquee Letters | `#4ft-marquee-letters` | Intro section, line 167 — mentions 48" letters |
-| Full Alphabet Sets | `#full-alphabet-sets` | Commercial-Grade Inventory section, line 182 — mentions A–Z, 0–9, symbols |
-| Pricing & Packages | `#pricing-packages` | ROI section, line 290 — covers pricing per letter, revenue per event |
-| No Franchise Fees | `#no-franchise-fees` | "You Don't Need a Franchise" section, line 348 |
-| Start Rental Biz Guide | `#rental-biz-guide` | Rental Guide Download section, line 432 (via wrapper div) |
+This means `GT-WVRKWBMM` and `AW-17646919806` are likely installed via **Google Tag Manager** or directly in your Google Ads account linking — not in this codebase.
 
-### Changes
+### Plan
 
-1. **Line 167** — Add `id="4ft-marquee-letters"` to `<section>`
-2. **Line 182** — Add `id="full-alphabet-sets"` to `<section>`
-3. **Line 290** — Add `id="pricing-packages"` to `<section>`
-4. **Line 348** — Add `id="no-franchise-fees"` to `<section>`
-5. **Line 431-432** — Wrap `<RentalGuideDownloadSection />` in a `<div id="rental-biz-guide">` or add the id to the section inside the component
+#### 1. Replace `AW-999837409` with `AW-17646919806` in `index.html`
 
-### Resulting Google Ads sitelink URLs
-```text
-/rental-inventory#4ft-marquee-letters
-/rental-inventory#full-alphabet-sets
-/rental-inventory#pricing-packages
-/rental-inventory#no-franchise-fees
-/rental-inventory#rental-biz-guide
+Update lines 97-105 to load and configure the correct tag:
+
+```html
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17646919806"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-17646919806');
+</script>
 ```
 
-No content or layout changes — just adding `id` attributes to existing `<section>` elements.
+#### 2. Remove `GT-WVRKWBMM` outside this codebase
+
+Since `GT-WVRKWBMM` is not in the code, you'll need to remove it from wherever it was added — likely Google Tag Manager or your Google Ads account tag settings. I can't modify those from here.
+
+### Summary
+
+One edit to `index.html`: swap `AW-999837409` → `AW-17646919806`. The other conflicting tag (`GT-WVRKWBMM`) lives outside this codebase.
 
