@@ -33,6 +33,7 @@ export const SEOHead = ({ config, canonicalUrl }: SEOHeadProps) => {
       
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:site" content="@VintageMarquee" />
       <meta name="twitter:url" content={currentUrl} />
       <meta name="twitter:title" content={config.pageTitle} />
       <meta name="twitter:description" content={config.metaDescription} />
