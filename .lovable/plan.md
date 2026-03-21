@@ -1,35 +1,43 @@
 
 
-## Google Tag Cleanup
+## SEO Cleanup — 4 Changes
 
-### Current State
+### Current Issues
+1. **No `og:url`** in `index.html` static tags — SEOHead.tsx emits it for template pages, but pages with their own `<Helmet>` (homepage, blog, shop) don't get one
+2. **`twitter:site`** is `@lovable_dev` (line 94) — needs to be `@VintageMarquee`
+3. **No favicon `<link>`** — `public/favicon.ico` exists but isn't referenced in `index.html`
+4. **Static JSON-LD** has no `price`/`priceCurrency` — per instructions, **leave it omitted** (no placeholder "0.00"); `StructuredData.tsx` already handles dynamic pricing
 
-Only **one** Google tag exists in the codebase: `AW-999837409` in `index.html` (lines 97-105). Neither `AW-17646919806` nor `GT-WVRKWBMM` appear anywhere in the code.
+### File Changes
 
-This means `GT-WVRKWBMM` and `AW-17646919806` are likely installed via **Google Tag Manager** or directly in your Google Ads account linking — not in this codebase.
+#### 1. `index.html` (4 edits)
 
-### Plan
-
-#### 1. Replace `AW-999837409` with `AW-17646919806` in `index.html`
-
-Update lines 97-105 to load and configure the correct tag:
-
+**Add favicon** (after line 11):
 ```html
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17646919806"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'AW-17646919806');
-</script>
+<link rel="icon" href="/favicon.ico" type="image/x-icon" />
 ```
 
-#### 2. Remove `GT-WVRKWBMM` outside this codebase
+**Add static `og:url`** with `data-rh="true"` (near line 90, alongside existing og tags):
+```html
+<meta data-rh="true" property="og:url" content="https://inventory.vintagemarqueelights.com/">
+```
 
-Since `GT-WVRKWBMM` is not in the code, you'll need to remove it from wherever it was added — likely Google Tag Manager or your Google Ads account tag settings. I can't modify those from here.
+**Fix `twitter:site`** (line 94) — change `@lovable_dev` → `@VintageMarquee`, add `data-rh="true"`:
+```html
+<meta data-rh="true" name="twitter:site" content="@VintageMarquee" />
+```
 
-### Summary
+**JSON-LD** — no change needed. The `offers` object correctly omits `price`/`priceCurrency` since actual values aren't available statically. `StructuredData.tsx` handles dynamic pricing per-page.
 
-One edit to `index.html`: swap `AW-999837409` → `AW-17646919806`. The other conflicting tag (`GT-WVRKWBMM`) lives outside this codebase.
+#### 2. `src/components/seo/SEOHead.tsx`
+
+Add `twitter:site` tag so template-driven pages also emit the correct handle:
+```tsx
+<meta name="twitter:site" content="@VintageMarquee" />
+```
+
+### No Other Files Changed
+- `StructuredData.tsx` — already handles dynamic pricing, no changes needed
+- Styling, routing, functionality — untouched
+- Pages using their own `<Helmet>` (Index, blog posts, ShopLetters, ProductDetail) already set `og:url` via their individual Helmet blocks or inherit the static fallback which Helmet will now find (with `data-rh="true"`)
 
