@@ -161,7 +161,7 @@ const RoiCalculator = () => {
   const animPerEvent = useAnimatedNumber(Math.round(calc.revenuePerEvent));
   const animMonthly = useAnimatedNumber(Math.round(calc.monthlyRevenue));
   const animAnnual = useAnimatedNumber(Math.round(calc.annualRevenue));
-  const animYear1 = useAnimatedNumber(Math.round(calc.year1Profit));
+  const animYear1 = useAnimatedNumber(Math.round(Math.max(0, calc.year1Profit)));
 
   // Rotating hero image
   const [activeImg, setActiveImg] = useState(0);
