@@ -71,6 +71,7 @@ const RouterContent = () => {
         <Route path="/rental-business/startup-cost" element={<RentalBusinessStartupCost />} />
         <Route path="/rental-business/building-a-scalable-inventory" element={<RentalBusinessScalableInventory />} />
         <Route path="/rental-business/profitability" element={<RentalBusinessProfitability />} />
+        <Route path="/roi-calculator" element={<RoiCalculator />} />
         <Route path="/shop/36-inch-letters" element={<ShopLetters />} />
         <Route path="/product/:handle" element={<ProductDetail />} />
         <Route path="/thank-you/wall-hanging" element={<WallHangingThankYou />} />
