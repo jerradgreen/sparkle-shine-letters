@@ -1,43 +1,54 @@
 
 
-## SEO Cleanup — 4 Changes
+## ROI Calculator — Integration Plan
 
-### Current Issues
-1. **No `og:url`** in `index.html` static tags — SEOHead.tsx emits it for template pages, but pages with their own `<Helmet>` (homepage, blog, shop) don't get one
-2. **`twitter:site`** is `@lovable_dev` (line 94) — needs to be `@VintageMarquee`
-3. **No favicon `<link>`** — `public/favicon.ico` exists but isn't referenced in `index.html`
-4. **Static JSON-LD** has no `price`/`priceCurrency` — per instructions, **leave it omitted** (no placeholder "0.00"); `StructuredData.tsx` already handles dynamic pricing
+The Manus-provided code is a fully self-contained component using inline styles and its own color system. Rather than pasting it as-is, I will rewrite it to match the site's existing design system: Tailwind classes, CSS variables, the site's Navigation/Footer, and existing UI components (Card, Slider, Button).
 
-### File Changes
+### What Changes
 
-#### 1. `index.html` (4 edits)
+#### 1. Create `src/pages/RoiCalculator.tsx`
 
-**Add favicon** (after line 11):
-```html
-<link rel="icon" href="/favicon.ico" type="image/x-icon" />
-```
+A new page component that:
+- Uses `Navigation` and `Footer` (like every other page on the site)
+- Uses Tailwind classes and the site's CSS color variables (`primary`, `foreground`, `muted`, `accent`, `background`, `card`, `border`) instead of the hardcoded `COLORS` object with hex values
+- Uses the existing `Slider` UI component from `src/components/ui/slider.tsx` instead of a custom inline-styled range input
+- Uses `Card` components for the stat cards and package selector
+- Uses `Button` for CTAs
+- Keeps the same calculator logic (package selection, pricing inputs, volume inputs, Shop Pay financing, animated numbers, revenue projections)
+- Keeps the rotating hero images
+- Adds SEO via `Helmet` with appropriate title/description
+- Links CTA buttons to `/quote/rental-inventory` (the existing quote form) instead of an external URL
 
-**Add static `og:url`** with `data-rh="true"` (near line 90, alongside existing og tags):
-```html
-<meta data-rh="true" property="og:url" content="https://inventory.vintagemarqueelights.com/">
-```
+#### 2. Update `src/App.tsx`
 
-**Fix `twitter:site`** (line 94) — change `@lovable_dev` → `@VintageMarquee`, add `data-rh="true"`:
-```html
-<meta data-rh="true" name="twitter:site" content="@VintageMarquee" />
-```
-
-**JSON-LD** — no change needed. The `offers` object correctly omits `price`/`priceCurrency` since actual values aren't available statically. `StructuredData.tsx` handles dynamic pricing per-page.
-
-#### 2. `src/components/seo/SEOHead.tsx`
-
-Add `twitter:site` tag so template-driven pages also emit the correct handle:
+Add one route:
 ```tsx
-<meta name="twitter:site" content="@VintageMarquee" />
+import RoiCalculator from "./pages/RoiCalculator";
+// ...
+<Route path="/roi-calculator" element={<RoiCalculator />} />
 ```
 
-### No Other Files Changed
-- `StructuredData.tsx` — already handles dynamic pricing, no changes needed
-- Styling, routing, functionality — untouched
-- Pages using their own `<Helmet>` (Index, blog posts, ShopLetters, ProductDetail) already set `og:url` via their individual Helmet blocks or inherit the static fallback which Helmet will now find (with `data-rh="true"`)
+### Design Mapping
+
+| Manus Code | Site Equivalent |
+|---|---|
+| `COLORS.navy` / `charcoal` | `text-foreground` / `bg-foreground` |
+| `COLORS.gold` | `text-primary` / `bg-primary` (teal-blue) or `text-accent` / `bg-accent` (warm peach) |
+| `COLORS.ivory` | `bg-background` |
+| `COLORS.border` | `border-border` |
+| `COLORS.muted` | `text-muted-foreground` |
+| Custom header/footer | Reuse site `Navigation` + `Footer` |
+| Inline-styled slider | Radix `Slider` from `src/components/ui/slider.tsx` |
+| Inline-styled buttons | `Button` component |
+| Inline-styled cards | `Card` / `CardHeader` / `CardContent` |
+
+### What Stays the Same
+- All calculator math and `useMemo` logic
+- `useAnimatedNumber` hook
+- `formatCurrency` / `formatMonths` utilities
+- Package selection (Pro vs Elite)
+- 4-step input flow (package, pricing, volume, financing)
+- Hero image rotation
+- Shop Pay financing section
+- Results panel with per-event, monthly, annual, year-1 profit stats
 
