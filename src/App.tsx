@@ -28,6 +28,7 @@ import RentalBusiness from "./pages/RentalBusiness";
 import RentalBusinessStartupCost from "./pages/RentalBusinessStartupCost";
 import RentalBusinessScalableInventory from "./pages/RentalBusinessScalableInventory";
 import RentalBusinessProfitability from "./pages/RentalBusinessProfitability";
+import RoiCalculator from "./pages/RoiCalculator";
 import ShopLetters from "./pages/ShopLetters";
 import ProductDetail from "./pages/ProductDetail";
 import WallHangingThankYou from "./pages/thank-you/WallHangingThankYou";
