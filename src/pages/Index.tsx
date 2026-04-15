@@ -106,7 +106,7 @@ const Index = () => {
         {/* Hero Section */}
         <div className="text-center mb-4">
           <h1 className="text-3xl md:text-4xl font-bold mb-3 text-foreground">
-            Custom Marquee Signs & Letters — Trusted by Hundreds Since 2008
+            Custom Marquee Signs & Letters — Trusted by Thousands Since 2008
           </h1>
           <p className="text-lg text-[hsl(197,35%,45%)] mb-2 max-w-3xl mx-auto font-medium">
             Choose the marquee sign style that fits your vision and see how easy it is to make it yours.
