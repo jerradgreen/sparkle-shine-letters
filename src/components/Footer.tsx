@@ -185,7 +185,7 @@ const Footer = () => {
         {/* Copyright */}
         <div className="pt-6">
           <p className="text-center text-muted-foreground text-sm">
-            © 2025 Vintage Marquee Lights. All rights reserved.
+            © 2026 Vintage Marquee Lights. All rights reserved.
           </p>
         </div>
       </div>
