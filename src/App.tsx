@@ -45,6 +45,9 @@ import UniversitiesTeamsMarqueeLetters from "./pages/blog/UniversitiesTeamsMarqu
 import FoodTruckMobileVendorSignageGuide from "./pages/blog/FoodTruckMobileVendorSignageGuide";
 import MarqueeLetterRentalPricingGuide from "./pages/blog/MarqueeLetterRentalPricingGuide";
 import CustomOutdoorMarqueeSignsGuide from "./pages/blog/CustomOutdoorMarqueeSignsGuide";
+import FAQ from "./pages/FAQ";
+import WeddingMarqueeSigns from "./pages/WeddingMarqueeSigns";
+import CorporateMarqueeSigns from "./pages/CorporateMarqueeSigns";
 
 const queryClient = new QueryClient();
 
@@ -91,6 +94,9 @@ const RouterContent = () => {
         <Route path="/blog/food-truck-mobile-vendor-signage-guide" element={<FoodTruckMobileVendorSignageGuide />} />
         <Route path="/blog/marquee-letter-rental-pricing-guide" element={<MarqueeLetterRentalPricingGuide />} />
         <Route path="/blog/custom-outdoor-marquee-signs-guide" element={<CustomOutdoorMarqueeSignsGuide />} />
+        <Route path="/faq" element={<FAQ />} />
+        <Route path="/wedding-marquee-signs" element={<WeddingMarqueeSigns />} />
+        <Route path="/corporate-marquee-signs" element={<CorporateMarqueeSigns />} />
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />
       </Routes>
