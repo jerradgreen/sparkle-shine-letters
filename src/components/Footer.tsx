@@ -89,6 +89,13 @@ const Footer = () => {
               >
                 Gallery
               </button>
+              <Link
+                to="/blog"
+                onClick={() => window.scrollTo(0, 0)}
+                className="text-muted-foreground hover:text-primary transition-colors"
+              >
+                Blog
+              </Link>
               <a 
                 href="https://vintagemarqueelights.com/blogs/news"
                 target="_blank"

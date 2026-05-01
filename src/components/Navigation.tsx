@@ -92,6 +92,10 @@ const Navigation = () => {
             </Link>
 
             {signTypeDialog}
+
+            <Link to="/blog" className="text-foreground hover:text-primary font-medium">
+              Blog
+            </Link>
           </div>
 
           <div className="ml-auto">
@@ -144,6 +148,10 @@ const Navigation = () => {
               </Link>
 
               {signTypeDialog}
+
+              <Link to="/blog" className="text-foreground hover:text-primary font-medium py-2" onClick={() => setIsMobileMenuOpen(false)}>
+                Blog
+              </Link>
             </div>
           </div>
         )}
