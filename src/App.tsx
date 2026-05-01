@@ -49,6 +49,8 @@ import FAQ from "./pages/FAQ";
 import StartMarqueeRentalBusiness from "./pages/StartMarqueeRentalBusiness";
 import WeddingMarqueeSigns from "./pages/WeddingMarqueeSigns";
 import CorporateMarqueeSigns from "./pages/CorporateMarqueeSigns";
+import Press from "./pages/Press";
+import HowItWorks from "./pages/HowItWorks";
 
 const queryClient = new QueryClient();
 
@@ -99,6 +101,8 @@ const RouterContent = () => {
         <Route path="/start-marquee-rental-business" element={<StartMarqueeRentalBusiness />} />
         <Route path="/wedding-marquee-signs" element={<WeddingMarqueeSigns />} />
         <Route path="/corporate-marquee-signs" element={<CorporateMarqueeSigns />} />
+        <Route path="/press" element={<Press />} />
+        <Route path="/how-it-works" element={<HowItWorks />} />
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />
       </Routes>
