@@ -39,14 +39,6 @@
     <changefreq>monthly</changefreq>
   </url>
 
-  <!-- Shop -->
-  <url>
-    <loc>https://inventory.vintagemarqueelights.com/shop/36-inch-letters</loc>
-    <lastmod>2026-05-01</lastmod>
-    <priority>0.8</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-
   <!-- Quote Pages -->
   <url>
     <loc>https://inventory.vintagemarqueelights.com/quote</loc>
