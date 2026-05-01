@@ -3,9 +3,11 @@ import { TemplateConfig } from '@/types/template';
 
 interface StructuredDataProps {
   config: TemplateConfig;
+  canonicalUrl?: string;
 }
 
-export const StructuredData = ({ config }: StructuredDataProps) => {
+export const StructuredData = ({ config, canonicalUrl }: StructuredDataProps) => {
+  const currentUrl = canonicalUrl || (typeof window !== 'undefined' ? window.location.href : '');
   const businessSchema = {
     "@context": "https://schema.org",
     "@type": config.business.type,
@@ -58,6 +60,25 @@ export const StructuredData = ({ config }: StructuredDataProps) => {
     }))
   };
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://inventory.vintagemarqueelights.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": config.pageTitle,
+        "item": currentUrl
+      }
+    ]
+  };
+
   const productSchema = {
     "@context": "https://schema.org",
     "@type": "Product",
@@ -92,6 +113,9 @@ export const StructuredData = ({ config }: StructuredDataProps) => {
       </script>
       <script type="application/ld+json">
         {JSON.stringify(productSchema)}
+      </script>
+      <script type="application/ld+json">
+        {JSON.stringify(breadcrumbSchema)}
       </script>
     </Helmet>
   );

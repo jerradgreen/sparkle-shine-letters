@@ -9,7 +9,7 @@ const RentalBusinessProfitability = () => {
       <Helmet>
         <title>Is a Marquee Letter Rental Business Profitable?</title>
         <meta name="description" content="Discover the real profitability potential of a marquee letter rental business, including booking frequency, revenue per event, and long-term ROI considerations." />
-        <link rel="canonical" href="https://sparkle-shine-letters.lovable.app/rental-business/profitability" />
+        <link rel="canonical" href="https://inventory.vintagemarqueelights.com/rental-business/profitability" />
       </Helmet>
 
       <Navigation />

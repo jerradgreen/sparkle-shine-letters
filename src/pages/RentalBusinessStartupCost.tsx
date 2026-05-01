@@ -9,7 +9,7 @@ const RentalBusinessStartupCost = () => {
       <Helmet>
         <title>How Much Does It Cost to Start a Marquee Letter Rental Business?</title>
         <meta name="description" content="Learn the realistic startup investment for a marquee letter rental business. Understand inventory costs, revenue potential, and how long it takes to break even." />
-        <link rel="canonical" href="https://sparkle-shine-letters.lovable.app/rental-business/startup-cost" />
+        <link rel="canonical" href="https://inventory.vintagemarqueelights.com/rental-business/startup-cost" />
       </Helmet>
 
       <Navigation />

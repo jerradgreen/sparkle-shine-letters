@@ -9,7 +9,7 @@ const RentalBusinessScalableInventory = () => {
       <Helmet>
         <title>How to Build a Scalable Marquee Letter Rental Inventory</title>
         <meta name="description" content="Learn how to build a scalable marquee letter rental inventory including letters, numbers, symbols, and double-row display stands. Plan for versatility, demand, and long-term growth." />
-        <link rel="canonical" href="https://sparkle-shine-letters.lovable.app/rental-business/building-a-scalable-inventory" />
+        <link rel="canonical" href="https://inventory.vintagemarqueelights.com/rental-business/building-a-scalable-inventory" />
       </Helmet>
 
       <Navigation />

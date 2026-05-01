@@ -10,7 +10,7 @@ const RentalBusiness = () => {
       <Helmet>
         <title>How to Start a Marquee Letter Rental Business | Vintage Marquee Lights</title>
         <meta name="description" content="Learn how to start a profitable marquee letter rental business. Discover startup costs, inventory strategy, ROI planning, and commercial-grade equipment recommendations." />
-        <link rel="canonical" href="https://sparkle-shine-letters.lovable.app/rental-business" />
+        <link rel="canonical" href="https://inventory.vintagemarqueelights.com/rental-business" />
       </Helmet>
 
       <Navigation />

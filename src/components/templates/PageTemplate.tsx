@@ -23,7 +23,7 @@ export const PageTemplate = ({
   return (
     <div className="min-h-screen bg-background">
       <SEOHead config={config} canonicalUrl={canonicalUrl} />
-      <StructuredData config={config} />
+      <StructuredData config={config} canonicalUrl={canonicalUrl} />
       
       {showNavigation && <Navigation />}
       
