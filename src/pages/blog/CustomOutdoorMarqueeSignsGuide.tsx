@@ -29,8 +29,8 @@ const CustomOutdoorMarqueeSignsGuide = () => {
 
           <div className="my-8 rounded-lg overflow-hidden">
             <img
-              src="/images/hero-lexus-event.png"
-              alt="Large custom illuminated marquee letters spelling LEXUS at a corporate event — an example of commercial-grade outdoor signage"
+              src="/images/drewia-hill-outdoor-marquee.jpeg"
+              alt="Large illuminated marquee letters spelling DREWIA HILL outside a rustic barn venue at night — custom outdoor marquee sign installation by Vintage Marquee Lights"
               className="w-full object-cover max-h-[400px]"
               loading="lazy"
             />

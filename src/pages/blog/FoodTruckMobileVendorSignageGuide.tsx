@@ -29,8 +29,8 @@ const FoodTruckMobileVendorSignageGuide = () => {
 
           <div className="my-8 rounded-lg overflow-hidden">
             <img
-              src="/images/hero-rental-setup.webp"
-              alt="Illuminated marquee letters set up at an outdoor event by a mobile vendor rental business"
+              src="/images/bar-monte-food-truck-sign.jpg"
+              alt="Bar Monte food truck with custom illuminated marquee sign on the roof attracting customers at an outdoor market"
               className="w-full object-cover max-h-[400px]"
               loading="lazy"
             />
