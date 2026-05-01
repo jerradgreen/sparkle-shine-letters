@@ -46,6 +46,7 @@ import FoodTruckMobileVendorSignageGuide from "./pages/blog/FoodTruckMobileVendo
 import MarqueeLetterRentalPricingGuide from "./pages/blog/MarqueeLetterRentalPricingGuide";
 import CustomOutdoorMarqueeSignsGuide from "./pages/blog/CustomOutdoorMarqueeSignsGuide";
 import FAQ from "./pages/FAQ";
+import StartMarqueeRentalBusiness from "./pages/StartMarqueeRentalBusiness";
 import WeddingMarqueeSigns from "./pages/WeddingMarqueeSigns";
 import CorporateMarqueeSigns from "./pages/CorporateMarqueeSigns";
 
@@ -95,6 +96,7 @@ const RouterContent = () => {
         <Route path="/blog/marquee-letter-rental-pricing-guide" element={<MarqueeLetterRentalPricingGuide />} />
         <Route path="/blog/custom-outdoor-marquee-signs-guide" element={<CustomOutdoorMarqueeSignsGuide />} />
         <Route path="/faq" element={<FAQ />} />
+        <Route path="/start-marquee-rental-business" element={<StartMarqueeRentalBusiness />} />
         <Route path="/wedding-marquee-signs" element={<WeddingMarqueeSigns />} />
         <Route path="/corporate-marquee-signs" element={<CorporateMarqueeSigns />} />
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
