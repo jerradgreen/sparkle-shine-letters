@@ -150,6 +150,27 @@ const Footer = () => {
               >
                 About
               </a>
+              <Link
+                to="/press"
+                onClick={() => window.scrollTo(0, 0)}
+                className="text-muted-foreground hover:text-primary transition-colors"
+              >
+                Press &amp; Media
+              </Link>
+              <Link
+                to="/how-it-works"
+                onClick={() => window.scrollTo(0, 0)}
+                className="text-muted-foreground hover:text-primary transition-colors"
+              >
+                How It Works
+              </Link>
+              <Link
+                to="/faq"
+                onClick={() => window.scrollTo(0, 0)}
+                className="text-muted-foreground hover:text-primary transition-colors"
+              >
+                FAQ
+              </Link>
               <a 
                 href="https://vintagemarqueelights.com/policies/privacy-policy"
                 target="_blank"
