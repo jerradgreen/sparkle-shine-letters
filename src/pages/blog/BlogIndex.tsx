@@ -19,6 +19,21 @@ const articles = [
     description: "Why athletic departments, university event offices, and teams invest in commercial marquee letters for recruiting events, game days, and campus branding.",
     href: "/blog/universities-teams-marquee-letters-branding",
   },
+  {
+    title: "Custom Food Truck Signs and Mobile Vendor Signage: A Complete Guide",
+    description: "How illuminated marquee and 3D logo signs help food trucks and mobile vendors stand out, attract customers, and build a stronger brand presence.",
+    href: "/blog/food-truck-mobile-vendor-signage-guide",
+  },
+  {
+    title: "Marquee Letter Rental Pricing Guide: How Much Should You Charge?",
+    description: "A practical breakdown of per-letter rates, package pricing strategies, delivery fees, and how to maximize revenue in your marquee rental business.",
+    href: "/blog/marquee-letter-rental-pricing-guide",
+  },
+  {
+    title: "Custom Outdoor Marquee Signs: A Guide for Businesses and Storefronts",
+    description: "How to design, build, and install custom outdoor marquee signs for restaurants, boutiques, and commercial spaces. Covers materials, weatherproofing, and design options.",
+    href: "/blog/custom-outdoor-marquee-signs-guide",
+  },
 ];
 
 const BlogIndex = () => {

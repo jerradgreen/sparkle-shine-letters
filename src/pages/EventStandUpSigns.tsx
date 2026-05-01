@@ -157,6 +157,18 @@ const EventStandUpSigns = () => {
             </a>{' '}
             offer layered metal fabrication with dimensional depth and hand-finished detail.
           </p>
+          <p className="text-sm text-muted-foreground mt-4 max-w-5xl mx-auto">
+            Need signage for a food truck or mobile vendor setup? See our{' '}
+            <a href="/mobile-vendor-signs" className="text-primary underline hover:text-primary/80 transition-colors">
+              Custom Food Truck and Mobile Vendor Signs
+            </a>.
+          </p>
+          <p className="text-sm text-muted-foreground mt-4 max-w-5xl mx-auto">
+            Not sure which size is right for your event? Read our guide:{' '}
+            <a href="/blog/36-vs-48-inch-marquee-letters" className="text-primary underline hover:text-primary/80 transition-colors">
+              36 vs 48 Inch Marquee Letters: Which Size Should You Buy?
+            </a>
+          </p>
         </div>
       </section>
 

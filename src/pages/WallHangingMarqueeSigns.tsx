@@ -544,6 +544,13 @@ const WallHangingMarqueeSigns = () => {
             fabricated in layered metal.
           </p>
 
+          <p className="text-muted-foreground text-sm mt-4 max-w-5xl mx-auto">
+            Buying for a school, university, or athletic department? Read{' '}
+            <a href="/blog/why-schools-buy-commercial-marquee-letters" className="text-primary underline hover:text-primary/80 transition-colors">
+              Why Schools Buy Commercial Marquee Letters
+            </a>.
+          </p>
+
           <div className="text-center mt-8">
             <Button 
               size="lg" 

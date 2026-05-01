@@ -42,6 +42,9 @@ import BlogIndex from "./pages/blog/BlogIndex";
 import WhySchoolsBuyMarqueeLetters from "./pages/blog/WhySchoolsBuyMarqueeLetters";
 import ThirtySixVsFortyEightInchMarqueeLetters from "./pages/blog/ThirtySixVsFortyEightInchMarqueeLetters";
 import UniversitiesTeamsMarqueeLetters from "./pages/blog/UniversitiesTeamsMarqueeLetters";
+import FoodTruckMobileVendorSignageGuide from "./pages/blog/FoodTruckMobileVendorSignageGuide";
+import MarqueeLetterRentalPricingGuide from "./pages/blog/MarqueeLetterRentalPricingGuide";
+import CustomOutdoorMarqueeSignsGuide from "./pages/blog/CustomOutdoorMarqueeSignsGuide";
 
 const queryClient = new QueryClient();
 
@@ -85,6 +88,9 @@ const RouterContent = () => {
         <Route path="/blog/why-schools-buy-commercial-marquee-letters" element={<WhySchoolsBuyMarqueeLetters />} />
         <Route path="/blog/36-vs-48-inch-marquee-letters" element={<ThirtySixVsFortyEightInchMarqueeLetters />} />
         <Route path="/blog/universities-teams-marquee-letters-branding" element={<UniversitiesTeamsMarqueeLetters />} />
+        <Route path="/blog/food-truck-mobile-vendor-signage-guide" element={<FoodTruckMobileVendorSignageGuide />} />
+        <Route path="/blog/marquee-letter-rental-pricing-guide" element={<MarqueeLetterRentalPricingGuide />} />
+        <Route path="/blog/custom-outdoor-marquee-signs-guide" element={<CustomOutdoorMarqueeSignsGuide />} />
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />
       </Routes>

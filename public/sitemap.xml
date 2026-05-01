@@ -141,4 +141,22 @@
     <changefreq>monthly</changefreq>
   </url>
 
+  <url>
+    <loc>https://inventory.vintagemarqueelights.com/blog/food-truck-mobile-vendor-signage-guide</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://inventory.vintagemarqueelights.com/blog/marquee-letter-rental-pricing-guide</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://inventory.vintagemarqueelights.com/blog/custom-outdoor-marquee-signs-guide</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
