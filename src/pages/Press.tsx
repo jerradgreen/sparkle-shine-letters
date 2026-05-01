@@ -175,24 +175,8 @@ const Press = () => {
         </div>
       </section>
 
-      {/* Magazines Strip */}
-      <section className="py-10 px-4 bg-gray-950 border-t border-white/10">
-        <div className="max-w-5xl mx-auto text-center">
-          <p className="uppercase tracking-widest text-amber-400 text-xs font-bold mb-6">
-            Featured In
-          </p>
-          <div className="flex flex-wrap justify-center gap-x-6 gap-y-3">
-            {magazineNames.map((name) => (
-              <span key={name} className="text-white/50 text-sm md:text-base font-medium hover:text-white/80 transition-colors">
-                {name}
-              </span>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Retail Brands Strip */}
-      <section className="py-10 px-4 bg-black border-t border-white/10">
+      <section className="py-10 px-4 bg-gray-950 border-t border-white/10">
         <div className="max-w-5xl mx-auto text-center">
           <p className="uppercase tracking-widest text-amber-400 text-xs font-bold mb-6">
             Sold At
@@ -201,6 +185,22 @@ const Press = () => {
             {retailBrands.map((brand) => (
               <span key={brand} className="text-white/50 text-sm md:text-base font-medium hover:text-white/80 transition-colors">
                 {brand}
+              </span>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Magazines Strip */}
+      <section className="py-10 px-4 bg-black border-t border-white/10">
+        <div className="max-w-5xl mx-auto text-center">
+          <p className="uppercase tracking-widest text-amber-400 text-xs font-bold mb-6">
+            Featured In
+          </p>
+          <div className="flex flex-wrap justify-center gap-x-6 gap-y-3">
+            {magazineNames.map((name) => (
+              <span key={name} className="text-white/50 text-sm md:text-base font-medium hover:text-white/80 transition-colors">
+                {name}
               </span>
             ))}
           </div>
