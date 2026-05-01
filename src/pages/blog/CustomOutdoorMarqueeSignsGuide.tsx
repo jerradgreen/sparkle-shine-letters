@@ -27,6 +27,15 @@ const CustomOutdoorMarqueeSignsGuide = () => {
             For restaurants, boutiques, theaters, and event spaces, exterior signage is the first physical touchpoint of the brand. If you are considering upgrading your storefront with a vintage-inspired or modern industrial marquee, here is what you need to know about designing, building, and installing custom outdoor marquee signs.
           </p>
 
+          <div className="my-8 rounded-lg overflow-hidden">
+            <img
+              src="/images/hero-lexus-event.png"
+              alt="Large custom illuminated marquee letters spelling LEXUS at a corporate event — an example of commercial-grade outdoor signage"
+              className="w-full object-cover max-h-[400px]"
+              loading="lazy"
+            />
+          </div>
+
           <h2 className="text-xl font-semibold text-foreground mt-8 mb-3">Why Choose a Marquee Sign for the Exterior?</h2>
           
           <p className="text-muted-foreground leading-relaxed mb-4">

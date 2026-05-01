@@ -62,6 +62,15 @@ const WeddingMarqueeSigns = () => {
           There is a moment at every wedding reception when the lights dim, the letters glow, and every guest reaches for their phone. Custom marquee signs have become one of the most iconic elements of modern wedding decor, and for good reason: they are personal, they are photogenic, and they create an atmosphere that flat printed signage simply cannot match.
         </p>
 
+        <div className="mb-10 rounded-lg overflow-hidden">
+          <img
+            src="/images/hero-lockwoods.webp"
+            alt="Couple dancing in front of large illuminated marquee letters spelling THE LOCKWOODS at a wedding reception"
+            className="w-full object-cover max-h-[480px]"
+            loading="lazy"
+          />
+        </div>
+
         <div className="grid md:grid-cols-2 gap-8 mb-12">
           <div>
             <h2 className="text-xl font-semibold text-foreground mb-3">Why Couples Choose Marquee Letters</h2>

@@ -31,6 +31,15 @@ const StartMarqueeRentalBusiness = () => {
           The marquee letter rental industry is booming, driven by weddings, corporate events, and social media photo moments. But if you are researching how to start a marquee rental business, you have likely run into companies offering licensing programs or franchise opportunities. Before you sign a contract that locks you into annual fees and territory restrictions, you need to understand the alternative: independent ownership.
         </p>
 
+        <div className="mb-10 rounded-lg overflow-hidden">
+          <img
+            src="/images/hero-rental-setup.webp"
+            alt="Rental business team setting up large illuminated marquee letters spelling THE GREENS at an outdoor wedding venue"
+            className="w-full object-cover max-h-[480px]"
+            loading="lazy"
+          />
+        </div>
+
         <div className="bg-muted rounded-lg p-8 mb-12">
           <h2 className="text-2xl font-semibold text-foreground mb-4">The Truth About Marquee Rental Franchises</h2>
           <p className="text-muted-foreground leading-relaxed mb-4">

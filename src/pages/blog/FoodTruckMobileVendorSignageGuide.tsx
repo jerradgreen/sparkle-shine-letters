@@ -27,6 +27,15 @@ const FoodTruckMobileVendorSignageGuide = () => {
             If you are looking to upgrade your mobile vendor setup, investing in commercial-grade, illuminated signage is one of the fastest ways to increase foot traffic. Here is what you need to know about choosing the right <Link to="/mobile-vendor-signs" className="text-primary hover:underline font-semibold">custom food truck signs</Link> for your business.
           </p>
 
+          <div className="my-8 rounded-lg overflow-hidden">
+            <img
+              src="/images/hero-rental-setup.webp"
+              alt="Illuminated marquee letters set up at an outdoor event by a mobile vendor rental business"
+              className="w-full object-cover max-h-[400px]"
+              loading="lazy"
+            />
+          </div>
+
           <h2 className="text-xl font-semibold text-foreground mt-8 mb-3">Why Flat Signage Isn't Enough Anymore</h2>
           
           <p className="text-muted-foreground leading-relaxed mb-4">

@@ -27,6 +27,15 @@ const MarqueeLetterRentalPricingGuide = () => {
             Pricing is the engine of your profitability. Charge too little, and you leave money on the table while dealing with difficult clients. Charge too much without the right presentation, and your inventory sits in the warehouse. Here is a practical breakdown of how marquee letter rental pricing works across the industry, and how to structure your rates for maximum revenue.
           </p>
 
+          <div className="my-8 rounded-lg overflow-hidden">
+            <img
+              src="/images/hero-rental-setup.webp"
+              alt="Marquee letter rental business team setting up illuminated letters at a wedding event"
+              className="w-full object-cover max-h-[400px]"
+              loading="lazy"
+            />
+          </div>
+
           <h2 className="text-xl font-semibold text-foreground mt-8 mb-3">The Industry Standard: Per-Letter Pricing</h2>
           
           <p className="text-muted-foreground leading-relaxed mb-4">

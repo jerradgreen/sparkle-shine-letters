@@ -62,6 +62,15 @@ const CorporateMarqueeSigns = () => {
           The best corporate events are the ones people talk about afterward. Custom illuminated marquee signs and branded dimensional lettering give your company a physical presence that attendees photograph, share, and remember. Whether you need a backdrop for your annual conference, a statement piece for your trade show booth, or a permanent installation in your lobby, we build commercial-grade signs that represent your brand at the highest level.
         </p>
 
+        <div className="mb-10 rounded-lg overflow-hidden">
+          <img
+            src="/images/hero-lexus-event.png"
+            alt="Large illuminated marquee letters spelling LEXUS on stage at a corporate event with audience"
+            className="w-full object-cover max-h-[480px]"
+            loading="lazy"
+          />
+        </div>
+
         <div className="grid md:grid-cols-3 gap-6 mb-12">
           <div className="bg-muted rounded-lg p-5">
             <h2 className="font-semibold text-foreground mb-2">Events and Conferences</h2>
