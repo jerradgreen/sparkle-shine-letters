@@ -112,46 +112,46 @@ const HowItWorks = () => {
           </div>
         </section>
 
-        {/* Path 3: Single Letters / Retail */}
+        {/* Path 3: Wall-Hanging Letters */}
         <section className="mb-10">
           <div className="bg-background rounded-xl p-8 md:p-10 border border-border">
             <div className="inline-block bg-muted text-foreground font-semibold px-4 py-1 rounded-full mb-6">
-              Path 3: Individual Letters & Retail
+              Path 3: Wall-Hanging Letters
             </div>
             <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6">
-              Buying Single Letters or Wall Decor
+              Custom Wall-Hanging Marquee Letters
             </h2>
             
             <div className="space-y-8">
               <div className="flex gap-4">
                 <div className="flex-shrink-0 w-10 h-10 rounded-full bg-muted text-foreground flex items-center justify-center font-bold text-lg">1</div>
                 <div>
-                  <h3 className="text-xl font-semibold text-foreground mb-2">Shop Our Retail Site</h3>
-                  <p className="text-muted-foreground">If you just need a few letters for a wedding, a bedroom wall, or a small event, you can purchase them directly through our retail store at TheRustyMarquee.com.</p>
+                  <h3 className="text-xl font-semibold text-foreground mb-2">Tell Us What You Need</h3>
+                  <p className="text-muted-foreground">Whether it's a word, a name, or a full phrase for a restaurant, bar, studio, or home, start by browsing our <Link to="/wall-hanging-signs" className="text-primary hover:underline">Wall-Hanging Letters page</Link> and submitting a quote request with your size, finish, and wording.</p>
                 </div>
               </div>
               
               <div className="flex gap-4">
                 <div className="flex-shrink-0 w-10 h-10 rounded-full bg-muted text-foreground flex items-center justify-center font-bold text-lg">2</div>
                 <div>
-                  <h3 className="text-xl font-semibold text-foreground mb-2">Direct Checkout & Financing</h3>
-                  <p className="text-muted-foreground">Add the specific letters, numbers, or symbols to your cart. We offer Klarna financing at checkout for easy payment options.</p>
+                  <h3 className="text-xl font-semibold text-foreground mb-2">Custom Quote & Approval</h3>
+                  <p className="text-muted-foreground">We'll send you a custom quote based on your letter count and size. Once approved, your order goes into fabrication — hand-built from steel with standard incandescent filament bulbs.</p>
                 </div>
               </div>
               
               <div className="flex gap-4">
                 <div className="flex-shrink-0 w-10 h-10 rounded-full bg-muted text-foreground flex items-center justify-center font-bold text-lg">3</div>
                 <div>
-                  <h3 className="text-xl font-semibold text-foreground mb-2">Fast Shipping</h3>
-                  <p className="text-muted-foreground">In-stock items ship quickly via FedEx or UPS directly to your home.</p>
+                  <h3 className="text-xl font-semibold text-foreground mb-2">Fabrication & Delivery</h3>
+                  <p className="text-muted-foreground">Standard turnaround is 4 to 6 weeks. Your letters ship via UPS Ground (or freight for larger pieces) right to your door, ready to hang and plug in.</p>
                 </div>
               </div>
             </div>
             
             <div className="mt-8 pt-8 border-t border-border">
-              <a href="https://therustymarquee.com" target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-foreground font-semibold hover:underline">
-                Shop Single Letters at TheRustyMarquee.com ↗
-              </a>
+              <Link to="/quote/wall-hanging" className="inline-flex items-center text-foreground font-semibold hover:underline">
+                Get a Wall-Hanging Letter Quote →
+              </Link>
             </div>
           </div>
         </section>
