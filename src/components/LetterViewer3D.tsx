@@ -1,22 +1,19 @@
 import { useEffect, useRef, useState, useCallback } from 'react';
 
-// Paths to GLB models served from /public
 const BULBS_GLB = '/E_Letter_bulbs1.glb';
 const NEON_GLB  = '/E_Letter_neon1.glb';
 
-// Fully saturated colors in linear 0-1 space
 const COLOR_CYCLE: [number, number, number][] = [
-  [1,   0,   0  ],  // red
-  [1,   0,   0.6],  // hot pink
-  [1,   0.4, 0  ],  // orange
-  [1,   1,   0  ],  // yellow
-  [0,   1,   0  ],  // green
-  [0,   1,   0.8],  // teal
-  [0,   0.2, 1  ],  // blue
-  [0.7, 0,   1  ],  // purple
+  [1,   0,   0  ],
+  [1,   0,   0.6],
+  [1,   0.4, 0  ],
+  [1,   1,   0  ],
+  [0,   1,   0  ],
+  [0,   1,   0.8],
+  [0,   0.2, 1  ],
+  [0.7, 0,   1  ],
 ];
 
-// Emissive strength — higher = more bloom/glow from the material itself
 const EMISSIVE_STRENGTH = 8;
 
 type StyleMode = 'classic' | 'color' | 'neon';
@@ -32,6 +29,8 @@ declare global {
         'shadow-intensity'?: string;
         exposure?: string;
         'tone-mapping'?: string;
+        'environment-image'?: string;
+        'skybox-height'?: string;
         style?: React.CSSProperties;
         ref?: React.Ref<HTMLElement>;
         onCameraChange?: (e: Event) => void;
@@ -42,9 +41,12 @@ declare global {
 
 export const LetterViewer3D = () => {
   const viewerRef        = useRef<HTMLElement>(null);
+  const bloomCanvasRef   = useRef<HTMLCanvasElement>(null);
+  const offscreenRef     = useRef<HTMLCanvasElement | null>(null);
+  const bloomRafRef      = useRef<number | null>(null);
+  const cycleRafRef      = useRef<number | null>(null);
   const [mode, setMode]  = useState<StyleMode>('classic');
   const [autoRotate, setAutoRotate] = useState(true);
-  const rafRef           = useRef<number | null>(null);
   const colorIdxRef      = useRef(0);
   const lerpTRef         = useRef(0);
   const cameraStoppedRef = useRef(false);
@@ -54,16 +56,92 @@ export const LetterViewer3D = () => {
 
   const currentSrc = mode === 'neon' ? NEON_GLB : BULBS_GLB;
 
+  // ── Bloom loop: reads model-viewer's WebGL canvas, blurs it, composites on top ──
+  const startBloomLoop = useCallback(() => {
+    if (bloomRafRef.current) cancelAnimationFrame(bloomRafRef.current);
+
+    const loop = () => {
+      const viewer = viewerRef.current as any;
+      const bloomCanvas = bloomCanvasRef.current;
+      if (!viewer || !bloomCanvas) {
+        bloomRafRef.current = requestAnimationFrame(loop);
+        return;
+      }
+
+      // Find the WebGL canvas inside model-viewer's shadow DOM
+      const mvCanvas: HTMLCanvasElement | null =
+        viewer.shadowRoot?.querySelector('canvas') ??
+        viewer.querySelector('canvas');
+
+      if (!mvCanvas || mvCanvas.width === 0) {
+        bloomRafRef.current = requestAnimationFrame(loop);
+        return;
+      }
+
+      const w = mvCanvas.width;
+      const h = mvCanvas.height;
+
+      // Sync bloom canvas size to match
+      if (bloomCanvas.width !== w || bloomCanvas.height !== h) {
+        bloomCanvas.width  = w;
+        bloomCanvas.height = h;
+      }
+
+      // Use an offscreen canvas to draw the source frame, then composite
+      if (!offscreenRef.current) offscreenRef.current = document.createElement('canvas');
+      const off = offscreenRef.current;
+      if (off.width !== w || off.height !== h) { off.width = w; off.height = h; }
+
+      const offCtx = off.getContext('2d');
+      if (!offCtx) { bloomRafRef.current = requestAnimationFrame(loop); return; }
+
+      try {
+        offCtx.clearRect(0, 0, w, h);
+        offCtx.drawImage(mvCanvas, 0, 0);
+      } catch (_) {
+        // Cross-origin or tainted canvas — skip this frame
+        bloomRafRef.current = requestAnimationFrame(loop);
+        return;
+      }
+
+      // Draw the blurred copy onto the bloom canvas with screen blend
+      const ctx = bloomCanvas.getContext('2d');
+      if (!ctx) { bloomRafRef.current = requestAnimationFrame(loop); return; }
+      ctx.clearRect(0, 0, w, h);
+
+      // Draw multiple passes with increasing blur for a soft bloom spread
+      const passes = [
+        { blur: 8,  alpha: 0.55 },
+        { blur: 18, alpha: 0.40 },
+        { blur: 32, alpha: 0.25 },
+      ];
+
+      passes.forEach(({ blur, alpha }) => {
+        ctx.save();
+        ctx.filter = `blur(${blur}px)`;
+        ctx.globalAlpha = alpha;
+        ctx.drawImage(off, 0, 0);
+        ctx.restore();
+      });
+
+      bloomRafRef.current = requestAnimationFrame(loop);
+    };
+
+    bloomRafRef.current = requestAnimationFrame(loop);
+  }, []);
+
+  const stopBloomLoop = useCallback(() => {
+    if (bloomRafRef.current) { cancelAnimationFrame(bloomRafRef.current); bloomRafRef.current = null; }
+  }, []);
+
   // ── Material helpers ──────────────────────────────────────────────────────
   const setEmissive = useCallback((matName: string, rgb: [number, number, number], strength: number) => {
     const viewer = viewerRef.current as any;
     if (!viewer?.model) return;
     const mat = viewer.model.materials.find((m: any) => m.name === matName);
     if (!mat) return;
-    // Set both emissive and base color so the material reads as the chosen color
     mat.setEmissiveFactor([rgb[0], rgb[1], rgb[2]]);
     mat.pbrMetallicRoughness.setBaseColorFactor([rgb[0], rgb[1], rgb[2], 1]);
-    // KHR_materials_emissive_strength multiplies emissive beyond 1.0 for real glow
     try {
       if (mat.extensions?.KHR_materials_emissive_strength !== undefined) {
         mat.extensions.KHR_materials_emissive_strength.emissiveStrength = strength;
@@ -85,9 +163,9 @@ export const LetterViewer3D = () => {
     } catch (_) {}
   }, []);
 
-  // ── Color cycling via rAF ─────────────────────────────────────────────────
+  // ── Color cycling ─────────────────────────────────────────────────────────
   const stopCycle = useCallback(() => {
-    if (rafRef.current) { cancelAnimationFrame(rafRef.current); rafRef.current = null; }
+    if (cycleRafRef.current) { cancelAnimationFrame(cycleRafRef.current); cycleRafRef.current = null; }
   }, []);
 
   const startCycle = useCallback((targetMode: StyleMode) => {
@@ -116,10 +194,10 @@ export const LetterViewer3D = () => {
         from[2] + (to[2] - from[2]) * t,
       ];
       setEmissive(matName, rgb, EMISSIVE_STRENGTH);
-      rafRef.current = requestAnimationFrame(tick);
+      cycleRafRef.current = requestAnimationFrame(tick);
     };
 
-    rafRef.current = requestAnimationFrame(tick);
+    cycleRafRef.current = requestAnimationFrame(tick);
   }, [stopCycle, setEmissive]);
 
   // ── Mode effect ───────────────────────────────────────────────────────────
@@ -134,9 +212,8 @@ export const LetterViewer3D = () => {
       else startCycle(mode);
     };
 
-    if (viewer?.model) {
-      run();
-    } else {
+    if (viewer?.model) run();
+    else {
       const onLoad = () => { viewer?.removeEventListener('load', onLoad); run(); };
       viewer?.addEventListener('load', onLoad);
     }
@@ -152,6 +229,12 @@ export const LetterViewer3D = () => {
     viewer.addEventListener('load', onLoad);
     return () => viewer.removeEventListener('load', onLoad);
   }, [applyClassic]);
+
+  // Start/stop bloom loop with component
+  useEffect(() => {
+    startBloomLoop();
+    return () => stopBloomLoop();
+  }, [startBloomLoop, stopBloomLoop]);
 
   // ── Camera ────────────────────────────────────────────────────────────────
   const handleCameraChange = useCallback((e: Event) => {
@@ -197,9 +280,11 @@ export const LetterViewer3D = () => {
           Drag to rotate &bull; Pinch to zoom &bull; Switch styles below
         </p>
 
+        {/* Wrapper: position relative so bloom canvas overlays model-viewer */}
         <div
           className="rounded-2xl overflow-hidden mx-auto"
           style={{
+            position: 'relative',
             background: 'linear-gradient(160deg, #c8bfaa 0%, #b8ae98 100%)',
             boxShadow: '0 4px 24px rgba(0,0,0,0.18)',
             maxWidth: 480,
@@ -219,6 +304,20 @@ export const LetterViewer3D = () => {
             skybox-height="0m"
             style={{ width: '100%', height: 340, display: 'block' }}
             onCameraChange={handleCameraChange}
+          />
+          {/* Bloom overlay — reads actual rendered pixels from model-viewer's WebGL canvas */}
+          <canvas
+            ref={bloomCanvasRef}
+            style={{
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              width: '100%',
+              height: '100%',
+              pointerEvents: 'none',
+              mixBlendMode: 'screen',
+              opacity: 0.75,
+            }}
           />
         </div>
 
