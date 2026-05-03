@@ -212,8 +212,8 @@ export const LetterViewer3D = () => {
             alt="3D preview of a marquee letter E"
             auto-rotate={autoRotate ? '' : undefined}
             camera-controls=""
-            shadow-intensity="0.15"
-            exposure="1.6"
+            shadow-intensity="0.28"
+            exposure="1.25"
             tone-mapping="commerce"
             environment-image="neutral"
             skybox-height="0m"
