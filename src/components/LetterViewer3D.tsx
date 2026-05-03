@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState, useCallback } from 'react';
 
 // CDN URLs for the GLB models
-const BULBS_GLB = 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663459706891/RCFVTkOVgMCQZGcC.glb';
-const NEON_GLB  = 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663459706891/EhNStDndGhurVMdV.glb';
+const BULBS_GLB = '/E_Letter_bulbs1.glb';
+const NEON_GLB  = '/E_Letter_neon1.glb';
 
 // Color cycle: red → pink → orange → yellow → green → teal → blue → purple
 const COLOR_CYCLE: [number, number, number][] = [
