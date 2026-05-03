@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState, useCallback } from 'react';
 
-// CDN URLs for the GLB models
+// Paths to GLB models served from /public
 const BULBS_GLB = '/E_Letter_bulbs1.glb';
 const NEON_GLB  = '/E_Letter_neon1.glb';
 
@@ -214,12 +214,12 @@ export const LetterViewer3D = () => {
           Drag to rotate &bull; Pinch to zoom &bull; Switch styles below
         </p>
 
-        {/* model-viewer */}
+        {/* model-viewer — dark background so white letters pop */}
         <div
           className="rounded-2xl overflow-hidden mx-auto"
           style={{
-            background: 'linear-gradient(160deg, #f0ebe0 0%, #e8e0d0 100%)',
-            boxShadow: '0 4px 24px rgba(0,0,0,0.10)',
+            background: 'linear-gradient(160deg, #1e1a16 0%, #2a2420 100%)',
+            boxShadow: '0 4px 32px rgba(0,0,0,0.40)',
             maxWidth: 480,
           }}
         >
@@ -230,8 +230,8 @@ export const LetterViewer3D = () => {
             alt="3D preview of a marquee letter E"
             auto-rotate={autoRotate ? '' : undefined}
             camera-controls=""
-            shadow-intensity="1"
-            exposure="1.1"
+            shadow-intensity="0.6"
+            exposure="1.3"
             style={{ width: '100%', height: 340 }}
             onCameraChange={handleCameraChange}
           />
@@ -257,7 +257,7 @@ export const LetterViewer3D = () => {
               className="ml-2 text-xs font-bold px-2 py-0.5 rounded-full"
               style={{
                 background: mode === 'color' ? 'rgba(255,255,255,0.25)' : '#2a7f8f',
-                color: mode === 'color' ? '#fff' : '#fff',
+                color: '#fff',
               }}
             >
               +$100/letter
@@ -288,6 +288,25 @@ export const LetterViewer3D = () => {
           {mode === 'color'   && 'LED color-changing bulbs cycle through the full spectrum automatically.'}
           {mode === 'neon'    && 'LED neon rope replaces the bulbs — bright, modern, and sleek.'}
         </p>
+
+        {/* Phase 2: quote callout for premium styles */}
+        {(mode === 'color' || mode === 'neon') && (
+          <div
+            className="mt-5 mx-auto rounded-xl px-5 py-4 text-sm max-w-sm"
+            style={{
+              background: 'rgba(42,127,143,0.10)',
+              border: '1px solid rgba(42,127,143,0.30)',
+              color: '#2a7f8f',
+            }}
+          >
+            <span className="font-semibold">Love this look?</span>{' '}
+            Mention{' '}
+            <span className="font-semibold">
+              {mode === 'color' ? '"Color-Changing Bulbs"' : '"LED Neon"'}
+            </span>{' '}
+            in your quote request and we&apos;ll price it out for you.
+          </div>
+        )}
       </div>
     </section>
   );
