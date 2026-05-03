@@ -289,7 +289,7 @@ export const LetterViewer3D = () => {
         <p className="text-xs text-gray-400 mt-3 italic">
           {mode === 'classic' && 'Standard warm white incandescent bulbs — the classic marquee look.'}
           {mode === 'color'   && 'LED color-changing bulbs cycle through the full spectrum automatically.'}
-          {mode === 'neon'    && 'LED neon rope replaces the bulbs — bright, modern, and energy-efficient.'}
+          {mode === 'neon'    && 'LED neon rope replaces the bulbs — bright, modern, and sleek.'}
         </p>
       </div>
     </section>
