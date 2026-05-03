@@ -174,11 +174,16 @@ export const LetterViewer3D = () => {
   const handleModeSwitch = (newMode: StyleMode) => {
     if (newMode === mode) return;
     const viewer = viewerRef.current as any;
-    // Reset to front view immediately (or after load for GLB swap)
     const resetCamera = () => {
       try {
+        // Use resetTurntableRotation + cameraOrbit for a reliable snap to front
+        if (typeof viewer.resetTurntableRotation === 'function') {
+          viewer.resetTurntableRotation(0);
+        }
+        viewer.setAttribute('camera-orbit', '0deg 75deg 105%');
+        viewer.setAttribute('camera-target', 'auto auto auto');
+        // Also set the property directly as a fallback
         viewer.cameraOrbit = '0deg 75deg 105%';
-        viewer.cameraTarget = 'auto auto auto';
       } catch (_) {}
     };
     if (viewer && (mode === 'neon') !== (newMode === 'neon')) {
@@ -218,8 +223,8 @@ export const LetterViewer3D = () => {
         <div
           className="rounded-2xl overflow-hidden mx-auto"
           style={{
-            background: 'linear-gradient(160deg, #1e1a16 0%, #2a2420 100%)',
-            boxShadow: '0 4px 32px rgba(0,0,0,0.40)',
+            background: 'linear-gradient(160deg, #c8bfaa 0%, #b8ae98 100%)',
+            boxShadow: '0 4px 24px rgba(0,0,0,0.18)',
             maxWidth: 480,
           }}
         >
