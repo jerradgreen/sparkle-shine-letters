@@ -170,33 +170,30 @@ export const LetterViewer3D = () => {
     }
   }, []);
 
-  // Preserve camera position when switching models
-  const savedCameraRef = useRef<string | null>(null);
-
+  // Reset camera to front-facing view on every style switch
   const handleModeSwitch = (newMode: StyleMode) => {
+    if (newMode === mode) return;
     const viewer = viewerRef.current as any;
-    if (viewer && (mode === 'neon') !== (newMode === 'neon')) {
-      // About to swap GLB — save camera orbit
+    // Reset to front view immediately (or after load for GLB swap)
+    const resetCamera = () => {
       try {
-        savedCameraRef.current = viewer.getCameraOrbit?.() ?? null;
+        viewer.cameraOrbit = '0deg 75deg 105%';
+        viewer.cameraTarget = 'auto auto auto';
       } catch (_) {}
+    };
+    if (viewer && (mode === 'neon') !== (newMode === 'neon')) {
+      // GLB is swapping — reset after the new model loads
+      const onLoad = () => {
+        viewer.removeEventListener('load', onLoad);
+        resetCamera();
+      };
+      viewer.addEventListener('load', onLoad);
+    } else {
+      // Same GLB, just material change — reset immediately
+      resetCamera();
     }
     setMode(newMode);
   };
-
-  // After model swap, restore camera
-  useEffect(() => {
-    const viewer = viewerRef.current as any;
-    if (!viewer || !savedCameraRef.current) return;
-    const onLoad = () => {
-      if (savedCameraRef.current && viewer.cameraOrbit !== undefined) {
-        try { viewer.cameraOrbit = savedCameraRef.current; } catch (_) {}
-        savedCameraRef.current = null;
-      }
-    };
-    viewer.addEventListener('load', onLoad);
-    return () => viewer.removeEventListener('load', onLoad);
-  }, [currentSrc]);
 
   const buttonBase =
     'relative px-4 py-2 rounded-full text-sm font-semibold border-2 transition-all duration-200 cursor-pointer';
