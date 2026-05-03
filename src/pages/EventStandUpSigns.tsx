@@ -1,4 +1,5 @@
 import { PageTemplate } from '@/components/templates/PageTemplate';
+import { LetterViewer3D } from '@/components/LetterViewer3D';
 import { MarqueeHeroSection } from '@/components/MarqueeHeroSection';
 import { HighlightsSection } from '@/components/HighlightsSection';
 import { FeatureGrid } from '@/components/templates/FeatureGrid';
@@ -89,6 +90,9 @@ const EventStandUpSigns = () => {
           </Button>
         </div>
       </section>
+
+      {/* 3D Letter Viewer */}
+      <LetterViewer3D />
 
       {/* What to Buy — Inventory Guidance */}
       <section className="py-8 px-4 bg-muted/20">
