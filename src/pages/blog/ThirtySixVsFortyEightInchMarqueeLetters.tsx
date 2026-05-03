@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import ShopifyHeader from '@/components/ShopifyHeader';
-import ShopifyFooter from '@/components/ShopifyFooter';
+import Navigation from '@/components/Navigation';
+import Footer from '@/components/Footer';
 
 const ThirtySixVsFortyEightInchMarqueeLetters = () => {
   return (
@@ -11,7 +11,7 @@ const ThirtySixVsFortyEightInchMarqueeLetters = () => {
         <meta name="description" content="Compare 36-inch and 48-inch stand-up marquee letters. Learn which size fits your venue, storage, and event needs. A practical buyer's guide." />
       </Helmet>
 
-      <ShopifyHeader />
+      <Navigation />
 
       <main className="max-w-3xl mx-auto px-4 py-12">
         <article className="prose prose-sm md:prose-base max-w-none">
@@ -62,7 +62,7 @@ const ThirtySixVsFortyEightInchMarqueeLetters = () => {
         </div>
       </main>
 
-      <ShopifyFooter />
+      <Footer />
     </div>
   );
 };

@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import ShopifyHeader from '@/components/ShopifyHeader';
-import ShopifyFooter from '@/components/ShopifyFooter';
+import Navigation from '@/components/Navigation';
+import Footer from '@/components/Footer';
 
 const corporateFaqs = [
   {
@@ -45,7 +45,7 @@ const CorporateMarqueeSigns = () => {
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
 
-      <ShopifyHeader />
+      <Navigation />
 
       <main className="max-w-4xl mx-auto px-4 py-12">
 
@@ -149,7 +149,7 @@ const CorporateMarqueeSigns = () => {
 
       </main>
 
-      <ShopifyFooter />
+      <Footer />
     </div>
   );
 };

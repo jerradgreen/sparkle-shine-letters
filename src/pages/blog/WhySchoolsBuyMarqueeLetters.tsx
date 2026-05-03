@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import ShopifyHeader from '@/components/ShopifyHeader';
-import ShopifyFooter from '@/components/ShopifyFooter';
+import Navigation from '@/components/Navigation';
+import Footer from '@/components/Footer';
 
 const WhySchoolsBuyMarqueeLetters = () => {
   return (
@@ -11,7 +11,7 @@ const WhySchoolsBuyMarqueeLetters = () => {
         <meta name="description" content="How high schools and middle schools use commercial marquee letters for pep rallies, graduations, fundraisers, and school events. Learn why schools invest in reusable marquee signage." />
       </Helmet>
 
-      <ShopifyHeader />
+      <Navigation />
 
       <main className="max-w-3xl mx-auto px-4 py-12">
         <article className="prose prose-sm md:prose-base max-w-none">
@@ -56,7 +56,7 @@ const WhySchoolsBuyMarqueeLetters = () => {
         </div>
       </main>
 
-      <ShopifyFooter />
+      <Footer />
     </div>
   );
 };

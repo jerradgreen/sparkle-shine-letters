@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import ShopifyHeader from '@/components/ShopifyHeader';
-import ShopifyFooter from '@/components/ShopifyFooter';
+import Navigation from '@/components/Navigation';
+import Footer from '@/components/Footer';
 
 const CustomOutdoorMarqueeSignsGuide = () => {
   return (
@@ -11,7 +11,7 @@ const CustomOutdoorMarqueeSignsGuide = () => {
         <meta name="description" content="Discover how custom outdoor marquee signs elevate storefronts and commercial spaces. Learn about materials, weatherproofing, and design options for exterior use." />
       </Helmet>
 
-      <ShopifyHeader />
+      <Navigation />
 
       <main className="max-w-3xl mx-auto px-4 py-12">
         <article className="prose prose-sm md:prose-base max-w-none">
@@ -108,7 +108,7 @@ const CustomOutdoorMarqueeSignsGuide = () => {
         </article>
       </main>
 
-      <ShopifyFooter />
+      <Footer />
     </div>
   );
 };

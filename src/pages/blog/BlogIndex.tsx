@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import ShopifyHeader from '@/components/ShopifyHeader';
-import ShopifyFooter from '@/components/ShopifyFooter';
+import Navigation from '@/components/Navigation';
+import Footer from '@/components/Footer';
 
 const articles = [
   {
@@ -44,7 +44,7 @@ const BlogIndex = () => {
         <meta name="description" content="Guides and articles about commercial marquee letters for schools, universities, corporations, and event businesses." />
       </Helmet>
 
-      <ShopifyHeader />
+      <Navigation />
 
       <main className="max-w-3xl mx-auto px-4 py-12">
         <h1 className="text-2xl md:text-3xl font-bold text-foreground mb-8">Articles</h1>
@@ -63,7 +63,7 @@ const BlogIndex = () => {
         </div>
       </main>
 
-      <ShopifyFooter />
+      <Footer />
     </div>
   );
 };

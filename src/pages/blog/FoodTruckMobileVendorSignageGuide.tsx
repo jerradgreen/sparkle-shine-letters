@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import ShopifyHeader from '@/components/ShopifyHeader';
-import ShopifyFooter from '@/components/ShopifyFooter';
+import Navigation from '@/components/Navigation';
+import Footer from '@/components/Footer';
 
 const FoodTruckMobileVendorSignageGuide = () => {
   return (
@@ -11,7 +11,7 @@ const FoodTruckMobileVendorSignageGuide = () => {
         <meta name="description" content="A complete guide to custom food truck signs, roof signage, and mobile vendor displays. Learn how illuminated marquee and 3D logo signs attract more customers." />
       </Helmet>
 
-      <ShopifyHeader />
+      <Navigation />
 
       <main className="max-w-3xl mx-auto px-4 py-12">
         <article className="prose prose-sm md:prose-base max-w-none">
@@ -98,7 +98,7 @@ const FoodTruckMobileVendorSignageGuide = () => {
         </article>
       </main>
 
-      <ShopifyFooter />
+      <Footer />
     </div>
   );
 };

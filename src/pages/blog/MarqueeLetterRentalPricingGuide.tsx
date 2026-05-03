@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import ShopifyHeader from '@/components/ShopifyHeader';
-import ShopifyFooter from '@/components/ShopifyFooter';
+import Navigation from '@/components/Navigation';
+import Footer from '@/components/Footer';
 
 const MarqueeLetterRentalPricingGuide = () => {
   return (
@@ -11,7 +11,7 @@ const MarqueeLetterRentalPricingGuide = () => {
         <meta name="description" content="A guide to pricing your marquee letter rentals. Learn average per-letter rates, package pricing strategies, and how to maximize revenue for your event business." />
       </Helmet>
 
-      <ShopifyHeader />
+      <Navigation />
 
       <main className="max-w-3xl mx-auto px-4 py-12">
         <article className="prose prose-sm md:prose-base max-w-none">
@@ -114,7 +114,7 @@ const MarqueeLetterRentalPricingGuide = () => {
         </article>
       </main>
 
-      <ShopifyFooter />
+      <Footer />
     </div>
   );
 };

@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import ShopifyHeader from '@/components/ShopifyHeader';
-import ShopifyFooter from '@/components/ShopifyFooter';
+import Navigation from '@/components/Navigation';
+import Footer from '@/components/Footer';
 
 const UniversitiesTeamsMarqueeLetters = () => {
   return (
@@ -11,7 +11,7 @@ const UniversitiesTeamsMarqueeLetters = () => {
         <meta name="description" content="Why universities, athletic departments, and teams invest in commercial marquee letters for recruiting events, game days, and campus branding." />
       </Helmet>
 
-      <ShopifyHeader />
+      <Navigation />
 
       <main className="max-w-3xl mx-auto px-4 py-12">
         <article className="prose prose-sm md:prose-base max-w-none">
@@ -58,7 +58,7 @@ const UniversitiesTeamsMarqueeLetters = () => {
         </div>
       </main>
 
-      <ShopifyFooter />
+      <Footer />
     </div>
   );
 };
