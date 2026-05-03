@@ -4,8 +4,7 @@ import { useEffect, useRef, useState, useCallback } from 'react';
 const BULBS_GLB = '/E_Letter_bulbs1.glb';
 const NEON_GLB  = '/E_Letter_neon1.glb';
 
-// Fully saturated colors — max values so model-viewer renders them at full intensity
-// [r, g, b] in linear 0-1 range passed to setEmissiveFactor / setBaseColorFactor
+// Fully saturated colors in linear 0-1 space
 const COLOR_CYCLE: [number, number, number][] = [
   [1,   0,   0  ],  // red
   [1,   0,   0.6],  // hot pink
@@ -17,25 +16,11 @@ const COLOR_CYCLE: [number, number, number][] = [
   [0.7, 0,   1  ],  // purple
 ];
 
-// Emissive strength multiplier — model-viewer 3.x supports KHR_materials_emissive_strength
-// Values > 1 push beyond SDR and create a genuine glow/bloom in the renderer
-const EMISSIVE_STRENGTH = 6;
+// Emissive strength — higher = more bloom/glow from the material itself
+const EMISSIVE_STRENGTH = 8;
 
 type StyleMode = 'classic' | 'color' | 'neon';
 
-// CSS bloom color strings matching COLOR_CYCLE for the overlay glow effect
-const BLOOM_COLORS = [
-  'rgba(255,0,0,',
-  'rgba(255,0,153,',
-  'rgba(255,102,0,',
-  'rgba(255,255,0,',
-  'rgba(0,255,0,',
-  'rgba(0,255,204,',
-  'rgba(0,51,255,',
-  'rgba(178,0,255,',
-];
-
-// TypeScript declaration for the model-viewer custom element
 declare global {
   namespace JSX {
     interface IntrinsicElements {
@@ -46,6 +31,7 @@ declare global {
         'camera-controls'?: boolean | string;
         'shadow-intensity'?: string;
         exposure?: string;
+        'tone-mapping'?: string;
         style?: React.CSSProperties;
         ref?: React.Ref<HTMLElement>;
         onCameraChange?: (e: Event) => void;
@@ -55,95 +41,31 @@ declare global {
 }
 
 export const LetterViewer3D = () => {
-  const viewerRef    = useRef<HTMLElement>(null);
-  const canvasRef    = useRef<HTMLCanvasElement>(null);
-  const wrapperRef   = useRef<HTMLDivElement>(null);
-  const [mode, setMode]           = useState<StyleMode>('classic');
+  const viewerRef        = useRef<HTMLElement>(null);
+  const [mode, setMode]  = useState<StyleMode>('classic');
   const [autoRotate, setAutoRotate] = useState(true);
-  const intervalRef  = useRef<ReturnType<typeof setInterval> | null>(null);
-  const rafRef       = useRef<number | null>(null);
-  const colorIdxRef  = useRef(0);
-  const lerpTRef     = useRef(0);
+  const rafRef           = useRef<number | null>(null);
+  const colorIdxRef      = useRef(0);
+  const lerpTRef         = useRef(0);
   const cameraStoppedRef = useRef(false);
-  const currentColorRef  = useRef<[number, number, number]>([1, 0.75, 0.25]);
-  const modeRef      = useRef<StyleMode>('classic');
+  const modeRef          = useRef<StyleMode>('classic');
 
-  // Keep modeRef in sync
   useEffect(() => { modeRef.current = mode; }, [mode]);
 
-  // Determine which GLB to load
   const currentSrc = mode === 'neon' ? NEON_GLB : BULBS_GLB;
 
-  // ── Bloom overlay canvas ──────────────────────────────────────────────────
-  // We draw radial glow spots at fixed positions that approximate bulb locations
-  // on the letter E. These are normalised [0-1] coords within the viewer box.
-  // Adjust these if the model position shifts.
-  const BULB_POSITIONS = [
-    // Top bar
-    [0.28,0.12],[0.36,0.12],[0.44,0.12],[0.52,0.12],[0.60,0.12],[0.68,0.12],
-    // Upper-mid bar
-    [0.28,0.38],[0.36,0.38],[0.44,0.38],[0.52,0.38],
-    // Middle bar
-    [0.28,0.50],[0.36,0.50],[0.44,0.50],[0.52,0.50],[0.60,0.50],
-    // Lower-mid bar
-    [0.28,0.62],[0.36,0.62],[0.44,0.62],[0.52,0.62],
-    // Bottom bar
-    [0.28,0.88],[0.36,0.88],[0.44,0.88],[0.52,0.88],[0.60,0.88],[0.68,0.88],
-    // Left spine
-    [0.28,0.25],[0.28,0.50],[0.28,0.75],
-  ];
-
-  const drawBloom = useCallback((colorStr: string, alpha: number) => {
-    const canvas = canvasRef.current;
-    const wrapper = wrapperRef.current;
-    if (!canvas || !wrapper) return;
-    const w = wrapper.clientWidth;
-    const h = wrapper.clientHeight;
-    if (canvas.width !== w || canvas.height !== h) {
-      canvas.width  = w;
-      canvas.height = h;
-    }
-    const ctx = canvas.getContext('2d');
-    if (!ctx) return;
-    ctx.clearRect(0, 0, w, h);
-
-    const radius = Math.min(w, h) * 0.07;
-    BULB_POSITIONS.forEach(([nx, ny]) => {
-      const x = nx * w;
-      const y = ny * h;
-      const grad = ctx.createRadialGradient(x, y, 0, x, y, radius);
-      grad.addColorStop(0,   colorStr + (alpha * 0.85) + ')');
-      grad.addColorStop(0.4, colorStr + (alpha * 0.35) + ')');
-      grad.addColorStop(1,   colorStr + '0)');
-      ctx.fillStyle = grad;
-      ctx.beginPath();
-      ctx.arc(x, y, radius, 0, Math.PI * 2);
-      ctx.fill();
-    });
-  }, []);
-
-  const clearBloom = useCallback(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-    const ctx = canvas.getContext('2d');
-    if (ctx) ctx.clearRect(0, 0, canvas.width, canvas.height);
-  }, []);
-
   // ── Material helpers ──────────────────────────────────────────────────────
-  const setMaterial = useCallback((
-    matName: string,
-    rgb: [number, number, number],
-    strength: number
-  ) => {
+  const setEmissive = useCallback((matName: string, rgb: [number, number, number], strength: number) => {
     const viewer = viewerRef.current as any;
     if (!viewer?.model) return;
     const mat = viewer.model.materials.find((m: any) => m.name === matName);
     if (!mat) return;
-    mat.setEmissiveFactor(rgb);
-    mat.pbrMetallicRoughness.setBaseColorFactor([...rgb, 1]);
-    // KHR_materials_emissive_strength — supported in model-viewer 3.x
+    // Set both emissive and base color so the material reads as the chosen color
+    mat.setEmissiveFactor([rgb[0], rgb[1], rgb[2]]);
+    mat.pbrMetallicRoughness.setBaseColorFactor([rgb[0], rgb[1], rgb[2], 1]);
+    // KHR_materials_emissive_strength multiplies emissive beyond 1.0 for real glow
     try {
-      if (mat.extensions?.KHR_materials_emissive_strength) {
+      if (mat.extensions?.KHR_materials_emissive_strength !== undefined) {
         mat.extensions.KHR_materials_emissive_strength.emissiveStrength = strength;
       }
     } catch (_) {}
@@ -153,99 +75,76 @@ export const LetterViewer3D = () => {
     const viewer = viewerRef.current as any;
     if (!viewer?.model) return;
     const mat = viewer.model.materials.find((m: any) => m.name === 'M_E_Bulb');
-    if (mat) {
-      mat.pbrMetallicRoughness.setBaseColorFactor([1, 1, 1, 1]);
-      mat.setEmissiveFactor([1, 0.75, 0.25]);
-      try {
-        if (mat.extensions?.KHR_materials_emissive_strength) {
-          mat.extensions.KHR_materials_emissive_strength.emissiveStrength = 4;
-        }
-      } catch (_) {}
-    }
-    currentColorRef.current = [1, 0.75, 0.25];
-    // Warm white bloom
-    drawBloom('rgba(255,200,100,', 0.18);
-  }, [drawBloom]);
+    if (!mat) return;
+    mat.pbrMetallicRoughness.setBaseColorFactor([1, 1, 1, 1]);
+    mat.setEmissiveFactor([1, 0.75, 0.25]);
+    try {
+      if (mat.extensions?.KHR_materials_emissive_strength !== undefined) {
+        mat.extensions.KHR_materials_emissive_strength.emissiveStrength = 5;
+      }
+    } catch (_) {}
+  }, []);
 
-  // ── Color cycling ─────────────────────────────────────────────────────────
+  // ── Color cycling via rAF ─────────────────────────────────────────────────
   const stopCycle = useCallback(() => {
-    if (intervalRef.current) { clearInterval(intervalRef.current); intervalRef.current = null; }
-    if (rafRef.current)       { cancelAnimationFrame(rafRef.current); rafRef.current = null; }
+    if (rafRef.current) { cancelAnimationFrame(rafRef.current); rafRef.current = null; }
   }, []);
 
   const startCycle = useCallback((targetMode: StyleMode) => {
     stopCycle();
     colorIdxRef.current = 0;
     lerpTRef.current    = 0;
-
     const matName = targetMode === 'neon' ? 'M_E_Neon' : 'M_E_Bulb';
-    const LERP_DURATION = 900; // ms per color step
-    let lastTime = performance.now();
+    const STEP_MS = 900;
+    let last = performance.now();
 
     const tick = (now: number) => {
-      if (modeRef.current !== targetMode) return; // mode switched, stop
-      const dt = now - lastTime;
-      lastTime = now;
-      lerpTRef.current += dt / LERP_DURATION;
-
+      if (modeRef.current !== targetMode) return;
+      const dt = now - last;
+      last = now;
+      lerpTRef.current += dt / STEP_MS;
       if (lerpTRef.current >= 1) {
-        lerpTRef.current = 0;
+        lerpTRef.current -= 1;
         colorIdxRef.current = (colorIdxRef.current + 1) % COLOR_CYCLE.length;
       }
-
       const t    = lerpTRef.current;
       const from = COLOR_CYCLE[colorIdxRef.current];
       const to   = COLOR_CYCLE[(colorIdxRef.current + 1) % COLOR_CYCLE.length];
-      const r = from[0] + (to[0] - from[0]) * t;
-      const g = from[1] + (to[1] - from[1]) * t;
-      const b = from[2] + (to[2] - from[2]) * t;
-      const rgb: [number, number, number] = [r, g, b];
-
-      currentColorRef.current = rgb;
-      setMaterial(matName, rgb, EMISSIVE_STRENGTH);
-
-      // Bloom overlay — lerp between two bloom color strings
-      const fromBloom = BLOOM_COLORS[colorIdxRef.current];
-      const toBloom   = BLOOM_COLORS[(colorIdxRef.current + 1) % BLOOM_COLORS.length];
-      // Use the dominant channel to pick the bloom color (simple: use from until halfway)
-      const bloomStr = t < 0.5 ? fromBloom : toBloom;
-      drawBloom(bloomStr, 0.28);
-
+      const rgb: [number, number, number] = [
+        from[0] + (to[0] - from[0]) * t,
+        from[1] + (to[1] - from[1]) * t,
+        from[2] + (to[2] - from[2]) * t,
+      ];
+      setEmissive(matName, rgb, EMISSIVE_STRENGTH);
       rafRef.current = requestAnimationFrame(tick);
     };
 
     rafRef.current = requestAnimationFrame(tick);
-  }, [stopCycle, setMaterial, drawBloom]);
+  }, [stopCycle, setEmissive]);
 
   // ── Mode effect ───────────────────────────────────────────────────────────
   useEffect(() => {
     stopCycle();
     colorIdxRef.current = 0;
     lerpTRef.current    = 0;
-
     const viewer = viewerRef.current as any;
 
-    if (mode === 'classic') {
-      clearBloom();
-      if (viewer?.model) {
-        applyClassic();
-      } else {
-        const onLoad = () => { viewer?.removeEventListener('load', onLoad); applyClassic(); };
-        viewer?.addEventListener('load', onLoad);
-      }
+    const run = () => {
+      if (mode === 'classic') applyClassic();
+      else startCycle(mode);
+    };
+
+    if (viewer?.model) {
+      run();
     } else {
-      if (viewer?.model) {
-        startCycle(mode);
-      } else {
-        const onLoad = () => { viewer?.removeEventListener('load', onLoad); startCycle(mode); };
-        viewer?.addEventListener('load', onLoad);
-      }
+      const onLoad = () => { viewer?.removeEventListener('load', onLoad); run(); };
+      viewer?.addEventListener('load', onLoad);
     }
 
     return () => { stopCycle(); };
-  }, [mode, applyClassic, startCycle, stopCycle, clearBloom]);
+  }, [mode, applyClassic, startCycle, stopCycle]);
 
-  // Initial load — apply classic warm white
+  // Initial load
   useEffect(() => {
     const viewer = viewerRef.current as any;
     if (!viewer) return;
@@ -254,7 +153,7 @@ export const LetterViewer3D = () => {
     return () => viewer.removeEventListener('load', onLoad);
   }, [applyClassic]);
 
-  // ── Camera controls ───────────────────────────────────────────────────────
+  // ── Camera ────────────────────────────────────────────────────────────────
   const handleCameraChange = useCallback((e: Event) => {
     const ce = e as CustomEvent;
     if (ce.detail?.source === 'user-interaction' && !cameraStoppedRef.current) {
@@ -283,7 +182,7 @@ export const LetterViewer3D = () => {
     setMode(newMode);
   };
 
-  // ── Styles ────────────────────────────────────────────────────────────────
+  // ── Render ────────────────────────────────────────────────────────────────
   const buttonBase  = 'relative px-4 py-2 rounded-full text-sm font-semibold border-2 transition-all duration-200 cursor-pointer';
   const activeBtn   = 'bg-[#2a7f8f] border-[#2a7f8f] text-white shadow-md';
   const inactiveBtn = 'bg-white border-[#2a7f8f] text-[#2a7f8f] hover:bg-[#2a7f8f]/10';
@@ -298,12 +197,9 @@ export const LetterViewer3D = () => {
           Drag to rotate &bull; Pinch to zoom &bull; Switch styles below
         </p>
 
-        {/* Viewer wrapper — position:relative so bloom canvas overlays model-viewer */}
         <div
-          ref={wrapperRef}
           className="rounded-2xl overflow-hidden mx-auto"
           style={{
-            position: 'relative',
             background: 'linear-gradient(160deg, #c8bfaa 0%, #b8ae98 100%)',
             boxShadow: '0 4px 24px rgba(0,0,0,0.18)',
             maxWidth: 480,
@@ -316,21 +212,11 @@ export const LetterViewer3D = () => {
             alt="3D preview of a marquee letter E"
             auto-rotate={autoRotate ? '' : undefined}
             camera-controls=""
-            shadow-intensity="0.5"
-            exposure="1.2"
+            shadow-intensity="0.4"
+            exposure="0.9"
+            tone-mapping="commerce"
             style={{ width: '100%', height: 340, display: 'block' }}
             onCameraChange={handleCameraChange}
-          />
-          {/* Bloom overlay canvas — pointer-events:none so drag-to-rotate still works */}
-          <canvas
-            ref={canvasRef}
-            style={{
-              position: 'absolute',
-              top: 0, left: 0,
-              width: '100%', height: '100%',
-              pointerEvents: 'none',
-              mixBlendMode: 'screen',
-            }}
           />
         </div>
 
