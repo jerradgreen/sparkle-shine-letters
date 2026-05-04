@@ -17,7 +17,7 @@ const COLOR_CYCLE: [number, number, number][] = [
   [0.7, 0,   1  ],
 ];
 
-const EMISSIVE_STRENGTH = 20;
+const EMISSIVE_STRENGTH = 40;
 const BODY_EMISSIVE: [number, number, number] = [0.08, 0.08, 0.08]; // 8% white tint for color bounce
 
 type StyleMode = 'classic' | 'color' | 'neon';
@@ -153,10 +153,10 @@ export const LetterViewer3D = () => {
         if (mat) {
           // Warm amber-white: slightly more amber than pure white to stand out from the metal
           mat.setEmissiveFactor([1, 0.82, 0.45]);
-          mat.pbrMetallicRoughness.setBaseColorFactor([1, 0.88, 0.55, 1]);
+          mat.pbrMetallicRoughness.setBaseColorFactor([1, 0.92, 0.65, 1]);
           try {
             if (mat.extensions?.KHR_materials_emissive_strength !== undefined) {
-              mat.extensions.KHR_materials_emissive_strength.emissiveStrength = 12;
+              mat.extensions.KHR_materials_emissive_strength.emissiveStrength = 35;
             }
           } catch (_) {}
         }
@@ -223,7 +223,7 @@ export const LetterViewer3D = () => {
             src={currentSrc}
             alt="3D preview of a marquee letter E"
             shadow-intensity="0.35"
-            exposure="1.0"
+            exposure="1.35"
             tone-mapping="aces"
             environment-image="legacy"
             skybox-height="0m"
