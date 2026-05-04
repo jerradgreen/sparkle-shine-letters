@@ -17,8 +17,8 @@ const COLOR_CYCLE: [number, number, number][] = [
   [0.7, 0,   1  ],
 ];
 
-const EMISSIVE_STRENGTH = 8;
-const BODY_EMISSIVE: [number, number, number] = [0.05, 0.05, 0.05]; // 5% white tint for color bounce
+const EMISSIVE_STRENGTH = 20;
+const BODY_EMISSIVE: [number, number, number] = [0.08, 0.08, 0.08]; // 8% white tint for color bounce
 
 type StyleMode = 'classic' | 'color' | 'neon';
 
@@ -145,9 +145,23 @@ export const LetterViewer3D = () => {
     lerpTRef.current    = 0;
 
     if (mode === 'classic') {
-      // Classic White uses a fully baked GLB — no JS material overrides needed
-      // Just ensure body tint is neutral
-      waitForLoad(() => applyBodyTint('M_E_letter'));
+      // Classic White: baked GLB but boost bulb warmth slightly via JS
+      waitForLoad(() => {
+        const viewer = viewerRef.current as any;
+        if (!viewer?.model) return;
+        const mat = viewer.model.materials.find((m: any) => m.name === 'M_E_Bulb');
+        if (mat) {
+          // Warm amber-white: slightly more amber than pure white to stand out from the metal
+          mat.setEmissiveFactor([1, 0.82, 0.45]);
+          mat.pbrMetallicRoughness.setBaseColorFactor([1, 0.88, 0.55, 1]);
+          try {
+            if (mat.extensions?.KHR_materials_emissive_strength !== undefined) {
+              mat.extensions.KHR_materials_emissive_strength.emissiveStrength = 12;
+            }
+          } catch (_) {}
+        }
+        applyBodyTint('M_E_letter');
+      });
     } else {
       waitForLoad(() => startCycle(mode));
     }
