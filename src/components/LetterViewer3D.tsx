@@ -202,7 +202,7 @@ export const LetterViewer3D = () => {
             src={currentSrc}
             alt="3D preview of a marquee letter E"
             shadow-intensity="0.35"
-            exposure="0.85"
+            exposure="1.0"
             tone-mapping="aces"
             environment-image="neutral"
             skybox-height="0m"
