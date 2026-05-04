@@ -39,6 +39,10 @@ const EventStandupQuote = () => {
     prefillData['Topper'] = ' ';
     prefillData['Topper?'] = ' ';
   }
+  // Track whether the customer used the visualizer before submitting
+  // The Visualizer Yes/No field in Cognito is set to hidden + read-only
+  // Anyone arriving via the visualizer's Get Quote button gets 'Yes'; all others default to 'No'
+  if (mainText || letterSize) prefillData['Visualizer'] = 'Yes';
   prefillData['ZipCodeForDeliveryEstimate'] = ''; // Honeypot field
 
   useEffect(() => {
