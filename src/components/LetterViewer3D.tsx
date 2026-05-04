@@ -1,9 +1,9 @@
 import { useEffect, useRef, useState, useCallback } from 'react';
 
 // Three separate baked/emissive GLB models
-const CLASSIC_GLB = '/manus-storage/E_Letter_classic_white_9afe2940.glb';
-const BULBS_GLB   = '/manus-storage/E_Letter_color_bulbs_94479b45.glb';
-const NEON_GLB    = '/manus-storage/E_Letter_neon_94a6aa89.glb';
+const CLASSIC_GLB = '/E_Letter_bulbs_bake_light_4.glb';
+const BULBS_GLB   = '/E_Letter_bulbs_7.glb';
+const NEON_GLB    = '/E_Letter_neon_colorchange.glb';
 
 // Color cycle: red → pink → orange → yellow → green → teal → blue → purple
 const COLOR_CYCLE: [number, number, number][] = [
