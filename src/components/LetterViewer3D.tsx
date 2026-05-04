@@ -41,15 +41,13 @@ declare global {
 }
 
 export const LetterViewer3D = () => {
-  const viewerRef      = useRef<HTMLElement>(null);
-  const bloomRef       = useRef<HTMLElement>(null);
-  const cycleRafRef    = useRef<number | null>(null);
-  const [mode, setMode]  = useState<StyleMode>('classic');
+  const viewerRef   = useRef<HTMLElement>(null);
+  const cycleRafRef = useRef<number | null>(null);
+  const [mode, setMode]       = useState<StyleMode>('classic');
   const [autoRotate, setAutoRotate] = useState(true);
-  const colorIdxRef    = useRef(0);
-  const lerpTRef       = useRef(0);
-  const cameraStoppedRef = useRef(false);
-  const modeRef        = useRef<StyleMode>('classic');
+  const colorIdxRef = useRef(0);
+  const lerpTRef    = useRef(0);
+  const modeRef     = useRef<StyleMode>('classic');
   const [cameraOrbit, setCameraOrbit] = useState('0deg 75deg 105%');
 
   useEffect(() => { modeRef.current = mode; }, [mode]);
@@ -57,7 +55,8 @@ export const LetterViewer3D = () => {
   const currentSrc = mode === 'neon' ? NEON_GLB : BULBS_GLB;
 
   // ── Material helpers ──────────────────────────────────────────────────────
-  const setEmissiveOnViewer = useCallback((viewer: any, matName: string, rgb: [number, number, number], strength: number) => {
+  const setEmissive = useCallback((matName: string, rgb: [number, number, number], strength: number) => {
+    const viewer = viewerRef.current as any;
     if (!viewer?.model) return;
     const mat = viewer.model.materials.find((m: any) => m.name === matName);
     if (!mat) return;
@@ -70,25 +69,18 @@ export const LetterViewer3D = () => {
     } catch (_) {}
   }, []);
 
-  const applyToAllViewers = useCallback((matName: string, rgb: [number, number, number], strength: number) => {
-    setEmissiveOnViewer(viewerRef.current as any, matName, rgb, strength);
-    setEmissiveOnViewer(bloomRef.current as any, matName, rgb, strength);
-  }, [setEmissiveOnViewer]);
-
   const applyClassic = useCallback(() => {
-    [viewerRef.current, bloomRef.current].forEach(v => {
-      const viewer = v as any;
-      if (!viewer?.model) return;
-      const mat = viewer.model.materials.find((m: any) => m.name === 'M_E_Bulb');
-      if (!mat) return;
-      mat.pbrMetallicRoughness.setBaseColorFactor([1, 1, 1, 1]);
-      mat.setEmissiveFactor([1, 0.75, 0.25]);
-      try {
-        if (mat.extensions?.KHR_materials_emissive_strength !== undefined) {
-          mat.extensions.KHR_materials_emissive_strength.emissiveStrength = 5;
-        }
-      } catch (_) {}
-    });
+    const viewer = viewerRef.current as any;
+    if (!viewer?.model) return;
+    const mat = viewer.model.materials.find((m: any) => m.name === 'M_E_Bulb');
+    if (!mat) return;
+    mat.pbrMetallicRoughness.setBaseColorFactor([1, 1, 1, 1]);
+    mat.setEmissiveFactor([1, 0.75, 0.25]);
+    try {
+      if (mat.extensions?.KHR_materials_emissive_strength !== undefined) {
+        mat.extensions.KHR_materials_emissive_strength.emissiveStrength = 5;
+      }
+    } catch (_) {}
   }, []);
 
   // ── Color cycling ─────────────────────────────────────────────────────────
@@ -121,16 +113,16 @@ export const LetterViewer3D = () => {
         from[1] + (to[1] - from[1]) * t,
         from[2] + (to[2] - from[2]) * t,
       ];
-      applyToAllViewers(matName, rgb, EMISSIVE_STRENGTH);
+      setEmissive(matName, rgb, EMISSIVE_STRENGTH);
       cycleRafRef.current = requestAnimationFrame(tick);
     };
 
     cycleRafRef.current = requestAnimationFrame(tick);
-  }, [stopCycle, applyToAllViewers]);
+  }, [stopCycle, setEmissive]);
 
   // ── Mode effect ───────────────────────────────────────────────────────────
-  const waitForLoad = useCallback((viewer: HTMLElement | null, cb: () => void) => {
-    const v = viewer as any;
+  const waitForLoad = useCallback((cb: () => void) => {
+    const v = viewerRef.current as any;
     if (!v) return;
     if (v.model) { cb(); return; }
     const onLoad = () => { v.removeEventListener('load', onLoad); cb(); };
@@ -143,11 +135,9 @@ export const LetterViewer3D = () => {
     lerpTRef.current    = 0;
 
     if (mode === 'classic') {
-      waitForLoad(viewerRef.current, applyClassic);
-      waitForLoad(bloomRef.current, applyClassic);
+      waitForLoad(applyClassic);
     } else {
-      waitForLoad(viewerRef.current, () => startCycle(mode));
-      waitForLoad(bloomRef.current, () => {});
+      waitForLoad(() => startCycle(mode));
     }
 
     return () => { stopCycle(); };
@@ -155,32 +145,19 @@ export const LetterViewer3D = () => {
 
   // Initial load
   useEffect(() => {
-    waitForLoad(viewerRef.current, () => { if (modeRef.current === 'classic') applyClassic(); });
-    waitForLoad(bloomRef.current,  () => { if (modeRef.current === 'classic') applyClassic(); });
+    waitForLoad(() => { if (modeRef.current === 'classic') applyClassic(); });
   }, [applyClassic, waitForLoad]);
 
   // ── Camera ────────────────────────────────────────────────────────────────
   const handleCameraChange = useCallback((e: Event) => {
     const ce = e as CustomEvent;
-    if (ce.detail?.source === 'user-interaction' && !cameraStoppedRef.current) {
-      cameraStoppedRef.current = true;
+    if (ce.detail?.source === 'user-interaction') {
       setAutoRotate(false);
-    }
-    // Sync bloom viewer camera to main viewer
-    const viewer = viewerRef.current as any;
-    if (viewer) {
-      try {
-        const orbit = viewer.getCameraOrbit?.();
-        if (orbit && bloomRef.current) {
-          (bloomRef.current as any).cameraOrbit = `${orbit.theta}rad ${orbit.phi}rad ${orbit.radius}m`;
-        }
-      } catch (_) {}
     }
   }, []);
 
   const handleModeSwitch = (newMode: StyleMode) => {
     if (newMode === mode) return;
-    // Reset camera to front
     const frontOrbit = '0deg 75deg 105%';
     setCameraOrbit(frontOrbit);
     const viewer = viewerRef.current as any;
@@ -199,18 +176,6 @@ export const LetterViewer3D = () => {
   const activeBtn   = 'bg-[#2a7f8f] border-[#2a7f8f] text-white shadow-md';
   const inactiveBtn = 'bg-white border-[#2a7f8f] text-[#2a7f8f] hover:bg-[#2a7f8f]/10';
 
-  // Common model-viewer props
-  const mvProps = {
-    src: currentSrc,
-    alt: '3D preview of a marquee letter E',
-    'shadow-intensity': '0.28',
-    exposure: '1.25',
-    'tone-mapping': 'commerce',
-    'environment-image': 'neutral',
-    'skybox-height': '0m',
-    'camera-orbit': cameraOrbit,
-  };
-
   return (
     <section className="py-10 px-4" style={{ backgroundColor: '#f5f0e8' }}>
       <div className="max-w-2xl mx-auto text-center">
@@ -221,46 +186,30 @@ export const LetterViewer3D = () => {
           Drag to rotate &bull; Pinch to zoom &bull; Switch styles below
         </p>
 
-        {/* Viewer stack: bloom layer behind, main viewer on top */}
+        {/* Single clean model-viewer — no bloom overlay */}
         <div
           className="rounded-2xl overflow-hidden mx-auto"
           style={{
-            position: 'relative',
             background: 'linear-gradient(160deg, #c8bfaa 0%, #b8ae98 100%)',
             boxShadow: '0 4px 24px rgba(0,0,0,0.18)',
             maxWidth: 480,
             height: 340,
           }}
         >
-          {/* Bloom layer: same model, heavily blurred, screen-blended behind main */}
-          {/* @ts-ignore */}
-          <model-viewer
-            ref={bloomRef}
-            {...mvProps}
-            style={{
-              position: 'absolute',
-              top: 0, left: 0,
-              width: '100%', height: '100%',
-              filter: 'blur(18px) saturate(2)',
-              opacity: 0.7,
-              mixBlendMode: 'screen',
-              pointerEvents: 'none',
-            } as React.CSSProperties}
-          />
-          {/* Main viewer: sharp, interactive, on top */}
           {/* @ts-ignore */}
           <model-viewer
             ref={viewerRef}
-            {...mvProps}
+            src={currentSrc}
+            alt="3D preview of a marquee letter E"
+            shadow-intensity="0.28"
+            exposure="1.25"
+            tone-mapping="commerce"
+            environment-image="neutral"
+            skybox-height="0m"
+            camera-orbit={cameraOrbit}
             auto-rotate={autoRotate ? '' : undefined}
             camera-controls=""
-            style={{
-              position: 'absolute',
-              top: 0, left: 0,
-              width: '100%', height: '100%',
-              display: 'block',
-              background: 'transparent',
-            }}
+            style={{ width: '100%', height: '100%', display: 'block', background: 'transparent' }}
             onCameraChange={handleCameraChange}
           />
         </div>
