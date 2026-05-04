@@ -75,7 +75,7 @@ export const LetterViewer3D = () => {
     const mat = viewer.model.materials.find((m: any) => m.name === 'M_E_Bulb');
     if (!mat) return;
     mat.pbrMetallicRoughness.setBaseColorFactor([1, 1, 1, 1]);
-    mat.setEmissiveFactor([1, 0.75, 0.25]);
+    mat.setEmissiveFactor([1, 0.92, 0.72]);
     try {
       if (mat.extensions?.KHR_materials_emissive_strength !== undefined) {
         mat.extensions.KHR_materials_emissive_strength.emissiveStrength = 5;
