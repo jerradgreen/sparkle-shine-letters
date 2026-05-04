@@ -201,9 +201,9 @@ export const LetterViewer3D = () => {
             ref={viewerRef}
             src={currentSrc}
             alt="3D preview of a marquee letter E"
-            shadow-intensity="0.28"
-            exposure="1.25"
-            tone-mapping="commerce"
+            shadow-intensity="0.35"
+            exposure="0.85"
+            tone-mapping="aces"
             environment-image="neutral"
             skybox-height="0m"
             camera-orbit={cameraOrbit}
