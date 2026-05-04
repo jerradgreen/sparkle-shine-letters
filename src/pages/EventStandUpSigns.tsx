@@ -27,21 +27,21 @@ const EventStandUpSigns = () => {
       {/* 3D Letter Viewer — placed high so visitors see style options immediately */}
       <LetterViewer3D />
 
-      {/* Hero Action Button - Mobile Only */}
-      <section className="py-8 bg-white md:hidden">
+      {/* CTA after 3D viewer — drive visitors straight to the visualizer */}
+      <section className="py-8 bg-white">
         <div className="container mx-auto px-4 text-center">
-          <Button 
-            size="lg" 
-            className="bg-accent text-accent-foreground hover:bg-accent/90 text-sm px-6 py-4"
+          <Button
+            size="lg"
+            className="bg-accent text-accent-foreground hover:bg-accent/90 text-base md:text-lg px-8 py-6"
             onClick={() => {
-                const visualizer = document.querySelector('.marquee-visualizer');
-                if (visualizer) {
-                  visualizer.scrollIntoView({ behavior: 'smooth' });
-                }
-              }}
-            >
-              Build Your Set & Get a Quote
-            </Button>
+              const visualizer = document.querySelector('.marquee-visualizer');
+              if (visualizer) {
+                visualizer.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}
+          >
+            Spell Out Your Words & Get a Quote
+          </Button>
         </div>
       </section>
 
