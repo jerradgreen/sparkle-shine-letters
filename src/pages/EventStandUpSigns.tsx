@@ -23,7 +23,10 @@ const EventStandUpSigns = () => {
     >
       <ShopifyHeader />
       <MarqueeHeroSection />
-      
+
+      {/* 3D Letter Viewer — placed high so visitors see style options immediately */}
+      <LetterViewer3D />
+
       {/* Hero Action Button - Mobile Only */}
       <section className="py-8 bg-white md:hidden">
         <div className="container mx-auto px-4 text-center">
@@ -90,9 +93,6 @@ const EventStandUpSigns = () => {
           </Button>
         </div>
       </section>
-
-      {/* 3D Letter Viewer */}
-      <LetterViewer3D />
 
       {/* What to Buy — Inventory Guidance */}
       <section className="py-8 px-4 bg-muted/20">
