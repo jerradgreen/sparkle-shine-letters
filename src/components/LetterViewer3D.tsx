@@ -1,8 +1,11 @@
 import { useEffect, useRef, useState, useCallback } from 'react';
 
-const BULBS_GLB = '/E_Letter_bulbs1.glb';
-const NEON_GLB  = '/E_Letter_neon1.glb';
+// Three separate baked/emissive GLB models
+const CLASSIC_GLB = '/manus-storage/E_Letter_classic_white_9afe2940.glb';
+const BULBS_GLB   = '/manus-storage/E_Letter_color_bulbs_94479b45.glb';
+const NEON_GLB    = '/manus-storage/E_Letter_neon_94a6aa89.glb';
 
+// Color cycle: red → pink → orange → yellow → green → teal → blue → purple
 const COLOR_CYCLE: [number, number, number][] = [
   [1,   0,   0  ],
   [1,   0,   0.6],
@@ -15,6 +18,7 @@ const COLOR_CYCLE: [number, number, number][] = [
 ];
 
 const EMISSIVE_STRENGTH = 8;
+const BODY_EMISSIVE: [number, number, number] = [0.05, 0.05, 0.05]; // 5% white tint for color bounce
 
 type StyleMode = 'classic' | 'color' | 'neon';
 
@@ -41,18 +45,21 @@ declare global {
 }
 
 export const LetterViewer3D = () => {
-  const viewerRef   = useRef<HTMLElement>(null);
-  const cycleRafRef = useRef<number | null>(null);
-  const [mode, setMode]       = useState<StyleMode>('classic');
+  const viewerRef    = useRef<HTMLElement>(null);
+  const cycleRafRef  = useRef<number | null>(null);
+  const [mode, setMode]           = useState<StyleMode>('classic');
   const [autoRotate, setAutoRotate] = useState(true);
-  const colorIdxRef = useRef(0);
-  const lerpTRef    = useRef(0);
-  const modeRef     = useRef<StyleMode>('classic');
+  const colorIdxRef  = useRef(0);
+  const lerpTRef     = useRef(0);
+  const modeRef      = useRef<StyleMode>('classic');
   const [cameraOrbit, setCameraOrbit] = useState('0deg 75deg 105%');
 
   useEffect(() => { modeRef.current = mode; }, [mode]);
 
-  const currentSrc = mode === 'neon' ? NEON_GLB : BULBS_GLB;
+  // Each mode loads its own dedicated GLB
+  const currentSrc = mode === 'classic' ? CLASSIC_GLB
+                   : mode === 'neon'    ? NEON_GLB
+                   : BULBS_GLB;
 
   // ── Material helpers ──────────────────────────────────────────────────────
   const setEmissive = useCallback((matName: string, rgb: [number, number, number], strength: number) => {
@@ -69,18 +76,13 @@ export const LetterViewer3D = () => {
     } catch (_) {}
   }, []);
 
-  const applyClassic = useCallback(() => {
+  // Apply 5% white emissive tint to letter body for color bounce
+  const applyBodyTint = useCallback((bodyMatName: string) => {
     const viewer = viewerRef.current as any;
     if (!viewer?.model) return;
-    const mat = viewer.model.materials.find((m: any) => m.name === 'M_E_Bulb');
+    const mat = viewer.model.materials.find((m: any) => m.name === bodyMatName);
     if (!mat) return;
-    mat.pbrMetallicRoughness.setBaseColorFactor([1, 1, 1, 1]);
-    mat.setEmissiveFactor([1, 0.92, 0.72]);
-    try {
-      if (mat.extensions?.KHR_materials_emissive_strength !== undefined) {
-        mat.extensions.KHR_materials_emissive_strength.emissiveStrength = 5;
-      }
-    } catch (_) {}
+    try { mat.setEmissiveFactor(BODY_EMISSIVE); } catch (_) {}
   }, []);
 
   // ── Color cycling ─────────────────────────────────────────────────────────
@@ -92,7 +94,8 @@ export const LetterViewer3D = () => {
     stopCycle();
     colorIdxRef.current = 0;
     lerpTRef.current    = 0;
-    const matName = targetMode === 'neon' ? 'M_E_Neon' : 'M_E_Bulb';
+    const bulbMat = targetMode === 'neon' ? 'M_E_Neon' : 'M_E_Bulb';
+    const bodyMat = targetMode === 'neon' ? 'M_E_letter_Neon' : 'M_E_letter';
     const STEP_MS = 900;
     let last = performance.now();
 
@@ -113,7 +116,14 @@ export const LetterViewer3D = () => {
         from[1] + (to[1] - from[1]) * t,
         from[2] + (to[2] - from[2]) * t,
       ];
-      setEmissive(matName, rgb, EMISSIVE_STRENGTH);
+      setEmissive(bulbMat, rgb, EMISSIVE_STRENGTH);
+      // Subtle body tint follows the color for a bounce-light feel
+      const bodyRgb: [number, number, number] = [rgb[0] * 0.05, rgb[1] * 0.05, rgb[2] * 0.05];
+      const viewer = viewerRef.current as any;
+      if (viewer?.model) {
+        const mat = viewer.model.materials.find((m: any) => m.name === bodyMat);
+        if (mat) { try { mat.setEmissiveFactor(bodyRgb); } catch (_) {} }
+      }
       cycleRafRef.current = requestAnimationFrame(tick);
     };
 
@@ -135,18 +145,15 @@ export const LetterViewer3D = () => {
     lerpTRef.current    = 0;
 
     if (mode === 'classic') {
-      waitForLoad(applyClassic);
+      // Classic White uses a fully baked GLB — no JS material overrides needed
+      // Just ensure body tint is neutral
+      waitForLoad(() => applyBodyTint('M_E_letter'));
     } else {
       waitForLoad(() => startCycle(mode));
     }
 
     return () => { stopCycle(); };
-  }, [mode, applyClassic, startCycle, stopCycle, waitForLoad]);
-
-  // Initial load
-  useEffect(() => {
-    waitForLoad(() => { if (modeRef.current === 'classic') applyClassic(); });
-  }, [applyClassic, waitForLoad]);
+  }, [mode, applyBodyTint, startCycle, stopCycle, waitForLoad]);
 
   // ── Camera ────────────────────────────────────────────────────────────────
   const handleCameraChange = useCallback((e: Event) => {
@@ -186,7 +193,7 @@ export const LetterViewer3D = () => {
           Drag to rotate &bull; Pinch to zoom &bull; Switch styles below
         </p>
 
-        {/* Single clean model-viewer — no bloom overlay */}
+        {/* Model viewer */}
         <div
           className="rounded-2xl overflow-hidden mx-auto"
           style={{
