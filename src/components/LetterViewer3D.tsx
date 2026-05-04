@@ -204,7 +204,7 @@ export const LetterViewer3D = () => {
             shadow-intensity="0.35"
             exposure="1.0"
             tone-mapping="aces"
-            environment-image="neutral"
+            environment-image="legacy"
             skybox-height="0m"
             camera-orbit={cameraOrbit}
             auto-rotate={autoRotate ? '' : undefined}
