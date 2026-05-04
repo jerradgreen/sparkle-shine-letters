@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState, useCallback } from 'react';
 
 // Three separate baked/emissive GLB models
-const CLASSIC_GLB = '/E_Letter_bulbs_bake_light_4.glb';
+const CLASSIC_GLB = '/E_Letter_bulbs5.glb';
 const BULBS_GLB   = '/E_Letter_bulbs_7.glb';
 const NEON_GLB    = '/E_Letter_neon_colorchange.glb';
 
