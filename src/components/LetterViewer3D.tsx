@@ -241,7 +241,7 @@ export const LetterViewer3D = () => {
             className={`${buttonBase} ${mode === 'classic' ? activeBtn : inactiveBtn}`}
             onClick={() => handleModeSwitch('classic')}
           >
-            Classic White
+            Classic - Standard Bulbs
           </button>
           <button
             className={`${buttonBase} ${mode === 'color' ? activeBtn : inactiveBtn}`}
