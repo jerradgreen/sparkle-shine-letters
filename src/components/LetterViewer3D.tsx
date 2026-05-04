@@ -229,7 +229,7 @@ export const LetterViewer3D = () => {
             Color-Changing Bulbs
             <span className="ml-2 text-xs font-bold px-2 py-0.5 rounded-full"
               style={{ background: mode === 'color' ? 'rgba(255,255,255,0.25)' : '#2a7f8f', color: '#fff' }}>
-              +$100/letter
+              Upgrade
             </span>
           </button>
           <button
@@ -239,7 +239,7 @@ export const LetterViewer3D = () => {
             LED Neon
             <span className="ml-2 text-xs font-bold px-2 py-0.5 rounded-full"
               style={{ background: mode === 'neon' ? 'rgba(255,255,255,0.25)' : '#2a7f8f', color: '#fff' }}>
-              +$100/letter
+              Upgrade
             </span>
           </button>
         </div>
