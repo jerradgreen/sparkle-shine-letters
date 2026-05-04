@@ -151,12 +151,12 @@ export const LetterViewer3D = () => {
         if (!viewer?.model) return;
         const mat = viewer.model.materials.find((m: any) => m.name === 'M_E_Bulb');
         if (mat) {
-          // Warm amber-white: slightly more amber than pure white to stand out from the metal
-          mat.setEmissiveFactor([1, 0.82, 0.45]);
-          mat.pbrMetallicRoughness.setBaseColorFactor([1, 0.92, 0.65, 1]);
+          // Warm tungsten amber: deep warm tone so bulbs pop against white metal
+          mat.setEmissiveFactor([1, 0.65, 0.25]);
+          mat.pbrMetallicRoughness.setBaseColorFactor([1, 0.78, 0.4, 1]);
           try {
             if (mat.extensions?.KHR_materials_emissive_strength !== undefined) {
-              mat.extensions.KHR_materials_emissive_strength.emissiveStrength = 35;
+              mat.extensions.KHR_materials_emissive_strength.emissiveStrength = 80;
             }
           } catch (_) {}
         }
