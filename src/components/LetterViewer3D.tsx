@@ -134,8 +134,11 @@ export const LetterViewer3D = () => {
   const waitForLoad = useCallback((cb: () => void) => {
     const v = viewerRef.current as any;
     if (!v) return;
-    if (v.model) { cb(); return; }
-    const onLoad = () => { v.removeEventListener('load', onLoad); cb(); };
+    const run = () => {
+      // Defer one frame so model-viewer finishes swapping materials
+      requestAnimationFrame(() => cb());
+    };
+    const onLoad = () => { v.removeEventListener('load', onLoad); run(); };
     v.addEventListener('load', onLoad);
   }, []);
 
