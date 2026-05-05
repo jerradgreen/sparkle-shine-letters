@@ -194,6 +194,8 @@ const RentalInventory = () => {
         </div>
       </section>
 
+      <LetterViewer3D />
+
       {/* Feature Cards */}
       <section className="py-8 px-4">
         <div className="max-w-6xl mx-auto">
