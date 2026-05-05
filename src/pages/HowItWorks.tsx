@@ -47,7 +47,7 @@ const HowItWorks = () => {
                 <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-lg">2</div>
                 <div>
                   <h3 className="text-xl font-semibold text-foreground mb-2">Consultation & Customization</h3>
-                  <p className="text-muted-foreground">We'll schedule a call to discuss your market, help you choose the right starter package (like our popular 45-letter set), and answer any questions about running the business.</p>
+                  <p className="text-muted-foreground">We'll help you choose the right inventory package that balances budget and income potential and answer any questions about the business.</p>
                 </div>
               </div>
               

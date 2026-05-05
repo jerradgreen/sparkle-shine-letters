@@ -29,11 +29,6 @@ const articles = [
     description: "A practical breakdown of per-letter rates, package pricing strategies, delivery fees, and how to maximize revenue in your marquee rental business.",
     href: "/blog/marquee-letter-rental-pricing-guide",
   },
-  {
-    title: "Custom Outdoor Marquee Signs: A Guide for Businesses and Storefronts",
-    description: "How to design, build, and install custom outdoor marquee signs for restaurants, boutiques, and commercial spaces. Covers materials, weatherproofing, and design options.",
-    href: "/blog/custom-outdoor-marquee-signs-guide",
-  },
 ];
 
 const BlogIndex = () => {

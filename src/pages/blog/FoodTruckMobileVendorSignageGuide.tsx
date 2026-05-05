@@ -68,10 +68,6 @@ const FoodTruckMobileVendorSignageGuide = () => {
             If your brand relies heavily on a specific logo or mascot rather than just text, a <Link to="/3d-logos" className="text-primary hover:underline font-semibold">custom 3D layered logo sign</Link> is the way to go. We build these by stacking laser-cut steel, adding custom paint finishes, and integrating backlighting or halo-lighting. These are perfect for mounting directly to the side of the truck near the ordering window.
           </p>
 
-          <h3 className="text-lg font-semibold text-foreground mt-6 mb-2">3. Illuminated Menu Boards and Window Signs</h3>
-          <p className="text-muted-foreground leading-relaxed mb-4">
-            Once you draw them in, you have to close the sale. Smaller marquee signs or illuminated light boxes placed right at eye level near the service window help highlight daily specials or your signature dish.
-          </p>
 
           <h2 className="text-xl font-semibold text-foreground mt-8 mb-3">Important Considerations for Mobile Signage</h2>
 

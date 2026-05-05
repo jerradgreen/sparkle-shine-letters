@@ -43,13 +43,13 @@ const MarqueeLetterRentalPricingGuide = () => {
           </p>
 
           <p className="text-muted-foreground leading-relaxed mb-4">
-            For standard 36-inch or 48-inch commercial-grade letters, the national average rental rate is typically between <strong>$50 and $100 per letter</strong>.
+            For standard 36-inch or 48-inch commercial-grade letters, the national average rental rate is typically between <strong>$70 and $125+ per letter</strong>.
           </p>
 
           <ul className="text-muted-foreground space-y-2 list-disc list-inside mb-4">
-            <li><strong>Low-End Markets ($40 - $55 per letter):</strong> Smaller cities or highly saturated markets where competition drives prices down. We do not recommend competing on price alone.</li>
-            <li><strong>Average Markets ($60 - $75 per letter):</strong> The sweet spot for most mid-sized cities and suburbs. At $65 a letter, a simple "LOVE" sign rents for $260.</li>
-            <li><strong>Premium Markets ($80 - $125+ per letter):</strong> Major metropolitan areas (New York, LA, Miami), high-end wedding markets, and corporate events. If you are servicing luxury venues, your pricing must reflect premium service.</li>
+            <li><strong>Low-End Markets ($70 - $80 per letter):</strong> Smaller cities or highly saturated markets where competition drives prices down. We do not recommend competing on price alone.</li>
+            <li><strong>Average Markets ($80 - $100 per letter):</strong> The sweet spot for most mid-sized cities and suburbs. At $90 a letter, a simple "LOVE" sign rents for $360.</li>
+            <li><strong>Premium Markets ($100 - $125+ per letter):</strong> Major metropolitan areas (New York, LA, Miami), high-end wedding markets, and corporate events. If you are servicing luxury venues, your pricing must reflect premium service.</li>
           </ul>
 
           <p className="text-muted-foreground leading-relaxed mb-4">
@@ -65,7 +65,7 @@ const MarqueeLetterRentalPricingGuide = () => {
           <h3 className="text-lg font-semibold text-foreground mt-6 mb-2">Common Rental Packages</h3>
           
           <p className="text-muted-foreground leading-relaxed mb-4">
-            <strong>The Wedding Package:</strong> "LOVE" or "MR & MRS" paired with a custom neon sign or a balloon garland. Instead of renting four letters for $260, you rent the entire backdrop experience for $600 to $800.
+            <strong>The Wedding Package:</strong> "LOVE" or "MR & MRS" paired with a custom neon sign or a balloon garland. Instead of renting four letters for $360, you rent the entire backdrop experience for $700 to $900.
           </p>
 
           <p className="text-muted-foreground leading-relaxed mb-4">
