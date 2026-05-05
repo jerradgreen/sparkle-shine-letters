@@ -223,7 +223,7 @@ export const LetterViewer3D = () => {
             src={currentSrc}
             alt="3D preview of a marquee letter E"
             shadow-intensity="0.35"
-            exposure="1.35"
+            exposure={mode === 'classic' ? '0.85' : '1.35'}
             tone-mapping="aces"
             environment-image="legacy"
             skybox-height="0m"
@@ -232,7 +232,6 @@ export const LetterViewer3D = () => {
             camera-controls=""
             style={{ width: '100%', height: '100%', display: 'block', background: 'transparent' }}
             onCameraChange={handleCameraChange}
-            exposure={mode === 'classic' ? '1.0' : '1.35'}
           />
         </div>
 
