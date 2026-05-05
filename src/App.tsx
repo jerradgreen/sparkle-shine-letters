@@ -44,7 +44,7 @@ import ThirtySixVsFortyEightInchMarqueeLetters from "./pages/blog/ThirtySixVsFor
 import UniversitiesTeamsMarqueeLetters from "./pages/blog/UniversitiesTeamsMarqueeLetters";
 import FoodTruckMobileVendorSignageGuide from "./pages/blog/FoodTruckMobileVendorSignageGuide";
 import MarqueeLetterRentalPricingGuide from "./pages/blog/MarqueeLetterRentalPricingGuide";
-import CustomOutdoorMarqueeSignsGuide from "./pages/blog/CustomOutdoorMarqueeSignsGuide";
+
 import FAQ from "./pages/FAQ";
 import StartMarqueeRentalBusiness from "./pages/StartMarqueeRentalBusiness";
 import WeddingMarqueeSigns from "./pages/WeddingMarqueeSigns";
@@ -96,7 +96,7 @@ const RouterContent = () => {
         <Route path="/blog/universities-teams-marquee-letters-branding" element={<UniversitiesTeamsMarqueeLetters />} />
         <Route path="/blog/food-truck-mobile-vendor-signage-guide" element={<FoodTruckMobileVendorSignageGuide />} />
         <Route path="/blog/marquee-letter-rental-pricing-guide" element={<MarqueeLetterRentalPricingGuide />} />
-        <Route path="/blog/custom-outdoor-marquee-signs-guide" element={<CustomOutdoorMarqueeSignsGuide />} />
+        
         <Route path="/faq" element={<FAQ />} />
         <Route path="/start-marquee-rental-business" element={<StartMarqueeRentalBusiness />} />
         <Route path="/wedding-marquee-signs" element={<WeddingMarqueeSigns />} />
