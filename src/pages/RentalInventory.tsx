@@ -11,6 +11,7 @@ import PerformantImage from "@/components/PerformantImage";
 import { Helmet } from "react-helmet-async";
 import { useNavigate } from "react-router-dom";
 import { RentalGuideDownloadSection } from "@/components/RentalGuideDownloadSection";
+import { LetterViewer3D } from "@/components/LetterViewer3D";
 
 // Locally hosted optimized images for faster LCP
 const heroImage = "/images/hero-rental-setup.webp";
@@ -192,6 +193,8 @@ const RentalInventory = () => {
           </p>
         </div>
       </section>
+
+      <LetterViewer3D />
 
       {/* Feature Cards */}
       <section className="py-8 px-4">
