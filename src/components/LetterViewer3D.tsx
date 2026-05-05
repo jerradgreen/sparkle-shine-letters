@@ -232,6 +232,7 @@ export const LetterViewer3D = () => {
             camera-controls=""
             style={{ width: '100%', height: '100%', display: 'block', background: 'transparent' }}
             onCameraChange={handleCameraChange}
+            exposure={mode === 'classic' ? '1.0' : '1.35'}
           />
         </div>
 
