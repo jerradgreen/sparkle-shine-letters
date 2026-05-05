@@ -14,11 +14,11 @@ const faqs = [
   },
   {
     question: "How much does a marquee letter rental business package cost?",
-    answer: "Our rental inventory packages start at several thousand dollars and can range up to $35,000 or more depending on the size and scope of the inventory. Because every business has different goals and market sizes, we gate pricing behind a quote request so we can build the right package for your specific situation. Fill out our quote form and we will send you full pricing and package details."
+    answer: "Our rental inventory packages start at $12,500 for the smallest package and can range up to $35,000 or more depending on the size and scope of the inventory. Because every business has different goals and market sizes, we gate pricing behind a quote request so we can build the right package for your specific situation. Fill out our quote form and we will send you full pricing and package details."
   },
   {
     question: "Do you ship nationwide?",
-    answer: "Yes. We ship marquee letters and signs across the United States. Larger items like 48-inch letters and full rental inventory packages ship via freight. Smaller items ship via standard carriers. Lead times vary by product — custom fabricated items typically take 4 to 6 weeks."
+    answer: "Yes. We ship marquee letters and signs across the United States. Larger items like 48-inch letters and full rental inventory packages ship via freight. Smaller items ship via standard carriers. Lead times vary by product — custom fabricated items typically take 4-8 weeks and rental packages approx 14 weeks."
   },
   {
     question: "Can you make custom shapes and logos?",
@@ -26,11 +26,11 @@ const faqs = [
   },
   {
     question: "What are wall-hanging marquee signs used for?",
-    answer: "Wall-hanging marquee signs are permanent or semi-permanent installations designed for businesses, restaurants, hotels, event venues, and residential spaces. They are mounted directly to a wall and can be wired for power or run on battery packs. Common uses include restaurant branding, hotel lobby signage, bar and nightclub decor, and home entertainment rooms."
+    answer: "Wall-hanging marquee signs are permanent or semi-permanent installations designed for businesses, restaurants, hotels, event venues, and residential spaces. They are mounted directly to a wall and wired for power. Common uses include restaurant branding, hotel lobby signage, bar and nightclub decor, and home entertainment rooms."
   },
   {
     question: "Are your signs suitable for outdoor use?",
-    answer: "Some of our products are designed for outdoor use and some are not. Our commercial wall-hanging signs and 3D logos can be built for exterior installation with weather-resistant materials and exterior-rated electrical components. Event stand-up letters are designed for indoor use. If you need outdoor signage, mention that in your quote request and we will spec the right materials."
+    answer: "Yes, our signs can be used indoors or outdoors. If using custom signs outdoors they will continue to rust and patina over time, but that's the look most people are going for. If you want to keep them looking new, we suggest a powder coating upgrade. The event stand-up letters and rental inventory package letters are powder coated steel and can be used indoors or out, but we do not recommend leaving them plugged in during rainy weather."
   },
   {
     question: "What are mobile vendor signs?",
