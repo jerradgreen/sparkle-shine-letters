@@ -241,6 +241,7 @@ export const LetterViewer3D = () => {
             camera-controls=""
             style={{ width: '100%', height: '100%', display: 'block', background: 'transparent' }}
             onCameraChange={handleCameraChange}
+            onLoad={handleModelLoad}
           />
         </div>
 
