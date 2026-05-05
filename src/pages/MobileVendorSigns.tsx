@@ -49,8 +49,8 @@ const MobileVendorSigns = () => {
             <div className="mb-4">
               <PerformantImage 
                 src={foodTruckHero} 
-                alt="Bar Monte food truck with illuminated marquee sign" 
-                className="rounded-lg shadow-2xl w-full h-64 object-cover"
+                alt="Bar Monte food truck with custom illuminated marquee sign mounted on the roof" 
+                className="rounded-lg shadow-2xl w-full h-auto object-contain bg-muted"
                 priority={true}
                 fetchPriority="high"
                 sizes="100vw"
@@ -113,8 +113,8 @@ const MobileVendorSigns = () => {
             <div className="relative">
               <PerformantImage 
                 src={foodTruckHero} 
-                alt="Bar Monte food truck with illuminated marquee sign" 
-                className="rounded-lg shadow-2xl w-full h-auto object-cover"
+                alt="Bar Monte food truck with custom illuminated marquee sign mounted on the roof" 
+                className="rounded-lg shadow-2xl w-full h-auto object-contain bg-muted"
                 loading="lazy"
                 fetchPriority="low"
                 sizes="50vw"
