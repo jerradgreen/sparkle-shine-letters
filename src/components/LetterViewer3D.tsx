@@ -177,19 +177,28 @@ export const LetterViewer3D = () => {
     }
   }, []);
 
-  const handleModeSwitch = (newMode: StyleMode) => {
-    if (newMode === mode) return;
+  const resetCameraToFront = () => {
     const frontOrbit = '0deg 75deg 105%';
     setCameraOrbit(frontOrbit);
     const viewer = viewerRef.current as any;
-    if (viewer) {
-      try {
-        if (typeof viewer.resetTurntableRotation === 'function') viewer.resetTurntableRotation(0);
-        viewer.setAttribute('camera-orbit', frontOrbit);
-        viewer.cameraOrbit = frontOrbit;
-      } catch (_) {}
-    }
+    if (!viewer) return;
+    try {
+      if (typeof viewer.resetTurntableRotation === 'function') viewer.resetTurntableRotation(0);
+      viewer.setAttribute('camera-orbit', frontOrbit);
+      viewer.cameraOrbit = frontOrbit;
+      if (typeof viewer.jumpCameraToGoal === 'function') viewer.jumpCameraToGoal();
+    } catch (_) {}
+  };
+
+  const handleModeSwitch = (newMode: StyleMode) => {
+    if (newMode === mode) return;
+    setAutoRotate(true);
+    resetCameraToFront();
     setMode(newMode);
+  };
+
+  const handleModelLoad = () => {
+    resetCameraToFront();
   };
 
   // ── Styles ────────────────────────────────────────────────────────────────
@@ -232,6 +241,7 @@ export const LetterViewer3D = () => {
             camera-controls=""
             style={{ width: '100%', height: '100%', display: 'block', background: 'transparent' }}
             onCameraChange={handleCameraChange}
+            onLoad={handleModelLoad}
           />
         </div>
 
