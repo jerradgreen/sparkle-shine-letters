@@ -132,7 +132,7 @@ const RoiCalculator = () => {
 
   // Package selection
   const [pkg, setPkg] = useState<"pro" | "elite">("elite");
-  const packageCost = pkg === "elite" ? 34800 : 19800;
+  const packageCost = pkg === "elite" ? 34800 : 25200;
 
   // Input state
   const [pricePerLetter, setPricePerLetter] = useState(95);
@@ -223,7 +223,7 @@ const RoiCalculator = () => {
                         <span className="font-bold text-foreground">{p === "pro" ? "Pro Package" : "Elite Package"}</span>
                         {pkg === p && <Badge variant="default">Selected</Badge>}
                       </div>
-                      <p className="text-xl font-bold text-primary">{p === "pro" ? "$19,800" : "$34,800"}</p>
+                      <p className="text-xl font-bold text-primary">{p === "pro" ? "$25,200" : "$34,800"}</p>
                       <p className="text-sm text-muted-foreground mt-1">
                         {p === "pro" ? "66 pieces · 2 setups/weekend" : "112 pieces · 3+ setups/weekend"}
                       </p>
@@ -327,7 +327,7 @@ const RoiCalculator = () => {
               <StatCard
                 label="Year 1 Profit"
                 value={formatCurrency(animYear1)}
-                sub={`After ${pkg === "pro" ? "$19.8K" : "$34.8K"} investment`}
+                sub={`After ${pkg === "pro" ? "$25.2K" : "$34.8K"} investment`}
                 highlight
                 icon={<DollarSign className="h-5 w-5" />}
               />
