@@ -223,7 +223,7 @@ const RoiCalculator = () => {
                         <span className="font-bold text-foreground">{p === "pro" ? "Pro Package" : "Elite Package"}</span>
                         {pkg === p && <Badge variant="default">Selected</Badge>}
                       </div>
-                      <p className="text-xl font-bold text-primary">{p === "pro" ? "$19,800" : "$34,800"}</p>
+                      <p className="text-xl font-bold text-primary">{p === "pro" ? "$25,200" : "$34,800"}</p>
                       <p className="text-sm text-muted-foreground mt-1">
                         {p === "pro" ? "66 pieces · 2 setups/weekend" : "112 pieces · 3+ setups/weekend"}
                       </p>
