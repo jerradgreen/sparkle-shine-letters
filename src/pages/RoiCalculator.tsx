@@ -327,7 +327,7 @@ const RoiCalculator = () => {
               <StatCard
                 label="Year 1 Profit"
                 value={formatCurrency(animYear1)}
-                sub={`After ${pkg === "pro" ? "$19.8K" : "$34.8K"} investment`}
+                sub={`After ${pkg === "pro" ? "$25.2K" : "$34.8K"} investment`}
                 highlight
                 icon={<DollarSign className="h-5 w-5" />}
               />
