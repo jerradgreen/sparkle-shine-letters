@@ -7,8 +7,20 @@ const WhySchoolsBuyMarqueeLetters = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Why Schools Buy Commercial Marquee Letters for Events | Vintage Marquee Lights</title>
-        <meta name="description" content="How high schools and middle schools use commercial marquee letters for pep rallies, graduations, fundraisers, and school events. Learn why schools invest in reusable marquee signage." />
+        <title>Why Schools Buy Commercial Marquee Letters | VML</title>
+        <meta name="description" content="How schools use commercial marquee letters for pep rallies, graduations, fundraisers, and events — and why reusable marquee signage pays off." />
+        <link rel="canonical" href="https://inventory.vintagemarqueelights.com/blog/why-schools-buy-commercial-marquee-letters" />
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content="Why Schools Buy Commercial Marquee Letters | VML" />
+        <meta property="og:description" content="How schools use commercial marquee letters for pep rallies, graduations, fundraisers, and events — and why reusable marquee signage pays off." />
+        <meta property="og:url" content="https://inventory.vintagemarqueelights.com/blog/why-schools-buy-commercial-marquee-letters" />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "Why Schools Buy Commercial Marquee Letters",
+          "url": "https://inventory.vintagemarqueelights.com/blog/why-schools-buy-commercial-marquee-letters",
+          "publisher": { "@type": "Organization", "name": "Vintage Marquee Lights" }
+        })}</script>
       </Helmet>
 
       <Navigation />
