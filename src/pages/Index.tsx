@@ -106,7 +106,7 @@ const Index = () => {
       <ShopifyHeader />
 
       {/* Main Content */}
-      <div className="container mx-auto px-6 py-4">
+      <main className="container mx-auto px-6 py-4">
         {/* Hero Section */}
         <div className="text-center mb-4">
           <h1 className="text-3xl md:text-4xl font-bold mb-3 text-foreground">
@@ -289,7 +289,7 @@ const Index = () => {
             </Link>, from startup costs to scaling your inventory.
           </p>
         </div>
-      </div>
+      </main>
       
       <Footer />
     </div>
