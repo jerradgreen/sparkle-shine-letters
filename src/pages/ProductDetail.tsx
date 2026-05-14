@@ -93,9 +93,14 @@ const ProductDetail = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>{product.title} - Vintage Marquee Lights</title>
-        <meta name="description" content={product.description || `Purchase ${product.title} - commercial-grade marquee letter with LED lighting.`} />
-        <meta name="keywords" content="36 inch marquee letter, event letter, LED marquee sign, vintage marquee light" />
+        <title>{`${product.title} | Vintage Marquee Lights`.slice(0, 60)}</title>
+        <meta name="description" content={(product.description || `Buy ${product.title} — commercial-grade 36" marquee letter with LED lighting, built to own and use year after year.`).slice(0, 158)} />
+        <link rel="canonical" href={`https://inventory.vintagemarqueelights.com/product/${product.handle}`} />
+        <meta property="og:type" content="product" />
+        <meta property="og:title" content={`${product.title} | Vintage Marquee Lights`} />
+        <meta property="og:description" content={(product.description || `Commercial-grade ${product.title} marquee letter built to own.`).slice(0, 158)} />
+        <meta property="og:url" content={`https://inventory.vintagemarqueelights.com/product/${product.handle}`} />
+        {image?.url && <meta property="og:image" content={image.url} />}
       </Helmet>
       <Navigation />
       
@@ -105,8 +110,6 @@ const ProductDetail = () => {
             {/* Breadcrumb */}
             <nav className="flex items-center gap-2 text-sm text-muted-foreground mb-8">
               <Link to="/" className="hover:text-foreground">Home</Link>
-              <ChevronRight className="h-4 w-4" />
-              <Link to="/shop/36-inch-letters" className="hover:text-foreground">Shop Letters</Link>
               <ChevronRight className="h-4 w-4" />
               <span className="text-foreground">{product.title}</span>
             </nav>

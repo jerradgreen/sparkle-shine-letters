@@ -29,7 +29,7 @@ import RentalBusinessStartupCost from "./pages/RentalBusinessStartupCost";
 import RentalBusinessScalableInventory from "./pages/RentalBusinessScalableInventory";
 import RentalBusinessProfitability from "./pages/RentalBusinessProfitability";
 import RoiCalculator from "./pages/RoiCalculator";
-import ShopLetters from "./pages/ShopLetters";
+
 import ProductDetail from "./pages/ProductDetail";
 import WallHangingThankYou from "./pages/thank-you/WallHangingThankYou";
 import ThreeDLogosThankYou from "./pages/thank-you/ThreeDLogosThankYou";
@@ -81,7 +81,7 @@ const RouterContent = () => {
         <Route path="/rental-business/building-a-scalable-inventory" element={<RentalBusinessScalableInventory />} />
         <Route path="/rental-business/profitability" element={<RentalBusinessProfitability />} />
         <Route path="/roi-calculator" element={<RoiCalculator />} />
-        <Route path="/shop/36-inch-letters" element={<ShopLetters />} />
+        
         <Route path="/product/:handle" element={<ProductDetail />} />
         <Route path="/thank-you/wall-hanging" element={<WallHangingThankYou />} />
         <Route path="/thank-you/3d-logos" element={<ThreeDLogosThankYou />} />

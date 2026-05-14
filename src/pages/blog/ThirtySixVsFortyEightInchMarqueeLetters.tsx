@@ -7,8 +7,20 @@ const ThirtySixVsFortyEightInchMarqueeLetters = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>36 vs 48 Inch Marquee Letters: Which Size Should You Buy? | Vintage Marquee Lights</title>
-        <meta name="description" content="Compare 36-inch and 48-inch stand-up marquee letters. Learn which size fits your venue, storage, and event needs. A practical buyer's guide." />
+        <title>36 vs 48 Inch Marquee Letters: Which to Buy? | VML</title>
+        <meta name="description" content="Compare 36-inch and 48-inch stand-up marquee letters. Which size fits your venue, storage, and event needs — a practical buyer's guide." />
+        <link rel="canonical" href="https://inventory.vintagemarqueelights.com/blog/36-vs-48-inch-marquee-letters" />
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content="36 vs 48 Inch Marquee Letters: Which to Buy? | VML" />
+        <meta property="og:description" content="Compare 36-inch and 48-inch stand-up marquee letters. Which size fits your venue, storage, and event needs — a practical buyer's guide." />
+        <meta property="og:url" content="https://inventory.vintagemarqueelights.com/blog/36-vs-48-inch-marquee-letters" />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "36 vs 48 Inch Marquee Letters: Which to Buy?",
+          "url": "https://inventory.vintagemarqueelights.com/blog/36-vs-48-inch-marquee-letters",
+          "publisher": { "@type": "Organization", "name": "Vintage Marquee Lights" }
+        })}</script>
       </Helmet>
 
       <Navigation />

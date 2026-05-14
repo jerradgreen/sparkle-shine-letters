@@ -7,8 +7,20 @@ const UniversitiesTeamsMarqueeLetters = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>How Universities and Teams Use Marquee Letters for Branding and Recruiting | Vintage Marquee Lights</title>
+        <title>Marquee Letters for Universities & Teams | VML</title>
         <meta name="description" content="Why universities, athletic departments, and teams invest in commercial marquee letters for recruiting events, game days, and campus branding." />
+        <link rel="canonical" href="https://inventory.vintagemarqueelights.com/blog/universities-teams-marquee-letters-branding" />
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content="Marquee Letters for Universities & Teams | VML" />
+        <meta property="og:description" content="Why universities, athletic departments, and teams invest in commercial marquee letters for recruiting events, game days, and campus branding." />
+        <meta property="og:url" content="https://inventory.vintagemarqueelights.com/blog/universities-teams-marquee-letters-branding" />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "Marquee Letters for Universities & Teams",
+          "url": "https://inventory.vintagemarqueelights.com/blog/universities-teams-marquee-letters-branding",
+          "publisher": { "@type": "Organization", "name": "Vintage Marquee Lights" }
+        })}</script>
       </Helmet>
 
       <Navigation />

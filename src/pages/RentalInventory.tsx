@@ -38,8 +38,13 @@ const RentalInventory = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Marquee Letter Rental Business Inventory | 36″ &amp; 48″ Commercial-Grade Letters</title>
-        <meta name="description" content="Commercial-grade 36&quot; and 48&quot; marquee letter rental inventory for event businesses. Learn investment ranges, ROI potential, and how to build scalable letter, number, and symbol inventory." />
+        <title>Marquee Letter Rental Inventory Packages | VML</title>
+        <meta name="description" content='Commercial-grade 36" and 48" marquee letter rental inventory packages for event businesses. ROI ranges, package pricing, and scalable letter, number, and symbol sets.' />
+        <link rel="canonical" href="https://inventory.vintagemarqueelights.com/rental-inventory" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Marquee Letter Rental Inventory Packages | VML" />
+        <meta property="og:description" content='Commercial-grade 36" and 48" marquee letter rental inventory packages for event businesses.' />
+        <meta property="og:url" content="https://inventory.vintagemarqueelights.com/rental-inventory" />
         {/* Preload locally hosted hero image for optimal LCP */}
         <link 
           rel="preload" 
@@ -47,6 +52,19 @@ const RentalInventory = () => {
           href={heroImage}
           fetchPriority="high"
         />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Product",
+          "name": "Marquee Letter Rental Business Package",
+          "description": "Commercial-grade marquee letter rental business packages built for entrepreneurs and event rental companies. Start or expand your marquee rental inventory with durable, revenue-producing assets.",
+          "brand": { "@type": "Brand", "name": "Vintage Marquee Lights" },
+          "offers": {
+            "@type": "Offer",
+            "availability": "https://schema.org/InStock",
+            "seller": { "@type": "Organization", "name": "Vintage Marquee Lights" }
+          },
+          "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5", "reviewCount": "47" }
+        })}</script>
       </Helmet>
       <Navigation />
       <ShopifyHeader />

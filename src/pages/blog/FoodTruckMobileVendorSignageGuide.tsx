@@ -7,8 +7,20 @@ const FoodTruckMobileVendorSignageGuide = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Custom Food Truck Signs & Mobile Vendor Signage Guide | Vintage Marquee Lights</title>
-        <meta name="description" content="A complete guide to custom food truck signs, roof signage, and mobile vendor displays. Learn how illuminated marquee and 3D logo signs attract more customers." />
+        <title>Custom Food Truck & Mobile Vendor Signs Guide | VML</title>
+        <meta name="description" content="A guide to custom food truck signs, roof signage, and mobile vendor displays. How illuminated marquee and 3D logo signs attract more customers." />
+        <link rel="canonical" href="https://inventory.vintagemarqueelights.com/blog/food-truck-mobile-vendor-signage-guide" />
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content="Custom Food Truck & Mobile Vendor Signs Guide | VML" />
+        <meta property="og:description" content="A guide to custom food truck signs, roof signage, and mobile vendor displays. How illuminated marquee and 3D logo signs attract more customers." />
+        <meta property="og:url" content="https://inventory.vintagemarqueelights.com/blog/food-truck-mobile-vendor-signage-guide" />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "Custom Food Truck & Mobile Vendor Signs Guide",
+          "url": "https://inventory.vintagemarqueelights.com/blog/food-truck-mobile-vendor-signage-guide",
+          "publisher": { "@type": "Organization", "name": "Vintage Marquee Lights" }
+        })}</script>
       </Helmet>
 
       <Navigation />

@@ -7,8 +7,20 @@ const MarqueeLetterRentalPricingGuide = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Marquee Letter Rental Pricing Guide: How Much to Charge | Vintage Marquee Lights</title>
-        <meta name="description" content="A guide to pricing your marquee letter rentals. Learn average per-letter rates, package pricing strategies, and how to maximize revenue for your event business." />
+        <title>Marquee Letter Rental Pricing Guide | VML</title>
+        <meta name="description" content="Pricing your marquee letter rentals: average per-letter rates, package pricing strategies, and how to maximize revenue for your event business." />
+        <link rel="canonical" href="https://inventory.vintagemarqueelights.com/blog/marquee-letter-rental-pricing-guide" />
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content="Marquee Letter Rental Pricing Guide | VML" />
+        <meta property="og:description" content="Pricing your marquee letter rentals: average per-letter rates, package pricing strategies, and how to maximize revenue for your event business." />
+        <meta property="og:url" content="https://inventory.vintagemarqueelights.com/blog/marquee-letter-rental-pricing-guide" />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "Marquee Letter Rental Pricing Guide",
+          "url": "https://inventory.vintagemarqueelights.com/blog/marquee-letter-rental-pricing-guide",
+          "publisher": { "@type": "Organization", "name": "Vintage Marquee Lights" }
+        })}</script>
       </Helmet>
 
       <Navigation />
