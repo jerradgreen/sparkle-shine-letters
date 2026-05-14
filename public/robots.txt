@@ -3,6 +3,10 @@ Allow: /
 Disallow: /admin/
 Disallow: /_/
 Disallow: /api/
+Disallow: /roi-calculator
+Disallow: /download/
+Disallow: /thank-you-for-submitting-a-form
+Disallow: /quote/*/thank-you
 
 Sitemap: https://inventory.vintagemarqueelights.com/sitemap.xml
 
