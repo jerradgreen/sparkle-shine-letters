@@ -2,3 +2,6 @@ project_id = "kjfjqtmtvxawmwjeedrd"
 
 [functions.verify-email]
 verify_jwt = false
+
+[functions.gsc-setup]
+verify_jwt = false
