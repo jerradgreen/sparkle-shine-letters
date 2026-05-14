@@ -93,10 +93,14 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Vintage Marquee Lights - Custom Marquee Signs & Letters | Original Since 2008</title>
-        <meta name="description" content="Premium custom marquee signs and letters. Choose from wall-hanging letters, 3D layered signs, food truck signage, event letters, or rental inventory packages. Family-owned since 2008." />
+        <title>Custom Marquee Signs & Letters | Vintage Marquee Lights</title>
+        <meta name="description" content="Custom marquee signs and letters built to own since 2008. Wall-hanging letters, 3D logo signs, food truck signage, event letters, and rental inventory." />
         <meta name="keywords" content="marquee signs, vintage marquee lights, custom marquee letters, wall hanging signs, event signs, food truck signs, layered signs, sign rental business" />
         <link rel="canonical" href="https://inventory.vintagemarqueelights.com/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Custom Marquee Signs & Letters | Vintage Marquee Lights" />
+        <meta property="og:description" content="Custom marquee signs and letters built to own since 2008. Wall-hanging, 3D logo, food truck, event letters, and rental inventory." />
+        <meta property="og:url" content="https://inventory.vintagemarqueelights.com/" />
       </Helmet>
       <Navigation />
       <ShopifyHeader />

@@ -37,6 +37,17 @@ const BlogIndex = () => {
       <Helmet>
         <title>Articles | Vintage Marquee Lights</title>
         <meta name="description" content="Guides and articles about commercial marquee letters for schools, universities, corporations, and event businesses." />
+        <link rel="canonical" href="https://inventory.vintagemarqueelights.com/blog" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Articles | Vintage Marquee Lights" />
+        <meta property="og:description" content="Guides and articles about commercial marquee letters for schools, universities, corporations, and event businesses." />
+        <meta property="og:url" content="https://inventory.vintagemarqueelights.com/blog" />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          "name": "Articles",
+          "url": "https://inventory.vintagemarqueelights.com/blog"
+        })}</script>
       </Helmet>
 
       <Navigation />
