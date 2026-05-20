@@ -11,14 +11,13 @@
     <link data-rh="true" rel="canonical" href="https://inventory.vintagemarqueelights.com/">
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
     
-    <!-- Google model-viewer for 3D letter preview -->
-    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
-
     <!-- Performance optimizations -->
     <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
     <link rel="dns-prefetch" href="https://cdn.shopify.com">
     <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
     <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://connect.facebook.net">
+    <link rel="dns-prefetch" href="https://t.contentsquare.net">
     <link rel="dns-prefetch" href="https://snapwidget.com">
     
     <!-- Critical CSS inline to eliminate render-blocking -->
@@ -58,10 +57,6 @@
       }
     </style>
     
-    <!-- Load full CSS asynchronously -->
-    <link rel="stylesheet" href="/src/main.tsx" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="/src/main.tsx"></noscript>
-    
     <!-- JSON-LD Structured Data: Organization -->
     <script type="application/ld+json">
     {
@@ -95,33 +90,55 @@
     <meta data-rh="true" name="twitter:site" content="@VintageMarquee" />
     <meta name="twitter:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/3KIOt6s4WzOvOTmqWoU6zPKHEVx2/social-images/social-1771075348296-custom_collage2.webp">
     
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17646919806"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+      window.fbq = window.fbq || function(){(window.fbq.q = window.fbq.q || []).push(arguments);};
+      window._fbq = window.fbq;
+      window.fbq.loaded = true;
+      window.fbq.version = '2.0';
 
-      gtag('config', 'AW-17646919806');
+      (function loadMarketingScriptsAfterFirstPaint() {
+        var loadScripts = function() {
+          var gtagScript = document.createElement('script');
+          gtagScript.async = true;
+          gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=AW-17646919806';
+          document.head.appendChild(gtagScript);
+          gtag('js', new Date());
+          gtag('config', 'AW-17646919806');
+
+          var contentsquareScript = document.createElement('script');
+          contentsquareScript.async = true;
+          contentsquareScript.src = 'https://t.contentsquare.net/uxa/9a47fa3217445.js';
+          document.head.appendChild(contentsquareScript);
+
+          var metaPixelScript = document.createElement('script');
+          metaPixelScript.async = true;
+          metaPixelScript.src = 'https://connect.facebook.net/en_US/fbevents.js';
+          document.head.appendChild(metaPixelScript);
+          fbq('init', '443717751929130');
+          fbq('track', 'PageView');
+        };
+
+        var schedule = function() {
+          var runAfterLcpWindow = function() {
+            if ('requestIdleCallback' in window) {
+              window.requestIdleCallback(loadScripts, { timeout: 5000 });
+            } else {
+              window.setTimeout(loadScripts, 5000);
+            }
+          };
+
+          window.setTimeout(runAfterLcpWindow, 4000);
+        };
+
+        if (document.readyState === 'complete') {
+          schedule();
+        } else {
+          window.addEventListener('load', schedule, { once: true });
+        }
+      })();
     </script>
-    
-    <!-- Contentsquare Analytics -->
-    <script src="https://t.contentsquare.net/uxa/9a47fa3217445.js"></script>
-    
-    <!-- Meta Pixel Code -->
-    <script>
-      !function(f,b,e,v,n,t,s)
-      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-      n.queue=[];t=b.createElement(e);t.async=!0;
-      t.src=v;s=b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t,s)}(window, document,'script',
-      'https://connect.facebook.net/en_US/fbevents.js');
-      fbq('init', '443717751929130');
-      fbq('track', 'PageView');
-    </script>
-    <!-- End Meta Pixel Code -->
     
     
   
