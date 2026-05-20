@@ -28,6 +28,26 @@ const marquee3Image = "https://cdn.shopify.com/s/files/1/1403/8315/files/3_light
 import testimonialSarahImage from "@/assets/testimonial-sarah.jpg";
 import testimonialMikeImage from "@/assets/testimonial-mike.jpg";
 
+const cdMarqueesFounderImage = "/images/cd-marquees/cd-marquees-founders.webp";
+const cdMarqueesGallery = [
+  {
+    src: "/images/cd-marquees/all-the-feels-marquee.webp",
+    alt: "ALLTHEFEELS marquee lights at an outdoor C&D Marquees event setup"
+  },
+  {
+    src: "/images/cd-marquees/love-marquee-balloon-backdrop.webp",
+    alt: "LOVE marquee lights with a red and pink balloon backdrop by C&D Marquees"
+  },
+  {
+    src: "/images/cd-marquees/new-edition-marquee.webp",
+    alt: "NEW EDITION marquee lights with a black and silver balloon backdrop by C&D Marquees"
+  },
+  {
+    src: "/images/cd-marquees/maria-marquee-event.webp",
+    alt: "MARIA marquee lights in a pink event room by C&D Marquees"
+  }
+];
+
 const RentalInventory = () => {
   const navigate = useNavigate();
   
@@ -177,6 +197,42 @@ const RentalInventory = () => {
                 fetchPriority="high"
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Compact C&D Marquees customer proof strip */}
+      <section className="py-6 px-4 bg-background">
+        <div className="max-w-6xl mx-auto">
+          <div className="rounded-2xl border border-primary/20 bg-card shadow-sm p-4 md:p-5">
+            <div className="grid gap-4 md:grid-cols-[140px_1fr_auto] md:items-center">
+              <div className="hidden md:block">
+                <PerformantImage
+                  src={cdMarqueesFounderImage}
+                  alt="Dion and Chantal Powell with C&D Marquees letters"
+                  className="w-full aspect-[4/3] object-cover rounded-xl"
+                  loading="lazy"
+                  sizes="140px"
+                />
+              </div>
+              <div>
+                <Badge className="mb-2 bg-primary/10 text-primary hover:bg-primary/10">Customer Story</Badge>
+                <h2 className="text-lg md:text-xl font-bold text-foreground mb-2">
+                  See how C&amp;D Marquees built around VML marquee lights
+                </h2>
+                <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
+                  Dion and Chantal Powell started their Charlotte event rental brand with a VML rental package and used marquee lights as the foundation for photo-ready celebration setups.
+                </p>
+              </div>
+              <div className="flex flex-col sm:flex-row md:flex-col gap-3 md:min-w-[190px]">
+                <Button asChild variant="outline" className="w-full">
+                  <a href="#cd-marquees-story">Read the C&amp;D Story</a>
+                </Button>
+                <Button className="w-full" onClick={openQuoteForm}>
+                  Request Package Pricing
+                </Button>
+              </div>
             </div>
           </div>
         </div>
@@ -501,6 +557,115 @@ const RentalInventory = () => {
               </blockquote>
               <cite className="text-sm text-foreground font-semibold">— Mike R., Texas</cite>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Full C&D Marquees customer story */}
+      <section id="cd-marquees-story" className="py-16 px-4 bg-gradient-to-br from-primary/5 via-background to-accent/10">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-10">
+            <Badge className="mb-4 bg-primary/10 text-primary hover:bg-primary/10">Customer Story</Badge>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              How C&amp;D Marquees built a Charlotte event rental brand around marquee lights
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              Dion and Chantal Powell are the husband-and-wife team behind C&amp;D Marquees and Event Rentals, a family-owned Charlotte rental business built around beautiful event displays, marquee lights, floral walls, and memorable celebration moments.
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-8 items-stretch mb-8">
+            <div className="rounded-2xl overflow-hidden shadow-xl bg-card border border-border">
+              <PerformantImage
+                src={cdMarqueesFounderImage}
+                alt="Dion and Chantal Powell with C&D Marquees letters"
+                className="w-full h-full min-h-[360px] object-cover object-center"
+                loading="lazy"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
+            </div>
+
+            <div className="bg-card border border-border rounded-2xl shadow-sm p-6 md:p-8 flex flex-col justify-center">
+              <h3 className="text-2xl font-bold text-foreground mb-4">A real example of what the right inventory can become</h3>
+              <p className="text-muted-foreground leading-relaxed mb-4">
+                Their business is a strong example of what a marquee sign package can become when it is treated like the start of a brand, not just another event rental item. Their lights help create the kind of photo-ready setups people remember at birthdays, weddings, corporate events, school celebrations, and more.
+              </p>
+              <p className="text-muted-foreground leading-relaxed mb-6">
+                Chantal also does a great job showing the business on Instagram. If you want to see how they market their marquee lights, event setups, and finished displays, take a look at <a href="https://www.instagram.com/cdmarquees/" target="_blank" rel="noopener noreferrer" className="text-primary font-semibold underline underline-offset-4">@cdmarquees</a>.
+              </p>
+
+              <div className="bg-muted/40 border-l-4 border-primary rounded-xl p-5">
+                <blockquote className="text-lg text-foreground font-semibold leading-relaxed italic mb-4">
+                  “Vintage Marquee Lights helped us start with marquee signs we felt proud to put in front of clients. The lights gave us a professional look from day one, and that made it easier to show up with confidence, create beautiful setups, and keep building the C&amp;D brand.”
+                </blockquote>
+                <cite className="text-sm text-muted-foreground font-semibold not-italic">
+                  Dion &amp; Chantal Powell, C&amp;D Marquees and Event Rentals
+                </cite>
+              </div>
+            </div>
+          </div>
+
+          <div className="grid md:grid-cols-4 gap-4 mb-10">
+            <Card className="border-primary/20">
+              <CardContent className="p-5">
+                <Check className="w-6 h-6 text-primary mb-3" />
+                <h4 className="font-bold text-foreground mb-2">Own the inventory</h4>
+                <p className="text-sm text-muted-foreground leading-relaxed">No franchise fees, no royalties, and no territory restrictions.</p>
+              </CardContent>
+            </Card>
+            <Card className="border-primary/20">
+              <CardContent className="p-5">
+                <Check className="w-6 h-6 text-primary mb-3" />
+                <h4 className="font-bold text-foreground mb-2">Serve more events</h4>
+                <p className="text-sm text-muted-foreground leading-relaxed">One package can support weddings, birthdays, schools, corporate events, showers, and more.</p>
+              </CardContent>
+            </Card>
+            <Card className="border-primary/20">
+              <CardContent className="p-5">
+                <Check className="w-6 h-6 text-primary mb-3" />
+                <h4 className="font-bold text-foreground mb-2">Rent it again</h4>
+                <p className="text-sm text-muted-foreground leading-relaxed">Set up the letters for one celebration, then use the same inventory for the next booking.</p>
+              </CardContent>
+            </Card>
+            <Card className="border-primary/20">
+              <CardContent className="p-5">
+                <Check className="w-6 h-6 text-primary mb-3" />
+                <h4 className="font-bold text-foreground mb-2">Build your brand</h4>
+                <p className="text-sm text-muted-foreground leading-relaxed">C&amp;D shows how marquee lights can become part of a local event rental identity.</p>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="mb-10">
+            <div className="text-center mb-6">
+              <h3 className="text-2xl font-bold text-foreground mb-2">A few of their setups</h3>
+              <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+                This is the kind of visual proof that helps a rental business sell itself. Once people can picture the lights at their own event, the conversation gets easier.
+              </p>
+            </div>
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+              {cdMarqueesGallery.map((image) => (
+                <div key={image.src} className="rounded-xl overflow-hidden shadow-md bg-card border border-border">
+                  <PerformantImage
+                    src={image.src}
+                    alt={image.alt}
+                    className="w-full aspect-[4/3] object-cover"
+                    loading="lazy"
+                    sizes="(max-width: 1024px) 50vw, 25vw"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="bg-primary text-primary-foreground rounded-2xl p-6 md:p-8 text-center shadow-xl">
+            <h3 className="text-2xl md:text-3xl font-bold mb-3">Want to talk through your package options?</h3>
+            <p className="text-primary-foreground/85 max-w-2xl mx-auto mb-6 leading-relaxed">
+              We can help you compare package sizes, plan around the 12 to 14 week delivery timeline, and think through the inventory that makes the most sense for your market.
+            </p>
+            <Button size="lg" variant="secondary" className="text-lg px-8 py-6" onClick={openQuoteForm}>
+              Request Package Pricing
+            </Button>
           </div>
         </div>
       </section>
