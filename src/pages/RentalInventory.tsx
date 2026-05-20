@@ -206,14 +206,14 @@ const RentalInventory = () => {
       <section className="py-6 px-4 bg-background">
         <div className="max-w-6xl mx-auto">
           <div className="rounded-2xl border border-primary/20 bg-card shadow-sm p-4 md:p-5">
-            <div className="grid gap-4 md:grid-cols-[140px_1fr_auto] md:items-center">
+            <div className="grid gap-4 md:grid-cols-[96px_1fr_auto] md:items-center">
               <div className="hidden md:block">
                 <PerformantImage
                   src={cdMarqueesFounderImage}
                   alt="Dion and Chantal Powell with C&D Marquees letters"
-                  className="w-full aspect-[4/3] object-cover rounded-xl"
+                  className="w-24 h-24 object-cover rounded-xl"
                   loading="lazy"
-                  sizes="140px"
+                  sizes="96px"
                 />
               </div>
               <div>
@@ -562,9 +562,9 @@ const RentalInventory = () => {
       </section>
 
       {/* Full C&D Marquees customer story */}
-      <section id="cd-marquees-story" className="py-16 px-4 bg-gradient-to-br from-primary/5 via-background to-accent/10">
+      <section id="cd-marquees-story" className="py-12 px-4 bg-gradient-to-br from-primary/5 via-background to-accent/10">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-10">
+          <div className="text-center mb-8">
             <Badge className="mb-4 bg-primary/10 text-primary hover:bg-primary/10">Customer Story</Badge>
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
               How C&amp;D Marquees built a Charlotte event rental brand around marquee lights
@@ -574,18 +574,18 @@ const RentalInventory = () => {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-8 items-stretch mb-8">
-            <div className="rounded-2xl overflow-hidden shadow-xl bg-card border border-border">
+          <div className="grid lg:grid-cols-[320px_1fr] gap-6 items-start mb-8">
+            <div className="rounded-2xl overflow-hidden shadow-xl bg-card border border-border max-w-[340px] w-full mx-auto lg:mx-0">
               <PerformantImage
                 src={cdMarqueesFounderImage}
                 alt="Dion and Chantal Powell with C&D Marquees letters"
-                className="w-full h-full min-h-[360px] object-cover object-center"
+                className="w-full h-64 md:h-72 lg:h-80 object-cover object-center"
                 loading="lazy"
-                sizes="(max-width: 1024px) 100vw, 50vw"
+                sizes="(max-width: 1024px) 340px, 320px"
               />
             </div>
 
-            <div className="bg-card border border-border rounded-2xl shadow-sm p-6 md:p-8 flex flex-col justify-center">
+            <div className="bg-card border border-border rounded-2xl shadow-sm p-6 md:p-8">
               <h3 className="text-2xl font-bold text-foreground mb-4">A real example of what the right inventory can become</h3>
               <p className="text-muted-foreground leading-relaxed mb-4">
                 Their business is a strong example of what a marquee sign package can become when it is treated like the start of a brand, not just another event rental item. Their lights help create the kind of photo-ready setups people remember at birthdays, weddings, corporate events, school celebrations, and more.
