@@ -9,6 +9,16 @@ import { Star } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
 // All images now loaded from Shopify CDN for optimal performance with explicit dimensions
+const getResponsiveShopifyImageSet = (imageUrl: string) => {
+  if (!imageUrl.includes('_800x.')) return undefined;
+
+  return [
+    `${imageUrl.replace('_800x.', '_400x.')} 400w`,
+    `${imageUrl.replace('_800x.', '_600x.')} 600w`,
+    `${imageUrl} 800w`,
+  ].join(', ');
+};
+
 const signStyles = [
   {
     title: "Individual Wall Letters",
@@ -101,6 +111,12 @@ const Index = () => {
         <meta property="og:title" content="Custom Marquee Signs & Letters | Vintage Marquee Lights" />
         <meta property="og:description" content="Custom marquee signs and letters built to own since 2008. Wall-hanging, 3D logo, food truck, event letters, and rental inventory." />
         <meta property="og:url" content="https://inventory.vintagemarqueelights.com/" />
+        <link
+          rel="preload"
+          as="image"
+          href={signStyles[0].image}
+          fetchPriority="high"
+        />
       </Helmet>
       <Navigation />
       <ShopifyHeader />
@@ -138,11 +154,13 @@ const Index = () => {
                             alt={style.title}
                             className={`w-full h-56 object-cover group-hover:scale-110 transition-transform duration-500 ${style.imageScale || ''}`}
                             style={{ objectPosition: style.imagePosition || 'center' }}
-                            loading="lazy"
-                            decoding="async"
+                            loading={index === 0 ? "eager" : "lazy"}
+                            decoding={index === 0 ? "sync" : "async"}
                             width={style.width}
                             height={style.height}
-                            fetchPriority={style.fetchPriority}
+                            srcSet={getResponsiveShopifyImageSet(style.image)}
+                            sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                            fetchPriority={index === 0 ? "high" : "auto"}
                           />
                           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent group-hover:from-black/90 transition-all duration-300">
                             <div className="absolute inset-0 flex flex-col justify-center items-center text-center p-6">
@@ -169,11 +187,13 @@ const Index = () => {
                             alt={style.title}
                             className={`w-full h-56 object-cover group-hover:scale-110 transition-transform duration-500 ${style.imageScale || ''}`}
                             style={{ objectPosition: style.imagePosition || 'center' }}
-                            loading="lazy"
-                            decoding="async"
+                            loading={index === 0 ? "eager" : "lazy"}
+                            decoding={index === 0 ? "sync" : "async"}
                             width={style.width}
                             height={style.height}
-                            fetchPriority={style.fetchPriority}
+                            srcSet={getResponsiveShopifyImageSet(style.image)}
+                            sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                            fetchPriority={index === 0 ? "high" : "auto"}
                           />
                           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent group-hover:from-black/90 transition-all duration-300">
                             <div className="absolute inset-0 flex flex-col justify-center items-center text-center p-6">
