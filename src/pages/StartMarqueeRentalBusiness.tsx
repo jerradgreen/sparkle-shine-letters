@@ -104,6 +104,29 @@ const StartMarqueeRentalBusiness = () => {
           </div>
         </div>
 
+
+
+        <div className="mb-12 rounded-2xl border border-primary/20 bg-primary/5 p-6 md:p-8">
+          <div className="grid gap-6 md:grid-cols-[160px_1fr] md:items-center">
+            <img
+              src="/images/cd-marquees/cd-marquees-founders.webp"
+              alt="Dion and Chantal Powell with C&D Marquees letters"
+              className="h-40 w-full rounded-xl object-cover shadow-sm"
+              loading="lazy"
+            />
+            <div>
+              <p className="mb-2 text-sm font-semibold uppercase tracking-wide text-primary">Customer proof</p>
+              <h2 className="mb-3 text-2xl font-semibold text-foreground">C&amp;D Marquees shows the startup path</h2>
+              <p className="mb-4 text-muted-foreground leading-relaxed">
+                Dion and Chantal Powell used VML marquee lights as the foundation for C&amp;D Marquees, a dedicated event rental brand built around photo-ready marquee light setups. Their story is the clearest example of the independent ownership path: buy durable inventory, build your own local brand, and keep the customer relationships you create.
+              </p>
+              <Link to="/rental-inventory#cd-marquees-story" className="text-primary hover:underline font-semibold text-sm">
+                Read the full C&amp;D Marquees customer story
+              </Link>
+            </div>
+          </div>
+        </div>
+
         <div className="mb-12">
           <h2 className="text-2xl font-semibold text-foreground mb-4">The Financial Reality: ROI and Break-Even</h2>
           <p className="text-muted-foreground leading-relaxed mb-4">
@@ -133,10 +156,10 @@ const StartMarqueeRentalBusiness = () => {
               View Rental Packages &amp; Pricing
             </a>
             <Link 
-              to="/rental-business/startup-cost" 
+              to="/marquee-letters-for-event-pros"
               className="inline-block border-2 border-primary text-primary px-8 py-4 rounded font-bold text-lg hover:bg-primary/10 transition-colors"
             >
-              Learn About Startup Costs
+              Already Run an Event Business?
             </Link>
           </div>
           <p className="text-xs text-muted-foreground mt-4">

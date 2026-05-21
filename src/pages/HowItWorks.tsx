@@ -61,9 +61,14 @@ const HowItWorks = () => {
             </div>
             
             <div className="mt-8 pt-8 border-t border-border">
-              <Link to="/quote/rental-inventory" className="inline-flex items-center text-primary font-semibold hover:underline">
-                Get a Rental Package Quote →
-              </Link>
+              <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-6">
+                <Link to="/start-marquee-rental-business" className="inline-flex items-center text-primary font-semibold hover:underline">
+                  Starting from scratch? See the startup path →
+                </Link>
+                <Link to="/marquee-letters-for-event-pros" className="inline-flex items-center text-primary font-semibold hover:underline">
+                  Already in events? See the add-on path →
+                </Link>
+              </div>
             </div>
           </div>
         </section>

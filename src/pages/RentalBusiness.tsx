@@ -42,7 +42,7 @@ const RentalBusiness = () => {
                   <h3 className="font-bold text-foreground mb-2">C&amp;D Marquees</h3>
                   <p className="text-sm text-muted-foreground leading-relaxed">A rental brand built around photo-ready marquee light setups.</p>
                 </Link>
-                <Link to="/rental-inventory#dj-franco-events-story" className="rounded-xl border border-border bg-card p-5 hover:border-primary/50 transition-colors">
+                <Link to="/marquee-letters-for-event-pros" className="rounded-xl border border-border bg-card p-5 hover:border-primary/50 transition-colors">
                   <h3 className="font-bold text-foreground mb-2">DJ Franco Events</h3>
                   <p className="text-sm text-muted-foreground leading-relaxed">An existing event business adding marquee letters as a premium upsell.</p>
                 </Link>
