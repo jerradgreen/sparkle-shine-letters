@@ -32,6 +32,23 @@ const RentalBusiness = () => {
               </p>
             </div>
 
+            <section className="mb-16 rounded-2xl border border-primary/20 bg-primary/5 p-6 md:p-8">
+              <h2 className="text-2xl md:text-3xl font-bold mb-4 text-foreground">See two real customer paths</h2>
+              <p className="text-base text-muted-foreground leading-relaxed mb-6">
+                Some customers use VML inventory to launch a dedicated marquee rental brand, while others add marquee letters to an event business they already operate. C&amp;D Marquees and DJ Franco Events show both sides of that opportunity.
+              </p>
+              <div className="grid sm:grid-cols-2 gap-4">
+                <Link to="/rental-inventory#cd-marquees-story" className="rounded-xl border border-border bg-card p-5 hover:border-primary/50 transition-colors">
+                  <h3 className="font-bold text-foreground mb-2">C&amp;D Marquees</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">A rental brand built around photo-ready marquee light setups.</p>
+                </Link>
+                <Link to="/rental-inventory#dj-franco-events-story" className="rounded-xl border border-border bg-card p-5 hover:border-primary/50 transition-colors">
+                  <h3 className="font-bold text-foreground mb-2">DJ Franco Events</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">An existing event business adding marquee letters as a premium upsell.</p>
+                </Link>
+              </div>
+            </section>
+
             {/* Startup Costs */}
             <section className="mb-16">
               <h2 className="text-3xl font-bold mb-6 text-foreground">Startup Costs &amp; Initial Investment</h2>

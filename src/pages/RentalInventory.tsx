@@ -48,6 +48,22 @@ const cdMarqueesGallery = [
   }
 ];
 
+const djFrancoHeroImage = "https://files.manuscdn.com/user_upload_by_module/session_file/310519663459706891/hduztCJqumpVuYzd.webp";
+const djFrancoGallery = [
+  {
+    src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663459706891/reXuirzAXVKMdfED.webp",
+    alt: "VOSS marquee letters displayed inside the DJ Franco Events venue"
+  },
+  {
+    src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663459706891/khjlOFdwAGMpPYTg.webp",
+    alt: "THE FOSTERS marquee letters displayed in an event space"
+  },
+  {
+    src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663459706891/VaYUzgyOLxyzMFQs.webp",
+    alt: "OBRIEN marquee letters with color-changing bulbs"
+  }
+];
+
 const RentalInventory = () => {
   const navigate = useNavigate();
   
@@ -202,38 +218,62 @@ const RentalInventory = () => {
         </div>
       </section>
 
-      {/* Compact C&D Marquees customer proof strip */}
+      {/* Compact customer proof strip */}
       <section className="py-6 px-4 bg-background">
         <div className="max-w-6xl mx-auto">
-          <div className="rounded-2xl border border-primary/20 bg-card shadow-sm p-4 md:p-5">
-            <div className="grid gap-4 md:grid-cols-[96px_1fr_auto] md:items-center">
-              <div className="hidden md:block">
+          <div className="text-center mb-4">
+            <Badge className="mb-2 bg-primary/10 text-primary hover:bg-primary/10">Customer Stories</Badge>
+            <h2 className="text-lg md:text-xl font-bold text-foreground">
+              Two ways VML rental inventory becomes revenue
+            </h2>
+          </div>
+          <div className="grid lg:grid-cols-2 gap-4">
+            <div className="rounded-2xl border border-primary/20 bg-card shadow-sm p-4 md:p-5">
+              <div className="grid gap-4 sm:grid-cols-[96px_1fr] sm:items-center">
                 <PerformantImage
                   src={cdMarqueesFounderImage}
                   alt="Dion and Chantal Powell with C&D Marquees letters"
-                  className="w-24 h-24 object-cover rounded-xl"
+                  className="hidden sm:block w-24 h-24 object-cover rounded-xl"
                   loading="lazy"
                   sizes="96px"
                 />
-              </div>
-              <div>
-                <Badge className="mb-2 bg-primary/10 text-primary hover:bg-primary/10">Customer Story</Badge>
-                <h2 className="text-lg md:text-xl font-bold text-foreground mb-2">
-                  See how C&amp;D Marquees built around VML marquee lights
-                </h2>
-                <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
-                  Dion and Chantal Powell started their Charlotte event rental brand with a VML rental package and used marquee lights as the foundation for photo-ready celebration setups.
-                </p>
-              </div>
-              <div className="flex flex-col sm:flex-row md:flex-col gap-3 md:min-w-[190px]">
-                <Button asChild variant="outline" className="w-full">
-                  <a href="#cd-marquees-story">Read the C&amp;D Story</a>
-                </Button>
-                <Button className="w-full" onClick={openQuoteForm}>
-                  Request Package Pricing
-                </Button>
+                <div>
+                  <h3 className="text-lg font-bold text-foreground mb-2">C&amp;D Marquees: start a rental brand</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+                    Dion and Chantal Powell used VML marquee lights as the foundation for a Charlotte event rental brand.
+                  </p>
+                  <Button asChild variant="outline" className="w-full sm:w-auto">
+                    <a href="#cd-marquees-story">Read the C&amp;D Story</a>
+                  </Button>
+                </div>
               </div>
             </div>
+
+            <div className="rounded-2xl border border-accent/20 bg-card shadow-sm p-4 md:p-5">
+              <div className="grid gap-4 sm:grid-cols-[96px_1fr] sm:items-center">
+                <PerformantImage
+                  src={djFrancoHeroImage}
+                  alt="DJ Franco Events marquee letters inside an event space"
+                  className="hidden sm:block w-24 h-24 object-cover rounded-xl"
+                  loading="lazy"
+                  sizes="96px"
+                />
+                <div>
+                  <h3 className="text-lg font-bold text-foreground mb-2">DJ Franco Events: add a premium upsell</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+                    Franco shows how an existing DJ, venue, or event business can turn marquee letters into an easy event upgrade.
+                  </p>
+                  <Button asChild variant="outline" className="w-full sm:w-auto">
+                    <a href="#dj-franco-events-story">Read Franco's Story</a>
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="mt-4 text-center">
+            <Button className="w-full sm:w-auto" onClick={openQuoteForm}>
+              Request Package Pricing
+            </Button>
           </div>
         </div>
       </section>
@@ -662,6 +702,115 @@ const RentalInventory = () => {
             <h3 className="text-2xl md:text-3xl font-bold mb-3">Want to talk through your package options?</h3>
             <p className="text-primary-foreground/85 max-w-2xl mx-auto mb-6 leading-relaxed">
               We can help you compare package sizes, plan around the 12 to 14 week delivery timeline, and think through the inventory that makes the most sense for your market.
+            </p>
+            <Button size="lg" variant="secondary" className="text-lg px-8 py-6" onClick={openQuoteForm}>
+              Request Package Pricing
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* DJ Franco Events customer story */}
+      <section id="dj-franco-events-story" className="py-12 px-4 bg-background">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-8">
+            <Badge className="mb-4 bg-accent/10 text-accent hover:bg-accent/10">Customer Story</Badge>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              How DJ Franco Events added marquee letters as a built-in event upgrade
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              Franco shows the second path for VML rental inventory buyers. Instead of starting a dedicated marquee rental company from zero, an established DJ, venue, or event business can add marquee letters to the client conversations already happening every week.
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-[1fr_360px] gap-6 items-start mb-8">
+            <div className="bg-card border border-border rounded-2xl shadow-sm p-6 md:p-8 order-2 lg:order-1">
+              <h3 className="text-2xl font-bold text-foreground mb-4">A premium upsell for a business that already books events</h3>
+              <p className="text-muted-foreground leading-relaxed mb-4">
+                DJ Franco Events is already built around entertainment, planning, production, rentals, and event enhancements. Adding marquee letters gave the business another photo-ready upgrade clients can add when they are planning the rest of their event.
+              </p>
+              <p className="text-muted-foreground leading-relaxed mb-6">
+                This is why marquee letters work well for DJs, venues, planners, photo booth companies, balloon artists, decorators, and rental companies. The demand is already in the room. The letters make the package more visual, more personal, and easier to photograph.
+              </p>
+
+              <div className="bg-muted/40 border-l-4 border-accent rounded-xl p-5">
+                <blockquote className="text-lg text-foreground font-semibold leading-relaxed italic mb-4">
+                  “We added marquee letters because they fit naturally into the events we already host and produce. They give our clients another way to personalize the space and create a photo-ready moment without having to bring in another vendor.”
+                </blockquote>
+                <cite className="text-sm text-muted-foreground font-semibold not-italic">
+                  DJ Franco Events
+                </cite>
+              </div>
+            </div>
+
+            <div className="rounded-2xl overflow-hidden shadow-xl bg-card border border-border max-w-[380px] w-full mx-auto lg:mx-0 order-1 lg:order-2">
+              <PerformantImage
+                src={djFrancoHeroImage}
+                alt="DJ Franco Events marquee letters set up inside an event space"
+                className="w-full h-72 md:h-80 lg:h-[420px] object-cover object-center"
+                loading="lazy"
+                sizes="(max-width: 1024px) 380px, 360px"
+              />
+            </div>
+          </div>
+
+          <div className="grid md:grid-cols-4 gap-4 mb-10">
+            <Card className="border-accent/20">
+              <CardContent className="p-5">
+                <Check className="w-6 h-6 text-accent mb-3" />
+                <h4 className="font-bold text-foreground mb-2">Fits the same sale</h4>
+                <p className="text-sm text-muted-foreground leading-relaxed">Clients already choosing music, rentals, lighting, and decor can add letters as one more upgrade.</p>
+              </CardContent>
+            </Card>
+            <Card className="border-accent/20">
+              <CardContent className="p-5">
+                <Check className="w-6 h-6 text-accent mb-3" />
+                <h4 className="font-bold text-foreground mb-2">Turns a venue into a showroom</h4>
+                <p className="text-sm text-muted-foreground leading-relaxed">Every setup helps future clients picture names, phrases, and branded moments at their own event.</p>
+              </CardContent>
+            </Card>
+            <Card className="border-accent/20">
+              <CardContent className="p-5">
+                <Check className="w-6 h-6 text-accent mb-3" />
+                <h4 className="font-bold text-foreground mb-2">Creates social proof</h4>
+                <p className="text-sm text-muted-foreground leading-relaxed">Names and phrases give event businesses content that explains the product without a long pitch.</p>
+              </CardContent>
+            </Card>
+            <Card className="border-accent/20">
+              <CardContent className="p-5">
+                <Check className="w-6 h-6 text-accent mb-3" />
+                <h4 className="font-bold text-foreground mb-2">Serves many event types</h4>
+                <p className="text-sm text-muted-foreground leading-relaxed">Weddings, birthdays, corporate events, proms, and private parties can all use the same core inventory.</p>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="mb-10">
+            <div className="text-center mb-6">
+              <h3 className="text-2xl font-bold text-foreground mb-2">A few looks from Franco's event space</h3>
+              <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+                These setups show how marquee letters can become a simple add-on that makes an existing event package feel more complete and more memorable.
+              </p>
+            </div>
+            <div className="grid md:grid-cols-3 gap-4">
+              {djFrancoGallery.map((image) => (
+                <div key={image.src} className="rounded-xl overflow-hidden shadow-md bg-card border border-border">
+                  <PerformantImage
+                    src={image.src}
+                    alt={image.alt}
+                    className="w-full aspect-[4/3] object-cover"
+                    loading="lazy"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="bg-accent text-accent-foreground rounded-2xl p-6 md:p-8 text-center shadow-xl">
+            <h3 className="text-2xl md:text-3xl font-bold mb-3">Already in the event business?</h3>
+            <p className="text-accent-foreground/90 max-w-2xl mx-auto mb-6 leading-relaxed">
+              We can help you think through which package gives you enough letters, numbers, and phrase options to add marquee rentals to the business you already have.
             </p>
             <Button size="lg" variant="secondary" className="text-lg px-8 py-6" onClick={openQuoteForm}>
               Request Package Pricing
