@@ -1,13 +1,26 @@
-import { ReactNode, useEffect } from 'react';
+import { ReactNode, useEffect, useMemo } from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
+
+type CognitoFormInstance = {
+  prefill?: (values: Record<string, unknown>) => void;
+};
+
+type CognitoApi = {
+  mount?: (formId: string, selector: string) => CognitoFormInstance | undefined;
+  prefill?: (values: Record<string, unknown>) => void;
+};
+
+type WindowWithCognito = Window & {
+  Cognito?: CognitoApi;
+};
 
 interface FormPageTemplateProps {
   title: string;
   description: string;
   formId: string;
-  prefill?: Record<string, any>;
+  prefill?: Record<string, unknown>;
   children?: ReactNode;
 }
 
@@ -19,6 +32,9 @@ export const FormPageTemplate = ({
   children 
 }: FormPageTemplateProps) => {
   const containerId = `cognito-form-container-${formId}`;
+  const cleanCanonicalUrl = `${window.location.origin}${window.location.pathname}`;
+  const serializedPrefill = useMemo(() => JSON.stringify(prefill ?? {}), [prefill]);
+
   useEffect(() => {
     let isMounted = true;
 
@@ -29,7 +45,7 @@ export const FormPageTemplate = ({
       if (container) {
         container.innerHTML = '';
       }
-      const w = window as any;
+      const w = window as WindowWithCognito;
       if (container && w.Cognito && typeof w.Cognito.mount === 'function') {
         try {
           if (prefill && typeof w.Cognito.prefill === 'function') {
@@ -42,7 +58,11 @@ export const FormPageTemplate = ({
             instance.prefill(prefill);
             // Retry once after mount in case fields render lazily
             setTimeout(() => {
-              try { instance.prefill(prefill); } catch {}
+              try {
+                instance.prefill?.(prefill);
+              } catch (error) {
+                console.warn('Cognito prefill retry failed', error);
+              }
             }, 800);
           }
         } catch (e) {
@@ -56,7 +76,8 @@ export const FormPageTemplate = ({
       'script[src="https://www.cognitoforms.com/f/seamless.js"]'
     ) as HTMLScriptElement | null;
 
-    if ((window as any).Cognito) {
+    const w = window as WindowWithCognito;
+    if (w.Cognito) {
       mountForm();
     } else {
       const script = existing || document.createElement('script');
@@ -77,13 +98,16 @@ export const FormPageTemplate = ({
       const container = document.getElementById(containerId);
       if (container) container.innerHTML = '';
     };
-  }, [formId, JSON.stringify(prefill)]);
+  }, [containerId, formId, prefill, serializedPrefill]);
 
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
         <title>{title} | Vintage Marquee Lights</title>
         <meta name="description" content={description} />
+        <meta name="robots" content="noindex, follow" />
+        <link rel="canonical" href={cleanCanonicalUrl} />
+        <meta property="og:url" content={cleanCanonicalUrl} />
       </Helmet>
       
       <Navigation />
