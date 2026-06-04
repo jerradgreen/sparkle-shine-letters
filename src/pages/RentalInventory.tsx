@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import { Lightbulb, Star, Package, Clock, Mail, Zap, DollarSign, Percent, Check, Type, FileText, Hash, Circle, Square, Triangle } from "lucide-react";
+import { Lightbulb, Star, Package, Clock, Mail, Zap, DollarSign, Percent, Check, Type, FileText, Hash, Circle, Square, Triangle, ExternalLink, Monitor, Globe } from "lucide-react";
 import ShopifyHeader from "@/components/ShopifyHeader";
 import ShopifyFooter from "@/components/ShopifyFooter";
 import Navigation from "@/components/Navigation";
@@ -1441,6 +1441,110 @@ const RentalInventory = () => {
           <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
             Planning ahead ensures you get the best value without rush fees. Reserve your set early to stay ahead of peak event seasons.
           </p>
+        </div>
+      </section>
+
+      {/* Website Feature Section */}
+      <section className="py-16 px-4 bg-muted/30">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-10">
+            <div className="inline-flex items-center gap-2 bg-accent/10 text-accent border border-accent/20 rounded-full px-4 py-1.5 text-sm font-medium mb-4">
+              <Globe className="w-4 h-4" />
+              Included With Your Package
+            </div>
+            <h2 className="text-4xl font-bold text-foreground mb-4">Your Business Gets Its Own Website</h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Every rental package comes with a fully built, ready-to-launch website for your business. Your brand, your pricing, your photos — live at your own domain.
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-10 items-center">
+            {/* Browser mockup */}
+            <div className="relative">
+              <div className="bg-card rounded-xl shadow-2xl border border-border overflow-hidden">
+                {/* Browser chrome */}
+                <div className="bg-muted px-4 py-3 flex items-center gap-3 border-b border-border">
+                  <div className="flex gap-1.5">
+                    <div className="w-3 h-3 rounded-full bg-red-400" />
+                    <div className="w-3 h-3 rounded-full bg-yellow-400" />
+                    <div className="w-3 h-3 rounded-full bg-green-400" />
+                  </div>
+                  <div className="flex-1 bg-background rounded-md px-3 py-1 text-xs text-muted-foreground font-mono">
+                    marquee.yourbusiness.com
+                  </div>
+                </div>
+                {/* Site preview iframe */}
+                <div className="relative">
+                  <iframe
+                    src="https://marquee.jerradgreen.digital"
+                    className="w-full h-72 border-0"
+                    title="Demo rental website preview"
+                    loading="lazy"
+                    style={{ pointerEvents: 'none' }}
+                  />
+                  {/* Demo overlay badge */}
+                  <div className="absolute top-3 right-3 bg-black/70 text-white text-xs font-semibold px-3 py-1.5 rounded-full backdrop-blur-sm">
+                    DEMO SITE
+                  </div>
+                </div>
+              </div>
+              {/* View demo link */}
+              <div className="text-center mt-4">
+                <a
+                  href="https://marquee.jerradgreen.digital"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-sm text-accent hover:text-accent/80 font-medium transition-colors"
+                >
+                  <ExternalLink className="w-4 h-4" />
+                  View the live demo site
+                </a>
+              </div>
+            </div>
+
+            {/* Feature list */}
+            <div className="space-y-5">
+              <div className="flex gap-4">
+                <div className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0">
+                  <Monitor className="w-5 h-5 text-accent" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-foreground mb-1">Built and ready to launch</h3>
+                  <p className="text-muted-foreground text-sm">Your site is fully built before you receive your letters. Gallery, pricing, inquiry form, and availability calendar are all included.</p>
+                </div>
+              </div>
+              <div className="flex gap-4">
+                <div className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0">
+                  <Globe className="w-5 h-5 text-accent" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-foreground mb-1">Your domain, your brand</h3>
+                  <p className="text-muted-foreground text-sm">Connect your own domain name and it looks like you built it yourself. Hosting is included — no monthly fees.</p>
+                </div>
+              </div>
+              <div className="flex gap-4">
+                <div className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0">
+                  <Zap className="w-5 h-5 text-accent" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-foreground mb-1">Marquee letter visualizer</h3>
+                  <p className="text-muted-foreground text-sm">Customers can type any phrase and see exactly what their letters will look like before they book. A powerful tool that converts browsers into buyers.</p>
+                </div>
+              </div>
+              <div className="flex gap-4">
+                <div className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0">
+                  <Check className="w-5 h-5 text-accent" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-foreground mb-1">Easy admin dashboard</h3>
+                  <p className="text-muted-foreground text-sm">Update your pricing, swap photos, manage inquiries, and edit your FAQ — all from a simple dashboard. No technical skills needed.</p>
+                </div>
+              </div>
+              <div className="pt-2">
+                <p className="text-xs text-muted-foreground italic">Already have a website? No problem. We can connect the rental site as a subdomain so it works alongside what you already have.</p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
