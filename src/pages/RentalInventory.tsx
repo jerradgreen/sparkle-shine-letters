@@ -1450,11 +1450,11 @@ const RentalInventory = () => {
           <div className="text-center mb-10">
             <div className="inline-flex items-center gap-2 bg-accent/10 text-accent border border-accent/20 rounded-full px-4 py-1.5 text-sm font-medium mb-4">
               <Globe className="w-4 h-4" />
-              Included With Your Package
+              Available With Your Package
             </div>
             <h2 className="text-4xl font-bold text-foreground mb-4">Your Business Gets Its Own Website</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Every rental package comes with a fully built, ready-to-launch website for your business. Your brand, your pricing, your photos — live at your own domain.
+              Larger packages include a fully built, ready-to-launch website for your business — and it can be added to any package. Your brand, your pricing, your photos, live at your own domain.
             </p>
           </div>
 
@@ -1473,14 +1473,13 @@ const RentalInventory = () => {
                     marquee.yourbusiness.com
                   </div>
                 </div>
-                {/* Site preview iframe */}
+                {/* Site preview screenshot */}
                 <div className="relative">
-                  <iframe
-                    src="https://marquee.jerradgreen.digital"
-                    className="w-full h-72 border-0"
-                    title="Demo rental website preview"
+                  <img
+                    src="/images/demo-site-preview.webp"
+                    alt="Demo rental website homepage preview"
+                    className="w-full block"
                     loading="lazy"
-                    style={{ pointerEvents: 'none' }}
                   />
                   {/* Demo overlay badge */}
                   <div className="absolute top-3 right-3 bg-black/70 text-white text-xs font-semibold px-3 py-1.5 rounded-full backdrop-blur-sm">
@@ -1519,7 +1518,7 @@ const RentalInventory = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold text-foreground mb-1">Your domain, your brand</h3>
-                  <p className="text-muted-foreground text-sm">Connect your own domain name and it looks like you built it yourself. Hosting is included — no monthly fees.</p>
+                  <p className="text-muted-foreground text-sm">Connect your own domain name and it looks completely custom — like you built it yourself.</p>
                 </div>
               </div>
               <div className="flex gap-4">
@@ -1528,7 +1527,7 @@ const RentalInventory = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold text-foreground mb-1">Marquee letter visualizer</h3>
-                  <p className="text-muted-foreground text-sm">Customers can type any phrase and see exactly what their letters will look like before they book. A powerful tool that converts browsers into buyers.</p>
+                  <p className="text-muted-foreground text-sm">Customers can type any phrase and see exactly what their letters will look like before they book. A powerful tool that turns interest into reservations.</p>
                 </div>
               </div>
               <div className="flex gap-4">
