@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { CheckCircle, Mail, Download } from "lucide-react";
+import { CheckCircle, Mail, Download, PhoneCall, Clock } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 
 const RentalInventoryThankYou = () => {
@@ -16,7 +16,7 @@ const RentalInventoryThankYou = () => {
     <div className="min-h-screen bg-background">
       <Helmet>
         <title>Thank You - Vintage Marquee Lights</title>
-        <meta name="description" content="Thank you for your rental inventory package inquiry. Check your email for pricing details." />
+        <meta name="description" content="Thank you for your rental inventory package inquiry. Check your email for pricing details and next steps." />
         <meta name="robots" content="noindex, nofollow" />
       </Helmet>
       <Navigation />
@@ -25,25 +25,50 @@ const RentalInventoryThankYou = () => {
         <div className="max-w-3xl mx-auto text-center">
           <CheckCircle className="w-20 h-20 text-green-500 mx-auto mb-6" />
           
-          <h1 className="text-4xl md:text-5xl font-bold mb-8">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">
             Thank You!
           </h1>
+          <p className="text-lg text-muted-foreground mb-8">
+            Your rental inventory package request has been received.
+          </p>
 
-          {/* Email notice */}
-          <div className="bg-primary/10 border border-primary/20 rounded-lg p-6 mb-8 flex items-center gap-4 text-left">
-            <Mail className="w-10 h-10 text-primary flex-shrink-0" />
-            <div>
-              <p className="text-lg font-semibold">We will email you rental package pricing info.</p>
-              <p className="text-muted-foreground">Please check your email in about 10–15 minutes.</p>
+          <div className="grid gap-4 mb-8 md:grid-cols-2">
+            <div className="bg-primary/10 border border-primary/20 rounded-lg p-6 flex items-start gap-4 text-left">
+              <Mail className="w-10 h-10 text-primary flex-shrink-0 mt-1" />
+              <div>
+                <p className="text-lg font-semibold">Check your email first.</p>
+                <p className="text-muted-foreground leading-relaxed">
+                  Package pricing, package details, and the rental business information should arrive within a few minutes.
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-accent/10 border border-accent/20 rounded-lg p-6 flex items-start gap-4 text-left">
+              <PhoneCall className="w-10 h-10 text-accent flex-shrink-0 mt-1" />
+              <div>
+                <p className="text-lg font-semibold">Jerrad may personally follow up.</p>
+                <p className="text-muted-foreground leading-relaxed">
+                  If it is during normal business hours, you may receive a quick call so we can answer questions and point you toward the right package.
+                </p>
+              </div>
             </div>
           </div>
 
-          {/* PDF download card */}
+          <div className="bg-muted/40 border rounded-lg p-5 mb-8 flex items-start gap-4 text-left">
+            <Clock className="w-8 h-8 text-primary flex-shrink-0 mt-1" />
+            <div>
+              <p className="font-semibold text-foreground">No pressure on the first conversation.</p>
+              <p className="text-muted-foreground leading-relaxed">
+                The first call is simply to understand your market, timeline, and whether a commercial-grade marquee letter package is a smart fit for your goals.
+              </p>
+            </div>
+          </div>
+
           <div className="bg-card border rounded-lg p-8 mb-8">
             <Download className="w-12 h-12 text-primary mx-auto mb-4" />
             <h2 className="text-2xl font-semibold mb-4">Download Your Free Guide</h2>
             <p className="text-muted-foreground mb-6">
-              Click below to instantly download your comprehensive rental business infographic
+              Click below to instantly download your comprehensive rental business infographic.
             </p>
             <a
               href={pdfUrl}
