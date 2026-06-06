@@ -49,6 +49,7 @@ const CorporateMarqueeSigns = lazy(() => import("./pages/CorporateMarqueeSigns")
 const Press = lazy(() => import("./pages/Press"));
 const HowItWorks = lazy(() => import("./pages/HowItWorks"));
 const MarqueeLettersForEventPros = lazy(() => import("./pages/MarqueeLettersForEventPros"));
+const CustomMarqueeSigns = lazy(() => import("./pages/CustomMarqueeSigns"));
 
 const queryClient = new QueryClient();
 
@@ -150,6 +151,7 @@ const RouterContent = () => {
           <Route path="/press" element={<Press />} />
           <Route path="/how-it-works" element={<HowItWorks />} />
           <Route path="/marquee-letters-for-event-pros" element={<MarqueeLettersForEventPros />} />
+          <Route path="/custom-marquee-signs" element={<CustomMarqueeSigns />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>
