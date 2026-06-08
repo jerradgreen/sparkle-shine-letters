@@ -136,21 +136,6 @@ const Index = () => {
           </p>
         </div>
 
-        <section className="mb-8 max-w-4xl mx-auto rounded-2xl bg-muted/30 p-6 md:p-8 border border-border/50">
-          <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
-            Custom Marquee Signs Built for Businesses, Brands, and Events
-          </h2>
-          <p className="text-muted-foreground leading-relaxed mb-4">
-            Vintage Marquee Lights designs and builds custom marquee signs, illuminated marquee letters, 3D logo signs, food truck signs, wall-hanging letters, event stand-up letters, and rental inventory packages for businesses, brands, schools, restaurants, event professionals, and rental companies nationwide.
-          </p>
-          <p className="text-muted-foreground leading-relaxed">
-            Start with the sign style below, or visit our{' '}
-            <Link to="/custom-marquee-signs" className="text-primary underline hover:text-primary/80 transition-colors font-semibold">
-              custom marquee signs guide
-            </Link>{' '}
-            for a focused overview of the options, use cases, and quote paths available for custom lighted signs.
-          </p>
-        </section>
 
         {/* Visual Selection Grid */}
         <div className="mb-12">
