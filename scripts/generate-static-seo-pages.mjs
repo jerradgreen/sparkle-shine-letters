@@ -97,11 +97,11 @@ const routes = [
       'marquee letter rental inventory, marquee light rental business, rental inventory packages, event rental letters, commercial marquee letters',
     h1: 'Marquee Letter Rental Inventory Packages',
     intro:
-      'Vintage Marquee Lights sells commercial-grade marquee letter rental inventory packages for entrepreneurs and event rental companies. Packages include durable 36-inch and 48-inch letters designed for repeated bookings, event setups, and long-term rental business growth.',
+      'Vintage Marquee Lights sells commercial-grade marquee letter rental inventory packages for entrepreneurs and event rental companies. Packages include durable 36-inch and 48-inch letters designed for repeated bookings, event setups, and long-term rental business growth. Every package includes a 10-day inspection window after delivery.',
     links: [
       ['Request a rental inventory quote', '/quote/rental-inventory'],
-      ['Download the rental business guide', '/download/rental-guide'],
       ['Learn how to start a marquee rental business', '/start-marquee-rental-business'],
+      ['Rental business education hub', '/rental-business'],
     ],
   },
   {
@@ -119,6 +119,281 @@ const routes = [
       ['View 3D logo signs', '/3d-logos'],
       ['View food truck signs', '/mobile-vendor-signs'],
       ['Request a custom quote', '/quote/custom'],
+    ],
+  },
+  {
+    path: '/wedding-marquee-signs',
+    title: 'Wedding Marquee Letters & Signs | Vintage Marquee Lights',
+    description:
+      'Commercial-grade wedding marquee letters and illuminated signs for ceremonies, receptions, venues, and wedding rental professionals nationwide.',
+    keywords:
+      'wedding marquee letters, wedding marquee signs, wedding signage, wedding letters, marquee letters wedding, illuminated wedding signs',
+    h1: 'Wedding Marquee Letters and Illuminated Wedding Signs',
+    intro:
+      'Vintage Marquee Lights builds commercial-grade 36-inch and 48-inch wedding marquee letters used by venues, planners, and rental professionals for ceremonies, receptions, and branded wedding experiences.',
+    links: [
+      ['See 36-inch and 48-inch event marquee letters', '/event-standup-signs'],
+      ['Start or expand a wedding rental inventory', '/rental-inventory'],
+      ['Marquee letters for event pros', '/marquee-letters-for-event-pros'],
+    ],
+  },
+  {
+    path: '/corporate-marquee-signs',
+    title: 'Corporate Marquee Letters & Event Signage | Vintage Marquee Lights',
+    description:
+      'Commercial-grade corporate marquee letters and branded illuminated signs for conferences, brand activations, trade shows, and corporate events.',
+    keywords:
+      'corporate marquee letters, corporate event signage, conference signs, brand activation signs, illuminated corporate signs, trade show signs',
+    h1: 'Corporate Marquee Letters and Branded Event Signage',
+    intro:
+      'Vintage Marquee Lights manufactures commercial-grade marquee letters and branded illuminated signs used at corporate events, conferences, brand activations, product launches, and trade show installations.',
+    links: [
+      ['See 36-inch and 48-inch event marquee letters', '/event-standup-signs'],
+      ['View 3D logo signs', '/3d-logos'],
+      ['Marquee letters for event pros', '/marquee-letters-for-event-pros'],
+    ],
+  },
+  {
+    path: '/marquee-letters-for-event-pros',
+    title: 'Marquee Letters for Event Pros | Vintage Marquee Lights',
+    description:
+      'Commercial-grade marquee letters built for event professionals, planners, venues, and rental companies that need durable inventory for repeated bookings.',
+    keywords:
+      'marquee letters for event pros, event professional marquee letters, event planner marquee letters, venue marquee letters, marquee letter rental',
+    h1: 'Marquee Letters Built for Event Professionals',
+    intro:
+      'Vintage Marquee Lights supplies event pros, planners, venues, and rental companies with commercial-grade marquee letters engineered for repeated setups, transport, and long-term inventory use.',
+    links: [
+      ['See 36-inch and 48-inch event marquee letters', '/event-standup-signs'],
+      ['Rental inventory packages', '/rental-inventory'],
+      ['How to start a marquee rental business', '/start-marquee-rental-business'],
+    ],
+  },
+  {
+    path: '/rental-business',
+    title: 'Marquee Letter Rental Business Education Hub | Vintage Marquee Lights',
+    description:
+      'Education hub for entrepreneurs starting or scaling a marquee letter rental business. Startup cost, inventory planning, and profitability guidance.',
+    keywords:
+      'marquee letter rental business, start rental business, marquee rental business guide, event rental business, rental business education',
+    h1: 'Marquee Letter Rental Business Education Hub',
+    intro:
+      'Practical guidance for entrepreneurs starting, running, and scaling a marquee letter rental business — covering startup cost, inventory planning, and long-term profitability.',
+    links: [
+      ['Startup cost breakdown', '/rental-business/startup-cost'],
+      ['Building a scalable inventory', '/rental-business/building-a-scalable-inventory'],
+      ['Profitability and unit economics', '/rental-business/profitability'],
+      ['Marquee letter rental inventory packages', '/rental-inventory'],
+    ],
+  },
+  {
+    path: '/rental-business/startup-cost',
+    title: 'Marquee Letter Rental Startup Cost | Vintage Marquee Lights',
+    description:
+      'What it actually costs to start a marquee letter rental business — inventory, transportation, storage, insurance, and operating expenses explained.',
+    keywords:
+      'marquee letter rental startup cost, rental business startup cost, marquee rental business investment, start marquee rental business',
+    h1: 'Marquee Letter Rental Startup Cost',
+    intro:
+      'A practical breakdown of the real costs involved in launching a marquee letter rental business, including inventory, transportation, storage, insurance, and ongoing operating expenses.',
+    links: [
+      ['Building a scalable inventory', '/rental-business/building-a-scalable-inventory'],
+      ['Profitability and unit economics', '/rental-business/profitability'],
+      ['Browse rental inventory packages', '/rental-inventory'],
+    ],
+  },
+  {
+    path: '/rental-business/building-a-scalable-inventory',
+    title: 'Building a Scalable Marquee Letter Rental Inventory | Vintage Marquee Lights',
+    description:
+      'How to plan, expand, and scale a marquee letter rental inventory — letter counts, sizing strategy, and reinvestment milestones for rental entrepreneurs.',
+    keywords:
+      'scalable rental inventory, marquee letter inventory planning, rental business growth, marquee rental inventory expansion',
+    h1: 'Building a Scalable Marquee Letter Rental Inventory',
+    intro:
+      'How rental entrepreneurs plan, expand, and scale a marquee letter rental inventory over time — including letter counts, size mix, and reinvestment milestones.',
+    links: [
+      ['Startup cost breakdown', '/rental-business/startup-cost'],
+      ['Profitability and unit economics', '/rental-business/profitability'],
+      ['Browse rental inventory packages', '/rental-inventory'],
+    ],
+  },
+  {
+    path: '/rental-business/profitability',
+    title: 'Marquee Letter Rental Profitability | Vintage Marquee Lights',
+    description:
+      'How marquee letter rental businesses make money — booking rates, average ticket size, payback period, and long-term profitability fundamentals.',
+    keywords:
+      'marquee letter rental profitability, rental business profit, marquee rental income, rental unit economics',
+    h1: 'Marquee Letter Rental Profitability',
+    intro:
+      'How marquee letter rental businesses generate revenue and reach profitability — booking cadence, average ticket size, payback period, and operating margin fundamentals.',
+    links: [
+      ['Startup cost breakdown', '/rental-business/startup-cost'],
+      ['Building a scalable inventory', '/rental-business/building-a-scalable-inventory'],
+      ['Browse rental inventory packages', '/rental-inventory'],
+    ],
+  },
+  {
+    path: '/start-marquee-rental-business',
+    title: 'How to Start a Marquee Letter Rental Business | Vintage Marquee Lights',
+    description:
+      'Step-by-step guidance for starting a marquee letter rental business — from initial inventory and pricing to booking your first events.',
+    keywords:
+      'how to start marquee rental business, start marquee letter rental business, marquee rental startup, rental business guide',
+    h1: 'How to Start a Marquee Letter Rental Business',
+    intro:
+      'A step-by-step guide for entrepreneurs starting a marquee letter rental business — covering initial inventory selection, pricing strategy, marketing, and booking your first events.',
+    links: [
+      ['Marquee letter rental inventory packages', '/rental-inventory'],
+      ['Startup cost breakdown', '/rental-business/startup-cost'],
+      ['Profitability and unit economics', '/rental-business/profitability'],
+    ],
+  },
+  {
+    path: '/blog',
+    title: 'Marquee Signs Blog | Vintage Marquee Lights',
+    description:
+      'Articles and guides on custom marquee signs, marquee letters, rental business strategy, and signage for schools, events, and food trucks.',
+    keywords:
+      'marquee signs blog, marquee letters blog, rental business articles, signage guides, marquee sign articles',
+    h1: 'Marquee Signs Blog',
+    intro:
+      'Articles, guides, and educational resources from Vintage Marquee Lights covering custom marquee signs, marquee letters, rental business strategy, and signage for schools, events, and food trucks.',
+    links: [
+      ['Why schools buy commercial marquee letters', '/blog/why-schools-buy-commercial-marquee-letters'],
+      ['36 vs 48 inch marquee letters', '/blog/36-vs-48-inch-marquee-letters'],
+      ['Universities, teams, and marquee letter branding', '/blog/universities-teams-marquee-letters-branding'],
+      ['Food truck and mobile vendor signage guide', '/blog/food-truck-mobile-vendor-signage-guide'],
+      ['Marquee letter rental pricing guide', '/blog/marquee-letter-rental-pricing-guide'],
+    ],
+  },
+  {
+    path: '/blog/why-schools-buy-commercial-marquee-letters',
+    title: 'Why Schools Buy Commercial-Grade Marquee Letters | Vintage Marquee Lights',
+    description:
+      'Why K-12 schools, universities, and athletic programs invest in commercial-grade marquee letters for events, ceremonies, and school spirit branding.',
+    keywords:
+      'school marquee letters, university marquee letters, commercial marquee letters for schools, school event signage, school branding signage',
+    h1: 'Why Schools Buy Commercial-Grade Marquee Letters',
+    intro:
+      'Why K-12 schools, universities, and athletic programs invest in commercial-grade marquee letters for graduations, homecomings, sporting events, ceremonies, and ongoing school spirit branding.',
+    links: [
+      ['Universities, teams, and marquee letter branding', '/blog/universities-teams-marquee-letters-branding'],
+      ['36-inch and 48-inch event marquee letters', '/event-standup-signs'],
+      ['Marquee Signs Blog', '/blog'],
+    ],
+  },
+  {
+    path: '/blog/36-vs-48-inch-marquee-letters',
+    title: '36 vs 48 Inch Marquee Letters: Which Size Is Right? | Vintage Marquee Lights',
+    description:
+      'Compare 36-inch and 48-inch marquee letters by visual impact, transport, storage, and rental pricing to choose the right size for your event or business.',
+    keywords:
+      '36 inch marquee letters, 48 inch marquee letters, marquee letter sizes, marquee letter size comparison, large marquee letters',
+    h1: '36 vs 48 Inch Marquee Letters: Which Size Is Right for You?',
+    intro:
+      'A side-by-side comparison of 36-inch and 48-inch marquee letters covering visual impact, transport, storage, rental pricing, and the right use case for each size.',
+    links: [
+      ['36-inch and 48-inch event marquee letters', '/event-standup-signs'],
+      ['Marquee letter rental pricing guide', '/blog/marquee-letter-rental-pricing-guide'],
+      ['Marquee Signs Blog', '/blog'],
+    ],
+  },
+  {
+    path: '/blog/universities-teams-marquee-letters-branding',
+    title: 'Universities and Teams: Marquee Letter Branding | Vintage Marquee Lights',
+    description:
+      'How universities, college athletic programs, and professional teams use commercial-grade marquee letters for branding, events, and fan activations.',
+    keywords:
+      'university marquee letters, college team marquee letters, athletic branding signage, team marquee letters, university event signage',
+    h1: 'Universities and Teams: Marquee Letter Branding',
+    intro:
+      'How universities, college athletic programs, and professional teams use commercial-grade marquee letters for branded events, fan activations, recruitment, and game-day environments.',
+    links: [
+      ['Why schools buy commercial marquee letters', '/blog/why-schools-buy-commercial-marquee-letters'],
+      ['36-inch and 48-inch event marquee letters', '/event-standup-signs'],
+      ['Marquee Signs Blog', '/blog'],
+    ],
+  },
+  {
+    path: '/blog/food-truck-mobile-vendor-signage-guide',
+    title: 'Food Truck and Mobile Vendor Signage Guide | Vintage Marquee Lights',
+    description:
+      'A complete guide to food truck signage and mobile vendor marquee signs — visibility, branding, materials, and design considerations for mobile food businesses.',
+    keywords:
+      'food truck signage guide, mobile vendor signs, food truck branding, trailer signage, mobile food business signs',
+    h1: 'Food Truck and Mobile Vendor Signage Guide',
+    intro:
+      'A complete guide for food trucks, trailers, carts, and mobile vendors covering signage visibility, branding, materials, and design considerations that help mobile food businesses stand out.',
+    links: [
+      ['Food truck and mobile vendor signs', '/mobile-vendor-signs'],
+      ['3D logo signs', '/3d-logos'],
+      ['Marquee Signs Blog', '/blog'],
+    ],
+  },
+  {
+    path: '/blog/marquee-letter-rental-pricing-guide',
+    title: 'Marquee Letter Rental Pricing Guide | Vintage Marquee Lights',
+    description:
+      'How to price marquee letter rentals — per-letter rates, package pricing, delivery fees, and market positioning for rental business operators.',
+    keywords:
+      'marquee letter rental pricing, rental pricing guide, marquee letter price, rental business pricing, per letter rental rates',
+    h1: 'Marquee Letter Rental Pricing Guide',
+    intro:
+      'A pricing guide for marquee letter rental operators — covering per-letter rates, package pricing, delivery fees, market positioning, and how to set rates that protect margin.',
+    links: [
+      ['Marquee letter rental inventory packages', '/rental-inventory'],
+      ['Rental profitability and unit economics', '/rental-business/profitability'],
+      ['Marquee Signs Blog', '/blog'],
+    ],
+  },
+  {
+    path: '/faq',
+    title: 'Frequently Asked Questions | Vintage Marquee Lights',
+    description:
+      'Answers to common questions about custom marquee signs, marquee letters, rental inventory packages, shipping, lead times, and warranty.',
+    keywords:
+      'vintage marquee lights faq, marquee signs faq, marquee letters faq, rental inventory questions, marquee sign warranty',
+    h1: 'Frequently Asked Questions',
+    intro:
+      'Answers to common questions about Vintage Marquee Lights custom marquee signs, marquee letters, rental inventory packages, shipping, lead times, and warranty coverage.',
+    links: [
+      ['How it works', '/how-it-works'],
+      ['Press and media', '/press'],
+      ['Explore all custom marquee sign styles', '/'],
+    ],
+  },
+  {
+    path: '/press',
+    title: 'Press and Media | Vintage Marquee Lights',
+    description:
+      'Press, media features, and notable installations from Vintage Marquee Lights — the original manufacturer of commercial-grade marquee letters since 2008.',
+    keywords:
+      'vintage marquee lights press, marquee signs media, marquee letters in the news, marquee sign manufacturer press',
+    h1: 'Press and Media',
+    intro:
+      'Press features, media coverage, and notable installations from Vintage Marquee Lights, the original manufacturer of commercial-grade marquee letters since 2008.',
+    links: [
+      ['How it works', '/how-it-works'],
+      ['FAQ', '/faq'],
+      ['Explore all custom marquee sign styles', '/'],
+    ],
+  },
+  {
+    path: '/how-it-works',
+    title: 'How It Works | Vintage Marquee Lights',
+    description:
+      'How Vintage Marquee Lights designs, manufactures, and ships custom marquee signs, marquee letters, and rental inventory packages nationwide.',
+    keywords:
+      'how vintage marquee lights works, custom marquee sign process, marquee letter manufacturing, marquee sign ordering process',
+    h1: 'How It Works',
+    intro:
+      'How Vintage Marquee Lights designs, manufactures, and ships custom marquee signs, marquee letters, 3D logo signs, food truck signs, and rental inventory packages to customers nationwide.',
+    links: [
+      ['FAQ', '/faq'],
+      ['Press and media', '/press'],
+      ['Explore all custom marquee sign styles', '/'],
     ],
   },
 ];
