@@ -10,6 +10,180 @@
     <meta data-rh="true" name="keywords" content="marquee letter rental, event rental business, marquee lights, vintage marquee letters, rental inventory package, event entrepreneur">
     <link data-rh="true" rel="canonical" href="https://inventory.vintagemarqueelights.com/">
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+
+    <!-- Route-aware head bootstrap (runs synchronously before React hydrates).
+         Lovable hosting serves the root index.html for every clean URL, so the
+         static <title>/description/canonical above are homepage values. This
+         script rewrites them based on window.location.pathname so JS-executing
+         crawlers (Googlebot) and the in-browser experience see the correct
+         per-route SEO tags before React Helmet takes over.
+         NOTE: Non-JS-aware crawlers (LinkedIn, Slack, Facebook unfurlers) do
+         NOT execute this script and will still see the homepage tags in the
+         raw HTML on the current host. Full raw-HTML per-route fix requires a
+         host that serves dist/<route>/index.html or honors _redirects. -->
+    <script>
+      (function () {
+        var ORIGIN = 'https://inventory.vintagemarqueelights.com';
+        var ROUTES = {
+          '/': {
+            title: 'Custom Marquee Signs & Letters | Vintage Marquee Lights',
+            description: 'Custom marquee signs and letters built to own since 2008. Wall-hanging letters, 3D logo signs, food truck signage, event letters, and rental inventory.',
+            robots: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+          },
+          '/wall-hanging-signs': {
+            title: 'Wall-Hanging Marquee Letters & Custom Signs | Vintage Marquee Lights',
+            description: 'Custom wall-hanging marquee letters and steel lighted signs for restaurants, bars, retail stores, offices, studios, and homes. Handcrafted by Vintage Marquee Lights since 2008.'
+          },
+          '/3d-logos': {
+            title: '3D Logo Signs & Dimensional Metal Signs | Vintage Marquee Lights',
+            description: 'Custom 3D layered logo signs made from dimensional metal with handcrafted depth, color separation, and optional lighting for businesses, restaurants, offices, and brands.'
+          },
+          '/mobile-vendor-signs': {
+            title: 'Food Truck Signs & Mobile Vendor Marquee Signs | Vintage Marquee Lights',
+            description: 'Custom food truck signs and mobile vendor marquee signs built from steel for food trucks, trailers, carts, pop-ups, and mobile businesses nationwide.'
+          },
+          '/event-standup-signs': {
+            title: '36 and 48 Inch Event Marquee Letters | Vintage Marquee Lights',
+            description: 'Commercial-grade 36-inch and 48-inch stand-up marquee letters for weddings, corporate events, schools, venues, celebrations, and event rental professionals.'
+          },
+          '/rental-inventory': {
+            title: 'Marquee Letter Rental Inventory Packages | Vintage Marquee Lights',
+            description: 'Commercial-grade marquee letter rental inventory packages for entrepreneurs and event rental companies. Start or expand a marquee light rental business with 36-inch and 48-inch letters.'
+          },
+          '/custom-marquee-signs': {
+            title: 'Custom Marquee Signs Built to Own | Vintage Marquee Lights',
+            description: 'Custom marquee signs, marquee letters, lighted logo signs, and illuminated business signs handcrafted by Vintage Marquee Lights since 2008 for brands nationwide.'
+          },
+          '/wedding-marquee-signs': {
+            title: 'Wedding Marquee Letters & Signs | Vintage Marquee Lights',
+            description: 'Commercial-grade wedding marquee letters and illuminated signs for ceremonies, receptions, venues, and wedding rental professionals nationwide.'
+          },
+          '/corporate-marquee-signs': {
+            title: 'Corporate Marquee Letters & Event Signage | Vintage Marquee Lights',
+            description: 'Commercial-grade corporate marquee letters and branded illuminated signs for conferences, brand activations, trade shows, and corporate events.'
+          },
+          '/marquee-letters-for-event-pros': {
+            title: 'Marquee Letters for Event Pros | Vintage Marquee Lights',
+            description: 'Commercial-grade marquee letters built for event professionals, planners, venues, and rental companies that need durable inventory for repeated bookings.'
+          },
+          '/rental-business': {
+            title: 'Marquee Letter Rental Business Education Hub | Vintage Marquee Lights',
+            description: 'Education hub for entrepreneurs starting or scaling a marquee letter rental business. Startup cost, inventory planning, and profitability guidance.'
+          },
+          '/rental-business/startup-cost': {
+            title: 'Marquee Letter Rental Startup Cost | Vintage Marquee Lights',
+            description: 'What it actually costs to start a marquee letter rental business — inventory, transportation, storage, insurance, and operating expenses explained.'
+          },
+          '/rental-business/building-a-scalable-inventory': {
+            title: 'Building a Scalable Marquee Letter Rental Inventory | Vintage Marquee Lights',
+            description: 'How to plan, expand, and scale a marquee letter rental inventory — letter counts, sizing strategy, and reinvestment milestones for rental entrepreneurs.'
+          },
+          '/rental-business/profitability': {
+            title: 'Marquee Letter Rental Profitability | Vintage Marquee Lights',
+            description: 'How marquee letter rental businesses make money — booking rates, average ticket size, payback period, and long-term profitability fundamentals.'
+          },
+          '/start-marquee-rental-business': {
+            title: 'How to Start a Marquee Letter Rental Business | Vintage Marquee Lights',
+            description: 'Step-by-step guidance for starting a marquee letter rental business — from initial inventory and pricing to booking your first events.'
+          },
+          '/blog': {
+            title: 'Marquee Signs Blog | Vintage Marquee Lights',
+            description: 'Articles and guides on custom marquee signs, marquee letters, rental business strategy, and signage for schools, events, and food trucks.'
+          },
+          '/blog/why-schools-buy-commercial-marquee-letters': {
+            title: 'Why Schools Buy Commercial-Grade Marquee Letters | Vintage Marquee Lights',
+            description: 'Why K-12 schools, universities, and athletic programs invest in commercial-grade marquee letters for events, ceremonies, and school spirit branding.'
+          },
+          '/blog/36-vs-48-inch-marquee-letters': {
+            title: '36 vs 48 Inch Marquee Letters: Which Size Is Right? | Vintage Marquee Lights',
+            description: 'Compare 36-inch and 48-inch marquee letters by visual impact, transport, storage, and rental pricing to choose the right size for your event or business.'
+          },
+          '/blog/universities-teams-marquee-letters-branding': {
+            title: 'Universities and Teams: Marquee Letter Branding | Vintage Marquee Lights',
+            description: 'How universities, college athletic programs, and professional teams use commercial-grade marquee letters for branding, events, and fan activations.'
+          },
+          '/blog/food-truck-mobile-vendor-signage-guide': {
+            title: 'Food Truck and Mobile Vendor Signage Guide | Vintage Marquee Lights',
+            description: 'A complete guide to food truck signage and mobile vendor marquee signs — visibility, branding, materials, and design considerations for mobile food businesses.'
+          },
+          '/blog/marquee-letter-rental-pricing-guide': {
+            title: 'Marquee Letter Rental Pricing Guide | Vintage Marquee Lights',
+            description: 'How to price marquee letter rentals — per-letter rates, package pricing, delivery fees, and market positioning for rental business operators.'
+          },
+          '/faq': {
+            title: 'Frequently Asked Questions | Vintage Marquee Lights',
+            description: 'Answers to common questions about custom marquee signs, marquee letters, rental inventory packages, shipping, lead times, and warranty.'
+          },
+          '/press': {
+            title: 'Press and Media | Vintage Marquee Lights',
+            description: 'Press, media features, and notable installations from Vintage Marquee Lights — the original manufacturer of commercial-grade marquee letters since 2008.'
+          },
+          '/how-it-works': {
+            title: 'How It Works | Vintage Marquee Lights',
+            description: 'How Vintage Marquee Lights designs, manufactures, and ships custom marquee signs, marquee letters, and rental inventory packages nationwide.'
+          },
+          '/roi-calculator': {
+            title: 'Rental Fleet ROI Calculator | Vintage Marquee Lights',
+            description: 'Internal ROI calculator for marquee letter rental fleet planning.',
+            robots: 'noindex, nofollow'
+          }
+        };
+
+        try {
+          var path = window.location.pathname.replace(/\/+$/, '') || '/';
+          var meta = ROUTES[path];
+          if (!meta) return;
+
+          document.title = meta.title;
+
+          function upsertMeta(selector, attrName, attrValue, contentKey) {
+            var el = document.head.querySelector(selector);
+            if (!el) {
+              el = document.createElement('meta');
+              el.setAttribute(attrName, attrValue);
+              document.head.appendChild(el);
+            }
+            el.setAttribute('content', meta[contentKey]);
+          }
+
+          upsertMeta('meta[name="description"]', 'name', 'description', 'description');
+          upsertMeta('meta[property="og:title"]', 'property', 'og:title', 'title');
+          upsertMeta('meta[property="og:description"]', 'property', 'og:description', 'description');
+          upsertMeta('meta[name="twitter:title"]', 'name', 'twitter:title', 'title');
+          upsertMeta('meta[name="twitter:description"]', 'name', 'twitter:description', 'description');
+
+          var canonical = ORIGIN + (path === '/' ? '/' : path);
+          var canonicalEl = document.head.querySelector('link[rel="canonical"]');
+          if (!canonicalEl) {
+            canonicalEl = document.createElement('link');
+            canonicalEl.setAttribute('rel', 'canonical');
+            document.head.appendChild(canonicalEl);
+          }
+          canonicalEl.setAttribute('href', canonical);
+
+          var ogUrl = document.head.querySelector('meta[property="og:url"]');
+          if (!ogUrl) {
+            ogUrl = document.createElement('meta');
+            ogUrl.setAttribute('property', 'og:url');
+            document.head.appendChild(ogUrl);
+          }
+          ogUrl.setAttribute('content', canonical);
+
+          if (meta.robots) {
+            var robotsEl = document.head.querySelector('meta[name="robots"]');
+            if (!robotsEl) {
+              robotsEl = document.createElement('meta');
+              robotsEl.setAttribute('name', 'robots');
+              document.head.appendChild(robotsEl);
+            }
+            robotsEl.setAttribute('content', meta.robots);
+          }
+        } catch (e) {
+          /* fail-safe: never block render */
+        }
+      })();
+    </script>
+
     
     <!-- Performance optimizations -->
     <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>

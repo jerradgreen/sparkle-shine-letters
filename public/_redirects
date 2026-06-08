@@ -1,0 +1,32 @@
+# NOTE: Lovable's managed hosting does NOT honor this _redirects file.
+# It is included so that, when this dist/ is deployed to Cloudflare Pages,
+# Netlify, or any host that processes Netlify-style _redirects, the
+# pre-generated per-route HTML files in dist/<route>/index.html are served
+# for clean URLs before the SPA catch-all fallback to /index.html.
+
+/wall-hanging-signs                                       /wall-hanging-signs/index.html                                       200
+/event-standup-signs                                      /event-standup-signs/index.html                                      200
+/rental-inventory                                         /rental-inventory/index.html                                         200
+/mobile-vendor-signs                                      /mobile-vendor-signs/index.html                                      200
+/3d-logos                                                 /3d-logos/index.html                                                 200
+/custom-marquee-signs                                     /custom-marquee-signs/index.html                                     200
+/wedding-marquee-signs                                    /wedding-marquee-signs/index.html                                    200
+/corporate-marquee-signs                                  /corporate-marquee-signs/index.html                                  200
+/marquee-letters-for-event-pros                           /marquee-letters-for-event-pros/index.html                           200
+/rental-business                                          /rental-business/index.html                                          200
+/rental-business/startup-cost                             /rental-business/startup-cost/index.html                             200
+/rental-business/building-a-scalable-inventory            /rental-business/building-a-scalable-inventory/index.html            200
+/rental-business/profitability                            /rental-business/profitability/index.html                            200
+/start-marquee-rental-business                            /start-marquee-rental-business/index.html                            200
+/blog                                                     /blog/index.html                                                     200
+/blog/why-schools-buy-commercial-marquee-letters          /blog/why-schools-buy-commercial-marquee-letters/index.html          200
+/blog/36-vs-48-inch-marquee-letters                       /blog/36-vs-48-inch-marquee-letters/index.html                       200
+/blog/universities-teams-marquee-letters-branding         /blog/universities-teams-marquee-letters-branding/index.html         200
+/blog/food-truck-mobile-vendor-signage-guide              /blog/food-truck-mobile-vendor-signage-guide/index.html              200
+/blog/marquee-letter-rental-pricing-guide                 /blog/marquee-letter-rental-pricing-guide/index.html                 200
+/faq                                                      /faq/index.html                                                      200
+/press                                                    /press/index.html                                                    200
+/how-it-works                                             /how-it-works/index.html                                             200
+
+# SPA catch-all
+/*                                                        /index.html                                                          200
