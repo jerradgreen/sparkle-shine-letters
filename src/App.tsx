@@ -79,7 +79,7 @@ const AppChrome = () => {
       if ("requestIdleCallback" in window) {
         window.requestIdleCallback(loadChrome, { timeout: 4000 });
       } else {
-        window.setTimeout(loadChrome, 4000);
+        setTimeout(loadChrome, 4000);
       }
     };
 
