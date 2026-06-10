@@ -25,6 +25,24 @@ const homepageReviews = [
   ...standUpSignsConfig.testimonials.items,
   ...foodTruckSignsConfig.testimonials.items,
   ...logoSignsConfig.testimonials.items,
+  {
+    rating: 5,
+    content: "Everyone loves the letters and we use them for so many things. They were the highlight of the decor, and one of the best purchases I made for our marketing department.",
+    name: "Joy Hackney",
+    role: "Vehicle Marketing Administrator, Lexus Southern Area",
+  },
+  {
+    rating: 5,
+    content: "We added marquee letters because they fit naturally into the events we already host and produce. They give our clients another way to personalize the space and create a photo-ready moment without bringing in another vendor.",
+    name: "DJ Franco Events",
+    role: "Event Entertainment and Production Company",
+  },
+  {
+    rating: 5,
+    content: "Vintage Marquee Lights helped us start with marquee signs we felt proud to put in front of clients. The lights gave us a professional look from day one and made it easier to create beautiful setups and keep building the C&D brand.",
+    name: "Dion & Chantal Powell",
+    role: "C&D Marquees and Event Rentals",
+  },
 ];
 
 const signStyles = [

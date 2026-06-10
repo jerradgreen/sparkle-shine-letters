@@ -3,13 +3,14 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import { Lightbulb, Star, Package, Clock, Mail, Zap, DollarSign, Percent, Check, Type, FileText, Hash, Circle, Square, Triangle, ExternalLink, Monitor, Globe } from "lucide-react";
+import { Lightbulb, Star, Package, Clock, Mail, Zap, DollarSign, Percent, Check, Type, FileText, Hash, Circle, Square, Triangle, ExternalLink, Monitor, Globe, X } from "lucide-react";
 import ShopifyHeader from "@/components/ShopifyHeader";
 import ShopifyFooter from "@/components/ShopifyFooter";
 import Navigation from "@/components/Navigation";
 import PerformantImage from "@/components/PerformantImage";
 import { Helmet } from "react-helmet-async";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 import { RentalGuideDownloadSection } from "@/components/RentalGuideDownloadSection";
 import { LetterViewer3D } from "@/components/LetterViewer3D";
 
@@ -25,6 +26,39 @@ const marqueeDetailImage = "https://cdn.shopify.com/s/files/1/1403/8315/files/DS
 const marquee1Image = "https://cdn.shopify.com/s/files/1/1403/8315/files/1_lights_on_studio.webp";
 const marquee2Image = "https://cdn.shopify.com/s/files/1/1403/8315/files/2_lights_on_studio.webp";
 const marquee3Image = "https://cdn.shopify.com/s/files/1/1403/8315/files/3_lights_on_studio.webp";
+
+type RentalGalleryImage = {
+  src: string;
+  alt: string;
+};
+
+const exampleRentalInventoryGallery: RentalGalleryImage[] = [
+  {
+    src: elev8Image,
+    alt: "ELEV8 marquee letters setup",
+  },
+  {
+    src: year1969Image,
+    alt: "1969 marquee numbers display",
+  },
+  {
+    src: marryMeImage,
+    alt: "Marry Me marquee letters wedding setup",
+  },
+  {
+    src: setup1Image,
+    alt: "Marquee letters event setup",
+  },
+  {
+    src: setup2Image,
+    alt: "Professional marquee letter display",
+  },
+  {
+    src: marqueeDetailImage,
+    alt: "Close-up of marquee letter construction and quality",
+  },
+];
+
 import testimonialSarahImage from "@/assets/testimonial-sarah.jpg";
 import testimonialMikeImage from "@/assets/testimonial-mike.jpg";
 
@@ -66,6 +100,7 @@ const djFrancoGallery = [
 
 const RentalInventory = () => {
   const navigate = useNavigate();
+  const [selectedGalleryImage, setSelectedGalleryImage] = useState<RentalGalleryImage | null>(null);
   
   const openQuoteForm = () => {
     navigate('/quote/rental-inventory');
@@ -832,15 +867,24 @@ const RentalInventory = () => {
             </div>
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
               {cdMarqueesGallery.map((image) => (
-                <div key={image.src} className="rounded-xl overflow-hidden shadow-md bg-card border border-border">
+                <button
+                  key={image.src}
+                  type="button"
+                  className="group relative rounded-xl overflow-hidden shadow-md bg-card border border-border focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+                  onClick={() => setSelectedGalleryImage(image)}
+                  aria-label={`Enlarge ${image.alt}`}
+                >
                   <PerformantImage
                     src={image.src}
                     alt={image.alt}
-                    className="w-full aspect-[4/3] object-cover"
+                    className="w-full aspect-[4/3] object-cover transition-transform duration-300 group-hover:scale-105"
                     loading="lazy"
                     sizes="(max-width: 1024px) 50vw, 25vw"
                   />
-                </div>
+                  <span className="absolute inset-x-0 bottom-0 bg-black/60 px-4 py-3 text-left text-sm font-medium text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-focus:opacity-100">
+                    Click to enlarge
+                  </span>
+                </button>
               ))}
             </div>
           </div>
@@ -941,15 +985,24 @@ const RentalInventory = () => {
             </div>
             <div className="grid md:grid-cols-3 gap-4">
               {djFrancoGallery.map((image) => (
-                <div key={image.src} className="rounded-xl overflow-hidden shadow-md bg-card border border-border">
+                <button
+                  key={image.src}
+                  type="button"
+                  className="group relative rounded-xl overflow-hidden shadow-md bg-card border border-border focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+                  onClick={() => setSelectedGalleryImage(image)}
+                  aria-label={`Enlarge ${image.alt}`}
+                >
                   <PerformantImage
                     src={image.src}
                     alt={image.alt}
-                    className="w-full aspect-[4/3] object-cover"
+                    className="w-full aspect-[4/3] object-cover transition-transform duration-300 group-hover:scale-105"
                     loading="lazy"
                     sizes="(max-width: 768px) 100vw, 33vw"
                   />
-                </div>
+                  <span className="absolute inset-x-0 bottom-0 bg-black/60 px-4 py-3 text-left text-sm font-medium text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-focus:opacity-100">
+                    Click to enlarge
+                  </span>
+                </button>
               ))}
             </div>
           </div>
@@ -1446,61 +1499,30 @@ const RentalInventory = () => {
           <p className="text-base text-muted-foreground leading-relaxed mb-8 text-center max-w-4xl mx-auto">
             See how rental companies and event businesses use our marquee letter inventory at weddings, corporate events, and private celebrations. These are real configurations from active rental operators.
           </p>
+          <p className="text-sm font-medium text-primary text-center mb-6">
+            Click any photo to enlarge it.
+          </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="relative overflow-hidden rounded-lg">
-              <PerformantImage 
-                src={elev8Image} 
-                alt="ELEV8 marquee letters setup" 
-                className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
-                loading="lazy"
-                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-              />
-            </div>
-            <div className="relative overflow-hidden rounded-lg">
-              <PerformantImage 
-                src={year1969Image} 
-                alt="1969 marquee numbers display" 
-                className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
-                loading="lazy"
-                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-              />
-            </div>
-            <div className="relative overflow-hidden rounded-lg">
-              <PerformantImage 
-                src={marryMeImage} 
-                alt="Marry Me marquee letters wedding setup" 
-                className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
-                loading="lazy"
-                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-              />
-            </div>
-            <div className="relative overflow-hidden rounded-lg">
-              <PerformantImage 
-                src={setup1Image} 
-                alt="Marquee letters event setup" 
-                className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
-                loading="lazy"
-                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-              />
-            </div>
-            <div className="relative overflow-hidden rounded-lg">
-              <PerformantImage 
-                src={setup2Image} 
-                alt="Professional marquee letter display" 
-                className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
-                loading="lazy"
-                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-              />
-            </div>
-            <div className="relative overflow-hidden rounded-lg">
-              <PerformantImage 
-                src={marqueeDetailImage} 
-                alt="Close-up of marquee letter construction and quality" 
-                className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
-                loading="lazy"
-                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-              />
-            </div>
+            {exampleRentalInventoryGallery.map((image) => (
+              <button
+                key={image.src}
+                type="button"
+                className="group relative overflow-hidden rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+                onClick={() => setSelectedGalleryImage(image)}
+                aria-label={`Enlarge ${image.alt}`}
+              >
+                <PerformantImage
+                  src={image.src}
+                  alt={image.alt}
+                  className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+                  loading="lazy"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                />
+                <span className="absolute inset-x-0 bottom-0 bg-black/60 px-4 py-3 text-left text-sm font-medium text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-focus:opacity-100">
+                  Click to enlarge
+                </span>
+              </button>
+            ))}
           </div>
         </div>
       </section>
@@ -1576,6 +1598,33 @@ const RentalInventory = () => {
           </p>
         </div>
       </section>
+
+      {selectedGalleryImage && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/85 p-4"
+          role="dialog"
+          aria-modal="true"
+          aria-label={selectedGalleryImage.alt}
+          onClick={() => setSelectedGalleryImage(null)}
+        >
+          <div className="relative max-h-[90vh] max-w-6xl" onClick={(event) => event.stopPropagation()}>
+            <button
+              type="button"
+              className="absolute -right-2 -top-12 inline-flex h-10 w-10 items-center justify-center rounded-full bg-white text-black shadow-lg transition hover:bg-white/90 focus:outline-none focus:ring-2 focus:ring-primary"
+              onClick={() => setSelectedGalleryImage(null)}
+              aria-label="Close enlarged image"
+            >
+              <X className="h-5 w-5" />
+            </button>
+            <img
+              src={selectedGalleryImage.src}
+              alt={selectedGalleryImage.alt}
+              className="max-h-[90vh] w-auto max-w-full rounded-lg object-contain shadow-2xl"
+            />
+            <p className="mt-3 text-center text-sm text-white/80">{selectedGalleryImage.alt}</p>
+          </div>
+        </div>
+      )}
 
       <ShopifyFooter />
     </div>
