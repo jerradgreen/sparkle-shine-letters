@@ -134,9 +134,9 @@ const RentalInventory = () => {
                 <p className="text-base text-muted-foreground leading-snug mb-2">
                   Our commercial-grade marquee letter packages are designed for repeat rentals, long-term durability, and strong ROI. Get a proven inventory foundation with premium 36″ letters, durable finishes, and logistics handled—so you can launch faster or scale what you already have.
                </p>
-               <p className="text-sm text-muted-foreground leading-relaxed mb-3">
-                 Rental inventory packages are revenue-producing assets — not décor. Most clients invest $15,000-$35,000 depending on configuration. With consistent bookings, many recover their investment within the first year and continue generating profit for years after.
-               </p>
+<p className="text-sm font-semibold text-foreground leading-relaxed mb-3">
+	                 Rental inventory packages are revenue-producing assets — not décor. Most clients invest $15,000-$35,000 depending on configuration. With consistent bookings, many recover their investment within the first year and continue generating profit for years after.
+	               </p>
                <p className="text-sm text-primary/80 font-medium mb-3">
                  Financing available through Shop Pay Installments — apply in seconds at checkout.
                </p>
@@ -178,9 +178,9 @@ const RentalInventory = () => {
                <p className="text-lg text-muted-foreground mb-3 leading-relaxed">
                  Our commercial-grade marquee letter packages are designed for repeat rentals, long-term durability, and strong ROI. Get a proven inventory foundation with premium 36″ letters, durable finishes, and logistics handled—so you can launch faster or scale what you already have.
                </p>
-               <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
-                 Rental inventory packages are revenue-producing assets — not décor. Most clients invest $15,000-$35,000 depending on configuration. With consistent bookings, many recover their investment within the first year and continue generating profit for years after.
-               </p>
+<p className="text-sm font-semibold text-foreground mb-4 leading-relaxed">
+	                 Rental inventory packages are revenue-producing assets — not décor. Most clients invest $15,000-$35,000 depending on configuration. With consistent bookings, many recover their investment within the first year and continue generating profit for years after.
+	               </p>
                <p className="text-sm text-primary/80 font-medium mb-4">
                  Financing available through Shop Pay Installments — apply in seconds at checkout.
                </p>

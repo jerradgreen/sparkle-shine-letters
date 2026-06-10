@@ -66,23 +66,8 @@ const EventStandUpSigns = () => {
       {/* 3D Letter Viewer — placed high so visitors see style options immediately */}
       <LetterViewer3D />
 
-      {/* CTA after 3D viewer — drive visitors straight to the visualizer */}
-      <section className="py-8 bg-white">
-        <div className="container mx-auto px-4 text-center">
-          <Button
-            size="lg"
-            className="bg-accent text-accent-foreground hover:bg-accent/90 text-base md:text-lg px-8 py-6"
-            onClick={() => {
-              const visualizer = document.querySelector('.marquee-visualizer');
-              if (visualizer) {
-                visualizer.scrollIntoView({ behavior: 'smooth' });
-              }
-            }}
-          >
-            Spell Out Your Words & Get a Quote
-          </Button>
-        </div>
-      </section>
+      {/* Marquee Visualizer — placed directly below the 3D section so visitors can build their set immediately */}
+      <MarqueeVisualizer />
 
       {/* Institutional / Repeat-Use Block */}
       <section className="py-8 px-4 bg-background">
@@ -232,7 +217,6 @@ const EventStandUpSigns = () => {
       </section>
 
       <TestimonialSection config={standUpSignsConfig.testimonials} />
-      <MarqueeVisualizer />
       
 
       {/* Link to Homepage */}

@@ -69,7 +69,7 @@ const MobileVendorSigns = () => {
               <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
                 Hand-crafted by experienced metal fabricators — not mass-produced plastic signage. Whether you want an illuminated or light up food truck sign, every piece is built to last.
               </p>
-              <p className="text-sm text-muted-foreground mb-6 leading-relaxed">
+              <p className="text-sm font-semibold text-foreground mb-6 leading-relaxed">
                 Custom mobile vendor signs typically start around $3,000. Most full builds range from $5,000–$10,000 depending on size, font style, and details.
               </p>
               
@@ -96,7 +96,7 @@ const MobileVendorSigns = () => {
               <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
                 Hand-crafted by experienced metal fabricators — not mass-produced plastic signage. Whether you want an illuminated or light up food truck sign, every piece is built to last.
               </p>
-              <p className="text-sm text-muted-foreground mb-6 leading-relaxed">
+              <p className="text-sm font-semibold text-foreground mb-6 leading-relaxed">
                 Custom mobile vendor signs typically start around $3,000. Most full builds range from $5,000–$10,000 depending on size, font style, and details.
               </p>
               

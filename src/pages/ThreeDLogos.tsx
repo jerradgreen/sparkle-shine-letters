@@ -76,7 +76,7 @@ const ThreeDLogos = () => {
               <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
                 Built by experienced metal fabricators — not mass-produced.
               </p>
-              <p className="text-sm text-muted-foreground mb-6 leading-relaxed">
+              <p className="text-sm font-semibold text-foreground mb-6 leading-relaxed">
                 Custom logo signs typically start around $1,500. Most commissioned pieces range from $2,500–$7,500+ depending on size, layers, and detail.
               </p>
               
@@ -128,7 +128,7 @@ const ThreeDLogos = () => {
               <p className="text-sm text-muted-foreground mb-2 leading-relaxed">
                 Built by experienced metal fabricators — not mass-produced.
               </p>
-              <p className="text-sm text-muted-foreground mb-6 leading-relaxed">
+              <p className="text-sm font-semibold text-foreground mb-6 leading-relaxed">
                 Custom logo signs typically start around $1,500. Most commissioned pieces range from $2,500–$7,500+ depending on size, layers, and detail.
               </p>
               
