@@ -50,7 +50,7 @@ export const MarqueeHeroSection = () => {
         {/* Mobile-only pricing text */}
          <div className="md:hidden mt-3 text-center max-w-2xl mx-auto">
            <p className="text-sm font-semibold leading-snug">
-              36″ letters starting at $800. Letters, numbers, symbols, and topper phrases available.
+              36″ letters start at $800 per letter, with quantity-based discounts available. Letters, numbers, symbols, and topper phrases available.
             </p>
         </div>
       </div>
@@ -58,7 +58,7 @@ export const MarqueeHeroSection = () => {
       {/* Pricing Info - Above review */}
        <div className="hidden md:block relative z-10 text-center text-white max-w-2xl mx-auto space-y-1 mt-auto mb-1">
          <p className="text-sm md:text-base font-semibold leading-snug">
-           36″ letters starting at $800. Letters, numbers, symbols, and topper phrases available.
+           36″ letters start at $800 per letter, with quantity-based discounts available. Letters, numbers, symbols, and topper phrases available.
          </p>
       </div>
 

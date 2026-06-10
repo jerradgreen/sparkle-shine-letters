@@ -231,6 +231,13 @@ const ThreeDLogos = () => {
         </div>
       </section>
 
+      {/* Example gallery moved higher so visitors see finished signs before deeper copy */}
+      {/* Gallery */}
+      <section id="gallery" className="py-10 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <GallerySection config={logoSignsConfig.gallery} />
+        </div>
+      </section>
       {/* Authority Section 1 */}
       <section className="py-10 px-4 bg-gradient-to-b from-background to-muted/20">
         <div className="max-w-6xl mx-auto">
@@ -278,12 +285,7 @@ const ThreeDLogos = () => {
         </div>
       </section>
 
-      {/* Gallery */}
-      <section id="gallery" className="py-10 bg-muted/30">
-        <div className="container mx-auto px-4">
-          <GallerySection config={logoSignsConfig.gallery} />
-        </div>
-      </section>
+
 
       {/* How It Works Section */}
       <section className="py-10 px-4 bg-gradient-to-b from-background to-muted/20">
@@ -296,9 +298,9 @@ const ThreeDLogos = () => {
               <div className="w-20 h-20 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center">
                 <span className="text-3xl font-bold text-primary">1</span>
               </div>
-              <h3 className="text-xl font-bold mb-3 text-foreground">Submit Your Logo</h3>
+              <h3 className="text-xl font-bold mb-3 text-foreground">Submit Your Idea, Design, or Logo</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
-                Send us your logo file or concept. We'll discuss size, colors, materials, and any special requests.
+                Send us your idea, design, logo file, sketch, or concept. We'll discuss size, colors, materials, and any special requests.
               </p>
             </div>
 

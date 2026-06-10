@@ -168,6 +168,13 @@ const MobileVendorSigns = () => {
         </div>
       </section>
 
+      {/* Example gallery moved higher so visitors see finished signs before deeper copy */}
+      {/* Gallery */}
+      <section id="gallery" className="py-10 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <GallerySection config={foodTruckSignsConfig.gallery} />
+        </div>
+      </section>
       {/* Custom Food Truck & Trailer Signage — SEO Depth Section */}
       <section className="py-10 px-4 bg-gradient-to-b from-background to-muted/20">
         <div className="max-w-6xl mx-auto">
@@ -202,12 +209,7 @@ const MobileVendorSigns = () => {
         </div>
       </section>
 
-      {/* Gallery */}
-      <section id="gallery" className="py-10 bg-muted/30">
-        <div className="container mx-auto px-4">
-          <GallerySection config={foodTruckSignsConfig.gallery} />
-        </div>
-      </section>
+
 
 
       {/* FAQ Section */}

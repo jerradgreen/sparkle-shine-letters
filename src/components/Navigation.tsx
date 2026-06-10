@@ -15,7 +15,6 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import { CartDrawer } from "@/components/CartDrawer";
 import { SignStyleImageGrid } from "@/components/SignStyleImageGrid";
 
 const Navigation = () => {
@@ -96,10 +95,6 @@ const Navigation = () => {
             <Link to="/blog" className="text-foreground hover:text-primary font-medium">
               Blog
             </Link>
-          </div>
-
-          <div className="ml-auto">
-            <CartDrawer />
           </div>
 
           {/* Mobile Menu Button */}

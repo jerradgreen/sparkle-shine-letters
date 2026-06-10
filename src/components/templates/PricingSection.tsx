@@ -57,12 +57,15 @@ export const PricingSection = ({ config, onPackageSelect }: PricingSectionProps)
               <CardHeader className="text-center space-y-4 pb-8">
                 <h3 className="text-2xl font-bold">{pkg.name}</h3>
                 <p className="text-muted-foreground">{pkg.description}</p>
-                <div className="space-y-2">
-                  <div className="text-3xl md:text-4xl font-bold text-primary">
+                <div className="space-y-3 rounded-2xl border border-primary/20 bg-primary/5 px-4 py-5 shadow-sm">
+                  <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary/80">
+                    Investment Range
+                  </p>
+                  <div className="text-4xl md:text-5xl font-extrabold text-primary leading-tight">
                     {pkg.priceRange}
                   </div>
-                  <p className="text-sm text-muted-foreground">
-                    Investment Range
+                  <p className="text-sm font-medium text-muted-foreground">
+                    Price expectations shown up front before the quote request.
                   </p>
                 </div>
               </CardHeader>

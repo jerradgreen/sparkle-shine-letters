@@ -41,7 +41,7 @@ export const SignStyleImageGrid = ({ variant = "default", onSelect }: SignStyleI
                     </p>
                   </div>
                   <div className="text-white text-xs flex items-center gap-1 mt-auto">
-                    click to quote <span className="text-sm">→</span>
+                    view details <span className="text-sm">→</span>
                   </div>
                 </div>
               </div>

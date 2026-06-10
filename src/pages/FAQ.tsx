@@ -21,6 +21,14 @@ const faqs = [
     answer: "Yes. We ship marquee letters and signs across the United States. Larger items like 48-inch letters and full rental inventory packages ship via freight. Smaller items ship via standard carriers. Lead times vary by product — custom fabricated items typically take 4-8 weeks and rental packages approx 14 weeks."
   },
   {
+    question: "What is your refund policy?",
+    answer: "Because every Vintage Marquee Lights order is built, prepared, or produced specifically for each customer, all sign orders are non-refundable once production or order processing has begun. This includes custom fabricated signs, wall-hanging letters, 3D layered signs, mobile vendor signs, event-style letters, and rental inventory packages. Custom fabricated sign customers review and approve the production design before fabrication begins, including the general layout, size, colors, and sign details. Event letters and rental inventory packages are produced or reserved based on the customer's selected size, package, letters, colors, upgrades, and shipping method. Once an order has been approved, produced, or placed into the production process, it cannot be returned or refunded simply because the customer changes their mind, decides they would have preferred a different size, color, letter set, package, style, or no longer needs the signs. That said, we are easy to work with and want every customer to feel taken care of. If something is wrong, damaged, missing, or needs attention, we will review the issue and work with the customer on a practical solution whenever possible."
+  },
+  {
+    question: "What should I do when my sign is delivered?",
+    answer: "Please inspect your shipment carefully when it arrives and before signing off on delivery whenever possible. Take clear photos and videos of the packaging, pallet, box, crate, and the sign itself during delivery and unpacking. If there is visible damage to the packaging, or if you suspect the sign may have been damaged during shipping, document everything immediately. Freight and shipping insurance claims require proof, and the more photos and videos we have, the better chance we have of resolving the claim successfully. Please keep all packaging materials until the sign has been fully inspected. If damage is found, contact Vintage Marquee Lights as soon as possible with photos, videos, and a description of the issue so we can help start the claim process and determine the best next steps."
+  },
+  {
     question: "Can you make custom shapes and logos?",
     answer: "Yes. Our 3D layered logo signs and custom wall-hanging signs are fully custom fabricated to your specifications. We can reproduce logos, brand marks, custom shapes, and dimensional lettering in any font. These are popular for restaurants, bars, hotels, retail stores, and corporate offices."
   },

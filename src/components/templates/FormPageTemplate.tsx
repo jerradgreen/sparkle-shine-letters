@@ -1,5 +1,6 @@
 import { ReactNode, useEffect, useMemo } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 
@@ -116,6 +117,27 @@ export const FormPageTemplate = ({
         <div className="container mx-auto max-w-4xl">
           {/* SEO-only heading to keep semantics without visible title */}
           <h1 className="sr-only">{title}</h1>
+
+          <div className="mb-6 flex flex-col gap-3 rounded-lg border border-border bg-card/80 p-4 shadow-sm sm:flex-row sm:items-center sm:justify-between">
+            <div>
+              <p className="text-sm font-semibold text-foreground">Need to choose a different sign style?</p>
+              <p className="text-sm text-muted-foreground">You can go back to the sign options or exit the quote form at any time.</p>
+            </div>
+            <div className="flex flex-col gap-2 sm:flex-row">
+              <Link
+                to="/quote"
+                className="inline-flex items-center justify-center rounded-md border border-primary px-4 py-2 text-sm font-semibold text-primary transition-colors hover:bg-primary hover:text-primary-foreground"
+              >
+                Back to sign options
+              </Link>
+              <Link
+                to="/"
+                className="inline-flex items-center justify-center rounded-md border border-border px-4 py-2 text-sm font-semibold text-foreground transition-colors hover:bg-muted"
+              >
+                Exit quote form
+              </Link>
+            </div>
+          </div>
           
           <div className="bg-card rounded-lg shadow-lg p-6 md:p-8 min-h-[600px]">
             <div className="cognito" id={containerId}></div>

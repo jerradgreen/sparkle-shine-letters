@@ -225,6 +225,13 @@ const WallHangingMarqueeSigns = () => {
         </div>
       </section>
 
+      {/* Example gallery moved higher so visitors see finished signs before deeper copy */}
+      {/* Gallery */}
+      <section id="gallery" className="py-10 bg-gradient-to-b from-background to-muted/20">
+        <div className="container mx-auto px-4">
+          <GallerySection config={wallHangingConfig.gallery} />
+        </div>
+      </section>
       {/* 10 Reasons Section */}
       <section className="py-10 bg-gradient-to-b from-background to-muted/20">
         <div className="container mx-auto px-4">
@@ -353,12 +360,7 @@ const WallHangingMarqueeSigns = () => {
         </div>
       </section>
 
-      {/* Gallery */}
-      <section id="gallery" className="py-10 bg-gradient-to-b from-background to-muted/20">
-        <div className="container mx-auto px-4">
-          <GallerySection config={wallHangingConfig.gallery} />
-        </div>
-      </section>
+
 
       {/* How It Works Section */}
       <section className="py-10 px-4">

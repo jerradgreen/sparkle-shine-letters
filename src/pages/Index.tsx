@@ -5,6 +5,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ShopifyHeader from "@/components/ShopifyHeader";
 import { HomeHighlightsSection } from "@/components/HomeHighlightsSection";
+import { foodTruckSignsConfig, logoSignsConfig, standUpSignsConfig, wallHangingConfig } from "@/config/templateConfigs";
 import { Star } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
@@ -18,6 +19,13 @@ const getResponsiveShopifyImageSet = (imageUrl: string) => {
     `${imageUrl} 800w`,
   ].join(', ');
 };
+
+const homepageReviews = [
+  ...wallHangingConfig.testimonials.items,
+  ...standUpSignsConfig.testimonials.items,
+  ...foodTruckSignsConfig.testimonials.items,
+  ...logoSignsConfig.testimonials.items,
+];
 
 const signStyles = [
   {
@@ -224,27 +232,38 @@ const Index = () => {
         {/* Three Features Section */}
         <HomeHighlightsSection />
 
-        {/* 5-Star Review Section */}
-        <div className="mb-12 max-w-4xl mx-auto">
-          <Card className="bg-muted/30 border-0 shadow-none">
-            <CardContent className="pt-6">
-              <div className="flex justify-center mb-3">
-                {[1, 2, 3, 4, 5].map((star) => (
-                  <Star key={star} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                ))}
-              </div>
-              <p className="text-center text-muted-foreground mb-4 italic">
-                "From initial concept sketches to the final mockups and delivery, the entire process was seamless. The finished signs exceeded our expectations and has become a signature piece across all our locations. Professional, high-quality work from start to finish."
-              </p>
-              <p className="text-center font-semibold text-foreground">
-                — Michael A., SC
-              </p>
-              <p className="text-center text-sm text-muted-foreground">
-                Chain of Retail Food Stores
-              </p>
-            </CardContent>
-          </Card>
-        </div>
+        {/* Text-Only Reviews Section */}
+        <section className="mb-12 max-w-7xl mx-auto" aria-labelledby="homepage-reviews-heading">
+          <div className="text-center mb-8">
+            <h2 id="homepage-reviews-heading" className="text-3xl font-bold text-foreground mb-3">
+              What Customers Say About Vintage Marquee Lights
+            </h2>
+            <p className="text-muted-foreground max-w-3xl mx-auto">
+              Real feedback from wall-hanging sign buyers, event professionals, mobile vendors, and custom logo customers.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            {homepageReviews.map((review, index) => (
+              <Card key={`${review.name}-${index}`} className="h-full bg-card border-border shadow-sm">
+                <CardContent className="p-5 flex h-full flex-col">
+                  <div className="flex mb-3" aria-label={`${review.rating} star review`}>
+                    {Array.from({ length: review.rating }).map((_, star) => (
+                      <Star key={star} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                    ))}
+                  </div>
+                  <p className="text-sm text-muted-foreground italic leading-relaxed flex-1">
+                    &ldquo;{review.content}&rdquo;
+                  </p>
+                  <div className="mt-4 border-t border-border pt-3">
+                    <p className="font-semibold text-foreground">{review.name}</p>
+                    <p className="text-xs text-muted-foreground">{review.role}</p>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </section>
 
         {/* Instagram Gallery Section - Lazy loaded for performance */}
         <div id="gallery" className="text-center mb-12" ref={instagramRef}>

@@ -278,6 +278,153 @@ const RentalInventory = () => {
         </div>
       </section>
 
+      {/* High-priority conversion sections moved up near the top */}
+      {/* Packages & Pricing */}
+      <section id="packages" className="py-16 px-4 bg-gradient-to-r from-primary/5 to-accent/5 scroll-mt-24">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl font-bold text-center mb-12 text-foreground">Rental Inventory Packages</h2>
+          <p className="text-base text-muted-foreground leading-relaxed mb-8 text-center">
+            Our rental inventory packages range from 25 to 112+ pieces and are designed specifically for event rental companies. Whether you're launching a new marquee letter rental business or expanding an existing operation, each package is built around the highest-demand characters to maximize booking flexibility from day one.
+          </p>
+          <p className="text-xl text-center text-muted-foreground mb-12">
+            We offer flexible packages designed to grow with your rental business.
+          </p>
+          
+          <div className="grid md:grid-cols-2 gap-8 mb-12">
+            <Card className="border-primary border-2">
+              <CardContent className="p-8">
+                <div className="flex items-center mb-4">
+                  <Lightbulb className="w-8 h-8 text-primary mr-3" />
+                  <h3 className="text-2xl font-bold text-card-foreground">Investment Range</h3>
+                </div>
+                <p className="text-3xl font-bold text-primary mb-4">$12,500–$40,000</p>
+                <p className="text-muted-foreground">Most clients invest in this range for a complete rental inventory, depending on package size and delivery location.</p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-secondary border-2">
+              <CardContent className="p-8">
+                <div className="flex items-center mb-4">
+                  <Package className="w-8 h-8 text-secondary mr-3" />
+                  <h3 className="text-2xl font-bold text-card-foreground">Best Price</h3>
+                </div>
+                <p className="text-3xl font-bold text-secondary mb-4">~$300 per letter (Elite Pack)</p>
+                <p className="text-muted-foreground">Includes 36″ self-standing marquee letters made of powder-coated steel, with LED bulbs and reusable foam-lined transport boxes and more!</p>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="text-center">
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              Final pricing depends on the exact mix and style of letters—including any upgrades like color-changing bulbs or LED neon options—as well as your preferred timeline and shipping destination. Reach out for a custom quote and we'll help build the perfect inventory for your business.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Website Feature Section */}
+      <section className="py-16 px-4 bg-muted/30">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-10">
+            <div className="inline-flex items-center gap-2 bg-accent/10 text-accent border border-accent/20 rounded-full px-4 py-1.5 text-sm font-medium mb-4">
+              <Globe className="w-4 h-4" />
+              Available With Your Package
+            </div>
+            <h2 className="text-4xl font-bold text-foreground mb-4">Your Business Gets Its Own Website</h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Larger packages include a fully built, ready-to-launch website for your business — and it can be added to any package. Your brand, your pricing, your photos, live at your own domain.
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-10 items-center">
+            {/* Browser mockup */}
+            <div className="relative">
+              <div className="bg-card rounded-xl shadow-2xl border border-border overflow-hidden">
+                {/* Browser chrome */}
+                <div className="bg-muted px-4 py-3 flex items-center gap-3 border-b border-border">
+                  <div className="flex gap-1.5">
+                    <div className="w-3 h-3 rounded-full bg-red-400" />
+                    <div className="w-3 h-3 rounded-full bg-yellow-400" />
+                    <div className="w-3 h-3 rounded-full bg-green-400" />
+                  </div>
+                  <div className="flex-1 bg-background rounded-md px-3 py-1 text-xs text-muted-foreground font-mono">
+                    marquee.yourbusiness.com
+                  </div>
+                </div>
+                {/* Site preview screenshot */}
+                <div className="relative">
+                  <img
+                    src="/images/demo-site-preview.webp"
+                    alt="Demo rental website homepage preview"
+                    className="w-full block"
+                    loading="lazy"
+                  />
+                  {/* Demo overlay badge */}
+                  <div className="absolute top-3 right-3 bg-black/70 text-white text-xs font-semibold px-3 py-1.5 rounded-full backdrop-blur-sm">
+                    DEMO SITE
+                  </div>
+                </div>
+              </div>
+              {/* View demo link */}
+              <div className="text-center mt-4">
+                <a
+                  href="https://marquee.jerradgreen.digital"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-sm text-accent hover:text-accent/80 font-medium transition-colors"
+                >
+                  <ExternalLink className="w-4 h-4" />
+                  View the live demo site
+                </a>
+              </div>
+            </div>
+
+            {/* Feature list */}
+            <div className="space-y-5">
+              <div className="flex gap-4">
+                <div className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0">
+                  <Monitor className="w-5 h-5 text-accent" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-foreground mb-1">Built and ready to launch</h3>
+                  <p className="text-muted-foreground text-sm">Your site is fully built before you receive your letters. Gallery, pricing, inquiry form, and availability calendar are all included.</p>
+                </div>
+              </div>
+              <div className="flex gap-4">
+                <div className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0">
+                  <Globe className="w-5 h-5 text-accent" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-foreground mb-1">Your domain, your brand</h3>
+                  <p className="text-muted-foreground text-sm">Connect your own domain name and it looks completely custom — like you built it yourself.</p>
+                </div>
+              </div>
+              <div className="flex gap-4">
+                <div className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0">
+                  <Zap className="w-5 h-5 text-accent" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-foreground mb-1">Marquee letter visualizer</h3>
+                  <p className="text-muted-foreground text-sm">Customers can type any phrase and see exactly what their letters will look like before they book. A powerful tool that turns interest into reservations.</p>
+                </div>
+              </div>
+              <div className="flex gap-4">
+                <div className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0">
+                  <Check className="w-5 h-5 text-accent" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-foreground mb-1">Easy admin dashboard</h3>
+                  <p className="text-muted-foreground text-sm">Update your pricing, swap photos, manage inquiries, and edit your FAQ — all from a simple dashboard. No technical skills needed.</p>
+                </div>
+              </div>
+              <div className="pt-2">
+                <p className="text-xs text-muted-foreground italic">Already have a website? No problem. We can connect the rental site as a subdomain so it works alongside what you already have.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Intro section — directly under hero, above "Why Most Event Businesses" */}
       <section id="4ft-marquee-letters" className="py-8 px-4">
         <div className="max-w-4xl mx-auto">
@@ -1376,48 +1523,6 @@ const RentalInventory = () => {
         </div>
       </section>
 
-      {/* Packages & Pricing */}
-      <section id="packages" className="py-16 px-4 bg-gradient-to-r from-primary/5 to-accent/5 scroll-mt-24">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-12 text-foreground">Rental Inventory Packages</h2>
-          <p className="text-base text-muted-foreground leading-relaxed mb-8 text-center">
-            Our rental inventory packages range from 25 to 112+ pieces and are designed specifically for event rental companies. Whether you're launching a new marquee letter rental business or expanding an existing operation, each package is built around the highest-demand characters to maximize booking flexibility from day one.
-          </p>
-          <p className="text-xl text-center text-muted-foreground mb-12">
-            We offer flexible packages designed to grow with your rental business.
-          </p>
-          
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
-            <Card className="border-primary border-2">
-              <CardContent className="p-8">
-                <div className="flex items-center mb-4">
-                  <Lightbulb className="w-8 h-8 text-primary mr-3" />
-                  <h3 className="text-2xl font-bold text-card-foreground">Investment Range</h3>
-                </div>
-                <p className="text-3xl font-bold text-primary mb-4">$12,500–$40,000</p>
-                <p className="text-muted-foreground">Most clients invest in this range for a complete rental inventory, depending on package size and delivery location.</p>
-              </CardContent>
-            </Card>
-
-            <Card className="border-secondary border-2">
-              <CardContent className="p-8">
-                <div className="flex items-center mb-4">
-                  <Package className="w-8 h-8 text-secondary mr-3" />
-                  <h3 className="text-2xl font-bold text-card-foreground">Best Price</h3>
-                </div>
-                <p className="text-3xl font-bold text-secondary mb-4">~$300 per letter (Elite Pack)</p>
-                <p className="text-muted-foreground">Includes 36″ self-standing marquee letters made of powder-coated steel, with LED bulbs and reusable foam-lined transport boxes and more!</p>
-              </CardContent>
-            </Card>
-          </div>
-
-          <div className="text-center">
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              Final pricing depends on the exact mix and style of letters—including any upgrades like color-changing bulbs or LED neon options—as well as your preferred timeline and shipping destination. Reach out for a custom quote and we'll help build the perfect inventory for your business.
-            </p>
-          </div>
-        </div>
-      </section>
 
 
       {/* Timeline */}
@@ -1444,108 +1549,6 @@ const RentalInventory = () => {
         </div>
       </section>
 
-      {/* Website Feature Section */}
-      <section className="py-16 px-4 bg-muted/30">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-10">
-            <div className="inline-flex items-center gap-2 bg-accent/10 text-accent border border-accent/20 rounded-full px-4 py-1.5 text-sm font-medium mb-4">
-              <Globe className="w-4 h-4" />
-              Available With Your Package
-            </div>
-            <h2 className="text-4xl font-bold text-foreground mb-4">Your Business Gets Its Own Website</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Larger packages include a fully built, ready-to-launch website for your business — and it can be added to any package. Your brand, your pricing, your photos, live at your own domain.
-            </p>
-          </div>
-
-          <div className="grid lg:grid-cols-2 gap-10 items-center">
-            {/* Browser mockup */}
-            <div className="relative">
-              <div className="bg-card rounded-xl shadow-2xl border border-border overflow-hidden">
-                {/* Browser chrome */}
-                <div className="bg-muted px-4 py-3 flex items-center gap-3 border-b border-border">
-                  <div className="flex gap-1.5">
-                    <div className="w-3 h-3 rounded-full bg-red-400" />
-                    <div className="w-3 h-3 rounded-full bg-yellow-400" />
-                    <div className="w-3 h-3 rounded-full bg-green-400" />
-                  </div>
-                  <div className="flex-1 bg-background rounded-md px-3 py-1 text-xs text-muted-foreground font-mono">
-                    marquee.yourbusiness.com
-                  </div>
-                </div>
-                {/* Site preview screenshot */}
-                <div className="relative">
-                  <img
-                    src="/images/demo-site-preview.webp"
-                    alt="Demo rental website homepage preview"
-                    className="w-full block"
-                    loading="lazy"
-                  />
-                  {/* Demo overlay badge */}
-                  <div className="absolute top-3 right-3 bg-black/70 text-white text-xs font-semibold px-3 py-1.5 rounded-full backdrop-blur-sm">
-                    DEMO SITE
-                  </div>
-                </div>
-              </div>
-              {/* View demo link */}
-              <div className="text-center mt-4">
-                <a
-                  href="https://marquee.jerradgreen.digital"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-sm text-accent hover:text-accent/80 font-medium transition-colors"
-                >
-                  <ExternalLink className="w-4 h-4" />
-                  View the live demo site
-                </a>
-              </div>
-            </div>
-
-            {/* Feature list */}
-            <div className="space-y-5">
-              <div className="flex gap-4">
-                <div className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0">
-                  <Monitor className="w-5 h-5 text-accent" />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-foreground mb-1">Built and ready to launch</h3>
-                  <p className="text-muted-foreground text-sm">Your site is fully built before you receive your letters. Gallery, pricing, inquiry form, and availability calendar are all included.</p>
-                </div>
-              </div>
-              <div className="flex gap-4">
-                <div className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0">
-                  <Globe className="w-5 h-5 text-accent" />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-foreground mb-1">Your domain, your brand</h3>
-                  <p className="text-muted-foreground text-sm">Connect your own domain name and it looks completely custom — like you built it yourself.</p>
-                </div>
-              </div>
-              <div className="flex gap-4">
-                <div className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0">
-                  <Zap className="w-5 h-5 text-accent" />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-foreground mb-1">Marquee letter visualizer</h3>
-                  <p className="text-muted-foreground text-sm">Customers can type any phrase and see exactly what their letters will look like before they book. A powerful tool that turns interest into reservations.</p>
-                </div>
-              </div>
-              <div className="flex gap-4">
-                <div className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0">
-                  <Check className="w-5 h-5 text-accent" />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-foreground mb-1">Easy admin dashboard</h3>
-                  <p className="text-muted-foreground text-sm">Update your pricing, swap photos, manage inquiries, and edit your FAQ — all from a simple dashboard. No technical skills needed.</p>
-                </div>
-              </div>
-              <div className="pt-2">
-                <p className="text-xs text-muted-foreground italic">Already have a website? No problem. We can connect the rental site as a subdomain so it works alongside what you already have.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* CTA Section */}
 
