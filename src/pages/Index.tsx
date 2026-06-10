@@ -267,7 +267,7 @@ const Index = () => {
 
         {/* Instagram Gallery Section - Lazy loaded for performance */}
         <div id="gallery" className="text-center mb-12" ref={instagramRef}>
-          <h2 className="text-2xl font-bold mb-6">Our Recent Marquee Sign Projects</h2>
+          <h2 className="text-2xl font-bold mb-6">Our Instagram Feed</h2>
           <p className="text-muted-foreground mb-4">
             Follow us on Instagram to see our latest creations and projects
           </p>
