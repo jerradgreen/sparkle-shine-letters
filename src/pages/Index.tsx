@@ -21,10 +21,6 @@ const getResponsiveShopifyImageSet = (imageUrl: string) => {
 };
 
 const homepageReviews = [
-  ...wallHangingConfig.testimonials.items,
-  ...standUpSignsConfig.testimonials.items,
-  ...foodTruckSignsConfig.testimonials.items,
-  ...logoSignsConfig.testimonials.items,
   {
     rating: 5,
     content: "Everyone loves the letters and we use them for so many things. They were the highlight of the decor, and one of the best purchases I made for our marketing department.",
@@ -43,6 +39,10 @@ const homepageReviews = [
     name: "Dion & Chantal Powell",
     role: "C&D Marquees and Event Rentals",
   },
+  ...wallHangingConfig.testimonials.items,
+  ...standUpSignsConfig.testimonials.items,
+  ...foodTruckSignsConfig.testimonials.items,
+  ...logoSignsConfig.testimonials.items,
 ];
 
 const signStyles = [
