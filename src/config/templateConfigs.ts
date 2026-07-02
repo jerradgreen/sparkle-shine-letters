@@ -827,7 +827,7 @@ export const logoSignsConfig: TemplateConfig = {
   
   business: {
     name: "Custom Logo Signs",
-    description: "Custom logo signs built with layered metal to bring your brand to life with depth, color, and dimension for offices, events, and retail spaces.",
+    description: "Custom metal business signs built from your logo or design. Handcrafted with real depth and dimension for restaurants, bars, offices, retail stores, and any space that wants a sign that actually looks like them.",
     type: "Product",
     industry: "commercial signage"
   },
