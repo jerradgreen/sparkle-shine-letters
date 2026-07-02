@@ -202,7 +202,7 @@ const ThreeDLogos = () => {
                 </div>
                 <div className="flex flex-col justify-center">
                   <h3 className="text-base font-semibold mb-1 text-card-foreground">Unlimited Colors & Branding</h3>
-                  <p className="text-xs text-muted-foreground">Match your brand style with layered paint, printing, or powder coating</p>
+                  <p className="text-xs text-muted-foreground">Match your exact brand colors with custom paint, printing, or powder coating</p>
                 </div>
               </CardContent>
             </Card>
