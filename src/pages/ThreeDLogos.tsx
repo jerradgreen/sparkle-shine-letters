@@ -258,13 +258,13 @@ const ThreeDLogos = () => {
       {/* Authority Section 2 */}
       <section className="py-10 px-4 bg-muted/30">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold mb-6 text-foreground">Fabricated Metal Branding, Built as a Statement Piece</h2>
+          <h2 className="text-3xl font-bold mb-6 text-foreground">Custom Metal Signs That Actually Look Like Your Brand</h2>
           
           <p className="text-muted-foreground mb-4 leading-relaxed">
-            Flat signage fades into the background. Custom metal signs with layered depth command attention because it occupies real space — light catches the edges, shadows shift between layers, and the logo feels alive on the wall. Each dimensional logo sign we build is fabricated from precision-cut metal, stacked and assembled by hand to create a sculptural quality that printed or routed signs simply can't match.
+            Flat printed signs fade into the background. A custom metal sign commands attention because it occupies real space. Light catches the edges, the logo feels alive on the wall, and the whole thing has a presence that no printed or acrylic sign can match. Every custom sign we build is fabricated from precision-cut metal, assembled by hand, and built to be the first thing people notice when they walk in.
           </p>
           <p className="text-muted-foreground leading-relaxed">
-            Every commission is bespoke: colors are matched to your brand, layers are engineered for visual impact, and finishes are hand-applied with a vintage edge that gives each piece warmth and character. It's fabricated metal branding, built as a statement piece for spaces that demand more.
+            Every piece is made to order. Colors are matched to your brand, the build is engineered for visual impact, and finishes are hand-applied with a vintage edge that gives each sign warmth and character. It's a custom business sign built as a statement piece for spaces that demand more.
           </p>
         </div>
       </section>
