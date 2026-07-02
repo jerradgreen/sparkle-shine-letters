@@ -47,8 +47,8 @@ const homepageReviews = [
 
 const signStyles = [
   {
-    title: "Individual Wall Letters",
-    description: "Separate marquee letters that hang on walls like artwork. Perfect for restaurants, shops, home decor or anywhere that needs a pop!",
+    title: "Custom Marquee Signs & Letters",
+    description: "Order any word, name, or phrase in handcrafted steel letters. Perfect for bars, restaurants, home bars, studios, shops, and offices.",
     image: "https://cdn.shopify.com/s/files/1/1403/8315/files/Chop_Suey_a1aaee95-b586-4fb9-880d-2bc12998e8ee_800x.jpg?v=1759691041",
     link: "/wall-hanging-signs",
     imagePosition: "center 10%",
@@ -57,8 +57,8 @@ const signStyles = [
     fetchPriority: "high" as const,
   },
   {
-    title: "3D Layered/All-in-One Logos, Designs",
-    description: "Stunning 3D dimensional signs with multiple layers. Premium depth and visual impact.",
+    title: "Custom Business Signs & Logo Signs",
+    description: "Send us your logo, design, or idea and we build it from metal by hand. Great for any business that wants a sign that actually looks like them.",
     image: "https://cdn.shopify.com/s/files/1/1403/8315/files/IMG_6390_layered-sign_800x.jpg?v=1759694027",
     link: "/3d-logos",
     width: 1200,
