@@ -676,7 +676,7 @@ export const foodTruckSignsConfig: TemplateConfig = {
 
 // Custom Logo Signs Template
 export const logoSignsConfig: TemplateConfig = {
-  pageTitle: "Custom Business Signs | Metal Logo Signs Built to Order",
+  pageTitle: "Custom Business Signs & Logo Signs | Vintage Marquee Lights",
   metaDescription: "Custom metal signs built from your logo, design, or idea. Handcrafted for restaurants, bars, offices, retail stores, and any business that wants a sign that actually looks like them. Plug in and glow.",
   keywords: ["custom business sign", "custom metal sign", "custom logo sign", "custom sign for restaurant", "custom sign for office", "custom lighted business sign", "custom sign maker"],
   
