@@ -1,54 +1,23 @@
+Text-only SEO copy updates across four files. No layout, styling, images, or logic changes.
 
+## Files & changes
 
-## ROI Calculator — Integration Plan
+**1. `src/config/templateConfigs.ts`**
+- `wallHangingConfig`: update `pageTitle`, `metaDescription`, `keywords`, `hero.headline`, `hero.subheadline` per spec.
+- `logoSignsConfig`: update `pageTitle`, `metaDescription`, `keywords`, `hero.headline`, `hero.subheadline`, `business.description`, and the "Our layered sign is the centerpiece..." testimonial content.
 
-The Manus-provided code is a fully self-contained component using inline styles and its own color system. Rather than pasting it as-is, I will rewrite it to match the site's existing design system: Tailwind classes, CSS variables, the site's Navigation/Footer, and existing UI components (Card, Slider, Button).
+**2. `src/pages/Index.tsx`**
+- In `signStyles` array, update `title` + `description` for the `/wall-hanging-signs` entry and the `/3d-logos` entry.
 
-### What Changes
+**3. `src/pages/ThreeDLogos.tsx`**
+- Replace Authority Section 1 (h2 + 3 paragraphs) with new "Custom Signs for Restaurants, Bars, Offices, and Retail" copy.
+- Replace Authority Section 2 (h2 + 2 paragraphs) with new "Custom Metal Signs That Actually Look Like Your Brand" copy.
+- Update two feature-card descriptions ("Multi-layered metal signs..." and "Match your brand style...").
+- Update the two bottom FAQ-adjacent paragraphs ("custom layered and dimensional signage" → "custom metal business signs"; "layered signage" → "custom business signs").
 
-#### 1. Create `src/pages/RoiCalculator.tsx`
+**4. `src/pages/WallHangingMarqueeSigns.tsx`**
+- Update FAQ subtitle "Everything you need to know about wall-hanging marquee signs" → "Everything you need to know about ordering a custom marquee sign".
+- Update the "Designed to Hang Like Art" section: h2 → "Custom Marquee Signs That Hang Like Art" and replace its paragraph with the new copy.
 
-A new page component that:
-- Uses `Navigation` and `Footer` (like every other page on the site)
-- Uses Tailwind classes and the site's CSS color variables (`primary`, `foreground`, `muted`, `accent`, `background`, `card`, `border`) instead of the hardcoded `COLORS` object with hex values
-- Uses the existing `Slider` UI component from `src/components/ui/slider.tsx` instead of a custom inline-styled range input
-- Uses `Card` components for the stat cards and package selector
-- Uses `Button` for CTAs
-- Keeps the same calculator logic (package selection, pricing inputs, volume inputs, Shop Pay financing, animated numbers, revenue projections)
-- Keeps the rotating hero images
-- Adds SEO via `Helmet` with appropriate title/description
-- Links CTA buttons to `/quote/rental-inventory` (the existing quote form) instead of an external URL
-
-#### 2. Update `src/App.tsx`
-
-Add one route:
-```tsx
-import RoiCalculator from "./pages/RoiCalculator";
-// ...
-<Route path="/roi-calculator" element={<RoiCalculator />} />
-```
-
-### Design Mapping
-
-| Manus Code | Site Equivalent |
-|---|---|
-| `COLORS.navy` / `charcoal` | `text-foreground` / `bg-foreground` |
-| `COLORS.gold` | `text-primary` / `bg-primary` (teal-blue) or `text-accent` / `bg-accent` (warm peach) |
-| `COLORS.ivory` | `bg-background` |
-| `COLORS.border` | `border-border` |
-| `COLORS.muted` | `text-muted-foreground` |
-| Custom header/footer | Reuse site `Navigation` + `Footer` |
-| Inline-styled slider | Radix `Slider` from `src/components/ui/slider.tsx` |
-| Inline-styled buttons | `Button` component |
-| Inline-styled cards | `Card` / `CardHeader` / `CardContent` |
-
-### What Stays the Same
-- All calculator math and `useMemo` logic
-- `useAnimatedNumber` hook
-- `formatCurrency` / `formatMonths` utilities
-- Package selection (Pro vs Elite)
-- 4-step input flow (package, pricing, volume, financing)
-- Hero image rotation
-- Shop Pay financing section
-- Results panel with per-event, monthly, annual, year-1 profit stats
-
+## Verification
+Production build (`npm run build`) to confirm no TypeScript/JSX errors after edits.
