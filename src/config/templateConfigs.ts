@@ -185,13 +185,13 @@ export const layeredSignsConfig: TemplateConfig = {
 
 // Wall-Hanging Marquee Signs Template
 export const wallHangingConfig: TemplateConfig = {
-  pageTitle: "Custom Wall-Hanging Marquee Letters | Vintage Marquee Lights",
-  metaDescription: "Individual marquee letters designed to hang on walls like artwork. Painted steel construction with warm G30 bulbs, perfect for shops, studios, and home décor.",
-  keywords: ["wall hanging marquee", "painted steel letters", "vintage marquee signs", "wall mounted lights", "retro signage", "industrial décor"],
+  pageTitle: "Custom Marquee Signs & Lighted Letters | Vintage Marquee Lights",
+  metaDescription: "Custom marquee signs and lighted letters handcrafted from steel since 2008. Order any word, name, or phrase for your bar, restaurant, home, studio, or business. Plug in and glow.",
+  keywords: ["custom marquee sign", "custom lighted sign", "custom marquee letters", "lighted sign for bar", "custom sign for business", "vintage marquee letters", "custom metal sign with lights"],
   
   hero: {
-    headline: "Bring Your Walls to Life with Vintage Marquee Letters",
-    subheadline: "Handcrafted steel letters that hang like artwork and glow with timeless charm. Perfect for homes, restaurants, studios, shops, or any space that needs bold personality.",
+    headline: "Custom Marquee Signs Built to Order",
+    subheadline: "Handcrafted steel letters that hang like artwork and glow with timeless charm. Order any word, name, or phrase for your bar, restaurant, home, studio, or business. Just plug in and enjoy.",
     ctaText: "Get a Custom Quote in Under 5 Minutes",
     secondaryCtaText: "See Sign Examples",
     ctaAction: "pricing",
