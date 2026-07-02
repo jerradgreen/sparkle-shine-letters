@@ -749,7 +749,7 @@ export const logoSignsConfig: TemplateConfig = {
       {
         name: "Jennifer L.",
         role: "Marketing Director",
-        content: "Our layered sign is the centerpiece of our lobby. It's a conversation starter and perfectly represents our brand's bold personality.",
+        content: "Our custom sign is the centerpiece of our lobby. It's a conversation starter and perfectly represents our brand's bold personality.",
         rating: 5,
         image: testimonialRealistic3
       }
