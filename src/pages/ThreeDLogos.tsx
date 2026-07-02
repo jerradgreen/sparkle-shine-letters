@@ -190,7 +190,7 @@ const ThreeDLogos = () => {
                 </div>
                 <div className="flex flex-col justify-center">
                   <h3 className="text-base font-semibold mb-1 text-card-foreground">Custom Layers, Real Depth</h3>
-                  <p className="text-xs text-muted-foreground">Multi-layered metal signs built by hand for dramatic dimensional branding</p>
+                  <p className="text-xs text-muted-foreground">Custom metal signs built by hand with real depth and dimension for dramatic visual impact</p>
                 </div>
               </CardContent>
             </Card>
@@ -202,7 +202,7 @@ const ThreeDLogos = () => {
                 </div>
                 <div className="flex flex-col justify-center">
                   <h3 className="text-base font-semibold mb-1 text-card-foreground">Unlimited Colors & Branding</h3>
-                  <p className="text-xs text-muted-foreground">Match your brand style with layered paint, printing, or powder coating</p>
+                  <p className="text-xs text-muted-foreground">Match your exact brand colors with custom paint, printing, or powder coating</p>
                 </div>
               </CardContent>
             </Card>
@@ -241,16 +241,16 @@ const ThreeDLogos = () => {
       {/* Authority Section 1 */}
       <section className="py-10 px-4 bg-gradient-to-b from-background to-muted/20">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold mb-6 text-foreground">Custom Logo Signs That Define Restaurants, Retail, and Offices</h2>
+          <h2 className="text-3xl font-bold mb-6 text-foreground">Custom Signs for Restaurants, Bars, Offices, and Retail</h2>
           
           <p className="text-muted-foreground mb-4 leading-relaxed">
-            A well-placed logo sign does more than mark a space — it becomes the brand's anchor. Whether it's mounted behind the bar in a restaurant, greeting clients in an office lobby, or drawing eyes in a retail storefront, a custom logo sign turns an ordinary wall into a memorable brand moment. These are the pieces customers photograph, share, and remember long after they leave.
+            A well-placed custom sign does more than mark a space. It becomes the brand's anchor. Whether it's mounted behind the bar in a restaurant, greeting clients in an office lobby, or drawing eyes in a retail storefront, a custom metal sign turns an ordinary wall into a memorable brand moment. These are the pieces customers photograph, share, and remember long after they leave.
           </p>
           <p className="text-muted-foreground mb-4 leading-relaxed">
-            Our custom business signs are designed for high-visibility placements: lobbies, reception areas, feature walls, entry points, and bar backs. Each piece is commissioned around your specific logo, colors, and space — then fabricated in layered metal with hand-finished detail that gives it real dimensional presence. The result is a restaurant logo sign or office lobby sign that feels intentional, elevated, and unmistakably yours.
+            Our custom business signs are built for high-visibility placements: lobbies, reception areas, feature walls, entry points, and bar backs. Every piece is built around your specific logo, colors, and space, then fabricated in metal by hand with detail that gives it real depth and presence. The result is a custom sign for your restaurant, office, or store that feels intentional, elevated, and unmistakably yours.
           </p>
           <p className="text-muted-foreground leading-relaxed">
-            From neighborhood cafés to corporate headquarters, these signs anchor a brand's identity in the physical world. They're not decorations — they're design statements built to define the space around them.
+            From neighborhood cafes to corporate headquarters, these signs anchor a brand's identity in the physical world. They're not decorations. They're custom-built statements that define the space around them.
           </p>
         </div>
       </section>
@@ -258,13 +258,13 @@ const ThreeDLogos = () => {
       {/* Authority Section 2 */}
       <section className="py-10 px-4 bg-muted/30">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold mb-6 text-foreground">Fabricated Metal Branding, Built as a Statement Piece</h2>
+          <h2 className="text-3xl font-bold mb-6 text-foreground">Custom Metal Signs That Actually Look Like Your Brand</h2>
           
           <p className="text-muted-foreground mb-4 leading-relaxed">
-            Flat signage fades into the background. Custom metal signs with layered depth command attention because it occupies real space — light catches the edges, shadows shift between layers, and the logo feels alive on the wall. Each dimensional logo sign we build is fabricated from precision-cut metal, stacked and assembled by hand to create a sculptural quality that printed or routed signs simply can't match.
+            Flat printed signs fade into the background. A custom metal sign commands attention because it occupies real space. Light catches the edges, the logo feels alive on the wall, and the whole thing has a presence that no printed or acrylic sign can match. Every custom sign we build is fabricated from precision-cut metal, assembled by hand, and built to be the first thing people notice when they walk in.
           </p>
           <p className="text-muted-foreground leading-relaxed">
-            Every commission is bespoke: colors are matched to your brand, layers are engineered for visual impact, and finishes are hand-applied with a vintage edge that gives each piece warmth and character. It's fabricated metal branding, built as a statement piece for spaces that demand more.
+            Every piece is made to order. Colors are matched to your brand, the build is engineered for visual impact, and finishes are hand-applied with a vintage edge that gives each sign warmth and character. It's a custom business sign built as a statement piece for spaces that demand more.
           </p>
         </div>
       </section>
@@ -420,7 +420,7 @@ const ThreeDLogos = () => {
           </div>
 
           <p className="text-muted-foreground text-sm mt-8 max-w-5xl mx-auto">
-            In addition to custom layered and dimensional signage, we also manufacture{' '}
+            In addition to custom metal business signs, we also manufacture{' '}
             <a href="/rental-inventory" className="text-primary underline hover:text-primary/80 transition-colors">
               commercial marquee letter rental business packages
             </a>{' '}
@@ -428,7 +428,7 @@ const ThreeDLogos = () => {
           </p>
 
           <p className="text-muted-foreground text-sm mt-4 max-w-5xl mx-auto">
-            While layered signage is typically designed for permanent branding installations, some entrepreneurs expand into freestanding marquee inventory as part of a <a href="/rental-business" className="text-primary underline hover:text-primary/80 transition-colors">broader event-focused business model</a>.
+            While custom business signs are typically designed for permanent branding installations, some entrepreneurs expand into freestanding marquee inventory as part of a <a href="/rental-business" className="text-primary underline hover:text-primary/80 transition-colors">broader event-focused business model</a>.
           </p>
         </div>
       </section>

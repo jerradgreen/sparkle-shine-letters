@@ -505,9 +505,9 @@ const WallHangingMarqueeSigns = () => {
       {/* Designed to Hang Like Art */}
       <section className="py-8 px-4 bg-muted/20">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-2xl font-bold mb-4">Designed to Hang Like Art</h2>
+          <h2 className="text-2xl font-bold mb-4">Custom Marquee Signs That Hang Like Art</h2>
           <p className="text-muted-foreground text-sm leading-relaxed">
-            These wall-mounted marquee letters are fabricated from steel and designed to hang cleanly and securely on standard wall surfaces. Whether displayed for a weekend event, a tradeshow, or installed in a restaurant or home for years, they mount simply — like framed artwork — while delivering the presence of illuminated statement pieces.
+            These custom marquee signs are fabricated from steel and designed to hang cleanly on standard wall surfaces. Whether you want a custom sign for your bar, restaurant, home, or studio, they mount simply like framed artwork while delivering the presence of a real illuminated statement piece. Order any word, name, or phrase and we build it by hand.
           </p>
         </div>
       </section>
@@ -517,7 +517,7 @@ const WallHangingMarqueeSigns = () => {
         <div className="container mx-auto px-4 max-w-6xl">
           <h2 className="text-3xl font-bold text-center mb-2">{wallHangingConfig.faq.title}</h2>
           <p className="text-center text-muted-foreground mb-8">
-            Everything you need to know about wall-hanging marquee signs
+            Everything you need to know about ordering a custom marquee sign
           </p>
           
           <div className="grid md:grid-cols-2 gap-6">
