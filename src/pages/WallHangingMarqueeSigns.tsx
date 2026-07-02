@@ -517,7 +517,7 @@ const WallHangingMarqueeSigns = () => {
         <div className="container mx-auto px-4 max-w-6xl">
           <h2 className="text-3xl font-bold text-center mb-2">{wallHangingConfig.faq.title}</h2>
           <p className="text-center text-muted-foreground mb-8">
-            Everything you need to know about wall-hanging marquee signs
+            Everything you need to know about ordering a custom marquee sign
           </p>
           
           <div className="grid md:grid-cols-2 gap-6">
