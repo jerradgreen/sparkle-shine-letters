@@ -428,7 +428,7 @@ const ThreeDLogos = () => {
           </p>
 
           <p className="text-muted-foreground text-sm mt-4 max-w-5xl mx-auto">
-            While layered signage is typically designed for permanent branding installations, some entrepreneurs expand into freestanding marquee inventory as part of a <a href="/rental-business" className="text-primary underline hover:text-primary/80 transition-colors">broader event-focused business model</a>.
+            While custom business signs are typically designed for permanent branding installations, some entrepreneurs expand into freestanding marquee inventory as part of a <a href="/rental-business" className="text-primary underline hover:text-primary/80 transition-colors">broader event-focused business model</a>.
           </p>
         </div>
       </section>
