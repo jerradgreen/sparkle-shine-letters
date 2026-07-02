@@ -190,7 +190,7 @@ const ThreeDLogos = () => {
                 </div>
                 <div className="flex flex-col justify-center">
                   <h3 className="text-base font-semibold mb-1 text-card-foreground">Custom Layers, Real Depth</h3>
-                  <p className="text-xs text-muted-foreground">Multi-layered metal signs built by hand for dramatic dimensional branding</p>
+                  <p className="text-xs text-muted-foreground">Custom metal signs built by hand with real depth and dimension for dramatic visual impact</p>
                 </div>
               </CardContent>
             </Card>
