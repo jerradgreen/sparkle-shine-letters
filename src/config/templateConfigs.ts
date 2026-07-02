@@ -676,13 +676,13 @@ export const foodTruckSignsConfig: TemplateConfig = {
 
 // Custom Logo Signs Template
 export const logoSignsConfig: TemplateConfig = {
-  pageTitle: "Custom Logo Signs | Dimensional Metal Signage",
-  metaDescription: "Custom logo signs built with layered metal for depth, color, and bold dimension. Perfect for walls, lobbies, event backdrops, and branded spaces.",
-  keywords: ["custom logo signs", "custom metal signs", "dimensional logo signs", "layered logo signs", "brand signage", "logo signage", "office signage"],
+  pageTitle: "Custom Business Signs | Metal Logo Signs Built to Order",
+  metaDescription: "Custom metal signs built from your logo, design, or idea. Handcrafted for restaurants, bars, offices, retail stores, and any business that wants a sign that actually looks like them. Plug in and glow.",
+  keywords: ["custom business sign", "custom metal sign", "custom logo sign", "custom sign for restaurant", "custom sign for office", "custom lighted business sign", "custom sign maker"],
   
   hero: {
-    headline: "Custom Logo Signs That Command Attention",
-    subheadline: "Each piece is custom-built in metal with layered depth, hand-finished detail, and a bold vintage edge. Designed for brands, boutiques, restaurants, and spaces that want more than a standard sign — they want a focal point. Ideal for brands seeking custom business signage that feels architectural, intentional, and distinctly their own.",
+    headline: "Custom Signs Built From Your Design",
+    subheadline: "Send us your logo, your name, or just an idea. We build it from metal by hand and ship it ready to hang. Restaurants, bars, offices, retail stores, and homes across the country have one on their wall.",
     ctaText: "Start Your Custom Project",
     secondaryCtaText: "Explore Past Custom Builds",
     ctaAction: "pricing",
