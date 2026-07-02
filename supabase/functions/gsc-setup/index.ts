@@ -1,15 +1,21 @@
 // Edge function to manage Google Search Console verification + sitemap submission
-// via the Lovable connector gateway.
+// via the Lovable connector gateway. Restricted to authenticated site owners.
 import "jsr:@supabase/functions-js/edge-runtime.d.ts";
+import { createClient } from "jsr:@supabase/supabase-js@2";
 
 const GATEWAY = "https://connector-gateway.lovable.dev/google_search_console";
 const SITE = "https://inventory.vintagemarqueelights.com/";
 const SITE_ENC = encodeURIComponent(SITE);
+const ALLOWED_ORIGIN = SITE.replace(/\/$/, "");
 
 const corsHeaders = {
-  "Access-Control-Allow-Origin": "*",
+  "Access-Control-Allow-Origin": ALLOWED_ORIGIN,
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
 };
+
+const supabaseUrl = Deno.env.get("SUPABASE_URL") ?? "";
+const supabaseAnonKey = Deno.env.get("SUPABASE_ANON_KEY") ?? "";
+const supabase = createClient(supabaseUrl, supabaseAnonKey);
 
 function authHeaders() {
   const lov = Deno.env.get("LOVABLE_API_KEY");
@@ -23,10 +29,20 @@ function authHeaders() {
   };
 }
 
+async function requireAuth(req: Request) {
+  const auth = req.headers.get("Authorization");
+  if (!auth) throw new Error("Unauthorized");
+  const token = auth.replace("Bearer ", "");
+  const { data: { user }, error } = await supabase.auth.getUser(token);
+  if (error || !user) throw new Error("Unauthorized");
+  return user;
+}
+
 Deno.serve(async (req) => {
   if (req.method === "OPTIONS") return new Response(null, { headers: corsHeaders });
 
   try {
+    await requireAuth(req);
     const { action } = await req.json();
     const headers = authHeaders();
 
@@ -54,14 +70,12 @@ Deno.serve(async (req) => {
       );
       const verifyData = await v.json();
 
-      // Add site to Search Console
       const add = await fetch(`${GATEWAY}/webmasters/v3/sites/${SITE_ENC}`, {
         method: "PUT",
         headers,
       });
       const addText = await add.text();
 
-      // Submit sitemap
       const sitemapUrl = encodeURIComponent(`${SITE}sitemap.xml`);
       const sm = await fetch(
         `${GATEWAY}/webmasters/v3/sites/${SITE_ENC}/sitemaps/${sitemapUrl}`,
@@ -87,9 +101,9 @@ Deno.serve(async (req) => {
 
     return Response.json({ error: "Unknown action" }, { status: 400, headers: corsHeaders });
   } catch (e) {
-    return Response.json(
-      { error: e instanceof Error ? e.message : String(e) },
-      { status: 500, headers: corsHeaders }
-    );
+    console.error(e);
+    const message = e instanceof Error && e.message === "Unauthorized" ? "Unauthorized" : "Internal server error";
+    const status = message === "Unauthorized" ? 401 : 500;
+    return Response.json({ error: message }, { status, headers: corsHeaders });
   }
 });
