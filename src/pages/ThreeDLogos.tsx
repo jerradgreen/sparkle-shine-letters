@@ -241,16 +241,16 @@ const ThreeDLogos = () => {
       {/* Authority Section 1 */}
       <section className="py-10 px-4 bg-gradient-to-b from-background to-muted/20">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold mb-6 text-foreground">Custom Logo Signs That Define Restaurants, Retail, and Offices</h2>
+          <h2 className="text-3xl font-bold mb-6 text-foreground">Custom Signs for Restaurants, Bars, Offices, and Retail</h2>
           
           <p className="text-muted-foreground mb-4 leading-relaxed">
-            A well-placed logo sign does more than mark a space — it becomes the brand's anchor. Whether it's mounted behind the bar in a restaurant, greeting clients in an office lobby, or drawing eyes in a retail storefront, a custom logo sign turns an ordinary wall into a memorable brand moment. These are the pieces customers photograph, share, and remember long after they leave.
+            A well-placed custom sign does more than mark a space. It becomes the brand's anchor. Whether it's mounted behind the bar in a restaurant, greeting clients in an office lobby, or drawing eyes in a retail storefront, a custom metal sign turns an ordinary wall into a memorable brand moment. These are the pieces customers photograph, share, and remember long after they leave.
           </p>
           <p className="text-muted-foreground mb-4 leading-relaxed">
-            Our custom business signs are designed for high-visibility placements: lobbies, reception areas, feature walls, entry points, and bar backs. Each piece is commissioned around your specific logo, colors, and space — then fabricated in layered metal with hand-finished detail that gives it real dimensional presence. The result is a restaurant logo sign or office lobby sign that feels intentional, elevated, and unmistakably yours.
+            Our custom business signs are built for high-visibility placements: lobbies, reception areas, feature walls, entry points, and bar backs. Every piece is built around your specific logo, colors, and space, then fabricated in metal by hand with detail that gives it real depth and presence. The result is a custom sign for your restaurant, office, or store that feels intentional, elevated, and unmistakably yours.
           </p>
           <p className="text-muted-foreground leading-relaxed">
-            From neighborhood cafés to corporate headquarters, these signs anchor a brand's identity in the physical world. They're not decorations — they're design statements built to define the space around them.
+            From neighborhood cafes to corporate headquarters, these signs anchor a brand's identity in the physical world. They're not decorations. They're custom-built statements that define the space around them.
           </p>
         </div>
       </section>
