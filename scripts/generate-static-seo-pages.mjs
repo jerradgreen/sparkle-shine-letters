@@ -42,14 +42,14 @@ const routes = [
   },
   {
     path: '/3d-logos',
-    title: '3D Logo Signs & Dimensional Metal Signs | Vintage Marquee Lights',
+    title: 'Custom Business Signs & Logo Signs | Vintage Marquee Lights',
     description:
-      'Custom 3D layered logo signs made from dimensional metal with handcrafted depth, color separation, and optional lighting for businesses, restaurants, offices, and brands.',
+      'Custom metal signs built from your logo, design, or idea. Handcrafted for restaurants, bars, offices, retail stores, and any business that wants a sign that actually looks like them. Plug in and glow.',
     keywords:
-      '3D logo signs, dimensional logo signs, layered metal signs, custom logo signs, business logo signs, restaurant logo signs',
-    h1: 'Custom 3D Logo Signs and Dimensional Metal Signs',
+      'custom business sign, custom metal sign, custom logo sign, custom sign for restaurant, custom sign for office, custom lighted business sign, custom sign maker',
+    h1: 'Custom Signs Built From Your Design',
     intro:
-      'Vintage Marquee Lights turns business logos into dimensional metal signs with layered depth, hand-finished details, and optional lighting. These custom logo signs are designed for restaurants, retail stores, offices, studios, and branded spaces that need a permanent statement piece.',
+      'Send us your logo, your name, or just an idea. We build it from metal by hand and ship it ready to hang. Restaurants, bars, offices, retail stores, and homes across the country have one on their wall.',
     links: [
       ['Request a 3D logo sign quote', '/quote/3d-logos'],
       ['See wall-hanging marquee letters', '/wall-hanging-signs'],
