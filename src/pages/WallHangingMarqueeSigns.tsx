@@ -561,6 +561,24 @@ const WallHangingMarqueeSigns = () => {
                 </p>
               </div>
             ))}
+            <div key="faq-cost" className="space-y-2">
+              <h3 className="text-lg font-bold">How much does a custom marquee sign cost?</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                Pricing depends entirely on the size, font style, and number of letters. A simple 3-letter "BAR" sign will cost significantly less than a 15-letter restaurant name in an ornate script font. Most of our custom wall-hanging marquee projects range between $2,500 and $7,000. When you submit a request, we provide a precise, no-obligation quote based on your exact needs.
+              </p>
+            </div>
+            <div key="faq-business-name" className="space-y-2">
+              <h3 className="text-lg font-bold">Can I get my business name made into a custom sign?</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                Yes, absolutely. We can hand-fabricate any word, name, or phrase. We offer several standard font styles including block, serif, and script, or we can work with your specific brand font to create a truly bespoke custom lighted sign that perfectly matches your business identity. If you can dream it, we can build it.
+              </p>
+            </div>
+            <div key="faq-electrician" className="space-y-2">
+              <h3 className="text-lg font-bold">Do I need to hire an electrician to install this?</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                No. Our wall-hanging marquee signs plug directly into a standard wall outlet, just like a lamp. No hardwiring, no conduit, no professional electrician required. This makes them incredibly easy to install in homes, offices, or leased commercial spaces where you can't make permanent electrical modifications.
+              </p>
+            </div>
           </div>
 
           <p className="text-muted-foreground text-sm mt-8 max-w-5xl mx-auto">
