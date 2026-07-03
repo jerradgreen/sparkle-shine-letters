@@ -244,13 +244,10 @@ const ThreeDLogos = () => {
           <h2 className="text-3xl font-bold mb-6 text-foreground">Custom Signs for Restaurants, Bars, Offices, and Retail</h2>
           
           <p className="text-muted-foreground mb-4 leading-relaxed">
-            A well-placed custom sign does more than mark a space. It becomes the brand's anchor. Whether it's mounted behind the bar in a restaurant, greeting clients in an office lobby, or drawing eyes in a retail storefront, a custom metal sign turns an ordinary wall into a memorable brand moment. These are the pieces customers photograph, share, and remember long after they leave.
-          </p>
-          <p className="text-muted-foreground mb-4 leading-relaxed">
-            Our custom business signs are built for high-visibility placements: lobbies, reception areas, feature walls, entry points, and bar backs. Every piece is built around your specific logo, colors, and space, then fabricated in metal by hand with detail that gives it real depth and presence. The result is a custom sign for your restaurant, office, or store that feels intentional, elevated, and unmistakably yours.
+            A well-placed custom business sign does more than mark a space. It becomes the physical anchor of your brand, a handcrafted piece of art that tells your customers exactly who you are before you say a word. Whether it's a glowing logo mounted behind the bar in a restaurant, a dimensional metal sign greeting clients in an office lobby, or a bespoke statement piece drawing eyes in a retail storefront, a custom logo sign turns an ordinary wall into a memorable brand moment. These are the pieces your customers photograph, share on social media, and remember long after they leave.
           </p>
           <p className="text-muted-foreground leading-relaxed">
-            From neighborhood cafes to corporate headquarters, these signs anchor a brand's identity in the physical world. They're not decorations. They're custom-built statements that define the space around them.
+            Our custom business signs are designed specifically for high-visibility placements: corporate lobbies, reception areas, feature walls, entry points, and bar backs. Each piece is commissioned around your specific logo, your exact brand colors, and your physical space. The result is not a sign. It is a sculptural brand installation.
           </p>
         </div>
       </section>
@@ -261,10 +258,10 @@ const ThreeDLogos = () => {
           <h2 className="text-3xl font-bold mb-6 text-foreground">Custom Metal Signs That Actually Look Like Your Brand</h2>
           
           <p className="text-muted-foreground mb-4 leading-relaxed">
-            Flat printed signs fade into the background. A custom metal sign commands attention because it occupies real space. Light catches the edges, the logo feels alive on the wall, and the whole thing has a presence that no printed or acrylic sign can match. Every custom sign we build is fabricated from precision-cut metal, assembled by hand, and built to be the first thing people notice when they walk in.
+            Flat, printed signage fades into the background. A custom hand-fabricated metal sign commands attention because it occupies real space. We cut your logo from precision-grade metal and build it layer by layer, entirely by hand, to create real depth and dimension. Light catches the edges, shadows shift across the surface throughout the day, and your logo feels alive on the wall in a way that no printed, routed, or neon sign can replicate.
           </p>
           <p className="text-muted-foreground leading-relaxed">
-            Every piece is made to order. Colors are matched to your brand, the build is engineered for visual impact, and finishes are hand-applied with a vintage edge that gives each sign warmth and character. It's a custom business sign built as a statement piece for spaces that demand more.
+            Every commission is bespoke and one of a kind. We match your brand colors precisely, engineer each layer for maximum visual impact, and apply finishes by hand with the kind of care that mass production simply cannot deliver. The result is a custom sign that feels architectural, elevated, and unmistakably yours. From neighborhood cafés to corporate headquarters, we build the artisan metal signs that anchor your brand's identity in the physical world.
           </p>
         </div>
       </section>
