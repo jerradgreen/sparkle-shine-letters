@@ -232,7 +232,39 @@ const WallHangingMarqueeSigns = () => {
           <GallerySection config={wallHangingConfig.gallery} />
         </div>
       </section>
+
+      {/* Who Orders Custom Marquee Signs */}
+      <section className="py-10 px-4 bg-gradient-to-b from-background to-muted/20">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-8 text-foreground">Who Orders Custom Marquee Signs?</h2>
+          
+          <div className="space-y-8">
+            <div>
+              <h3 className="text-xl font-bold mb-3 text-foreground">Custom Signs for Bars, Restaurants, and Retail</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                A custom marquee sign isn't just decoration. It's the focal point of your space and a piece of functional art that no one else in the world has. Whether it's a glowing "BAR" sign that draws customers in the moment they walk through the door, your restaurant's name illuminating the dining room in warm vintage light, or a bespoke statement piece anchoring your retail storefront, these handcrafted steel signs create an atmosphere that flat, mass-produced signage simply cannot touch. Every letter is cut, painted, wired, and assembled by hand. No two signs are exactly alike.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-bold mb-3 text-foreground">The Ultimate Home Bar and Studio Statement</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                You don't have to be a commercial business to want commercial-grade artisan craftsmanship. We build custom lighted signs for home bars, man caves, creative studios, and game rooms across the country. Spell out your family name, your favorite quote, or your personal brand in authentic, vintage-style marquee letters that hang cleanly on standard drywall and glow with the kind of warm, timeless light you just can't get from a store-bought sign. These are heirloom-quality pieces built to be passed down, not thrown out.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-bold mb-3 text-foreground">Schools, Gyms, and Corporate Offices</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                When you want to build school spirit or corporate culture, standard printed signs fade into the background. A custom, hand-fabricated metal marquee sign in your gym, locker room, or office lobby commands attention the moment someone walks in. We build rugged, heavy-duty steel letters that withstand the test of time while delivering a premium, architectural look that says your brand takes itself seriously.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* 10 Reasons Section */}
+
       <section className="py-10 bg-gradient-to-b from-background to-muted/20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-8">
