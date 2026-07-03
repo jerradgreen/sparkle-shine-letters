@@ -277,7 +277,7 @@ const WallHangingMarqueeSigns = () => {
                 <div>
                   <h3 className="font-bold mb-2">1. Authentic Steel Construction</h3>
                   <p className="text-muted-foreground text-sm">
-                    Crafted from solid, hand-painted steel, our signs have a rugged, industrial feel and vintage finish that naturally develops character over time—no plastic or shortcuts.
+                    Crafted from solid, hand-painted steel by skilled artisan fabricators. No plastic, no cheap foam, no shortcuts. Our custom signs have a rugged, industrial feel and a vintage finish that naturally develops character over time. They look incredible even when the lights are off.
                   </p>
                 </div>
               </div>
@@ -327,7 +327,7 @@ const WallHangingMarqueeSigns = () => {
                 <div>
                   <h3 className="font-bold mb-2">6. Perfect for Any Setting</h3>
                   <p className="text-muted-foreground text-sm">
-                    From restaurants and bars to retail shops, studios, offices, and curated homes — these letters transform any wall into a statement. We operate as artisan metal fabricators, crafting commissioned marquee letter installations with enduring character.
+                    From neighborhood restaurants and dive bars to high-end retail shops, corporate offices, and curated homes, these custom lighted signs transform any blank wall into a destination. We have been building commissioned marquee letter installations since 2008, and our work hangs in thousands of spaces nationwide.
                   </p>
                 </div>
               </div>
@@ -365,9 +365,9 @@ const WallHangingMarqueeSigns = () => {
               <div className="flex gap-3">
                 <Check className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
                 <div>
-                  <h3 className="font-bold mb-2">10. Built to Last</h3>
+                  <h3 className="font-bold mb-2">10. Built to Last by People Who Care</h3>
                   <p className="text-muted-foreground text-sm">
-                    Whether it's a one-night celebration or a permanent install, these signs are built for the long haul. Trusted by thousands of businesses and creatives nationwide.
+                    Whether it's a statement piece for your living room or a permanent installation for your storefront, these custom marquee signs are built for the long haul by artisan fabricators who take pride in every weld, every brushstroke, and every bulb socket. Trusted by thousands of businesses and creatives nationwide since 2008.
                   </p>
                 </div>
               </div>
