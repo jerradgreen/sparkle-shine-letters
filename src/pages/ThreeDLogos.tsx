@@ -403,6 +403,36 @@ const ThreeDLogos = () => {
         </div>
       </section>
 
+      {/* What Makes a Great Custom Logo Sign? */}
+      <section className="py-10 px-4 bg-gradient-to-b from-background to-muted/20">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-12 text-foreground">What Makes a Great Custom Logo Sign?</h2>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="space-y-2">
+              <h3 className="text-xl font-bold mb-3 text-foreground">Placement Is Everything</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                The best custom business signs are placed where they cannot be missed. For restaurants and bars, the wall directly behind the bar or the main dining room focal wall are the most powerful placements. For corporate offices, the reception desk or the main lobby wall sets the tone the moment a client walks in. We can help you think through placement as part of the design process.
+              </p>
+            </div>
+
+            <div className="space-y-2">
+              <h3 className="text-xl font-bold mb-3 text-foreground">Lighting Options</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                While many of our custom logo signs look incredible as standalone dimensional metal art pieces, adding illumination takes them to the next level. We can incorporate backlighting to create a dramatic halo effect that makes your logo pop off the wall, or integrate our signature vintage marquee bulbs directly into the design for a classic, high-impact glow that is unmistakably Vintage Marquee Lights.
+              </p>
+            </div>
+
+            <div className="space-y-2">
+              <h3 className="text-xl font-bold mb-3 text-foreground">What if I Don't Have a Vector Logo?</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                Don't worry. While a vector file like an Illustrator or EPS file gives us the cleanest starting point, we work with business owners every single day who only have a JPEG, a PNG, or even just a sketch on paper. Send us what you have. Our design team will help translate your concept into a precise, buildable design, and we will not start fabricating until you have approved every detail of the mockup.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* FAQ Section */}
       <section id="quote-form" className="py-10 px-4 bg-muted/30">
         <div className="max-w-6xl mx-auto">
