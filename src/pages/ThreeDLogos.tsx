@@ -444,6 +444,24 @@ const ThreeDLogos = () => {
                 <p className="text-muted-foreground text-sm">{item.answer}</p>
               </div>
             ))}
+            <div key="faq-cost" className="space-y-2">
+              <h3 className="font-bold text-lg">How much does a custom business sign cost?</h3>
+              <p className="text-muted-foreground text-sm">
+                Because every logo is unique, pricing varies based on the overall size, the number of colors, and the complexity of the design. A simple, single-color metal logo will cost less than a highly detailed, multi-color illuminated sign. Custom logo signs typically start around $1,500, with most commissioned pieces ranging from $2,500 to $7,500+. We charge based on square inches and color count, and we provide a precise, no-obligation quote once we see your design and understand your space.
+              </p>
+            </div>
+            <div key="faq-business-sign-electricity" className="space-y-2">
+              <h3 className="font-bold text-lg">Do custom logo signs require electricity?</h3>
+              <p className="text-muted-foreground text-sm">
+                It depends on your design choice. If you choose an illuminated sign with backlighting or marquee bulbs, it will require power. Most of our illuminated custom signs plug directly into a standard wall outlet, making installation easy without the need for an electrician. If you choose a non-illuminated dimensional metal sign, no power is required at all. It simply mounts to the wall like a piece of art.
+              </p>
+            </div>
+            <div key="faq-neon-difference" className="space-y-2">
+              <h3 className="font-bold text-lg">What is the difference between this and a neon sign?</h3>
+              <p className="text-muted-foreground text-sm">
+                Neon signs are made from fragile glass tubes or LED strips that mimic the look. Our custom business signs are fabricated from solid, heavy-duty metal, built by hand, and designed to last for decades. They offer a far more substantial, architectural, and premium look. A metal sign looks incredible during the day when the lights are off, whereas a neon sign often disappears entirely when not illuminated. Metal also ages beautifully, developing character over time rather than yellowing or breaking.
+              </p>
+            </div>
           </div>
 
           <p className="text-muted-foreground text-sm mt-8 max-w-5xl mx-auto">
