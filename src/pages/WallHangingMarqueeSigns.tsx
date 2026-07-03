@@ -232,7 +232,39 @@ const WallHangingMarqueeSigns = () => {
           <GallerySection config={wallHangingConfig.gallery} />
         </div>
       </section>
+
+      {/* Who Orders Custom Marquee Signs */}
+      <section className="py-10 px-4 bg-gradient-to-b from-background to-muted/20">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-8 text-foreground">Who Orders Custom Marquee Signs?</h2>
+          
+          <div className="space-y-8">
+            <div>
+              <h3 className="text-xl font-bold mb-3 text-foreground">Custom Signs for Bars, Restaurants, and Retail</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                A custom marquee sign isn't just decoration. It's the focal point of your space and a piece of functional art that no one else in the world has. Whether it's a glowing "BAR" sign that draws customers in the moment they walk through the door, your restaurant's name illuminating the dining room in warm vintage light, or a bespoke statement piece anchoring your retail storefront, these handcrafted steel signs create an atmosphere that flat, mass-produced signage simply cannot touch. Every letter is cut, painted, wired, and assembled by hand. No two signs are exactly alike.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-bold mb-3 text-foreground">The Ultimate Home Bar and Studio Statement</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                You don't have to be a commercial business to want commercial-grade artisan craftsmanship. We build custom lighted signs for home bars, man caves, creative studios, and game rooms across the country. Spell out your family name, your favorite quote, or your personal brand in authentic, vintage-style marquee letters that hang cleanly on standard drywall and glow with the kind of warm, timeless light you just can't get from a store-bought sign. These are heirloom-quality pieces built to be passed down, not thrown out.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-bold mb-3 text-foreground">Schools, Gyms, and Corporate Offices</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                When you want to build school spirit or corporate culture, standard printed signs fade into the background. A custom, hand-fabricated metal marquee sign in your gym, locker room, or office lobby commands attention the moment someone walks in. We build rugged, heavy-duty steel letters that withstand the test of time while delivering a premium, architectural look that says your brand takes itself seriously.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* 10 Reasons Section */}
+
       <section className="py-10 bg-gradient-to-b from-background to-muted/20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-8">
@@ -245,7 +277,7 @@ const WallHangingMarqueeSigns = () => {
                 <div>
                   <h3 className="font-bold mb-2">1. Authentic Steel Construction</h3>
                   <p className="text-muted-foreground text-sm">
-                    Crafted from solid, hand-painted steel, our signs have a rugged, industrial feel and vintage finish that naturally develops character over time—no plastic or shortcuts.
+                    Crafted from solid, hand-painted steel by skilled artisan fabricators. No plastic, no cheap foam, no shortcuts. Our custom signs have a rugged, industrial feel and a vintage finish that naturally develops character over time. They look incredible even when the lights are off.
                   </p>
                 </div>
               </div>
@@ -295,7 +327,7 @@ const WallHangingMarqueeSigns = () => {
                 <div>
                   <h3 className="font-bold mb-2">6. Perfect for Any Setting</h3>
                   <p className="text-muted-foreground text-sm">
-                    From restaurants and bars to retail shops, studios, offices, and curated homes — these letters transform any wall into a statement. We operate as artisan metal fabricators, crafting commissioned marquee letter installations with enduring character.
+                    From neighborhood restaurants and dive bars to high-end retail shops, corporate offices, and curated homes, these custom lighted signs transform any blank wall into a destination. We have been building commissioned marquee letter installations since 2008, and our work hangs in thousands of spaces nationwide.
                   </p>
                 </div>
               </div>
@@ -333,9 +365,9 @@ const WallHangingMarqueeSigns = () => {
               <div className="flex gap-3">
                 <Check className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
                 <div>
-                  <h3 className="font-bold mb-2">10. Built to Last</h3>
+                  <h3 className="font-bold mb-2">10. Built to Last by People Who Care</h3>
                   <p className="text-muted-foreground text-sm">
-                    Whether it's a one-night celebration or a permanent install, these signs are built for the long haul. Trusted by thousands of businesses and creatives nationwide.
+                    Whether it's a statement piece for your living room or a permanent installation for your storefront, these custom marquee signs are built for the long haul by artisan fabricators who take pride in every weld, every brushstroke, and every bulb socket. Trusted by thousands of businesses and creatives nationwide since 2008.
                   </p>
                 </div>
               </div>
@@ -529,6 +561,24 @@ const WallHangingMarqueeSigns = () => {
                 </p>
               </div>
             ))}
+            <div key="faq-cost" className="space-y-2">
+              <h3 className="text-lg font-bold">How much does a custom marquee sign cost?</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                Pricing depends entirely on the size, font style, and number of letters. A simple 3-letter "BAR" sign will cost significantly less than a 15-letter restaurant name in an ornate script font. Most of our custom wall-hanging marquee projects range between $2,500 and $7,000. When you submit a request, we provide a precise, no-obligation quote based on your exact needs.
+              </p>
+            </div>
+            <div key="faq-business-name" className="space-y-2">
+              <h3 className="text-lg font-bold">Can I get my business name made into a custom sign?</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                Yes, absolutely. We can hand-fabricate any word, name, or phrase. We offer several standard font styles including block, serif, and script, or we can work with your specific brand font to create a truly bespoke custom lighted sign that perfectly matches your business identity. If you can dream it, we can build it.
+              </p>
+            </div>
+            <div key="faq-electrician" className="space-y-2">
+              <h3 className="text-lg font-bold">Do I need to hire an electrician to install this?</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                No. Our wall-hanging marquee signs plug directly into a standard wall outlet, just like a lamp. No hardwiring, no conduit, no professional electrician required. This makes them incredibly easy to install in homes, offices, or leased commercial spaces where you can't make permanent electrical modifications.
+              </p>
+            </div>
           </div>
 
           <p className="text-muted-foreground text-sm mt-8 max-w-5xl mx-auto">
