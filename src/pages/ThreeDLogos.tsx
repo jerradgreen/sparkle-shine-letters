@@ -244,13 +244,10 @@ const ThreeDLogos = () => {
           <h2 className="text-3xl font-bold mb-6 text-foreground">Custom Signs for Restaurants, Bars, Offices, and Retail</h2>
           
           <p className="text-muted-foreground mb-4 leading-relaxed">
-            A well-placed custom sign does more than mark a space. It becomes the brand's anchor. Whether it's mounted behind the bar in a restaurant, greeting clients in an office lobby, or drawing eyes in a retail storefront, a custom metal sign turns an ordinary wall into a memorable brand moment. These are the pieces customers photograph, share, and remember long after they leave.
-          </p>
-          <p className="text-muted-foreground mb-4 leading-relaxed">
-            Our custom business signs are built for high-visibility placements: lobbies, reception areas, feature walls, entry points, and bar backs. Every piece is built around your specific logo, colors, and space, then fabricated in metal by hand with detail that gives it real depth and presence. The result is a custom sign for your restaurant, office, or store that feels intentional, elevated, and unmistakably yours.
+            A well-placed custom business sign does more than mark a space. It becomes the physical anchor of your brand, a handcrafted piece of art that tells your customers exactly who you are before you say a word. Whether it's a glowing logo mounted behind the bar in a restaurant, a dimensional metal sign greeting clients in an office lobby, or a bespoke statement piece drawing eyes in a retail storefront, a custom logo sign turns an ordinary wall into a memorable brand moment. These are the pieces your customers photograph, share on social media, and remember long after they leave.
           </p>
           <p className="text-muted-foreground leading-relaxed">
-            From neighborhood cafes to corporate headquarters, these signs anchor a brand's identity in the physical world. They're not decorations. They're custom-built statements that define the space around them.
+            Our custom business signs are designed specifically for high-visibility placements: corporate lobbies, reception areas, feature walls, entry points, and bar backs. Each piece is commissioned around your specific logo, your exact brand colors, and your physical space. The result is not a sign. It is a sculptural brand installation.
           </p>
         </div>
       </section>
@@ -261,10 +258,10 @@ const ThreeDLogos = () => {
           <h2 className="text-3xl font-bold mb-6 text-foreground">Custom Metal Signs That Actually Look Like Your Brand</h2>
           
           <p className="text-muted-foreground mb-4 leading-relaxed">
-            Flat printed signs fade into the background. A custom metal sign commands attention because it occupies real space. Light catches the edges, the logo feels alive on the wall, and the whole thing has a presence that no printed or acrylic sign can match. Every custom sign we build is fabricated from precision-cut metal, assembled by hand, and built to be the first thing people notice when they walk in.
+            Flat, printed signage fades into the background. A custom hand-fabricated metal sign commands attention because it occupies real space. We cut your logo from precision-grade metal and build it layer by layer, entirely by hand, to create real depth and dimension. Light catches the edges, shadows shift across the surface throughout the day, and your logo feels alive on the wall in a way that no printed, routed, or neon sign can replicate.
           </p>
           <p className="text-muted-foreground leading-relaxed">
-            Every piece is made to order. Colors are matched to your brand, the build is engineered for visual impact, and finishes are hand-applied with a vintage edge that gives each sign warmth and character. It's a custom business sign built as a statement piece for spaces that demand more.
+            Every commission is bespoke and one of a kind. We match your brand colors precisely, engineer each layer for maximum visual impact, and apply finishes by hand with the kind of care that mass production simply cannot deliver. The result is a custom sign that feels architectural, elevated, and unmistakably yours. From neighborhood cafés to corporate headquarters, we build the artisan metal signs that anchor your brand's identity in the physical world.
           </p>
         </div>
       </section>
@@ -406,6 +403,36 @@ const ThreeDLogos = () => {
         </div>
       </section>
 
+      {/* What Makes a Great Custom Logo Sign? */}
+      <section className="py-10 px-4 bg-gradient-to-b from-background to-muted/20">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-12 text-foreground">What Makes a Great Custom Logo Sign?</h2>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="space-y-2">
+              <h3 className="text-xl font-bold mb-3 text-foreground">Placement Is Everything</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                The best custom business signs are placed where they cannot be missed. For restaurants and bars, the wall directly behind the bar or the main dining room focal wall are the most powerful placements. For corporate offices, the reception desk or the main lobby wall sets the tone the moment a client walks in. We can help you think through placement as part of the design process.
+              </p>
+            </div>
+
+            <div className="space-y-2">
+              <h3 className="text-xl font-bold mb-3 text-foreground">Lighting Options</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                While many of our custom logo signs look incredible as standalone dimensional metal art pieces, adding illumination takes them to the next level. We can incorporate backlighting to create a dramatic halo effect that makes your logo pop off the wall, or integrate our signature vintage marquee bulbs directly into the design for a classic, high-impact glow that is unmistakably Vintage Marquee Lights.
+              </p>
+            </div>
+
+            <div className="space-y-2">
+              <h3 className="text-xl font-bold mb-3 text-foreground">What if I Don't Have a Vector Logo?</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                Don't worry. While a vector file like an Illustrator or EPS file gives us the cleanest starting point, we work with business owners every single day who only have a JPEG, a PNG, or even just a sketch on paper. Send us what you have. Our design team will help translate your concept into a precise, buildable design, and we will not start fabricating until you have approved every detail of the mockup.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* FAQ Section */}
       <section id="quote-form" className="py-10 px-4 bg-muted/30">
         <div className="max-w-6xl mx-auto">
@@ -417,6 +444,24 @@ const ThreeDLogos = () => {
                 <p className="text-muted-foreground text-sm">{item.answer}</p>
               </div>
             ))}
+            <div key="faq-cost" className="space-y-2">
+              <h3 className="font-bold text-lg">How much does a custom business sign cost?</h3>
+              <p className="text-muted-foreground text-sm">
+                Because every logo is unique, pricing varies based on the overall size, the number of colors, and the complexity of the design. A simple, single-color metal logo will cost less than a highly detailed, multi-color illuminated sign. Custom logo signs typically start around $1,500, with most commissioned pieces ranging from $2,500 to $7,500+. We charge based on square inches and color count, and we provide a precise, no-obligation quote once we see your design and understand your space.
+              </p>
+            </div>
+            <div key="faq-business-sign-electricity" className="space-y-2">
+              <h3 className="font-bold text-lg">Do custom logo signs require electricity?</h3>
+              <p className="text-muted-foreground text-sm">
+                It depends on your design choice. If you choose an illuminated sign with backlighting or marquee bulbs, it will require power. Most of our illuminated custom signs plug directly into a standard wall outlet, making installation easy without the need for an electrician. If you choose a non-illuminated dimensional metal sign, no power is required at all. It simply mounts to the wall like a piece of art.
+              </p>
+            </div>
+            <div key="faq-neon-difference" className="space-y-2">
+              <h3 className="font-bold text-lg">What is the difference between this and a neon sign?</h3>
+              <p className="text-muted-foreground text-sm">
+                Neon signs are made from fragile glass tubes or LED strips that mimic the look. Our custom business signs are fabricated from solid, heavy-duty metal, built by hand, and designed to last for decades. They offer a far more substantial, architectural, and premium look. A metal sign looks incredible during the day when the lights are off, whereas a neon sign often disappears entirely when not illuminated. Metal also ages beautifully, developing character over time rather than yellowing or breaking.
+              </p>
+            </div>
           </div>
 
           <p className="text-muted-foreground text-sm mt-8 max-w-5xl mx-auto">
