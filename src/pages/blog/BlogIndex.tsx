@@ -34,6 +34,11 @@ const articles = [
     description: "A great custom sign does more than label a space. It sets the tone, anchors the brand, and gives guests a reason to stop and look.",
     href: "/blog/custom-signs-for-bars-and-restaurants",
   },
+  {
+    title: "How to Order a Custom Sign: From Idea to Finished Piece",
+    description: "You do not need a perfect logo file or a graphic designer to order a custom sign. Here is exactly how the process works from idea to finished piece.",
+    href: "/blog/how-to-order-a-custom-sign",
+  },
 ];
 
 const BlogIndex = () => {
