@@ -29,6 +29,11 @@ const articles = [
     description: "A practical breakdown of per-letter rates, package pricing strategies, delivery fees, and how to maximize revenue in your marquee rental business.",
     href: "/blog/marquee-letter-rental-pricing-guide",
   },
+  {
+    title: "Custom Signs for Bars and Restaurants: How the Right Sign Transforms a Space",
+    description: "A great custom sign does more than label a space. It sets the tone, anchors the brand, and gives guests a reason to stop and look.",
+    href: "/blog/custom-signs-for-bars-and-restaurants",
+  },
 ];
 
 const BlogIndex = () => {
