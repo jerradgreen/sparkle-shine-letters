@@ -47,9 +47,25 @@ const CustomSignsForBarsAndRestaurants = () => {
           <p className="text-muted-foreground leading-relaxed mb-4">
             Parliament Coffee commissioned a custom script sign in warm white that hangs above the service counter, glowing softly over the pastry case and espresso bar. The flowing script font gives the space a warm, artisan coffee shop personality that no printed sign could replicate.
           </p>
+          <div className="my-8 rounded-lg overflow-hidden">
+            <img
+              src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663459706891/ySyhlKbrJgkntQxC.jpg"
+              alt="Parliament Coffee custom script marquee letters above the service counter"
+              className="w-full object-cover max-h-[400px]"
+              loading="lazy"
+            />
+          </div>
           <p className="text-muted-foreground leading-relaxed mb-4">
             Crooked Hammock Brewery went a different direction with their "BEER happy" installation. Multi-colored block letters in orange, green, and gold span a reclaimed wood feature wall in the dining room. The mixed colors and mixed fonts give the sign a playful, handmade energy that perfectly matches the brewery's casual, community-first vibe.
           </p>
+          <div className="my-8 rounded-lg overflow-hidden">
+            <img
+              src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663459706891/POIiTCiqgQJZbyXr.jpeg"
+              alt="BEER happy custom multi-colored wall-hanging marquee letters at Crooked Hammock Brewery"
+              className="w-full object-cover max-h-[400px]"
+              loading="lazy"
+            />
+          </div>
           <p className="text-muted-foreground leading-relaxed mb-4">
             Both of these are great examples of how individual wall-hanging letters can be customized not just in what they say, but in how they say it. Font choice, color, finish, and size all work together to express the personality of the space.
           </p>
@@ -64,15 +80,47 @@ const CustomSignsForBarsAndRestaurants = () => {
           <p className="text-muted-foreground leading-relaxed mb-4">
             Cafe Collective Cleveland commissioned a custom shaped sign with a scalloped metal border, a black face with gold lettering, and warm bulbs running the full perimeter. The result is a sign that looks like it has been on that wall for decades, even though it was built specifically for this space.
           </p>
+          <div className="my-8 rounded-lg overflow-hidden">
+            <img
+              src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663459706891/LCeKmwOXdtthllJf.jpg"
+              alt="Cafe Collective Cleveland custom shaped logo sign with marquee bulb border"
+              className="w-full object-cover max-h-[400px]"
+              loading="lazy"
+            />
+          </div>
           <p className="text-muted-foreground leading-relaxed mb-4">
             Lola's took a completely different approach with a multi-piece dimensional sign featuring a red arrow shape, a teal speech bubble, and bold "ORDER HERE" lettering. The sign functions as both branding and wayfinding, directing customers while reinforcing the restaurant's retro, playful personality.
           </p>
+          <div className="my-8 rounded-lg overflow-hidden">
+            <img
+              src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663459706891/lKIqqWmIruHPGEmJ.jpg"
+              alt="Lola's custom dimensional restaurant sign with arrow shape and ORDER HERE lettering"
+              className="w-full object-cover max-h-[400px]"
+              loading="lazy"
+            />
+          </div>
           <p className="text-muted-foreground leading-relaxed mb-4">
             Sur Burger went with a classic badge-style sign in red and white with a burger icon at the top, dimensional letters with individual bulbs, and a ribbon banner in script. The aged, distressed finish gives it the look of a vintage roadside diner sign, which is exactly the aesthetic the restaurant wanted.
           </p>
+          <div className="my-8 rounded-lg overflow-hidden">
+            <img
+              src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663459706891/sWQDuyMHUgpmulmr.jpg"
+              alt="Sur Burger custom badge-style restaurant sign with dimensional letters and vintage finish"
+              className="w-full object-cover max-h-[400px]"
+              loading="lazy"
+            />
+          </div>
           <p className="text-muted-foreground leading-relaxed mb-4">
             And then there is the ESPN House Nashville sign, a large-scale commission that combined dimensional ESPN branding, light-up "HOUSE" letters, and a custom "Nashville" script element in orange and red. This is what a custom sign looks like when a major brand wants something that feels local, warm, and physical rather than corporate and printed.
           </p>
+          <div className="my-8 rounded-lg overflow-hidden">
+            <img
+              src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663459706891/qgYvvngApGmMJRmb.jpg"
+              alt="ESPN House Nashville custom dimensional sign with marquee letters and brand colors"
+              className="w-full object-cover max-h-[400px]"
+              loading="lazy"
+            />
+          </div>
           <p className="text-muted-foreground leading-relaxed mb-4">
             <Link to="/3d-logos" className="text-primary underline hover:text-primary/80">See all custom logo sign and dimensional sign options</Link>
           </p>
