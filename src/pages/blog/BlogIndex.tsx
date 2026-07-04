@@ -5,6 +5,16 @@ import Footer from '@/components/Footer';
 
 const articles = [
   {
+    title: "Custom Signs for Bars and Restaurants: How the Right Sign Transforms a Space",
+    description: "How bars, restaurants, breweries, and coffee shops use custom marquee and logo signs to define their brand, attract customers, and create a space people remember.",
+    href: "/blog/custom-signs-for-bars-and-restaurants",
+  },
+  {
+    title: "How to Order a Custom Sign: From Idea to Finished Piece",
+    description: "You do not need a perfect logo file or a graphic designer. Here is exactly how the process works at Vintage Marquee Lights, from your first idea to a finished handcrafted piece on your wall.",
+    href: "/blog/how-to-order-a-custom-sign",
+  },
+  {
     title: "Why Schools Buy Commercial Marquee Letters for Events",
     description: "How high schools, middle schools, and districts use commercial marquee letters for pep rallies, graduations, fundraisers, and more.",
     href: "/blog/why-schools-buy-commercial-marquee-letters",
@@ -28,16 +38,6 @@ const articles = [
     title: "Marquee Letter Rental Pricing Guide: How Much Should You Charge?",
     description: "A practical breakdown of per-letter rates, package pricing strategies, delivery fees, and how to maximize revenue in your marquee rental business.",
     href: "/blog/marquee-letter-rental-pricing-guide",
-  },
-  {
-    title: "Custom Signs for Bars and Restaurants: How the Right Sign Transforms a Space",
-    description: "A great custom sign does more than label a space. It sets the tone, anchors the brand, and gives guests a reason to stop and look.",
-    href: "/blog/custom-signs-for-bars-and-restaurants",
-  },
-  {
-    title: "How to Order a Custom Sign: From Idea to Finished Piece",
-    description: "You do not need a perfect logo file or a graphic designer to order a custom sign. Here is exactly how the process works from idea to finished piece.",
-    href: "/blog/how-to-order-a-custom-sign",
   },
 ];
 
