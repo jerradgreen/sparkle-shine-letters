@@ -149,6 +149,7 @@ const RouterContent = () => {
           <Route path="/blog/marquee-letter-rental-pricing-guide" element={<MarqueeLetterRentalPricingGuide />} />
           <Route path="/blog/custom-signs-for-bars-and-restaurants" element={<CustomSignsForBarsAndRestaurants />} />
           <Route path="/blog/how-to-order-a-custom-sign" element={<HowToOrderACustomSign />} />
+          <Route path="/blog/how-much-does-a-custom-marquee-sign-cost" element={<HowMuchDoesACustomMarqueeSignCost />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/start-marquee-rental-business" element={<StartMarqueeRentalBusiness />} />
           <Route path="/wedding-marquee-signs" element={<WeddingMarqueeSigns />} />
