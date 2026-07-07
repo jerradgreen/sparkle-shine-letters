@@ -54,7 +54,6 @@ const signStyles = [
     imagePosition: "center 10%",
     width: 1200,
     height: 900,
-    fetchPriority: "high" as const,
   },
   {
     title: "Custom Business Signs & Logo Signs",
