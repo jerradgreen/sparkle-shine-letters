@@ -93,7 +93,7 @@ const HowMuchDoesACustomMarqueeSignCost = () => {
 
           <p className="text-muted-foreground leading-relaxed mb-4">These ranges give you a solid idea of what to expect, but the best way to know exactly what your custom sign will cost is to ask. Send us your idea, your logo, or your required letters and we will provide a precise, no-obligation quote.</p>
 
-          <p className="text-muted-foreground leading-relaxed mb-4"><Link to="/quote" className="text-primary hover:underline font-semibold">Start your custom sign quote today &rarr;</Link></p>
+          <p className="text-muted-foreground leading-relaxed mb-4"><Link to="/" className="text-primary hover:underline font-semibold">Choose your sign style and start a quote &rarr;</Link></p>
 
         </article>
 
