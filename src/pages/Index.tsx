@@ -217,7 +217,6 @@ const Index = () => {
                             height={style.height}
                             srcSet={getResponsiveShopifyImageSet(style.image)}
                             sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
-                            fetchpriority={index === 0 ? "high" : "auto"}
                           />
                           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent group-hover:from-black/90 transition-all duration-300">
                             <div className="absolute inset-0 flex flex-col justify-center items-center text-center p-6">
