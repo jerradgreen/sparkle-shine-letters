@@ -44,6 +44,7 @@ const FoodTruckMobileVendorSignageGuide = lazy(() => import("./pages/blog/FoodTr
 const MarqueeLetterRentalPricingGuide = lazy(() => import("./pages/blog/MarqueeLetterRentalPricingGuide"));
 const CustomSignsForBarsAndRestaurants = lazy(() => import("./pages/blog/CustomSignsForBarsAndRestaurants"));
 const HowToOrderACustomSign = lazy(() => import("./pages/blog/HowToOrderACustomSign"));
+const HowMuchDoesACustomMarqueeSignCost = lazy(() => import("./pages/blog/HowMuchDoesACustomMarqueeSignCost"));
 const FAQ = lazy(() => import("./pages/FAQ"));
 const StartMarqueeRentalBusiness = lazy(() => import("./pages/StartMarqueeRentalBusiness"));
 const WeddingMarqueeSigns = lazy(() => import("./pages/WeddingMarqueeSigns"));
@@ -148,6 +149,7 @@ const RouterContent = () => {
           <Route path="/blog/marquee-letter-rental-pricing-guide" element={<MarqueeLetterRentalPricingGuide />} />
           <Route path="/blog/custom-signs-for-bars-and-restaurants" element={<CustomSignsForBarsAndRestaurants />} />
           <Route path="/blog/how-to-order-a-custom-sign" element={<HowToOrderACustomSign />} />
+          <Route path="/blog/how-much-does-a-custom-marquee-sign-cost" element={<HowMuchDoesACustomMarqueeSignCost />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/start-marquee-rental-business" element={<StartMarqueeRentalBusiness />} />
           <Route path="/wedding-marquee-signs" element={<WeddingMarqueeSigns />} />
