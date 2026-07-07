@@ -5,6 +5,11 @@ import Footer from '@/components/Footer';
 
 const articles = [
   {
+    title: "How Much Does a Custom Marquee Sign Cost?",
+    description: "Every sign is different, so every price is different. Here is a transparent breakdown of what custom marquee signs, logo signs, event letters, rental packages, and mobile vendor signs actually cost at Vintage Marquee Lights.",
+    href: "/blog/how-much-does-a-custom-marquee-sign-cost",
+  },
+  {
     title: "Custom Signs for Bars and Restaurants: How the Right Sign Transforms a Space",
     description: "How bars, restaurants, breweries, and coffee shops use custom marquee and logo signs to define their brand, attract customers, and create a space people remember.",
     href: "/blog/custom-signs-for-bars-and-restaurants",
