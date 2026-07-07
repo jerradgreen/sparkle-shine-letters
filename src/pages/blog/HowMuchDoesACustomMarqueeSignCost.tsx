@@ -51,9 +51,9 @@ const HowMuchDoesACustomMarqueeSignCost = () => {
 
           <p className="text-muted-foreground leading-relaxed mb-4"><Link to="/wall-hanging-signs" className="text-primary hover:underline font-semibold">Explore wall-hanging marquee letter options and pricing &rarr;</Link></p>
 
-          <h2 className="text-xl font-semibold text-foreground mt-8 mb-3">2. Custom Business Signs and Logo Signs</h2>
+          <h2 className="text-xl font-semibold text-foreground mt-8 mb-3">2. Custom Logos and Designs</h2>
 
-          <p className="text-muted-foreground leading-relaxed mb-4">When you want your exact business logo turned into a dimensional, illuminated sign, the pricing structure changes. Because logos are completely unique, we cannot price them <strong>per letter</strong>. Instead, custom logo signs are priced by the <strong>square inch</strong> and by the <strong>number of colors</strong> in the design.</p>
+          <p className="text-muted-foreground leading-relaxed mb-4">When you want your exact business logo or design turned into a dimensional, illuminated sign, the pricing structure changes. Because logos and designs are completely unique, we cannot price them <strong>per letter</strong>. Instead, custom logo signs are priced by the <strong>square inch</strong> and by the <strong>number of colors</strong> in the design.</p>
 
           <div className="my-8 rounded-lg overflow-hidden"><img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663459706891/coXcWHUqqJaBLMnG.jpg" alt="Harde's Watering Hole custom business sign with arrow" className="w-full object-cover" loading="lazy" /></div>
 
