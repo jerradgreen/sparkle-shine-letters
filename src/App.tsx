@@ -44,6 +44,7 @@ const FoodTruckMobileVendorSignageGuide = lazy(() => import("./pages/blog/FoodTr
 const MarqueeLetterRentalPricingGuide = lazy(() => import("./pages/blog/MarqueeLetterRentalPricingGuide"));
 const CustomSignsForBarsAndRestaurants = lazy(() => import("./pages/blog/CustomSignsForBarsAndRestaurants"));
 const HowToOrderACustomSign = lazy(() => import("./pages/blog/HowToOrderACustomSign"));
+const HowMuchDoesACustomMarqueeSignCost = lazy(() => import("./pages/blog/HowMuchDoesACustomMarqueeSignCost"));
 const FAQ = lazy(() => import("./pages/FAQ"));
 const StartMarqueeRentalBusiness = lazy(() => import("./pages/StartMarqueeRentalBusiness"));
 const WeddingMarqueeSigns = lazy(() => import("./pages/WeddingMarqueeSigns"));
