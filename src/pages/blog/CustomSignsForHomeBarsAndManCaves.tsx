@@ -47,6 +47,12 @@ const CustomSignsForHomeBarsAndManCaves = () => {
           <p className="text-muted-foreground leading-relaxed mb-4">
             The most common approach is to name the bar. Something personal: a family name, a nickname, a phrase that means something to the people who drink there. The warm glow of incandescent bulbs against a hand-painted steel letter is exactly the kind of ambiance that makes guests feel like they walked into somewhere special rather than someone's house.
           </p>
+          <div className="my-8 rounded-lg overflow-hidden">
+            <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663459706891/OEhKxEmTkOQXIsBW.jpg" alt="Hola illuminated script marquee sign above a home bar with liquor shelves" className="w-full object-cover" loading="lazy" />
+          </div>
+          <div className="my-8 rounded-lg overflow-hidden">
+            <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663459706891/BWdkMLFoOlVGQlwe.jpg" alt="Harde's Watering Hole custom logo sign mounted on exposed brick wall above a home bar" className="w-full object-cover" loading="lazy" />
+          </div>
           <p className="text-muted-foreground leading-relaxed mb-4">
             Script and decorative fonts are especially popular for home bars because they feel warm and personal rather than commercial. If you have a specific vision, a logo, or even just a rough sketch of what you want, we can build it. You do not need a finished design file to get started.
           </p>
@@ -61,6 +67,9 @@ const CustomSignsForHomeBarsAndManCaves = () => {
           <p className="text-muted-foreground leading-relaxed mb-4">
             We build a lot of single-word signs for these spaces. PLAY. GAME ON. CHEERS. LEGENDS. They are simple, bold, and they set the tone for the room immediately. For spaces with a specific theme — a sports team, a favorite era, a personal logo — a custom layered logo sign gives you something that looks like it belongs in a stadium club or a high-end sports bar.
           </p>
+          <div className="my-8 rounded-lg overflow-hidden">
+            <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663459706891/auMfakrYaOHrtAXB.jpg" alt="Play illuminated script marquee sign in red above a basement game room with skee-ball machines" className="w-full object-cover" loading="lazy" />
+          </div>
           <p className="text-muted-foreground leading-relaxed mb-4">
             The signs plug directly into a standard wall outlet. No electrician, no hardwiring, no conduit. You hang it, you plug it in, and it glows. That simplicity is part of why they work so well in residential spaces.
           </p>
@@ -75,6 +84,9 @@ const CustomSignsForHomeBarsAndManCaves = () => {
           <p className="text-muted-foreground leading-relaxed mb-4">
             Custom theater signs are one of our favorite projects. Naming your theater after your family, giving it a marquee-style logo with a decorative border, or building something that references your favorite film era — these are the kinds of signs that make a room feel like a destination rather than a room with a TV in it.
           </p>
+          <div className="my-8 rounded-lg overflow-hidden">
+            <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663459706891/MAqTpudUlyQRQzyB.jpg" alt="Starlight Theater custom illuminated logo sign in a home theater with recliner seating and movie posters" className="w-full object-cover" loading="lazy" />
+          </div>
           <p className="text-muted-foreground leading-relaxed mb-4">
             The Starlight Theater sign above is a perfect example: a fully custom layered logo with a decorative border, warm incandescent bulbs, and a color scheme that matches the room. It looks like it belongs in a real cinema because it is built the same way real cinema signage is built — by hand, in metal, with real bulbs.
           </p>
