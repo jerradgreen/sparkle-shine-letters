@@ -5,6 +5,11 @@ import Footer from '@/components/Footer';
 
 const articles = [
   {
+    title: "Custom Signs for Home Bars, Man Caves, and Game Rooms",
+    description: "How homeowners use custom illuminated marquee signs to transform home bars, man caves, basement game rooms, and home theaters into spaces that feel like the real thing.",
+    href: "/blog/custom-signs-for-home-bars-and-man-caves",
+  },
+  {
     title: "How Much Does a Custom Marquee Sign Cost?",
     description: "A transparent pricing breakdown for every sign type: wall-hanging letters, custom logo signs, event letters, rental packages, and mobile vendor signs.",
     href: "/blog/how-much-does-a-custom-marquee-sign-cost",
