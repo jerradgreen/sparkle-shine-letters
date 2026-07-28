@@ -95,6 +95,15 @@ const Navigation = () => {
             <Link to="/blog" className="text-foreground hover:text-primary font-medium">
               Blog
             </Link>
+
+            <a
+              href="https://vintagemarqueelights.approvepayments.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-foreground hover:text-primary font-medium"
+            >
+              Financing
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
