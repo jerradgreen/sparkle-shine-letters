@@ -95,6 +95,15 @@ const Navigation = () => {
             <Link to="/blog" className="text-foreground hover:text-primary font-medium">
               Blog
             </Link>
+
+            <a
+              href="https://vintagemarqueelights.approvepayments.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-foreground hover:text-primary font-medium"
+            >
+              Financing
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -147,6 +156,16 @@ const Navigation = () => {
               <Link to="/blog" className="text-foreground hover:text-primary font-medium py-2" onClick={() => setIsMobileMenuOpen(false)}>
                 Blog
               </Link>
+
+              <a
+                href="https://vintagemarqueelights.approvepayments.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-foreground hover:text-primary font-medium py-2"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Financing
+              </a>
             </div>
           </div>
         )}

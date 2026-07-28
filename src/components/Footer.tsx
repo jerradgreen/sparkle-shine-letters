@@ -171,6 +171,14 @@ const Footer = () => {
               >
                 FAQ
               </Link>
+              <a
+                href="https://vintagemarqueelights.approvepayments.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-primary transition-colors"
+              >
+                Financing
+              </a>
               <a 
                 href="https://vintagemarqueelights.com/policies/privacy-policy"
                 target="_blank"
