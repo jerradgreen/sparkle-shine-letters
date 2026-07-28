@@ -73,7 +73,7 @@ const MobileVendorSigns = () => {
                 Custom mobile vendor signs typically start around $3,000. Most full builds range from $5,000–$10,000 depending on size, font style, and details.
               </p>
               <p className="text-sm font-semibold mb-6">
-                <a href="https://vintagemarqueelights.approvepayments.com/" target="_blank" rel="noopener noreferrer" className="text-primary underline underline-offset-2 hover:text-primary/80">Financing Available</a>
+                <a href="https://vintagemarqueelights.approvepayments.com/" target="_blank" rel="noopener noreferrer" className="text-primary underline underline-offset-2 hover:text-primary/80">Financing Available</a> — as low as $100/month
               </p>
               
               <Button 
@@ -103,7 +103,7 @@ const MobileVendorSigns = () => {
                 Custom mobile vendor signs typically start around $3,000. Most full builds range from $5,000–$10,000 depending on size, font style, and details.
               </p>
               <p className="text-sm font-semibold mb-6">
-                <a href="https://vintagemarqueelights.approvepayments.com/" target="_blank" rel="noopener noreferrer" className="text-primary underline underline-offset-2 hover:text-primary/80">Financing Available</a>
+                <a href="https://vintagemarqueelights.approvepayments.com/" target="_blank" rel="noopener noreferrer" className="text-primary underline underline-offset-2 hover:text-primary/80">Financing Available</a> — as low as $100/month
               </p>
               
               <Button 

@@ -53,7 +53,7 @@ export const MarqueeHeroSection = () => {
               36″ letters start at $800 per letter, with quantity-based discounts available. Letters, numbers, symbols, and topper phrases available.
             </p>
             <p className="text-sm font-semibold mt-1">
-              <a href="https://vintagemarqueelights.approvepayments.com/" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">Financing Available</a>
+              <a href="https://vintagemarqueelights.approvepayments.com/" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">Financing Available</a> — as low as $41/month
             </p>
         </div>
       </div>
@@ -64,7 +64,7 @@ export const MarqueeHeroSection = () => {
            36″ letters start at $800 per letter, with quantity-based discounts available. Letters, numbers, symbols, and topper phrases available.
          </p>
          <p className="text-sm md:text-base font-semibold">
-           <a href="https://vintagemarqueelights.approvepayments.com/" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">Financing Available</a>
+           <a href="https://vintagemarqueelights.approvepayments.com/" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">Financing Available</a> — as low as $41/month
          </p>
       </div>
 
