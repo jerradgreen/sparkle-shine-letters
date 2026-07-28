@@ -83,7 +83,7 @@ const WallHangingMarqueeSigns = () => {
                  Most hand-fabricated, artisan metal marquee letter custom builds range $2500-$7000+ depending on size and complexity.
                </p>
                <p className="text-sm font-semibold mb-4">
-                 <a href="https://vintagemarqueelights.approvepayments.com/" target="_blank" rel="noopener noreferrer" className="text-primary underline underline-offset-2 hover:text-primary/80">Financing Available</a>
+                 <a href="https://vintagemarqueelights.approvepayments.com/" target="_blank" rel="noopener noreferrer" className="text-primary underline underline-offset-2 hover:text-primary/80">Financing Available</a> — as low as $100/month
                </p>
 
                {/* Mobile CTA buttons */}
@@ -150,7 +150,7 @@ const WallHangingMarqueeSigns = () => {
                  Most hand-fabricated, artisan metal marquee letter custom builds range $2500-$7000+ depending on size and complexity.
                </p>
                <p className="text-sm font-semibold mb-4">
-                 <a href="https://vintagemarqueelights.approvepayments.com/" target="_blank" rel="noopener noreferrer" className="text-primary underline underline-offset-2 hover:text-primary/80">Financing Available</a>
+                 <a href="https://vintagemarqueelights.approvepayments.com/" target="_blank" rel="noopener noreferrer" className="text-primary underline underline-offset-2 hover:text-primary/80">Financing Available</a> — as low as $100/month
                </p>
 
                <div className="space-y-3 mb-6">

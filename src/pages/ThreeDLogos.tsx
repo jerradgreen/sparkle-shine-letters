@@ -80,7 +80,7 @@ const ThreeDLogos = () => {
                 Custom logo signs typically start around $1,500. Most commissioned pieces range from $2,500–$7,500+ depending on size, layers, and detail.
               </p>
               <p className="text-sm font-semibold mb-6">
-                <a href="https://vintagemarqueelights.approvepayments.com/" target="_blank" rel="noopener noreferrer" className="text-primary underline underline-offset-2 hover:text-primary/80">Financing Available</a>
+                <a href="https://vintagemarqueelights.approvepayments.com/" target="_blank" rel="noopener noreferrer" className="text-primary underline underline-offset-2 hover:text-primary/80">Financing Available</a> — as low as $41/month
               </p>
               
               {/* Mobile CTA buttons */}
@@ -135,7 +135,7 @@ const ThreeDLogos = () => {
                 Custom logo signs typically start around $1,500. Most commissioned pieces range from $2,500–$7,500+ depending on size, layers, and detail.
               </p>
               <p className="text-sm font-semibold mb-6">
-                <a href="https://vintagemarqueelights.approvepayments.com/" target="_blank" rel="noopener noreferrer" className="text-primary underline underline-offset-2 hover:text-primary/80">Financing Available</a>
+                <a href="https://vintagemarqueelights.approvepayments.com/" target="_blank" rel="noopener noreferrer" className="text-primary underline underline-offset-2 hover:text-primary/80">Financing Available</a> — as low as $41/month
               </p>
               
               <div className="space-y-3 mb-6">

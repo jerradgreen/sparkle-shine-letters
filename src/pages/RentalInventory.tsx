@@ -173,7 +173,7 @@ const RentalInventory = () => {
 	                 Rental inventory packages are revenue-producing assets — not décor. Most clients invest $15,000-$35,000 depending on configuration. With consistent bookings, many recover their investment within the first year and continue generating profit for years after.
 	               </p>
                <p className="text-sm font-semibold mb-3">
-                 <a href="https://vintagemarqueelights.approvepayments.com/" target="_blank" rel="noopener noreferrer" className="text-primary underline underline-offset-2 hover:text-primary/80">Financing Available</a>
+                 <a href="https://vintagemarqueelights.approvepayments.com/" target="_blank" rel="noopener noreferrer" className="text-primary underline underline-offset-2 hover:text-primary/80">Financing Available</a> — as low as $295/month
                </p>
               
                <div className="bg-muted/30 rounded-lg p-3 text-center -mt-2">
@@ -217,7 +217,7 @@ const RentalInventory = () => {
 	                 Rental inventory packages are revenue-producing assets — not décor. Most clients invest $15,000-$35,000 depending on configuration. With consistent bookings, many recover their investment within the first year and continue generating profit for years after.
 	               </p>
                <p className="text-sm font-semibold mb-4">
-                 <a href="https://vintagemarqueelights.approvepayments.com/" target="_blank" rel="noopener noreferrer" className="text-primary underline underline-offset-2 hover:text-primary/80">Financing Available</a>
+                 <a href="https://vintagemarqueelights.approvepayments.com/" target="_blank" rel="noopener noreferrer" className="text-primary underline underline-offset-2 hover:text-primary/80">Financing Available</a> — as low as $295/month
                </p>
             <Button
               size="lg" 
