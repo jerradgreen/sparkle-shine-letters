@@ -117,8 +117,11 @@ Deno.serve(async (req) => {
     return Response.json({ error: "Unknown action" }, { status: 400, headers: corsHeaders });
   } catch (e) {
     console.error(e);
-    const message = e instanceof Error && e.message === "Unauthorized" ? "Unauthorized" : "Internal server error";
-    const status = message === "Unauthorized" ? 401 : 500;
+    const raw = e instanceof Error ? e.message : "";
+    const message =
+      raw === "Unauthorized" ? "Unauthorized" : raw === "Forbidden" ? "Forbidden" : "Internal server error";
+    const status = message === "Unauthorized" ? 401 : message === "Forbidden" ? 403 : 500;
+
     return Response.json({ error: message }, { status, headers: corsHeaders });
   }
 });
