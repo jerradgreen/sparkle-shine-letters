@@ -29,14 +29,29 @@ function authHeaders() {
   };
 }
 
+// Privileged setup endpoint: only the allow-listed site owner may call it.
+// GSC_OWNER_EMAIL must be set as a secret; when it is missing, every call is denied.
 async function requireAuth(req: Request) {
   const auth = req.headers.get("Authorization");
   if (!auth) throw new Error("Unauthorized");
   const token = auth.replace("Bearer ", "");
   const { data: { user }, error } = await supabase.auth.getUser(token);
   if (error || !user) throw new Error("Unauthorized");
+
+  const ownerList = (Deno.env.get("GSC_OWNER_EMAIL") ?? "")
+    .split(",")
+    .map((e) => e.trim().toLowerCase())
+    .filter(Boolean);
+
+  const email = user.email?.toLowerCase();
+  if (ownerList.length === 0 || !email || !ownerList.includes(email)) {
+    console.error(`gsc-setup: forbidden call by user ${user.id}`);
+    throw new Error("Forbidden");
+  }
+
   return user;
 }
+
 
 Deno.serve(async (req) => {
   if (req.method === "OPTIONS") return new Response(null, { headers: corsHeaders });
