@@ -7,8 +7,9 @@ Scope is limited to adding GA4 events. No Google Ads conversion events, no chang
 - `trackLeadOnce(formType, leadCategory, entryId)` — **requires** a Cognito entry ID.
   - If `entryId` is missing or empty, no event is sent at all. A direct visit to a thank-you URL therefore never creates a lead.
   - Dedup key is the unique entry: `vml_lead_sent:<entryId>`, stored in `localStorage` (survives refresh, new tabs, and browser restarts) with a `sessionStorage` fallback if `localStorage` is blocked. A refresh of the same thank-you URL is silently skipped; a second, genuinely different submission carries a different `[Id]` and is counted.
-  - Sends `generate_lead` with `form_type`, `lead_category`, and `entry_id` (also used as the GA4 `transaction_id`-style dedup value for future Ads work).
+  - Sends `generate_lead` with `form_type` and `lead_category` only. The `entryId` is **never** sent as a GA4 event parameter and is **never** mapped to `transaction_id`; it exists only inside the deduplication guard.
   - Keys are written with a timestamp so a small cleanup routine can drop entries older than 90 days and keep `localStorage` from growing unbounded.
+
 
 
 ## 2. SPA page_view tracking (new file `src/components/analytics/GA4RouteTracker.tsx`)
@@ -56,9 +57,11 @@ Note: if you would rather not depend on the Cognito settings change, the alterna
 
 ## Verification
 - Build the project.
-- Load the preview with Playwright, navigate client-side to `/thank-you/custom?entry_id=TEST-123`, and confirm one `page_view` and one `generate_lead` (with `form_type`, `lead_category`, `entry_id`) hit `google-analytics.com/g/collect` for `G-Y5YZE675KX`.
+- Load the preview with Playwright, navigate client-side to `/thank-you/custom?entry_id=TEST-123`, and confirm one `page_view` and one `generate_lead` (with `form_type` and `lead_category` only) hit `google-analytics.com/g/collect` for `G-Y5YZE675KX`.
 - Reload that URL and confirm no second `generate_lead` fires.
 - Load `/thank-you/custom` with no `entry_id` and confirm **no** `generate_lead` fires.
 - Load `/thank-you/custom?entry_id=TEST-456` and confirm a new `generate_lead` does fire.
 - Confirm the Google Ads and Meta Pixel requests are unchanged.
+- Confirm the `generate_lead` payload does **not** contain `entry_id` or `transaction_id`.
+
 
