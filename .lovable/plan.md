@@ -4,7 +4,12 @@ Scope is limited to adding GA4 events. No Google Ads conversion events, no chang
 
 ## 1. Analytics helper (new file `src/lib/analytics.ts`)
 - `trackPageView(path)` — calls `window.gtag('event','page_view',{page_path, page_location, page_title})` only if `gtag` exists.
-- `trackLeadOnce(formType, leadCategory)` — sends `generate_lead` with `form_type` and `lead_category`, guarded by a `sessionStorage` key (`vml_lead_sent:<formType>`) so refreshing or revisiting a thank-you page does not fire a duplicate. Wrapped in try/catch for private-mode browsers.
+- `trackLeadOnce(formType, leadCategory, entryId)` — **requires** a Cognito entry ID.
+  - If `entryId` is missing or empty, no event is sent at all. A direct visit to a thank-you URL therefore never creates a lead.
+  - Dedup key is the unique entry: `vml_lead_sent:<entryId>`, stored in `localStorage` (survives refresh, new tabs, and browser restarts) with a `sessionStorage` fallback if `localStorage` is blocked. A refresh of the same thank-you URL is silently skipped; a second, genuinely different submission carries a different `[Id]` and is counted.
+  - Sends `generate_lead` with `form_type`, `lead_category`, and `entry_id` (also used as the GA4 `transaction_id`-style dedup value for future Ads work).
+  - Keys are written with a timestamp so a small cleanup routine can drop entries older than 90 days and keep `localStorage` from growing unbounded.
+
 
 ## 2. SPA page_view tracking (new file `src/components/analytics/GA4RouteTracker.tsx`)
 - Uses `useLocation()`; skips the very first render because `gtag('config', 'G-Y5YZE675KX')` in `index.html` already sends the initial page_view.
