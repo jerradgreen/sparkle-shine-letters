@@ -57,9 +57,11 @@ Note: if you would rather not depend on the Cognito settings change, the alterna
 
 ## Verification
 - Build the project.
-- Load the preview with Playwright, navigate client-side to `/thank-you/custom?entry_id=TEST-123`, and confirm one `page_view` and one `generate_lead` (with `form_type`, `lead_category`, `entry_id`) hit `google-analytics.com/g/collect` for `G-Y5YZE675KX`.
+- Load the preview with Playwright, navigate client-side to `/thank-you/custom?entry_id=TEST-123`, and confirm one `page_view` and one `generate_lead` (with `form_type` and `lead_category` only) hit `google-analytics.com/g/collect` for `G-Y5YZE675KX`.
 - Reload that URL and confirm no second `generate_lead` fires.
 - Load `/thank-you/custom` with no `entry_id` and confirm **no** `generate_lead` fires.
 - Load `/thank-you/custom?entry_id=TEST-456` and confirm a new `generate_lead` does fire.
 - Confirm the Google Ads and Meta Pixel requests are unchanged.
+- Confirm the `generate_lead` payload does **not** contain `entry_id` or `transaction_id`.
+
 
