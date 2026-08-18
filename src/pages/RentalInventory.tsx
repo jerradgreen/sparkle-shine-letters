@@ -106,6 +106,9 @@ const RentalInventory = () => {
     navigate('/quote/rental-inventory');
   };
 
+  const showWebsiteSection = false;
+
+
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
