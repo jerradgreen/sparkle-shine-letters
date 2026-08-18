@@ -106,6 +106,9 @@ const RentalInventory = () => {
     navigate('/quote/rental-inventory');
   };
 
+  const showWebsiteSection = false;
+
+
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
@@ -358,6 +361,7 @@ const RentalInventory = () => {
       </section>
 
       {/* Website Feature Section */}
+      {showWebsiteSection && (
       <section className="py-16 px-4 bg-muted/30">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-10">
@@ -458,7 +462,7 @@ const RentalInventory = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section>)}
 
       {/* Intro section — directly under hero, above "Why Most Event Businesses" */}
       <section id="4ft-marquee-letters" className="py-8 px-4">
