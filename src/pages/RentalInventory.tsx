@@ -462,7 +462,7 @@ const RentalInventory = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section>)}
 
       {/* Intro section — directly under hero, above "Why Most Event Businesses" */}
       <section id="4ft-marquee-letters" className="py-8 px-4">
