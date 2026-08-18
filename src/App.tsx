@@ -4,6 +4,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import { ScrollToTop } from "@/components/ScrollToTop";
+import GA4RouteTracker from "@/components/analytics/GA4RouteTracker";
 
 const Index = lazy(() => import("./pages/Index"));
 const RentalInventory = lazy(() => import("./pages/RentalInventory"));
@@ -110,6 +111,7 @@ const RouterContent = () => {
   return (
     <>
       <ScrollToTop />
+      <GA4RouteTracker />
       <Suspense fallback={<RouteFallback />}>
         <Routes>
           <Route path="/" element={<Index />} />

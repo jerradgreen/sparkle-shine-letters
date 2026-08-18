@@ -1,15 +1,20 @@
 import { useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { CheckCircle, Mail, Download, PhoneCall, Clock } from "lucide-react";
 import { Helmet } from "react-helmet-async";
+import { trackLeadOnce } from "@/lib/analytics";
 
 const RentalInventoryThankYou = () => {
+  const [searchParams] = useSearchParams();
+  const entryId = searchParams.get("entry_id");
+
   useEffect(() => {
     (window as any).fbq?.('track', 'Lead');
-  }, []);
+    trackLeadOnce("rental-inventory", "Rental Inventory Packages", entryId);
+  }, [entryId]);
   const pdfUrl = "/downloads/rental-business-guide.pdf";
 
   return (

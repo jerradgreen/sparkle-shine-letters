@@ -1,15 +1,20 @@
 import { useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { CheckCircle } from "lucide-react";
 import { Helmet } from "react-helmet-async";
+import { trackLeadOnce } from "@/lib/analytics";
 
 const WallHangingThankYou = () => {
+  const [searchParams] = useSearchParams();
+  const entryId = searchParams.get("entry_id");
+
   useEffect(() => {
     (window as any).fbq?.('track', 'Lead');
-  }, []);
+    trackLeadOnce("wall-hanging", "Wall-Hanging Marquee Signs", entryId);
+  }, [entryId]);
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
