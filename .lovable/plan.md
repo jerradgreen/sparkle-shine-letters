@@ -1,39 +1,39 @@
-# Diagnostic: `lead_mobile_vendor` seen on the Event Style thank-you page
+# Diagnose the "flash" of an extra page after form submission
 
-No code changes. Findings only.
+## What the code shows right now
 
-## 1. What the website fires on /thank-you/event-standup
+Landing pages are NOT decided by the website. Every quote page mounts a Cognito form (`FormPageTemplate` -> `Cognito.mount(formId, ...)`), and the redirect after submit is configured inside each Cognito form's settings. There is:
 
-Exactly one lead event, from `src/pages/thank-you/EventStandupThankYou.tsx:14-17`:
+- no `navigate()`, `window.location`, `<Navigate>`, or `meta refresh` on any thank-you page
+- no chained redirect in `public/_redirects` (and Lovable hosting ignores that file anyway)
+- no redirect logic in `index.html` or the static-page generator
 
-```ts
-(window as any).fbq?.('track', 'Lead');
-trackLeadOnce("event-standup", "Event Stand-Up Letters", entryId);
-```
+So a two-step "flash" cannot be coming from React Router. It is either (a) the Cognito form's own confirmation step before its redirect, or (b) the Cognito redirect URL pointing at one page which then bounces.
 
-`trackLeadOnce` (`src/lib/analytics.ts:105-133`) sends:
+## Current form -> intended thank-you mapping (from the codebase)
 
-```ts
-gtag("event", "generate_lead", { form_type: "event-standup", lead_category: "Event Stand-Up Letters" });
-```
+| Quote page | Cognito Form ID | Intended thank-you route |
+|---|---|---|
+| /quote/wall-hanging | 8 | /thank-you/wall-hanging |
+| /quote/3d-logos | 9 | /thank-you/3d-logos |
+| /quote/event-standup | 7 | /thank-you/event-standup |
+| /quote/mobile-vendor | 10 | /thank-you/mobile-vendor |
+| /quote/custom | 11 | /thank-you/custom |
+| /quote/not-sure | 12 | /thank-you/not-sure |
+| /quote/rental-inventory | 1 | /thank-you/rental-inventory |
+| /download/rental-guide | 1 | /download/rental-guide-thank-you |
 
-**The only GA4 event name emitted by the site is `generate_lead`.** A repo-wide search finds no `lead_mobile_vendor`, no `lead_event_style`, and no other `lead_*` event name anywhere in the codebase or in git history. So the site is not firing a wrong event — it does not fire those names at all.
+Note the collision: `/quote/rental-inventory` and `/download/rental-guide` share **Form ID 1**. A single Cognito form has a single redirect URL, so one of those two flows necessarily lands on the other's thank-you page. That is the most likely source of the perceived extra page in the rental/own-it flow.
 
-## 2. Where `lead_mobile_vendor` actually comes from
+There is also no `/thank-you/own-it` route in `src/App.tsx`; if any Cognito form redirects there, it renders the 404 page for a moment before you (or a browser autocomplete/back) end up elsewhere.
 
-The captured requests are Google **Ads** hits, not GA4 hits:
+## Proposed diagnostic steps (no guessing)
 
-- Endpoint: `https://www.google.com/measurement/conversion?...` (Google Ads conversion endpoint), not `google-analytics.com/g/collect` (GA4).
-- Seven of them fire together, in the same millisecond batch, each with a different `en=` value: `lead_mobile_vendor`, `lead_event_style`, `lead_own_it`, `lead_rental_inventory`, `lead_not_sure`, `lead_layered_logo`, `lead_wall_sign`.
-- Each has its own `gacid` and `frm=2`.
-- `url=` in every one of those captures is `…lovableproject.com/rental-inventory?__lovable_load_id=…` — the rental inventory page, **not** the Event Style thank-you page.
+1. Run a real submission through each form in a browser with the network log recording, capturing the full redirect chain (document requests only) so we can see the exact intermediate URL and the final URL, including `?entry_id=`.
+2. Confirm from the captured chain whether the intermediate page is `/thank-you-for-submitting-a-form`, `/download/rental-guide-thank-you`, `/thank-you/own-it` (404), or Cognito's own hosted confirmation page.
+3. Report the exact Cognito redirect URL that needs correcting in the Cognito admin panel, and whether a missing route needs to be added in `src/App.tsx`.
 
-These names are Google Ads **conversion action / imported-event names configured in your Ads account**, echoed back by the Google tag as it evaluates its conversion rule set on page load. The whole set is pinged together on a single page load, which is why one page produced all seven `lead_*` names at once. Nothing in the website chose `lead_mobile_vendor` for that page — the site did not send any of these names.
+## Notes
 
-## 3. Answer
-
-- The GA4 event name fired on `/thank-you/event-standup` is **`generate_lead`** (params `form_type=event-standup`, `lead_category=Event Stand-Up Letters`), plus the Meta Pixel `Lead`.
-- `en=lead_mobile_vendor` is **not** a site-fired event and not a mismatched page mapping in the code. It is an Ads-side conversion-action name in a batch of seven that the Google Ads tag pings on page load, and the capture you have was recorded on `/rental-inventory`, not on the Event Style thank-you page.
-- So: not the wrong event being fired by the site, and not intentional site behavior either — those `lead_*` names are configured entirely in Google Ads, not in this project.
-
-If you want the per-page mapping verified as it happens on the live thank-you URL specifically, the next step would be a live capture on `https://inventory.vintagemarqueelights.com/thank-you/event-standup?entry_id=<test>` and reading which `en=` values the Ads endpoint receives there.
+- Because the redirect lives in Cognito, the actual fix will most likely be a settings change in Cognito (plus possibly splitting the rental-guide flow onto its own form ID), not a code change.
+- No code changes are made as part of this diagnostic.
