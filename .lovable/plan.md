@@ -1,110 +1,66 @@
-# Google Ads Conversion Tracking — Forensic Audit (no changes made)
+# Diagnostic: Cognito → thank-you navigation vs. Google Ads URL/page-load conversions
 
-## Headline finding
+No code was modified.
 
-**There is zero Google Ads conversion code anywhere in this project.** A repo-wide search for `gtag('event', 'conversion'`, `send_to`, `AW-*/label`, and any conversion-label string returns **no matches** outside of the two `gtag('config', ...)` lines in `index.html`. Google Ads is currently receiving only page-level tag activity, never a conversion event.
+## 1. How users get from a Cognito submission to a thank-you page
 
-## 1. Google Tag installation
+- The quote forms are Cognito Forms embeds, not React forms. `src/components/templates/FormPageTemplate.tsx` lines 75-95 load `https://www.cognitoforms.com/f/seamless.js` and line 56 calls `window.Cognito.mount(formId, '#cognito-form-container-<id>')`.
+- There is **no app-side navigation to any thank-you route**. A repo-wide search for `thank-you` in `src/` returns matches only in the thank-you page components themselves and the route table in `src/App.tsx` (lines 123-146). No `navigate('/thank-you/...')`, no `window.location = '/thank-you/...'`, no `history.pushState` targeting a thank-you URL anywhere.
+- The only navigation code in the form pages is unrelated: `src/pages/forms/CustomQuote.tsx` line 24 (`navigate(path)` for the sign-style grid) and `src/pages/forms/EventStandupQuote.tsx` line 68 (`window.location.href = "https://www.vintagemarqueelights.com"` in the honeypot spam branch).
+- Therefore the redirect after submission is performed entirely by **Cognito's own "redirect after submit" setting**, executed by the embedded form's script, not by React Router.
 
-- File: `index.html`, lines 4-12 — the only Google tag in the codebase.
-- Loader: `<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y5YZE675KX">` (line 5). Loaded exactly **once**; no other `gtag/js` include exists in `src/`, `public/`, or `scripts/`.
-- Config calls: `gtag('config', 'G-Y5YZE675KX')` and `gtag('config', 'AW-17646919806')` in the same inline block.
-- Google Ads Conversion ID present: **AW-17646919806** (config only).
-- GA4 Measurement ID present: **G-Y5YZE675KX**.
-- No legacy `AW-999837409` anywhere in code.
+## 2. `/thank-you/event-standup` after a real submission
 
-## 2. Google Tag Manager
+- Because the redirect is issued by Cognito (a URL redirect of the top-level document from the embed), reaching `/thank-you/event-standup` is a **true browser navigation / full document load**, not a client-side route change.
+- Consequences of a full load:
+  - `index.html` **reloads** in full.
+  - The Google tag loader (`index.html` line 5) reloads and `gtag('config','G-Y5YZE675KX')` plus `gtag('config','AW-17646919806')` (lines 10-11) **execute again**, sending the automatic GA4 `page_view` and the Ads page-load tag hit for URL `/thank-you/event-standup`.
+  - React then mounts `EventStandupThankYou`, whose `useEffect` (lines 14-17) fires `fbq('track','Lead')` and `trackLeadOnce("event-standup", "Event Stand-Up Letters", entryId)`.
+  - `GA4RouteTracker` (`src/components/analytics/GA4RouteTracker.tsx` lines 9-14) explicitly **skips the first render**, so it does *not* add a duplicate manual `page_view` on a fresh document load.
 
-- **GTM is not installed.** No `GTM-` container ID, no `gtm.js` loader. The only `googletagmanager.com` references are the gtag loader (line 5) and preconnect/dns-prefetch hints (lines 215-216).
-- Consequence: tracking is implemented **directly in code**, so GTM cannot be compensating for the missing conversion events — unless conversions were configured Google-side (e.g. GA4 conversion import / Enhanced Conversions from GA4 events), which is outside this codebase.
+- Caveat worth stating precisely: the codebase cannot prove which redirect mode Cognito is configured with (that setting lives in the Cognito admin panel). If Cognito were configured to redirect only inside its iframe, the parent document URL would never change and no Ads page-load hit for the thank-you URL would occur. Nothing in this repo forces a top-level navigation — the app is passive here.
 
-## 3. Google Ads conversion events
+## 3. Which of the four behaviors occurs
 
-| Occurrence | Result |
+| Path into `/thank-you/event-standup` | Behavior |
 | --- | --- |
-| `gtag('event', 'conversion', ...)` | **0 occurrences** |
-| Any call with a `send_to: 'AW-.../label'` | **0 occurrences** |
-| Any conversion label string | **0 occurrences** |
+| Cognito post-submit redirect (the real lead path) | **True page load** — new document, tag re-executed, automatic `page_view`; no manual `page_view` (first-render skip) |
+| Internal link click elsewhere in the app | **Browser history change** (`pushState` via React Router) + **manually-generated `page_view`** from `GA4RouteTracker` → `trackPageView()` after a 100 ms delay |
 
-The only `gtag('event', ...)` calls in the project are in `src/lib/analytics.ts`:
+So the production lead path is a genuine page load; only in-app navigation produces the history-change + manual `page_view` combination.
 
-- Line 22 — `gtag("event", "page_view", { page_path, page_location, page_title })` inside `trackPageView()`.
-- Line 125 — `gtag("event", "generate_lead", { form_type, lead_category })` inside `trackLeadOnce()`.
+## 4. Does the manual `page_view` go to Google Ads?
 
-Neither carries `send_to`, so both are delivered to the default destinations of the shared tag (GA4 and, for the linked Ads ID, only as tag activity — not as a named conversion action).
+No. `src/lib/analytics.ts` lines 16-30:
 
-`trackLeadOnce()` trigger conditions (lines 105-133):
-- Requires `window.gtag` to exist.
-- Requires a non-empty `entry_id` query parameter — **if `entry_id` is absent, the function returns early and fires nothing at all** (line 113-116).
-- Requires no prior `vml_lead_sent:<entry_id>` key in localStorage/sessionStorage.
-
-## 4. Thank-you pages
-
-Routes registered in `src/App.tsx` lines 123-146:
-
-| Route | Google Ads conversion | GA4 | Notes |
-| --- | --- | --- | --- |
-| `/thank-you/event-standup` | No | `generate_lead` (needs `entry_id`) | + Meta Pixel `Lead` |
-| `/thank-you/rental-inventory` | No | same | + Meta Pixel `Lead` |
-| `/thank-you/wall-hanging` | No | same | + Meta Pixel `Lead` |
-| `/thank-you/mobile-vendor` | No | same | + Meta Pixel `Lead` |
-| `/thank-you/3d-logos` | No | same | + Meta Pixel `Lead` |
-| `/thank-you/custom` | No | same | + Meta Pixel `Lead` |
-| `/thank-you/not-sure` | No | same | + Meta Pixel `Lead` |
-| `/thank-you-for-submitting-a-form` | No | same | legacy general page |
-| `/download/rental-guide-thank-you` | No | same | guide download |
-| `/thank-you/own-it` | **Route does not exist** | — | no file, no route; would render `NotFound` |
-
-Trigger location on every page: a `useEffect` on mount (line 14-17 pattern), firing `fbq('track','Lead')` unconditionally and `trackLeadOnce(...)` conditionally.
-
-## 5. Form submission flow
-
-Forms are **third-party Cognito Forms**, embedded by `src/components/templates/FormPageTemplate.tsx` (script `https://www.cognitoforms.com/f/seamless.js`, mounted per form ID). Pages: `src/pages/forms/*.tsx` (EventStandupQuote, WallHangingQuote, ThreeDLogosQuote, MobileVendorQuote, RentalInventoryQuote, CustomQuote, NotSureQuote).
-
-Actual sequence:
-
-```text
-User fills Cognito iframe form
-  -> validation: inside Cognito (no app code)
-  -> submission/storage: Cognito servers (no API/database call in this app)
-  -> CRM: Cognito-side integration/email (not in this codebase)
-  -> redirect: Cognito redirect setting -> /thank-you/<type>[?entry_id=<Id>]
-  -> analytics on thank-you mount: fbq('track','Lead') + trackLeadOnce(...)
-  -> Google Ads conversion: NEVER FIRES (no conversion code exists)
+```ts
+gtag("event", "page_view", { page_path, page_location, page_title });
 ```
 
-There is no place in the sequence where a Google Ads conversion occurs.
+There is **no `send_to` parameter**, and no `AW-17646919806` reference anywhere in `src/`. The event goes to the shared tag's default destinations. In practice gtag routes an un-targeted `page_view` to the GA4 stream; it is not a named Google Ads conversion event and it carries no conversion label. The same is true of `generate_lead` (analytics.ts line 125).
 
-## 6. Refactoring risks observed
+## 5. What Google Ads URL-based page-load conversion detection needs
 
-- The current analytics layer (`src/lib/analytics.ts`, `src/components/analytics/GA4RouteTracker.tsx`) was introduced recently and implements **only** GA4 `page_view` and `generate_lead`. It was scoped explicitly to exclude Ads conversion events.
-- Git history in the working tree does not contain any previously removed `gtag('event','conversion')` call, so no earlier hard-coded Ads conversion snippet was deleted from this repo.
-- Conditional-execution risk (real, active): the `entry_id` gate in `trackLeadOnce` (analytics.ts line 113). If Cognito redirect URLs do not append `?entry_id=[Id]`, GA4 `generate_lead` never fires either — leaving Meta Pixel as the only lead signal.
-- localStorage dedup (`vml_lead_sent:` keys, TTL 90 days) suppresses repeat events for the same entry ID.
-- SPA routing risk: `GA4RouteTracker` skips the first render (comment at lines 10-14) and delays 100ms; a client-side navigation into a thank-you page sends `page_view` only, never a conversion.
-- No feature flags, consent-mode blocks, or environment variables gate the Google tag. `.env` contains no analytics IDs; all IDs are hard-coded in `index.html`.
-- Meta Pixel and Contentsquare load inside a deferred/interaction block (index.html ~lines 292-310); the Google tag is not inside that block.
+A "Page load / URL contains `/thank-you/event-standup`" conversion action requires:
 
-## 7. Missing tracking
+1. The global Ads tag to execute in a document whose URL is `/thank-you/event-standup` — satisfied by the Cognito full-page redirect (index.html lines 5-11).
+2. The Ads tag's page-load hit to carry that URL — satisfied on a real page load.
+3. For SPA history changes, Ads needs an explicit event addressed to the Ads destination (`send_to: 'AW-17646919806'` or a labeled conversion event). **This does not exist in the codebase.**
+4. Ad-click attribution data (`gclid`/`_gcl_*` cookie) to be present in the same browser session — set by the tag on the landing page; the redirect chain through Cognito must not strip it, which is outside this repo.
 
-Every thank-you page listed in section 4 is missing a Google Ads conversion event — that is **10 of 10** conversion destinations, plus one nonexistent route (`/thank-you/own-it`).
+## 6. Is there evidence the SPA/analytics refactor broke URL-based conversions?
 
-## 8. Final assessment
+**No direct evidence from the code.** Supporting points:
 
-**A. Is Google Ads conversion tracking implemented correctly?** No. It is not implemented at all beyond `gtag('config', 'AW-17646919806')`.
+- The refactor added only `src/lib/analytics.ts` and `src/components/analytics/GA4RouteTracker.tsx` (mounted in `src/App.tsx` line 7). It removed no Google tag code; `index.html` lines 4-12 still load the tag once and still config `AW-17646919806`.
+- `GA4RouteTracker` skips the first render, so it did not suppress or duplicate the page-load hit on a full document load.
+- The thank-you routes and their paths are unchanged in `src/App.tsx` lines 140-146; no route was renamed.
+- Nothing in the refactor is gated by consent, feature flags, or env vars.
 
-**B. Files/lines responsible**
-- `index.html` lines 4-12 — Ads ID configured, but no conversion event ever sent from this tag.
-- `src/lib/analytics.ts` lines 105-133 — the only lead-event function; sends GA4 `generate_lead` with no `send_to` and no Ads conversion label.
-- `src/pages/thank-you/*.tsx` line ~14-17 (all 7 files), `src/pages/ThankYou.tsx` lines 14-17, `src/pages/download/RentalGuideThankYou.tsx` lines 14-17 — thank-you mount effects with no Ads conversion call.
-- `src/App.tsx` lines 140-146 — no `/thank-you/own-it` route defined.
+Residual code-visible risks that could affect URL-based detection independent of the refactor:
 
-**C. Suspected issues ranked by probability of causing the conversion drop**
-1. **Very high** — No `gtag('event','conversion', {send_to: 'AW-17646919806/<label>'})` exists anywhere, so any campaign-specific custom goal created around Aug 14 that expects a website conversion event receives nothing.
-2. **High** — The Aug 14 switch from generic conversion actions to campaign-specific custom goals means previously-counted GA4-imported or auto-detected conversions no longer map to the new goals; with no hard-coded Ads event the new goals have no data source.
-3. **Medium** — `entry_id` gate: if Cognito redirects omit `?entry_id=[Id]`, GA4 `generate_lead` never fires, so even a GA4-import path to Ads reports zero.
-4. **Medium-low** — `/thank-you/own-it` does not exist as a route; traffic sent there renders NotFound and fires no lead event of any kind.
-5. **Low** — localStorage dedup suppressing legitimate repeat submissions from the same browser.
-6. **Low** — No GTM container, so no server- or container-side conversion tag can be filling the gap.
+1. Cognito redirect target/mode changed in the Cognito admin panel (not visible here) — e.g. redirect switched to an in-iframe confirmation, a different URL, or a URL now carrying `?entry_id=...` while the Ads rule was configured for an exact-URL match rather than "contains".
+2. `/thank-you/own-it` has **no route** in `src/App.tsx`; if an Ads conversion action targets that URL, it can never match.
+3. No Ads-addressed event exists for any client-side navigation into a thank-you route (`src/lib/analytics.ts`, no `send_to`).
 
-**D/E.** No code was modified and no recommendations are included, per instruction.
+No fixes proposed, per instruction.
