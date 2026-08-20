@@ -1,43 +1,41 @@
-# Diagnostic: Google Ads URL/page-load conversion on /thank-you/event-standup
+# Live verification: URL after a successful Event Style submission
 
-No code was modified. Findings only.
+Verified against the **live production form and live production page** (not just the code). No code changes.
 
-## 1. Exact URL reached after a successful Event Style submission
+## What was inspected
 
-- The Event Style quote page is `/quote/event-standup` (`src/App.tsx:128` → `src/pages/forms/EventStandupQuote.tsx`), which renders Cognito **Form ID 7** through `src/components/templates/FormPageTemplate.tsx` (loads `cognitoforms.com/f/seamless.js`, then `window.Cognito.mount`).
-- The post-submit redirect target is **not in this codebase** — it lives in Cognito Forms' "After Submission" setting. Nothing in `src/` navigates to any `/thank-you/...` URL (no `navigate()`, no `pushState`, no `<Link>` to thank-you routes).
-- Route that exists to receive it: `/thank-you/event-standup` (`src/App.tsx:143` → `src/pages/thank-you/EventStandupThankYou.tsx`).
-- **Query parameters:** the GA4 work explicitly required the Cognito redirect to be changed to append the entry ID:
-  `https://inventory.vintagemarqueelights.com/thank-you/event-standup?entry_id=[Id]`
-  (`.lovable/plan/ga4-spa-page-view-tracking-generate-lead-on-thank-you-pages-2026-08-18.md:35-52`), and the page consumes it (`EventStandupThankYou.tsx:11-17`, `searchParams.get("entry_id")`).
-  So the landed URL is now expected to be `/thank-you/event-standup?entry_id=<opaque id>`, not the bare path. Whether that Cognito setting has actually been saved is only visible in the Cognito admin — the codebase cannot confirm it, but the page code only fires a lead when the parameter is present, and you confirmed GA4 is receiving `generate_lead`, which means **the parameter is present on the live URL**.
+- The live Cognito form definition for the Event Style form (account key `dufgHGZ4sU6F2rV69vJTrA`, form `7` — "Event Style letters quote form"), fetched from Cognito's own `svc/load-form/form-def` response.
+- The live page `https://inventory.vintagemarqueelights.com/quote/event-standup` rendered in a real browser.
 
-## 2. Full page load vs SPA route change
+## 1. The confirmation redirect that is live right now
 
-**Full document load.** The Cognito seamless embed performs a browser navigation to the configured redirect URL; React Router is not involved. Consequently, on arrival:
+Cognito's Submit action (`Action1`, `ActionName: "Submit"`) is configured as:
 
-- `index.html` is re-parsed, `gtag.js` reloads, and both `gtag('config','G-Y5YZE675KX')` and `gtag('config','AW-17646919806')` (`index.html:11-12`) execute again for the thank-you URL.
-- `GA4RouteTracker` skips its first render (`src/components/analytics/GA4RouteTracker.tsx:9-14`), so it adds nothing on that load and removes nothing.
-- The Ads page-load tag hit therefore still fires with `page_location = /thank-you/event-standup?entry_id=…`.
+```text
+Behavior:    RedirectURL
+RedirectUrl: https://inventory.vintagemarqueelights.com/thank-you/event-standup?entry_id=[Id]
+```
 
-## 3. What the refactor changed that can affect URL-based matching
+So yes — the final URL **is** `/thank-you/event-standup?entry_id=…`, with the query parameter present.
 
-Code-side, nothing relevant changed:
+Note (separate action, not the submit path): the form's **Update** action (`Action2`, used when an existing entry is updated/edited, not on a new submission) still redirects to the old URL `https://vintagemarqueelights.com/pages/thank-you-for-submitting-a-form`.
 
-- `index.html:4-13` — tag still loaded once, both destinations still configured. Unchanged by the refactor.
-- No redirect behavior changed for thank-you routes: `public/_redirects` contains no `/thank-you/*` rule and never did; those routes fall through the SPA catch-all `/* → /index.html 200` (no 301/302 hop, so no redirect-stripped landing URL).
-- No canonical/robots change for thank-you routes: the `index.html` route bootstrap map (`index.html:39-154`) contains no `/thank-you/...` entries, so canonical stays the homepage value and `EventStandupThankYou.tsx:20-24` sets its own `noindex` — identical to before. (Canonical/noindex do not affect Ads URL matching in any case.)
-- No history manipulation was added. `ScrollToTop` (`src/components/ScrollToTop.tsx`) only scrolls; `GA4RouteTracker` only sends `page_view`. Neither rewrites, replaces, or strips the URL.
-- Timing: the only added timing is a 100 ms delay in `GA4RouteTracker` for SPA navigations — it does not run on the first load and does not defer or precede the global tag.
+## 2. Full page load or SPA route change
 
-**The one thing that did change about the URL is the query string.** The refactor required the Cognito redirect to become `…/thank-you/event-standup?entry_id=[Id]` where previously it was the bare path. That is the only change between the site and Google Ads on this path.
+**Full page load.** On the live quote page the form is rendered inline in the top document by `seamless.js` — the rendered element is `<form class="cog-cognito cog-form cog-7 …">` directly in the page, not inside an embedded form iframe. Cognito's `RedirectURL` confirmation therefore performs a top-level browser navigation to the thank-you URL: a brand-new document request, `index.html` re-parsed, `gtag.js` reloaded, and `gtag('config','G-Y5YZE675KX')` + `gtag('config','AW-17646919806')` re-executed on that URL. React Router is not involved in that transition.
 
-That matters for a URL-based page-load conversion action only in one specific case: if the Ads rule's match type is **"URL equals"** (or a regex anchored with `$`) against `https://inventory.vintagemarqueelights.com/thank-you/event-standup`, then `?entry_id=…` makes the landed URL no longer equal, and the action stops matching. If the rule uses "URL contains `/thank-you/event-standup`", it still matches. The match type lives in the Ads account and is **not determinable from the codebase**.
+## 3. Example of the exact final URL
 
-## 4. Statement about what did not change
+`[Id]` is resolved server-side by Cognito to the entry's own identifier (an entry number) at redirect time, so the landed URL looks exactly like this (ID masked):
 
-Aside from the appended `entry_id` query parameter on the Cognito redirect (configured in Cognito, not in code), **nothing in the refactor changed the landing URL path, the navigation type (still a true full page load), redirect handling, canonical tags, or the firing order/timing of the Google tag on `/thank-you/event-standup`.** The Ads global tag still executes on that page load exactly as before.
+```text
+https://inventory.vintagemarqueelights.com/thank-you/event-standup?entry_id=1487
+```
 
-## 5. Missing signal, restated
+Path exactly `/thank-you/event-standup`, no trailing slash, no hash, one query parameter `entry_id`, nothing else appended.
 
-Ads receives page-level tag activity for the thank-you URL, but no conversion-labeled event addressed to `AW-17646919806` exists anywhere in the project (0 occurrences of `gtag('event','conversion')` or `send_to`, verified across full git history). So a URL-based action can still match on the page load *if* its match type tolerates the query string; an event-based conversion action or custom goal expecting a lead event receives nothing.
+## Summary
+
+- Final URL: `/thank-you/event-standup?entry_id=<entry number>` — confirmed live in the Cognito form's active Submit confirmation.
+- Navigation type: true full document load (top-level redirect from the inline Cognito embed).
+- The bare `/thank-you/event-standup` (no query string) is **not** what the browser lands on anymore; the query string is always present on a successful new submission.
