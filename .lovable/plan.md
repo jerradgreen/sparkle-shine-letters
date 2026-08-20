@@ -1,41 +1,39 @@
-# Live verification: URL after a successful Event Style submission
+# Diagnostic: `lead_mobile_vendor` seen on the Event Style thank-you page
 
-Verified against the **live production form and live production page** (not just the code). No code changes.
+No code changes. Findings only.
 
-## What was inspected
+## 1. What the website fires on /thank-you/event-standup
 
-- The live Cognito form definition for the Event Style form (account key `dufgHGZ4sU6F2rV69vJTrA`, form `7` — "Event Style letters quote form"), fetched from Cognito's own `svc/load-form/form-def` response.
-- The live page `https://inventory.vintagemarqueelights.com/quote/event-standup` rendered in a real browser.
+Exactly one lead event, from `src/pages/thank-you/EventStandupThankYou.tsx:14-17`:
 
-## 1. The confirmation redirect that is live right now
-
-Cognito's Submit action (`Action1`, `ActionName: "Submit"`) is configured as:
-
-```text
-Behavior:    RedirectURL
-RedirectUrl: https://inventory.vintagemarqueelights.com/thank-you/event-standup?entry_id=[Id]
+```ts
+(window as any).fbq?.('track', 'Lead');
+trackLeadOnce("event-standup", "Event Stand-Up Letters", entryId);
 ```
 
-So yes — the final URL **is** `/thank-you/event-standup?entry_id=…`, with the query parameter present.
+`trackLeadOnce` (`src/lib/analytics.ts:105-133`) sends:
 
-Note (separate action, not the submit path): the form's **Update** action (`Action2`, used when an existing entry is updated/edited, not on a new submission) still redirects to the old URL `https://vintagemarqueelights.com/pages/thank-you-for-submitting-a-form`.
-
-## 2. Full page load or SPA route change
-
-**Full page load.** On the live quote page the form is rendered inline in the top document by `seamless.js` — the rendered element is `<form class="cog-cognito cog-form cog-7 …">` directly in the page, not inside an embedded form iframe. Cognito's `RedirectURL` confirmation therefore performs a top-level browser navigation to the thank-you URL: a brand-new document request, `index.html` re-parsed, `gtag.js` reloaded, and `gtag('config','G-Y5YZE675KX')` + `gtag('config','AW-17646919806')` re-executed on that URL. React Router is not involved in that transition.
-
-## 3. Example of the exact final URL
-
-`[Id]` is resolved server-side by Cognito to the entry's own identifier (an entry number) at redirect time, so the landed URL looks exactly like this (ID masked):
-
-```text
-https://inventory.vintagemarqueelights.com/thank-you/event-standup?entry_id=1487
+```ts
+gtag("event", "generate_lead", { form_type: "event-standup", lead_category: "Event Stand-Up Letters" });
 ```
 
-Path exactly `/thank-you/event-standup`, no trailing slash, no hash, one query parameter `entry_id`, nothing else appended.
+**The only GA4 event name emitted by the site is `generate_lead`.** A repo-wide search finds no `lead_mobile_vendor`, no `lead_event_style`, and no other `lead_*` event name anywhere in the codebase or in git history. So the site is not firing a wrong event — it does not fire those names at all.
 
-## Summary
+## 2. Where `lead_mobile_vendor` actually comes from
 
-- Final URL: `/thank-you/event-standup?entry_id=<entry number>` — confirmed live in the Cognito form's active Submit confirmation.
-- Navigation type: true full document load (top-level redirect from the inline Cognito embed).
-- The bare `/thank-you/event-standup` (no query string) is **not** what the browser lands on anymore; the query string is always present on a successful new submission.
+The captured requests are Google **Ads** hits, not GA4 hits:
+
+- Endpoint: `https://www.google.com/measurement/conversion?...` (Google Ads conversion endpoint), not `google-analytics.com/g/collect` (GA4).
+- Seven of them fire together, in the same millisecond batch, each with a different `en=` value: `lead_mobile_vendor`, `lead_event_style`, `lead_own_it`, `lead_rental_inventory`, `lead_not_sure`, `lead_layered_logo`, `lead_wall_sign`.
+- Each has its own `gacid` and `frm=2`.
+- `url=` in every one of those captures is `…lovableproject.com/rental-inventory?__lovable_load_id=…` — the rental inventory page, **not** the Event Style thank-you page.
+
+These names are Google Ads **conversion action / imported-event names configured in your Ads account**, echoed back by the Google tag as it evaluates its conversion rule set on page load. The whole set is pinged together on a single page load, which is why one page produced all seven `lead_*` names at once. Nothing in the website chose `lead_mobile_vendor` for that page — the site did not send any of these names.
+
+## 3. Answer
+
+- The GA4 event name fired on `/thank-you/event-standup` is **`generate_lead`** (params `form_type=event-standup`, `lead_category=Event Stand-Up Letters`), plus the Meta Pixel `Lead`.
+- `en=lead_mobile_vendor` is **not** a site-fired event and not a mismatched page mapping in the code. It is an Ads-side conversion-action name in a batch of seven that the Google Ads tag pings on page load, and the capture you have was recorded on `/rental-inventory`, not on the Event Style thank-you page.
+- So: not the wrong event being fired by the site, and not intentional site behavior either — those `lead_*` names are configured entirely in Google Ads, not in this project.
+
+If you want the per-page mapping verified as it happens on the live thank-you URL specifically, the next step would be a live capture on `https://inventory.vintagemarqueelights.com/thank-you/event-standup?entry_id=<test>` and reading which `en=` values the Ads endpoint receives there.
