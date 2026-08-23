@@ -1,22 +1,18 @@
-# Site-fired Google Ads conversion events for every lead form
+# Google Ads conversion events on every lead form submission
 
-Confirmed by full working-tree and git-history search: no conversion label, no `gtag('event','conversion')`, and no `send_to` has ever existed in this project. The only Ads code is `gtag('config','AW-17646919806')` in `index.html`. So there are no labels to reuse — each conversion action's label must be read out of Google Ads and pasted into one config file.
+Site-fired conversions only — no page-view / URL-based conversion actions. Each lead form gets its own conversion action in Google Ads; the code fires it once, right after a confirmed submission lands on its thank-you page.
 
-## 1. Where to get each label (you, in Google Ads)
+## How it will work
 
-Custom Goals don't show labels, but the underlying **conversion action** does:
+The thank-you pages already call one shared helper (`trackLeadOnce`) with a `formType` string and the Cognito `entry_id`. The Ads conversion goes inside that same helper, behind the same duplicate guard as the GA4 `generate_lead` event. So:
 
-Google Ads → Goals → Conversions → Summary → click the conversion action → **Tag setup / Google tag** → **Install the tag manually**. The snippet contains:
+- A real submission fires GA4 `generate_lead` **and** the matching Ads conversion.
+- A refresh or re-visit of the same thank-you URL fires neither.
+- A thank-you URL with no `entry_id` fires neither.
 
-```js
-gtag('event', 'conversion', {'send_to': 'AW-17646919806/AbC-D_efGhIjKlMnOp'});
-```
+## New file: `src/config/adsConversions.ts`
 
-The part after the slash is the label. Do that once per lead action (Event Style, Wall Sign, Mobile Vendor, Rental Inventory, Layered Logo, Not Sure, Own It). If an action was originally created as a page-view/URL action, it has no label — that one needs a new "Website → manual Google tag" conversion action created before it can be site-fired.
-
-## 2. New file: `src/config/adsConversions.ts`
-
-A single label map keyed by the `formType` string the thank-you pages already pass, so nothing else has to change when a label is added later:
+One place to paste labels as you create the conversion actions:
 
 ```ts
 export const ADS_CONVERSION_ID = 'AW-17646919806';
@@ -28,38 +24,37 @@ export const ADS_CONVERSION_LABELS: Record<string, string> = {
   'rental-inventory': '',   // Rental Inventory / Own It
   '3d-logos': '',           // Layered Logo
   'not-sure': '',           // Not Sure
-  'custom': '',
-  'rental-guide': '',
-  'general': '',
+  'custom': '',             // Custom Sign Quote
+  'rental-guide': '',       // Rental Guide download
+  'general': '',            // General contact
 };
 ```
 
-Empty string means "not configured" — the code skips it silently rather than firing a malformed `send_to`.
+A blank label means "not configured yet" — that form fires GA4 only, silently, with no console error and no malformed `send_to`.
 
-## 3. Update `src/lib/analytics.ts`
+## Update `src/lib/analytics.ts`
 
-Inside the existing `trackLeadOnce`, after the GA4 `generate_lead` fires and inside the same `entry_id` dedup guard, add the Ads conversion:
+Inside `trackLeadOnce`, after the GA4 event and inside the existing `entry_id` dedup guard:
 
-- Look up `ADS_CONVERSION_LABELS[formType]`; if empty or missing, do nothing (GA4 still fires).
-- Otherwise call `gtag('event', 'conversion', { send_to: '<ID>/<label>' })`.
-- No `value`, no `currency`, no `transaction_id` — matching the current no-value lead setup. `entry_id` stays internal to the dedup guard and is never sent, per the existing rule.
-- Both events stay behind the single `hasLeadBeenSent(entryId)` check, so a refresh of a thank-you URL sends neither, and a genuinely new submission sends both.
+- Look up the label for the `formType`; skip if blank or missing.
+- Otherwise fire `gtag('event', 'conversion', { send_to: 'AW-17646919806/<label>' })`.
+- No `value`, no `currency`, no `transaction_id`. `entry_id` stays internal to the dedup guard and is never sent, per the existing rule.
 
-## 4. Files that do NOT change
+## Files that do not change
 
-- The 9 thank-you pages — they already pass `formType`; the label lookup happens inside the helper.
-- `index.html` — the Ads `config` line is already correct, and a second Ads tag must not be added.
-- `GA4RouteTracker.tsx`, `App.tsx`, Meta Pixel, Contentsquare — untouched.
+- The 9 thank-you pages — they already pass `formType`.
+- `index.html` — the `gtag('config','AW-17646919806')` line is already correct; a second Ads tag must not be added.
+- `GA4RouteTracker.tsx`, `App.tsx`, Meta Pixel, Contentsquare.
 
-## 5. Ads-side follow-up (you)
+## What you do in Google Ads
 
-Once site-fired conversions are live, the old page-view/URL-based actions will double-count against the new event-based ones. Rebuild the Custom Goals on the event-based actions and set the URL-based ones to "secondary" (or remove them) so bidding uses one signal per lead.
+For each lead type, create a conversion action of type **Website → set up with a Google tag → install the tag manually**, then copy the label from the snippet (`AW-17646919806/AbC-D_efGhIjKlMnOp` → the part after the slash) and give it to me. Set any existing page-view/URL-based action for the same lead to *secondary* (or remove it) so bidding uses one signal per lead.
 
 ## Verification
 
 - Build the project.
-- With Playwright, land on `/?gclid=TEST123`, then navigate to `/thank-you/event-standup?entry_id=VERIFY-001` and capture requests to `googleadservices.com` / `google.com/pagead` — confirm one hit carrying the conversion ID and label, plus the GA4 `generate_lead` on `/g/collect`.
-- Reload the same URL: confirm neither event fires a second time.
-- Load `/thank-you/event-standup` with no `entry_id`: confirm no conversion and no `generate_lead`.
-- Confirm any form whose label is still blank fires GA4 only, with no console error.
+- With Playwright: land on `/?gclid=TEST123`, then go to `/thank-you/event-standup?entry_id=VERIFY-001` and capture Google network hits — confirm one carrying the conversion ID and label, plus the GA4 `generate_lead`.
+- Reload the same URL: neither event fires again.
+- Load the same page with no `entry_id`: neither event fires.
+- Confirm a still-blank label fires GA4 only, with no console error.
 - Confirm the conversion payload contains no `entry_id` and no `transaction_id`.
