@@ -1,3 +1,5 @@
+import { ADS_CONVERSION_ID, ADS_CONVERSION_LABELS } from "@/config/adsConversions";
+
 declare global {
   interface Window {
     gtag?: (...args: unknown[]) => void;
