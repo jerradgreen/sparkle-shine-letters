@@ -1,3 +1,5 @@
+import { ADS_CONVERSION_ID, ADS_CONVERSION_LABELS } from "@/config/adsConversions";
+
 declare global {
   interface Window {
     gtag?: (...args: unknown[]) => void;
@@ -126,6 +128,14 @@ export function trackLeadOnce(
       form_type: formType,
       lead_category: leadCategory,
     });
+
+    const adsLabel = ADS_CONVERSION_LABELS[formType];
+    if (adsLabel && adsLabel.trim() !== "") {
+      gtag("event", "conversion", {
+        send_to: `${ADS_CONVERSION_ID}/${adsLabel.trim()}`,
+      });
+    }
+
     markLeadSent(normalizedEntryId);
   } catch {
     // Fail silently in private-mode browsers or when GA is blocked.
