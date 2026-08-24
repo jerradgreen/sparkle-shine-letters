@@ -6,7 +6,6 @@ export const ADS_CONVERSION_LABELS: Record<string, string> = {
   'mobile-vendor': '93ixCPzR8-YcEP7A2t5B', // Mobile Vendor Lead
   '3d-logos': 'OBeLCKTQ8-YcEP7A2t5B',      // Layered Sign Lead
   'rental-inventory': 'a9k3CNLg8-YcEP7A2t5B', // Rental Inventory Lead
-  'rental-guide': 'w4h8CJ-J5uYcEP7A2t5B',  // Own It Lead (rental guide download flow)
   'not-sure': 'TcIYCP3t8-YcEP7A2t5B',      // Not Sure Lead
   'custom': '',                              // Custom Sign Quote (no label yet)
   'general': '',                             // General contact (no label yet)
