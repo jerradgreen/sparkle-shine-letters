@@ -106,18 +106,18 @@ const routes = [
   },
   {
     path: '/custom-marquee-signs',
-    title: 'Custom Marquee Signs Built to Own | Vintage Marquee Lights',
+    title: 'Custom Marquee Signs & Custom Signs | Vintage Marquee Lights',
     description:
-      'Custom marquee signs, marquee letters, lighted logo signs, and illuminated business signs handcrafted by Vintage Marquee Lights since 2008 for brands nationwide.',
+      'Custom marquee signs, light-up signs, logo signs and one-of-a-kind custom signs made to order since 2008. Send your logo, design or idea and get a quote.',
     keywords:
-      'custom marquee signs, marquee sign, marquee signs, marquee lights, custom marquee letters, lighted business signs, custom sign maker',
-    h1: 'Custom Marquee Signs Built to Own',
+      'custom marquee signs, custom marquee sign, custom signs, custom business signs, custom light up signs, custom logo signs, custom wall signs, vintage marquee signs, marquee lights, light bulb signs',
+    h1: 'Custom Marquee Signs & One-of-a-Kind Custom Signs',
     intro:
-      'Vintage Marquee Lights designs and fabricates custom marquee signs for businesses, brands, restaurants, schools, venues, event companies, and mobile vendors. Choose wall-hanging marquee letters, 3D logo signs, food truck signs, event letters, or a fully custom illuminated sign made for your space.',
+      'Vintage Marquee Lights creates one-of-a-kind custom signs for businesses, brands and spaces across the country. Start with your logo, your design, or just an idea. Explore wall-hanging marquee signs and letters, custom logo and layered signs, mobile vendor and food truck signs, or send us something completely custom.',
     links: [
-      ['View wall-hanging marquee letters', '/wall-hanging-signs'],
-      ['View 3D logo signs', '/3d-logos'],
-      ['View food truck signs', '/mobile-vendor-signs'],
+      ['Explore wall-hanging marquee signs and letters', '/wall-hanging-signs'],
+      ['Explore custom logo signs', '/3d-logos'],
+      ['Explore mobile vendor signs', '/mobile-vendor-signs'],
       ['Request a custom quote', '/quote/custom'],
     ],
   },
