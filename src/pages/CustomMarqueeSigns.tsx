@@ -440,7 +440,7 @@ const CustomMarqueeSigns = () => {
             </h2>
             <div className="mx-auto grid max-w-6xl gap-6 md:grid-cols-3">
               {testimonials.map((review) => (
-                <Card key={review.name} className="h-full bg-card">
+                <Card key={review.name} className="flex h-full flex-col bg-card">
                   <CardContent className="flex flex-1 flex-col p-6">
                     <div className="mb-3 flex" aria-label={`${review.rating} star review`}>
                       {Array.from({ length: review.rating }).map((_, star) => (
