@@ -87,7 +87,7 @@ const signStyles = [
     link: "/mobile-vendor-signs",
     image: img.barMonteTrailer,
     alt: "Bar Monté teal mobile bar trailer with a lit marquee sign above the service window",
-    imagePosition: "center 30%",
+    imagePosition: "center 8%",
   },
   {
     title: "Have Something Completely Custom in Mind?",
