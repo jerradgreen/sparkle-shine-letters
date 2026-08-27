@@ -43,6 +43,13 @@ const Footer = () => {
             <h4 className="font-bold text-foreground mb-4 text-lg">Products</h4>
             <div className="flex flex-col gap-3">
               <Link 
+                to="/custom-marquee-signs" 
+                onClick={() => window.scrollTo(0, 0)}
+                className="text-muted-foreground hover:text-primary transition-colors"
+              >
+                Custom Marquee Signs
+              </Link>
+              <Link 
                 to="/wall-hanging-signs" 
                 onClick={() => window.scrollTo(0, 0)}
                 className="text-muted-foreground hover:text-primary transition-colors"
