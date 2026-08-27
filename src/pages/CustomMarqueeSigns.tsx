@@ -102,8 +102,9 @@ const signStyles = [
 
 const gallery = [
   { src: img.chopSuey, alt: "Marquee letters spelling CHOP SUEY lit with globe bulbs", pos: "center 12%" },
-  { src: img.parliamentCoffee, alt: "Parliament script marquee letters lit above a coffee shop service counter" },
-  { src: img.chicago, alt: "Vertical CHICAGO marquee sign with lit bulbs on a wood wall" },
+  { src: img.parliamentCoffee, alt: "Element dimensional logo sign with lit lettering and a starburst graphic on a dark wood wall" },
+  { src: img.chicago, alt: "Vertical CHICAGO marquee sign with lit bulbs on a wood wall", pos: "center 45%" },
+
   { src: img.exitZero, alt: "Exit Zero Filling Station round logo sign outlined in lit bulbs" },
   { src: img.hardes, alt: "Harde's Watering Hole custom sign with a bulb-lit border on a wood wall" },
   { src: img.lolas, alt: "Lola's arrow-shaped ORDER HERE sign with lit bulbs and dimensional lettering" },
