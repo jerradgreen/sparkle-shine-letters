@@ -236,8 +236,8 @@ const CustomMarqueeSigns = () => {
               <div className="grid grid-cols-2 gap-3 sm:gap-4">
                 <div className="col-span-2 overflow-hidden rounded-2xl border border-border/60 shadow-lg">
                   <img
-                    src={img.woodWallLetters}
-                    alt="Wall-hanging marquee letters with lit bulbs on a rustic wood wall"
+                    src={img.britney}
+                    alt="BRITNEY marquee letters in pink with exposed bulbs mounted on a wood wall"
                     className="h-56 w-full object-cover sm:h-72"
                     loading="eager"
                     width={1200}
@@ -246,9 +246,9 @@ const CustomMarqueeSigns = () => {
                 </div>
                 <div className="overflow-hidden rounded-2xl border border-border/60 shadow-md">
                   <img
-                    src={img.chopSuey}
-                    alt="Marquee letters spelling CHOP SUEY lit with globe bulbs"
-                    className="h-36 w-full object-cover object-[center_12%] sm:h-44"
+                    src={img.cafeCollective}
+                    alt="Cafe Collective Cleveland shaped logo sign outlined with lit marquee bulbs"
+                    className="h-36 w-full object-cover sm:h-44"
                     loading="eager"
                     width={800}
                     height={600}
@@ -256,8 +256,8 @@ const CustomMarqueeSigns = () => {
                 </div>
                 <div className="overflow-hidden rounded-2xl border border-border/60 shadow-md">
                   <img
-                    src={img.tucks}
-                    alt="Tuck's Truffles custom logo sign with layered depth"
+                    src={img.donutsTruck}
+                    alt="LET'S EAT DONUTS lit marquee sign on the roof of a red vintage food truck"
                     className="h-36 w-full object-cover sm:h-44"
                     loading="lazy"
                     width={800}
@@ -266,14 +266,15 @@ const CustomMarqueeSigns = () => {
                 </div>
                 <div className="col-span-2 overflow-hidden rounded-2xl border border-border/60 shadow-md">
                   <img
-                    src={img.foodTruck}
-                    alt="Lit marquee sign on a mobile bar trailer at an outdoor event"
+                    src={img.espnHouse}
+                    alt="ESPN House Nashville dimensional sign with lit marquee letters on a wood wall"
                     className="h-36 w-full object-cover sm:h-44"
                     loading="lazy"
                     width={1200}
                     height={600}
                   />
                 </div>
+
               </div>
             </div>
           </div>
