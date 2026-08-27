@@ -82,17 +82,17 @@ const signStyles = [
 ];
 
 const gallery = [
-  { src: img.woodWallLetters, alt: "Wall-hanging marquee letters with lit bulbs on a rustic wood wall" },
-  { src: img.chopSuey, alt: "Marquee letters spelling CHOP SUEY lit with globe bulbs" },
-  { src: img.chicago, alt: "Chicago layered logo sign mounted on a wall" },
-  { src: img.exitZero, alt: "Exit Zero dimensional logo sign" },
-  { src: img.layeredOffice, alt: "Custom layered logo sign hanging in an office space" },
-  { src: img.barbaryCoast, alt: "Barbary Coast layered sign with bulb-lit lettering" },
-  { src: img.layeredRetail, alt: "Custom logo sign displayed in a retail space" },
-  { src: img.layeredStudio, alt: "Dimensional custom logo sign in a studio interior" },
+  { src: img.woodWallLetters, alt: "Marquee letters spelling BEER HAPPY on a wood wall inside a taproom" },
+  { src: img.chopSuey, alt: "Marquee letters spelling CHOP SUEY lit with globe bulbs", pos: "center 12%" },
+  { src: img.chicago, alt: "Vertical CHICAGO marquee sign with lit bulbs on a wood wall" },
+  { src: img.exitZero, alt: "Exit Zero Filling Station round logo sign outlined in lit bulbs" },
+  { src: img.layeredOffice, alt: "Harde's Watering Hole custom sign with a bulb-lit border" },
+  { src: img.barbaryCoast, alt: "Bulb-lit marquee sign standing in the shop before shipping" },
+  { src: img.layeredRetail, alt: "Savannah arena marquee sign with a bulb-lit border and changeable letters" },
+  { src: img.layeredStudio, alt: "Tall vertical marquee sign with lit bulbs mounted on a wood wall" },
   { src: img.foodTruck, alt: "Lit marquee sign on a mobile bar trailer at an outdoor event" },
-  { src: img.elev8, alt: "Elev8 marquee sign with lit bulb lettering" },
-  { src: img.bulbDetail, alt: "Close-up of globe bulbs seated in a marquee letter channel" },
+  { src: img.elev8, alt: "ELEV8 marquee letters lit on a checkered floor in an event space" },
+  { src: img.bulbDetail, alt: "Colorful marquee letters spelling LUCK lit at night" },
   { src: img.tucks, alt: "Tuck's Truffles custom logo sign with layered depth" },
 ];
 
@@ -298,7 +298,7 @@ const CustomMarqueeSigns = () => {
             {signStyles.map((style) => (
               <Card
                 key={style.title}
-                className="group h-full overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+                className="group flex h-full flex-col overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
               >
                 <Link to={style.link} className="block">
                   <div className="overflow-hidden">
@@ -313,7 +313,7 @@ const CustomMarqueeSigns = () => {
                     />
                   </div>
                 </Link>
-                <CardContent className="flex h-full flex-col p-6">
+                <CardContent className="flex flex-1 flex-col p-6">
                   <h3 className="mb-3 text-2xl font-bold text-foreground">{style.title}</h3>
                   <p className="mb-6 flex-1 leading-relaxed text-muted-foreground">
                     {style.description}
@@ -350,6 +350,7 @@ const CustomMarqueeSigns = () => {
                     src={item.src}
                     alt={item.alt}
                     className="h-40 w-full object-cover transition-transform duration-500 hover:scale-105 sm:h-48"
+                    style={{ objectPosition: item.pos ?? "center" }}
                     loading="lazy"
                     width={800}
                     height={600}
@@ -440,7 +441,7 @@ const CustomMarqueeSigns = () => {
             <div className="mx-auto grid max-w-6xl gap-6 md:grid-cols-3">
               {testimonials.map((review) => (
                 <Card key={review.name} className="h-full bg-card">
-                  <CardContent className="flex h-full flex-col p-6">
+                  <CardContent className="flex flex-1 flex-col p-6">
                     <div className="mb-3 flex" aria-label={`${review.rating} star review`}>
                       {Array.from({ length: review.rating }).map((_, star) => (
                         <Star key={star} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
