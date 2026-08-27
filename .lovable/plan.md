@@ -11,7 +11,7 @@ Rebuild the existing page at `/custom-marquee-signs` (same route, same file) int
 
 ## New page structure
 
-1. **Hero** — collage of 3–5 real VML project photos already used on the site, with the eyebrow "CUSTOM MARQUEE SIGNS SINCE 2008", H1 "Custom Marquee Signs & Light-Up Signs", supporting headline "Bring Your Idea to Life", the approved body copy, primary CTA "Explore Sign Styles" (anchor scroll to the sign-style section), secondary CTA "Request a Custom Quote" (`/quote/custom`), and the trust line "The Original Vintage Marquee Light Makers • Creating Custom Signs Since 2008 • Ships Nationwide".
+1. **Hero** — collage of 3–5 real VML project photos already used on the site, with the eyebrow "CUSTOM MARQUEE SIGNS SINCE 2008", H1 "Custom Marquee Signs & One-of-a-Kind Custom Signs", supporting headline "Bring Your Idea to Life", the approved body copy, primary CTA "Explore Sign Styles" (anchor scroll to the sign-style section), secondary CTA "Request a Custom Quote" (`/quote/custom`), and the trust line "The Original Vintage Marquee Light Makers • Creating Custom Signs Since 2008 • Ships Nationwide".
 2. **Find the Style That Fits Your Idea** — 4 image cards with your exact copy: Wall-Hanging (`/wall-hanging-signs`), Custom Logo & Layered (`/3d-logos`), Mobile Vendor & Food Truck (`/mobile-vendor-signs`), Something Completely Custom (`/quote/custom`). Event stand-up letters are intentionally excluded.
 3. **See What We've Made** — responsive 8–12 image gallery of existing project photography (bulb marquee words, restaurant/bar signs, logo/layered builds, commercial installs). Captions only describe what is visible; no invented names or locations.
 4. **Made for Businesses, Brands & Spaces** — your copy plus a compact chip/tile grid of the 12 applications. No per-industry paragraphs.
@@ -20,22 +20,22 @@ Rebuild the existing page at `/custom-marquee-signs` (same route, same file) int
 7. **Signs Made to Be Remembered** — see the testimonial note below.
 8. **Have a Sign in Mind?** — final CTA band: "Request a Custom Quote" (`/quote/custom`) plus "Explore Sign Styles".
 
-## Two items that need your decision
+## Testimonials (confirmed)
 
-**A. Testimonials.** Only three reviews on the site read as real, attributed customers:
+Section 7 stays compact and uses only these three verified, attributed customers:
 
 - Joy Hackney — Vehicle Marketing Administrator, Lexus Southern Area
 - DJ Franco Events — Event Entertainment and Production Company
 - Dion & Chantal Powell — C&D Marquees and Event Rentals
 
-The other testimonials in `src/config/templateConfigs.ts` (e.g. "Jessica Martinez", "Robert Chen") look like placeholder template content, so I will not use them. Plan: use those three verified quotes paired with project photography. If you have real restaurant/bar/business quotes, send them and I'll swap them in.
+The other testimonials in `src/config/templateConfigs.ts` (e.g. "Jessica Martinez", "Robert Chen") look like placeholder template content and will not be used. No placeholder cards, no invented names or ratings.
 
-**B. Proposed metadata** (nothing changes until you approve these two strings):
+## Metadata (confirmed)
 
-- Title (58 chars): `Custom Marquee Signs & Light-Up Signs | Since 2008`
-- Description (155 chars): `Custom marquee signs, light-up signs, logo signs and wall signs built to order since 2008. Send your logo, design or idea — we build it and ship nationwide.`
+- Title: `Custom Marquee Signs & Custom Signs | Vintage Marquee Lights`
+- Description: `Custom marquee signs, light-up signs, logo signs and one-of-a-kind custom signs made to order since 2008. Send your logo, design or idea and get a quote.`
 
-Approving them means I also update the matching entries in `index.html` (bootstrap meta map) and `scripts/generate-static-seo-pages.mjs` for `/custom-marquee-signs`, so the static and client metadata agree.
+These are applied in the page's Helmet plus the matching `/custom-marquee-signs` entries in `index.html` (bootstrap meta map) and `scripts/generate-static-seo-pages.mjs`, so static and client metadata agree.
 
 ## Technical notes
 
