@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { Star } from "lucide-react";
+
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
@@ -154,29 +154,6 @@ const steps = [
   },
 ];
 
-const testimonials = [
-  {
-    rating: 5,
-    content:
-      "Everyone loves the letters and we use them for so many things. They were the highlight of the decor, and one of the best purchases I made for our marketing department.",
-    name: "Joy Hackney",
-    role: "Vehicle Marketing Administrator, Lexus Southern Area",
-  },
-  {
-    rating: 5,
-    content:
-      "We added marquee letters because they fit naturally into the events we already host and produce. They give our clients another way to personalize the space and create a photo-ready moment without bringing in another vendor.",
-    name: "DJ Franco Events",
-    role: "Event Entertainment and Production Company",
-  },
-  {
-    rating: 5,
-    content:
-      "Vintage Marquee Lights helped us start with marquee signs we felt proud to put in front of clients. The lights gave us a professional look from day one and made it easier to create beautiful setups and keep building the C&D brand.",
-    name: "Dion & Chantal Powell",
-    role: "C&D Marquees and Event Rentals",
-  },
-];
 
 const CustomMarqueeSigns = () => {
   return (
@@ -432,36 +409,7 @@ const CustomMarqueeSigns = () => {
           </ol>
         </section>
 
-        {/* SECTION 7 — CUSTOMER PROOF */}
-        <section className="border-y border-border/60 bg-muted/30 py-14">
-          <div className="container mx-auto px-6">
-            <h2 className="mb-10 text-center text-3xl font-bold text-foreground md:text-4xl">
-              Signs Made to Be Remembered
-            </h2>
-            <div className="mx-auto grid max-w-6xl gap-6 md:grid-cols-3">
-              {testimonials.map((review) => (
-                <Card key={review.name} className="flex h-full flex-col bg-card">
-                  <CardContent className="flex flex-1 flex-col p-6">
-                    <div className="mb-3 flex" aria-label={`${review.rating} star review`}>
-                      {Array.from({ length: review.rating }).map((_, star) => (
-                        <Star key={star} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
-                      ))}
-                    </div>
-                    <p className="flex-1 text-sm italic leading-relaxed text-muted-foreground">
-                      &ldquo;{review.content}&rdquo;
-                    </p>
-                    <div className="mt-4 border-t border-border pt-3">
-                      <p className="font-semibold text-foreground">{review.name}</p>
-                      <p className="text-xs text-muted-foreground">{review.role}</p>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* SECTION 8 — FINAL CTA */}
+        {/* SECTION 7 — FINAL CTA */}
         <section className="container mx-auto px-6 py-14">
           <div className="mx-auto max-w-4xl rounded-3xl bg-primary p-8 text-center text-primary-foreground md:p-12">
             <h2 className="mb-4 text-3xl font-bold md:text-4xl">Have a Sign in Mind?</h2>
