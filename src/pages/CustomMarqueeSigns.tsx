@@ -67,7 +67,7 @@ const signStyles = [
     cta: "Explore Mobile Vendor Signs",
     link: "/mobile-vendor-signs",
     image: img.foodTruck,
-    alt: "Lit marquee sign mounted on the roof of a food truck",
+    alt: "Lit marquee sign on a mobile bar trailer at an outdoor event",
     imagePosition: "center 10%",
   },
   {
@@ -90,7 +90,7 @@ const gallery = [
   { src: img.barbaryCoast, alt: "Barbary Coast layered sign with bulb-lit lettering" },
   { src: img.layeredRetail, alt: "Custom logo sign displayed in a retail space" },
   { src: img.layeredStudio, alt: "Dimensional custom logo sign in a studio interior" },
-  { src: img.foodTruck, alt: "Lit marquee sign on a food truck roof" },
+  { src: img.foodTruck, alt: "Lit marquee sign on a mobile bar trailer at an outdoor event" },
   { src: img.elev8, alt: "Elev8 marquee sign with lit bulb lettering" },
   { src: img.bulbDetail, alt: "Close-up of globe bulbs seated in a marquee letter channel" },
   { src: img.tucks, alt: "Tuck's Truffles custom logo sign with layered depth" },
@@ -251,7 +251,7 @@ const CustomMarqueeSigns = () => {
                   <img
                     src={img.chopSuey}
                     alt="Marquee letters spelling CHOP SUEY lit with globe bulbs"
-                    className="h-36 w-full object-cover sm:h-44"
+                    className="h-36 w-full object-cover object-[center_12%] sm:h-44"
                     loading="eager"
                     width={800}
                     height={600}
@@ -270,7 +270,7 @@ const CustomMarqueeSigns = () => {
                 <div className="col-span-2 overflow-hidden rounded-2xl border border-border/60 shadow-md">
                   <img
                     src={img.foodTruck}
-                    alt="Lit marquee sign mounted on the roof of a food truck"
+                    alt="Lit marquee sign on a mobile bar trailer at an outdoor event"
                     className="h-36 w-full object-cover sm:h-44"
                     loading="lazy"
                     width={1200}
