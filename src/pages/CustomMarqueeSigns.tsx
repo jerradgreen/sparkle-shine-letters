@@ -111,7 +111,7 @@ const gallery = [
   { src: img.surBurger, alt: "Sur Burger badge-shaped sign with bulb-lit border and vintage finish" },
   { src: img.bigToysBuild, alt: "Big Toys custom sign shown as a sketch, a production proof and the finished sign" },
   { src: img.savannah, alt: "Savannah arena marquee sign with a bulb-lit border and changeable letters" },
-  { src: img.coldBeer, alt: "COLD BEER marquee letters in white and yellow with exposed bulbs" },
+  { src: img.coldBeer, alt: "COLD BEER marquee letters with lit bulbs laid out in the shop before shipping" },
   { src: img.charmBar, alt: "Charm Bar pink mobile trailer with a red marquee sign mounted on the roof" },
   { src: img.starlight, alt: "Starlight Theater bulb-lit logo sign mounted in a home theater room" },
 ];
