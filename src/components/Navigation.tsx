@@ -62,6 +62,9 @@ const Navigation = () => {
               </DropdownMenuTrigger>
               <DropdownMenuContent className="bg-background">
                 <DropdownMenuItem asChild>
+                  <Link to="/custom-marquee-signs" className="cursor-pointer">Custom Marquee Signs</Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
                   <Link to="/wall-hanging-signs" className="cursor-pointer">Wall Letters</Link>
                 </DropdownMenuItem>
               <DropdownMenuItem asChild>
@@ -134,6 +137,7 @@ const Navigation = () => {
               <div className="py-2">
                 <div className="text-foreground font-medium mb-2">Custom Signs</div>
                 <div className="pl-4 flex flex-col space-y-2">
+                  <Link to="/custom-marquee-signs" className="text-foreground hover:text-primary font-medium py-1" onClick={() => setIsMobileMenuOpen(false)}>Custom Marquee Signs</Link>
                   <Link to="/wall-hanging-signs" className="text-foreground hover:text-primary font-medium py-1" onClick={() => setIsMobileMenuOpen(false)}>Wall Letters</Link>
                   <Link to="/3d-logos" className="text-foreground hover:text-primary font-medium py-1" onClick={() => setIsMobileMenuOpen(false)}>Custom Logo Signs</Link>
                   <Link to="/mobile-vendor-signs" className="text-foreground hover:text-primary font-medium py-1" onClick={() => setIsMobileMenuOpen(false)}>Mobile Vendors</Link>
