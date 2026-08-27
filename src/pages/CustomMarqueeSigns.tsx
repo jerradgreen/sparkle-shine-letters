@@ -6,38 +6,58 @@ import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
+import barMonteTrailer from "@/assets/food-truck-bar-monte.jpg";
+import parliamentCoffee from "@/assets/wall-hanging-parliament.jpg";
+import britneyAsset from "@/assets/custom-signs/britney-marquee-letters.webp.asset.json";
+import cafeCollectiveAsset from "@/assets/custom-signs/cafe-collective-cleveland-logo-sign.jpg.asset.json";
+import espnHouseAsset from "@/assets/custom-signs/espn-house-nashville-sign.jpg.asset.json";
+import sharkBuildAsset from "@/assets/custom-signs/shark-custom-sign-build.png.asset.json";
+import bigToysBuildAsset from "@/assets/custom-signs/big-toys-custom-sign-build.png.asset.json";
+import lolasAsset from "@/assets/custom-signs/lolas-order-here-arrow-sign.jpg.asset.json";
+import surBurgerAsset from "@/assets/custom-signs/sur-burger-badge-sign.jpg.asset.json";
+import coldBeerAsset from "@/assets/custom-signs/cold-beer-marquee-sign.jpg.asset.json";
+import starlightAsset from "@/assets/custom-signs/starlight-theater-logo-sign.jpg.asset.json";
+import charmBarAsset from "@/assets/custom-signs/charm-bar-mobile-trailer-sign.jpg.asset.json";
+import donutsTruck from "@/assets/food-truck-donuts.jpg";
+
 const PAGE_URL = "https://inventory.vintagemarqueelights.com/custom-marquee-signs";
 const PAGE_TITLE = "Custom Marquee Signs & Custom Signs | Vintage Marquee Lights";
 const PAGE_DESCRIPTION =
   "Custom marquee signs, light-up signs, logo signs and one-of-a-kind custom signs made to order since 2008. Send your logo, design or idea and get a quote.";
 
-// Real Vintage Marquee Lights project photography already used across the site
+// Real Vintage Marquee Lights project photography (Shopify CDN, project assets, Lovable asset CDN)
 const img = {
-  chopSuey:
-    "https://cdn.shopify.com/s/files/1/1403/8315/files/Chop_Suey_a1aaee95-b586-4fb9-880d-2bc12998e8ee_800x.jpg?v=1759691041",
-  woodWallLetters:
+  // Hero
+  britney: britneyAsset.url,
+  cafeCollective: cafeCollectiveAsset.url,
+  donutsTruck,
+  espnHouse: espnHouseAsset.url,
+
+  // Sign-style cards
+  beerHappy:
     "https://cdn.shopify.com/s/files/1/1403/8315/files/IMG_89FDB5B68894-1.jpg?v=1759690677",
   tucks: "https://cdn.shopify.com/s/files/1/1403/8315/files/logo-tucks-1.jpg?v=1759693606",
-  foodTruck:
-    "https://cdn.shopify.com/s/files/1/1403/8315/files/IMG_9138_800x.jpg?v=1759690342",
-  layeredOffice:
-    "https://cdn.shopify.com/s/files/1/1403/8315/files/IMG_6390_layered-sign_800x.jpg?v=1759694027",
+  barMonteTrailer,
+  sharkBuild: sharkBuildAsset.url,
+
+  // Gallery
+  chopSuey:
+    "https://cdn.shopify.com/s/files/1/1403/8315/files/Chop_Suey_a1aaee95-b586-4fb9-880d-2bc12998e8ee_800x.jpg?v=1759691041",
+  parliamentCoffee,
   chicago:
     "https://cdn.shopify.com/s/files/1/1403/8315/files/chicago_layered-sign.jpg?v=1759695333",
   exitZero:
     "https://cdn.shopify.com/s/files/1/1403/8315/files/image_-_2023-06-08T131820.287.png?v=1759695499",
-  barbaryCoast:
-    "https://cdn.shopify.com/s/files/1/1403/8315/files/BarbaryCoast2.jpg?v=1759690725",
-  layeredRetail:
+  hardes:
+    "https://cdn.shopify.com/s/files/1/1403/8315/files/IMG_6390_layered-sign_800x.jpg?v=1759694027",
+  lolas: lolasAsset.url,
+  surBurger: surBurgerAsset.url,
+  bigToysBuild: bigToysBuildAsset.url,
+  savannah:
     "https://cdn.shopify.com/s/files/1/1403/8315/files/IMG_4392_layered_sign.jpg?v=1759690802",
-  layeredStudio:
-    "https://cdn.shopify.com/s/files/1/1403/8315/files/IMG_9105_2_1bbbf469-e3b3-4b57-b166-8bc3402e2d7c.jpg?v=1759697187",
-  elev8:
-    "https://cdn.shopify.com/s/files/1/1403/8315/files/elev8.jpg?v=1759695171&width=800&format=webp",
-  bulbDetail:
-    "https://cdn.shopify.com/s/files/1/1403/8315/files/DSCF1221_copy.jpg?v=1759690151&width=800&format=webp",
-  customCollage:
-    "https://cdn.shopify.com/s/files/1/1403/8315/files/custom_collage3.webp?v=1759890260",
+  coldBeer: coldBeerAsset.url,
+  charmBar: charmBarAsset.url,
+  starlight: starlightAsset.url,
 };
 
 const signStyles = [
@@ -47,9 +67,8 @@ const signStyles = [
       "Classic light-bulb marquee letters and custom signs designed to hang like artwork. Perfect for restaurants, bars, offices, retail spaces, studios, homes and more.",
     cta: "Explore Wall-Hanging Signs",
     link: "/wall-hanging-signs",
-    image: img.chopSuey,
-    alt: "Marquee letters spelling CHOP SUEY with lit globe bulbs mounted on a wall",
-    imagePosition: "center 10%",
+    image: img.beerHappy,
+    alt: "Multi-colored BEER HAPPY marquee letters mounted on a wood wall inside a brewery taproom",
   },
   {
     title: "Custom Logo & Layered Signs",
@@ -58,7 +77,7 @@ const signStyles = [
     cta: "Explore Custom Logo Signs",
     link: "/3d-logos",
     image: img.tucks,
-    alt: "Tuck's Truffles layered logo sign with dimensional lettering",
+    alt: "Tuck's Truffles layered logo sign with dimensional lettering and a bulb-lit border",
   },
   {
     title: "Mobile Vendor & Food Truck Signs",
@@ -66,9 +85,9 @@ const signStyles = [
       "Custom signs made to get attention on food trucks, trailers, carts, pop-ups and mobile businesses.",
     cta: "Explore Mobile Vendor Signs",
     link: "/mobile-vendor-signs",
-    image: img.foodTruck,
-    alt: "Lit marquee sign on a mobile bar trailer at an outdoor event",
-    imagePosition: "center 10%",
+    image: img.barMonteTrailer,
+    alt: "Bar Monté teal mobile bar trailer with a lit marquee sign above the service window",
+    imagePosition: "center 30%",
   },
   {
     title: "Have Something Completely Custom in Mind?",
@@ -76,25 +95,26 @@ const signStyles = [
       "If your idea doesn't fit neatly into one of these categories, that's okay. Send us your drawing, inspiration, logo or concept and tell us what you're imagining.",
     cta: "Tell Us Your Idea",
     link: "/quote/custom",
-    image: img.customCollage,
-    alt: "Collage of custom marquee signs and light-up letters built for different customers",
+    image: img.sharkBuild,
+    alt: "Shark-shaped custom sign shown as a sketch, a production proof and the finished build",
   },
 ];
 
 const gallery = [
-  { src: img.woodWallLetters, alt: "Marquee letters spelling BEER HAPPY on a wood wall inside a taproom" },
   { src: img.chopSuey, alt: "Marquee letters spelling CHOP SUEY lit with globe bulbs", pos: "center 12%" },
+  { src: img.parliamentCoffee, alt: "Parliament script marquee letters lit above a coffee shop service counter" },
   { src: img.chicago, alt: "Vertical CHICAGO marquee sign with lit bulbs on a wood wall" },
   { src: img.exitZero, alt: "Exit Zero Filling Station round logo sign outlined in lit bulbs" },
-  { src: img.layeredOffice, alt: "Harde's Watering Hole custom sign with a bulb-lit border" },
-  { src: img.barbaryCoast, alt: "Bulb-lit marquee sign standing in the shop before shipping" },
-  { src: img.layeredRetail, alt: "Savannah arena marquee sign with a bulb-lit border and changeable letters" },
-  { src: img.layeredStudio, alt: "Tall vertical marquee sign with lit bulbs mounted on a wood wall" },
-  { src: img.foodTruck, alt: "Lit marquee sign on a mobile bar trailer at an outdoor event" },
-  { src: img.elev8, alt: "ELEV8 marquee letters lit on a checkered floor in an event space" },
-  { src: img.bulbDetail, alt: "Colorful marquee letters spelling LUCK lit at night" },
-  { src: img.tucks, alt: "Tuck's Truffles custom logo sign with layered depth" },
+  { src: img.hardes, alt: "Harde's Watering Hole custom sign with a bulb-lit border on a wood wall" },
+  { src: img.lolas, alt: "Lola's arrow-shaped ORDER HERE sign with lit bulbs and dimensional lettering" },
+  { src: img.surBurger, alt: "Sur Burger badge-shaped sign with bulb-lit border and vintage finish" },
+  { src: img.bigToysBuild, alt: "Big Toys custom sign shown as a sketch, a production proof and the finished sign" },
+  { src: img.savannah, alt: "Savannah arena marquee sign with a bulb-lit border and changeable letters" },
+  { src: img.coldBeer, alt: "COLD BEER marquee letters in white and yellow with exposed bulbs" },
+  { src: img.charmBar, alt: "Charm Bar pink mobile trailer with a red marquee sign mounted on the roof" },
+  { src: img.starlight, alt: "Starlight Theater bulb-lit logo sign mounted in a home theater room" },
 ];
+
 
 const applications = [
   "Restaurants & Bars",
