@@ -170,7 +170,7 @@ const RentalBusiness = () => {
                   </div>
                   <div className="flex flex-col justify-center gap-4 rounded-xl border border-border bg-card p-6">
                     <p className="text-sm font-semibold text-foreground">See what you may qualify for</p>
-                    <Button asChild className="bg-orange-500 hover:bg-orange-600 text-white font-semibold h-auto py-3 text-base">
+                    <Button asChild className="bg-orange-500 hover:bg-orange-600 text-white font-semibold h-auto py-3 text-base whitespace-normal text-center leading-snug">
                       <a
                         href="https://vintagemarqueelights.approvepayments.com/"
                         target="_blank"
