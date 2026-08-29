@@ -143,7 +143,16 @@ const RentalBusiness = () => {
                 </div>
                 <div className="space-y-6">
                   <p className="text-base text-muted-foreground leading-relaxed">
-                    A serious commercial marquee letter rental setup typically requires an initial investment of $15,000–$35,000, depending on how much inventory you want to launch with. This covers commercial-grade letters and numbers, protective transport cases, replacement LED lighting, basic marketing materials, and a storage solution that keeps your inventory organized and accessible.
+                    A serious commercial marquee letter rental setup typically requires an initial investment of $15,000–$35,000, depending on how much inventory you want to launch with.{" "}
+                    <a
+                      href="https://vintagemarqueelights.approvepayments.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-primary hover:underline font-semibold"
+                    >
+                      Financing available for qualified buyers
+                    </a>
+                    . This covers commercial-grade letters and numbers, protective boxes, replacement LED lighting, basic marketing materials, and a storage solution that keeps your inventory organized and accessible.
                   </p>
                   <p className="text-base text-muted-foreground leading-relaxed">
                     While the upfront cost may seem significant, the long-term ROI makes it one of the strongest investments in the event rental space. Because the same inventory is rented repeatedly — often dozens or hundreds of times — revenue compounds quickly while ongoing costs remain minimal. Most operators find that consistent bookings and repeat clients make this a remarkably efficient business model.
@@ -195,6 +204,9 @@ const RentalBusiness = () => {
                   <div className="space-y-6">
                     <p className="text-base text-muted-foreground leading-relaxed">
                       The 36-inch marquee letter has become the industry standard for rental operators. It's large enough to create visual impact at events but manageable enough for a single person to transport and set up. Starting with a full A–Z alphabet, a complete set of numbers (0–9), and popular word toppers like "MR &amp; MRS," "LOVE," and "THE" gives you the widest booking potential from day one.
+                    </p>
+                    <p className="text-base text-muted-foreground leading-relaxed">
+                      Upgrade options include 48-inch letters for larger venues and stage displays, LED neon-style bulbs for a modern glow, and color-changing bulbs for events that need adjustable color. These options let you expand your service offering and respond to a wider range of client requests without replacing your core inventory.
                     </p>
                     <p className="text-base text-muted-foreground leading-relaxed">
                       Versatility matters far more than novelty when building your first inventory. High-demand characters that work across weddings, birthdays, corporate events, and holiday parties will generate significantly more revenue than specialty or one-off pieces. Focus on characters that book consistently before expanding into niche items.

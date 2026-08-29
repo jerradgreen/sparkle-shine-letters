@@ -180,7 +180,7 @@ const routes = [
       'marquee letter rental business, start rental business, marquee rental business guide, event rental business, rental business education',
     h1: 'How to Start a Marquee Letter Rental Business',
     intro:
-      'Startup costs, inventory strategy, profit margins, and the equipment decisions that separate a real rental operation from an expensive hobby. Qualified buyers can also finance inventory through APPROVE, an equipment-financing platform that connects applicants with a network of third-party lenders, to spread the purchase over monthly payments instead of paying upfront; all financing is subject to lender approval.',
+      'Startup costs, inventory strategy, profit margins, and the equipment decisions that separate a real rental operation from an expensive hobby. A serious commercial setup typically requires an initial investment of $15,000–$35,000. Financing is available for qualified buyers through APPROVE, an equipment-financing platform that connects applicants with a network of third-party lenders; all financing is subject to lender approval. Inventory options include 36-inch letters, with 48-inch letters, LED neon-style bulbs, and color-changing bulbs available as upgrade options.',
     links: [
       ['Startup cost breakdown', '/rental-business/startup-cost'],
       ['Building a scalable inventory', '/rental-business/building-a-scalable-inventory'],
