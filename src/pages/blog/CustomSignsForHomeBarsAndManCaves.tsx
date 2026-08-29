@@ -74,7 +74,7 @@ const CustomSignsForHomeBarsAndManCaves = () => {
             The signs plug directly into a standard wall outlet. No electrician, no hardwiring, no conduit. You hang it, you plug it in, and it glows. That simplicity is part of why they work so well in residential spaces.
           </p>
           <p className="text-muted-foreground leading-relaxed mb-4">
-            <Link to="/3d-logos" className="text-primary underline hover:text-primary/80">Explore custom logo and layered sign options →</Link>
+            <Link to="/3d-logos" className="text-primary underline hover:text-primary/80">Explore custom logo and business sign options →</Link>
           </p>
 
           <h2 className="text-xl font-semibold text-foreground mt-8 mb-3">Home Theaters</h2>
