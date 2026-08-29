@@ -186,6 +186,7 @@ const routes = [
       ['Building a scalable inventory', '/rental-business/building-a-scalable-inventory'],
       ['Profitability and unit economics', '/rental-business/profitability'],
       ['Marquee letter rental inventory packages', '/rental-inventory'],
+      ['Request rental inventory pricing', '/quote/rental-inventory'],
       ['Explore financing through APPROVE', 'https://vintagemarqueelights.approvepayments.com/'],
     ],
   },
