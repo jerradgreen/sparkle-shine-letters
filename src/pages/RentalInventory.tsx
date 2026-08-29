@@ -1341,7 +1341,7 @@ const RentalInventory = () => {
                   <li>Wire transfer gets you a 3% discount and keeps production moving at top speed.</li>
                   <li>Credit cards are accepted but include a 3% fee to offset high transaction costs.</li>
                   <li>Checks are accepted but can take up to 10 days to clear — production won't start until they do.</li>
-                  <li>Shop Pay Installments is also available if you want to break it into monthly payments — production starts immediately upon approval.</li>
+                  <li>Equipment financing is available for qualified buyers through <a href="https://vintagemarqueelights.approvepayments.com/" target="_blank" rel="noopener noreferrer" className="text-primary underline underline-offset-2 hover:text-primary/80">APPROVE</a>, which connects applicants with a network of third-party lenders — monthly payments, rates and terms vary and are subject to lender approval.</li>
                 </ul>
               </div>
             </div>
