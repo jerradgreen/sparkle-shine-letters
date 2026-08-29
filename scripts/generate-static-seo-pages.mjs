@@ -98,11 +98,12 @@ const routes = [
       'marquee letter rental inventory, marquee light rental business, rental inventory packages, event rental letters, commercial marquee letters',
     h1: 'Marquee Letter Rental Inventory Packages',
     intro:
-      'Vintage Marquee Lights sells commercial-grade marquee letter rental inventory packages for entrepreneurs and event rental companies. Packages include durable 36-inch and 48-inch letters designed for repeated bookings, event setups, and long-term rental business growth. Every package includes a 10-day inspection window after delivery.',
+      'Vintage Marquee Lights sells commercial-grade marquee letter rental inventory packages for entrepreneurs and event rental companies. Packages include durable 36-inch and 48-inch letters designed for repeated bookings, event setups, and long-term rental business growth. Every package includes a 10-day inspection window after delivery. Equipment financing is available for qualified buyers through APPROVE, which connects applicants with a network of third-party lenders; rates and terms vary and are subject to lender approval.',
     links: [
       ['Request a rental inventory quote', '/quote/rental-inventory'],
       ['Learn how to start a marquee rental business', '/start-marquee-rental-business'],
       ['Rental business education hub', '/rental-business'],
+      ['Explore financing through APPROVE', 'https://vintagemarqueelights.approvepayments.com/'],
     ],
   },
   {
