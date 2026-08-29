@@ -1001,7 +1001,8 @@ const RentalInventory = () => {
               </div>
               <h3 className="text-2xl font-bold mb-4 text-foreground">Step 1: Get a Quote in Around 5 Minutes</h3>
               <p className="text-muted-foreground leading-relaxed">
-                Fill out a quick form and we'll send you pricing, package options, and everything you need to make the right move. Flexible financing is available through Shop Pay Installments — approval takes seconds, no lengthy application.
+                Fill out a quick form and we'll send you pricing, package options, and everything you need to make the right move. Equipment financing is also available for qualified buyers through{' '}
+                <a href="https://vintagemarqueelights.approvepayments.com/" target="_blank" rel="noopener noreferrer" className="text-primary underline underline-offset-2 hover:text-primary/80">APPROVE</a>, which connects applicants with a network of third-party lenders. Rates and terms vary and are subject to lender approval.
               </p>
               <div className="mt-6 flex justify-center">
                 <div className="w-16 h-0.5 bg-primary"></div>
