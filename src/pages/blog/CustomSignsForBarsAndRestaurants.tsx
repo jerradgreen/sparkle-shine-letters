@@ -122,7 +122,7 @@ const CustomSignsForBarsAndRestaurants = () => {
             />
           </div>
           <p className="text-muted-foreground leading-relaxed mb-4">
-            <Link to="/3d-logos" className="text-primary underline hover:text-primary/80">See all custom logo sign and dimensional sign options</Link>
+            <Link to="/3d-logos" className="text-primary underline hover:text-primary/80">See all custom logo sign options</Link>
           </p>
 
           <h2 className="text-xl font-semibold text-foreground mt-8 mb-3">What to Think About When Ordering a Custom Sign for Your Bar or Restaurant</h2>

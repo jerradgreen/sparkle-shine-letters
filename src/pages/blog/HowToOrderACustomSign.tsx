@@ -161,7 +161,7 @@ const HowToOrderACustomSign = () => {
           </p>
 
           <p className="text-muted-foreground leading-relaxed mb-4">
-            <Link to="/quote" className="text-primary underline hover:text-primary/80">Start with a custom quote</Link> or <Link to="/wall-hanging-signs" className="text-primary underline hover:text-primary/80">explore our custom sign options</Link> to see what is possible.
+            <Link to="/quote" className="text-primary underline hover:text-primary/80">Start with a custom quote</Link> or <Link to="/custom-marquee-signs" className="text-primary underline hover:text-primary/80">explore our custom sign options</Link> to see what is possible.
           </p>
         </article>
 
