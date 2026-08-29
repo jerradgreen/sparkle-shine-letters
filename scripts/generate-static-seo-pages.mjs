@@ -180,12 +180,13 @@ const routes = [
       'marquee letter rental business, start rental business, marquee rental business guide, event rental business, rental business education',
     h1: 'How to Start a Marquee Letter Rental Business',
     intro:
-      'Startup costs, inventory strategy, profit margins, and the equipment decisions that separate a real rental operation from an expensive hobby.',
+      'Startup costs, inventory strategy, profit margins, and the equipment decisions that separate a real rental operation from an expensive hobby. Qualified buyers can also finance inventory through APPROVE, an equipment-financing platform that connects applicants with a network of third-party lenders, to spread the purchase over monthly payments instead of paying upfront; all financing is subject to lender approval.',
     links: [
       ['Startup cost breakdown', '/rental-business/startup-cost'],
       ['Building a scalable inventory', '/rental-business/building-a-scalable-inventory'],
       ['Profitability and unit economics', '/rental-business/profitability'],
       ['Marquee letter rental inventory packages', '/rental-inventory'],
+      ['Explore financing through APPROVE', 'https://vintagemarqueelights.approvepayments.com/'],
     ],
   },
   {
