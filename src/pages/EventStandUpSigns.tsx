@@ -16,6 +16,7 @@ import { standUpSignsConfig } from '@/config/templateConfigs';
 import ShopifyHeader from '@/components/ShopifyHeader';
 import ShopifyFooter from '@/components/ShopifyFooter';
 import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 
 const lexusHolidayPartyImage = "/images/lexus-event-style/lexus-holiday-party.jpg";
 const lexusLettersOfficeImage = "/images/lexus-event-style/lexus-letters-office.jpg";
@@ -223,14 +224,16 @@ const EventStandUpSigns = () => {
       <section className="py-8 bg-muted/30">
         <div className="container mx-auto px-4 text-center">
           <Button 
+            asChild
             variant="outline"
             size="lg"
             className="text-sm md:text-base h-auto py-4 md:py-2 whitespace-normal md:whitespace-nowrap leading-tight"
-            onClick={() => window.open('https://inventory.vintagemarqueelights.com', '_blank')}
           >
-            <span className="block md:inline">
-              Looking for a different style of sign?<br className="md:hidden" /> Click here to go to the homepage
-            </span>
+            <Link to="/">
+              <span className="block md:inline">
+                Looking for a different style of sign?<br className="md:hidden" /> Click here to go to the homepage
+              </span>
+            </Link>
           </Button>
         </div>
       </section>

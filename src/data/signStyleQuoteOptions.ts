@@ -21,7 +21,7 @@ export const signStyleQuoteOptions = [
   },
   {
     title: "36\" - 48\" Stand-Up Letters",
-    description: "Large, freestanding marquee letters for weddings, corporate events, or any celebration.",
+    description: "Own your letters — built for businesses, schools, universities, churches, venues and organizations that host recurring events. Purchase, not rental.",
     image: "https://cdn.shopify.com/s/files/1/1403/8315/files/drewia_hill_lowres_800x.jpg?v=1759248963",
     path: "/event-standup-signs",
     imagePosition: "center 35%",
