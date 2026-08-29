@@ -120,7 +120,7 @@ const MarqueeLetterRentalPricingGuide = () => {
           </p>
 
           <p className="text-muted-foreground leading-relaxed mb-4">
-            If you are ready to start or scale your business, explore our <Link to="/rental-business" className="text-primary hover:underline font-semibold">guide to starting a marquee rental business</Link> or visit <a href="https://vintagemarqueelights.com" className="text-primary hover:underline font-semibold">vintagemarqueelights.com</a> to see our full line of commercial-grade signs.
+            If you are ready to start or scale your business, explore our <Link to="/rental-business" className="text-primary hover:underline font-semibold">guide to starting a marquee rental business</Link> or visit our <Link to="/rental-inventory" className="text-primary hover:underline font-semibold">commercial-grade rental inventory packages</Link> to see our full line of commercial-grade signs.
           </p>
 
         </article>

@@ -100,7 +100,7 @@ const FoodTruckMobileVendorSignageGuide = () => {
           </p>
 
           <p className="text-muted-foreground leading-relaxed mb-4">
-            Explore our <Link to="/mobile-vendor-signs" className="text-primary hover:underline font-semibold">custom food truck signs</Link> or visit <a href="https://vintagemarqueelights.com" className="text-primary hover:underline font-semibold">vintagemarqueelights.com</a> to see more of our custom metal fabrication work.
+            Explore our <Link to="/mobile-vendor-signs" className="text-primary hover:underline font-semibold">custom food truck signs</Link> or visit our <Link to="/custom-marquee-signs" className="text-primary hover:underline font-semibold">custom marquee signs</Link> to see more of our custom metal fabrication work.
           </p>
 
         </article>
