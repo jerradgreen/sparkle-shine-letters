@@ -73,7 +73,7 @@ const signStyles = [
   },
   {
     title: "36\" - 48\" Stand-Up Signs for Events",
-    description: "Large, commercial grade, freestanding marquee letters for weddings, corporate events, or any celebration.",
+    description: "Commercial-grade freestanding marquee letters you buy and own — built for businesses, schools, universities, churches, venues and organizations with recurring events. Purchase, not rental.",
     image: "https://cdn.shopify.com/s/files/1/1403/8315/files/drewia_hill_lowres_800x.jpg?v=1759248963",
     link: "/event-standup-signs",
     imagePosition: "center 35%",
