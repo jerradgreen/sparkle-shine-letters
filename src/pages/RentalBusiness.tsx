@@ -80,7 +80,7 @@ const RentalBusiness = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button asChild className="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-8 h-auto py-3 text-lg">
-                  <Link to="/rental-inventory">Explore Commercial Rental Packages</Link>
+                  <Link to="/quote/rental-inventory">Get Package Pricing</Link>
                 </Button>
                 <Button asChild variant="outline" size="lg" className="py-3 h-auto text-lg">
                   <a href="#guides">Read the Guides</a>
@@ -180,7 +180,7 @@ const RentalBusiness = () => {
                       </a>
                     </Button>
                     <Button asChild variant="outline" className="h-auto py-3 text-base">
-                      <Link to="/rental-inventory">View Inventory Packages</Link>
+                      <Link to="/quote/rental-inventory">Get Package Pricing</Link>
                     </Button>
                   </div>
                 </div>
@@ -271,7 +271,7 @@ const RentalBusiness = () => {
                 If you're ready to build a marquee letter rental business with inventory that's built for the long haul, explore our complete commercial rental packages. We manufacture commercial-grade marquee letters designed specifically for rental operators who demand durability, reliability, and professional presentation.
               </p>
               <Button asChild className="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-8 py-3 text-lg h-auto">
-                <Link to="/rental-inventory">Explore Commercial Rental Packages</Link>
+                <Link to="/quote/rental-inventory">Request Inventory Pricing</Link>
               </Button>
             </section>
           </div>
