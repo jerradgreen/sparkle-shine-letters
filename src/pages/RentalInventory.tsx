@@ -145,115 +145,73 @@ const RentalInventory = () => {
       {/* Hero Section */}
       <section className="relative py-2 px-4 text-center bg-gradient-to-br from-primary/10 to-accent/10">
           <div className="max-w-6xl mx-auto">
-          {/* Mobile Layout */}
-          <div className="lg:hidden -mt-2">
-            {/* Mobile image first */}
-            <div className="mb-3">
-            <PerformantImage 
-              src={heroImageMobile}
-              alt="Professional marquee letter rental setup at Drewia Hill event showcasing profitable event rental business opportunity" 
-              className="rounded-lg shadow-2xl w-full h-48 object-cover object-[center_65%]"
-              priority={true}
-              fetchPriority="high"
-              sizes="100vw"
-            />
-            </div>
-            
-            {/* Mobile subtitle after image */}
-            <p className="text-lg font-semibold text-accent mb-1 text-center">
-               Built for Entrepreneurs & Established Event Rental Companies
-             </p>
-             
-             {/* Mobile content */}
-             <div className="text-left">
-               <h1 className="text-xl font-bold text-foreground mb-2 leading-tight">
-                  Marquee Letter Rental Business Inventory – Commercial-Grade 36″ &amp; 48″ Letters
-                </h1>
-                <p className="text-base text-muted-foreground leading-snug mb-2">
-                  Our commercial-grade marquee letter packages are designed for repeat rentals, long-term durability, and strong ROI. Get a proven inventory foundation with premium 36″ letters, durable finishes, and logistics handled—so you can launch faster or scale what you already have.
-               </p>
-<p className="text-sm font-semibold text-foreground leading-relaxed mb-3">
-	                 Rental inventory packages are revenue-producing assets — not décor. Most clients invest $15,000-$35,000 depending on configuration. With consistent bookings, many recover their investment within the first year and continue generating profit for years after.
-	               </p>
-               <p className="text-sm font-semibold mb-3">
-                 <a href="https://vintagemarqueelights.approvepayments.com/" target="_blank" rel="noopener noreferrer" className="text-primary underline underline-offset-2 hover:text-primary/80">Financing Available</a> — as low as $295/month
-               </p>
-              
-               <div className="bg-muted/30 rounded-lg p-3 text-center -mt-2">
-                <div className="flex justify-center mb-1">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 text-yellow-500 fill-yellow-500" />
-                  ))}
-                </div>
-                <blockquote className="text-sm text-muted-foreground italic mb-0.5 leading-relaxed">
-                  "The quality is exactly what we needed for our rental business. Best investment we've made for expanding our event services."
-                </blockquote>
-                <cite className="text-sm text-foreground font-semibold">— Farrah W., Tennessee</cite>
-              </div>
-              
-              {/* Mobile CTA button after review */}
-              <div className="-mt-3">
-              <Button 
-                size="lg" 
-                className="text-lg px-8 py-6 w-full"
-                onClick={openQuoteForm}
-               >
-                 Request Package Pricing
-               </Button>
-              </div>
-            </div>
-          </div>
-
-          {/* Desktop Layout */}
-          <div className="hidden lg:grid lg:grid-cols-2 gap-12 items-center">
-            <div className="text-left">
-               <p className="text-lg font-semibold text-accent mb-2">
-                  Built for Entrepreneurs & Established Event Rental Companies
-               </p>
-               <h1 className="text-2xl xl:text-3xl font-bold text-foreground mb-4 leading-tight">
-                   Marquee Letter Rental Business Inventory – Commercial-Grade 36″ &amp; 48″ Letters
-                 </h1>
-               <p className="text-lg text-muted-foreground mb-3 leading-relaxed">
-                 Our commercial-grade marquee letter packages are designed for repeat rentals, long-term durability, and strong ROI. Get a proven inventory foundation with premium 36″ letters, durable finishes, and logistics handled—so you can launch faster or scale what you already have.
-               </p>
-<p className="text-sm font-semibold text-foreground mb-4 leading-relaxed">
-	                 Rental inventory packages are revenue-producing assets — not décor. Most clients invest $15,000-$35,000 depending on configuration. With consistent bookings, many recover their investment within the first year and continue generating profit for years after.
-	               </p>
-               <p className="text-sm font-semibold mb-4">
-                 <a href="https://vintagemarqueelights.approvepayments.com/" target="_blank" rel="noopener noreferrer" className="text-primary underline underline-offset-2 hover:text-primary/80">Financing Available</a> — as low as $295/month
-               </p>
-            <Button
-              size="lg" 
-              className="text-lg px-8 py-6 w-full mb-4"
-              onClick={openQuoteForm}
-             >
-               Request Package Pricing
-             </Button>
-              
-              <div className="bg-muted/30 rounded-lg p-4 text-center">
-                <div className="flex justify-center mb-2">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 text-yellow-500 fill-yellow-500" />
-                  ))}
-                </div>
-                <blockquote className="text-sm text-muted-foreground italic mb-2 leading-relaxed">
-                  "The quality is exactly what we needed for our rental business. Best investment we've made for expanding our event services."
-                </blockquote>
-                <cite className="text-sm text-foreground font-semibold">— Farrah W., Tennessee</cite>
-              </div>
-            </div>
-            <div className="relative">
-              <PerformantImage 
-                src={heroImage} 
-                alt="Drewia Hill marquee letters event setup" 
-                className="rounded-lg shadow-2xl w-full h-auto object-cover"
+          <div className="grid lg:grid-cols-2 gap-0 lg:gap-12 items-center -mt-2 lg:mt-0">
+            {/* Image (first on mobile, right on desktop) */}
+            <div className="relative order-1 lg:order-2 mb-3 lg:mb-0">
+              <PerformantImage
+                src={heroImageMobile}
+                alt="Professional marquee letter rental setup at Drewia Hill event showcasing profitable event rental business opportunity"
+                className="lg:hidden rounded-lg shadow-2xl w-full h-48 object-cover object-[center_65%]"
                 priority={true}
                 fetchPriority="high"
-                sizes="(max-width: 1024px) 100vw, 50vw"
+                sizes="100vw"
               />
+              <PerformantImage
+                src={heroImage}
+                alt="Drewia Hill marquee letters event setup"
+                className="hidden lg:block rounded-lg shadow-2xl w-full h-auto object-cover"
+                priority={true}
+                fetchPriority="high"
+                sizes="50vw"
+              />
+            </div>
+
+            {/* Copy */}
+            <div className="order-2 lg:order-1 text-left">
+              <p className="text-lg font-semibold text-accent mb-1 lg:mb-2 text-center lg:text-left">
+                Built for Entrepreneurs &amp; Established Event Rental Companies
+              </p>
+              <h1 className="text-xl lg:text-2xl xl:text-3xl font-bold text-foreground mb-2 lg:mb-4 leading-tight">
+                Marquee Letter Rental Business Inventory – Commercial-Grade 36″ &amp; 48″ Letters
+              </h1>
+              <p className="text-base lg:text-lg text-muted-foreground leading-snug lg:leading-relaxed mb-2 lg:mb-3">
+                Our commercial-grade marquee letter packages are designed for repeat rentals, long-term durability, and strong ROI. Get a proven inventory foundation with premium 36″ letters, durable finishes, and logistics handled—so you can launch faster or scale what you already have.
+              </p>
+              <p className="text-sm font-semibold text-foreground leading-relaxed mb-3 lg:mb-4">
+                Rental inventory packages are revenue-producing assets — not décor. Most clients invest $15,000-$35,000 depending on configuration. With consistent bookings, many recover their investment within the first year and continue generating profit for years after.
+              </p>
+              <p className="text-sm font-semibold mb-3 lg:mb-4">
+                <a href="https://vintagemarqueelights.approvepayments.com/" target="_blank" rel="noopener noreferrer" className="text-primary underline underline-offset-2 hover:text-primary/80">Financing Available</a> — as low as $295/month
+              </p>
+
+              <div className="flex flex-col">
+                {/* Review (above CTA on mobile, below on desktop) */}
+                <div className="order-1 lg:order-2 bg-muted/30 rounded-lg p-3 lg:p-4 text-center -mt-2 lg:mt-0">
+                  <div className="flex justify-center mb-1 lg:mb-2">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="w-4 h-4 text-yellow-500 fill-yellow-500" />
+                    ))}
+                  </div>
+                  <blockquote className="text-sm text-muted-foreground italic mb-0.5 lg:mb-2 leading-relaxed">
+                    "The quality is exactly what we needed for our rental business. Best investment we've made for expanding our event services."
+                  </blockquote>
+                  <cite className="text-sm text-foreground font-semibold">— Farrah W., Tennessee</cite>
+                </div>
+
+                <div className="order-2 lg:order-1 -mt-3 lg:mt-0 lg:mb-4">
+                  <Button
+                    size="lg"
+                    className="text-lg px-8 py-6 w-full"
+                    onClick={openQuoteForm}
+                  >
+                    Request Package Pricing
+                  </Button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
+
       </section>
 
       {/* Compact customer proof strip */}
