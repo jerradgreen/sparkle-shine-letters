@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import PerformantImage from '@/components/PerformantImage';
-import { DollarSign, Package, Percent, ShieldCheck, ArrowRight } from 'lucide-react';
+import { DollarSign, Package, Percent, ShieldCheck, ArrowRight, CreditCard } from 'lucide-react';
 
 const heroImage = '/images/hero-rental-setup.webp';
 
@@ -148,6 +148,41 @@ const RentalBusiness = () => {
                   <p className="text-base text-muted-foreground leading-relaxed">
                     While the upfront cost may seem significant, the long-term ROI makes it one of the strongest investments in the event rental space. Because the same inventory is rented repeatedly — often dozens or hundreds of times — revenue compounds quickly while ongoing costs remain minimal. Most operators find that consistent bookings and repeat clients make this a remarkably efficient business model.
                   </p>
+                </div>
+              </section>
+
+              <section className="rounded-2xl border border-primary/25 bg-primary/5 p-6 md:p-10">
+                <div className="flex items-center gap-3 mb-6">
+                  <span className="rounded-xl bg-primary/10 p-3 text-primary"><CreditCard className="w-6 h-6" /></span>
+                  <h2 className="text-2xl md:text-3xl font-bold text-foreground">Preserve Cash Flow While You Build Your Inventory</h2>
+                </div>
+                <div className="grid md:grid-cols-3 gap-8">
+                  <div className="md:col-span-2 space-y-5">
+                    <p className="text-base text-muted-foreground leading-relaxed">
+                      You don't have to pay for your entire inventory package upfront. Qualified buyers can apply for equipment financing through APPROVE and spread the purchase across monthly payments — keeping cash available for transportation, storage, insurance, and the marketing that fills your calendar while the inventory starts working for you.
+                    </p>
+                    <p className="text-base text-muted-foreground leading-relaxed">
+                      Payments as low as $295/month are available on select packages. Actual payment amounts, rates, and terms vary by applicant and package and are subject to lender approval.
+                    </p>
+                    <p className="text-sm text-muted-foreground/90 leading-relaxed">
+                      APPROVE is an equipment-financing platform that connects applicants with a network of third-party lenders. APPROVE is not the lender, and all financing is subject to lender approval.
+                    </p>
+                  </div>
+                  <div className="flex flex-col justify-center gap-4 rounded-xl border border-border bg-card p-6">
+                    <p className="text-sm font-semibold text-foreground">See what you may qualify for</p>
+                    <Button asChild className="bg-orange-500 hover:bg-orange-600 text-white font-semibold h-auto py-3 text-base whitespace-normal text-center leading-snug">
+                      <a
+                        href="https://vintagemarqueelights.approvepayments.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Explore Financing Through APPROVE
+                      </a>
+                    </Button>
+                    <Button asChild variant="outline" className="h-auto py-3 text-base">
+                      <Link to="/rental-inventory">View Inventory Packages</Link>
+                    </Button>
+                  </div>
                 </div>
               </section>
 
