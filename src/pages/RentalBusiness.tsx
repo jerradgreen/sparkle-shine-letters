@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import PerformantImage from '@/components/PerformantImage';
-import { DollarSign, Package, Percent, ShieldCheck, ArrowRight } from 'lucide-react';
+import { DollarSign, Package, Percent, ShieldCheck, ArrowRight, CreditCard } from 'lucide-react';
 
 const heroImage = '/images/hero-rental-setup.webp';
 
