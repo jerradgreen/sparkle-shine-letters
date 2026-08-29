@@ -74,19 +74,20 @@ const routes = [
   },
   {
     path: '/event-standup-signs',
-    title: '36 and 48 Inch Event Marquee Letters | Vintage Marquee Lights',
+    title: 'Commercial Stand-Up Marquee Letters for Sale | 36" & 48" Freestanding Letters',
     description:
-      'Commercial-grade 36-inch and 48-inch stand-up marquee letters for weddings, corporate events, schools, venues, celebrations, and event rental professionals.',
+      'Commercial-grade 36" and 48" freestanding marquee letters for sale. Built for repeated event use by universities, venues, event companies, brands, and schools for graduations, activations, and stage displays.',
     keywords:
-      'event marquee letters, 36 inch marquee letters, 48 inch marquee letters, stand up marquee letters, wedding marquee letters, event letters',
-    h1: '36-Inch and 48-Inch Stand-Up Event Marquee Letters',
+      'commercial marquee letters for sale, freestanding marquee letters, 36 inch marquee letters, 48 inch marquee letters, stand-up marquee letters for events, marquee letters for universities, marquee letters for corporate events, event marquee letters',
+    h1: 'Own Your Event Branding — Reusable Marquee Letters Built for Years of Use',
     intro:
-      'Our stand-up event marquee letters are commercial-grade freestanding letters built for weddings, corporate events, schools, venues, celebrations, and event rental professionals. They are designed for repeated setups, visual impact, and simple plug-in use.',
+      'Vintage Marquee Lights builds and sells commercial-grade 36-inch and 48-inch freestanding marquee letters you own. They are purchased by businesses, corporations, schools, universities, churches, venues, athletic departments, and organizations that need reusable event signage for graduations, brand activations, conferences, recruiting events, banquets, and stage displays — not one-time decoration and not a rental.',
     links: [
       ['Request an event letter quote', '/quote/event-standup'],
       ['Start or expand a rental inventory', '/rental-inventory'],
       ['Learn about marquee letters for event pros', '/marquee-letters-for-event-pros'],
     ],
+
   },
   {
     path: '/rental-inventory',
@@ -171,14 +172,14 @@ const routes = [
   },
   {
     path: '/rental-business',
-    title: 'Marquee Letter Rental Business Education Hub | Vintage Marquee Lights',
+    title: 'How to Start a Marquee Letter Rental Business | Vintage Marquee Lights',
     description:
-      'Education hub for entrepreneurs starting or scaling a marquee letter rental business. Startup cost, inventory planning, and profitability guidance.',
+      'Learn how to start a profitable marquee letter rental business. Discover startup costs, inventory strategy, ROI planning, and commercial-grade equipment recommendations.',
     keywords:
       'marquee letter rental business, start rental business, marquee rental business guide, event rental business, rental business education',
-    h1: 'Marquee Letter Rental Business Education Hub',
+    h1: 'How to Start a Marquee Letter Rental Business',
     intro:
-      'Practical guidance for entrepreneurs starting, running, and scaling a marquee letter rental business — covering startup cost, inventory planning, and long-term profitability.',
+      'Startup costs, inventory strategy, profit margins, and the equipment decisions that separate a real rental operation from an expensive hobby.',
     links: [
       ['Startup cost breakdown', '/rental-business/startup-cost'],
       ['Building a scalable inventory', '/rental-business/building-a-scalable-inventory'],
