@@ -5,20 +5,16 @@ import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
-import { Check } from 'lucide-react';
+import { Check, GraduationCap, Trophy, Users, Building2, Sparkles, Package } from 'lucide-react';
 import PerformantImage from '@/components/PerformantImage';
-
-import graduationNumbers from '@/assets/1969.jpeg';
-import elev8Letters from '@/assets/elev8.jpeg';
-import stageSetup from '@/assets/setup-1.jpeg';
 
 const PAGE_URL = 'https://inventory.vintagemarqueelights.com/marquee-letters-for-schools-universities';
 const PAGE_TITLE = 'Marquee Letters for Schools & Universities | Vintage Marquee Lights';
 const PAGE_DESCRIPTION =
-  'Custom marquee letters schools and universities buy and own for graduations, admissions events, game days, homecoming, and recurring campus events. 36" and 48" freestanding letters built for years of reuse.';
+  'Custom marquee letters schools and universities buy and own for graduations, admissions events, game days, homecoming, and recurring campus events. 36" and 48" freestanding letters built for repeated setup and teardown.';
 
 const geneseoImage = '/images/schools/geneseo-knights-university-marquee-letters.webp';
-const geneseoAlt = 'GENESEO KNIGHTS illuminated marquee letters on the SUNY Geneseo campus in New York.';
+const geneseoAlt = 'GENESEO KNIGHTS illuminated marquee letters outdoors at Geneseo, a university in New York.';
 
 const campusUseCases = [
   {
