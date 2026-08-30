@@ -84,10 +84,31 @@ const Navigation = () => {
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
-            
+
+            <DropdownMenu>
+              <DropdownMenuTrigger className="text-foreground hover:text-primary font-medium flex items-center gap-1">
+                Who We Serve <ChevronDown className="h-4 w-4" />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="bg-background">
+                <DropdownMenuItem asChild>
+                  <Link to="/marquee-letters-for-schools-universities" className="cursor-pointer">Schools &amp; Universities</Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link to="/corporate-marquee-signs" className="cursor-pointer">Corporate &amp; Brands</Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link to="/marquee-letters-for-event-pros" className="cursor-pointer">Event Professionals</Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link to="/rental-inventory" className="cursor-pointer">Rental Businesses</Link>
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
+
             <Link to="/rental-inventory" className="text-foreground hover:text-primary font-medium">
               Start Your Rental Biz
             </Link>
+
             
             <Link to="/event-standup-signs" className="text-foreground hover:text-primary font-medium">
               36/48" Stand-Up Letters
