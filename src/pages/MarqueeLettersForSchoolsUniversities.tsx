@@ -142,7 +142,7 @@ const process = [
   {
     step: '4',
     title: 'Receive and reuse',
-    body: 'Letters arrive pre-lit in foam-lined boxes, ready to deploy — then store them on campus for the next event.',
+    body: 'Letters arrive pre-lit and ready to display — then store them on campus for the next event.',
   },
 ];
 
@@ -150,12 +150,12 @@ const faqs = [
   {
     question: 'Do schools rent these letters or buy them?',
     answer:
-      'Vintage Marquee Lights sells the letters for long-term ownership and repeated use. They are commonly purchased by universities, schools, athletic departments, and venues that use them across multiple events each year.',
+      'Vintage Marquee Lights sells the letters for long-term ownership and repeated use. We do not rent event-style letters. Universities, schools, athletic departments, and venues purchase a set so they can reuse it for their own events.',
   },
   {
     question: 'What sizes should a campus buy?',
     answer:
-      'We offer 36-inch and 48-inch stand-up marquee letters. The 36-inch size is the most popular because it is easier to store, transport, and set up, and it ships faster. The 48-inch size is available for buyers who need maximum visibility at large venues or outdoor events.',
+      'We offer 36-inch and 48-inch stand-up marquee letters. The 36-inch size is the most popular because it is easier to store, transport, and set up. The 48-inch size is available for buyers who need maximum visibility at large venues or outdoor events.',
   },
   {
     question: 'Can we get numbers for class years?',
@@ -163,15 +163,16 @@ const faqs = [
       'Yes. We offer the full alphabet A–Z, numbers 0–9, and common symbols including the ampersand (&), hashtag (#), and heart (♥), so you can spell class years, dates, scores, and hashtags.',
   },
   {
-    question: 'How are the letters packaged and stored between events?',
+    question: 'How are the letters packaged?',
     answer:
-      'Letters ship in reusable foam-lined boxes designed for repeated use. Each letter is individually cushioned to prevent damage during transit and storage, and the boxes are built to last through many events.',
+      'Letters arrive pre-lit and ready to display. Optional foam-lined boxes are available for storage and transport between events, with each letter individually cushioned.',
   },
   {
     question: 'Are these suitable for long-term institutional use?',
     answer:
-      'Yes. They are built with powder-coated steel and LED bulbs designed for repeated setup and teardown. Universities, event companies, venues, athletic departments, and schools use them across dozens of events per year.',
+      'They are built with powder-coated steel and LED bulbs designed for repeated setup and teardown, which is why institutional buyers such as universities, schools, athletic departments, and venues purchase them instead of renting.',
   },
+
   {
     question: 'Are these the same as a school marquee sign or reader board?',
     answer:
