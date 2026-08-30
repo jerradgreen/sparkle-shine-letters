@@ -425,7 +425,7 @@ export const standUpSignsConfig: TemplateConfig = {
     items: [
       {
         question: "What sizes are available?",
-        answer: "We offer 36\" and 48\" stand-up marquee letters. The 36\" size is the most popular — it's easier to store, transport, and set up. The 48\" size is available for buyers who need maximum visibility at large venues or outdoor events."
+        answer: "We offer 36\" and 48\" stand-up marquee letters. The 36\" size is the most popular — it's easier to store, transport, and set up, and ships faster. The 48\" size is available for buyers who need maximum visibility at large venues or outdoor events."
       },
       {
         question: "What's the difference between 36\" and 48\" letters?",
