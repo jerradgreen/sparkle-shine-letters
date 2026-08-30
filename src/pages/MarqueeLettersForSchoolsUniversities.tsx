@@ -250,8 +250,8 @@ const MarqueeLettersForSchoolsUniversities = () => {
                 </h1>
                 <p className="mb-4 text-lg leading-relaxed text-muted-foreground">
                   Buy your school name, team abbreviation, or class year once and use the same illuminated
-                  letters for graduation, admissions events, game days, homecoming, and campus programming —
-                  every year.
+                  letters again for graduation, admissions events, game days, homecoming, and campus
+                  programming.
                 </p>
                 <p className="mb-6 text-base leading-relaxed text-muted-foreground">
                   Vintage Marquee Lights builds and sells commercial-grade 36-inch and 48-inch freestanding
