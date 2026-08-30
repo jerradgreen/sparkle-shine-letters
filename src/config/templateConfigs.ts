@@ -1,9 +1,6 @@
 import { TemplateConfig } from '@/types/template';
 
 // Import testimonial images
-import testimonialRealistic1 from '@/assets/testimonial-realistic-1.jpg';
-import testimonialDavidBrick from '@/assets/testimonial-david-brick.jpg';
-import testimonialLakeshaOutdoor from '@/assets/testimonial-lakesha-outdoor.jpg';
 import testimonialIndoorWoman from '@/assets/testimonial-indoor-woman.jpg';
 import testimonialOutdoorMan from '@/assets/testimonial-outdoor-man.jpg';
 import testimonialChef from '@/assets/testimonial-chef-restaurant.jpg';
@@ -359,32 +356,8 @@ export const wallHangingConfig: TemplateConfig = {
 };
 
 // Event Style Stand-Up Signs Template
-// Legacy homepage testimonial carousel entries (previously part of standUpSignsConfig).
-// Retained only for the homepage carousel; not rendered or emitted in schema on /event-standup-signs.
-export const legacyEventTestimonials = [
-  {
-    name: "Events",
-    role: "University of Texas",
-    content: "We purchased marquee letters for multiple university events, including graduation and athletic pep rallies. The quality is exceptional, and they've become a core part of our campus event branding.",
-    rating: 5,
-    image: testimonialRealistic1
-  },
-  {
-    name: "David K.",
-    role: "Corporate Event Manager",
-    content: "Perfect for our stage setup - everyone could see them and took pictures. The neon style was modern and professional.",
-    rating: 5,
-    image: testimonialDavidBrick
-  },
-  {
-    name: "LaKesha J.",
-    role: "Event Coordinator",
-    content: "Ready to set up right out of the boxes. Great quality and exactly what we needed for our venue and event.",
-    rating: 5,
-    image: testimonialLakeshaOutdoor,
-    imageStyle: { filter: 'sepia(0.2) contrast(0.9) brightness(1.05) saturate(0.85)' }
-  }
-];
+
+
 
 export const standUpSignsConfig: TemplateConfig = {
   pageTitle: "Commercial Stand-Up Marquee Letters for Sale | 36\" & 48\" Freestanding Letters",

@@ -5,7 +5,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ShopifyHeader from "@/components/ShopifyHeader";
 import { HomeHighlightsSection } from "@/components/HomeHighlightsSection";
-import { foodTruckSignsConfig, legacyEventTestimonials, logoSignsConfig, standUpSignsConfig, wallHangingConfig } from "@/config/templateConfigs";
+import { foodTruckSignsConfig, logoSignsConfig, wallHangingConfig } from "@/config/templateConfigs";
 import { Star } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
@@ -40,7 +40,7 @@ const homepageReviews = [
     role: "C&D Marquees and Event Rentals",
   },
   ...wallHangingConfig.testimonials.items,
-  ...legacyEventTestimonials,
+  
   ...foodTruckSignsConfig.testimonials.items,
   ...logoSignsConfig.testimonials.items,
 ];
