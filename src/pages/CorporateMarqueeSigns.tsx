@@ -272,7 +272,7 @@ const CorporateMarqueeSigns = () => {
                   sizes="(max-width: 1024px) 100vw, 560px"
                 />
                 <figcaption className="px-4 py-3 text-sm text-muted-foreground">
-                  Lexus Southern Area used one set of freestanding letters across multiple company events.
+                  Lexus Southern Area used one set of freestanding letters for two different company events.
                 </figcaption>
               </figure>
             </div>
