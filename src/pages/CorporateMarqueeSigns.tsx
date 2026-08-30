@@ -167,7 +167,7 @@ const processSteps = [
   {
     step: '4',
     title: 'Receive and reuse',
-    body: 'Event letters arrive pre-lit in foam-lined boxes. Installed signs ship with mounting hardware.',
+    body: 'Event letters arrive pre-lit and ready to display. Optional foam-lined storage boxes are available.',
   },
 ];
 
