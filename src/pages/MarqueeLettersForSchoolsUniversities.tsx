@@ -290,7 +290,7 @@ const MarqueeLettersForSchoolsUniversities = () => {
                   sizes="(max-width: 1024px) 100vw, 560px"
                 />
                 <figcaption className="px-4 py-3 text-sm text-muted-foreground">
-                  GENESEO KNIGHTS marquee letters set up outdoors on the SUNY Geneseo campus.
+                  GENESEO KNIGHTS marquee letters at Geneseo, a university in New York.
                 </figcaption>
               </figure>
             </div>
@@ -301,12 +301,12 @@ const MarqueeLettersForSchoolsUniversities = () => {
         <section className="px-4 py-12 md:py-16">
           <div className="mx-auto max-w-6xl">
             <h2 className="mb-3 text-center text-2xl font-bold text-foreground md:text-3xl">
-              Ownership beats renting the same letters again and again
+              Own the letters instead of renting them each time
             </h2>
             <p className="mx-auto mb-8 max-w-3xl text-center text-base leading-relaxed text-muted-foreground">
-              Most campuses do not hold one event a year. Between commencement, admissions, athletics, student
-              life, and alumni weekends, the same lettering gets used over and over — which is exactly why
-              schools buy their own set.
+              Campus calendars repeat. Commencement, admissions events, athletics, student life, and alumni
+              weekends can all use the same lettering, which is why buying a set can make more sense than
+              renting for each occasion.
             </p>
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
               {ownershipPoints.map((point) => (
