@@ -5,74 +5,78 @@ import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
-import { Check } from 'lucide-react';
+import { Check, GraduationCap, Trophy, Users, Building2, Sparkles, Package } from 'lucide-react';
 import PerformantImage from '@/components/PerformantImage';
-
-import graduationNumbers from '@/assets/1969.jpeg';
-import elev8Letters from '@/assets/elev8.jpeg';
-import stageSetup from '@/assets/setup-1.jpeg';
 
 const PAGE_URL = 'https://inventory.vintagemarqueelights.com/marquee-letters-for-schools-universities';
 const PAGE_TITLE = 'Marquee Letters for Schools & Universities | Vintage Marquee Lights';
 const PAGE_DESCRIPTION =
-  'Custom marquee letters schools and universities buy and own for graduations, admissions events, game days, homecoming, and recurring campus events. 36" and 48" freestanding letters built for years of reuse.';
+  'Custom marquee letters schools and universities buy and own for graduations, admissions events, game days, homecoming, and recurring campus events. 36" and 48" freestanding letters built for repeated setup and teardown.';
 
 const geneseoImage = '/images/schools/geneseo-knights-university-marquee-letters.webp';
-const geneseoAlt = 'GENESEO KNIGHTS illuminated marquee letters on the SUNY Geneseo campus in New York.';
+const geneseoAlt = 'GENESEO KNIGHTS illuminated marquee letters outdoors at Geneseo, a university in New York.';
 
 const campusUseCases = [
   {
+    icon: GraduationCap,
     title: 'Graduation & Commencement',
     description:
       'Spell your school name, class year, or a short phrase for commencement stages, diploma photo lines, and senior celebrations.',
   },
   {
+    icon: Users,
     title: 'Admissions & Recruiting',
     description:
-      'Give accepted-student days, open houses, and campus tours a branded, photo-ready focal point prospective families remember.',
+      'Accepted-student days, open houses, and campus tours can use a branded, photo-ready focal point.',
   },
   {
+    icon: Trophy,
     title: 'Athletics & Game Days',
     description:
       'Team abbreviations, mascot names, and school letters for tailgates, pep rallies, tournaments, and arena entrances.',
   },
   {
+    icon: Users,
     title: 'Alumni & Homecoming',
     description:
-      'One lettering set can anchor homecoming weekend, reunion tents, and donor receptions year after year.',
+      'One lettering set can be used for homecoming weekend, reunion tents, and donor receptions.',
   },
   {
+    icon: Sparkles,
     title: 'Student Affairs & Campus Life',
     description:
       'Welcome week, orientation, residence life events, club fairs, and student programming displays.',
   },
   {
+    icon: Trophy,
     title: 'Awards & Recognition',
     description:
       'Honors convocations, faculty and staff recognition nights, scholarship banquets, and stage backdrops.',
   },
   {
+    icon: Building2,
     title: 'Fundraisers & Donor Events',
     description:
-      'Galas, giving-day activations, and campaign milestones where a lit display draws people in for photos.',
+      'Galas, giving-day activations, and campaign milestones where a lit display can anchor photos.',
   },
   {
+    icon: Package,
     title: 'Conferences & Recurring Events',
     description:
-      'Symposiums, camps, summer programs, and any event on the academic calendar that repeats each year.',
+      'Symposiums, camps, summer programs, and other events that repeat on the academic calendar.',
   },
 ];
 
 const ownershipPoints = [
   {
-    title: 'Buy once, deploy all year',
+    title: 'Buy once, use it again',
     description:
-      'Your letters belong to the campus. Use them for graduation in the spring, orientation in the fall, and every event in between without booking anything.',
+      'The letters belong to the campus, so the same set can be used for events across the academic year without booking anything.',
   },
   {
     title: 'No rental coordination',
     description:
-      'No availability calls, delivery windows, or per-event contracts. Staff pull the letters from storage and set them up.',
+      'No availability calls, delivery windows, or per-event contracts — the set is already on campus when you need it.',
   },
   {
     title: 'Consistent brand presence',
@@ -82,7 +86,7 @@ const ownershipPoints = [
   {
     title: 'Built for repeated setup',
     description:
-      'Powder-coated steel construction with a self-standing base, designed for repeated setup and teardown across years of events.',
+      'Powder-coated steel construction with a self-standing base, designed for repeated setup and teardown.',
   },
 ];
 
@@ -90,7 +94,7 @@ const productFit = [
   {
     title: '36-inch letters',
     body:
-      'The standard and most popular size. Easier to store, transport, and set up, and it ships faster — a good fit for most indoor venues, stages, and campus event spaces.',
+      'The standard and most popular size — easier to store, transport, and set up, and a good fit for most indoor venues, stages, and campus event spaces.',
   },
   {
     title: '48-inch letters',
@@ -105,7 +109,7 @@ const productFit = [
   {
     title: '15-inch topper phrases',
     body:
-      'Toppers like THE, CLASS OF, and MR&MRS are pre-mounted on a shared base and sit on top of 36-inch letters for layered displays.',
+      'Topper phrases such as CLASS OF are pre-mounted on a shared base and sit on top of 36-inch letters for layered displays. Additional topper phrases are available — ask when you request a quote.',
   },
   {
     title: 'Lighting options',
@@ -115,7 +119,7 @@ const productFit = [
   {
     title: 'Storage boxes & display stands',
     body:
-      'Letters ship in reusable foam-lined boxes built for repeated transport and storage. Optional double-row display stands hold two rows of letters side by side.',
+      'Optional foam-lined boxes are available for storage and transport between events. Optional double-row display stands hold two rows of letters side by side.',
   },
 ];
 
@@ -138,7 +142,7 @@ const process = [
   {
     step: '4',
     title: 'Receive and reuse',
-    body: 'Letters arrive pre-lit in foam-lined boxes, ready to deploy — then store them on campus for the next event.',
+    body: 'Letters arrive pre-lit and ready to display — then store them on campus for the next event.',
   },
 ];
 
@@ -146,12 +150,12 @@ const faqs = [
   {
     question: 'Do schools rent these letters or buy them?',
     answer:
-      'Vintage Marquee Lights sells the letters for long-term ownership and repeated use. They are commonly purchased by universities, schools, athletic departments, and venues that use them across multiple events each year.',
+      'Vintage Marquee Lights sells the letters for long-term ownership and repeated use. We do not rent event-style letters. Universities, schools, athletic departments, and venues purchase a set so they can reuse it for their own events.',
   },
   {
     question: 'What sizes should a campus buy?',
     answer:
-      'We offer 36-inch and 48-inch stand-up marquee letters. The 36-inch size is the most popular because it is easier to store, transport, and set up, and it ships faster. The 48-inch size is available for buyers who need maximum visibility at large venues or outdoor events.',
+      'We offer 36-inch and 48-inch stand-up marquee letters. The 36-inch size is the most popular because it is easier to store, transport, and set up. The 48-inch size is available for buyers who need maximum visibility at large venues or outdoor events.',
   },
   {
     question: 'Can we get numbers for class years?',
@@ -159,15 +163,16 @@ const faqs = [
       'Yes. We offer the full alphabet A–Z, numbers 0–9, and common symbols including the ampersand (&), hashtag (#), and heart (♥), so you can spell class years, dates, scores, and hashtags.',
   },
   {
-    question: 'How are the letters packaged and stored between events?',
+    question: 'How are the letters packaged?',
     answer:
-      'Letters ship in reusable foam-lined boxes designed for repeated use. Each letter is individually cushioned to prevent damage during transit and storage, and the boxes are built to last through many events.',
+      'Letters arrive pre-lit and ready to display. Optional foam-lined boxes are available for storage and transport between events, with each letter individually cushioned.',
   },
   {
     question: 'Are these suitable for long-term institutional use?',
     answer:
-      'Yes. They are built with powder-coated steel and LED bulbs designed for repeated setup and teardown. Universities, event companies, venues, athletic departments, and schools use them across dozens of events per year.',
+      'They are built with powder-coated steel and LED bulbs designed for repeated setup and teardown, which is why institutional buyers such as universities, schools, athletic departments, and venues purchase them instead of renting.',
   },
+
   {
     question: 'Are these the same as a school marquee sign or reader board?',
     answer:
@@ -245,8 +250,8 @@ const MarqueeLettersForSchoolsUniversities = () => {
                 </h1>
                 <p className="mb-4 text-lg leading-relaxed text-muted-foreground">
                   Buy your school name, team abbreviation, or class year once and use the same illuminated
-                  letters for graduation, admissions events, game days, homecoming, and campus programming —
-                  every year.
+                  letters again for graduation, admissions events, game days, homecoming, and campus
+                  programming.
                 </p>
                 <p className="mb-6 text-base leading-relaxed text-muted-foreground">
                   Vintage Marquee Lights builds and sells commercial-grade 36-inch and 48-inch freestanding
@@ -285,7 +290,7 @@ const MarqueeLettersForSchoolsUniversities = () => {
                   sizes="(max-width: 1024px) 100vw, 560px"
                 />
                 <figcaption className="px-4 py-3 text-sm text-muted-foreground">
-                  GENESEO KNIGHTS marquee letters set up outdoors on the SUNY Geneseo campus.
+                  GENESEO KNIGHTS marquee letters at Geneseo, a university in New York.
                 </figcaption>
               </figure>
             </div>
@@ -296,12 +301,12 @@ const MarqueeLettersForSchoolsUniversities = () => {
         <section className="px-4 py-12 md:py-16">
           <div className="mx-auto max-w-6xl">
             <h2 className="mb-3 text-center text-2xl font-bold text-foreground md:text-3xl">
-              Ownership beats renting the same letters again and again
+              Own the letters instead of renting them each time
             </h2>
             <p className="mx-auto mb-8 max-w-3xl text-center text-base leading-relaxed text-muted-foreground">
-              Most campuses do not hold one event a year. Between commencement, admissions, athletics, student
-              life, and alumni weekends, the same lettering gets used over and over — which is exactly why
-              schools buy their own set.
+              Campus calendars repeat. Commencement, admissions events, athletics, student life, and alumni
+              weekends can all use the same lettering, which is why buying a set can make more sense than
+              renting for each occasion.
             </p>
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
               {ownershipPoints.map((point) => (
@@ -324,11 +329,12 @@ const MarqueeLettersForSchoolsUniversities = () => {
               Where campuses use marquee letters
             </h2>
             <p className="mx-auto mb-8 max-w-3xl text-center text-base leading-relaxed text-muted-foreground">
-              One lettering set can serve the entire academic calendar.
+              Potential uses for one lettering set across the academic calendar.
             </p>
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
               {campusUseCases.map((item) => (
                 <div key={item.title} className="rounded-xl border border-border bg-card p-5 shadow-sm">
+                  <item.icon className="mb-3 h-6 w-6 text-primary" aria-hidden="true" />
                   <h3 className="mb-2 font-bold text-foreground">{item.title}</h3>
                   <p className="text-sm leading-relaxed text-muted-foreground">{item.description}</p>
                 </div>
@@ -366,67 +372,51 @@ const MarqueeLettersForSchoolsUniversities = () => {
           </div>
         </section>
 
-        {/* Photo proof */}
+        {/* What campuses get */}
         <section className="bg-muted/20 px-4 py-12 md:py-16">
           <div className="mx-auto max-w-6xl">
-            <Badge className="mb-3 bg-primary/10 text-primary hover:bg-primary/10">Campus Photo</Badge>
-            <h2 className="mb-6 text-2xl font-bold text-foreground md:text-3xl">
-              SUNY Geneseo: school name and mascot letters on campus
-            </h2>
-            <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
-              <div className="overflow-hidden rounded-2xl border border-border bg-card shadow-lg">
-                <PerformantImage
-                  src={geneseoImage}
-                  alt={geneseoAlt}
-                  className="aspect-[4/3] w-full object-cover"
-                  loading="lazy"
-                  sizes="(max-width: 1024px) 100vw, 640px"
-                />
-              </div>
-              <div>
-                <p className="mb-4 text-base leading-relaxed text-muted-foreground">
-                  GENESEO and KNIGHTS spelled in illuminated stand-up marquee letters, set up outdoors on the
-                  SUNY Geneseo campus in New York. A display like this can be arranged as one long line, split
-                  into two words, or broken apart for separate photo spots depending on the event.
+            <div className="mb-8 text-center">
+              <Badge className="mb-3 bg-primary/10 text-primary hover:bg-primary/10">How they work</Badge>
+              <h2 className="text-2xl font-bold text-foreground md:text-3xl">
+                Freestanding letters your campus arranges however you need
+              </h2>
+            </div>
+            <div className="grid gap-4 md:grid-cols-3">
+              <div className="rounded-2xl border border-border bg-card p-6 shadow-sm">
+                <Sparkles className="mb-3 h-7 w-7 text-primary" aria-hidden="true" />
+                <h3 className="mb-2 font-bold text-foreground">Arrange it your way</h3>
+                <p className="text-sm leading-relaxed text-muted-foreground">
+                  A lettering set can be arranged as one long line, split into separate words, or broken apart
+                  for individual photo spots, depending on the venue and the event.
                 </p>
-                <p className="text-base leading-relaxed text-muted-foreground">
-                  Because the letters are freestanding and self-supporting, campus staff can reposition them
-                  for commencement one weekend and a game-day tailgate the next.
+              </div>
+              <div className="rounded-2xl border border-border bg-card p-6 shadow-sm">
+                <Check className="mb-3 h-7 w-7 text-primary" aria-hidden="true" />
+                <h3 className="mb-2 font-bold text-foreground">Freestanding, no installation</h3>
+                <p className="text-sm leading-relaxed text-muted-foreground">
+                  Each letter is self-standing on its own base, so the set can be repositioned between indoor
+                  and outdoor campus locations without permanent mounting.
+                </p>
+              </div>
+              <div className="rounded-2xl border border-border bg-card p-6 shadow-sm">
+                <GraduationCap className="mb-3 h-7 w-7 text-primary" aria-hidden="true" />
+                <h3 className="mb-2 font-bold text-foreground">Spell what matters</h3>
+                <p className="text-sm leading-relaxed text-muted-foreground">
+                  School name, mascot, team abbreviation, class year, or a short phrase — built from the full
+                  alphabet, numbers, and symbols.
                 </p>
               </div>
             </div>
-
-            <div className="mt-10 grid gap-4 md:grid-cols-3">
-              <div className="overflow-hidden rounded-xl border border-border bg-card shadow-sm">
-                <PerformantImage
-                  src={graduationNumbers}
-                  alt="Illuminated marquee numbers spelling 1969 displayed at an event"
-                  className="aspect-[4/3] w-full object-cover"
-                  loading="lazy"
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                />
-              </div>
-              <div className="overflow-hidden rounded-xl border border-border bg-card shadow-sm">
-                <PerformantImage
-                  src={elev8Letters}
-                  alt="Stand-up marquee letters spelling ELEV8 at an event venue"
-                  className="aspect-[4/3] w-full object-cover"
-                  loading="lazy"
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                />
-              </div>
-              <div className="overflow-hidden rounded-xl border border-border bg-card shadow-sm">
-                <PerformantImage
-                  src={stageSetup}
-                  alt="Marquee letters displayed on a stage setup"
-                  className="aspect-[4/3] w-full object-cover"
-                  loading="lazy"
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                />
-              </div>
-            </div>
+            <p className="mt-8 text-center text-sm text-muted-foreground">
+              Not a permanent roadside reader board — these are freestanding illuminated event letters. See the{' '}
+              <Link to="/event-standup-signs" className="text-primary underline underline-offset-2">
+                event stand-up letters page
+              </Link>{' '}
+              for full specifications.
+            </p>
           </div>
         </section>
+
 
         {/* Process */}
         <section className="px-4 py-12 md:py-16">

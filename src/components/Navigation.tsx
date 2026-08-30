@@ -51,7 +51,7 @@ const Navigation = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-12">
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center gap-x-3 lg:gap-x-4 xl:gap-x-7 whitespace-nowrap text-sm xl:text-base">
             <Link to="/" className="text-foreground hover:text-primary font-medium">
               Home
             </Link>

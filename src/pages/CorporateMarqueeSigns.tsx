@@ -39,7 +39,7 @@ const corporateFaqs = [
   {
     question: 'Can we get a permanent sign for our office or lobby?',
     answer:
-      'Yes. Our wall-hanging marquee signs and custom logo signs are designed for permanent or semi-permanent installation in commercial spaces such as office lobbies, conference rooms, reception areas, and co-working spaces. We fabricate to your specifications and provide installation-ready hardware.',
+      'Yes. Our wall-hanging marquee signs and custom logo signs are designed for permanent or semi-permanent installation in commercial spaces such as office lobbies, conference rooms, reception areas, and co-working spaces. We fabricate to your specifications; final mounting is the customer\u2019s responsibility.',
   },
   {
     question: 'What sizes are the freestanding event letters?',
@@ -52,9 +52,9 @@ const corporateFaqs = [
       'Yes. We offer the full alphabet A–Z, numbers 0–9, and common symbols including the ampersand (&), hashtag (#), and heart (♥), so you can spell company initials, anniversary years, and event hashtags.',
   },
   {
-    question: 'How are event letters packaged for repeated use?',
+    question: 'How are event letters packaged?',
     answer:
-      'Letters ship in reusable foam-lined boxes designed for repeated use. Each letter is individually cushioned to prevent damage during transit and storage, and the boxes are built to last through many events.',
+      'Event letters arrive pre-lit and ready to display. Optional foam-lined boxes are available for storage and transport between events, with each letter individually cushioned.',
   },
   {
     question: 'Is financing available for corporate purchases?',
@@ -116,13 +116,13 @@ const productCards = [
       'Freestanding illuminated letters in 36-inch and 48-inch heights for conferences, award ceremonies, and branded activations. Letters, numbers, symbols, and 15-inch topper phrases available. No permanent installation required.',
     link: '/event-standup-signs',
     linkLabel: 'Explore event letters',
-    image: lexusHolidayPartyImage,
-    alt: 'LEXUS illuminated marquee letters styled with a silver and white balloon garland at a Lexus holiday party',
+    image: lexusLettersOfficeImage,
+    alt: 'Lexus Southern Area freestanding illuminated marquee letters set up for a company event',
   },
   {
     title: 'Custom Logo Signs',
     body:
-      'Custom fabricated metal signs built from your logo, wordmark, or artwork with optional illumination. Popular for trade show booths, lobby walls, and permanent brand installations. Layered metal construction adds depth and hand-finished detail.',
+      'Custom fabricated metal signs built from your logo, wordmark, or artwork with optional illumination. Popular for trade show booths, lobby walls, and brand installations. Layered metal construction adds depth and hand-finished detail.',
     link: '/3d-logos',
     linkLabel: 'Explore custom logo signs',
     image: cafeCollectiveAsset.url,
@@ -167,7 +167,7 @@ const processSteps = [
   {
     step: '4',
     title: 'Receive and reuse',
-    body: 'Event letters arrive pre-lit in foam-lined boxes. Installed signs ship with mounting hardware.',
+    body: 'Event letters arrive pre-lit and ready to display. Optional foam-lined storage boxes are available.',
   },
 ];
 
@@ -272,7 +272,7 @@ const CorporateMarqueeSigns = () => {
                   sizes="(max-width: 1024px) 100vw, 560px"
                 />
                 <figcaption className="px-4 py-3 text-sm text-muted-foreground">
-                  Lexus Southern Area used one set of freestanding letters across multiple company events.
+                  Lexus Southern Area used one set of freestanding letters for two different company events.
                 </figcaption>
               </figure>
             </div>
@@ -422,25 +422,14 @@ const CorporateMarqueeSigns = () => {
               </div>
             </div>
 
-            <div className="mt-8 grid gap-4 md:grid-cols-2">
-              <div className="overflow-hidden rounded-xl border border-border bg-card shadow-md">
-                <PerformantImage
-                  src={lexusHolidayPartyImage}
-                  alt="LEXUS marquee letters with silver and white balloons at a corporate holiday party"
-                  className="aspect-[4/3] w-full bg-muted/30 object-contain"
-                  loading="lazy"
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                />
-              </div>
-              <div className="overflow-hidden rounded-xl border border-border bg-card shadow-md">
-                <PerformantImage
-                  src={lexusLettersOfficeImage}
-                  alt="Lexus Southern Area freestanding marquee letters reused for another company event"
-                  className="aspect-[4/3] w-full bg-muted/30 object-contain"
-                  loading="lazy"
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                />
-              </div>
+            <div className="mt-8 mx-auto max-w-xl overflow-hidden rounded-xl border border-border bg-card shadow-md">
+              <PerformantImage
+                src={lexusLettersOfficeImage}
+                alt="Lexus Southern Area freestanding marquee letters set up for another company event"
+                className="aspect-[4/3] w-full bg-muted/30 object-contain"
+                loading="lazy"
+                sizes="(max-width: 768px) 100vw, 576px"
+              />
             </div>
           </div>
         </section>
