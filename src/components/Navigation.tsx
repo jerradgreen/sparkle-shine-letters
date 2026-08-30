@@ -167,6 +167,18 @@ const Navigation = () => {
                   <Link to="/quote/not-sure" className="text-foreground hover:text-primary font-medium py-1" onClick={() => setIsMobileMenuOpen(false)}>Not Sure</Link>
                 </div>
               </div>
+
+              <div className="py-2">
+                <div className="text-foreground font-medium mb-2">Who We Serve</div>
+                <div className="pl-4 flex flex-col space-y-2">
+                  <Link to="/marquee-letters-for-schools-universities" className="text-foreground hover:text-primary font-medium py-1" onClick={() => setIsMobileMenuOpen(false)}>Schools &amp; Universities</Link>
+                  <Link to="/corporate-marquee-signs" className="text-foreground hover:text-primary font-medium py-1" onClick={() => setIsMobileMenuOpen(false)}>Corporate &amp; Brands</Link>
+                  <Link to="/marquee-letters-for-event-pros" className="text-foreground hover:text-primary font-medium py-1" onClick={() => setIsMobileMenuOpen(false)}>Event Professionals</Link>
+                  <Link to="/rental-inventory" className="text-foreground hover:text-primary font-medium py-1" onClick={() => setIsMobileMenuOpen(false)}>Rental Businesses</Link>
+                </div>
+              </div>
+
+
               
               <Link to="/rental-inventory" className="text-foreground hover:text-primary font-medium py-2" onClick={() => setIsMobileMenuOpen(false)}>
                 Start Your Rental Biz
