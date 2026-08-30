@@ -3,7 +3,6 @@ import { LetterViewer3D } from '@/components/LetterViewer3D';
 import { MarqueeHeroSection } from '@/components/MarqueeHeroSection';
 import { HighlightsSection } from '@/components/HighlightsSection';
 import { FeatureGrid } from '@/components/templates/FeatureGrid';
-import { TestimonialSection } from '@/components/templates/TestimonialSection';
 import { GallerySection } from '@/components/templates/GallerySection';
 import { MarqueeVisualizer } from '@/components/MarqueeVisualizer';
 import { GetQuoteButton } from '@/components/GetQuoteButton';
@@ -80,7 +79,7 @@ const EventStandUpSigns = () => {
             Our freestanding marquee letters are purchased by <strong>universities, event companies, venues, athletic departments, corporate marketing teams, and schools</strong> that need reusable event signage — not a one-time decoration. Common use cases include graduations, brand activations, conferences, recruiting events, donor events, pep rallies, stage displays, and sponsor activations.
           </p>
           <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
-            Universities invest in marquee letters for campus-wide branding across graduations, athletic events, and recruiting. Event companies and venues purchase sets for repeated client deployments. Corporate teams buy their company name or recurring event title for year-after-year use. Schools purchase letters for graduations, pep rallies, and branded campus events. Owning your own letters ensures consistent branding, eliminates rental coordination, and allows you to deploy them whenever needed.
+            Universities can use marquee letters for campus-wide branding across graduations, athletic events, and recruiting. Event companies and venues can build a set for repeated client deployments. Corporate teams can spell their company name or a recurring event title. Schools can use letters for graduations, pep rallies, and branded campus events. Owning your own letters keeps branding consistent, removes rental coordination, and lets you deploy them whenever you need them.
           </p>
         </div>
       </section>
@@ -94,7 +93,7 @@ const EventStandUpSigns = () => {
             Built for Repeated Event Deployment
           </h2>
           <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
-            The 36-inch size is the most popular choice — easy to store, transport, and deploy across a full calendar of events. The 48-inch size is available for high-visibility venues such as auditoriums, outdoor stadiums, and convention halls. Every freestanding letter is built with powder-coated steel construction designed for repeated transport and setup across years of use. Universities, event companies, venues, athletic departments, and schools purchase these as long-term reusable event signage.
+            The 36-inch size is the most popular choice — easy to store, transport, and deploy across a full calendar of events. The 48-inch size is available for high-visibility venues such as auditoriums, outdoor stadiums, and convention halls. Every freestanding letter is built with powder-coated steel construction designed for repeated transport and setup. Universities, event companies, venues, athletic departments, and schools purchase these as reusable event signage they own.
           </p>
         </div>
       </section>
@@ -174,23 +173,14 @@ const EventStandUpSigns = () => {
             </Card>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-4 mb-10">
-            <div className="rounded-xl overflow-hidden shadow-md bg-card border border-border">
-              <PerformantImage
-                src={lexusHolidayPartyImage}
-                alt="LEXUS marquee letters with silver and white balloons at a corporate holiday party"
-                className="w-full aspect-[4/3] object-contain bg-muted/30"
-                loading="lazy"
-                sizes="(max-width: 768px) 100vw, 50vw"
-              />
-            </div>
+          <div className="mb-10 mx-auto max-w-xl">
             <div className="rounded-xl overflow-hidden shadow-md bg-card border border-border">
               <PerformantImage
                 src={lexusLettersOfficeImage}
                 alt="Lexus Southern Area freestanding marquee letters reused for another company event"
                 className="w-full aspect-[4/3] object-contain bg-muted/30"
                 loading="lazy"
-                sizes="(max-width: 768px) 100vw, 50vw"
+                sizes="(max-width: 768px) 100vw, 576px"
               />
             </div>
           </div>
@@ -216,9 +206,6 @@ const EventStandUpSigns = () => {
           </div>
         </div>
       </section>
-
-      <TestimonialSection config={standUpSignsConfig.testimonials} />
-      
 
       {/* Link to Homepage */}
       <section className="py-8 bg-muted/30">

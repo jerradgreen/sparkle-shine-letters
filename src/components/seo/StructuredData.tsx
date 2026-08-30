@@ -25,14 +25,14 @@ export const StructuredData = ({ config, canonicalUrl }: StructuredDataProps) =>
       "postalCode": config.business.location.zip,
       "addressCountry": "US"
     } : undefined,
-    "aggregateRating": {
+    "aggregateRating": config.testimonials.items.length > 0 ? {
       "@type": "AggregateRating",
       "ratingValue": "4.9",
       "reviewCount": config.testimonials.items.length.toString(),
       "bestRating": "5",
       "worstRating": "1"
-    },
-    "review": config.testimonials.items.map(testimonial => ({
+    } : undefined,
+    "review": config.testimonials.items.length > 0 ? config.testimonials.items.map(testimonial => ({
       "@type": "Review",
       "author": {
         "@type": "Person",
@@ -44,7 +44,7 @@ export const StructuredData = ({ config, canonicalUrl }: StructuredDataProps) =>
         "bestRating": "5"
       },
       "reviewBody": testimonial.content
-    }))
+    })) : undefined
   };
 
   const faqSchema = {

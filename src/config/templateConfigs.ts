@@ -359,6 +359,33 @@ export const wallHangingConfig: TemplateConfig = {
 };
 
 // Event Style Stand-Up Signs Template
+// Legacy homepage testimonial carousel entries (previously part of standUpSignsConfig).
+// Retained only for the homepage carousel; not rendered or emitted in schema on /event-standup-signs.
+export const legacyEventTestimonials = [
+  {
+    name: "Events",
+    role: "University of Texas",
+    content: "We purchased marquee letters for multiple university events, including graduation and athletic pep rallies. The quality is exceptional, and they've become a core part of our campus event branding.",
+    rating: 5,
+    image: testimonialRealistic1
+  },
+  {
+    name: "David K.",
+    role: "Corporate Event Manager",
+    content: "Perfect for our stage setup - everyone could see them and took pictures. The neon style was modern and professional.",
+    rating: 5,
+    image: testimonialDavidBrick
+  },
+  {
+    name: "LaKesha J.",
+    role: "Event Coordinator",
+    content: "Ready to set up right out of the boxes. Great quality and exactly what we needed for our venue and event.",
+    rating: 5,
+    image: testimonialLakeshaOutdoor,
+    imageStyle: { filter: 'sepia(0.2) contrast(0.9) brightness(1.05) saturate(0.85)' }
+  }
+];
+
 export const standUpSignsConfig: TemplateConfig = {
   pageTitle: "Commercial Stand-Up Marquee Letters for Sale | 36\" & 48\" Freestanding Letters",
   metaDescription: "Commercial-grade 36\" and 48\" freestanding marquee letters for sale. Built for repeated event use by universities, venues, event companies, brands, and schools for graduations, activations, and stage displays.",
@@ -380,7 +407,7 @@ export const standUpSignsConfig: TemplateConfig = {
     items: [
       {
         title: "Durable & Self-Standing",
-        description: "Powder-coated steel construction with a self-standing base design. Built for repeated setup and teardown across years of events.",
+        description: "Powder-coated steel construction with a self-standing base design. Built for repeated setup and teardown.",
         icon: "✓"
       },
       {
@@ -398,30 +425,7 @@ export const standUpSignsConfig: TemplateConfig = {
   
   testimonials: {
     title: "Event Success Stories",
-    items: [
-      {
-        name: "Events",
-        role: "University of Texas",
-        content: "We purchased marquee letters for multiple university events, including graduation and athletic pep rallies. The quality is exceptional, and they've become a core part of our campus event branding.",
-        rating: 5,
-        image: testimonialRealistic1
-      },
-      {
-        name: "David K.",
-        role: "Corporate Event Manager", 
-        content: "Perfect for our stage setup - everyone could see them and took pictures. The neon style was modern and professional.",
-        rating: 5,
-        image: testimonialDavidBrick
-      },
-      {
-        name: "LaKesha J.",
-        role: "Event Coordinator",
-        content: "Ready to set up right out of the boxes. Great quality and exactly what we needed for our venue and event.",
-        rating: 5,
-        image: testimonialLakeshaOutdoor,
-        imageStyle: { filter: 'sepia(0.2) contrast(0.9) brightness(1.05) saturate(0.85)' }
-      }
-    ]
+    items: []
   },
   
   pricing: {
@@ -448,7 +452,7 @@ export const standUpSignsConfig: TemplateConfig = {
     items: [
       {
         question: "What sizes are available?",
-        answer: "We offer 36\" and 48\" stand-up marquee letters. The 36\" size is the most popular — it's easier to store, transport, and set up, and ships faster. The 48\" size is available for buyers who need maximum visibility at large venues or outdoor events."
+        answer: "We offer 36\" and 48\" stand-up marquee letters. The 36\" size is the most popular — it's easier to store, transport, and set up. The 48\" size is available for buyers who need maximum visibility at large venues or outdoor events."
       },
       {
         question: "What's the difference between 36\" and 48\" letters?",
@@ -468,7 +472,7 @@ export const standUpSignsConfig: TemplateConfig = {
       },
       {
         question: "How are the letters packaged for shipping?",
-        answer: "Letters ship in reusable foam-lined boxes designed for repeated use. Each letter is individually cushioned to prevent damage during transit and storage. The boxes are built to last through many events — not just one shipment."
+        answer: "Letters ship in reusable foam-lined boxes designed for repeated use. Each letter is individually cushioned to prevent damage during transit and storage."
       },
       {
         question: "Where are these made?",
@@ -484,7 +488,7 @@ export const standUpSignsConfig: TemplateConfig = {
       },
       {
         question: "Are these letters suitable for long-term institutional use?",
-        answer: "Yes. These freestanding illuminated event letters are built with powder-coated steel and LED bulbs designed for repeated setup and teardown. Universities, event companies, venues, athletic departments, and schools use them across dozens of events per year. With foam-lined storage boxes, they transport safely and store compactly between deployments."
+        answer: "Yes. These freestanding illuminated event letters are built with powder-coated steel and LED bulbs designed for repeated setup and teardown, which is why institutional buyers such as universities, event companies, venues, athletic departments, and schools purchase them instead of renting. Optional foam-lined storage boxes are available for transport and storage between events."
       },
       {
         question: "Are these the same as school marquee signs or reader boards?",
@@ -492,7 +496,7 @@ export const standUpSignsConfig: TemplateConfig = {
       },
       {
         question: "Are these for rent or for purchase?",
-        answer: "These commercial stand-up marquee letters are sold for long-term ownership and repeated use. They are commonly purchased by universities, event companies, venues, brands, and schools that use them across multiple events each year."
+        answer: "These commercial stand-up marquee letters are sold for long-term ownership and repeated use. We do not rent event-style letters. They are purchased by universities, event companies, venues, brands, and schools that want their own reusable event signage."
       }
     ]
   },
