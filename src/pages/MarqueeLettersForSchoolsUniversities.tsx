@@ -371,67 +371,51 @@ const MarqueeLettersForSchoolsUniversities = () => {
           </div>
         </section>
 
-        {/* Photo proof */}
+        {/* What campuses get */}
         <section className="bg-muted/20 px-4 py-12 md:py-16">
           <div className="mx-auto max-w-6xl">
-            <Badge className="mb-3 bg-primary/10 text-primary hover:bg-primary/10">Campus Photo</Badge>
-            <h2 className="mb-6 text-2xl font-bold text-foreground md:text-3xl">
-              SUNY Geneseo: school name and mascot letters on campus
-            </h2>
-            <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
-              <div className="overflow-hidden rounded-2xl border border-border bg-card shadow-lg">
-                <PerformantImage
-                  src={geneseoImage}
-                  alt={geneseoAlt}
-                  className="aspect-[4/3] w-full object-cover"
-                  loading="lazy"
-                  sizes="(max-width: 1024px) 100vw, 640px"
-                />
-              </div>
-              <div>
-                <p className="mb-4 text-base leading-relaxed text-muted-foreground">
-                  GENESEO and KNIGHTS spelled in illuminated stand-up marquee letters, set up outdoors on the
-                  SUNY Geneseo campus in New York. A display like this can be arranged as one long line, split
-                  into two words, or broken apart for separate photo spots depending on the event.
+            <div className="mb-8 text-center">
+              <Badge className="mb-3 bg-primary/10 text-primary hover:bg-primary/10">How they work</Badge>
+              <h2 className="text-2xl font-bold text-foreground md:text-3xl">
+                Freestanding letters your campus arranges however you need
+              </h2>
+            </div>
+            <div className="grid gap-4 md:grid-cols-3">
+              <div className="rounded-2xl border border-border bg-card p-6 shadow-sm">
+                <Sparkles className="mb-3 h-7 w-7 text-primary" aria-hidden="true" />
+                <h3 className="mb-2 font-bold text-foreground">Arrange it your way</h3>
+                <p className="text-sm leading-relaxed text-muted-foreground">
+                  A lettering set can be arranged as one long line, split into separate words, or broken apart
+                  for individual photo spots, depending on the venue and the event.
                 </p>
-                <p className="text-base leading-relaxed text-muted-foreground">
-                  Because the letters are freestanding and self-supporting, campus staff can reposition them
-                  for commencement one weekend and a game-day tailgate the next.
+              </div>
+              <div className="rounded-2xl border border-border bg-card p-6 shadow-sm">
+                <Check className="mb-3 h-7 w-7 text-primary" aria-hidden="true" />
+                <h3 className="mb-2 font-bold text-foreground">Freestanding, no installation</h3>
+                <p className="text-sm leading-relaxed text-muted-foreground">
+                  Each letter is self-standing on its own base, so the set can be repositioned between indoor
+                  and outdoor campus locations without permanent mounting.
+                </p>
+              </div>
+              <div className="rounded-2xl border border-border bg-card p-6 shadow-sm">
+                <GraduationCap className="mb-3 h-7 w-7 text-primary" aria-hidden="true" />
+                <h3 className="mb-2 font-bold text-foreground">Spell what matters</h3>
+                <p className="text-sm leading-relaxed text-muted-foreground">
+                  School name, mascot, team abbreviation, class year, or a short phrase — built from the full
+                  alphabet, numbers, and symbols.
                 </p>
               </div>
             </div>
-
-            <div className="mt-10 grid gap-4 md:grid-cols-3">
-              <div className="overflow-hidden rounded-xl border border-border bg-card shadow-sm">
-                <PerformantImage
-                  src={graduationNumbers}
-                  alt="Illuminated marquee numbers spelling 1969 displayed at an event"
-                  className="aspect-[4/3] w-full object-cover"
-                  loading="lazy"
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                />
-              </div>
-              <div className="overflow-hidden rounded-xl border border-border bg-card shadow-sm">
-                <PerformantImage
-                  src={elev8Letters}
-                  alt="Stand-up marquee letters spelling ELEV8 at an event venue"
-                  className="aspect-[4/3] w-full object-cover"
-                  loading="lazy"
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                />
-              </div>
-              <div className="overflow-hidden rounded-xl border border-border bg-card shadow-sm">
-                <PerformantImage
-                  src={stageSetup}
-                  alt="Marquee letters displayed on a stage setup"
-                  className="aspect-[4/3] w-full object-cover"
-                  loading="lazy"
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                />
-              </div>
-            </div>
+            <p className="mt-8 text-center text-sm text-muted-foreground">
+              Not a permanent roadside reader board — these are freestanding illuminated event letters. See the{' '}
+              <Link to="/event-standup-signs" className="text-primary underline underline-offset-2">
+                event stand-up letters page
+              </Link>{' '}
+              for full specifications.
+            </p>
           </div>
         </section>
+
 
         {/* Process */}
         <section className="px-4 py-12 md:py-16">
