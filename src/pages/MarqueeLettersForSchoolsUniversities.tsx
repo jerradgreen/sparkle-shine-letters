@@ -18,57 +18,65 @@ const geneseoAlt = 'GENESEO KNIGHTS illuminated marquee letters outdoors at Gene
 
 const campusUseCases = [
   {
+    icon: GraduationCap,
     title: 'Graduation & Commencement',
     description:
       'Spell your school name, class year, or a short phrase for commencement stages, diploma photo lines, and senior celebrations.',
   },
   {
+    icon: Users,
     title: 'Admissions & Recruiting',
     description:
-      'Give accepted-student days, open houses, and campus tours a branded, photo-ready focal point prospective families remember.',
+      'Accepted-student days, open houses, and campus tours can use a branded, photo-ready focal point.',
   },
   {
+    icon: Trophy,
     title: 'Athletics & Game Days',
     description:
       'Team abbreviations, mascot names, and school letters for tailgates, pep rallies, tournaments, and arena entrances.',
   },
   {
+    icon: Users,
     title: 'Alumni & Homecoming',
     description:
-      'One lettering set can anchor homecoming weekend, reunion tents, and donor receptions year after year.',
+      'One lettering set can be used for homecoming weekend, reunion tents, and donor receptions.',
   },
   {
+    icon: Sparkles,
     title: 'Student Affairs & Campus Life',
     description:
       'Welcome week, orientation, residence life events, club fairs, and student programming displays.',
   },
   {
+    icon: Trophy,
     title: 'Awards & Recognition',
     description:
       'Honors convocations, faculty and staff recognition nights, scholarship banquets, and stage backdrops.',
   },
   {
+    icon: Building2,
     title: 'Fundraisers & Donor Events',
     description:
-      'Galas, giving-day activations, and campaign milestones where a lit display draws people in for photos.',
+      'Galas, giving-day activations, and campaign milestones where a lit display can anchor photos.',
   },
   {
+    icon: Package,
     title: 'Conferences & Recurring Events',
     description:
-      'Symposiums, camps, summer programs, and any event on the academic calendar that repeats each year.',
+      'Symposiums, camps, summer programs, and other events that repeat on the academic calendar.',
   },
 ];
 
 const ownershipPoints = [
   {
-    title: 'Buy once, deploy all year',
+    title: 'Buy once, use it again',
     description:
-      'Your letters belong to the campus. Use them for graduation in the spring, orientation in the fall, and every event in between without booking anything.',
+      'The letters belong to the campus, so the same set can be used for events across the academic year without booking anything.',
   },
   {
     title: 'No rental coordination',
     description:
-      'No availability calls, delivery windows, or per-event contracts. Staff pull the letters from storage and set them up.',
+      'No availability calls, delivery windows, or per-event contracts — the set is already on campus when you need it.',
   },
   {
     title: 'Consistent brand presence',
@@ -78,7 +86,7 @@ const ownershipPoints = [
   {
     title: 'Built for repeated setup',
     description:
-      'Powder-coated steel construction with a self-standing base, designed for repeated setup and teardown across years of events.',
+      'Powder-coated steel construction with a self-standing base, designed for repeated setup and teardown.',
   },
 ];
 
@@ -86,7 +94,7 @@ const productFit = [
   {
     title: '36-inch letters',
     body:
-      'The standard and most popular size. Easier to store, transport, and set up, and it ships faster — a good fit for most indoor venues, stages, and campus event spaces.',
+      'The standard and most popular size — easier to store, transport, and set up, and a good fit for most indoor venues, stages, and campus event spaces.',
   },
   {
     title: '48-inch letters',
@@ -101,7 +109,7 @@ const productFit = [
   {
     title: '15-inch topper phrases',
     body:
-      'Toppers like THE, CLASS OF, and MR&MRS are pre-mounted on a shared base and sit on top of 36-inch letters for layered displays.',
+      'Topper phrases such as CLASS OF are pre-mounted on a shared base and sit on top of 36-inch letters for layered displays. Additional topper phrases are available — ask when you request a quote.',
   },
   {
     title: 'Lighting options',
@@ -111,7 +119,7 @@ const productFit = [
   {
     title: 'Storage boxes & display stands',
     body:
-      'Letters ship in reusable foam-lined boxes built for repeated transport and storage. Optional double-row display stands hold two rows of letters side by side.',
+      'Optional foam-lined boxes are available for storage and transport between events. Optional double-row display stands hold two rows of letters side by side.',
   },
 ];
 
