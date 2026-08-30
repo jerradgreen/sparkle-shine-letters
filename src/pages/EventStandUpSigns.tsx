@@ -93,7 +93,7 @@ const EventStandUpSigns = () => {
             Built for Repeated Event Deployment
           </h2>
           <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
-            The 36-inch size is the most popular choice — easy to store, transport, and deploy across a full calendar of events. The 48-inch size is available for high-visibility venues such as auditoriums, outdoor stadiums, and convention halls. Every freestanding letter is built with powder-coated steel construction designed for repeated transport and setup. Universities, event companies, venues, athletic departments, and schools purchase these as reusable event signage they own.
+            The 36-inch size is the most popular choice — easy to store, transport, and deploy across a full calendar of events. The 48-inch size is available for high-visibility venues such as auditoriums, outdoor stadiums, and convention halls. Every freestanding letter is built with powder-coated steel construction designed for repeated transport and setup across years of use. Universities, event companies, venues, athletic departments, and schools purchase these as reusable event signage they own.
           </p>
         </div>
       </section>

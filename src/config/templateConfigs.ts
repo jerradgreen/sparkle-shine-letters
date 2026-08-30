@@ -380,7 +380,7 @@ export const standUpSignsConfig: TemplateConfig = {
     items: [
       {
         title: "Durable & Self-Standing",
-        description: "Powder-coated steel construction with a self-standing base design. Built for repeated setup and teardown.",
+        description: "Powder-coated steel construction with a self-standing base design. Built for repeated setup and teardown across years of events.",
         icon: "✓"
       },
       {
@@ -425,7 +425,7 @@ export const standUpSignsConfig: TemplateConfig = {
     items: [
       {
         question: "What sizes are available?",
-        answer: "We offer 36\" and 48\" stand-up marquee letters. The 36\" size is the most popular — it's easier to store, transport, and set up. The 48\" size is available for buyers who need maximum visibility at large venues or outdoor events."
+        answer: "We offer 36\" and 48\" stand-up marquee letters. The 36\" size is the most popular — it's easier to store, transport, and set up, and ships faster. The 48\" size is available for buyers who need maximum visibility at large venues or outdoor events."
       },
       {
         question: "What's the difference between 36\" and 48\" letters?",
@@ -445,7 +445,7 @@ export const standUpSignsConfig: TemplateConfig = {
       },
       {
         question: "How are the letters packaged for shipping?",
-        answer: "Letters ship in reusable foam-lined boxes designed for repeated use. Each letter is individually cushioned to prevent damage during transit and storage."
+        answer: "Letters ship in reusable foam-lined boxes designed for repeated use. Each letter is individually cushioned to prevent damage during transit and storage. The boxes are built to last through many events — not just one shipment."
       },
       {
         question: "Where are these made?",
@@ -461,7 +461,7 @@ export const standUpSignsConfig: TemplateConfig = {
       },
       {
         question: "Are these letters suitable for long-term institutional use?",
-        answer: "Yes. These freestanding illuminated event letters are built with powder-coated steel and LED bulbs designed for repeated setup and teardown, which is why institutional buyers such as universities, event companies, venues, athletic departments, and schools purchase them instead of renting. Optional foam-lined storage boxes are available for transport and storage between events."
+        answer: "Yes. These freestanding illuminated event letters are built with powder-coated steel and LED bulbs designed for repeated setup and teardown, which is why institutional buyers such as universities, event companies, venues, athletic departments, and schools purchase them instead of renting. Designed for organizations that plan to use their letters repeatedly across campus, company, and community events. Optional foam-lined storage boxes are available for transport and storage between events."
       },
       {
         question: "Are these the same as school marquee signs or reader boards?",
