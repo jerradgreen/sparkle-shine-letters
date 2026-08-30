@@ -40,7 +40,7 @@ const homepageReviews = [
     role: "C&D Marquees and Event Rentals",
   },
   ...wallHangingConfig.testimonials.items,
-  ...standUpSignsConfig.testimonials.items,
+  
   ...foodTruckSignsConfig.testimonials.items,
   ...logoSignsConfig.testimonials.items,
 ];
