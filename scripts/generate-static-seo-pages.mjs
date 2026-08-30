@@ -147,6 +147,25 @@ const routes = [
     keywords:
       'corporate marquee letters, custom business signs, custom marquee signs, custom logo signs, corporate event letters, trade show signs, lobby signs',
     h1: 'Corporate Marquee Letters & Custom Business Signs',
+    breadcrumbName: 'Corporate Marquee Signs',
+    faqs: [
+      [
+        'Are these corporate marquee letters for rent or for purchase?',
+        'Vintage Marquee Lights sells the letters for long-term ownership and repeated use. Corporate marketing teams commonly buy their company name, initials, or a recurring event title and reuse the same set.',
+      ],
+      [
+        'Can a sign display our company logo or brand name?',
+        'Yes. We fabricate custom logo signs and custom lettering that can reproduce your brand mark, company name, or a custom shape in any font, for trade show booths, conference backdrops, lobby installations, and branded event activations.',
+      ],
+      [
+        'What sizes are the freestanding event letters?',
+        'We offer 36-inch and 48-inch stand-up marquee letters. The 36-inch size is the most popular because it is easier to store, transport, and set up. The 48-inch size is available when you need maximum visibility at large venues or outdoor events.',
+      ],
+      [
+        'Is financing available for corporate purchases?',
+        'Yes. Financing is available for qualified buyers through APPROVE, an equipment-financing platform that connects applicants with a network of lenders. Financing and terms are subject to lender approval and vary.',
+      ],
+    ],
     intro:
       'Vintage Marquee Lights builds and sells reusable freestanding marquee letters for conferences, award ceremonies, brand activations, and company events, plus custom marquee signs, custom business signs, and custom logo signs for lobbies, trade show booths, restaurants, retail, and branded spaces. Everything is built to order and sold for ownership, with financing available for qualified buyers through APPROVE.',
     links: [
@@ -165,6 +184,25 @@ const routes = [
     keywords:
       'marquee letters for schools, marquee letters for universities, custom marquee letters, graduation marquee letters, college marquee letters, campus event signage, school event letters',
     h1: 'Custom Marquee Letters Schools & Universities Own and Reuse',
+    breadcrumbName: 'Marquee Letters for Schools & Universities',
+    faqs: [
+      [
+        'Do schools rent these letters or buy them?',
+        'Vintage Marquee Lights sells the letters for long-term ownership and repeated use. We do not rent event-style letters. Universities, schools, athletic departments, and venues purchase a set so they can reuse it for their own events.',
+      ],
+      [
+        'What sizes should a campus buy?',
+        'We offer 36-inch and 48-inch stand-up marquee letters. The 36-inch size is the most popular because it is easier to store, transport, and set up. The 48-inch size is available for buyers who need maximum visibility at large venues or outdoor events.',
+      ],
+      [
+        'Can we get numbers for class years?',
+        'Yes. We offer the full alphabet A-Z, numbers 0-9, and common symbols including the ampersand, hashtag, and heart, so you can spell class years, dates, scores, and hashtags.',
+      ],
+      [
+        'Are these the same as a school marquee sign or reader board?',
+        'No. These are freestanding illuminated event letters used for graduations, stage backdrops, branding, and promotional displays. They are not permanent roadside school reader boards or changeable message-center signs.',
+      ],
+    ],
     intro:
       'Vintage Marquee Lights builds and sells commercial-grade 36-inch and 48-inch freestanding marquee letters that universities, colleges, and K-12 schools purchase and own for graduation and commencement, admissions and recruiting events, athletics and game days, alumni and homecoming weekends, student affairs programming, award ceremonies, fundraisers, and recurring campus events. These letters are sold for ownership and repeated use, not rented.',
     links: [
@@ -465,6 +503,31 @@ function buildHtml(baseHtml, route) {
   html = replaceOrInsertHead(html, /<meta[^>]+name=["']twitter:title["'][^>]*>/i, `<meta name="twitter:title" content="${escapeHtml(route.title)}">`);
   html = replaceOrInsertHead(html, /<meta[^>]+name=["']twitter:description["'][^>]*>/i, `<meta name="twitter:description" content="${escapeHtml(route.description)}">`);
   html = replaceOrInsertHead(html, /<meta[^>]+name=["']robots["'][^>]*>/i, '<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">');
+
+  const graph = [];
+  if (route.breadcrumbName) {
+    graph.push({
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: `${siteOrigin}/` },
+        { '@type': 'ListItem', position: 2, name: route.breadcrumbName, item: canonical },
+      ],
+    });
+  }
+  if (route.faqs && route.faqs.length > 0) {
+    graph.push({
+      '@type': 'FAQPage',
+      mainEntity: route.faqs.map(([question, answer]) => ({
+        '@type': 'Question',
+        name: question,
+        acceptedAnswer: { '@type': 'Answer', text: answer },
+      })),
+    });
+  }
+  if (graph.length > 0) {
+    const jsonLd = JSON.stringify({ '@context': 'https://schema.org', '@graph': graph }).replaceAll('<', '\\u003c');
+    html = html.replace('</head>', `  <script type="application/ld+json">${jsonLd}</script>\n</head>`);
+  }
 
   html = html.replace(/<div id="root"><\/div>/, rootFallback(route));
 
