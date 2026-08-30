@@ -329,11 +329,12 @@ const MarqueeLettersForSchoolsUniversities = () => {
               Where campuses use marquee letters
             </h2>
             <p className="mx-auto mb-8 max-w-3xl text-center text-base leading-relaxed text-muted-foreground">
-              One lettering set can serve the entire academic calendar.
+              Potential uses for one lettering set across the academic calendar.
             </p>
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
               {campusUseCases.map((item) => (
                 <div key={item.title} className="rounded-xl border border-border bg-card p-5 shadow-sm">
+                  <item.icon className="mb-3 h-6 w-6 text-primary" aria-hidden="true" />
                   <h3 className="mb-2 font-bold text-foreground">{item.title}</h3>
                   <p className="text-sm leading-relaxed text-muted-foreground">{item.description}</p>
                 </div>
