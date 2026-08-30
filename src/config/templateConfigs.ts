@@ -445,7 +445,7 @@ export const standUpSignsConfig: TemplateConfig = {
       },
       {
         question: "How are the letters packaged for shipping?",
-        answer: "Letters ship in reusable foam-lined boxes designed for repeated use. Each letter is individually cushioned to prevent damage during transit and storage."
+        answer: "Letters ship in reusable foam-lined boxes designed for repeated use. Each letter is individually cushioned to prevent damage during transit and storage. The boxes are built to last through many events — not just one shipment."
       },
       {
         question: "Where are these made?",
