@@ -461,7 +461,7 @@ export const standUpSignsConfig: TemplateConfig = {
       },
       {
         question: "Are these letters suitable for long-term institutional use?",
-        answer: "Yes. These freestanding illuminated event letters are built with powder-coated steel and LED bulbs designed for repeated setup and teardown, which is why institutional buyers such as universities, event companies, venues, athletic departments, and schools purchase them instead of renting. Optional foam-lined storage boxes are available for transport and storage between events."
+        answer: "Yes. These freestanding illuminated event letters are built with powder-coated steel and LED bulbs designed for repeated setup and teardown, which is why institutional buyers such as universities, event companies, venues, athletic departments, and schools purchase them instead of renting. Designed for organizations that plan to use their letters repeatedly across campus, company, and community events. Optional foam-lined storage boxes are available for transport and storage between events."
       },
       {
         question: "Are these the same as school marquee signs or reader boards?",
