@@ -39,7 +39,7 @@ const corporateFaqs = [
   {
     question: 'Can we get a permanent sign for our office or lobby?',
     answer:
-      'Yes. Our wall-hanging marquee signs and custom logo signs are designed for permanent or semi-permanent installation in commercial spaces such as office lobbies, conference rooms, reception areas, and co-working spaces. We fabricate to your specifications and provide installation-ready hardware.',
+      'Yes. Our wall-hanging marquee signs and custom logo signs are designed for permanent or semi-permanent installation in commercial spaces such as office lobbies, conference rooms, reception areas, and co-working spaces. We fabricate to your specifications; final mounting is the customer\u2019s responsibility.',
   },
   {
     question: 'What sizes are the freestanding event letters?',
@@ -52,9 +52,9 @@ const corporateFaqs = [
       'Yes. We offer the full alphabet A–Z, numbers 0–9, and common symbols including the ampersand (&), hashtag (#), and heart (♥), so you can spell company initials, anniversary years, and event hashtags.',
   },
   {
-    question: 'How are event letters packaged for repeated use?',
+    question: 'How are event letters packaged?',
     answer:
-      'Letters ship in reusable foam-lined boxes designed for repeated use. Each letter is individually cushioned to prevent damage during transit and storage, and the boxes are built to last through many events.',
+      'Event letters arrive pre-lit and ready to display. Optional foam-lined boxes are available for storage and transport between events, with each letter individually cushioned.',
   },
   {
     question: 'Is financing available for corporate purchases?',
