@@ -380,7 +380,7 @@ export const standUpSignsConfig: TemplateConfig = {
     items: [
       {
         title: "Durable & Self-Standing",
-        description: "Powder-coated steel construction with a self-standing base design. Built for repeated setup and teardown.",
+        description: "Powder-coated steel construction with a self-standing base design. Built for repeated setup and teardown across years of events.",
         icon: "✓"
       },
       {
