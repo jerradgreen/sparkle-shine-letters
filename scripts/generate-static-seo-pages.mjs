@@ -161,7 +161,7 @@ const routes = [
     path: '/marquee-letters-for-schools-universities',
     title: 'Marquee Letters for Schools & Universities | Vintage Marquee Lights',
     description:
-      'Custom marquee letters schools and universities buy and own for graduations, admissions events, game days, homecoming, and recurring campus events. 36" and 48" freestanding letters built for years of reuse.',
+      'Custom marquee letters schools and universities buy and own for graduations, admissions events, game days, homecoming, and recurring campus events. 36" and 48" freestanding letters built for repeated setup and teardown.',
     keywords:
       'marquee letters for schools, marquee letters for universities, custom marquee letters, graduation marquee letters, college marquee letters, campus event signage, school event letters',
     h1: 'Custom Marquee Letters Schools & Universities Own and Reuse',
