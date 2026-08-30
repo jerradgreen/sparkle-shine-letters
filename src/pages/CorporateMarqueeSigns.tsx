@@ -116,13 +116,13 @@ const productCards = [
       'Freestanding illuminated letters in 36-inch and 48-inch heights for conferences, award ceremonies, and branded activations. Letters, numbers, symbols, and 15-inch topper phrases available. No permanent installation required.',
     link: '/event-standup-signs',
     linkLabel: 'Explore event letters',
-    image: lexusHolidayPartyImage,
-    alt: 'LEXUS illuminated marquee letters styled with a silver and white balloon garland at a Lexus holiday party',
+    image: lexusLettersOfficeImage,
+    alt: 'Lexus Southern Area freestanding illuminated marquee letters set up for a company event',
   },
   {
     title: 'Custom Logo Signs',
     body:
-      'Custom fabricated metal signs built from your logo, wordmark, or artwork with optional illumination. Popular for trade show booths, lobby walls, and permanent brand installations. Layered metal construction adds depth and hand-finished detail.',
+      'Custom fabricated metal signs built from your logo, wordmark, or artwork with optional illumination. Popular for trade show booths, lobby walls, and brand installations. Layered metal construction adds depth and hand-finished detail.',
     link: '/3d-logos',
     linkLabel: 'Explore custom logo signs',
     image: cafeCollectiveAsset.url,
