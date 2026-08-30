@@ -422,25 +422,14 @@ const CorporateMarqueeSigns = () => {
               </div>
             </div>
 
-            <div className="mt-8 grid gap-4 md:grid-cols-2">
-              <div className="overflow-hidden rounded-xl border border-border bg-card shadow-md">
-                <PerformantImage
-                  src={lexusHolidayPartyImage}
-                  alt="LEXUS marquee letters with silver and white balloons at a corporate holiday party"
-                  className="aspect-[4/3] w-full bg-muted/30 object-contain"
-                  loading="lazy"
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                />
-              </div>
-              <div className="overflow-hidden rounded-xl border border-border bg-card shadow-md">
-                <PerformantImage
-                  src={lexusLettersOfficeImage}
-                  alt="Lexus Southern Area freestanding marquee letters reused for another company event"
-                  className="aspect-[4/3] w-full bg-muted/30 object-contain"
-                  loading="lazy"
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                />
-              </div>
+            <div className="mt-8 mx-auto max-w-xl overflow-hidden rounded-xl border border-border bg-card shadow-md">
+              <PerformantImage
+                src={lexusLettersOfficeImage}
+                alt="Lexus Southern Area freestanding marquee letters set up for another company event"
+                className="aspect-[4/3] w-full bg-muted/30 object-contain"
+                loading="lazy"
+                sizes="(max-width: 768px) 100vw, 576px"
+              />
             </div>
           </div>
         </section>
