@@ -1,9 +1,6 @@
 import { TemplateConfig } from '@/types/template';
 
 // Import testimonial images
-import testimonialRealistic1 from '@/assets/testimonial-realistic-1.jpg';
-import testimonialDavidBrick from '@/assets/testimonial-david-brick.jpg';
-import testimonialLakeshaOutdoor from '@/assets/testimonial-lakesha-outdoor.jpg';
 import testimonialIndoorWoman from '@/assets/testimonial-indoor-woman.jpg';
 import testimonialOutdoorMan from '@/assets/testimonial-outdoor-man.jpg';
 import testimonialChef from '@/assets/testimonial-chef-restaurant.jpg';
