@@ -55,6 +55,7 @@ const Press = lazy(() => import("./pages/Press"));
 const HowItWorks = lazy(() => import("./pages/HowItWorks"));
 const MarqueeLettersForEventPros = lazy(() => import("./pages/MarqueeLettersForEventPros"));
 const CustomMarqueeSigns = lazy(() => import("./pages/CustomMarqueeSigns"));
+const MarqueeLettersForSchoolsUniversities = lazy(() => import("./pages/MarqueeLettersForSchoolsUniversities"));
 
 const queryClient = new QueryClient();
 
@@ -162,6 +163,7 @@ const RouterContent = () => {
           <Route path="/how-it-works" element={<HowItWorks />} />
           <Route path="/marquee-letters-for-event-pros" element={<MarqueeLettersForEventPros />} />
           <Route path="/custom-marquee-signs" element={<CustomMarqueeSigns />} />
+          <Route path="/marquee-letters-for-schools-universities" element={<MarqueeLettersForSchoolsUniversities />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>

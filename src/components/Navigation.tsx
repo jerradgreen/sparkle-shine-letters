@@ -84,10 +84,31 @@ const Navigation = () => {
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
-            
+
+            <DropdownMenu>
+              <DropdownMenuTrigger className="text-foreground hover:text-primary font-medium flex items-center gap-1">
+                Who We Serve <ChevronDown className="h-4 w-4" />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="bg-background">
+                <DropdownMenuItem asChild>
+                  <Link to="/marquee-letters-for-schools-universities" className="cursor-pointer">Schools &amp; Universities</Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link to="/corporate-marquee-signs" className="cursor-pointer">Corporate &amp; Brands</Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link to="/marquee-letters-for-event-pros" className="cursor-pointer">Event Professionals</Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link to="/rental-inventory" className="cursor-pointer">Rental Businesses</Link>
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
+
             <Link to="/rental-inventory" className="text-foreground hover:text-primary font-medium">
               Start Your Rental Biz
             </Link>
+
             
             <Link to="/event-standup-signs" className="text-foreground hover:text-primary font-medium">
               36/48" Stand-Up Letters
@@ -146,6 +167,18 @@ const Navigation = () => {
                   <Link to="/quote/not-sure" className="text-foreground hover:text-primary font-medium py-1" onClick={() => setIsMobileMenuOpen(false)}>Not Sure</Link>
                 </div>
               </div>
+
+              <div className="py-2">
+                <div className="text-foreground font-medium mb-2">Who We Serve</div>
+                <div className="pl-4 flex flex-col space-y-2">
+                  <Link to="/marquee-letters-for-schools-universities" className="text-foreground hover:text-primary font-medium py-1" onClick={() => setIsMobileMenuOpen(false)}>Schools &amp; Universities</Link>
+                  <Link to="/corporate-marquee-signs" className="text-foreground hover:text-primary font-medium py-1" onClick={() => setIsMobileMenuOpen(false)}>Corporate &amp; Brands</Link>
+                  <Link to="/marquee-letters-for-event-pros" className="text-foreground hover:text-primary font-medium py-1" onClick={() => setIsMobileMenuOpen(false)}>Event Professionals</Link>
+                  <Link to="/rental-inventory" className="text-foreground hover:text-primary font-medium py-1" onClick={() => setIsMobileMenuOpen(false)}>Rental Businesses</Link>
+                </div>
+              </div>
+
+
               
               <Link to="/rental-inventory" className="text-foreground hover:text-primary font-medium py-2" onClick={() => setIsMobileMenuOpen(false)}>
                 Start Your Rental Biz

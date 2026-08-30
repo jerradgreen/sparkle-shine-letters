@@ -141,20 +141,40 @@ const routes = [
   },
   {
     path: '/corporate-marquee-signs',
-    title: 'Corporate Marquee Letters & Event Signage | Vintage Marquee Lights',
+    title: 'Corporate Marquee Letters & Custom Business Signs | Vintage Marquee Lights',
     description:
-      'Commercial-grade corporate marquee letters and branded illuminated signs for conferences, brand activations, trade shows, and corporate events.',
+      'Custom marquee letters and custom business signs companies buy and own — reusable event letters for conferences, awards and activations, plus custom logo signs for lobbies, trade shows and branded spaces.',
     keywords:
-      'corporate marquee letters, corporate event signage, conference signs, brand activation signs, illuminated corporate signs, trade show signs',
-    h1: 'Corporate Marquee Letters and Branded Event Signage',
+      'corporate marquee letters, custom business signs, custom marquee signs, custom logo signs, corporate event letters, trade show signs, lobby signs',
+    h1: 'Corporate Marquee Letters & Custom Business Signs',
     intro:
-      'Vintage Marquee Lights manufactures commercial-grade marquee letters and branded illuminated signs used at corporate events, conferences, brand activations, product launches, and trade show installations.',
+      'Vintage Marquee Lights builds and sells reusable freestanding marquee letters for conferences, award ceremonies, brand activations, and company events, plus custom marquee signs, custom business signs, and custom logo signs for lobbies, trade show booths, restaurants, retail, and branded spaces. Everything is built to order and sold for ownership, with financing available for qualified buyers through APPROVE.',
     links: [
+      ['Request event letter pricing', '/quote/event-standup'],
       ['See 36-inch and 48-inch event marquee letters', '/event-standup-signs'],
-      ['View 3D logo signs', '/3d-logos'],
+      ['Request a custom sign quote', '/quote/3d-logos'],
+      ['View custom logo signs', '/3d-logos'],
       ['Marquee letters for event pros', '/marquee-letters-for-event-pros'],
     ],
   },
+  {
+    path: '/marquee-letters-for-schools-universities',
+    title: 'Marquee Letters for Schools & Universities | Vintage Marquee Lights',
+    description:
+      'Custom marquee letters schools and universities buy and own for graduations, admissions events, game days, homecoming, and recurring campus events. 36" and 48" freestanding letters built for years of reuse.',
+    keywords:
+      'marquee letters for schools, marquee letters for universities, custom marquee letters, graduation marquee letters, college marquee letters, campus event signage, school event letters',
+    h1: 'Custom Marquee Letters Schools & Universities Own and Reuse',
+    intro:
+      'Vintage Marquee Lights builds and sells commercial-grade 36-inch and 48-inch freestanding marquee letters that universities, colleges, and K-12 schools purchase and own for graduation and commencement, admissions and recruiting events, athletics and game days, alumni and homecoming weekends, student affairs programming, award ceremonies, fundraisers, and recurring campus events. These letters are sold for ownership and repeated use, not rented.',
+    links: [
+      ['Request campus pricing', '/quote/event-standup'],
+      ['See 36-inch and 48-inch event marquee letters', '/event-standup-signs'],
+      ['Why schools buy commercial-grade marquee letters', '/blog/why-schools-buy-commercial-marquee-letters'],
+      ['Universities and teams marquee letter branding', '/blog/universities-teams-marquee-letters-branding'],
+    ],
+  },
+
   {
     path: '/marquee-letters-for-event-pros',
     title: 'Marquee Letters for Event Pros | Vintage Marquee Lights',
