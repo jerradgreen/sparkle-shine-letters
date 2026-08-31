@@ -48,6 +48,8 @@ import foodTruckCoffeeBuns from '@/assets/food-truck-coffee-buns.jpg';
 import foodTruckDonuts from '@/assets/food-truck-donuts.jpg';
 import foodTruckSmokehouse from '@/assets/food-truck-smokehouse.jpg';
 import foodTruckSteakstop from '@/assets/food-truck-steakstop.jpg';
+import charmBarTrailerV2 from '@/assets/custom-signs/charm-bar-mobile-trailer-sign-v2.jpg.asset.json';
+import steakStopTruckV2 from '@/assets/custom-signs/steak-stop-food-truck-sign-v2.jpg.asset.json';
 
 // 3D Layered Signs Template
 export const layeredSignsConfig: TemplateConfig = {
