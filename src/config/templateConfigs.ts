@@ -43,11 +43,11 @@ const marquee1 = 'https://cdn.shopify.com/s/files/1/1403/8315/files/1_lights_on_
 const marquee2 = 'https://cdn.shopify.com/s/files/1/1403/8315/files/2_lights_on_studio.webp';
 import foodTruckBarMonte from '@/assets/food-truck-bar-monte.jpg';
 import foodTruckBar from '@/assets/food-truck-bar.jpg';
-import foodTruckHouseFood from '@/assets/food-truck-house-food.jpg';
 import foodTruckCoffeeBuns from '@/assets/food-truck-coffee-buns.jpg';
 import foodTruckDonuts from '@/assets/food-truck-donuts.jpg';
 import foodTruckSmokehouse from '@/assets/food-truck-smokehouse.jpg';
-import foodTruckSteakstop from '@/assets/food-truck-steakstop.jpg';
+import charmBarTrailerV2 from '@/assets/custom-signs/charm-bar-mobile-trailer-sign-v2.jpg.asset.json';
+import steakStopTruckV2 from '@/assets/custom-signs/steak-stop-food-truck-sign-v2.jpg.asset.json';
 
 // 3D Layered Signs Template
 export const layeredSignsConfig: TemplateConfig = {
@@ -584,12 +584,12 @@ export const foodTruckSignsConfig: TemplateConfig = {
     title: "Vendor Sign Gallery",
     subtitle: "",
     images: [
+      { src: charmBarTrailerV2.url, alt: "Charm Bar mobile trailer with illuminated marquee sign" },
+      { src: steakStopTruckV2.url, alt: "Steak Stop food truck with illuminated marquee sign" },
       { src: foodTruckBar, alt: "BAR illuminated marquee sign at food venue" },
-      { src: foodTruckHouseFood, alt: "House Food & Booze turquoise marquee sign on food truck" },
       { src: foodTruckCoffeeBuns, alt: "Coffee & Buns illuminated marquee letters" },
       { src: foodTruckDonuts, alt: "Let's Eat Donuts marquee sign on orange food truck" },
-      { src: foodTruckSmokehouse, alt: "Smokehouse red and yellow gradient marquee letters" },
-      { src: foodTruckSteakstop, alt: "Steak Stop large red marquee letters" }
+      { src: foodTruckSmokehouse, alt: "Smokehouse red and yellow gradient marquee letters" }
     ]
   },
   
