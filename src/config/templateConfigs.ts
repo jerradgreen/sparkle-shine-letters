@@ -43,11 +43,9 @@ const marquee1 = 'https://cdn.shopify.com/s/files/1/1403/8315/files/1_lights_on_
 const marquee2 = 'https://cdn.shopify.com/s/files/1/1403/8315/files/2_lights_on_studio.webp';
 import foodTruckBarMonte from '@/assets/food-truck-bar-monte.jpg';
 import foodTruckBar from '@/assets/food-truck-bar.jpg';
-import foodTruckHouseFood from '@/assets/food-truck-house-food.jpg';
 import foodTruckCoffeeBuns from '@/assets/food-truck-coffee-buns.jpg';
 import foodTruckDonuts from '@/assets/food-truck-donuts.jpg';
 import foodTruckSmokehouse from '@/assets/food-truck-smokehouse.jpg';
-import foodTruckSteakstop from '@/assets/food-truck-steakstop.jpg';
 import charmBarTrailerV2 from '@/assets/custom-signs/charm-bar-mobile-trailer-sign-v2.jpg.asset.json';
 import steakStopTruckV2 from '@/assets/custom-signs/steak-stop-food-truck-sign-v2.jpg.asset.json';
 
