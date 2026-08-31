@@ -586,12 +586,12 @@ export const foodTruckSignsConfig: TemplateConfig = {
     title: "Vendor Sign Gallery",
     subtitle: "",
     images: [
+      { src: charmBarTrailerV2.url, alt: "Charm Bar mobile trailer with illuminated marquee sign" },
+      { src: steakStopTruckV2.url, alt: "Steak Stop food truck with illuminated marquee sign" },
       { src: foodTruckBar, alt: "BAR illuminated marquee sign at food venue" },
-      { src: foodTruckHouseFood, alt: "House Food & Booze turquoise marquee sign on food truck" },
       { src: foodTruckCoffeeBuns, alt: "Coffee & Buns illuminated marquee letters" },
       { src: foodTruckDonuts, alt: "Let's Eat Donuts marquee sign on orange food truck" },
-      { src: foodTruckSmokehouse, alt: "Smokehouse red and yellow gradient marquee letters" },
-      { src: foodTruckSteakstop, alt: "Steak Stop large red marquee letters" }
+      { src: foodTruckSmokehouse, alt: "Smokehouse red and yellow gradient marquee letters" }
     ]
   },
   
