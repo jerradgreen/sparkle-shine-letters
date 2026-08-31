@@ -492,12 +492,12 @@ export const standUpSignsConfig: TemplateConfig = {
 
 // Food Truck Signs Template
 export const foodTruckSignsConfig: TemplateConfig = {
-  pageTitle: "Custom Food Truck Marquee Signs - Illuminated Menu & Brand Signage",
-  metaDescription: "Custom marquee signs designed specifically for food trucks and mobile vendors. Bright, eye-catching illuminated signage that attracts customers and showcases your menu.",
-  keywords: ["food truck signs", "mobile vendor signs", "illuminated menu boards", "custom food signage", "food truck lighting", "vendor marquee signs"],
+  pageTitle: "Custom Food Truck Signs & Food Trailer Signs | Vintage Marquee Lights",
+  metaDescription: "Custom food truck signs and food trailer signs handcrafted from steel. Choose illuminated marquee letters or custom logo signage with permanent, removable, or fold-down bracket options.",
+  keywords: ["custom food truck signs", "food truck signs", "food trailer signs", "food truck roof sign", "illuminated food truck sign", "custom mobile vendor signs"],
   
   hero: {
-    headline: "Custom Light-Up Roof Signs for Food Trucks & Trailers",
+    headline: "Custom Food Truck Signs for Trucks & Trailers",
     subheadline: "Custom-fabricated metal signs built for food trucks, trailers, and pop-ups. From glowing marquee letters to bold layered logos, we create high-impact signage that draws attention and drives foot traffic.",
     ctaText: "Start My Custom Food Truck Sign",
     secondaryCtaText: "Explore Food Truck Projects",
@@ -524,7 +524,7 @@ export const foodTruckSignsConfig: TemplateConfig = {
       },
       {
         title: "Custom Words or Logos",
-        description: "Spell your truck name, best-selling item, or show off your full logo in 3D",
+        description: "Spell your truck name, highlight a signature item, or showcase your custom logo.",
         icon: "🎨"
       }
     ]
