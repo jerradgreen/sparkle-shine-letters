@@ -126,19 +126,6 @@ const RentalInventory = () => {
           href={heroImage}
           fetchPriority="high"
         />
-        <script type="application/ld+json">{JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "Product",
-          "name": "Marquee Letter Rental Business Package",
-          "description": "Commercial-grade marquee letter rental business packages built for entrepreneurs and event rental companies. Start or expand your marquee rental inventory with durable, revenue-producing assets.",
-          "brand": { "@type": "Brand", "name": "Vintage Marquee Lights" },
-          "offers": {
-            "@type": "Offer",
-            "availability": "https://schema.org/InStock",
-            "seller": { "@type": "Organization", "name": "Vintage Marquee Lights" }
-          },
-          "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5", "reviewCount": "47" }
-        })}</script>
       </Helmet>
       <Navigation />
       <ShopifyHeader />
