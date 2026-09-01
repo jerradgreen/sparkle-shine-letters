@@ -10,7 +10,7 @@ export const StructuredData = ({ config, canonicalUrl }: StructuredDataProps) =>
   const currentUrl = canonicalUrl || (typeof window !== 'undefined' ? window.location.href : '');
   const businessSchema = {
     "@context": "https://schema.org",
-    "@type": config.business.type,
+    "@type": "Organization",
     "name": config.business.name,
     "description": config.business.description,
     "url": window.location.origin,
@@ -24,27 +24,7 @@ export const StructuredData = ({ config, canonicalUrl }: StructuredDataProps) =>
       "addressRegion": config.business.location.state,
       "postalCode": config.business.location.zip,
       "addressCountry": "US"
-    } : undefined,
-    "aggregateRating": config.testimonials.items.length > 0 ? {
-      "@type": "AggregateRating",
-      "ratingValue": "4.9",
-      "reviewCount": config.testimonials.items.length.toString(),
-      "bestRating": "5",
-      "worstRating": "1"
-    } : undefined,
-    "review": config.testimonials.items.length > 0 ? config.testimonials.items.map(testimonial => ({
-      "@type": "Review",
-      "author": {
-        "@type": "Person",
-        "name": testimonial.name
-      },
-      "reviewRating": {
-        "@type": "Rating",
-        "ratingValue": testimonial.rating.toString(),
-        "bestRating": "5"
-      },
-      "reviewBody": testimonial.content
-    })) : undefined
+    } : undefined
   };
 
   const faqSchema = {
@@ -79,30 +59,6 @@ export const StructuredData = ({ config, canonicalUrl }: StructuredDataProps) =>
     ]
   };
 
-  const productSchema = {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    "name": config.pageTitle,
-    "description": config.metaDescription,
-    "image": config.hero.heroImage,
-    "brand": {
-      "@type": "Brand",
-      "name": config.business.name
-    },
-    "offers": config.pricing.packages.map(pkg => ({
-      "@type": "Offer",
-      "name": pkg.name,
-      "description": pkg.description,
-      "price": pkg.priceRange,
-      "priceCurrency": "USD",
-      "availability": "https://schema.org/InStock",
-      "seller": {
-        "@type": "Organization",
-        "name": config.business.name
-      }
-    }))
-  };
-
   return (
     <Helmet>
       <script type="application/ld+json">
@@ -110,9 +66,6 @@ export const StructuredData = ({ config, canonicalUrl }: StructuredDataProps) =>
       </script>
       <script type="application/ld+json">
         {JSON.stringify(faqSchema)}
-      </script>
-      <script type="application/ld+json">
-        {JSON.stringify(productSchema)}
       </script>
       <script type="application/ld+json">
         {JSON.stringify(breadcrumbSchema)}
