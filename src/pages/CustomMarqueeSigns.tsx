@@ -384,6 +384,12 @@ const CustomMarqueeSigns = () => {
                 </li>
               ))}
             </ul>
+            <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
+              Buying for an office, corporate event, conference, or brand activation? Explore{' '}
+              <Link to="/corporate-marquee-signs" className="text-primary underline hover:text-primary/80 transition-colors font-semibold">
+                corporate marquee signs and custom business signage
+              </Link>.
+            </p>
           </div>
         </section>
 
