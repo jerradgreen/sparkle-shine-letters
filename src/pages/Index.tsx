@@ -153,7 +153,7 @@ const Index = () => {
             Custom Marquee Signs & Letters — Trusted by Thousands Since 2008
           </h1>
           <p className="text-lg text-[hsl(197,35%,45%)] mb-2 max-w-3xl mx-auto font-medium">
-            We build every custom marquee sign to order — from wall-hanging pieces and 3D logo signs to custom marquee letters you own and reuse.
+            We build every <Link to="/custom-marquee-signs" className="text-primary underline hover:text-primary/80 transition-colors font-semibold">custom marquee sign</Link> to order — from wall-hanging pieces and 3D logo signs to custom marquee letters you own and reuse.
           </p>
           <p className="text-xl font-medium text-foreground max-w-3xl mx-auto">
             💡 Just click the style below to get started.
