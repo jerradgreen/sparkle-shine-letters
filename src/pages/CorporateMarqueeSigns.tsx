@@ -509,6 +509,39 @@ const CorporateMarqueeSigns = () => {
           </div>
         </section>
 
+        {/* LuxeMarquees packages for rental businesses */}
+        <section id="luxemarquees-packages" aria-labelledby="luxe-packages-heading" className="px-4 pb-12 md:pb-16">
+          <div className="mx-auto max-w-6xl overflow-hidden rounded-2xl bg-[#090d18] text-white shadow-xl">
+            <div className="h-1 bg-gradient-to-r from-cyan-400 via-blue-500 to-violet-500" />
+            <div className="grid gap-8 p-6 md:p-8 lg:grid-cols-[1.2fr_1fr] lg:items-center">
+              <figure className="min-w-0">
+                <video
+                  controls
+                  playsInline
+                  preload="none"
+                  poster="/images/luxe-video-poster.jpg"
+                  aria-label="LuxeMarquees animated LED letters in action"
+                  className="aspect-video w-full rounded-xl bg-black"
+                  width="1280"
+                  height="720"
+                >
+                  <source src="https://cdn.shopify.com/videos/c/o/v/4f172efa8c844667ab4ed366f454238f.mp4" type="video/mp4" />
+                  <a href="https://cdn.shopify.com/videos/c/o/v/4f172efa8c844667ab4ed366f454238f.mp4">Watch the LuxeMarquees video</a>
+                </video>
+                <figcaption className="mt-3 text-sm text-slate-300">Watch animated LED letters in action · 28 seconds · Sound on</figcaption>
+              </figure>
+              <div>
+                <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-cyan-300">LuxeMarquees · Packages for purchase</p>
+                <h2 id="luxe-packages-heading" className="mb-4 text-2xl font-bold leading-tight md:text-3xl">Add animated LED letters to your rental inventory.</h2>
+                <p className="mb-6 leading-relaxed text-slate-300">LuxeMarquees packages are available for purchase by rental companies and event production businesses looking to expand their inventory.</p>
+                <Button asChild size="lg" className="h-auto whitespace-normal bg-cyan-300 py-3 text-center font-semibold text-slate-950 hover:bg-cyan-200">
+                  <a href="https://luxemarquees.jerradgreen.digital" target="_blank" rel="noopener noreferrer">Explore LuxeMarquees Packages →</a>
+                </Button>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Closing CTA */}
         <section className="px-4 pb-16">
           <div className="mx-auto max-w-5xl rounded-2xl bg-primary p-8 text-center text-primary-foreground shadow-xl md:p-10">
