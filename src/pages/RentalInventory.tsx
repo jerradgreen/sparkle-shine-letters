@@ -1285,9 +1285,9 @@ const RentalInventory = () => {
                 <figcaption className="mt-3 text-sm text-slate-300">Watch animated LED letters in action · 28 seconds · Sound on</figcaption>
               </figure>
               <div>
-                <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-cyan-300">LuxeMarquees · Packages for purchase</p>
-                <h2 id="luxe-packages-heading" className="mb-4 text-2xl font-bold leading-tight md:text-3xl">Add animated LED letters to your rental inventory.</h2>
-                <p className="mb-6 leading-relaxed text-slate-300">LuxeMarquees packages are available for purchase by rental companies and event production businesses looking to expand their inventory.</p>
+                <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-cyan-300">Just released · LuxeMarquees</p>
+                <h2 id="luxe-packages-heading" className="mb-4 text-2xl font-bold leading-tight md:text-3xl">Be among the first in your area.</h2>
+                <p className="mb-6 leading-relaxed text-slate-300">Bring something new to your market with newly released animated LED letters from LuxeMarquees. Be among the first rental companies in your area to offer them. Packages are available for purchase by rental companies and event production businesses looking to expand their inventory.</p>
                 <Button asChild size="lg" className="h-auto whitespace-normal bg-cyan-300 py-3 text-center font-semibold text-slate-950 hover:bg-cyan-200">
                   <a href="https://luxemarquees.jerradgreen.digital" target="_blank" rel="noopener noreferrer">Explore LuxeMarquees Packages →</a>
                 </Button>
