@@ -8,17 +8,17 @@ import { Button } from "@/components/ui/button";
 
 import barMonteTrailer from "@/assets/food-truck-bar-monte.jpg";
 import parliamentCoffee from "@/assets/wall-hanging-parliament.jpg";
-import britneyAsset from "@/assets/custom-signs/britney-marquee-letters.webp.asset.json";
+import coldBeerNightAsset from "@/assets/custom-signs/cold-beer-night.jpeg.asset.json";
 import cafeCollectiveAsset from "@/assets/custom-signs/cafe-collective-cleveland-logo-sign.jpg.asset.json";
 import espnHouseAsset from "@/assets/custom-signs/espn-house-nashville-sign.jpg.asset.json";
 import sharkBuildAsset from "@/assets/custom-signs/shark-custom-sign-build.png.asset.json";
-import bigToysBuildAsset from "@/assets/custom-signs/big-toys-custom-sign-build.png.asset.json";
+import formaspaceAsset from "@/assets/custom-signs/formaspace-office-marquee-sign.jpg.asset.json";
+import masonJarAsset from "@/assets/custom-signs/mason-jar-marquee-sign.png.asset.json";
 import lolasAsset from "@/assets/custom-signs/lolas-order-here-arrow-sign.jpg.asset.json";
 import surBurgerAsset from "@/assets/custom-signs/sur-burger-badge-sign.jpg.asset.json";
 import coldBeerAsset from "@/assets/custom-signs/cold-beer-marquee-sign.jpg.asset.json";
 import starlightAsset from "@/assets/custom-signs/starlight-theater-logo-sign.jpg.asset.json";
-import charmBarAsset from "@/assets/custom-signs/charm-bar-mobile-trailer-sign.jpg.asset.json";
-import donutsTruck from "@/assets/food-truck-donuts.jpg";
+import charmBarAsset from "@/assets/custom-signs/charm-bar-mobile-trailer-sign-v2.jpg.asset.json";
 
 const PAGE_URL = "https://inventory.vintagemarqueelights.com/custom-marquee-signs";
 const PAGE_TITLE = "Custom Marquee Signs & Custom Signs | Vintage Marquee Lights";
@@ -28,9 +28,9 @@ const PAGE_DESCRIPTION =
 // Real Vintage Marquee Lights project photography (Shopify CDN, project assets, Lovable asset CDN)
 const img = {
   // Hero
-  britney: britneyAsset.url,
+  coldBeerNight: coldBeerNightAsset.url,
   cafeCollective: cafeCollectiveAsset.url,
-  donutsTruck,
+  formaspace: formaspaceAsset.url,
   espnHouse: espnHouseAsset.url,
 
   // Sign-style cards
@@ -52,7 +52,7 @@ const img = {
     "https://cdn.shopify.com/s/files/1/1403/8315/files/IMG_6390_layered-sign_800x.jpg?v=1759694027",
   lolas: lolasAsset.url,
   surBurger: surBurgerAsset.url,
-  bigToysBuild: bigToysBuildAsset.url,
+  masonJar: masonJarAsset.url,
   savannah:
     "https://cdn.shopify.com/s/files/1/1403/8315/files/IMG_4392_layered_sign.jpg?v=1759690802",
   coldBeer: coldBeerAsset.url,
@@ -60,13 +60,35 @@ const img = {
   starlight: starlightAsset.url,
 };
 
-const signStyles = [
+type SignStyle = {
+  title: string;
+  description: string;
+  cta: string;
+  link: string;
+  image: string;
+  alt: string;
+  quoteLink?: string;
+  imagePosition?: string;
+  contain?: boolean;
+  disableZoom?: boolean;
+};
+
+type GalleryItem = {
+  src: string;
+  alt: string;
+  caption: string;
+  pos?: string;
+  contain?: boolean;
+};
+
+const signStyles: SignStyle[] = [
   {
     title: "Wall-Hanging Marquee Signs & Letters",
     description:
       "Classic light-bulb marquee letters and custom signs designed to hang like artwork. Perfect for restaurants, bars, offices, retail spaces, studios, homes and more.",
     cta: "Explore Wall-Hanging Signs",
     link: "/wall-hanging-signs",
+    quoteLink: "/quote/wall-hanging",
     image: img.beerHappy,
     alt: "Multi-colored BEER HAPPY marquee letters mounted on a wood wall inside a brewery taproom",
   },
@@ -76,6 +98,7 @@ const signStyles = [
       "Turn your logo, artwork or concept into a dimensional custom sign built around your brand and design.",
     cta: "Explore Custom Logo Signs",
     link: "/3d-logos",
+    quoteLink: "/quote/3d-logos",
     image: img.tucks,
     alt: "Tuck's Truffles layered logo sign with dimensional lettering and a bulb-lit border",
   },
@@ -85,6 +108,7 @@ const signStyles = [
       "Custom signs made to get attention on food trucks, trailers, carts, pop-ups and mobile businesses.",
     cta: "Explore Mobile Vendor Signs",
     link: "/mobile-vendor-signs",
+    quoteLink: "/quote/mobile-vendor",
     image: img.barMonteTrailer,
     alt: "Bar Monté teal mobile bar trailer with a lit marquee sign above the service window",
     imagePosition: "center 8%",
@@ -94,26 +118,28 @@ const signStyles = [
     description:
       "If your idea doesn't fit neatly into one of these categories, that's okay. Send us your drawing, inspiration, logo or concept and tell us what you're imagining.",
     cta: "Tell Us Your Idea",
-    link: "/quote/custom",
+    link: "/quote/not-sure",
     image: img.sharkBuild,
     alt: "Shark-shaped custom sign shown as a sketch, a production proof and the finished build",
+    contain: true,
+    disableZoom: true,
   },
 ];
 
-const gallery = [
-  { src: img.chopSuey, alt: "Marquee letters spelling CHOP SUEY lit with globe bulbs", pos: "center 12%" },
-  { src: img.parliamentCoffee, alt: "Element dimensional logo sign with lit lettering and a starburst graphic on a dark wood wall" },
-  { src: img.chicago, alt: "Vertical CHICAGO marquee sign with lit bulbs on a wood wall", pos: "center 45%" },
+const gallery: GalleryItem[] = [
+  { src: img.chopSuey, alt: "Marquee letters spelling CHOP SUEY lit with globe bulbs", caption: "Lit CHOP SUEY marquee letters", pos: "center 12%" },
+  { src: img.parliamentCoffee, alt: "Element dimensional logo sign with lit lettering and a starburst graphic on a dark wood wall", caption: "Element wall-mounted logo sign" },
+  { src: img.chicago, alt: "Vertical CHICAGO marquee sign with lit bulbs on a wood wall", caption: "Vertical CHICAGO wall sign", pos: "center 45%" },
 
-  { src: img.exitZero, alt: "Exit Zero Filling Station round logo sign outlined in lit bulbs" },
-  { src: img.hardes, alt: "Harde's Watering Hole custom sign with a bulb-lit border on a wood wall" },
-  { src: img.lolas, alt: "Lola's arrow-shaped ORDER HERE sign with lit bulbs and dimensional lettering" },
-  { src: img.surBurger, alt: "Sur Burger badge-shaped sign with bulb-lit border and vintage finish" },
-  { src: img.bigToysBuild, alt: "Big Toys custom sign shown as a sketch, a production proof and the finished sign" },
-  { src: img.savannah, alt: "Savannah arena marquee sign with a bulb-lit border and changeable letters" },
-  { src: img.coldBeer, alt: "COLD BEER marquee letters with lit bulbs laid out in the shop before shipping" },
-  { src: img.charmBar, alt: "Charm Bar pink mobile trailer with a red marquee sign mounted on the roof" },
-  { src: img.starlight, alt: "Starlight Theater bulb-lit logo sign mounted in a home theater room" },
+  { src: img.exitZero, alt: "Exit Zero Filling Station round logo sign outlined in lit bulbs", caption: "Exit Zero restaurant logo sign" },
+  { src: img.hardes, alt: "Harde's Watering Hole custom sign with a bulb-lit border on a wood wall", caption: "Harde's Watering Hole wall sign" },
+  { src: img.lolas, alt: "Lola's arrow-shaped ORDER HERE sign with lit bulbs and dimensional lettering", caption: "Lola's ORDER HERE arrow sign" },
+  { src: img.surBurger, alt: "Sur Burger badge-shaped sign with bulb-lit border and vintage finish", caption: "Sur Burger badge-shaped sign" },
+  { src: img.masonJar, alt: "MASON JAR red marquee letters lit behind a restaurant bar", caption: "MASON JAR restaurant wall letters", contain: true },
+  { src: img.savannah, alt: "Savannah arena marquee sign with a bulb-lit border and changeable letters", caption: "Savannah arena marquee sign" },
+  { src: img.coldBeer, alt: "COLD BEER marquee letters with lit bulbs laid out in the shop before shipping", caption: "COLD BEER illuminated letters" },
+  { src: img.charmBar, alt: "Pink Charm Bar mobile trailer with illuminated marquee letters mounted on the roof", caption: "Charm Bar mobile trailer sign", contain: true },
+  { src: img.starlight, alt: "Starlight Theater bulb-lit logo sign mounted in a home theater room", caption: "Starlight Theater logo sign" },
 ];
 
 
@@ -221,10 +247,10 @@ const CustomMarqueeSigns = () => {
                 </p>
                 <div className="flex flex-col gap-3 sm:flex-row">
                   <Button asChild size="lg">
-                    <a href="#sign-styles">Explore Sign Styles</a>
+                    <Link to="/quote/not-sure">Request a Custom Quote</Link>
                   </Button>
                   <Button asChild size="lg" variant="outline">
-                    <Link to="/quote/custom">Request a Custom Quote</Link>
+                    <a href="#sign-styles">Explore Sign Styles</a>
                   </Button>
                 </div>
                 <p className="mt-5 text-sm text-muted-foreground">
@@ -235,14 +261,14 @@ const CustomMarqueeSigns = () => {
 
               {/* Real project photo collage */}
               <div className="grid grid-cols-2 gap-3 sm:gap-4">
-                <div className="col-span-2 overflow-hidden rounded-2xl border border-border/60 shadow-lg">
+                <div className="col-span-2 aspect-video overflow-hidden rounded-2xl border border-border/60 bg-muted shadow-lg">
                   <img
-                    src={img.britney}
-                    alt="BRITNEY marquee letters in pink with exposed bulbs mounted on a wood wall"
-                    className="h-56 w-full object-cover sm:h-72"
+                    src={img.coldBeerNight}
+                    alt="Illuminated Cold Beer arrow sign mounted outside a restaurant at night"
+                    className="h-full w-full object-cover"
                     loading="eager"
-                    width={1200}
-                    height={800}
+                    width={5312}
+                    height={2988}
                   />
                 </div>
                 <div className="overflow-hidden rounded-2xl border border-border/60 shadow-md">
@@ -255,14 +281,14 @@ const CustomMarqueeSigns = () => {
                     height={600}
                   />
                 </div>
-                <div className="overflow-hidden rounded-2xl border border-border/60 shadow-md">
+                <div className="overflow-hidden rounded-2xl border border-border/60 bg-muted shadow-md">
                   <img
-                    src={img.donutsTruck}
-                    alt="LET'S EAT DONUTS lit marquee sign on the roof of a red vintage food truck"
-                    className="h-36 w-full object-cover sm:h-44"
+                    src={img.formaspace}
+                    alt="FORMASPACE illuminated office letters above a group at a trade show booth"
+                    className="h-36 w-full object-contain sm:h-44"
                     loading="lazy"
-                    width={800}
-                    height={600}
+                    width={2789}
+                    height={2091}
                   />
                 </div>
                 <div className="col-span-2 overflow-hidden rounded-2xl border border-border/60 shadow-md">
@@ -304,7 +330,7 @@ const CustomMarqueeSigns = () => {
                     <img
                       src={style.image}
                       alt={style.alt}
-                      className="h-56 w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      className={`h-56 w-full ${style.contain ? "object-contain" : "object-cover"} ${style.disableZoom ? "" : "transition-transform duration-500 group-hover:scale-105"}`}
                       style={{ objectPosition: style.imagePosition ?? "center" }}
                       loading="lazy"
                       width={800}
@@ -317,9 +343,16 @@ const CustomMarqueeSigns = () => {
                   <p className="mb-6 flex-1 leading-relaxed text-muted-foreground">
                     {style.description}
                   </p>
-                  <Button asChild className="w-fit">
-                    <Link to={style.link}>{style.cta}</Link>
-                  </Button>
+                  <div className="flex flex-wrap gap-3">
+                    <Button asChild className="w-fit">
+                      <Link to={style.link}>{style.cta}</Link>
+                    </Button>
+                    {style.quoteLink ? (
+                      <Button asChild variant="outline" className="w-fit">
+                        <Link to={style.quoteLink}>Request a Quote</Link>
+                      </Button>
+                    ) : null}
+                  </div>
                 </CardContent>
               </Card>
             ))}
@@ -348,12 +381,15 @@ const CustomMarqueeSigns = () => {
                   <img
                     src={item.src}
                     alt={item.alt}
-                    className="h-40 w-full object-cover transition-transform duration-500 hover:scale-105 sm:h-48"
+                    className={`h-40 w-full ${item.contain ? "object-contain" : "object-cover"} sm:h-48`}
                     style={{ objectPosition: item.pos ?? "center" }}
                     loading="lazy"
                     width={800}
                     height={600}
                   />
+                  <figcaption className="border-t border-border/60 px-3 py-2 text-sm text-muted-foreground">
+                    {item.caption}
+                  </figcaption>
                 </figure>
               ))}
             </div>
@@ -385,9 +421,10 @@ const CustomMarqueeSigns = () => {
               ))}
             </ul>
             <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-              Buying for an office, corporate event, conference, or brand activation? Explore{' '}
+              Looking for freestanding marquee letters to purchase for a corporate event,
+              conference or brand activation? Explore our{' '}
               <Link to="/corporate-marquee-signs" className="text-primary underline hover:text-primary/80 transition-colors font-semibold">
-                corporate marquee signs and custom business signage
+                event-style marquee letters
               </Link>.
             </p>
           </div>
@@ -447,7 +484,7 @@ const CustomMarqueeSigns = () => {
             </p>
             <div className="flex flex-col justify-center gap-3 sm:flex-row">
               <Button asChild size="lg" variant="secondary">
-                <Link to="/quote/custom">Request a Custom Quote</Link>
+                <Link to="/quote/not-sure">Request a Custom Quote</Link>
               </Button>
               <Button
                 asChild
