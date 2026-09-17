@@ -239,9 +239,9 @@ const MobileVendorSigns = () => {
                   From a design to the top of the trailer.
                 </h2>
                 <p className="text-lg leading-relaxed text-muted-foreground">
-                  STEAKSTOP began as a design for dimensional illuminated letters. The finished
-                  sign pairs bold letterforms with a red finish and warm globe bulbs, then brings
-                  the name above the trailer as a complete rooftop installation.
+                  From the first mockup to the finished red letters, this STEAKSTOP project
+                  shows how a name takes shape in steel and light. Here’s the finished piece
+                  in the shop and installed above the trailer’s service windows.
                 </p>
               </div>
               <figure className="min-w-0">
@@ -297,7 +297,7 @@ const MobileVendorSigns = () => {
 
             <div className="mt-16 border-t border-border/70 pt-14 md:mt-20 md:pt-16">
               <p className="mb-3 text-xs font-bold uppercase tracking-[0.15em] text-primary">
-                On the trailer
+                The finished piece
               </p>
               <h3 className="mb-8 text-3xl font-bold leading-tight text-foreground md:text-4xl">
                 Two views of the finished sign.
