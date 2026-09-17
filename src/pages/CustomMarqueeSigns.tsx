@@ -497,7 +497,7 @@ const CustomMarqueeSigns = () => {
                   piece fits into the space—even glowing in the background of a milkshake photo.
                 </p>
                 <div className="grid gap-6 md:grid-cols-[1.1fr_1fr]">
-                  <figure>
+                  <figure className="min-w-0">
                     <div className="h-[380px] overflow-hidden rounded border border-border/60 bg-background sm:h-[490px]">
                       <img
                         src={img.exitZeroInstalled}
@@ -512,7 +512,7 @@ const CustomMarqueeSigns = () => {
                       Installed above the fireplace at Exit Zero.
                     </figcaption>
                   </figure>
-                  <figure>
+                  <figure className="min-w-0">
                     <div className="h-[380px] overflow-hidden rounded border border-border/60 bg-background sm:h-[490px]">
                       <img
                         src={img.exitZeroMilkshake}
