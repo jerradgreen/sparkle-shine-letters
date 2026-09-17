@@ -384,7 +384,7 @@ const CustomMarqueeSigns = () => {
                     From a logo to<br className="hidden sm:block" /> part of the place.
                   </h2>
                   <p className="mb-5 text-lg leading-relaxed text-muted-foreground">
-                    Exit Zero&apos;s artwork already had plenty of personality. We carried that
+                    Exit Zero’s artwork already had plenty of personality. We carried that
                     character into a dimensional, illuminated piece—with layered details, a
                     weathered finish, and warm globe bulbs around the edge.
                   </p>
@@ -482,7 +482,7 @@ const CustomMarqueeSigns = () => {
                       />
                     </div>
                     <figcaption className="pt-3 text-sm text-muted-foreground">
-                      A familiar part of the restaurant&apos;s backdrop.
+                      A familiar part of the restaurant’s backdrop.
                     </figcaption>
                   </figure>
                 </div>
@@ -625,16 +625,16 @@ const CustomMarqueeSigns = () => {
                   Meet the founder
                 </p>
                 <h2 className="mb-5 text-3xl font-bold leading-tight text-foreground md:text-4xl">
-                  Hi, I&apos;m Jerrad, founder of Vintage Marquee Lights.
+                  Hi, I’m Jerrad, founder of Vintage Marquee Lights.
                 </h2>
                 <p className="mb-5 text-lg leading-relaxed text-muted-foreground">
-                  Since VML started in 2008, we&apos;ve helped customers turn their ideas into custom
+                  Since VML started in 2008, we’ve helped customers turn their ideas into custom
                   pieces that feel right at home in their business or space.
                 </p>
                 <p className="text-lg leading-relaxed text-muted-foreground">
-                  You&apos;ll work with me and my team to figure out the size, style, and details.
-                  Bring your logo, a sketch, or an idea you&apos;re not quite sure how to explain
-                  yet—we&apos;ll take it from there.
+                  You’ll work with me and my team to figure out the size, style, and details.
+                  Bring your logo, a sketch, or an idea you’re not quite sure how to explain
+                  yet—we’ll take it from there.
                 </p>
               </div>
             </div>
@@ -645,10 +645,10 @@ const CustomMarqueeSigns = () => {
         <section className="container mx-auto px-6 py-14">
           <div className="mx-auto max-w-4xl rounded-3xl bg-primary p-8 text-center text-primary-foreground md:p-12">
             <h2 className="mb-4 text-3xl font-bold md:text-4xl">
-              Have a logo you&apos;d like to see in lights?
+              Have a logo you’d like to see in lights?
             </h2>
             <p className="mx-auto mb-8 max-w-2xl leading-relaxed text-primary-foreground/90">
-              Send us what you have. We&apos;ll help work out the details.
+              Send us what you have. We’ll help work out the details.
             </p>
             <div className="flex flex-col justify-center gap-3 sm:flex-row">
               <Button asChild size="lg" variant="secondary">
