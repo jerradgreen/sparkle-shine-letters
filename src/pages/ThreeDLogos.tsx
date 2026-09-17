@@ -8,12 +8,17 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Layers, Eye, Zap, Building2, Palette, Lightbulb, Check } from "lucide-react";
 import { Helmet } from "react-helmet-async";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import PerformantImage from "@/components/PerformantImage";
 import exitZeroShopAsset from "@/assets/custom-signs/exit-zero-shop.webp.asset.json";
 import exitZeroProcessAsset from "@/assets/custom-signs/exit-zero-process-grid.webp.asset.json";
+import exitZeroInstalledAsset from "@/assets/custom-signs/exit-zero-installed.webp.asset.json";
+import exitZeroMilkshakeAsset from "@/assets/custom-signs/exit-zero-milkshake.webp.asset.json";
 import jerradPortraitAsset from "@/assets/custom-signs/jerrad-approved-portrait.webp.asset.json";
+import fabricationCrewWeldingAsset from "@/assets/custom-signs/fabrication-crew-welding.webp.asset.json";
+import fabricationCrewOneAsset from "@/assets/custom-signs/fabrication-crew-1.webp.asset.json";
+import fabricationCrewThreeAsset from "@/assets/custom-signs/fabrication-crew-3.webp.asset.json";
 
 const ThreeDLogos = () => {
   const navigate = useNavigate();
@@ -247,6 +252,203 @@ const ThreeDLogos = () => {
           <GallerySection config={logoSignsConfig.gallery} />
         </div>
       </section>
+
+      {/* Founder introduction */}
+      <section className="border-t border-border/60 bg-muted/50 py-16 md:py-20">
+        <div className="container mx-auto px-6">
+          <div className="mx-auto grid max-w-6xl items-center gap-10 md:grid-cols-[0.8fr_1.2fr] md:gap-16">
+            <div className="mx-auto w-full max-w-md overflow-hidden rounded border border-border/60 bg-background">
+              <img
+                src={jerradPortraitAsset.url}
+                alt="Jerrad, founder of Vintage Marquee Lights"
+                className="max-h-[450px] w-full object-contain"
+                loading="lazy"
+                width={1122}
+                height={1402}
+              />
+            </div>
+            <div>
+              <p className="mb-4 text-xs font-bold uppercase tracking-[0.15em] text-primary">
+                Meet the founder
+              </p>
+              <h2 className="mb-5 text-3xl font-bold leading-tight text-foreground md:text-4xl">
+                Hi, I’m Jerrad, founder of Vintage Marquee Lights.
+              </h2>
+              <p className="mb-5 text-lg leading-relaxed text-muted-foreground">
+                Since VML started in 2008, we’ve helped customers turn their ideas into custom
+                pieces that feel right at home in their business or space.
+              </p>
+              <p className="text-lg leading-relaxed text-muted-foreground">
+                You’ll work with me and my team to figure out the size, style, and details.
+                Bring your logo, a sketch, or an idea you’re not quite sure how to explain
+                yet—we’ll take it from there.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Exit Zero case study */}
+      <section className="border-y border-border/60 bg-muted/50 py-16 md:py-20">
+        <div className="container mx-auto px-6">
+          <div className="mx-auto max-w-6xl">
+            <div className="grid items-center gap-10 lg:grid-cols-[1fr_1.1fr] lg:gap-14">
+              <div>
+                <p className="mb-4 text-xs font-bold uppercase tracking-[0.15em] text-primary">
+                  A custom project · Exit Zero Filling Station
+                </p>
+                <h2 className="mb-5 text-3xl font-bold leading-tight text-foreground md:text-5xl">
+                  From a logo to<br className="hidden sm:block" /> part of the place.
+                </h2>
+                <p className="mb-5 text-lg leading-relaxed text-muted-foreground">
+                  Exit Zero’s artwork already had plenty of personality. We carried that
+                  character into a dimensional, illuminated piece—with layered details, a
+                  weathered finish, and warm globe bulbs around the edge.
+                </p>
+                <p className="text-xs font-bold uppercase tracking-[0.15em] text-primary">
+                  Cape May · Custom layered sign
+                </p>
+              </div>
+
+              <figure>
+                <div className="aspect-square overflow-hidden rounded border border-border/60 bg-background">
+                  <img
+                    src={exitZeroShopAsset.url}
+                    alt="Finished illuminated Exit Zero sign on the fabrication shop wall"
+                    className="h-full w-full object-contain"
+                    loading="lazy"
+                    width={1512}
+                    height={1512}
+                  />
+                </div>
+                <figcaption className="pt-3 text-sm text-muted-foreground">
+                  The finished piece, photographed at the shop before shipping.
+                </figcaption>
+              </figure>
+            </div>
+
+            <div className="mt-16 border-t border-border/70 pt-14 md:mt-20 md:pt-16">
+              <p className="mb-3 text-xs font-bold uppercase tracking-[0.15em] text-primary">
+                How it came together
+              </p>
+              <h3 className="mb-8 text-3xl font-bold leading-tight text-foreground md:text-4xl">
+                The same character. A whole new dimension.
+              </h3>
+              <div className="aspect-[3/1] overflow-hidden rounded border border-border/60 bg-background">
+                <img
+                  src={exitZeroProcessAsset.url}
+                  alt="Exit Zero original artwork, design mockup and finished illuminated sign"
+                  className="h-auto w-full"
+                  loading="lazy"
+                  width={2250}
+                  height={3000}
+                />
+              </div>
+              <div className="mt-5 grid grid-cols-3 gap-3 text-xs leading-relaxed text-muted-foreground sm:gap-6 sm:text-base">
+                <p>
+                  <strong className="block text-foreground">01 · The artwork</strong>
+                  The original logo.
+                </p>
+                <p>
+                  <strong className="block text-foreground">02 · The mockup</strong>
+                  The design visualized with depth and light.
+                </p>
+                <p>
+                  <strong className="block text-foreground">03 · The finished piece</strong>
+                  Layers, texture, and illuminated detail.
+                </p>
+              </div>
+            </div>
+
+            <div className="mt-16 border-t border-border/70 pt-14 md:mt-20 md:pt-16">
+              <p className="mb-3 text-xs font-bold uppercase tracking-[0.15em] text-primary">
+                At Exit Zero
+              </p>
+              <h3 className="mb-5 text-3xl font-bold leading-tight text-foreground md:text-4xl">
+                The details up close.<br />The character across the room.
+              </h3>
+              <p className="mb-8 max-w-3xl text-lg leading-relaxed text-muted-foreground">
+                The shop photos show the depth and finish. At Exit Zero, you can see how the
+                piece fits into the space—even glowing in the background of a milkshake photo.
+              </p>
+              <div className="grid gap-6 md:grid-cols-[1.1fr_1fr]">
+                <figure className="min-w-0">
+                  <div className="h-[380px] overflow-hidden rounded border border-border/60 bg-background sm:h-[490px]">
+                    <img
+                      src={exitZeroInstalledAsset.url}
+                      alt="Exit Zero sign installed above the restaurant fireplace with seasonal decorations"
+                      className="h-full w-full object-contain"
+                      loading="lazy"
+                      width={1340}
+                      height={1606}
+                    />
+                  </div>
+                  <figcaption className="pt-3 text-sm text-muted-foreground">
+                    Installed above the fireplace at Exit Zero.
+                  </figcaption>
+                </figure>
+                <figure className="min-w-0">
+                  <div className="h-[380px] overflow-hidden rounded border border-border/60 bg-background sm:h-[490px]">
+                    <img
+                      src={exitZeroMilkshakeAsset.url}
+                      alt="A milkshake with the illuminated Exit Zero sign visible behind it"
+                      className="h-full w-full object-contain"
+                      loading="lazy"
+                      width={1684}
+                      height={1630}
+                    />
+                  </div>
+                  <figcaption className="pt-3 text-sm text-muted-foreground">
+                    A familiar part of the restaurant’s backdrop.
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+
+            <div className="mt-16 border-t border-border/70 pt-14 md:mt-20 md:pt-16">
+              <p className="mb-5 text-xs font-bold uppercase tracking-[0.15em] text-primary">
+                A look inside the shop
+              </p>
+              <figure>
+                <div className="grid gap-5 md:grid-cols-3 md:gap-4 lg:gap-5">
+                  {[
+                    {
+                      src: fabricationCrewWeldingAsset.url,
+                      alt: "Fabrication crew member welding a round metal sign in the shop",
+                    },
+                    {
+                      src: fabricationCrewOneAsset.url,
+                      alt: "Fabrication crew member welding a curved metal piece at a worktable",
+                    },
+                    {
+                      src: fabricationCrewThreeAsset.url,
+                      alt: "Fabrication crew member grinding a metal piece at a worktable",
+                    },
+                  ].map((photo) => (
+                    <div
+                      key={photo.src}
+                      className="aspect-[2/3] w-full overflow-hidden rounded border border-border/60 bg-background"
+                    >
+                      <img
+                        src={photo.src}
+                        alt={photo.alt}
+                        className="h-full w-full object-contain"
+                        loading="lazy"
+                        width={1000}
+                        height={1500}
+                      />
+                    </div>
+                  ))}
+                </div>
+                <figcaption className="pt-3 text-sm text-muted-foreground">
+                  Behind the scenes with our fabrication crew.
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Authority Section 1 */}
       <section className="py-10 px-4 bg-gradient-to-b from-background to-muted/20">
         <div className="max-w-6xl mx-auto">
@@ -272,87 +474,6 @@ const ThreeDLogos = () => {
           <p className="text-muted-foreground leading-relaxed">
             Every commission is bespoke and one of a kind. We match your brand colors precisely, engineer each layer for maximum visual impact, and apply finishes by hand with the kind of care that mass production simply cannot deliver. The result is a custom sign that feels architectural, elevated, and unmistakably yours. From neighborhood cafés to corporate headquarters, we build the artisan metal signs that anchor your brand's identity in the physical world.
           </p>
-        </div>
-      </section>
-
-      {/* Exit Zero project proof */}
-      <section className="border-y border-border/60 bg-muted/50 px-4 py-12 md:py-16">
-        <div className="mx-auto max-w-6xl">
-          <div className="grid items-center gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:gap-12">
-            <div className="min-w-0">
-              <p className="mb-3 text-xs font-bold uppercase tracking-[0.15em] text-primary">
-                Exit Zero Filling Station
-              </p>
-              <h2 className="mb-4 text-3xl font-bold leading-tight text-foreground md:text-4xl">
-                From artwork to a layered original.
-              </h2>
-              <p className="mb-5 max-w-2xl leading-relaxed text-muted-foreground">
-                For Exit Zero Filling Station, we turned the original artwork into a dimensional piece with layered details, a weathered finish, and warm globe bulbs.
-              </p>
-              <Link
-                to="/custom-marquee-signs"
-                className="font-semibold text-primary underline decoration-primary/40 underline-offset-4 transition-colors hover:text-primary/80"
-              >
-                See the full project story
-              </Link>
-            </div>
-
-            <figure className="min-w-0">
-              <div className="aspect-square overflow-hidden rounded border border-border/60 bg-background">
-                <img
-                  src={exitZeroShopAsset.url}
-                  alt="Finished illuminated Exit Zero Filling Station layered sign"
-                  className="h-full w-full object-contain"
-                  loading="lazy"
-                  width={1512}
-                  height={1512}
-                />
-              </div>
-              <figcaption className="pt-3 text-sm text-muted-foreground">
-                The finished piece, photographed at the shop before shipping.
-              </figcaption>
-            </figure>
-          </div>
-
-          <figure className="mt-9 border-t border-border/60 pt-9 md:mt-12 md:pt-12">
-            <div className="aspect-[3/1] overflow-hidden rounded border border-border/60 bg-background">
-              <img
-                src={exitZeroProcessAsset.url}
-                alt="Exit Zero original artwork, design mockup and finished illuminated sign"
-                className="h-auto w-full"
-                loading="lazy"
-                width={2250}
-                height={3000}
-              />
-            </div>
-            <figcaption className="mt-4 grid grid-cols-3 gap-3 text-xs leading-relaxed text-muted-foreground sm:gap-6 sm:text-sm">
-              <span><strong className="block text-foreground">01 · Artwork</strong>Original logo artwork.</span>
-              <span><strong className="block text-foreground">02 · Mockup</strong>Layered design preview.</span>
-              <span><strong className="block text-foreground">03 · Finished</strong>Completed illuminated piece.</span>
-            </figcaption>
-          </figure>
-
-          <div className="mt-10 grid items-center gap-7 border-t border-border/60 pt-10 sm:grid-cols-[180px_1fr] md:mt-12 md:grid-cols-[220px_1fr] md:gap-10 md:pt-12">
-            <div className="mx-auto w-full max-w-[220px] overflow-hidden rounded border border-border/60 bg-background">
-              <img
-                src={jerradPortraitAsset.url}
-                alt="Jerrad, founder of Vintage Marquee Lights"
-                className="aspect-[4/5] w-full object-contain"
-                loading="lazy"
-                width={1122}
-                height={1402}
-              />
-            </div>
-            <div className="min-w-0">
-              <p className="mb-2 text-xs font-bold uppercase tracking-[0.15em] text-primary">Meet the founder</p>
-              <h2 className="mb-3 text-2xl font-bold leading-tight text-foreground md:text-3xl">
-                Hi, I’m Jerrad, founder of Vintage Marquee Lights.
-              </h2>
-              <p className="leading-relaxed text-muted-foreground">
-                Since 2008, we’ve helped customers turn their ideas into custom pieces. You’ll work with me and my team to figure out the size, style, and details.
-              </p>
-            </div>
-          </div>
         </div>
       </section>
 
