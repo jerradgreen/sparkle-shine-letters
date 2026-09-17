@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { Card, CardContent } from "@/components/ui/card";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ShopifyHeader from "@/components/ShopifyHeader";
@@ -104,7 +104,6 @@ const signStyles = [
 ];
 
 const Index = () => {
-  const navigate = useNavigate();
   const [showInstagram, setShowInstagram] = useState(false);
   const [showAllReviews, setShowAllReviews] = useState(false);
   const instagramRef = useRef<HTMLDivElement>(null);
