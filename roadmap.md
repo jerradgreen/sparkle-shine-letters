@@ -9,4 +9,4 @@
 - [x] Verify build, desktop/mobile rendering, image framing, canonical/indexability, CTA, and Form 12 without submission.
 - [x] Stop before deployment; publication remains user-controlled.
 - [x] Add the approved fabrication crew welding photo below the Exit Zero process row.
-- [ ] Verify the optimized photo, desktop/mobile order, rendering, and production build without deployment.
+- [x] Verify the optimized photo, desktop/mobile order, rendering, and production build without deployment.
