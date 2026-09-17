@@ -12,5 +12,5 @@
 - [x] Verify the optimized photo, desktop/mobile order, rendering, and production build without deployment.
 - [x] Expand the fabrication feature to three real portrait photos and move it below the Exit Zero installation photos.
 - [x] Verify the three-photo feature at desktop and 390px mobile, then stop before deployment.
-- [ ] Redesign the three approved lower `/custom-marquee-signs` sections without changing their content or behavior.
-- [ ] Verify desktop/mobile layout, contrast, order, and the existing quote destination without submission.
+- [x] Redesign the three approved lower `/custom-marquee-signs` sections without changing their content or behavior.
+- [x] Verify desktop/mobile layout, contrast, order, and the existing quote destination without submission.
