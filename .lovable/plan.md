@@ -1,21 +1,23 @@
-# Integrate the approved Exit Zero feature
+# Wall-Hanging Cold Beer Project Update
 
 ## Scope
-- Add the five supplied, approved images as permanent project-controlled assets without generative edits.
-- Insert the approved Exit Zero case study after the existing sign-style cards and before the existing gallery.
-- Insert the exact approved founder introduction before the final quote call-to-action.
-- Restyle only these additions with the approved cream, navy, and teal editorial direction while preserving the current page, photography, style links, gallery, metadata, tracking, and `/quote/not-sure` form flow.
-- Update the final call-to-action copy to the approved wording while keeping its existing destination.
+- Update only `/wall-hanging-signs`; preserve its hero, gallery, product details, pricing, metadata, quote flow, and tracking.
+- Add the existing full approved founder introduction immediately after the gallery.
+- Add the Cold Beer project story after the founder section, followed by the existing three-photo fabrication crew feature.
 
-## Layout and imagery
-- Use an `h2` for the case-study headline so the page retains one `h1`.
-- Show only the first row of the process grid through a fixed top crop that preserves the logo, mockup, and completed Exit Zero panels.
-- Present the shop, installed, milkshake, and founder images with complete useful imagery and no sign cutoff.
-- Identify the founder portrait literally and never imply it documents fabrication.
-- Add descriptive alt text, intrinsic dimensions, and lazy loading for all below-fold images.
+## Implementation
+1. Normalize the uploaded images’ orientation and create optimized WebP versions. Render the supplied one-page PDF at high resolution, inspect it, and create an optimized WebP mockup.
+2. Permanently host the four resulting project images through Lovable Assets and reference their asset pointers from the wall-hanging page.
+3. Build the project story with:
+   - Nighttime installed image as the lead, preserving the complete sign and arrow.
+   - Exact approved headline and paragraph.
+   - Three stages: Original pencil sketch, Design mockup, Finished piece.
+   - Full-image `object-contain` presentation and responsive three-column/mobile-stacked layout.
+4. Reuse the approved Jerrad portrait and exact founder copy from `/3d-logos`.
+5. Reuse all three approved fabrication crew assets in the established 2:3 layout with the exact heading and caption.
 
 ## Verification
-- Run the production build and review current diagnostics.
-- Check the page at 1280px and 390px for image framing, process-grid crop, text hierarchy, overflow, and existing page continuity.
-- Confirm the final quote button reaches `/quote/not-sure`, Form 12 renders without submission, the canonical remains correct, the page remains indexable, and analytics code is unchanged.
-- Do not publish or modify Cognito, database, Zapier, Klaviyo, or unrelated pages.
+- Confirm all eight images load upright and remain complete at 1280px desktop and 390px mobile.
+- Confirm the sketch and mockup remain legible, no horizontal overflow occurs, and the founder copy is complete.
+- Confirm metadata is unchanged and the existing wall-hanging quote route opens without submitting the form.
+- Run the production build and stop before deployment.
