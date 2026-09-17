@@ -11,4 +11,4 @@
 - [x] Add the approved fabrication crew welding photo below the Exit Zero process row.
 - [x] Verify the optimized photo, desktop/mobile order, rendering, and production build without deployment.
 - [x] Expand the fabrication feature to three real portrait photos and move it below the Exit Zero installation photos.
-- [ ] Verify the three-photo feature at desktop and 390px mobile, then stop before deployment.
+- [x] Verify the three-photo feature at desktop and 390px mobile, then stop before deployment.
