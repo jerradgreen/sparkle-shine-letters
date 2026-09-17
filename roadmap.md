@@ -16,3 +16,5 @@
 - [x] Verify desktop/mobile layout, contrast, order, and the existing quote destination without submission.
 - [x] Add approved Exit Zero project proof and compact founder introduction to `/3d-logos` only.
 - [x] Verify build, desktop/mobile images and overflow, metadata preservation, and the existing quote form without submission.
+- [x] Replace the abbreviated `/3d-logos` proof with the full approved founder and Exit Zero sections directly after its gallery.
+- [x] Verify exact copy, all eight images, desktop/mobile order and overflow, metadata, and quote route without submission.
