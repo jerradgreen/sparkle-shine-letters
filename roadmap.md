@@ -18,3 +18,5 @@
 - [x] Verify build, desktop/mobile images and overflow, metadata preservation, and the existing quote form without submission.
 - [x] Replace the abbreviated `/3d-logos` proof with the full approved founder and Exit Zero sections directly after its gallery.
 - [x] Verify exact copy, all eight images, desktop/mobile order and overflow, metadata, and quote route without submission.
+- [ ] Add the approved founder, STEAKSTOP project story, and fabrication crew sections to `/mobile-vendor-signs` only.
+- [ ] Verify the build, desktop/mobile layout, all nine images, section order, metadata, and existing quote form without submission.

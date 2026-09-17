@@ -12,6 +12,15 @@ import { useNavigate, Link } from "react-router-dom";
 
 import PerformantImage from "@/components/PerformantImage";
 import foodTruckHero from "@/assets/food-truck-bar-monte.jpg";
+import jerradPortraitAsset from "@/assets/custom-signs/jerrad-approved-portrait.webp.asset.json";
+import fabricationCrewWeldingAsset from "@/assets/custom-signs/fabrication-crew-welding.webp.asset.json";
+import fabricationCrewOneAsset from "@/assets/custom-signs/fabrication-crew-1.webp.asset.json";
+import fabricationCrewThreeAsset from "@/assets/custom-signs/fabrication-crew-3.webp.asset.json";
+import steakstopLeadAsset from "@/assets/custom-signs/steakstop-lead.webp.asset.json";
+import steakstopMockupAsset from "@/assets/custom-signs/steakstop-mockup.webp.asset.json";
+import steakstopShopAsset from "@/assets/custom-signs/steakstop-shop.webp.asset.json";
+import steakstopInstalledAsset from "@/assets/custom-signs/steakstop-installed.webp.asset.json";
+import steakstopDuskAsset from "@/assets/custom-signs/steakstop-dusk.webp.asset.json";
 
 const MobileVendorSigns = () => {
   const navigate = useNavigate();
@@ -181,6 +190,196 @@ const MobileVendorSigns = () => {
           <GallerySection config={foodTruckSignsConfig.gallery} />
         </div>
       </section>
+
+      {/* Founder introduction */}
+      <section className="border-t border-border/60 bg-muted/50 py-16 md:py-20">
+        <div className="container mx-auto px-6">
+          <div className="mx-auto grid max-w-6xl items-center gap-10 md:grid-cols-[0.8fr_1.2fr] md:gap-16">
+            <div className="mx-auto w-full max-w-md overflow-hidden rounded border border-border/60 bg-background">
+              <img
+                src={jerradPortraitAsset.url}
+                alt="Jerrad, founder of Vintage Marquee Lights"
+                className="max-h-[450px] w-full object-contain"
+                loading="lazy"
+                width={1122}
+                height={1402}
+              />
+            </div>
+            <div>
+              <p className="mb-4 text-xs font-bold uppercase tracking-[0.15em] text-primary">
+                Meet the founder
+              </p>
+              <h2 className="mb-5 text-3xl font-bold leading-tight text-foreground md:text-4xl">
+                Hi, I’m Jerrad, founder of Vintage Marquee Lights.
+              </h2>
+              <p className="mb-5 text-lg leading-relaxed text-muted-foreground">
+                Since VML started in 2008, we’ve helped customers turn their ideas into custom
+                pieces that feel right at home in their business or space.
+              </p>
+              <p className="text-lg leading-relaxed text-muted-foreground">
+                You’ll work with me and my team to figure out the size, style, and details.
+                Bring your logo, a sketch, or an idea you’re not quite sure how to explain
+                yet—we’ll take it from there.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* STEAKSTOP project story */}
+      <section className="border-y border-border/60 bg-muted/50 py-16 md:py-20">
+        <div className="container mx-auto px-6">
+          <div className="mx-auto max-w-6xl">
+            <div className="grid items-center gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:gap-14">
+              <div>
+                <p className="mb-4 text-xs font-bold uppercase tracking-[0.15em] text-primary">
+                  A custom project · STEAKSTOP
+                </p>
+                <h2 className="mb-5 text-3xl font-bold leading-tight text-foreground md:text-5xl">
+                  From a design to the top of the trailer.
+                </h2>
+                <p className="text-lg leading-relaxed text-muted-foreground">
+                  STEAKSTOP began as a design for dimensional illuminated letters. The finished
+                  sign pairs bold letterforms with a red finish and warm globe bulbs, then brings
+                  the name above the trailer as a complete rooftop installation.
+                </p>
+              </div>
+              <figure className="min-w-0">
+                <div className="overflow-hidden rounded border border-border/60 bg-background">
+                  <img
+                    src={steakstopLeadAsset.url}
+                    alt="STEAKSTOP illuminated red letters installed above a black food trailer"
+                    className="h-auto w-full object-contain"
+                    loading="lazy"
+                    width={1206}
+                    height={1156}
+                  />
+                </div>
+                <figcaption className="pt-3 text-sm text-muted-foreground">
+                  The finished STEAKSTOP sign installed above the trailer.
+                </figcaption>
+              </figure>
+            </div>
+
+            <div className="mt-16 border-t border-border/70 pt-14 md:mt-20 md:pt-16">
+              <p className="mb-3 text-xs font-bold uppercase tracking-[0.15em] text-primary">
+                From concept to finished piece
+              </p>
+              <div className="grid items-start gap-6 md:grid-cols-2">
+                <figure className="min-w-0">
+                  <div className="flex min-h-[220px] items-center overflow-hidden rounded border border-border/60 bg-background p-4 sm:min-h-[300px] sm:p-6">
+                    <img
+                      src={steakstopMockupAsset.url}
+                      alt="Design mockup of gold illuminated STEAKSTOP letters"
+                      className="h-auto w-full object-contain"
+                      loading="lazy"
+                      width={1348}
+                      height={308}
+                    />
+                  </div>
+                  <figcaption className="pt-3 text-sm text-muted-foreground">Design mockup</figcaption>
+                </figure>
+                <figure className="min-w-0">
+                  <div className="overflow-hidden rounded border border-border/60 bg-background">
+                    <img
+                      src={steakstopShopAsset.url}
+                      alt="Finished red illuminated STEAKSTOP letters standing in the shop"
+                      className="aspect-[4/3] h-auto w-full object-contain"
+                      loading="lazy"
+                      width={1440}
+                      height={1080}
+                    />
+                  </div>
+                  <figcaption className="pt-3 text-sm text-muted-foreground">Finished in the shop</figcaption>
+                </figure>
+              </div>
+            </div>
+
+            <div className="mt-16 border-t border-border/70 pt-14 md:mt-20 md:pt-16">
+              <p className="mb-3 text-xs font-bold uppercase tracking-[0.15em] text-primary">
+                On the trailer
+              </p>
+              <h3 className="mb-8 text-3xl font-bold leading-tight text-foreground md:text-4xl">
+                Two views of the finished sign.
+              </h3>
+              <div className="grid items-start gap-6 md:grid-cols-2">
+                <figure className="min-w-0">
+                  <div className="overflow-hidden rounded border border-border/60 bg-background">
+                    <img
+                      src={steakstopInstalledAsset.url}
+                      alt="Straight-on view of illuminated STEAKSTOP letters above the food trailer"
+                      className="h-auto w-full object-contain"
+                      loading="lazy"
+                      width={1206}
+                      height={883}
+                    />
+                  </div>
+                  <figcaption className="pt-3 text-sm text-muted-foreground">
+                    The full rooftop sign above the service windows.
+                  </figcaption>
+                </figure>
+                <figure className="min-w-0">
+                  <div className="overflow-hidden rounded border border-border/60 bg-background">
+                    <img
+                      src={steakstopDuskAsset.url}
+                      alt="Close angled view of illuminated red STEAKSTOP letters at dusk"
+                      className="h-auto w-full object-contain"
+                      loading="lazy"
+                      width={1206}
+                      height={895}
+                    />
+                  </div>
+                  <figcaption className="pt-3 text-sm text-muted-foreground">
+                    Illuminated letters viewed at dusk.
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+
+            <div className="mt-16 border-t border-border/70 pt-14 md:mt-20 md:pt-16">
+              <h3 className="mb-5 text-3xl font-bold leading-tight text-foreground md:text-4xl">
+                A look inside the shop
+              </h3>
+              <figure>
+                <div className="grid gap-5 md:grid-cols-3 md:gap-4 lg:gap-5">
+                  {[
+                    {
+                      src: fabricationCrewWeldingAsset.url,
+                      alt: "Fabrication crew member welding a round metal sign in the shop",
+                    },
+                    {
+                      src: fabricationCrewOneAsset.url,
+                      alt: "Fabrication crew member welding a curved metal piece at a worktable",
+                    },
+                    {
+                      src: fabricationCrewThreeAsset.url,
+                      alt: "Fabrication crew member grinding a metal piece at a worktable",
+                    },
+                  ].map((photo) => (
+                    <div
+                      key={photo.src}
+                      className="aspect-[2/3] w-full overflow-hidden rounded border border-border/60 bg-background"
+                    >
+                      <img
+                        src={photo.src}
+                        alt={photo.alt}
+                        className="h-full w-full object-contain"
+                        loading="lazy"
+                        width={1000}
+                        height={1500}
+                      />
+                    </div>
+                  ))}
+                </div>
+                <figcaption className="pt-3 text-sm text-muted-foreground">
+                  Behind the scenes with our fabrication crew.
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Custom Food Truck & Trailer Signage — SEO Depth Section */}
       <section className="py-10 px-4 bg-gradient-to-b from-background to-muted/20">
         <div className="max-w-6xl mx-auto">
