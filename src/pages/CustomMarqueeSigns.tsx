@@ -371,6 +371,41 @@ const CustomMarqueeSigns = () => {
           </div>
         </section>
 
+        {/* SECTION — FOUNDER INTRODUCTION */}
+        <section className="border-t border-border/60 bg-muted/50 py-16 md:py-20">
+          <div className="container mx-auto px-6">
+            <div className="mx-auto grid max-w-6xl items-center gap-10 md:grid-cols-[0.8fr_1.2fr] md:gap-16">
+              <div className="mx-auto w-full max-w-md overflow-hidden rounded border border-border/60 bg-background">
+                <img
+                  src={img.jerradPortrait}
+                  alt="Jerrad, founder of Vintage Marquee Lights"
+                  className="max-h-[450px] w-full object-contain"
+                  loading="lazy"
+                  width={1122}
+                  height={1402}
+                />
+              </div>
+              <div>
+                <p className="mb-4 text-xs font-bold uppercase tracking-[0.15em] text-primary">
+                  Meet the founder
+                </p>
+                <h2 className="mb-5 text-3xl font-bold leading-tight text-foreground md:text-4xl">
+                  Hi, I’m Jerrad, founder of Vintage Marquee Lights.
+                </h2>
+                <p className="mb-5 text-lg leading-relaxed text-muted-foreground">
+                  Since VML started in 2008, we’ve helped customers turn their ideas into custom
+                  pieces that feel right at home in their business or space.
+                </p>
+                <p className="text-lg leading-relaxed text-muted-foreground">
+                  You’ll work with me and my team to figure out the size, style, and details.
+                  Bring your logo, a sketch, or an idea you’re not quite sure how to explain
+                  yet—we’ll take it from there.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* SECTION 3 — EXIT ZERO CASE STUDY */}
         <section className="border-y border-border/60 bg-muted/50 py-16 md:py-20">
           <div className="container mx-auto px-6">
@@ -604,41 +639,6 @@ const CustomMarqueeSigns = () => {
               </li>
             ))}
           </ol>
-        </section>
-
-        {/* SECTION 8 — FOUNDER INTRODUCTION */}
-        <section className="border-t border-border/60 bg-muted/50 py-16 md:py-20">
-          <div className="container mx-auto px-6">
-            <div className="mx-auto grid max-w-6xl items-center gap-10 md:grid-cols-[0.8fr_1.2fr] md:gap-16">
-              <div className="mx-auto w-full max-w-md overflow-hidden rounded border border-border/60 bg-background">
-                <img
-                  src={img.jerradPortrait}
-                  alt="Jerrad, founder of Vintage Marquee Lights"
-                  className="max-h-[450px] w-full object-contain"
-                  loading="lazy"
-                  width={1122}
-                  height={1402}
-                />
-              </div>
-              <div>
-                <p className="mb-4 text-xs font-bold uppercase tracking-[0.15em] text-primary">
-                  Meet the founder
-                </p>
-                <h2 className="mb-5 text-3xl font-bold leading-tight text-foreground md:text-4xl">
-                  Hi, I’m Jerrad, founder of Vintage Marquee Lights.
-                </h2>
-                <p className="mb-5 text-lg leading-relaxed text-muted-foreground">
-                  Since VML started in 2008, we’ve helped customers turn their ideas into custom
-                  pieces that feel right at home in their business or space.
-                </p>
-                <p className="text-lg leading-relaxed text-muted-foreground">
-                  You’ll work with me and my team to figure out the size, style, and details.
-                  Bring your logo, a sketch, or an idea you’re not quite sure how to explain
-                  yet—we’ll take it from there.
-                </p>
-              </div>
-            </div>
-          </div>
         </section>
 
         {/* SECTION 9 — FINAL CTA */}
