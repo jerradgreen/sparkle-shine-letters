@@ -612,7 +612,7 @@ const CustomMarqueeSigns = () => {
         </section>
 
         {/* SECTION 5 — MADE FOR YOUR SPACE */}
-        <section className="container mx-auto px-6 py-14">
+        <section className="container mx-auto px-6 py-12 md:py-14">
           <div className="mx-auto max-w-5xl">
             <div className="mb-8 max-w-3xl">
               <h2 className="mb-4 text-3xl font-bold text-foreground md:text-4xl">
@@ -625,12 +625,10 @@ const CustomMarqueeSigns = () => {
               </p>
             </div>
 
-            <ul className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
-              {applications.map((item) => (
-                <li
-                  key={item}
-                  className="rounded-xl border border-border/60 bg-card px-4 py-3 text-center text-sm font-medium text-foreground shadow-sm"
-                >
+            <ul className="flex flex-wrap gap-x-0 gap-y-3 border-y border-border/70 py-5">
+              {applications.map((item, index) => (
+                <li key={item} className="flex items-center text-sm font-semibold text-foreground md:text-base">
+                  {index > 0 && <span aria-hidden="true" className="mx-3 text-primary/50">/</span>}
                   {item}
                 </li>
               ))}
@@ -646,51 +644,47 @@ const CustomMarqueeSigns = () => {
         </section>
 
         {/* SECTION 6 — WHY VINTAGE MARQUEE LIGHTS */}
-        <section className="border-y border-border/60 bg-muted/30 py-14">
+        <section className="bg-foreground py-12 text-background md:py-14">
           <div className="container mx-auto px-6">
-            <h2 className="mb-10 text-center text-3xl font-bold text-foreground md:text-4xl">
+            <h2 className="mb-8 text-3xl font-bold text-background md:text-4xl">
               Why Vintage Marquee Lights?
             </h2>
-            <div className="mx-auto grid max-w-6xl gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="grid max-w-6xl sm:grid-cols-2 lg:grid-cols-4">
               {valuePoints.map((point) => (
-                <Card key={point.title} className="h-full">
-                  <CardContent className="p-6">
-                    <h3 className="mb-3 text-sm font-bold uppercase tracking-[0.15em] text-primary">
-                      {point.title}
-                    </h3>
-                    <p className="leading-relaxed text-muted-foreground">{point.description}</p>
-                  </CardContent>
-                </Card>
+                <div key={point.title} className="border-b border-background/25 py-6 last:border-b-0 sm:border-r sm:px-6 sm:first:pl-0 sm:[&:nth-child(2)]:border-r-0 sm:[&:nth-child(3)]:border-b-0 sm:[&:nth-child(3)]:pl-0 sm:[&:nth-child(4)]:border-b-0 lg:border-b-0 lg:[&:nth-child(2)]:border-r lg:[&:nth-child(3)]:pl-6">
+                  <h3 className="mb-3 text-lg font-bold text-background">{point.title}</h3>
+                  <p className="text-sm leading-relaxed text-background/80">{point.description}</p>
+                </div>
               ))}
             </div>
           </div>
         </section>
 
         {/* SECTION 7 — HOW IT WORKS */}
-        <section className="container mx-auto px-6 py-14">
-          <h2 className="mb-10 text-center text-3xl font-bold text-foreground md:text-4xl">
+        <section className="container mx-auto px-6 pb-8 pt-12 md:pt-14">
+          <h2 className="mb-9 text-center text-3xl font-bold text-foreground md:text-4xl">
             From Your Idea to Your Sign
           </h2>
-          <ol className="mx-auto grid max-w-6xl gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <ol className="relative mx-auto max-w-6xl before:absolute before:bottom-4 before:left-5 before:top-4 before:w-px before:bg-border md:grid md:grid-cols-4 md:gap-6 md:before:bottom-auto md:before:left-[12.5%] md:before:right-[12.5%] md:before:top-5 md:before:h-px md:before:w-auto">
             {steps.map((step, index) => (
               <li
                 key={step.title}
-                className="rounded-2xl border border-border/60 bg-card p-6 shadow-sm"
+                className="relative grid grid-cols-[2.5rem_1fr] gap-x-5 pb-8 last:pb-0 md:block md:pb-0 md:text-center"
               >
-                <span className="mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-primary text-lg font-bold text-primary-foreground">
+                <span className="relative z-10 flex h-10 w-10 items-center justify-center rounded-full bg-primary text-lg font-bold text-primary-foreground md:mx-auto md:mb-5">
                   {index + 1}
                 </span>
-                <h3 className="mb-2 text-lg font-bold text-foreground">{step.title}</h3>
-                <p className="text-sm leading-relaxed text-muted-foreground">
-                  {step.description}
-                </p>
+                <div>
+                  <h3 className="mb-2 text-lg font-bold text-foreground">{step.title}</h3>
+                  <p className="text-sm leading-relaxed text-muted-foreground">{step.description}</p>
+                </div>
               </li>
             ))}
           </ol>
         </section>
 
         {/* SECTION 9 — FINAL CTA */}
-        <section className="container mx-auto px-6 py-14">
+        <section className="container mx-auto px-6 pb-12 pt-6 md:pb-14 md:pt-8">
           <div className="mx-auto max-w-4xl rounded-3xl bg-primary p-8 text-center text-primary-foreground md:p-12">
             <h2 className="mb-4 text-3xl font-bold md:text-4xl">
               Have a logo you’d like to see in lights?
