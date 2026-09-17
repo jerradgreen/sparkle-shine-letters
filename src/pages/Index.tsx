@@ -8,6 +8,8 @@ import { HomeHighlightsSection } from "@/components/HomeHighlightsSection";
 import { foodTruckSignsConfig, logoSignsConfig, wallHangingConfig } from "@/config/templateConfigs";
 import { Star } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
+import { Button } from "@/components/ui/button";
+import jerradPortraitAsset from "@/assets/custom-signs/jerrad-approved-portrait.webp.asset.json";
 
 // All images now loaded from Shopify CDN for optimal performance with explicit dimensions
 const getResponsiveShopifyImageSet = (imageUrl: string) => {
@@ -104,6 +106,7 @@ const signStyles = [
 const Index = () => {
   const navigate = useNavigate();
   const [showInstagram, setShowInstagram] = useState(false);
+  const [showAllReviews, setShowAllReviews] = useState(false);
   const instagramRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -246,8 +249,41 @@ const Index = () => {
         {/* Three Features Section */}
         <HomeHighlightsSection />
 
+        {/* Founder introduction */}
+        <section className="border-t border-border/60 bg-muted/50 py-16 md:py-20">
+          <div className="mx-auto grid max-w-6xl items-center gap-10 px-2 md:grid-cols-[0.8fr_1.2fr] md:gap-16 md:px-0">
+            <div className="mx-auto w-full max-w-md overflow-hidden rounded border border-border/60 bg-background">
+              <img
+                src={jerradPortraitAsset.url}
+                alt="Jerrad, founder of Vintage Marquee Lights"
+                className="max-h-[450px] w-full object-contain"
+                loading="lazy"
+                width={1122}
+                height={1402}
+              />
+            </div>
+            <div>
+              <p className="mb-4 text-xs font-bold uppercase tracking-[0.15em] text-primary">
+                Meet the founder
+              </p>
+              <h2 className="mb-5 text-3xl font-bold leading-tight text-foreground md:text-4xl">
+                Hi, I’m Jerrad, founder of Vintage Marquee Lights.
+              </h2>
+              <p className="mb-5 text-lg leading-relaxed text-muted-foreground">
+                Since VML started in 2008, we’ve helped customers turn their ideas into custom
+                pieces that feel right at home in their business or space.
+              </p>
+              <p className="text-lg leading-relaxed text-muted-foreground">
+                You’ll work with me and my team to figure out the size, style, and details.
+                Bring your logo, a sketch, or an idea you’re not quite sure how to explain
+                yet—we’ll take it from there.
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* Text-Only Reviews Section */}
-        <section className="mb-12 max-w-7xl mx-auto" aria-labelledby="homepage-reviews-heading">
+        <section className="mx-auto mb-12 max-w-4xl py-12" aria-labelledby="homepage-reviews-heading">
           <div className="text-center mb-8">
             <h2 id="homepage-reviews-heading" className="text-3xl font-bold text-foreground mb-3">
               What Customers Say About Vintage Marquee Lights
@@ -257,26 +293,39 @@ const Index = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-            {homepageReviews.map((review, index) => (
-              <Card key={`${review.name}-${index}`} className="h-full bg-card border-border shadow-sm">
-                <CardContent className="p-5 flex h-full flex-col">
-                  <div className="flex mb-3" aria-label={`${review.rating} star review`}>
+          <div id="homepage-review-list" className="border-y border-border/70">
+            {homepageReviews.slice(0, showAllReviews ? homepageReviews.length : 3).map((review, index) => (
+              <article key={`${review.name}-${index}`} className="border-b border-border/70 py-6 last:border-b-0 md:grid md:grid-cols-[10rem_1fr] md:gap-8 md:py-7">
+                <div className="mb-3 md:mb-0">
+                  <div className="mb-2 flex" aria-label={`${review.rating} star review`}>
                     {Array.from({ length: review.rating }).map((_, star) => (
                       <Star key={star} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
                     ))}
                   </div>
-                  <p className="text-sm text-muted-foreground italic leading-relaxed flex-1">
+                  <p className="font-semibold text-foreground">{review.name}</p>
+                  <p className="mt-1 text-xs leading-relaxed text-muted-foreground">{review.role}</p>
+                </div>
+                <div>
+                  <p className="text-base italic leading-relaxed text-muted-foreground">
                     &ldquo;{review.content}&rdquo;
                   </p>
-                  <div className="mt-4 border-t border-border pt-3">
-                    <p className="font-semibold text-foreground">{review.name}</p>
-                    <p className="text-xs text-muted-foreground">{review.role}</p>
-                  </div>
-                </CardContent>
-              </Card>
+                </div>
+              </article>
             ))}
           </div>
+          {homepageReviews.length > 3 && (
+            <div className="mt-6 text-center">
+              <Button
+                type="button"
+                variant="outline"
+                aria-expanded={showAllReviews}
+                aria-controls="homepage-review-list"
+                onClick={() => setShowAllReviews((current) => !current)}
+              >
+                {showAllReviews ? "Show fewer reviews" : "Show more reviews"}
+              </Button>
+            </div>
+          )}
         </section>
 
         {/* Instagram Gallery Section - Lazy loaded for performance */}

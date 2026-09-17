@@ -20,3 +20,6 @@
 - [x] Verify exact copy, all eight images, desktop/mobile order and overflow, metadata, and quote route without submission.
 - [x] Add the approved founder, STEAKSTOP project story, and fabrication crew sections to `/mobile-vendor-signs` only.
 - [x] Verify the build, desktop/mobile layout, all nine images, section order, metadata, and existing quote form without submission.
+- [ ] Add the approved founder introduction to the homepage and replace the rental family portrait.
+- [ ] Convert homepage reviews to an accessible expandable vertical list without changing review content.
+- [ ] Verify affected routes at desktop and mobile, portrait framing, review controls, and preserved quote links.
