@@ -13,6 +13,7 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { RentalGuideDownloadSection } from "@/components/RentalGuideDownloadSection";
 import { LetterViewer3D } from "@/components/LetterViewer3D";
+import jerradPortraitAsset from "@/assets/custom-signs/jerrad-approved-portrait.webp.asset.json";
 
 // Locally hosted optimized images for faster LCP
 const heroImage = "/images/hero-rental-setup.webp";
@@ -627,9 +628,9 @@ const RentalInventory = () => {
               {/* Image - takes 1 column */}
               <div className="lg:col-span-1">
               <PerformantImage 
-                src="https://cdn.shopify.com/s/files/1/1403/8315/files/family_lores.webp?v=1759926679" 
-                alt="Jerrad Green and family, founders of Vintage Marquee Lights rental business" 
-                className="rounded-lg shadow-lg w-full h-auto object-cover"
+                src={jerradPortraitAsset.url}
+                alt="Jerrad Green, founder of Vintage Marquee Lights"
+                className="max-h-[450px] w-full rounded-lg object-contain shadow-lg"
                 loading="lazy"
                 fetchPriority="low"
                 sizes="(max-width: 768px) calc(100vw - 2rem), (max-width: 1024px) calc(100vw - 4rem), 33vw"
