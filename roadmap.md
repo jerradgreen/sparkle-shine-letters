@@ -14,5 +14,5 @@
 - [x] Verify the three-photo feature at desktop and 390px mobile, then stop before deployment.
 - [x] Redesign the three approved lower `/custom-marquee-signs` sections without changing their content or behavior.
 - [x] Verify desktop/mobile layout, contrast, order, and the existing quote destination without submission.
-- [ ] Add approved Exit Zero project proof and compact founder introduction to `/3d-logos` only.
-- [ ] Verify build, desktop/mobile images and overflow, metadata preservation, and the existing quote form without submission.
+- [x] Add approved Exit Zero project proof and compact founder introduction to `/3d-logos` only.
+- [x] Verify build, desktop/mobile images and overflow, metadata preservation, and the existing quote form without submission.
