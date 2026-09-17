@@ -13,6 +13,14 @@ import heroImage from "@/assets/wall-hanging.jpg";
 import { Check } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { useNavigate } from "react-router-dom";
+import jerradPortraitAsset from "@/assets/custom-signs/jerrad-approved-portrait.webp.asset.json";
+import fabricationCrewWeldingAsset from "@/assets/custom-signs/fabrication-crew-welding.webp.asset.json";
+import fabricationCrewOneAsset from "@/assets/custom-signs/fabrication-crew-1.webp.asset.json";
+import fabricationCrewThreeAsset from "@/assets/custom-signs/fabrication-crew-3.webp.asset.json";
+import coldBeerInstalledAsset from "@/assets/custom-signs/cold-beer-installed.webp.asset.json";
+import coldBeerSketchAsset from "@/assets/custom-signs/cold-beer-sketch.webp.asset.json";
+import coldBeerDesignAsset from "@/assets/custom-signs/cold-beer-design.webp.asset.json";
+import coldBeerFinishedAsset from "@/assets/custom-signs/cold-beer-finished.webp.asset.json";
 
 const WallHangingMarqueeSigns = () => {
   const navigate = useNavigate();
@@ -236,6 +244,162 @@ const WallHangingMarqueeSigns = () => {
       <section id="gallery" className="py-10 bg-gradient-to-b from-background to-muted/20">
         <div className="container mx-auto px-4">
           <GallerySection config={wallHangingConfig.gallery} />
+        </div>
+      </section>
+
+      {/* Founder introduction */}
+      <section className="border-t border-border/60 bg-muted/50 py-16 md:py-20">
+        <div className="container mx-auto px-6">
+          <div className="mx-auto grid max-w-6xl items-center gap-10 md:grid-cols-[0.8fr_1.2fr] md:gap-16">
+            <div className="mx-auto w-full max-w-md overflow-hidden rounded border border-border/60 bg-background">
+              <img
+                src={jerradPortraitAsset.url}
+                alt="Jerrad, founder of Vintage Marquee Lights"
+                className="max-h-[450px] w-full object-contain"
+                loading="lazy"
+                width={1122}
+                height={1402}
+              />
+            </div>
+            <div>
+              <p className="mb-4 text-xs font-bold uppercase tracking-[0.15em] text-primary">
+                Meet the founder
+              </p>
+              <h2 className="mb-5 text-3xl font-bold leading-tight text-foreground md:text-4xl">
+                Hi, I’m Jerrad, founder of Vintage Marquee Lights.
+              </h2>
+              <p className="mb-5 text-lg leading-relaxed text-muted-foreground">
+                Since VML started in 2008, we’ve helped customers turn their ideas into custom
+                pieces that feel right at home in their business or space.
+              </p>
+              <p className="text-lg leading-relaxed text-muted-foreground">
+                You’ll work with me and my team to figure out the size, style, and details.
+                Bring your logo, a sketch, or an idea you’re not quite sure how to explain
+                yet—we’ll take it from there.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Cold Beer project story */}
+      <section className="border-y border-border/60 bg-background py-16 md:py-20">
+        <div className="container mx-auto px-6">
+          <div className="mx-auto max-w-6xl">
+            <div className="grid items-center gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-14">
+              <div>
+                <p className="mb-4 text-xs font-bold uppercase tracking-[0.15em] text-primary">
+                  A wall-hanging project
+                </p>
+                <h2 className="mb-5 text-3xl font-bold leading-tight text-foreground md:text-5xl">
+                  From a pencil sketch to lights on the wall.
+                </h2>
+                <p className="text-lg leading-relaxed text-muted-foreground">
+                  A few pencil lines were enough to get this project started. The sketch became a design mockup, then a finished wall-hanging piece with script lettering, bold block letters, and an illuminated arrow.
+                </p>
+              </div>
+              <figure className="min-w-0">
+                <div className="overflow-hidden rounded border border-border/60 bg-muted/30">
+                  <img
+                    src={coldBeerInstalledAsset.url}
+                    alt="Illuminated Cold Beer wall sign and arrow installed on a business exterior at night"
+                    className="h-auto w-full object-contain"
+                    loading="lazy"
+                    width={2400}
+                    height={1350}
+                  />
+                </div>
+                <figcaption className="pt-3 text-sm text-muted-foreground">
+                  The finished sign installed on the business exterior.
+                </figcaption>
+              </figure>
+            </div>
+
+            <div className="mt-14 border-t border-border/70 pt-12 md:mt-16 md:pt-14">
+              <div className="grid gap-8 md:grid-cols-3 md:gap-5">
+                {[
+                  {
+                    title: "Original pencil sketch",
+                    src: coldBeerSketchAsset.url,
+                    alt: "Pencil sketch of the Cold Beer wall sign with a left-pointing arrow",
+                    width: 1800,
+                    height: 2400,
+                  },
+                  {
+                    title: "Design mockup",
+                    src: coldBeerDesignAsset.url,
+                    alt: "Design mockup of blue Cold lettering, gold Beer lettering and an illuminated arrow",
+                    width: 990,
+                    height: 935,
+                  },
+                  {
+                    title: "Finished piece",
+                    src: coldBeerFinishedAsset.url,
+                    alt: "Finished illuminated Cold Beer wall sign with a left-pointing arrow",
+                    width: 2400,
+                    height: 2400,
+                  },
+                ].map((stage) => (
+                  <figure key={stage.title} className="min-w-0">
+                    <div className="flex min-h-[320px] items-center justify-center overflow-hidden rounded border border-border/60 bg-muted/30 sm:min-h-[420px] md:h-[430px] md:min-h-0">
+                      <img
+                        src={stage.src}
+                        alt={stage.alt}
+                        className="h-auto max-h-full w-full object-contain"
+                        loading="lazy"
+                        width={stage.width}
+                        height={stage.height}
+                      />
+                    </div>
+                    <figcaption className="pt-3 text-base font-semibold text-foreground">
+                      {stage.title}
+                    </figcaption>
+                  </figure>
+                ))}
+              </div>
+            </div>
+
+            <div className="mt-14 border-t border-border/70 pt-12 md:mt-16 md:pt-14">
+              <p className="mb-5 text-xs font-bold uppercase tracking-[0.15em] text-primary">
+                A look inside the shop
+              </p>
+              <figure>
+                <div className="grid gap-5 md:grid-cols-3 md:gap-4 lg:gap-5">
+                  {[
+                    {
+                      src: fabricationCrewWeldingAsset.url,
+                      alt: "Fabrication crew member welding a round metal sign in the shop",
+                    },
+                    {
+                      src: fabricationCrewOneAsset.url,
+                      alt: "Fabrication crew member welding a curved metal piece at a worktable",
+                    },
+                    {
+                      src: fabricationCrewThreeAsset.url,
+                      alt: "Fabrication crew member grinding a metal piece at a worktable",
+                    },
+                  ].map((photo) => (
+                    <div
+                      key={photo.src}
+                      className="aspect-[2/3] w-full overflow-hidden rounded border border-border/60 bg-muted/30"
+                    >
+                      <img
+                        src={photo.src}
+                        alt={photo.alt}
+                        className="h-full w-full object-contain"
+                        loading="lazy"
+                        width={1000}
+                        height={1500}
+                      />
+                    </div>
+                  ))}
+                </div>
+                <figcaption className="pt-3 text-sm text-muted-foreground">
+                  Behind the scenes with our fabrication crew.
+                </figcaption>
+              </figure>
+            </div>
+          </div>
         </div>
       </section>
 
