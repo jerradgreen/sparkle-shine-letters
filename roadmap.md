@@ -23,3 +23,8 @@
 - [x] Add the approved founder introduction to the homepage and replace the rental family portrait.
 - [x] Convert homepage reviews to an accessible expandable vertical list without changing review content.
 - [x] Verify affected routes at desktop and mobile, portrait framing, review controls, and preserved quote links.
+
+- [ ] Add the approved founder, Cold Beer project story, and fabrication crew feature to `/wall-hanging-signs` only.
+- [ ] Optimize and permanently host the four supplied Cold Beer visuals, including the rendered PDF mockup.
+- [ ] Verify build, desktop/mobile layout, all eight images, metadata, overflow, and wall-hanging quote route without submission.
+- [ ] Stop before deployment; publication remains user-controlled.
