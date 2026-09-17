@@ -25,6 +25,8 @@ import exitZeroInstalledAsset from "@/assets/custom-signs/exit-zero-installed.we
 import exitZeroMilkshakeAsset from "@/assets/custom-signs/exit-zero-milkshake.webp.asset.json";
 import jerradPortraitAsset from "@/assets/custom-signs/jerrad-approved-portrait.webp.asset.json";
 import fabricationCrewWeldingAsset from "@/assets/custom-signs/fabrication-crew-welding.webp.asset.json";
+import fabricationCrewOneAsset from "@/assets/custom-signs/fabrication-crew-1.webp.asset.json";
+import fabricationCrewThreeAsset from "@/assets/custom-signs/fabrication-crew-3.webp.asset.json";
 
 const PAGE_URL = "https://inventory.vintagemarqueelights.com/custom-marquee-signs";
 const PAGE_TITLE = "Custom Marquee Signs & Custom Signs | Vintage Marquee Lights";
@@ -72,6 +74,8 @@ const img = {
   exitZeroMilkshake: exitZeroMilkshakeAsset.url,
   jerradPortrait: jerradPortraitAsset.url,
   fabricationCrewWelding: fabricationCrewWeldingAsset.url,
+  fabricationCrewOne: fabricationCrewOneAsset.url,
+  fabricationCrewThree: fabricationCrewThreeAsset.url,
 };
 
 type SignStyle = {
@@ -479,26 +483,6 @@ const CustomMarqueeSigns = () => {
                   </p>
                 </div>
 
-                <div className="mt-12 border-t border-border/70 pt-10 md:mt-14">
-                  <p className="mb-4 text-xs font-bold uppercase tracking-[0.15em] text-primary">
-                    A look inside the shop
-                  </p>
-                  <figure className="max-w-4xl">
-                    <div className="flex max-h-[440px] justify-center overflow-hidden rounded border border-border/60 bg-background">
-                      <img
-                        src={img.fabricationCrewWelding}
-                        alt="Fabrication crew member welding a round metal sign in the shop"
-                        className="max-h-[440px] h-auto w-auto max-w-full object-contain"
-                        loading="lazy"
-                        width={1000}
-                        height={1500}
-                      />
-                    </div>
-                    <figcaption className="pt-3 text-sm text-muted-foreground">
-                      Behind the scenes with our fabrication crew.
-                    </figcaption>
-                  </figure>
-                </div>
               </div>
 
               <div className="mt-16 border-t border-border/70 pt-14 md:mt-20 md:pt-16">
@@ -544,6 +528,47 @@ const CustomMarqueeSigns = () => {
                     </figcaption>
                   </figure>
                 </div>
+              </div>
+
+              <div className="mt-16 border-t border-border/70 pt-14 md:mt-20 md:pt-16">
+                <p className="mb-5 text-xs font-bold uppercase tracking-[0.15em] text-primary">
+                  A look inside the shop
+                </p>
+                <figure>
+                  <div className="grid gap-5 md:grid-cols-3 md:gap-4 lg:gap-5">
+                    {[
+                      {
+                        src: img.fabricationCrewWelding,
+                        alt: "Fabrication crew member welding a round metal sign in the shop",
+                      },
+                      {
+                        src: img.fabricationCrewOne,
+                        alt: "Fabrication crew member welding a curved metal piece at a worktable",
+                      },
+                      {
+                        src: img.fabricationCrewThree,
+                        alt: "Fabrication crew member grinding a metal piece at a worktable",
+                      },
+                    ].map((photo) => (
+                      <div
+                        key={photo.src}
+                        className="aspect-[2/3] w-full overflow-hidden rounded border border-border/60 bg-background"
+                      >
+                        <img
+                          src={photo.src}
+                          alt={photo.alt}
+                          className="h-full w-full object-contain"
+                          loading="lazy"
+                          width={1000}
+                          height={1500}
+                        />
+                      </div>
+                    ))}
+                  </div>
+                  <figcaption className="pt-3 text-sm text-muted-foreground">
+                    Behind the scenes with our fabrication crew.
+                  </figcaption>
+                </figure>
               </div>
             </div>
           </div>
