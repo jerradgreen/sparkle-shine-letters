@@ -306,6 +306,9 @@
         fbq.version = '2.0';
         fbq.queue = [];
       }
+      // Queue initialization before React can emit route or product events.
+      fbq('init', '443717751929130');
+      fbq('track', 'PageView');
 
       (function loadMarketingScriptsAfterFirstPaint() {
         var loadScripts = function() {
@@ -319,8 +322,6 @@
           metaPixelScript.async = true;
           metaPixelScript.src = 'https://connect.facebook.net/en_US/fbevents.js';
           document.head.appendChild(metaPixelScript);
-          fbq('init', '443717751929130');
-          fbq('track', 'PageView');
         };
 
         var schedule = function() {
