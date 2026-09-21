@@ -293,10 +293,19 @@
     <meta name="twitter:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/3KIOt6s4WzOvOTmqWoU6zPKHEVx2/social-images/social-1771075348296-custom_collage2.webp">
     
     <script>
-      window.fbq = window.fbq || function(){(window.fbq.q = window.fbq.q || []).push(arguments);};
-      window._fbq = window.fbq;
-      window.fbq.loaded = true;
-      window.fbq.version = '2.0';
+      // Match Meta's queue contract before and after the async SDK loads.
+      if (!window.fbq) {
+        var fbq = window.fbq = function() {
+          fbq.callMethod
+            ? fbq.callMethod.apply(fbq, arguments)
+            : fbq.queue.push(arguments);
+        };
+        if (!window._fbq) window._fbq = fbq;
+        fbq.push = fbq;
+        fbq.loaded = true;
+        fbq.version = '2.0';
+        fbq.queue = [];
+      }
 
       (function loadMarketingScriptsAfterFirstPaint() {
         var loadScripts = function() {
