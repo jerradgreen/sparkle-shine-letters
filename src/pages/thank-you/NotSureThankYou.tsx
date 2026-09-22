@@ -6,13 +6,14 @@ import { Button } from "@/components/ui/button";
 import { CheckCircle } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { trackLeadOnce } from "@/lib/analytics";
+import { trackMetaLeadOnce } from "@/lib/metaAnalytics";
 
 const NotSureThankYou = () => {
   const [searchParams] = useSearchParams();
   const entryId = searchParams.get("entry_id");
 
   useEffect(() => {
-    (window as any).fbq?.('track', 'Lead');
+    trackMetaLeadOnce("not-sure", entryId);
     trackLeadOnce("not-sure", "Undecided Sign Type", entryId);
   }, [entryId]);
   return (

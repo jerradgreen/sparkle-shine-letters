@@ -1,10 +1,20 @@
 import { useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
 import { trackPageView } from "@/lib/analytics";
+import { trackMetaRoute } from "@/lib/metaAnalytics";
 
 const GA4RouteTracker = () => {
   const location = useLocation();
   const isFirstRender = useRef(true);
+  const lastMetaRoute = useRef<string | null>(null);
+
+  useEffect(() => {
+    const route = location.pathname + location.search;
+    if (lastMetaRoute.current === route) return;
+    // index.html queues the initial PageView; subsequent SPA routes need one.
+    trackMetaRoute(location.pathname, lastMetaRoute.current !== null);
+    lastMetaRoute.current = route;
+  }, [location.pathname, location.search]);
 
   useEffect(() => {
     if (isFirstRender.current) {

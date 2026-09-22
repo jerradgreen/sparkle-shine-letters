@@ -6,13 +6,14 @@ import { Button } from "@/components/ui/button";
 import { CheckCircle, Mail, Download, PhoneCall, Clock } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { trackLeadOnce } from "@/lib/analytics";
+import { trackMetaLeadOnce } from "@/lib/metaAnalytics";
 
 const RentalInventoryThankYou = () => {
   const [searchParams] = useSearchParams();
   const entryId = searchParams.get("entry_id");
 
   useEffect(() => {
-    (window as any).fbq?.('track', 'Lead');
+    trackMetaLeadOnce("rental-inventory", entryId);
     trackLeadOnce("rental-inventory", "Rental Inventory Packages", entryId);
   }, [entryId]);
   const pdfUrl = "/downloads/rental-business-guide.pdf";
