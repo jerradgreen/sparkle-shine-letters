@@ -28,3 +28,32 @@ export function trackMetaRoute(pathname: string, sendPageView: boolean): void {
     // Analytics must never prevent navigation or a quote request.
   }
 }
+
+const sentMetaLeads = new Set<string>();
+const META_LEAD_TTL_MS = 90 * 24 * 60 * 60 * 1000;
+
+/** The form redirect must supply entry_id; direct thank-you visits do not count. */
+export function trackMetaLeadOnce(formType: string, entryId: string | null | undefined): void {
+  if (typeof window === "undefined" || typeof window.fbq !== "function") return;
+  const id = entryId?.trim();
+  if (!id) return;
+  const key = `vml_meta_lead:${encodeURIComponent(formType)}:${encodeURIComponent(id)}`;
+  if (sentMetaLeads.has(key)) return;
+  try {
+    const timestamp = Number(window.localStorage.getItem(key));
+    if (timestamp > 0 && Date.now() - timestamp < META_LEAD_TTL_MS) return;
+  } catch {
+    // In-memory deduplication still works when storage is unavailable.
+  }
+  try {
+    window.fbq("track", "Lead", { content_name: formType });
+    sentMetaLeads.add(key);
+    try {
+      window.localStorage.setItem(key, String(Date.now()));
+    } catch {
+      // Tracking must never interrupt the confirmation page.
+    }
+  } catch {
+    // A blocked tracker must not affect a successful quote request.
+  }
+}
