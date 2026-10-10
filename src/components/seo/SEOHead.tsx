@@ -7,7 +7,7 @@ interface SEOHeadProps {
 }
 
 export const SEOHead = ({ config, canonicalUrl }: SEOHeadProps) => {
-  const currentUrl = canonicalUrl || window.location.href;
+  const currentUrl = canonicalUrl || `https://inventory.vintagemarqueelights.com${typeof window === 'undefined' ? '/' : window.location.pathname}`;
   
   return (
     <Helmet>

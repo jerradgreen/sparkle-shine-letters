@@ -47,16 +47,14 @@ const PerformantImage = ({
   }
 
   return (
-    <div className={`relative ${className}`}>
+    <div className={`relative isolate ${className}`}>
       {showPlaceholder && !isLoaded && (
-        <div className={`absolute inset-0 bg-muted animate-pulse ${className}`} />
+        <div className={`absolute inset-0 -z-10 bg-muted animate-pulse ${className}`} />
       )}
       <img
         src={src}
         alt={alt}
-        className={`${className} ${showPlaceholder ? 'transition-opacity duration-300' : ''} ${
-          showPlaceholder ? (isLoaded ? 'opacity-100' : 'opacity-0') : 'opacity-100'
-        }`}
+        className={`${className} opacity-100`}
         style={style}
         loading={priority ? "eager" : loading}
         onLoad={handleLoad}

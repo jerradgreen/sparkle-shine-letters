@@ -41,7 +41,7 @@ const HowMuchDoesACustomMarqueeSignCost = () => {
 
           <h2 className="text-xl font-semibold text-foreground mt-8 mb-3">1. Wall-Hanging Marquee Letters</h2>
 
-          <p className="text-muted-foreground leading-relaxed mb-4">Wall-hanging letters are our most popular option for restaurants, bars, and home studios. These are priced <strong>per letter</strong>, and the cost depends on two main factors: the height of the letters and the font style. We offer sizes ranging from 14 inches up to 60 inches tall. A simple block or sans-serif font falls into our standard pricing tier, while more complex decorative, script, or serif fonts are in a higher tier because they require more intricate metalwork.</p>
+          <p className="text-muted-foreground leading-relaxed mb-4">Wall-hanging letters are our most popular option for restaurants, bars, and home studios. These are priced <strong>per letter</strong>, and the cost depends on two main factors: the height of the letters and the font style. Wall-hanging letters start at 12 inches tall, with larger sizes available. Letters 14 inches and under must use a sans-serif font; script and sizes above 72 inches require manual review. A simple block or sans-serif font falls into our standard pricing tier, while more complex decorative, script, or serif fonts are in a higher tier because they require more intricate metalwork.</p>
 
           <div className="my-8 rounded-lg overflow-hidden"><img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663459706891/TFEvERTFXDRdjsJi.jpg" alt="Cold Beer wall-hanging marquee sign in yellow and white" className="w-full object-cover" loading="lazy" /></div>
 
@@ -53,13 +53,13 @@ const HowMuchDoesACustomMarqueeSignCost = () => {
 
           <h2 className="text-xl font-semibold text-foreground mt-8 mb-3">2. Custom Logos and Designs</h2>
 
-          <p className="text-muted-foreground leading-relaxed mb-4">When you want your exact business logo or design turned into a dimensional, illuminated sign, the pricing structure changes. Because logos and designs are completely unique, we cannot price them <strong>per letter</strong>. Instead, custom logo signs are priced by the <strong>square inch</strong> and by the <strong>number of colors</strong> in the design.</p>
+          <p className="text-muted-foreground leading-relaxed mb-4">When you want your exact business logo or design turned into a dimensional, illuminated sign, the pricing structure changes. Because logos and designs are completely unique, we cannot price them <strong>per letter</strong>. Instead, custom logo signs are quoted according to their <strong>dimensions, layers, colors, and fabrication details</strong>.</p>
 
           <div className="my-8 rounded-lg overflow-hidden"><img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663459706891/coXcWHUqqJaBLMnG.jpg" alt="Harde's Watering Hole custom business sign with arrow" className="w-full object-cover" loading="lazy" /></div>
 
           <div className="my-8 rounded-lg overflow-hidden"><img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663459706891/fNNhsabUSxrFwTLQ.jpg" alt="Lost Province Brewing Co custom logo sign" className="w-full object-cover" loading="lazy" /></div>
 
-          <p className="text-muted-foreground leading-relaxed mb-4">Custom business signs start at <strong>$1,200</strong>. Most of the signs we build for bars, retail stores, and offices fall into the <strong>$2,500 to $5,000</strong> range. Larger signs or highly complex designs with multiple layers and colors will fall on the higher end of that spectrum.</p>
+          <p className="text-muted-foreground leading-relaxed mb-4">For a small layered logo up to 36 by 36 inches, a one-layer, one-color configuration is <strong>$2,400</strong>; two layers and two colors are <strong>$2,928</strong>. The quote includes a professional mockup and delivery. Larger formats and unusual builds use different pricing, so send your dimensions and artwork for an exact quote.</p>
 
           <p className="text-muted-foreground leading-relaxed mb-4"><Link to="/3d-logos" className="text-primary hover:underline font-semibold">Explore custom business sign and logo sign options &rarr;</Link></p>
 
@@ -73,7 +73,7 @@ const HowMuchDoesACustomMarqueeSignCost = () => {
 
           <h2 className="text-xl font-semibold text-foreground mt-8 mb-3">4. Marquee Letter Rental Packages</h2>
 
-          <p className="text-muted-foreground leading-relaxed mb-4">For entrepreneurs looking to start or scale a marquee letter rental business, buying individual letters is not the most efficient route. We offer complete ready-to-rent inventory packages built specifically for rental businesses. Starter packages begin at <strong>$13,000</strong>. Most rental business owners choose to invest in our more comprehensive packages that range from <strong>$30,000 to $35,000</strong>, giving them enough inventory to handle multiple weddings and corporate events on the same weekend.</p>
+          <p className="text-muted-foreground leading-relaxed mb-4">For entrepreneurs looking to start or scale a marquee letter rental business, buying individual letters is not the most efficient route. We offer complete ready-to-rent inventory packages built specifically for rental businesses. The 25-piece Starter Pack is <strong>$12,600 delivered</strong>. The 66-piece Pro Pack is <strong>$25,200</strong> and is our most common first order. The 112-piece Elite Pack, our Most Popular package, is <strong>$34,800</strong>. Package prices include ocean freight and import duties. Plan on approximately 14 weeks for delivery and inspect all items within 10 days of arrival.</p>
 
           <div className="my-8 rounded-lg overflow-hidden"><img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663459706891/xBejgDotlHlFydfS.webp" alt="Mr and Mrs Stewart marquee letter rental setup at a wedding venue" className="w-full object-cover" loading="lazy" /></div>
 
@@ -93,7 +93,7 @@ const HowMuchDoesACustomMarqueeSignCost = () => {
 
           <p className="text-muted-foreground leading-relaxed mb-4">These ranges give you a solid idea of what to expect, but the best way to know exactly what your custom sign will cost is to ask. Send us your idea, your logo, or your required letters and we will provide a precise, no-obligation quote.</p>
 
-          <p className="text-muted-foreground leading-relaxed mb-4"><Link to="/" className="text-primary hover:underline font-semibold">Choose your sign style and start a quote &rarr;</Link></p>
+          <p className="text-muted-foreground leading-relaxed mb-4"><Link to="/custom-marquee-signs" className="text-primary hover:underline font-semibold">Choose your sign style and start a quote &rarr;</Link></p>
 
         </article>
 

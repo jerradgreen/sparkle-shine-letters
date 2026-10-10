@@ -7,8 +7,9 @@ declare global {
   }
 }
 
-const LEAD_SENT_PREFIX = "vml_lead_sent:";
-const LEAD_TTL_DAYS = 90;
+const LEAD_SENT_PREFIX = "vml_ga_lead:";
+const LEAD_TTL_MS = 90 * 24 * 60 * 60 * 1000;
+const sentLeads = new Set<string>();
 
 function getGtag(): typeof window.gtag | undefined {
   if (typeof window === "undefined") return undefined;
@@ -31,77 +32,29 @@ export function trackPageView(path?: string): void {
   }
 }
 
-function storageAvailable(type: "localStorage" | "sessionStorage"): boolean {
-  if (typeof window === "undefined") return false;
-  try {
-    const storage = window[type];
-    const testKey = "__vml_storage_test__";
-    storage.setItem(testKey, "1");
-    storage.removeItem(testKey);
-    return true;
-  } catch {
-    return false;
-  }
-}
-
-function cleanupOldLeadKeys(): void {
-  if (!storageAvailable("localStorage")) return;
-  try {
-    const now = Date.now();
-    const ttlMs = LEAD_TTL_DAYS * 24 * 60 * 60 * 1000;
-    for (let i = 0; i < window.localStorage.length; i++) {
-      const key = window.localStorage.key(i);
-      if (key?.startsWith(LEAD_SENT_PREFIX)) {
-        const raw = window.localStorage.getItem(key);
-        if (raw) {
-          const timestamp = parseInt(raw, 10);
-          if (!Number.isNaN(timestamp) && now - timestamp > ttlMs) {
-            window.localStorage.removeItem(key);
-          }
-        }
-      }
-    }
-  } catch {
-    // Ignore storage errors.
-  }
-}
-
-function markLeadSent(entryId: string): void {
-  const value = String(Date.now());
-  if (storageAvailable("localStorage")) {
+function hasLeadBeenSent(key: string): boolean {
+  if (sentLeads.has(key)) return true;
+  for (const type of ["localStorage", "sessionStorage"] as const) {
     try {
-      window.localStorage.setItem(`${LEAD_SENT_PREFIX}${entryId}`, value);
-      cleanupOldLeadKeys();
-      return;
+      const timestamp = Number(window[type].getItem(key));
+      if (timestamp > 0 && Date.now() - timestamp < LEAD_TTL_MS) return true;
     } catch {
-      // Fall through to sessionStorage.
-    }
-  }
-  if (storageAvailable("sessionStorage")) {
-    try {
-      window.sessionStorage.setItem(`${LEAD_SENT_PREFIX}${entryId}`, value);
-    } catch {
-      // Ignore.
-    }
-  }
-}
-
-function hasLeadBeenSent(entryId: string): boolean {
-  if (storageAvailable("localStorage")) {
-    try {
-      return window.localStorage.getItem(`${LEAD_SENT_PREFIX}${entryId}`) !== null;
-    } catch {
-      // Fall through.
-    }
-  }
-  if (storageAvailable("sessionStorage")) {
-    try {
-      return window.sessionStorage.getItem(`${LEAD_SENT_PREFIX}${entryId}`) !== null;
-    } catch {
-      // Ignore.
+      // Memory still deduplicates when browser storage is unavailable.
     }
   }
   return false;
+}
+
+function markLeadSent(key: string): void {
+  sentLeads.add(key);
+  for (const type of ["localStorage", "sessionStorage"] as const) {
+    try {
+      window[type].setItem(key, String(Date.now()));
+      return;
+    } catch {
+      // Try session storage, then retain the in-memory marker.
+    }
+  }
 }
 
 export function trackLeadOnce(
@@ -117,9 +70,9 @@ export function trackLeadOnce(
     return;
   }
 
-  const normalizedEntryId = entryId.trim();
+  const key = `${LEAD_SENT_PREFIX}${encodeURIComponent(formType)}:${encodeURIComponent(entryId.trim())}`;
 
-  if (hasLeadBeenSent(normalizedEntryId)) {
+  if (hasLeadBeenSent(key)) {
     return;
   }
 
@@ -136,7 +89,7 @@ export function trackLeadOnce(
       });
     }
 
-    markLeadSent(normalizedEntryId);
+    markLeadSent(key);
   } catch {
     // Fail silently in private-mode browsers or when GA is blocked.
   }
