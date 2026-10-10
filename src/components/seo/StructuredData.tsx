@@ -13,7 +13,7 @@ export const StructuredData = ({ config, canonicalUrl }: StructuredDataProps) =>
     "@type": "Organization",
     "name": config.business.name,
     "description": config.business.description,
-    "url": window.location.origin,
+    "url": "https://inventory.vintagemarqueelights.com/",
     "logo": "https://cdn.shopify.com/s/files/1/1403/8315/files/small_logo.webp?v=1759941778",
     "image": config.hero.heroImage,
     "telephone": config.business.location?.phone,

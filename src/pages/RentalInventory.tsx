@@ -1370,7 +1370,7 @@ const RentalInventory = () => {
             {/* FAQ Item 8 */}
             <div className="border-b border-border pb-4">
               <h3 className="text-base font-bold mb-2 text-foreground">Q: Which package is the most popular?</h3>
-              <p className="text-sm text-muted-foreground">The 112-piece Elite Package is by far the most popular. It has the best cost-per-letter and gives you enough inventory to handle multiple events per weekend — which means higher returns and better flexibility.</p>
+              <p className="text-sm text-muted-foreground">The 112-piece Elite Package is our Most Popular package, with broader character coverage for multiple event setups. The 66-piece Pro Pack is the most common first order. Larger packages offer lower per-letter pricing; the right choice depends on your bookings, storage, and budget.</p>
             </div>
 
             {/* FAQ Item 12 */}
@@ -1392,11 +1392,11 @@ const RentalInventory = () => {
             <div className="border-b border-border pb-4">
               <h3 className="text-base font-bold mb-2 text-foreground">Q: Is there a warranty?</h3>
               <div className="text-sm text-muted-foreground">
-                <p className="mb-2">Yes.</p>
+                <p className="mb-2"><strong>Inspect your order and report any issues within the 10-day inspection window after delivery.</strong> Our limited warranty covers items arriving in working condition and free from manufacturing defects.</p>
                 <ul className="list-disc list-inside space-y-1 ml-3 text-xs">
-                  <li>We replace any items damaged beyond simple repair during shipping or due to a manufacturing issue.</li>
-                  <li>We do not replace items damaged from dropping, tipping, or event misuse.</li>
-                  <li>That said, the product is built strong and packed well — breakage is rare, and we'll always take care of you if it's something on our end.</li>
+                  <li>For a valid claim, VML may replace the affected items or issue a credit toward a future order.</li>
+                  <li>Damage from use, mishandling, or outdoor exposure beyond the product's rated conditions, and normal rental wear, are not covered.</li>
+                  <li>Each package includes spare bulbs for bulbs broken in transit. Claims submitted after 10 days are not accepted.</li>
                 </ul>
               </div>
             </div>

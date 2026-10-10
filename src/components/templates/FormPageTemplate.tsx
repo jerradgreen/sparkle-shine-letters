@@ -1,6 +1,6 @@
 import { ReactNode, useEffect, useMemo } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 
@@ -33,7 +33,8 @@ export const FormPageTemplate = ({
   children 
 }: FormPageTemplateProps) => {
   const containerId = `cognito-form-container-${formId}`;
-  const cleanCanonicalUrl = `${window.location.origin}${window.location.pathname}`;
+  const { pathname } = useLocation();
+  const cleanCanonicalUrl = `https://inventory.vintagemarqueelights.com${pathname}`;
   const serializedPrefill = useMemo(() => JSON.stringify(prefill ?? {}), [prefill]);
 
   useEffect(() => {

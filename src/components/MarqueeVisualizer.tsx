@@ -123,8 +123,8 @@ const LetterElement = ({ character, isTopper, letterCount, index, letterSize, cu
 };
 
 const getScale = (isTopper: boolean, letterCount: number, letterSize: string, currentScale: number, isMobilePortrait?: boolean) => {
-  const isMobile = window.innerWidth <= 767;
-  const isPortrait = window.innerHeight > window.innerWidth;
+  const isMobile = (typeof window === 'undefined' ? 1280 : window.innerWidth) <= 767;
+  const isPortrait = (typeof window === 'undefined' ? 800 : window.innerHeight) > (typeof window === 'undefined' ? 1280 : window.innerWidth);
   const mobilePortrait = isMobile && isPortrait;
   
   // Use the same scale for both 36" and 48" to keep it simple
@@ -152,7 +152,7 @@ const getScale = (isTopper: boolean, letterCount: number, letterSize: string, cu
 };
 
 const getKerning = (isTopper: boolean, letterCount: number) => {
-  const isMobile = window.innerWidth <= 767;
+  const isMobile = (typeof window === 'undefined' ? 1280 : window.innerWidth) <= 767;
   let kerning = isTopper ? (isMobile ? 3 : 8) : (isMobile ? 4 : 12);
   if (!isTopper && letterCount > 6) {
     kerning *= 6 / letterCount;
@@ -168,7 +168,7 @@ export const MarqueeVisualizer = () => {
   const [mainText, setMainText] = useState('ENTER TEXT');
   const [currentScale, setCurrentScale] = useState(1);
   const [isVisible, setIsVisible] = useState(false);
-  const [viewportW, setViewportW] = useState(window.innerWidth);
+  const [viewportW, setViewportW] = useState((typeof window === 'undefined' ? 1280 : window.innerWidth));
   
   const previewRef = useRef<HTMLDivElement>(null);
   const letterDisplayRef = useRef<HTMLDivElement>(null);
@@ -179,8 +179,8 @@ export const MarqueeVisualizer = () => {
 
   // Mobile-only viewport tracking for orientation changes
   useEffect(() => {
-    if (window.innerWidth <= 767) {
-      const handleResize = () => setViewportW(window.innerWidth);
+    if ((typeof window === 'undefined' ? 1280 : window.innerWidth) <= 767) {
+      const handleResize = () => setViewportW((typeof window === 'undefined' ? 1280 : window.innerWidth));
       window.addEventListener('resize', handleResize);
       window.addEventListener('orientationchange', handleResize);
       return () => {
@@ -231,8 +231,8 @@ export const MarqueeVisualizer = () => {
 
 const mainLetters = filterValidText(mainText);
 const topperLetters = getTopperText();
-const isMobile = window.innerWidth <= 767;
-const isPortrait = window.innerHeight > window.innerWidth;
+const isMobile = (typeof window === 'undefined' ? 1280 : window.innerWidth) <= 767;
+const isPortrait = (typeof window === 'undefined' ? 800 : window.innerHeight) > (typeof window === 'undefined' ? 1280 : window.innerWidth);
 const mobilePortrait = isMobile && isPortrait;
 
 const computedMainScale = getScale(false, mainLetters.length, letterSize, currentScale, mobilePortrait);
@@ -256,7 +256,7 @@ const bottomOffsetPx = isMobile ? 40 : 28;
         className="marquee-background absolute inset-0 bg-cover bg-no-repeat"
         style={{ 
           backgroundImage: `url(${BackgroundImage})`,
-          backgroundPosition: window.innerWidth >= 768 ? 'center 50%' : window.innerWidth > window.innerHeight ? 'center 30%' : 'center 10%'
+          backgroundPosition: (typeof window === 'undefined' ? 1280 : window.innerWidth) >= 768 ? 'center 50%' : (typeof window === 'undefined' ? 1280 : window.innerWidth) > (typeof window === 'undefined' ? 800 : window.innerHeight) ? 'center 30%' : 'center 10%'
         }}
       >
         <div 
@@ -372,8 +372,8 @@ const bottomOffsetPx = isMobile ? 40 : 28;
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`}
         style={{
-          height: window.innerWidth >= 768 ? '35vh' : '18vh',
-          maxHeight: window.innerWidth >= 768 ? '380px' : '180px',
+          height: (typeof window === 'undefined' ? 1280 : window.innerWidth) >= 768 ? '35vh' : '18vh',
+          maxHeight: (typeof window === 'undefined' ? 1280 : window.innerWidth) >= 768 ? '380px' : '180px',
           minHeight: '120px',
           overflow: 'hidden'
         }}
