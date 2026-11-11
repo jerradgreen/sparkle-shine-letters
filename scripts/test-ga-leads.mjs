@@ -23,12 +23,13 @@ function setup({ storageBlocked = false, trackerMissing = false, trackerThrows =
   return { ...context.exports, events, window };
 }
 let tracker = setup();
-for (const id of [null, undefined, '', '  ']) tracker.trackLeadOnce('rental', 'rental', id);
+for (const id of [null, undefined, '', '  ', '[Id]', '{Id}', 'test@example.com']) tracker.trackLeadOnce('rental', 'rental', id);
 assert.equal(tracker.events.length, 0, 'unconfirmed visits never count');
 tracker.trackLeadOnce('rental', 'rental', ' 123 ');
 tracker.trackLeadOnce('rental', 'rental', '123');
 assert.equal(tracker.events.length, 2, 'one GA event and one Ads event');
-assert.ok(!JSON.stringify(tracker.events).includes('123'), 'submission ID stays out of analytics payload');
+assert.ok(!JSON.stringify(tracker.events[0]).includes('123'), 'submission ID stays out of GA4 payload');
+assert.equal(tracker.events[1][2].transaction_id, 'vml-rental-123', 'Ads gets a stable, form-specific deduplication ID');
 tracker = setup();
 tracker.trackLeadOnce('rental', 'rental', '123');
 assert.equal(tracker.events.length, 0, 'reload deduplicates');

@@ -123,7 +123,7 @@ const signStyles: SignStyle[] = [
   {
     title: "Mobile Vendor & Food Truck Signs",
     description:
-      "Custom signs made to get attention on food trucks, trailers, carts, pop-ups and mobile businesses.",
+      "Custom signs for food trucks, trailers, carts, and mobile businesses. Projects start at $3,000; most range from $5,000–$10,000.",
     cta: "Explore Mobile Vendor Signs",
     link: "/mobile-vendor-signs",
     quoteLink: "/quote/mobile-vendor",
@@ -253,27 +253,26 @@ const CustomMarqueeSigns = () => {
                   Custom Marquee Signs Since 2008
                 </p>
                 <h1 className="mb-3 text-4xl font-bold leading-tight text-foreground md:text-5xl">
-                  Custom Marquee Signs &amp; One-of-a-Kind Custom Signs
+                  Custom Marquee Letters &amp; Logo Signs for Your Business
                 </h1>
                 <p className="mb-5 text-2xl font-medium text-primary md:text-3xl">
-                  Bring Your Idea to Life
+                  Handcrafted around your words, logo, or idea
                 </p>
                 <p className="mb-7 max-w-xl text-lg leading-relaxed text-muted-foreground">
                   Vintage Marquee Lights creates one-of-a-kind custom signs for businesses,
                   brands and spaces across the country. Start with your logo, your design, or
-                  just an idea — we&apos;ll help turn it into something unforgettable.
+                  just an idea — we&apos;ll help you choose the size, finish, and lighting for your space.
                 </p>
                 <div className="flex flex-col gap-3 sm:flex-row">
                   <Button asChild size="lg">
-                    <Link to="/quote/not-sure">Request a Custom Quote</Link>
+                    <Link to="/quote/not-sure">Get a Quote for My Sign</Link>
                   </Button>
                   <Button asChild size="lg" variant="outline">
                     <a href="#sign-styles">Explore Sign Styles</a>
                   </Button>
                 </div>
                 <p className="mt-5 text-sm text-muted-foreground">
-                  The Original Vintage Marquee Light Makers • Creating Custom Signs Since 2008 •
-                  Ships Nationwide
+                  Made to order • Shipping nationwide • Creating custom signs since 2008
                 </p>
               </div>
 
@@ -322,6 +321,17 @@ const CustomMarqueeSigns = () => {
 
               </div>
             </div>
+          </div>
+        </section>
+
+        <section className="border-b border-border bg-muted/30" aria-label="Plan your custom sign">
+          <div className="container mx-auto grid gap-6 px-6 py-8 md:grid-cols-3">
+            <div><h2 className="font-semibold">A quote built around your project</h2>
+              <p className="mt-2 text-sm text-muted-foreground">Size, wording, materials, and design determine the price. Share your budget and we’ll help narrow the options.</p></div>
+            <div><h2 className="font-semibold">Plan ahead for your opening</h2>
+              <p className="mt-2 text-sm text-muted-foreground">Allow about 4–6 weeks after design approval for most custom signs, or 6–8 weeks for mobile-vendor signs. Tell us about your deadline.</p></div>
+            <div><h2 className="font-semibold">No finished artwork required</h2>
+              <p className="mt-2 text-sm text-muted-foreground">Send your wording, logo, sketch, or inspiration. We’ll confirm the project details with you before production.</p></div>
           </div>
         </section>
 
@@ -694,7 +704,7 @@ const CustomMarqueeSigns = () => {
             </p>
             <div className="flex flex-col justify-center gap-3 sm:flex-row">
               <Button asChild size="lg" variant="secondary">
-                <Link to="/quote/not-sure">Request a Custom Quote</Link>
+                <Link to="/quote/not-sure">Get a Quote for My Sign</Link>
               </Button>
               <Button
                 asChild

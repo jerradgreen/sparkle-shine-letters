@@ -65,7 +65,7 @@ export function trackLeadOnce(
   const gtag = getGtag();
   if (!gtag) return;
 
-  if (!entryId || entryId.trim() === "") {
+  if (!entryId || !/^[A-Za-z0-9_-]{1,100}$/.test(entryId.trim())) {
     // No entry_id means this is not a confirmed Cognito submission.
     return;
   }
@@ -80,12 +80,14 @@ export function trackLeadOnce(
     gtag("event", "generate_lead", {
       form_type: formType,
       lead_category: leadCategory,
+      lead_type: ["wall-hanging", "3d-logos", "mobile-vendor", "not-sure", "custom"].includes(formType) ? "custom_sign" : formType,
     });
 
     const adsLabel = ADS_CONVERSION_LABELS[formType];
     if (adsLabel && adsLabel.trim() !== "") {
       gtag("event", "conversion", {
         send_to: `${ADS_CONVERSION_ID}/${adsLabel.trim()}`,
+        transaction_id: `vml-${formType}-${entryId.trim()}`,
       });
     }
 

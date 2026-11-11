@@ -9,7 +9,7 @@
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
     "preview": "vite preview",
-    "test:analytics": "node scripts/test-ga-leads.mjs && node scripts/test-meta-leads.mjs",
+    "test:analytics": "node scripts/test-ga-leads.mjs && node scripts/test-meta-leads.mjs && node scripts/test-lead-attribution.mjs",
     "typecheck": "tsc --noEmit -p tsconfig.app.json"
   },
   "dependencies": {
