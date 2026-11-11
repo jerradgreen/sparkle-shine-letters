@@ -1,6 +1,6 @@
 // Stored with quote requests only. Never send this record or customer details to GA4.
 // Add a form only after its internal AdAttribution field has been created and verified.
-export const ATTRIBUTION_READY_FORM_IDS: readonly string[] = [];
+export const ATTRIBUTION_READY_FORM_IDS: readonly string[] = ['8', '9', '10', '12'];
 const STORAGE_KEY = 'vml_quote_attribution_v1';
 const MAX_AGE = 90 * 24 * 60 * 60 * 1000;
 const PARAMETERS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term',
